@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <title>Dutch Design 2019</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/gradient.css" />
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
   </head>
 
 
-  <body>
+  	<body class="gradient">
+  		<main>
+  			<div class="frame">
+
+  				<div class="frame__demos">
+
+  				</div>
+  			</div>
+
+  			<div class="content content--canvas">
+  				<h2 class="content__title"></h2>
+  			</div>
+  		</main>
+
 
     <div class="grid-container">
     <div class="logo">  DutchDesign 2019 </div>
@@ -47,7 +64,20 @@
     <div class="\32"></div>
     <div class="\33"></div>
     <div class="\34"></div>
-    <div class="\35"></div>
+    <div class="\35">
+
+          <svg id="circle">
+            <g>
+
+            <circle cx="40" cy="50" r="30" fill="white"  stroke="white" stroke-width="5"/>
+            <a xlink:href="https://www.google.co.uk/" target="_top">
+            <text x="50%" y="50%" style="text-anchor: middle"> </text>
+            </a>
+            </g>
+          </svg>
+
+          </div>
+          
     <div class="\36"></div>
     <div class="\37"></div>
     <div class="\38"></div>
@@ -78,5 +108,10 @@
 
 
 
+  <script src="js/noise.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/shift.js"></script>
+
   </body>
+</div>
 </html>
