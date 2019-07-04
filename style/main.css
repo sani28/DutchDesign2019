@@ -1,4 +1,7 @@
-html, body, svg .grid-container { width: 98vw; height: 100vh; margin: 2;}
+html, body, svg .grid-container { width: 98vw; height: 100vh; margin: 2; background-image: url(../img/grain.jpg); background-size: cover;);
+
+}
+
 
 @font-face {
   font-family: Univers-93;
@@ -7,9 +10,15 @@ html, body, svg .grid-container { width: 98vw; height: 100vh; margin: 2;}
 
 @namespace svg url(http://www.w3.org/2000/svg);
 
-
-#circle-svg {
-  z-index: 10;
+.gradient {
+     background-color: rgba(189, 255, 1, 0.75);
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 0.9;
+     width: 100%;
+     height: 100%;
+     filter: blur(200px);
 }
 
 svg|a:link, svg|a:visited {
@@ -51,7 +60,7 @@ a:hover text {
 }
 
 .grid-container * {
- border: 1px dotted black;
+ border: 0.01px solid black;
  position: relative;
 }
 
