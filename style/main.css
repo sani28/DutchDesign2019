@@ -3,14 +3,10 @@ html{
 }
 
 .designer-dot {
-  margin: 40%;
   display: inline-block;
   border-radius: 50%;
-  background-color: white;
   height: 50px;
   width: 50px;
-  /* -webkit-transition: height 0.05s ease-out, width 0.05s ease-out;
-  transition: height 0.05s ease-in, width 0.05s ease-in; */
 }
 
 .designer-dot:hover {
@@ -18,8 +14,6 @@ html{
   -moz-animation: expandDot 0.35s infinite;
   -o-animation: expandDot 0.35s infinite;
   animation: expandDot 0.35s infinite;
-  /* height: 65px;
-  width: 65px; */
 }
 /* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
 @keyframes expandDot {
@@ -29,4 +23,18 @@ html{
   100% {
     transform: scale(1.15);
   }
+}
+
+#pepeDot {
+  margin: 4em;
+  background-color: white;
+}
+#florisDot {
+  margin: 6em;
+  background-color: teal;
+}
+
+#inekeDot {
+  margin: 8em;
+  background-color: black;
 }
