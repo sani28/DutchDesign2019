@@ -9,11 +9,9 @@ $(document).ready(function(){
       pass the object that's calling this functions as a parameter
       IF this object's ID attribute corresponds to a specific designer
       then change background to corresponding video
-
     */
     $("html").css("background-image", "linear-gradient(120deg, #f093fb 0%, #f5576c 100%)");
   }
-
   function revertBackground(){
     $("html").css("background-image", startingBG);
   }
