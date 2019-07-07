@@ -12,7 +12,7 @@ $(document).ready(function(){
     $("html").css("background-image", startingBG);
   }
 
-  designerDots.forEach(function(designer){
+  designerDots.forEach(function(){
       $(designer).mouseenter(function(){
         changeBackground();
       })
