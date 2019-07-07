@@ -12,11 +12,9 @@ $(document).ready(function(){
     $("html").css("background-image", startingBG);
   }
 
-  console.log(bgVideo);
-
   designerDots.forEach(function(designer){
       $(designer).mouseenter(function(){
-        changeBackground(designer);
+        changeBackground();
       })
       $(designer).mouseout(function(){
         revertBackground();
