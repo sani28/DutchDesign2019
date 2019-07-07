@@ -1,7 +1,276 @@
-html{
+html {
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
 
+/* --------------- nav box styling-----------------------------*/
+#logo {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 1%;
+  width: 30%;
+  height: 10%;
+  border: 2px solid black;
+}
+
+/* --------------- nav box styling-----------------------------*/
+.toggle {
+  margin: 2%;
+  border: 1px solid blue;
+  padding: 10px;
+  display: inline-flex;
+}
+
+.btm-nav-container {
+  border: 2px solid black;
+  width: 100vw;
+  height: 15vh;
+}
+
+/* --------------- grid container -----------------------------*/
+.grid-container {
+  border: 1px solid black;
+  height: 60vh;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.grid-container * {
+  display: flex;
+  border: 1px solid black;
+  padding: 2px;
+  position: relative;
+  align-items: center;
+}
+
+.grid-container *:after {
+  content: attr(class);
+  font-size: 0.1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "clear-left clear-left clear-left clear-left clear-left in1 clear-right clear-right clear-right clear-right clear-right clear-right clear-right clear-right""ex1 c1 ex2 c2 in2 in3 ex3 c3 in4 in5 in6 ex4 ex5 ex6""ex7 c4 ex8 ex9 c5 in7 c6 c7 in8 ex10 ex11 in9 c8 ex12""ex13 in10 c9 c10 c11 in11 c12 c13 c14 ex14 c15 c16 c17 ex15""in12 in13 in14 in15 in16 c18 ex16 clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right";
+}
+
+.in1 {
+  grid-area: in1;
+}
+
+.clear-left {
+  grid-area: clear-left;
+}
+
+.clear-right {
+  grid-area: clear-right;
+}
+
+.ex1 {
+  grid-area: ex1;
+}
+
+.ex2 {
+  grid-area: ex2;
+}
+
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.in2 {
+  grid-area: in2;
+}
+
+.in3 {
+  grid-area: in3;
+}
+
+.ex3 {
+  grid-area: ex3;
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.in4 {
+  grid-area: in4;
+}
+
+.in5 {
+  grid-area: in5;
+}
+
+.in6 {
+  grid-area: in6;
+}
+
+.ex4 {
+  grid-area: ex4;
+}
+
+.ex5 {
+  grid-area: ex5;
+}
+
+.ex6 {
+  grid-area: ex6;
+}
+
+.ex7 {
+  grid-area: ex7;
+}
+
+.c4 {
+  grid-area: c4;
+}
+
+.ex8 {
+  grid-area: ex8;
+}
+
+.ex9 {
+  grid-area: ex9;
+}
+
+.c5 {
+  grid-area: c5;
+}
+
+.in7 {
+  grid-area: in7;
+}
+
+.c6 {
+  grid-area: c6;
+}
+
+.c7 {
+  grid-area: c7;
+}
+
+.in8 {
+  grid-area: in8;
+}
+
+.ex10 {
+  grid-area: ex10;
+}
+
+.ex11 {
+  grid-area: ex11;
+}
+
+.in9 {
+  grid-area: in9;
+}
+
+.c8 {
+  grid-area: c8;
+}
+
+.ex12 {
+  grid-area: ex12;
+}
+
+.ex13 {
+  grid-area: ex13;
+}
+
+.in10 {
+  grid-area: in10;
+}
+
+.c9 {
+  grid-area: c9;
+}
+
+.c10 {
+  grid-area: c10;
+}
+
+.c11 {
+  grid-area: c11;
+}
+
+.in11 {
+  grid-area: in11;
+}
+
+.c12 {
+  grid-area: c12;
+}
+
+.c13 {
+  grid-area: c13;
+}
+
+.c14 {
+  grid-area: c14;
+}
+
+.ex14 {
+  grid-area: ex14;
+}
+
+.c15 {
+  grid-area: c15;
+}
+
+.c16 {
+  grid-area: c16;
+}
+
+.c17 {
+  grid-area: c17;
+}
+
+.ex15 {
+  grid-area: ex15;
+}
+
+.in12 {
+  grid-area: in12;
+}
+
+.in13 {
+  grid-area: in13;
+}
+
+.in14 {
+  grid-area: in14;
+}
+
+.in15 {
+  grid-area: in15;
+}
+
+.in16 {
+  grid-area: in16;
+}
+
+.c18 {
+  grid-area: c18;
+}
+
+.ex16 {
+  grid-area: ex16;
+}
+
+.clear-btm-right {
+  grid-area: clear-btm-right;
+}
+
+/* ---------------------------------- */
 .bg-video {
   position: fixed;
   top: 50%;
@@ -10,7 +279,7 @@ html{
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index:  -1;
+  z-index: -1;
   transform: translate(-50%, -50%);
 }
 
@@ -23,34 +292,39 @@ html{
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  background-color: white;
 }
 
+.experience-dot {
+  display: inline-block;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+/* .designer-view {
+  transform: scale(0.3);
+}
+
+.exp-view {
+
+} */
 .designer-dot:hover {
   -webkit-animation: expandDot 0.35s infinite;
   -moz-animation: expandDot 0.35s infinite;
   -o-animation: expandDot 0.35s infinite;
   animation: expandDot 0.35s infinite;
 }
+
 /* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
 @keyframes expandDot {
-  0%{
+  0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.15);
   }
-}
-
-#pepeDot {
-  margin: 4em;
-  background-color: white;
-}
-#florisDot {
-  margin: 6em;
-  background-color: teal;
-}
-
-#inekeDot {
-  margin: 8em;
-  background-color: black;
 }
