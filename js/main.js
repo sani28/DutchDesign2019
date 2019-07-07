@@ -12,12 +12,12 @@ $(document).ready(function(){
     $("html").css("background-image", startingBG);
   }
 
-  designerDots.forEach(function(){
-      $(designer).mouseenter(function(){
-        changeBackground();
-      })
-      $(designer).mouseout(function(){
-        revertBackground();
-      })
-  });
+  for (var i=0, len=designerDots.length; i < len; i++){
+    $(designerDots[i]).mouseenter(function(){
+      changeBackground();
+    });
+    $(designerDots[i]).mouseout(function(){
+      revertBackground();
+    })
+  }
 });
