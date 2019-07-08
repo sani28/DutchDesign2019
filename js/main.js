@@ -1,8 +1,8 @@
 $(document).ready(function(){
   var designerDots = [];
   var previewVideos = [];
-  
   designerDots = $(".designer-dot").get();
+  experienceDots = $(".experience-dot").get();
   previewVideos = $(".bg-preview-video").get();
 
   function playPreviewVideo(videoID){
@@ -16,7 +16,6 @@ $(document).ready(function(){
         break;
     }
   }
-
   function revertBackground(){
     hidePreviewVideos();
     $("html").css("background-image", "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)");
@@ -24,6 +23,18 @@ $(document).ready(function(){
   function hidePreviewVideos(){
     for(let i=0, len=previewVideos.length; i< len; i++){
       $(previewVideos[i]).css("display", "none");
+    }
+  }
+
+  function hideExperienceDots(){
+    for (let i=0, len=experienceDots.length; i<len; i++){
+      $(experienceDots[i]).css("display", "none");
+    }
+  }
+
+  function showExperienceDots(){
+    for (let i=0, len=experienceDots.length; i<len; i++){
+      $(experienceDots[i]).css("display", "inline-block");
     }
   }
   // is this better: https://gomakethings.com/listening-for-click-events-with-vanilla-javascript/
@@ -39,6 +50,7 @@ $(document).ready(function(){
         };
       }
       playPreviewVideo(currentDesigner.id);
+      hideExperienceDots();
     });
     $(designerDots[i]).mouseout(function(){
       let currentDesigner = this;
@@ -48,6 +60,7 @@ $(document).ready(function(){
         };
       }
       revertBackground();
+      showExperienceDots();
     });
   }
 
