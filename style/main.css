@@ -270,8 +270,8 @@ html {
   grid-area: clear-btm-right;
 }
 
+/* ---------------  the media styling -----------------------------*/
 .bg-preview-video {
-
   position: fixed;
   top: 50%;
   left: 50%;
@@ -285,6 +285,8 @@ html {
   /* display will change from Javascript on activation */
 }
 
+
+/* ---------------  the dots styling -----------------------------*/
 .designer-dot {
   background-color: white;
   display: inline-block;

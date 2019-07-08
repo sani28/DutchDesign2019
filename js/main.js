@@ -1,8 +1,9 @@
 $(document).ready(function(){
-  //an array of the designer dot html elements which act as links and hover interaction elements
-  var designerDots = $(".designer-dot").get();
-  //an array of the designer preview <video> tags
-  var previewVideos = $(".bg-preview-video").get();
+  var designerDots = [];
+  var previewVideos = [];
+  
+  designerDots = $(".designer-dot").get();
+  previewVideos = $(".bg-preview-video").get();
 
   function playPreviewVideo(videoID){
     let currentVideo = videoID;
@@ -51,4 +52,4 @@ $(document).ready(function(){
   }
 
 
-}); //DOCREADY
+}); //DOCREADY DON'T DELETE
