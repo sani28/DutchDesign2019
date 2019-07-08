@@ -1,12 +1,12 @@
 $(document).ready(function(){
-
+  //an array of the designer dot html elements which act as links and hover interaction elements
   var designerDots = $(".designer-dot").get();
-  var startingBG = "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)"
+  //an array of the designer preview <video> tags
   var previewVideos = $(".bg-preview-video").get();
 
   function playPreviewVideo(videoID){
-    var currentVideo = videoID;
-    switch(videoID){ //takes a string from the index html
+    let currentVideo = videoID;
+    switch(currentVideo){ //takes a string from the index html
       case "lexDot":
         $("#lex-preview-vid").css("display", "block");
         break;
@@ -18,21 +18,21 @@ $(document).ready(function(){
 
   function revertBackground(){
     hidePreviewVideos();
-    $("html").css("background-image", startingBG);
+    $("html").css("background-image", "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)");
   }
   function hidePreviewVideos(){
-    for(var i=0, len=previewVideos.length; i< len; i++){
+    for(let i=0, len=previewVideos.length; i< len; i++){
       $(previewVideos[i]).css("display", "none");
     }
   }
   // is this better: https://gomakethings.com/listening-for-click-events-with-vanilla-javascript/
 
   //TODO: I should be able to refactor this to reduce code length by 1/2
-  for (var i=0, len=designerDots.length; i < len; i++){
+  for (let i=0, len=designerDots.length; i < len; i++){
     //passes designerDots as an array into a function
     $(designerDots[i]).mouseenter(function(){
-      var currentDesigner = this;
-      for(var j=0, len=designerDots.length; j <len; j++){
+      let currentDesigner = this;
+      for(let j=0, len=designerDots.length; j <len; j++){
         if(designerDots[j]!=currentDesigner){
           $(designerDots[j]).addClass("dot-unhovered");
         };
@@ -40,8 +40,8 @@ $(document).ready(function(){
       playPreviewVideo(currentDesigner.id);
     });
     $(designerDots[i]).mouseout(function(){
-      var currentDesigner = this;
-      for(var j=0, len=designerDots.length; j <len; j++){
+      let currentDesigner = this;
+      for(let j=0, len=designerDots.length; j <len; j++){
         if(designerDots[j]!=currentDesigner){
           $(designerDots[j]).removeClass("dot-unhovered");
         };
