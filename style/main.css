@@ -18,11 +18,19 @@ html{
   display: none;
 }
 
+
 .designer-dot {
+  background-color: white;
   display: inline-block;
   border-radius: 50%;
   height: 50px;
   width: 50px;
+}
+
+.dot-unhovered.designer-dot{
+  background-color: transparent;
+  border: 1px white solid;
+  /* border: 1px solid white; */
 }
 
 .designer-dot:hover {
@@ -43,14 +51,11 @@ html{
 
 #pepeDot {
   margin: 4em;
-  background-color: white;
 }
 #florisDot {
   margin: 6em;
-  background-color: teal;
 }
 
 #inekeDot {
   margin: 8em;
-  background-color: black;
 }
