@@ -271,8 +271,13 @@ html {
   grid-area: clear-btm-right;
 }
 
+<<<<<<< HEAD
 /* --------- background video ------------------------- */
 .bg-video {
+=======
+/* ---------------  the media styling -----------------------------*/
+.bg-preview-video {
+>>>>>>> 0494552a536a2f96f357e65cdc471291e5d89c99
   position: fixed;
   top: 50%;
   left: 50%;
@@ -282,15 +287,18 @@ html {
   height: auto;
   z-index: -1;
   transform: translate(-50%, -50%);
-}
-
-#designer-preview-vid {
   display: none;
+  /* display will change from Javascript on activation */
 }
 
 
+<<<<<<< HEAD
 /* --------- dots ------------------------- */
+=======
+/* ---------------  the dots styling -----------------------------*/
+>>>>>>> 0494552a536a2f96f357e65cdc471291e5d89c99
 .designer-dot {
+  background-color: white;
   display: inline-block;
   border-radius: 50%;
   height: 50px;
@@ -307,13 +315,12 @@ html {
   margin-top: 10px;
 }
 
-/* .designer-view {
-  transform: scale(0.3);
+.dot-unhovered.designer-dot{
+  background-color: transparent;
+  border: 1px white solid;
+  /* border: 1px solid white; */
 }
 
-.exp-view {
-
-} */
 .designer-dot:hover {
   -webkit-animation: expandDot 0.35s infinite;
   -moz-animation: expandDot 0.35s infinite;
