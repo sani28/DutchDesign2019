@@ -1,51 +1,83 @@
-html {
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+/* ----- fonts ------ */
+
+@font-face {
+  font-family: hyperMarket;
+  src: url(../fonts/hypermarket-regular.ttf);
+  font-weight: bold;
 }
 
-/* --------------- logo -----------------------------*/
+*, html {
+  font-family: hyperMarket;
+  color: white;
+}
 
+.background {
+  background-image: linear-gradient(205deg, white, blue 60%, cyan);
+  mix-blend-mode: color-dodge;
+  height: 100vh;
+  position: fixed;
+}
+
+#grain {
+  background-image: url(../imgs/GRAIN.png);
+  width: 100%;
+  background-size: contain;
+  opacity: 0.1;
+  height: 100vh;
+  top:0;
+  position: absolute;
+}
+
+/* --------------- nav box styling-----------------------------*/
 #logo {
   display: flex;
   position: absolute;
-  right: 0;
-  top: 1%;
-  width: 30%;
+  right: 3%;
+  top: 8%;
+  width: 10%;
   height: 10%;
-  border: 2px solid black;
 }
 
 /* --------------- nav box styling-----------------------------*/
 .toggle {
   margin: 2%;
-  border: 1px solid blue;
   padding: 10px;
+  font-size: 10px;
   display: inline-flex;
+  font-family: hyperMarket;
+  color: white;
 }
 
 .btm-nav-container {
-  border: 2px solid black;
   width: 100vw;
   height: 15vh;
+  font-size: 10px;
+  left: 10%;
+  position: relative;
 }
 
 /* --------------- grid container -----------------------------*/
 .grid-container {
+  display: flex;
   /* border: 1px solid black; */
   height: 60vh;
   margin-top: 2em;
   padding: 1em;
+  transform: scale(0.6);
 }
 
 .grid-container * {
   display: flex;
-  border: 1px solid black;
-  padding: 2px;
-  position: relative;
+  padding: 1px;
   align-items: center;
 }
 
+.wrapper {
+  grid-template-columns: minmax(auto, <flex>));
+}
+
 .grid-container *:after {
-  content: attr(class);
+  /* content: attr(class); */
   font-size: 0.1em;
   position: absolute;
   top: 0;
@@ -54,8 +86,8 @@ html {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas: "clear-left clear-left clear-left clear-left clear-left in1 clear-right clear-right clear-right clear-right clear-right clear-right clear-right clear-right""ex1 c1 ex2 c2 in2 in3 ex3 c3 in4 in5 in6 ex4 ex5 ex6""ex7 c4 ex8 ex9 c5 in7 c6 c7 in8 ex10 ex11 in9 c8 ex12""ex13 in10 c9 c10 c11 in11 c12 c13 c14 ex14 c15 c16 c17 ex15""in12 in13 in14 in15 in16 c18 ex16 clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right";
 }
 
@@ -271,13 +303,8 @@ html {
   grid-area: clear-btm-right;
 }
 
-
-/* --------- background video ------------------------- */
+/* ---------------------------------- */
 .bg-video {
-
-/* ---------------  the media styling -----------------------------*/
-.bg-preview-video {
-
   position: fixed;
   top: 50%;
   left: 50%;
@@ -287,19 +314,17 @@ html {
   height: auto;
   z-index: -1;
   transform: translate(-50%, -50%);
-  display: none;
-  /* display will change from Javascript on activation */
 }
 
-
-/* ---------------  the dots styling -----------------------------*/
+#designer-preview-vid {
+  display: none;
+}
 
 .designer-dot {
-  background-color: white;
   display: inline-block;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   background-color: white;
 }
 
@@ -312,12 +337,13 @@ html {
   margin-top: 10px;
 }
 
-.dot-unhovered.designer-dot{
-  background-color: transparent;
-  border: 1px white solid;
-  /* border: 1px solid white; */
+/* .designer-view {
+  transform: scale(0.3);
 }
 
+.exp-view {
+
+} */
 .designer-dot:hover {
   -webkit-animation: expandDot 0.35s infinite;
   -moz-animation: expandDot 0.35s infinite;
