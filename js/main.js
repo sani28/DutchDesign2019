@@ -6,6 +6,7 @@ $(document).ready(function(){
 
   function playPreviewVideo(videoID){
     let currentVideo = videoID;
+    console.log(currentVideo);
     switch(currentVideo){ //takes a string from the index html
       case "lexDot":
         $("#lex-preview-vid").css("display", "block");
