@@ -39,29 +39,24 @@ $(document).ready(function(){
     }
   }
 
-  function changeInactiveState(dot){
-    let deactivatedDot = dot;
-     $(deactivatedDot).hasClass("dot-inactive") ? $(deactivatedDot).removeClass("dot-inactive") : $(deactivatedDot).addClass("dot-inactive");
+  function changeInactiveState(hovered){
+    let currentDot = hovered;
+    for(let i=0, len=designerDots.length; i < len; i++){
+      let deactivatedDot = designerDots[i];
+      if(deactivatedDot!=currentDot){
+        $(deactivatedDot).hasClass("dot-inactive") ? $(deactivatedDot).removeClass("dot-inactive") : $(deactivatedDot).addClass("dot-inactive");
+      }
+    }
   }
 
   for (let i=0, len=designerDots.length; i < len; i++){
     $(designerDots[i]).mouseenter(function(){
-      let currentDesigner = this;
-      for(let j=0, len=designerDots.length; j <len; j++){
-        if(designerDots[j]!=currentDesigner){
-          changeInactiveState(designerDots[j]);
-        };
-      }
-      playPreviewVideo(currentDesigner.id);
+      changeInactiveState(this);
+      playPreviewVideo(this.id);
       hideExperienceDots();
     });
     $(designerDots[i]).mouseout(function(){
-      let currentDesigner = this;
-      for(let j=0, len=designerDots.length; j <len; j++){
-        if(designerDots[j]!=currentDesigner){
-          changeInactiveState(designerDots[j]);
-        };
-      }
+      changeInactiveState(this);
       revertBackground();
       showExperienceDots();
     });
