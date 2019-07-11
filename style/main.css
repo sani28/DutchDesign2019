@@ -329,7 +329,7 @@ html{
   width: 50px;
 }
 
-.dot-unhovered.designer-dot{
+.dot-inactive.designer-dot{
   background-color: transparent;
   border: 1px white solid;
 }

@@ -38,16 +38,18 @@ $(document).ready(function(){
       $(experienceDots[i]).css("display", "inline-block");
     }
   }
-  // is this better: https://gomakethings.com/listening-for-click-events-with-vanilla-javascript/
 
-  //TODO: I should be able to refactor this to reduce code length by 1/2
+  function changeInactiveState(dot){
+    let deactivatedDot = dot;
+     $(deactivatedDot).hasClass("dot-inactive") ? $(deactivatedDot).removeClass("dot-inactive") : $(deactivatedDot).addClass("dot-inactive");
+  }
+
   for (let i=0, len=designerDots.length; i < len; i++){
-    //passes designerDots as an array into a function
     $(designerDots[i]).mouseenter(function(){
       let currentDesigner = this;
       for(let j=0, len=designerDots.length; j <len; j++){
         if(designerDots[j]!=currentDesigner){
-          $(designerDots[j]).addClass("dot-unhovered");
+          changeInactiveState(designerDots[j]);
         };
       }
       playPreviewVideo(currentDesigner.id);
@@ -57,13 +59,12 @@ $(document).ready(function(){
       let currentDesigner = this;
       for(let j=0, len=designerDots.length; j <len; j++){
         if(designerDots[j]!=currentDesigner){
-          $(designerDots[j]).removeClass("dot-unhovered");
+          changeInactiveState(designerDots[j]);
         };
       }
       revertBackground();
       showExperienceDots();
     });
   }
-
 
 }); //DOCREADY DON'T DELETE
