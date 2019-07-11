@@ -22,7 +22,7 @@ html{
   position: fixed;
 } */
 
-/* #grain {
+#grain {
   background-image: url(../imgs/GRAIN.png);
   width: 100%;
   background-size: contain;
@@ -30,7 +30,7 @@ html{
   height: 100vh;
   top:0;
   position: absolute;
-} */
+}
 
 /* --------------- nav box styling-----------------------------*/
 #logo {
