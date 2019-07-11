@@ -11,15 +11,15 @@ $(document).ready(function(){
       case "lexDot":
         $("#lex-preview-vid").css("display", "block");
         break;
-      case "valentineDot":
-        $("#valentine-preview-vid").css("display", "block");
+      case "valentinDot":
+        $("#valentin-preview-vid").css("display", "block");
         break;
     }
   }
 
   function revertBackground(){
     hidePreviewVideos();
-    $(".background").css("background-image", "linear-gradient(205deg, white, blue 60%, cyan)");
+    $("html").css("background-image", "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)");
   }
   function hidePreviewVideos(){
     for(let i=0, len=previewVideos.length; i< len; i++){
