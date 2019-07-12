@@ -6,13 +6,40 @@
   font-weight: bold;
 }
 html{
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  background-image: linear-gradient(120deg, #C3EB23 0%, #C3EB23 100%);
 }
 
 *, html {
   font-family: hyperMarket;
   color: white;
+}
 
+a {
+    text-decoration: none;
+}
+
+h1 {
+  transform: rotate(-90deg);
+  font-size: 100px;
+  font-family: Helvetica;
+  color: #7D246B;
+}
+
+h1:hover {
+  color:white;
+}
+
+/* ------------------- archive ------------------------------------- */
+
+.archive-stack {
+  width: 253px;
+  height: 90vh;
+  background-size:contain;
+  background-position: center;
+}
+
+.year {
+  margin-top: 85%;
 }
 
 /* .background {
@@ -30,6 +57,7 @@ html{
   height: 100vh;
   top:0;
   position: absolute;
+  z-index: -1;
 }
 
 /* --------------- nav box styling-----------------------------*/
@@ -43,6 +71,7 @@ html{
 }
 
 /* --------------- nav box styling-----------------------------*/
+
 .toggle {
   margin: 2%;
   padding: 10px;
@@ -50,6 +79,27 @@ html{
   display: inline-flex;
   font-family: hyperMarket;
   color: white;
+}
+
+.home {
+  margin: 2%;
+  padding: 10px;
+  font-size: 20px;
+  display: inline-flex;
+  font-family: hyperMarket;
+  color: white;
+}
+
+/* ------------------- containers ------------------------------------- */
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  height: 90vh;
+  bottom:0;
+  position: absolute;
+  border: 1px solid white;
 }
 
 .btm-nav-container {
@@ -332,6 +382,14 @@ html{
 .dot-unhovered.designer-dot{
   background-color: transparent;
   border: 1px white solid;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
 }
 
 .experience-dot {
