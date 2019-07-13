@@ -8,9 +8,89 @@ $(document).ready(function(){
   //STATES
   var interviewsActive = true; // T/F toggle interviews and experiences
 
-  function playPreviewVideo(videoID){
+
+  var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
+
+  for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
+
+    $("#2010").hover(function() {
+        $("#2010").css("background-image", "url(./assets/2010.png)");
+      },
+      function() {
+        $("#2010").css("background-image", "none");
+      });
+
+    $("#2011").hover(function() {
+        $("#2011").css("background-image", "url(./assets/2011.png)");
+      },
+      function() {
+        $("#2011").css("background-image", "none");
+      });
+
+    $("#2012").hover(function() {
+        $("#2012").css("background-image", "url(./assets/2012.png)");
+      },
+      function() {
+        $("#2012").css("background-image", "none");
+      });
+
+    $("#2013").hover(function() {
+        $("#2013").css("background-image", "url(./assets/2013.png)");
+      },
+      function() {
+        $("#2013").css("background-image", "none");
+      });
+
+    $("#2014").hover(function() {
+        $("#2014").css("background-image", "url(./assets/2014.png)");
+      },
+      function() {
+        $("#2014").css("background-image", "none");
+      });
+
+    $("#2015").hover(function() {
+        $("#2015").css("background-image", "url(./assets/2015.png)");
+      },
+      function() {
+        $("#2015").css("background-image", "none");
+      });
+
+    $("#2016").hover(function() {
+        $("#2016").css("background-image", "url(./assets/2016.png)");
+      },
+      function() {
+        $("#2016").css("background-image", "none");
+      });
+
+    $("#2017").hover(function() {
+        $("#2017").css("background-image", "url(./assets/2017.svg)");
+      },
+      function() {
+        $("#2017").css("background-image", "none");
+      });
+
+    $("#2018").hover(function() {
+        $("#2018").css("background-image", "url(./assets/2018.png)");
+      },
+      function() {
+        $("#2018").css("background-image", "none");
+      });
+
+    $("#2019").hover(function() {
+        $("#2019").css("background-image", "url(./assets/2019.png)");
+      },
+      function() {
+        $("#2019").css("background-image", "none");
+      });
+
+  }; //end of archive loop
+
+
+
+
+  function playPreviewVideo(videoID) {
     let currentVideo = videoID;
-    switch(currentVideo){ //takes a string from the index html
+    switch (currentVideo) { //takes a string from the index html
       case "lexDot":
         $("#lex-preview-vid").css("display", "block");
         break;
@@ -20,7 +100,7 @@ $(document).ready(function(){
     }
   }
 
-  function revertBackground(){
+  function revertBackground() {
     hidePreviewVideos();
     $("html").css("background-color", "#DFEA4E");
   }
@@ -31,14 +111,14 @@ $(document).ready(function(){
     }
   }
 
-  function hideExperienceDots(){
-    for (let i=0, len=experienceDots.length; i<len; i++){
+  function hideExperienceDots() {
+    for (let i = 0, len = experienceDots.length; i < len; i++) {
       $(experienceDots[i]).css("display", "none");
     }
   }
 
-  function showExperienceDots(){
-    for (let i=0, len=experienceDots.length; i<len; i++){
+  function showExperienceDots() {
+    for (let i = 0, len = experienceDots.length; i < len; i++) {
       $(experienceDots[i]).css("display", "inline-block");
     }
   }
@@ -150,3 +230,12 @@ $(document).ready(function(){
   });
 
 }); //DOCREADY DON'T DELETE
+
+
+// $(function changeArchiveImg(id) {
+//    $('.archive-stack').each(function() {
+//       var archiveId = $(this).attr("id");
+//       var image = $('#' + archiveId + ' > a ').attr("id");
+//       $('#' + archiveId).css({"background":"url(" + image + ".png)","background-size":"contain"});
+//    });
+// });
