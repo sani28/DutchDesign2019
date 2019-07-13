@@ -362,6 +362,11 @@ html{
   width: 50px;
 }
 
+.dot-unhovered.experience-dot{
+  background-color: transparent;
+  border: 1px white solid;
+}
+
 .toggle>.landing-toggle {
   color: purple;
   margin-right: 1em;

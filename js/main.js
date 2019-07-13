@@ -22,7 +22,7 @@ $(document).ready(function(){
 
   function revertBackground(){
     hidePreviewVideos();
-    $("html").css("background-image", "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)");
+    $("html").css("background-color", "#DFEA4E");
   }
 
   function hidePreviewVideos(){
@@ -43,14 +43,38 @@ $(document).ready(function(){
     }
   }
 
+  // function showDesignerDots(){
+  //   for (let i=0, len=designerDots.length; i<len; i++){
+  //     $(designerDots[i]).css("display", "inline-block");
+  //   }
+  // }
+  //
+  // function hideDesignerDots(){
+  //   for (let i=0, len=designerDots.length; i<len; i++){
+  //     $(designerDots[i]).css("display", "none");
+  //   }
+  // }
+
   function changeInactiveState(hovered){
-    let currentDot = hovered;
-    for(let i=0, len=designerDots.length; i < len; i++){
-      let deactivatedDot = designerDots[i];
-      if(deactivatedDot!=currentDot){
-        $(deactivatedDot).hasClass("dot-unhovered") ? $(deactivatedDot).removeClass("dot-unhovered") : $(deactivatedDot).addClass("dot-unhovered");
+    if (interviewsActive){
+      for(let i=0, len=designerDots.length; i < len; i++){
+        let currentDot = hovered;
+        let deactivatedDot = designerDots[i];
+        if(deactivatedDot!=currentDot){
+          $(deactivatedDot).hasClass("dot-unhovered") ? $(deactivatedDot).removeClass("dot-unhovered") : $(deactivatedDot).addClass("dot-unhovered");
+        }
       }
     }
+    else {
+      for (let j=0, len=experienceDots.length; j < len; j++){
+        let currentDot = hovered;
+        let deactivatedDot = experienceDots[j];
+        if(deactivatedDot!=currentDot){
+          $(deactivatedDot).hasClass("dot-unhovered") ? $(deactivatedDot).removeClass("dot-unhovered") : $(deactivatedDot).addClass("dot-unhovered");
+        }
+      }
+    }
+
   }
 
   function toggleDotSize(){
@@ -71,18 +95,35 @@ $(document).ready(function(){
     }
   }
 
-  for (let i=0, len=designerDots.length; i < len; i++){
-    $(designerDots[i]).mouseenter(function(){
-      changeInactiveState(this);
-      playPreviewVideo(this.id);
-      hideExperienceDots();
-    });
-    $(designerDots[i]).mouseout(function(){
-      changeInactiveState(this);
-      revertBackground();
-      showExperienceDots();
-    });
-  }
+    for (let i=0, len=designerDots.length; i < len; i++){
+      $(designerDots[i]).mouseenter(function(){
+        if(interviewsActive){
+          changeInactiveState(this);
+          playPreviewVideo(this.id);
+          hideExperienceDots();
+        }
+
+      });
+      $(designerDots[i]).mouseout(function(){
+        if(interviewsActive){
+          changeInactiveState(this);
+          revertBackground();
+          showExperienceDots();
+        }
+      });
+    }
+    for (let j=0, len=experienceDots.length; j < len; j++){
+      $(experienceDots[j]).mouseenter(function(){
+          changeInactiveState(this);
+          // playPreviewVideo(this.id);
+          // hideDesignerDots();
+      });
+      $(experienceDots[j]).mouseout(function(){
+          changeInactiveState(this);
+          // revertBackground();
+          // showDesignerDots();}
+      });
+    }
 
   expToggle.click(function(){
     if(!interviewsActive){
