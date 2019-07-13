@@ -11,107 +11,100 @@
   <script type="text/javascript" src="js/main.js" async defer></script>
 </head>
 
-  <body>
-
-    <video class="bg-preview-video" id="valentin-preview-vid" preload="none" playsinline autoplay muted loop>
+<body>
+  <video class="bg-preview-video" id="valentin-preview-vid" preload="none" playsinline autoplay muted loop>
     <source src="assets/videos/preview_valentin.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-
     <video class="bg-preview-video" id="lex-preview-vid" preload="none" playsinline autoplay muted loop>
-    <source src="assets/videos/preview_lex.mp4" type="video/mp4">
-      Your browser doesn't support HTML5 videos.
-    </video>
+      <source src="assets/videos/preview_lex.mp4" type="video/mp4">
+        Your browser doesn't support HTML5 videos.
+      </video>
+      <div class="background">
 
-  <div class="background">
+        <!-- ~~~~~~~~~~~~~ logo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <div id="logo"> <img src="./imgs/2019.svg"> </img> </div>
 
-<!-- ~~~~~~~~~~~~~ logo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <div id="logo"> <img src="./imgs/2019.svg"> </img> </div>
+        <!-- ~~~~~~~~~~~~~~~ int/exp toggle  ~~~~~~~~~~~~~~~   -->
 
-<!-- ~~~~~~~~~~~~~~~ int/exp toggle  ~~~~~~~~~~~~~~~   -->
+        <nav class="toggle">
+          <a href="#" class="landing-toggle active-toggle" id="toggle-int"> Interviews </a>
+          <a href="#" class="landing-toggle" id="toggle-exp"> Experiences </a>
+        </nav>
 
-  <nav class="toggle">
-    <a href="index.html"> Interviews </a> &nbsp;
-    <a href=""> Experiences </a>
-  </nav>
+        <!-- ~~~~~~~~~~~~~~~ grainy texture bg  ~~~~~~~~~~~~~~~  -->
 
-<!-- ~~~~~~~~~~~~~~~ grainy texture bg  ~~~~~~~~~~~~~~~  -->
+        <div id="grain"></div>
 
-    <div id="grain"></div>
+        <!-- ~~~~~~~~~~~~~ grid container  ~~~~~~~~~~~~~~~`` -->
+        <div class="wrapper">
+          <div class="grid-container">
+            <div class="in1">
+              <a href=""><span class="experience-dot"></span></a></div>
+              <div class="clear-left"></div>
+              <div class="clear-right"></div>
+              <div class="ex1"><a href=""><span class="designer-dot active-dot" id="valentinDot"></span></a></div>
+              <div class="ex2"><a href=""><span class="designer-dot active-dot" id="lexDot"></span></a></div>
+              <div class="c1"></div>
+              <div class="c2"></div>
+              <div class="in2">
+                <a href=""><span class="experience-dot"></span></a></div>
+                <div class="in3"><a href=""><span class="experience-dot"></span></a></div>
+                <div class="ex3"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="c3"></div>
+                <div class="in4"><span class="experience-dot" id=""></span></a></div>
+                <div class="in5"><span class="experience-dot" id=""></span></a></div>
+                <div class="in6"><span class="experience-dot" id=""></span></a></div>
+                <div class="ex4"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="ex5"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="ex6"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="ex7"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="c4"></div>
+                <div class="ex8"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="ex9"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="c5"></div>
+                <div class="in7"><span class="experience-dot" id=""></span></a></div>
+                <div class="c6"></div>
+                <div class="c7"></div>
+                <div class="in8"><span class="experience-dot" id=""></span></a></div>
+                <div class="ex10"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="ex11"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="in9"><span class="experience-dot" id=""></span></a></div>
+                <div class="c8"></div>
+                <div class="ex12"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="ex13"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="in10"><span class="experience-dot" id=""></span></a></div>
+                <div class="c9"></div>
+                <div class="c10"></div>
+                <div class="c11"></div>
+                <div class="in11"><span class="experience-dot" id=""></span></a></div>
+                <div class="c12"></div>
+                <div class="c13"></div>
+                <div class="c14"></div>
+                <div class="ex14"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="c15"></div>
+                <div class="c16"></div>
+                <div class="c17"></div>
+                <div class="ex15"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="in12"><span class="experience-dot" id=""></span></a></div>
+                <div class="in13"><span class="experience-dot" id=""></span></a></div>
+                <div class="in14"><span class="experience-dot" id=""></span></a></div>
+                <div class="in15"><span class="experience-dot" id=""></span></a></div>
+                <div class="in16"><span class="experience-dot" id=""></span></a></div>
+                <div class="c18"></div>
+                <div class="ex16"><a href=""><span class="designer-dot active-dot" id=""></span></a></div>
+                <div class="clear-btm-right"></div>
+              </div>
+            </div>
+            <!-- ~~~~~~~~~~~~~~~~~ nav bottom ~~~~~~~~~~~~~~~~~~~~~~ - -->
+            <nav class="bottom">
+              <div class="btm-nav-container">
+                <a href="">Team Page</a>
+              </div>
+            </nav>
 
-<!-- ~~~~~~~~~~~~~ grid container  ~~~~~~~~~~~~~~~`` -->
+          </div> <!-- end of background div  -->
 
-    <div class="wrapper">
-      <div class="grid-container">
-        <div class="in1">
-          <a href=""><span class="experience-dot"></span></a></div>
-        <div class="clear-left"></div>
-        <div class="clear-right"></div>
-        <div class="ex1"><a href=""><span class="designer-dot" id="valentinDot"></span></a></div>
-        <div class="ex2"><a href=""><span class="designer-dot" id="lexDot"></span></a></div>
-        <div class="c1"></div>
-        <div class="c2"></div>
-        <div class="in2">
-          <a href=""><span class="experience-dot></span></a></div>
-        <div class="in3"><a href=""><span class="experience-dot"></span></a></div>
-        <div class="ex3"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="c3"></div>
-        <div class="in4"><span class="experience-dot" id=""></span></a></div>
-        <div class="in5"><span class="experience-dot" id=""></span></a></div>
-        <div class="in6"><span class="experience-dot" id=""></span></a></div>
-        <div class="ex4"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="ex5"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="ex6"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="ex7"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="c4"></div>
-        <div class="ex8"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="ex9"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="c5"></div>
-        <div class="in7"><span class="experience-dot" id=""></span></a></div>
-        <div class="c6"></div>
-        <div class="c7"></div>
-        <div class="in8"><span class="experience-dot" id=""></span></a></div>
-        <div class="ex10"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="ex11"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="in9"><span class="experience-dot" id=""></span></a></div>
-        <div class="c8"></div>
-        <div class="ex12"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="ex13"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="in10"><span class="experience-dot" id=""></span></a></div>
-        <div class="c9"></div>
-        <div class="c10"></div>
-        <div class="c11"></div>
-        <div class="in11"><span class="experience-dot" id=""></span></a></div>
-        <div class="c12"></div>
-        <div class="c13"></div>
-        <div class="c14"></div>
-        <div class="ex14"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="c15"></div>
-        <div class="c16"></div>
-        <div class="c17"></div>
-        <div class="ex15"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="in12"><span class="experience-dot" id=""></span></a></div>
-        <div class="in13"><span class="experience-dot" id=""></span></a></div>
-        <div class="in14"><span class="experience-dot" id=""></span></a></div>
-        <div class="in15"><span class="experience-dot" id=""></span></a></div>
-        <div class="in16"><span class="experience-dot" id=""></span></a></div>
-        <div class="c18"></div>
-        <div class="ex16"><a href=""><span class="designer-dot" id=""></span></a></div>
-        <div class="clear-btm-right"></div>
-      </div>
-    </div>
+        </body>
 
-<!--  ~~~~~~~~~~~~~~~~~ nav bottom ~~~~~~~~~~~~~~~~~~~~~~ --->
-    <nav class="bottom">
-      <div class="btm-nav-container">
-        <a href="">Team Page</a>
-      </div>
-    </nav>
-
-
-  </div> <!-- end of background div  -->
-
-
-</body>
-
-</html>
+        </html>

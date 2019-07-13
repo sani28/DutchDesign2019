@@ -1,9 +1,12 @@
 $(document).ready(function(){
-  var designerDots = [];
-  var previewVideos = [];
-  designerDots = $(".designer-dot").get();
-  experienceDots = $(".experience-dot").get();
-  previewVideos = $(".bg-preview-video").get();
+  //ARRAY OF DOTS
+  const designerDots = $(".designer-dot").get();
+  const experienceDots = $(".experience-dot").get();
+  const previewVideos = $(".bg-preview-video").get();
+  var intToggle = $( "#toggle-int" );
+  var expToggle = $( "#toggle-exp" );
+  //STATES
+  var interviewsActive = true; // T/F toggle interviews and experiences
 
   function playPreviewVideo(videoID){
     let currentVideo = videoID;
@@ -21,6 +24,7 @@ $(document).ready(function(){
     hidePreviewVideos();
     $("html").css("background-image", "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)");
   }
+
   function hidePreviewVideos(){
     for(let i=0, len=previewVideos.length; i< len; i++){
       $(previewVideos[i]).css("display", "none");
@@ -44,7 +48,25 @@ $(document).ready(function(){
     for(let i=0, len=designerDots.length; i < len; i++){
       let deactivatedDot = designerDots[i];
       if(deactivatedDot!=currentDot){
-        $(deactivatedDot).hasClass("dot-inactive") ? $(deactivatedDot).removeClass("dot-inactive") : $(deactivatedDot).addClass("dot-inactive");
+        $(deactivatedDot).hasClass("dot-unhovered") ? $(deactivatedDot).removeClass("dot-unhovered") : $(deactivatedDot).addClass("dot-unhovered");
+      }
+    }
+  }
+
+  function toggleDotSize(){
+    if(interviewsActive){
+      for(let i=0; i<designerDots.length; i++ ){
+        $(designerDots[i]).addClass("active-dot");
+      }
+      for (let j=0; j<experienceDots.length; j++){
+        $(experienceDots[j]).removeClass("active-dot");
+      }
+    } else {
+      for (let j=0; j<experienceDots.length; j++){
+        $(experienceDots[j]).addClass("active-dot");
+      }
+      for(let i=0; i<designerDots.length; i++ ){
+        $(designerDots[i]).removeClass("active-dot");
       }
     }
   }
@@ -61,5 +83,29 @@ $(document).ready(function(){
       showExperienceDots();
     });
   }
+
+  expToggle.click(function(){
+    if(!interviewsActive){
+      return;
+    }
+    else{
+      interviewsActive = false;
+      $(this).addClass("active-state-toggle");
+      $("#interview-toggle").removeClass("active-state-toggle");
+      toggleDotSize();
+    }
+  });
+
+  intToggle.click(function(){
+      if(interviewsActive){
+        return;
+      }
+      else{
+        interviewsActive = true;
+        $(this).addClass("active-state-toggle");
+        $("#experience-toggle").removeClass("active-state-toggle");
+        toggleDotSize();
+      }
+  });
 
 }); //DOCREADY DON'T DELETE
