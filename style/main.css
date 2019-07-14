@@ -103,250 +103,56 @@ h1:hover {
 }
 
 /* --------------- grid container -----------------------------*/
-.grid-container {
+/* .grid-container {
   display: flex;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   height: 60vh;
   margin-top: 2em;
   padding: 1em;
   transform: scale(0.6);
-}
+} */
 
-.grid-container * {
+/* .grid-container * {
   display: flex;
   padding: 1px;
   align-items: center;
-}
-
+} */
+/*
 .wrapper {
   grid-template-columns: minmax(auto, <flex>));
 }
 
 .grid-container *:after {
-  /* content: attr(class); */
+  content: attr(class);
   font-size: 0.1em;
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: "clear-left clear-left clear-left clear-left clear-left in1 clear-right clear-right clear-right clear-right clear-right clear-right clear-right clear-right""ex1 c1 ex2 c2 in2 in3 ex3 c3 in4 in5 in6 ex4 ex5 ex6""ex7 c4 ex8 ex9 c5 in7 c6 c7 in8 ex10 ex11 in9 c8 ex12""ex13 in10 c9 c10 c11 in11 c12 c13 c14 ex14 c15 c16 c17 ex15""in12 in13 in14 in15 in16 c18 ex16 clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right";
+  grip-gap: none;
+  margin: 0 auto;
+  max-width: 100vw;
+  padding: 0px;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  /* grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "clear-left clear-left clear-left clear-left clear-left in1 clear-right clear-right clear-right clear-right clear-right clear-right clear-right clear-right""ex1 c1 ex2 c2 in2 in3 ex3 c3 in4 in5 in6 ex4 ex5 ex6""ex7 c4 ex8 ex9 c5 in7 c6 c7 in8 ex10 ex11 in9 c8 ex12""ex13 in10 c9 c10 c11 in11 c12 c13 c14 ex14 c15 c16 c17 ex15""in12 in13 in14 in15 in16 c18 ex16 clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right clear-btm-right"; */
 }
 
-.in1 {
-  grid-area: in1;
-}
-
-.clear-left {
-  grid-area: clear-left;
-}
-
-.clear-right {
-  grid-area: clear-right;
-}
-
-.ex1 {
-  grid-area: ex1;
-}
-
-.ex2 {
-  grid-area: ex2;
-}
-
-.c1 {
-  grid-area: c1;
-}
-
-.c2 {
-  grid-area: c2;
-}
-
-.in2 {
-  grid-area: in2;
-}
-
-.in3 {
-  grid-area: in3;
-}
-
-.ex3 {
-  grid-area: ex3;
-}
-
-.c3 {
-  grid-area: c3;
-}
-
-.in4 {
-  grid-area: in4;
-}
-
-.in5 {
-  grid-area: in5;
-}
-
-.in6 {
-  grid-area: in6;
-}
-
-.ex4 {
-  grid-area: ex4;
-}
-
-.ex5 {
-  grid-area: ex5;
-}
-
-.ex6 {
-  grid-area: ex6;
-}
-
-.ex7 {
-  grid-area: ex7;
-}
-
-.c4 {
-  grid-area: c4;
-}
-
-.ex8 {
-  grid-area: ex8;
-}
-
-.ex9 {
-  grid-area: ex9;
-}
-
-.c5 {
-  grid-area: c5;
-}
-
-.in7 {
-  grid-area: in7;
-}
-
-.c6 {
-  grid-area: c6;
-}
-
-.c7 {
-  grid-area: c7;
-}
-
-.in8 {
-  grid-area: in8;
-}
-
-.ex10 {
-  grid-area: ex10;
-}
-
-.ex11 {
-  grid-area: ex11;
-}
-
-.in9 {
-  grid-area: in9;
-}
-
-.c8 {
-  grid-area: c8;
-}
-
-.ex12 {
-  grid-area: ex12;
-}
-
-.ex13 {
-  grid-area: ex13;
-}
-
-.in10 {
-  grid-area: in10;
-}
-
-.c9 {
-  grid-area: c9;
-}
-
-.c10 {
-  grid-area: c10;
-}
-
-.c11 {
-  grid-area: c11;
-}
-
-.in11 {
-  grid-area: in11;
-}
-
-.c12 {
-  grid-area: c12;
-}
-
-.c13 {
-  grid-area: c13;
-}
-
-.c14 {
-  grid-area: c14;
-}
-
-.ex14 {
-  grid-area: ex14;
-}
-
-.c15 {
-  grid-area: c15;
-}
-
-.c16 {
-  grid-area: c16;
-}
-
-.c17 {
-  grid-area: c17;
-}
-
-.ex15 {
-  grid-area: ex15;
-}
-
-.in12 {
-  grid-area: in12;
-}
-
-.in13 {
-  grid-area: in13;
-}
-
-.in14 {
-  grid-area: in14;
-}
-
-.in15 {
-  grid-area: in15;
-}
-
-.in16 {
-  grid-area: in16;
-}
-
-.c18 {
-  grid-area: c18;
-}
-
-.ex16 {
-  grid-area: ex16;
-}
-
-.clear-btm-right {
-  grid-area: clear-btm-right;
+.main-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  background-color: ;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  height: 9vw;
+  max-height: (1vh/16);
 }
 
 /* ---------------------------------- */
@@ -368,13 +174,13 @@ h1:hover {
   background-color: white;
   display: inline-block;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .designer-dot.active-dot{
-  height: 50px;
-  width: 50px;
+  height: 3.25rem;
+  width: 3.25rem;
 }
 
 .dot-unhovered.designer-dot {
@@ -393,14 +199,14 @@ h1:hover {
   background-color: white;
   display: inline-block;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 1.5rem;
+  width: 1.5rem;
   margin-top: 10px;
 }
 
 .experience-dot.active-dot{
-  height: 50px;
-  width: 50px;
+  height: 3.25rem;
+  width: 3.25rem;
 }
 
 .dot-unhovered.experience-dot{
