@@ -4,7 +4,7 @@ $(document).ready(function(){
   const experienceDots = $(".experience-dot").get();
   const previewVideos = $(".bg-preview-video").get();
   var intToggle = $( "#toggle-int" );
-  var expToggle = $( "#toggle-exp" );
+  var expToggle = $( "#toggle-field" );
   //STATES
   var interviewsActive = true; // T/F toggle interviews and experiences
   var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
@@ -97,7 +97,7 @@ $(document).ready(function(){
 
   function revertBackground() {
     hidePreviewVideos();
-    $("html").css("background-color", "#DFEA4E");
+    $("html").css("background-color", "GreenYellow");
   }
 
   function hidePreviewVideos(){
@@ -194,7 +194,7 @@ $(document).ready(function(){
     else{
       interviewsActive = false;
       $(this).addClass("active-state-toggle");
-      $("#interview-toggle").removeClass("active-state-toggle");
+      $("#toggle-int").removeClass("active-state-toggle");
       toggleDotSize();
     }
   });
@@ -206,7 +206,7 @@ $(document).ready(function(){
       else{
         interviewsActive = true;
         $(this).addClass("active-state-toggle");
-        $("#experience-toggle").removeClass("active-state-toggle");
+        $("#toggle-field").removeClass("active-state-toggle");
         toggleDotSize();
       }
   });
