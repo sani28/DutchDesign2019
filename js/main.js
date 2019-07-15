@@ -7,8 +7,6 @@ $(document).ready(function(){
   var expToggle = $( "#toggle-exp" );
   //STATES
   var interviewsActive = true; // T/F toggle interviews and experiences
-
-
   var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
 
   for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
@@ -85,9 +83,6 @@ $(document).ready(function(){
 
   }; //end of archive loop
 
-
-
-
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;
     switch (currentVideo) { //takes a string from the index html
@@ -123,18 +118,6 @@ $(document).ready(function(){
     }
   }
 
-  // function showDesignerDots(){
-  //   for (let i=0, len=designerDots.length; i<len; i++){
-  //     $(designerDots[i]).css("display", "inline-block");
-  //   }
-  // }
-  //
-  // function hideDesignerDots(){
-  //   for (let i=0, len=designerDots.length; i<len; i++){
-  //     $(designerDots[i]).css("display", "none");
-  //   }
-  // }
-
   function changeInactiveState(hovered){
     if (interviewsActive){
       for(let i=0, len=designerDots.length; i < len; i++){
@@ -154,7 +137,6 @@ $(document).ready(function(){
         }
       }
     }
-
   }
 
   function toggleDotSize(){
