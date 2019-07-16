@@ -126,6 +126,7 @@ h1 {
 #yearsixteen {
   letter-spacing: 8px;
 }
+
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 255px;
@@ -138,7 +139,7 @@ h1 {
 }
 
 .year {
-  margin-top: 90%;
+  margin-top: 100%;
 }
 
 /* .background {
