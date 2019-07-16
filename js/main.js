@@ -85,6 +85,21 @@ $(document).ready(function(){
 
   }; //end of archive loop
 
+
+/////////////////////////////////////////////////////////////////////////
+/////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
+/////////////////////////////////////////////////////////////////////////
+  initLandingPage();
+  
+
+  function initLandingPage(){
+    highlightDotsOnHover();
+    manageDesignerDotHover();
+    manageFieldNoteDotHover();
+    toggleDotState();
+  }
+
+
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;
     hideUIElements();
@@ -97,18 +112,6 @@ $(document).ready(function(){
         break;
     }
   }
-
-  function highlightDotsOnHover(){
-    /*PSEUDO:
-    For each element, get the id
-    On hover for (this) element, hover the dot with ID this.id + "Dot"  */
-    let navList = $("#main-nav li").get();
-    for(let i=0; i<navList.length; i++){
-
-    }
-  }
-
-  highlightDotsOnHover();
 
   function hideUIElements(){
     $("#main-blurb").css("display", "none");
@@ -187,73 +190,75 @@ $(document).ready(function(){
     }
   }
 
-///////////////////// CODE OUTSIDE OF FUNCTIONS STARTS HERE /////////////
-
-  for(let i=0; i < designerNavList.length; i++){
-    $(designerNavList[i]).mouseenter(function(){
-      let currentID = this.id;
-      $("#" + currentID + "Dot").css("background-color", "#7D246B");
-    });
-    $(designerNavList[i]).mouseout(function(){
-      let currentID = this.id;
-      $("#" + currentID + "Dot").css("background-color", "white");
-    })
+  function highlightDotsOnHover(){
+    for(let i=0; i < designerNavList.length; i++){
+      $(designerNavList[i]).mouseenter(function(){
+        let currentID = this.id;
+        $("#" + currentID + "Dot").css("background-color", "#7D246B");
+      });
+      $(designerNavList[i]).mouseout(function(){
+        let currentID = this.id;
+        $("#" + currentID + "Dot").css("background-color", "white");
+      })
+    }
   }
 
+  function manageDesignerDotHover(){
+    for (let i=0, len=designerDots.length; i < len; i++){
+      $(designerDots[i]).mouseenter(function(){
+        if(interviewsActive){
+          changeInactiveState(this);
+          playPreviewVideo(this.id);
+          hideExperienceDots();
+        }
 
-  for (let i=0, len=designerDots.length; i < len; i++){
-    $(designerDots[i]).mouseenter(function(){
-      if(interviewsActive){
-        changeInactiveState(this);
-        playPreviewVideo(this.id);
-        hideExperienceDots();
+      });
+      $(designerDots[i]).mouseout(function(){
+        if(interviewsActive){
+          changeInactiveState(this);
+          revertBackground();
+          showExperienceDots();
+        }
+      });
+    }
+  }
+
+  function manageFieldNoteDotHover(){
+    for (let j=0, len=experienceDots.length; j < len; j++){
+      $(experienceDots[j]).mouseenter(function(){
+          changeInactiveState(this);
+      });
+      $(experienceDots[j]).mouseout(function(){
+          changeInactiveState(this);
+      });
+    }
+  }
+  function toggleDotState(){
+    expToggle.click(function(){
+      if(!interviewsActive){
+        return;
       }
-
+      else{
+        interviewsActive = false;
+        $(this).addClass("active-state-toggle");
+        $("#toggle-int").removeClass("active-state-toggle");
+        toggleDotSize();
+      }
     });
-    $(designerDots[i]).mouseout(function(){
+    intToggle.click(function(){
       if(interviewsActive){
-        changeInactiveState(this);
-        revertBackground();
-        showExperienceDots();
+        return;
+      }
+      else{
+        interviewsActive = true;
+        $(this).addClass("active-state-toggle");
+        $("#toggle-field").removeClass("active-state-toggle");
+        toggleDotSize();
       }
     });
   }
-  for (let j=0, len=experienceDots.length; j < len; j++){
-    $(experienceDots[j]).mouseenter(function(){
-        changeInactiveState(this);
-        // playPreviewVideo(this.id);
-        // hideDesignerDots();
-    });
-    $(experienceDots[j]).mouseout(function(){
-        changeInactiveState(this);
-        // revertBackground();
-        // showDesignerDots();}
-    });
-  }
 
-  expToggle.click(function(){
-    if(!interviewsActive){
-      return;
-    }
-    else{
-      interviewsActive = false;
-      $(this).addClass("active-state-toggle");
-      $("#toggle-int").removeClass("active-state-toggle");
-      toggleDotSize();
-    }
-  });
 
-  intToggle.click(function(){
-    if(interviewsActive){
-      return;
-    }
-    else{
-      interviewsActive = true;
-      $(this).addClass("active-state-toggle");
-      $("#toggle-field").removeClass("active-state-toggle");
-      toggleDotSize();
-    }
-  });
 }); //DOCREADY DON'T DELETE
 
 
