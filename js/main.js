@@ -3,13 +3,15 @@ $(document).ready(function(){
   const designerDots = $(".designer-dot").get();
   const experienceDots = $(".experience-dot").get();
   const previewVideos = $(".bg-preview-video").get();
+  var designerNavList = $("#main-nav>.designer-list li").get();
   var intToggle = $( "#toggle-int" );
   var expToggle = $( "#toggle-field" );
+
   //STATES
   var interviewsActive = true; // T/F toggle interviews and experiences
   var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
 
-  for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
+  for (let i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
 
     $("#2010").hover(function() {
         $("#2010").css("background-image", "url(./assets/2010.png)");
@@ -85,6 +87,7 @@ $(document).ready(function(){
 
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;
+    hideUIElements();
     switch (currentVideo) { //takes a string from the index html
       case "lexDot":
         $("#lex-preview-vid").css("display", "block");
@@ -95,8 +98,35 @@ $(document).ready(function(){
     }
   }
 
+  function highlightDotsOnHover(){
+    /*PSEUDO:
+    For each element, get the id
+    On hover for (this) element, hover the dot with ID this.id + "Dot"  */
+    let navList = $("#main-nav li").get();
+    for(let i=0; i<navList.length; i++){
+
+    }
+  }
+
+  highlightDotsOnHover();
+
+  function hideUIElements(){
+    $("#main-blurb").css("display", "none");
+    $("#main-nav").css("display", "none");
+    $("#main-logo").css("display", "none");
+    $("#main-toggle").css("display", "none");
+  }
+
+  function showUIElements(){
+    $("#main-toggle").css("display", "grid");
+    $("#main-logo").css("display", "block");
+    $("#main-nav").css("display", "block");
+    $("#main-blurb").css("display", "block");
+  }
+
   function revertBackground() {
     hidePreviewVideos();
+    showUIElements();
     $("html").css("background-color", "#DFEA4E");
   }
 
@@ -157,35 +187,49 @@ $(document).ready(function(){
     }
   }
 
-    for (let i=0, len=designerDots.length; i < len; i++){
-      $(designerDots[i]).mouseenter(function(){
-        if(interviewsActive){
-          changeInactiveState(this);
-          playPreviewVideo(this.id);
-          hideExperienceDots();
-        }
+///////////////////// CODE OUTSIDE OF FUNCTIONS STARTS HERE /////////////
 
-      });
-      $(designerDots[i]).mouseout(function(){
-        if(interviewsActive){
-          changeInactiveState(this);
-          revertBackground();
-          showExperienceDots();
-        }
-      });
-    }
-    for (let j=0, len=experienceDots.length; j < len; j++){
-      $(experienceDots[j]).mouseenter(function(){
-          changeInactiveState(this);
-          // playPreviewVideo(this.id);
-          // hideDesignerDots();
-      });
-      $(experienceDots[j]).mouseout(function(){
-          changeInactiveState(this);
-          // revertBackground();
-          // showDesignerDots();}
-      });
-    }
+  for(let i=0; i < designerNavList.length; i++){
+    $(designerNavList[i]).mouseenter(function(){
+      let currentID = this.id;
+      $("#" + currentID + "Dot").css("background-color", "#7D246B");
+    });
+    $(designerNavList[i]).mouseout(function(){
+      let currentID = this.id;
+      $("#" + currentID + "Dot").css("background-color", "white");
+    })
+  }
+
+
+  for (let i=0, len=designerDots.length; i < len; i++){
+    $(designerDots[i]).mouseenter(function(){
+      if(interviewsActive){
+        changeInactiveState(this);
+        playPreviewVideo(this.id);
+        hideExperienceDots();
+      }
+
+    });
+    $(designerDots[i]).mouseout(function(){
+      if(interviewsActive){
+        changeInactiveState(this);
+        revertBackground();
+        showExperienceDots();
+      }
+    });
+  }
+  for (let j=0, len=experienceDots.length; j < len; j++){
+    $(experienceDots[j]).mouseenter(function(){
+        changeInactiveState(this);
+        // playPreviewVideo(this.id);
+        // hideDesignerDots();
+    });
+    $(experienceDots[j]).mouseout(function(){
+        changeInactiveState(this);
+        // revertBackground();
+        // showDesignerDots();}
+    });
+  }
 
   expToggle.click(function(){
     if(!interviewsActive){
@@ -200,17 +244,16 @@ $(document).ready(function(){
   });
 
   intToggle.click(function(){
-      if(interviewsActive){
-        return;
-      }
-      else{
-        interviewsActive = true;
-        $(this).addClass("active-state-toggle");
-        $("#toggle-field").removeClass("active-state-toggle");
-        toggleDotSize();
-      }
+    if(interviewsActive){
+      return;
+    }
+    else{
+      interviewsActive = true;
+      $(this).addClass("active-state-toggle");
+      $("#toggle-field").removeClass("active-state-toggle");
+      toggleDotSize();
+    }
   });
-
 }); //DOCREADY DON'T DELETE
 
 

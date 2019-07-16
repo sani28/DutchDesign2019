@@ -6,7 +6,7 @@
 }
 
 html{
-  background-color: GreenYellow;
+  background-color: #DFEA4E;
   background-image: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em),
   linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
   background-size: 4.54vw 6.67vh;
@@ -74,14 +74,14 @@ h1:hover {
   border: 1px solid white;
 }
 
-.main-logo {
+#main-logo {
   grid-row: 2;
   grid-column: 2 / span 4;
   font-size: 1.8em;
   font-weight: bold;
 }
 
-.main-nav {
+.list-navigation {
   grid-row: 13 / span 1;
   grid-column: 2 / 13;
   font-size: 0.8em;
@@ -91,11 +91,12 @@ h1:hover {
   list-style: none;
   display: grid;
   grid: 1fr / repeat(4, 9.08vw);
+  grid-auto-flow: row;
   padding-left: 0;
   margin-top: 0;
 }
 
-.main-nav .main-nav-list li{
+.list-navigation .main-nav-list li{
   font-size: 0.5rem;
   text-align: left;
   color: #7D246B;
@@ -105,7 +106,7 @@ h1:hover {
   background-color: white;
 }
 
-.main-blurb {
+#main-blurb {
   grid-row: 2 / span 2;
   grid-column: 14 / 22;
   font-size: 0.5rem;
@@ -113,7 +114,7 @@ h1:hover {
   margin-top: 0;
 }
 
-.main-toggle {
+#main-toggle {
   font-size: 0.5em;
   font-family: hyperMarket;
   color: white;
@@ -179,12 +180,13 @@ h1:hover {
   border: 1px white solid;
 }
 
-.designer-dot:hover {
+/* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
+/* .designer-dot:hover {
   -webkit-animation: expandDot 0.35s infinite;
   -moz-animation: expandDot 0.35s infinite;
   -o-animation: expandDot 0.35s infinite;
   animation: expandDot 0.35s infinite;
-}
+} */
 
 .experience-dot {
   background-color: white;
@@ -330,14 +332,4 @@ h1:hover {
 
 #btsItem{
   grid-area: 5/7;
-}
-/* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
-@keyframes expandDot {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.15);
-  }
 }
