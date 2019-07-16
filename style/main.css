@@ -4,13 +4,63 @@
   src: url(../fonts/hypermarket-regular.ttf);
   font-weight: bold;
 }
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../fonts/bebas.otf);
+}
+
+@font-face {
+  font-family: brandon;
+  src: url(../fonts/brandon.otf);
+}
+
+@font-face {
+  font-family: karla;
+  src: url(../fonts/karla.ttf);
+}
+
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../fonts/helveticaneue-bold.otf);
+}
+
+@font-face {
+  font-family: museosans-100;
+  src: url(../fonts/museosans-100.otf);
+}
+
+@font-face {
+  font-family: novecento;
+  src: url(../fonts/novecento.otf);
+}
+
+@font-face {
+  font-family: katarinestd;
+  src: url(../fonts/katarinestd.otf);
+}
+
+@font-face {
+  font-family: monsterrat;
+  src: url(../fonts/monsterrat.otf);
+}
+
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../fonts/neuehaasgroteskblack.otf);
+}
+
+@font-face {
+  font-family: redaction;
+  src: url(../fonts/redaction20-regular.woff);
+}
 
 html {
   background-image: linear-gradient(120deg, #C3EB23 0%, #C3EB23 100%);
+  max-height: 100vh;
 }
 
 *, html {
-  font-family: hyperMarket;
   color: white;
 }
 
@@ -20,25 +70,75 @@ a {
 
 h1 {
   transform: rotate(-90deg);
-  font-size: 100px;
-  font-family: Helvetica;
   color: #7D246B;
 }
 
-h1:hover {
-  color: white;
+#ten {
+  font-family: helveticaneue-bold;
+}
+#eleven {
+  font-family: museosans-100;
+}
+#twelve {
+  font-family: novecento;
+}
+#thirteen{
+  font-family: bebas;
+}
+#fourteen{
+  font-family: monsterrat;
+}
+#fifteen{
+  font-family: katarinestd;
+}
+#sixteen{
+  font-family: karla;
+}
+#seventeen{
+  font-family: arial;
+}
+#eighteen{
+  font-family: neuehaasgroteskblack;
+}
+#nineteen{
+  font-family: redaction;
 }
 
+#yeartwelve {
+  font-size: 2.2em;
+  letter-spacing: 10px;
+}
+
+#yearthirteen {
+  font-size: 2.2em;
+  letter-spacing: 10px;
+}
+
+#yearfourteen {
+  font-size: 5rem;
+  letter-spacing: 12px;
+}
+
+#yearfifteen {
+  letter-spacing: 10px;
+}
+
+#yearsixteen {
+  letter-spacing: 8px;
+}
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
-  width: 253px;
+  width: 255px;
   height: 90vh;
   background-size: contain;
   background-position: center;
+  background-clip: border-box;
+  font-size: 3.1em;
+  margin-left: 1%;
 }
 
 .year {
-  margin-top: 85%;
+  margin-top: 90%;
 }
 
 /* .background {
@@ -47,6 +147,7 @@ h1:hover {
   height: 100vh;
   position: fixed;
 } */
+
 #grain {
   background-image: url(../imgs/GRAIN.png);
   width: 100%;
@@ -95,7 +196,6 @@ h1:hover {
   height: 90vh;
   bottom: 0;
   position: absolute;
-  border: 1px solid white;
 }
 
 .btm-nav-container {
@@ -124,6 +224,13 @@ h1:hover {
 
 .wrapper {
   grid-template-columns: minmax(auto, <flex>));
+
+}
+
+#grid-bg {
+    background-image: url("../assets/grid.png");
+    background-repeat: no-repeat;
+
 }
 
 .grid-container *:after {

@@ -5,84 +5,99 @@ $(document).ready(function() {
   experienceDots = $(".experience-dot").get();
   previewVideos = $(".bg-preview-video").get();
 
-
   var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
 
   for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
 
-    $("#2010").hover(function() {
-        $("#2010").css("background-image", "url(./assets/2010.png)");
+    $("#ten").hover(function() {
+        $("#ten").css("background-image", "url(./assets/2010.png)");
+        $("#yearten").css("color", "white");
       },
       function() {
-        $("#2010").css("background-image", "none");
+        $("#ten").css("background-image", "none");
+        $("#yearten").css("color", "#7D246B");
       });
 
-    $("#2011").hover(function() {
-        $("#2011").css("background-image", "url(./assets/2011.png)");
+    $("#eleven").hover(function() {
+        $("#eleven").css("background-image", "url(./assets/2011.png)");
+        $("#yeareleven").css("color", "white");
       },
       function() {
-        $("#2011").css("background-image", "none");
+        $("#eleven").css("background-image", "none");
+        $("#yeareleven").css("color", "#7D246B");
       });
 
-    $("#2012").hover(function() {
-        $("#2012").css("background-image", "url(./assets/2012.png)");
+    $("#twelve").hover(function() {
+        $("#twelve").css("background-image", "url(./assets/2012.png)");
+        $("#yeartwelve").css("color", "black");
       },
       function() {
-        $("#2012").css("background-image", "none");
+        $("#twelve").css("background-image", "none");
+        $("#yeartwelve").css("color", "#7D246B");
       });
 
-    $("#2013").hover(function() {
-        $("#2013").css("background-image", "url(./assets/2013.png)");
+    $("#thirteen").hover(function() {
+        $("#thirteen").css("background-image", "url(./assets/2013.png)");
+        $("#yearthirteen").css("color", "white");
       },
       function() {
-        $("#2013").css("background-image", "none");
+        $("#thirteen").css("background-image", "none");
+        $("#yearthirteen").css("color", "#7D246B");
       });
 
-    $("#2014").hover(function() {
-        $("#2014").css("background-image", "url(./assets/2014.png)");
+    $("#fourteen").hover(function() {
+        $("#fourteen").css("background-image", "url(./assets/2014.png)");
+        $("#yearfourteen").css("color", "white");
       },
       function() {
-        $("#2014").css("background-image", "none");
+        $("#fourteen").css("background-image", "none");
+        $("#yearfourteen").css("color", "#7D246B");
       });
 
-    $("#2015").hover(function() {
-        $("#2015").css("background-image", "url(./assets/2015.png)");
+    $("#fifteen").hover(function() {
+        $("#fifteen").css("background-image", "url(./assets/2015.png)");
+        $("#yearfifteen").css("color", "white");
       },
       function() {
-        $("#2015").css("background-image", "none");
+        $("#fifteen").css("background-image", "none");
+        $("#yearfifteen").css("color", "#7D246B");
       });
 
-    $("#2016").hover(function() {
-        $("#2016").css("background-image", "url(./assets/2016.png)");
+    $("#sixteen").hover(function() {
+        $("#sixteen").css("background-image", "url(./assets/2016.png)");
+        $("#yearsixteen").css("color", "#4cb883");
       },
       function() {
-        $("#2016").css("background-image", "none");
+        $("#sixteen").css("background-image", "none");
+        $("#yearsixteen").css("color", "#7D246B");
       });
 
-    $("#2017").hover(function() {
-        $("#2017").css("background-image", "url(./assets/2017.svg)");
+    $("#seventeen").hover(function() {
+        $("#seventeen").css("background-image", "url(./assets/2017.svg)");
+        $("#yearseventeen").css("color", "black");
       },
       function() {
-        $("#2017").css("background-image", "none");
+        $("#seventeen").css("background-image", "none");
+        $("#yearseventeen").css("color", "#7D246B");
       });
 
-    $("#2018").hover(function() {
-        $("#2018").css("background-image", "url(./assets/2018.png)");
+    $("#eighteen").hover(function() {
+        $("#eighteen").css("background-image", "url(./assets/2018.png)");
+        $("#yeareighteen").css("color", "white");
       },
       function() {
-        $("#2018").css("background-image", "none");
+        $("#eighteen").css("background-image", "none");
+        $("#yeareighteen").css("color", "#7D246B");
       });
 
-    $("#2019").hover(function() {
-        $("#2019").css("background-image", "url(./assets/2019.png)");
+    $("#nineteen").hover(function() {
+        $("#nineteen").css("background-image", "url(./assets/2019.png)");
       },
       function() {
-        $("#2019").css("background-image", "none");
+        $("#nineteen").css("background-image", "none");
       });
 
   }; //end of archive loop
-
-
 
 
   function playPreviewVideo(videoID) {
@@ -147,13 +162,13 @@ $(document).ready(function() {
   }
 
 
+  //map vertical scroll to horizontal scroll using mousewheel
+  $(function() {
+
+     $("html").mousewheel(function(event, delta) {
+        this.scrollLeft -= (delta * 1);
+     });
+
+  });
+
 }); //DOCREADY DON'T DELETE
-
-
-// $(function changeArchiveImg(id) {
-//    $('.archive-stack').each(function() {
-//       var archiveId = $(this).attr("id");
-//       var image = $('#' + archiveId + ' > a ').attr("id");
-//       $('#' + archiveId).css({"background":"url(" + image + ".png)","background-size":"contain"});
-//    });
-// });
