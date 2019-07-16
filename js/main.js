@@ -97,7 +97,7 @@ $(document).ready(function(){
 
   function revertBackground() {
     hidePreviewVideos();
-    $("html").css("background-color", "GreenYellow");
+    $("html").css("background-color", "#DFEA4E");
   }
 
   function hidePreviewVideos(){
