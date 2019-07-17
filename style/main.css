@@ -52,7 +52,7 @@
 
 @font-face {
   font-family: redaction;
-  src: url(../fonts/redaction20-regular.woff);
+  src: url(../fonts/redaction10-regular.otf);
 }
 
 html {
@@ -129,13 +129,12 @@ h1 {
 
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
-  width: 255px;
-  height: 90vh;
-  background-size: contain;
+  width: 253px;
+  height: 100vh;
+  background-size: cover;
   background-position: center;
-  background-clip: border-box;
+  background-repeat: no-repeat;
   font-size: 3.1em;
-  margin-left: 1%;
 }
 
 .year {
@@ -187,6 +186,7 @@ h1 {
   display: inline-flex;
   font-family: hyperMarket;
   color: white;
+  z-index: 2;
 }
 
 /* ------------------- containers ------------------------------------- */
@@ -194,9 +194,10 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   overflow-y: scroll;
-  height: 90vh;
+  height: 100vh;
   bottom: 0;
   position: absolute;
+  z-index: -1;
 }
 
 .btm-nav-container {
@@ -231,7 +232,6 @@ h1 {
 #grid-bg {
     background-image: url("../assets/grid.png");
     background-repeat: no-repeat;
-
 }
 
 .grid-container *:after {
