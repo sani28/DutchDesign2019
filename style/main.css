@@ -5,6 +5,12 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: Redaction;
+  src: url(../fonts/Redaction-bold.woff);
+  font-weight: bold;
+}
+
 html{
   background-color: #DFEA4E;
   background-image: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em),
@@ -26,7 +32,7 @@ h1 {
   /* transform: rotate(-90deg); */
   margin-top: 0;
   font-size: 100px;
-  font-family: Helvetica;
+  font-family: Redaction;
   color: #7D246B;
 }
 
@@ -170,7 +176,7 @@ h1:hover {
   width: 1vw;
 }
 
-.designer-dot.active-dot{
+.active-dot{
   height: 2.25vw;
   width: 2.25vw;
 }
@@ -178,6 +184,10 @@ h1:hover {
 .dot-unhovered.designer-dot {
   background-color: transparent;
   border: 1px white solid;
+}
+
+.active-dot.nav-highlighted {
+  background-color: #7D246B;
 }
 
 /* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */

@@ -90,13 +90,13 @@ $(document).ready(function(){
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
 /////////////////////////////////////////////////////////////////////////
   initLandingPage();
-  
+
 
   function initLandingPage(){
-    highlightDotsOnHover();
+    toggleDotState();
+    highlightDotsOnNavHover();
     manageDesignerDotHover();
     manageFieldNoteDotHover();
-    toggleDotState();
   }
 
 
@@ -190,15 +190,15 @@ $(document).ready(function(){
     }
   }
 
-  function highlightDotsOnHover(){
+  function highlightDotsOnNavHover(){
     for(let i=0; i < designerNavList.length; i++){
       $(designerNavList[i]).mouseenter(function(){
         let currentID = this.id;
-        $("#" + currentID + "Dot").css("background-color", "#7D246B");
+        $("#" + currentID + "Dot").addClass("nav-highlighted");
       });
       $(designerNavList[i]).mouseout(function(){
         let currentID = this.id;
-        $("#" + currentID + "Dot").css("background-color", "white");
+        $("#" + currentID + "Dot").removeClass("nav-highlighted");
       })
     }
   }
