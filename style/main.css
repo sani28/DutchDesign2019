@@ -1,10 +1,3 @@
-/* ----- fonts ------ */
-@font-face {
-  font-family: hyperMarket;
-  src: url(../fonts/hypermarket-regular.ttf);
-  font-weight: bold;
-}
-
 html{
   background-color: #DFEA4E;
   background-image: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em),
@@ -21,29 +14,12 @@ a {
   text-decoration: none;
 }
 
-
 h1 {
   /* transform: rotate(-90deg); */
   margin-top: 0;
   font-size: 100px;
   font-family: Helvetica;
   color: #7D246B;
-}
-
-h1:hover {
-  color: white;
-}
-
-/* ------------------- archive ------------------------------------- */
-.archive-stack {
-  width: 253px;
-  height: 90vh;
-  background-size: contain;
-  background-position: center;
-}
-
-.year {
-  margin-top: 85%;
 }
 
 #grain {
@@ -59,7 +35,6 @@ h1:hover {
   z-index: -1;
 }
 
-
 /* --------------- nav box styling-----------------------------*/
 .grid-layout-container {
   display: grid;
@@ -71,8 +46,9 @@ h1:hover {
   max-width: 100vw;
   height: 100vh;
   padding: 0px;
-  border: 1px solid white;
+  border-style: 1px solid white;
 }
+
 
 #main-logo {
   grid-row: 2;
