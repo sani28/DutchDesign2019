@@ -90,7 +90,7 @@ $(document).ready(function(){
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
 /////////////////////////////////////////////////////////////////////////
   initLandingPage();
-  
+
 
   function initLandingPage(){
     highlightDotsOnHover();
@@ -260,12 +260,3 @@ $(document).ready(function(){
 
 
 }); //DOCREADY DON'T DELETE
-
-
-// $(function changeArchiveImg(id) {
-//    $('.archive-stack').each(function() {
-//       var archiveId = $(this).attr("id");
-//       var image = $('#' + archiveId + ' > a ').attr("id");
-//       $('#' + archiveId).css({"background":"url(" + image + ".png)","background-size":"contain"});
-//    });
-// });
