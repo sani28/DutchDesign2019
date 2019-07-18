@@ -76,13 +76,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  transform: rotate(-90deg);
-  margin-top: 0;
-  font-size: 100px;
-  font-family: Redaction;
-  color: #7D246B;
-}
 
 #ten {
   font-family: helveticaneue-bold;
@@ -153,6 +146,10 @@ h1 {
   font-size: 3.1em;
 }
 
+.legacy-year {
+    transform: rotate(-90deg);
+    color: #7D246B;
+  }
 .year {
   margin-top: 100%;
 }
@@ -213,6 +210,7 @@ h1 {
 #grid-bg {
     background-image: url("../assets/grid.png");
     background-repeat: no-repeat;
+}
 
 /* --------------- nav box styling-----------------------------*/
 .grid-layout-container {
@@ -233,6 +231,10 @@ h1 {
   grid-column: 2 / span 4;
   font-size: 1.8em;
   font-weight: bold;
+  margin-top: 0;
+  font-size: 100px;
+  font-family: Redaction;
+  color: #7D246B;
 }
 
 .list-navigation {
