@@ -1,0 +1,89 @@
+/* ------------------- containers ------------------------------------- */
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  height: 100vh;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  transform: rotate(-90deg);
+  color: #7D246B;
+}
+
+#ten
+  font-family helveticaneue-bold
+
+#eleven {
+  font-family museosans-100;
+}
+
+#twelve {
+  font-family novecento;
+}
+#thirteen{
+  font-family bebas;
+}
+#fourteen{
+  font-family monsterrat;
+}
+
+#fifteen{
+  font-family: katarinestd;
+}
+#sixteen{
+  font-family: karla;
+}
+#seventeen{
+  font-family: arial;
+}
+#eighteen{
+  font-family: neuehaasgroteskblack;
+}
+#nineteen{
+  font-family: redaction;
+}
+
+#yeartwelve {
+  font-size: 2.2em;
+  letter-spacing: 10px;
+}
+
+#yearthirteen {
+  font-size: 2.2em;
+  letter-spacing: 10px;
+}
+
+#yearfourteen {
+  font-size: 5rem;
+  letter-spacing: 12px;
+}
+
+#yearfifteen {
+  letter-spacing: 10px;
+}
+
+#yearsixteen {
+  letter-spacing: 8px;
+}
+
+/* ------------------- archive ------------------------------------- */
+.archive-stack {
+  width: 253px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 3.1em;
+}
+
+.year {
+  margin-top: 100%;
+}

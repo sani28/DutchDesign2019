@@ -3,64 +3,41 @@
 // -----------------------------------------------------------------------------
 
 
-
-
-
+// ***********************
+///  F O N T S
+//************************
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-regular: 'Redaction10', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-medium: 'Redaction20', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-bold: 'Redaction70', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
-
-
-
-/// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
-
-/// Main brand color
+// ***********************
+///  B R A N D    C O L O U R S
+//************************
 /// @type Color
 $brand-color: rgb(229, 0, 80) !default;
 
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
 
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
-
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
-
-
-
-
+// ***********************
+///  C O N T A I N E R   L E N G T H S
+//************************
 
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
 
-
-
-
-
-/// Breakpoints map
+// ***********************
+///  B R E A K P O I N T S
+//************************
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  'mobile': 400px,
+  'tablet': 768px,
+  'laptop': 950px,
+  'desktop' 1200px,
 ) !default;
-
-
-
 
 
 
