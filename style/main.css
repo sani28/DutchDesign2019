@@ -40,6 +40,11 @@ h1:hover {
   color: white;
 }
 
+/* consistently use this to hide things */
+*.hiddenUI {
+  display: none;
+}
+
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 253px;
@@ -151,7 +156,6 @@ h1:hover {
   height: auto;
   z-index: -1;
   transform: translate(-50%, -50%);
-  display: none;
   /* display changes on JS activation */
 }
 
@@ -200,7 +204,7 @@ h1:hover {
 
 .experience-dot {
   background-color: white;
-  display: inline;
+  display: inline-block;
   border-radius: 50%;
   height: 1vw;
   width: 1vw;
