@@ -29,7 +29,7 @@ a {
 
 
 h1 {
-  /* transform: rotate(-90deg); */
+  transform: rotate(-90deg);
   margin-top: 0;
   font-size: 100px;
   font-family: Redaction;
@@ -197,14 +197,6 @@ h1:hover {
 .active-dot.nav-highlighted {
   background-color: #7D246B;
 }
-
-/* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
-/* .designer-dot:hover {
-  -webkit-animation: expandDot 0.35s infinite;
-  -moz-animation: expandDot 0.35s infinite;
-  -o-animation: expandDot 0.35s infinite;
-  animation: expandDot 0.35s infinite;
-} */
 
 .experience-dot {
   background-color: white;
