@@ -5,7 +5,7 @@ var targetDivs = document.querySelectorAll('.archive-stack'); //select all the a
 for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
 
   $("#ten").hover(function() {
-      $("#ten").css("background-image", "url(./assets/2010.png)");
+      $("#ten").css("background-image", "url(../assets/2010.png)");
       $("#yearten").css("color", "white");
     },
     function() {
@@ -14,7 +14,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#eleven").hover(function() {
-      $("#eleven").css("background-image", "url(./assets/2011.png)");
+      $("#eleven").css("background-image", "url(../assets/2011.png)");
       $("#yeareleven").css("color", "white");
     },
     function() {
@@ -23,7 +23,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#twelve").hover(function() {
-      $("#twelve").css("background-image", "url(./assets/2012.png)");
+      $("#twelve").css("background-image", "url(../assets/2012.png)");
       $("#yeartwelve").css("color", "black");
     },
     function() {
@@ -32,7 +32,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#thirteen").hover(function() {
-      $("#thirteen").css("background-image", "url(./assets/2013.png)");
+      $("#thirteen").css("background-image", "url(../assets/2013.png)");
       $("#yearthirteen").css("color", "white");
     },
     function() {
@@ -41,7 +41,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#fourteen").hover(function() {
-      $("#fourteen").css("background-image", "url(./assets/2014.png)");
+      $("#fourteen").css("background-image", "url(../assets/2014.png)");
       $("#yearfourteen").css("color", "white");
     },
     function() {
@@ -50,7 +50,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#fifteen").hover(function() {
-      $("#fifteen").css("background-image", "url(./assets/2015.png)");
+      $("#fifteen").css("background-image", "url(../assets/2015.png)");
       $("#yearfifteen").css("color", "white");
     },
     function() {
@@ -59,7 +59,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#sixteen").hover(function() {
-      $("#sixteen").css("background-image", "url(./assets/2016.png)");
+      $("#sixteen").css("background-image", "url(../assets/2016.png)");
       $("#yearsixteen").css("color", "#4cb883");
     },
     function() {
@@ -68,7 +68,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#seventeen").hover(function() {
-      $("#seventeen").css("background-image", "url(./assets/2017.svg)");
+      $("#seventeen").css("background-image", "url(../assets/2017.svg)");
       $("#yearseventeen").css("color", "black");
     },
     function() {
@@ -77,7 +77,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#eighteen").hover(function() {
-      $("#eighteen").css("background-image", "url(./assets/2018.png)");
+      $("#eighteen").css("background-image", "url(../assets/2018.png)");
       $("#yeareighteen").css("color", "white");
     },
     function() {
@@ -86,7 +86,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
     });
 
   $("#nineteen").hover(function() {
-      $("#nineteen").css("background-image", "url(./assets/2019.png)");
+      $("#nineteen").css("background-image", "url(../assets/2019.png)");
     },
     function() {
       $("#nineteen").css("background-image", "none");

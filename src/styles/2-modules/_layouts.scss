@@ -1,0 +1,10 @@
+.grid-layout-container {
+  display: grid;
+  grid: repeat(13, 6.67vh) / 1fr repeat(20, 4.54vw) 4.54vw;
+  grid-gap: none;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  // border: 1px solid white;
+}
