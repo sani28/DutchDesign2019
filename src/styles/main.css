@@ -43,11 +43,11 @@
 }
 @font-face {
   font-family: redaction;
-  src: url(../../../fonts/Redaction10-Regular.otf);
+  src: url(../../../fonts/Redaction-Regular.otf);
 }
 @font-face {
-  font-family: Redaction;
-  src: url(../../../fonts/Redaction-bold.woff);
+  font-family: redaction;
+  src: url(../../../fonts/Redaction-Bold.otf);
   font-weight: bold;
 }
 html {
