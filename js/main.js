@@ -4,9 +4,10 @@ $(document).ready(function(){
   const designerDots = $(".designer-dot").get();
   const experienceDots = $(".experience-dot").get();
   const previewVideos = $(".bg-preview-video").get();
-  var designerNavList = $("#main-nav>.designer-list li").get();
-  var intToggle = $( "#toggle-int" );
-  var expToggle = $( "#toggle-field" );
+  const hiddenElements = ["#main-blurb", "#main-nav", "#main-logo", "#main-toggle"];
+  var designerNavList = $("#main-nav li").get();
+  var intToggle = $("#toggle-int");
+  var fieldToggle = $("#toggle-field");
 
   //STATES
   var interviewsActive = true; // T/F toggle interviews and experiences
@@ -94,50 +95,45 @@ $(document).ready(function(){
 
 
   function initLandingPage(){
-    highlightDotsOnHover();
-    manageDesignerDotHover();
-    manageFieldNoteDotHover();
     toggleDotState();
+    highlightDotsOnNavHover();
+    initDesignerDotHover();
+    initFieldNoteDotHover();
   }
 
+  function hideUIElements(){
+    for (let i=0; i<hiddenElements.length; i++){
+      $(hiddenElements[i]).addClass("hiddenUI");
+    }
+  }
+
+  function showUIElements(){
+    for (let i=0; i<hiddenElements.length; i++){
+      $(hiddenElements[i]).removeClass("hiddenUI");
+    }
+  }
 
 
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;
-    hideUIElements();
-    switch (currentVideo) { //takes a string from the index html
+    switch (currentVideo) {
       case "lexDot":
-        $("#lex-preview-vid").css("display", "block");
+        $("#lex-preview-vid").removeClass("hiddenUI");
         break;
       case "valentinDot":
-        $("#valentin-preview-vid").css("display", "block");
+        $("#valentin-preview-vid").removeClass("hiddenUI");
         break;
     }
   }
 
-  function hideUIElements(){
-    $("#main-blurb").css("display", "none");
-    $("#main-nav").css("display", "none");
-    $("#main-logo").css("display", "none");
-    $("#main-toggle").css("display", "none");
-  }
-
-  function showUIElements(){
-    $("#main-toggle").css("display", "grid");
-    $("#main-logo").css("display", "block");
-    $("#main-nav").css("display", "block");
-    $("#main-blurb").css("display", "block");
-  }
-
   function revertBackground() {
     hidePreviewVideos();
-    showUIElements();
-    $("html").css("background-color", "#DFEA4E");
+    $("html").css("background-color", "#DFEA4E"); //use a variable in SASS
   }
 
   function hidePreviewVideos(){
     for(let i=0, len=previewVideos.length; i< len; i++){
-      $(previewVideos[i]).css("display", "none");
+      $(previewVideos[i]).addClass("hiddenUI");
     }
   }
 
@@ -153,23 +149,12 @@ $(document).ready(function(){
     }
   }
 
-  function changeInactiveState(hovered){
-    if (interviewsActive){
-      for(let i=0, len=designerDots.length; i < len; i++){
-        let currentDot = hovered;
-        let deactivatedDot = designerDots[i];
-        if(deactivatedDot!=currentDot){
-          $(deactivatedDot).hasClass("dot-unhovered") ? $(deactivatedDot).removeClass("dot-unhovered") : $(deactivatedDot).addClass("dot-unhovered");
-        }
-      }
-    }
-    else {
-      for (let j=0, len=experienceDots.length; j < len; j++){
-        let currentDot = hovered;
-        let deactivatedDot = experienceDots[j];
-        if(deactivatedDot!=currentDot){
-          $(deactivatedDot).hasClass("dot-unhovered") ? $(deactivatedDot).removeClass("dot-unhovered") : $(deactivatedDot).addClass("dot-unhovered");
-        }
+  function changeInactiveState(hovered, dotArray){
+    let currentDot = hovered;
+    for(let i=0, len=dotArray.length; i < len; i++){
+      let deactivatedDot = dotArray[i];
+      if(deactivatedDot!=currentDot){
+        $(deactivatedDot).hasClass("dot-unhovered") ? $(deactivatedDot).removeClass("dot-unhovered") : $(deactivatedDot).addClass("dot-unhovered");
       }
     }
   }
@@ -192,59 +177,78 @@ $(document).ready(function(){
     }
   }
 
-  function highlightDotsOnHover(){
+  function changeMenuItems(){
+    if(interviewsActive){
+      $("#designer-list").removeClass("hiddenUI");
+      $("#fnotes-list").addClass("hiddenUI");
+    } else {
+      $("#fnotes-list").removeClass("hiddenUI");
+      $("#designer-list").addClass("hiddenUI");
+    }s
+  }
+
+  function highlightDotsOnNavHover(){
     for(let i=0; i < designerNavList.length; i++){
       $(designerNavList[i]).mouseenter(function(){
         let currentID = this.id;
-        $("#" + currentID + "Dot").css("background-color", "#7D246B");
+        $("#" + currentID + "Dot").addClass("nav-highlighted");
       });
       $(designerNavList[i]).mouseout(function(){
         let currentID = this.id;
-        $("#" + currentID + "Dot").css("background-color", "white");
-      })
+        $("#" + currentID + "Dot").removeClass("nav-highlighted");
+      });
     }
   }
 
-  function manageDesignerDotHover(){
+  function initDesignerDotHover(){
     for (let i=0, len=designerDots.length; i < len; i++){
       $(designerDots[i]).mouseenter(function(){
         if(interviewsActive){
-          changeInactiveState(this);
+          changeInactiveState(this, designerDots);
           playPreviewVideo(this.id);
+          hideUIElements();
           hideExperienceDots();
         }
-
       });
       $(designerDots[i]).mouseout(function(){
         if(interviewsActive){
-          changeInactiveState(this);
+          changeInactiveState(this, designerDots);
           revertBackground();
+          showUIElements();
           showExperienceDots();
         }
       });
     }
   }
 
-  function manageFieldNoteDotHover(){
+  function initFieldNoteDotHover(){
     for (let j=0, len=experienceDots.length; j < len; j++){
       $(experienceDots[j]).mouseenter(function(){
-          changeInactiveState(this);
+        if(!interviewsActive){
+          changeInactiveState(this, experienceDots);
+          hideUIElements();
+        }
       });
       $(experienceDots[j]).mouseout(function(){
-          changeInactiveState(this);
+        if(!interviewsActive){
+          changeInactiveState(this, experienceDots);
+          showUIElements();
+        }
       });
     }
   }
+
   function toggleDotState(){
-    expToggle.click(function(){
+    fieldToggle.click(function(){
       if(!interviewsActive){
         return;
       }
       else{
         interviewsActive = false;
-        $(this).addClass("active-state-toggle");
-        $("#toggle-int").removeClass("active-state-toggle");
+        $(this).addClass("active-toggle");
+        $("#toggle-int").removeClass("active-toggle");
         toggleDotSize();
+        changeMenuItems();
       }
     });
     intToggle.click(function(){
@@ -253,9 +257,10 @@ $(document).ready(function(){
       }
       else{
         interviewsActive = true;
-        $(this).addClass("active-state-toggle");
-        $("#toggle-field").removeClass("active-state-toggle");
+        $(this).addClass("active-toggle");
+        $("#toggle-field").removeClass("active-toggle");
         toggleDotSize();
+        changeMenuItems();
       }
     });
   }

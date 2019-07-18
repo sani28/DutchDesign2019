@@ -55,6 +55,12 @@
   src: url(../fonts/redaction10-regular.otf);
 }
 
+@font-face {
+  font-family: Redaction;
+  src: url(../fonts/Redaction-bold.woff);
+  font-weight: bold;
+}
+
 html{
   background-color: #DFEA4E;
   background-image: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em),
@@ -74,7 +80,7 @@ h1 {
   /* transform: rotate(-90deg); */
   margin-top: 0;
   font-size: 100px;
-  font-family: Helvetica;
+  font-family: Redaction;
   color: #7D246B;
 }
 
@@ -130,6 +136,11 @@ h1 {
 
 #yearsixteen {
   letter-spacing: 8px;
+}
+
+/* consistently use this to hide things */
+*.hiddenUI {
+  display: none;
 }
 
 /* ------------------- archive ------------------------------------- */
@@ -239,6 +250,10 @@ h1 {
   margin-top: 0;
 }
 
+.main-nav-list.hiddenUI{
+  display: none;
+}
+
 .list-navigation .main-nav-list li{
   font-size: 0.5rem;
   text-align: left;
@@ -288,7 +303,6 @@ h1 {
   height: auto;
   z-index: -1;
   transform: translate(-50%, -50%);
-  display: none;
   /* display changes on JS activation */
 }
 
@@ -313,7 +327,7 @@ h1 {
   width: 1vw;
 }
 
-.designer-dot.active-dot{
+.active-dot{
   height: 2.25vw;
   width: 2.25vw;
 }
@@ -321,6 +335,10 @@ h1 {
 .dot-unhovered.designer-dot {
   background-color: transparent;
   border: 1px white solid;
+}
+
+.active-dot.nav-highlighted {
+  background-color: #7D246B;
 }
 
 /* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
@@ -333,7 +351,7 @@ h1 {
 
 .experience-dot {
   background-color: white;
-  display: inline;
+  display: inline-block;
   border-radius: 50%;
   height: 1vw;
   width: 1vw;
