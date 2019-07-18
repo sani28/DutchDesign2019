@@ -11,38 +11,86 @@
   <script type="text/javascript" src="js/main.js" async defer></script>
 </head>
 
-  <body>
-
-    <video class="bg-preview-video" id="valentin-preview-vid" preload="none" playsinline autoplay muted loop>
+<body>
+  <video class="bg-preview-video" id="valentin-preview-vid" preload="none" playsinline autoplay muted loop>
     <source src="assets/videos/preview_valentin.mp4" type="video/mp4">
-      Your browser doesn't support HTML5 videos.
-    </video>
-
-    <video class="bg-preview-video" id="lex-preview-vid" preload="none" playsinline autoplay muted loop>
+    Your browser doesn't support HTML5 videos.
+  </video>
+  <video class="bg-preview-video" id="lex-preview-vid" preload="none"     playsinline autoplay muted loop>
     <source src="assets/videos/preview_lex.mp4" type="video/mp4">
-      Your browser doesn't support HTML5 videos.
-    </video>
+    Your browser doesn't support HTML5 videos.
+  </video>
 
-  <div class="background">
+  <!-- ~~~~~~~~~~~~~ grid container  ~~~~~~~~~~~~~~~`` -->
+    <div class="grid-layout-container">
+      <h1 id="main-logo">DutchDesign</h1>
+      <p id="main-blurb">We embrace ambiguity and contradiction. dutchDesign is an on-going platform for field research, observation, & reportage. The protagonists are individuals who shape and define their own worlds; working to blur and destroy boundaries, definitions, and limitations.  It attempts to make Dutch design culture fleetingly visible while leaving  space for it to describe itself.</p>
 
-<!-- ~~~~~~~~~~~~~~~ grainy texture bg  ~~~~~~~~~~~~~~~  -->
+      <div class="calendar-container">
+        <div class="cal-item" id="futuresItem"><span class="designer-dot active-dot" id="futuresDot"></span></div>
+        <div class="cal-item" id="matthewsItem"><span class="designer-dot active-dot" id="matthewsDot"></span></div>
+        <div class="cal-item" id="pepeItem"><span class="designer-dot active-dot" id="pepeDot"></span></div>
+        <div class="cal-item" id="inekeItem"><span class="designer-dot active-dot" id="inekeDot"></span></div>
+        <div class="cal-item" id="momkaiItem"><span class="designer-dot active-dot" id="momkaiDot"></span></div>
+        <div class="cal-item" id="lavaItem"><span class="designer-dot active-dot" id="lavaDot"></span></div>
+        <div class="cal-item" id="aldoItem"><span class="designer-dot active-dot" id="aldoDot"></span></div>
+        <div class="cal-item" id="rebeccaItem"><span class="designer-dot active-dot" id="rebeccaDot"></span></div>
+        <div class="cal-item" id="corunumItem"><span class="designer-dot active-dot" id="corunumDot"></span></div>
+        <div class="cal-item" id="florisItem"><span class="designer-dot active-dot" id="florisDot"></span></div>
+        <div class="cal-item" id="valentinItem"><span class="designer-dot active-dot" id="valentinDot"></span></div>
+        <div class="cal-item" id="edwinItem"><span class="designer-dot active-dot" id="edwinDot"></span></div>
+        <div class="cal-item" id="lexItem"><span class="designer-dot active-dot" id="lexDot"></span></div>
+        <div class="cal-item" id="jurgenItem"><span class="designer-dot active-dot" id="jurgenDot"></span></div>
+        <div class="cal-item" id="nienkeItem"><span class="designer-dot active-dot" id="nienkeDot"></span></div>
+        <div class="cal-item" id="trulyItem"><span class="designer-dot active-dot" id="trulyDot"></span></div>
+        <div class="cal-item" id="whatItem"><span class="designer-dot active-dot" id="whatDot"></span></div>
+        <div class="cal-item" id="reglazeItem"><span class="designer-dot active-dot" id="reglazeDot"></span></div>
 
-    <div id="grain"></div>
+        <!-- START OF EXPERIENCES -->
 
-<!-- ~~~~~~~~~~~~~ grid container  ~~~~~~~~~~~~~~~`` -->
+        <div class="cal-item" id="arnhemItem"><span class="experience-dot" id="arnhemDot"></span></div>
+        <div class="cal-item" id="romeItem"><span class="experience-dot" id="romeDot"></span></div>
+        <div class="cal-item" id="appianItem"><span class="experience-dot" id="appianDot"></span></div>
+        <div class="cal-item" id="andreaItem"><span class="experience-dot" id="andreaDot"></span></div>
+        <div class="cal-item" id="farmItem"><span class="experience-dot" id="farmDot"></span></div>
+        <div class="cal-item" id="texelsItem"><span class="experience-dot" id="texelsDot"></span></div>
+        <div class="cal-item" id="burgundyItem"><span class="experience-dot" id="burgundyDot"></span></div>
+        <div class="cal-item" id="feltingItem"><span class="experience-dot" id="feltingDot"></span></div>
+        <div class="cal-item" id="milkItem"><span class="experience-dot" id="milkDot"></span></div>
+        <div class="cal-item" id="breweryItem"><span class="experience-dot" id="breweryDot"></span></div>
+        <div class="cal-item" id="kikiItem"><span class="experience-dot" id="kikiDot"></span></div>
+        <div class="cal-item" id="rensItem"><span class="experience-dot" id="rensDot"></span></div>
+        <div class="cal-item" id="atelierItem"><span class="experience-dot" id="atelierDot"></span></div>
+        <div class="cal-item" id="btsItem"><span class="experience-dot" id="btsDot"></span></div>
+      </div> <!-- calender-container ends here -->
 
-<!--  ~~~~~~~~~~~~~~~~~ nav bottom ~~~~~~~~~~~~~~~~~~~~~~ --->
-    <nav class="bottom">
-      <div class="btm-nav-container">
-        <a href="">Team Page</a>
-                <a href="archive.html">Archive</a>
-      </div>
-    </nav>
+      <nav class="list-navigation" id="main-nav">
+        <ul class="main-nav-list designer-list">
+          <a href="#"><li id="edwin">Main Studio</li></a>
+          <a href="#"><li id="truly">Studio Truly Truly</li></a>
+          <a href="#"><li id="jurgen">Jurgen Bey</li></a>
+          <a href="#"><li id="nienke">Nienke Hoogvliet</li></a>
+          <a href="#"><li id="lex">Lex Pott</li></a>
+          <a href="#"><li id="valentin">Valentin Loellmann</li></a>
+          <a href="#"><li id="corunum">Cor Unum</li></a>
+          <a href="#"><li id="floris">Floris Hovers</li></a>
+          <a href="#"><li id="rebecca">Rebecca Geskus</li></a>
+          <a href="#"><li id="aldo">Aldo Bakker</li></a>
+          <a href="#"><li id="momkai">Momkai Studios</li></a>
+          <a href="#"><li id="lava">Lava Amsterdam</li></a>
+          <a href="#"><li id="ineke">Ineke Hans</li> </a>
+          <a href="#"><li id="pepe">Pepe Heykoop</li></a>
+          <a href="#"><li id="matthews">Studio Matthews</li></a>
+          <a href="#"><li id="futures">Intentional Futures</li></a>
+        </ul>
+      </nav>
 
+      <nav class="grid-item" id="main-toggle">
+        <a href="#" class="landing-toggle active-toggle" id="toggle-int"> Interviews </a>
+        <a href="#" class="landing-toggle" id="toggle-field">Field Notes</a>
+      </nav>
+    </div> <!-- grid ends here -->
+  </body>
 
-  </div> <!-- end of background div  -->
-
-
-</body>
 
 </html>
