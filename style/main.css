@@ -4,6 +4,56 @@
   src: url(../fonts/hypermarket-regular.ttf);
   font-weight: bold;
 }
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../fonts/bebas.otf);
+}
+
+@font-face {
+  font-family: brandon;
+  src: url(../fonts/brandon.otf);
+}
+
+@font-face {
+  font-family: karla;
+  src: url(../fonts/karla.ttf);
+}
+
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../fonts/helveticaneue-bold.otf);
+}
+
+@font-face {
+  font-family: museosans-100;
+  src: url(../fonts/museosans-100.otf);
+}
+
+@font-face {
+  font-family: novecento;
+  src: url(../fonts/novecento.otf);
+}
+
+@font-face {
+  font-family: katarinestd;
+  src: url(../fonts/katarinestd.otf);
+}
+
+@font-face {
+  font-family: monsterrat;
+  src: url(../fonts/monsterrat.otf);
+}
+
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../fonts/neuehaasgroteskblack.otf);
+}
+
+@font-face {
+  font-family: redaction;
+  src: url(../fonts/redaction10-regular.otf);
+}
 
 @font-face {
   font-family: Redaction;
@@ -19,14 +69,12 @@ html{
 }
 
 *, html {
-  font-family: hyperMarket;
   color: white;
 }
 
 a {
   text-decoration: none;
 }
-
 
 h1 {
   transform: rotate(-90deg);
@@ -36,8 +84,58 @@ h1 {
   color: #7D246B;
 }
 
-h1:hover {
-  color: white;
+#ten {
+  font-family: helveticaneue-bold;
+}
+#eleven {
+  font-family: museosans-100;
+}
+#twelve {
+  font-family: novecento;
+}
+#thirteen{
+  font-family: bebas;
+}
+#fourteen{
+  font-family: monsterrat;
+}
+#fifteen{
+  font-family: katarinestd;
+}
+#sixteen{
+  font-family: karla;
+}
+#seventeen{
+  font-family: arial;
+}
+#eighteen{
+  font-family: neuehaasgroteskblack;
+}
+#nineteen{
+  font-family: redaction;
+}
+
+#yeartwelve {
+  font-size: 2.2em;
+  letter-spacing: 10px;
+}
+
+#yearthirteen {
+  font-size: 2.2em;
+  letter-spacing: 10px;
+}
+
+#yearfourteen {
+  font-size: 5rem;
+  letter-spacing: 12px;
+}
+
+#yearfifteen {
+  letter-spacing: 10px;
+}
+
+#yearsixteen {
+  letter-spacing: 8px;
 }
 
 /* consistently use this to hide things */
@@ -48,13 +146,15 @@ h1:hover {
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 253px;
-  height: 90vh;
-  background-size: contain;
+  height: 100vh;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  font-size: 3.1em;
 }
 
 .year {
-  margin-top: 85%;
+  margin-top: 100%;
 }
 
 #grain {
@@ -70,6 +170,49 @@ h1:hover {
   z-index: -1;
 }
 
+/* ------------------- containers ------------------------------------- */
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  height: 100vh;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.btm-nav-container {
+  width: 100vw;
+  height: 15vh;
+  font-size: 10px;
+  left: 10%;
+  position: relative;
+}
+
+/* --------------- grid container -----------------------------*/
+.grid-container {
+  display: flex;
+  /* border: 1px solid black; */
+  height: 60vh;
+  margin-top: 2em;
+  padding: 1em;
+  transform: scale(0.6);
+}
+
+.grid-container * {
+  display: flex;
+  padding: 1px;
+  align-items: center;
+}
+
+.wrapper {
+  grid-template-columns: minmax(auto, <flex>));
+
+}
+
+#grid-bg {
+    background-image: url("../assets/grid.png");
+    background-repeat: no-repeat;
 
 /* --------------- nav box styling-----------------------------*/
 .grid-layout-container {

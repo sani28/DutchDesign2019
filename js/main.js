@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   //ARRAY OF DOTS
   const designerDots = $(".designer-dot").get();
@@ -111,6 +112,7 @@ $(document).ready(function(){
       $(hiddenElements[i]).removeClass("hiddenUI");
     }
   }
+
 
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;
@@ -265,12 +267,3 @@ $(document).ready(function(){
 
 
 }); //DOCREADY DON'T DELETE
-
-
-// $(function changeArchiveImg(id) {
-//    $('.archive-stack').each(function() {
-//       var archiveId = $(this).attr("id");
-//       var image = $('#' + archiveId + ' > a ').attr("id");
-//       $('#' + archiveId).css({"background":"url(" + image + ".png)","background-size":"contain"});
-//    });
-// });
