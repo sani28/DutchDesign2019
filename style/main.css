@@ -107,6 +107,10 @@ h1:hover {
   margin-top: 0;
 }
 
+.main-nav-list.hiddenUI{
+  display: none;
+}
+
 .list-navigation .main-nav-list li{
   font-size: 0.5rem;
   text-align: left;

@@ -4,7 +4,7 @@ $(document).ready(function(){
   const experienceDots = $(".experience-dot").get();
   const previewVideos = $(".bg-preview-video").get();
   const hiddenElements = ["#main-blurb", "#main-nav", "#main-logo", "#main-toggle"];
-  var designerNavList = $("#main-nav>.designer-list li").get();
+  var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
   var fieldToggle = $("#toggle-field");
 
@@ -175,6 +175,16 @@ $(document).ready(function(){
     }
   }
 
+  function changeMenuItems(){
+    if(interviewsActive){
+      $("#designer-list").removeClass("hiddenUI");
+      $("#fnotes-list").addClass("hiddenUI");
+    } else {
+      $("#fnotes-list").removeClass("hiddenUI");
+      $("#designer-list").addClass("hiddenUI");
+    }s
+  }
+
   function highlightDotsOnNavHover(){
     for(let i=0; i < designerNavList.length; i++){
       $(designerNavList[i]).mouseenter(function(){
@@ -184,7 +194,7 @@ $(document).ready(function(){
       $(designerNavList[i]).mouseout(function(){
         let currentID = this.id;
         $("#" + currentID + "Dot").removeClass("nav-highlighted");
-      })
+      });
     }
   }
 
@@ -236,6 +246,7 @@ $(document).ready(function(){
         $(this).addClass("active-toggle");
         $("#toggle-int").removeClass("active-toggle");
         toggleDotSize();
+        changeMenuItems();
       }
     });
     intToggle.click(function(){
@@ -247,6 +258,7 @@ $(document).ready(function(){
         $(this).addClass("active-toggle");
         $("#toggle-field").removeClass("active-toggle");
         toggleDotSize();
+        changeMenuItems();
       }
     });
   }
