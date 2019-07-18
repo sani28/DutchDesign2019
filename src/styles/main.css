@@ -56,7 +56,6 @@ html {
   background-size: 4.54vw 6.67vh;
 }
 
-
 *, html {
   color: white;
 }
@@ -78,7 +77,6 @@ a {
   width: 100vw;
   height: 100vh;
   padding: 0px;
-  border: 1px solid white;
 }
 
 /* --------------- grid box styling-----------------------------*/

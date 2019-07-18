@@ -1,5 +1,5 @@
 @import './1-helpers/_fonts';
-
+@import './2-modules/background';
 
 *, html {
   color: white;
@@ -13,8 +13,8 @@ a {
 *.hiddenUI {
   display: none;
 }
+
 @import './2-modules/layouts';
-@import './2-modules/background';
 /* --------------- grid box styling-----------------------------*/
 
 #main-logo {
