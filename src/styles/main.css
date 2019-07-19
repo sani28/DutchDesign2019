@@ -104,7 +104,7 @@ a {
 }
 
 /* consistently use this to hide things */
-*.hiddenUI {
+.hiddenUI[id] {
   display: none;
 }
 

@@ -25,7 +25,7 @@ a {
   color: #7D246B;
 }
 /* consistently use this to hide things */
-*.hiddenUI {
+.hiddenUI[id] {
   display: none;
 }
 
