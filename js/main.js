@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-  //ARRAY OF DOTS
+  //ELEMENTS
   const designerDots = $(".designer-dot").get();
   const experienceDots = $(".experience-dot").get();
   const previewVideos = $(".bg-preview-video").get();
@@ -49,6 +49,7 @@ $(document).ready(function(){
         $("#valentin-preview-vid").removeClass("hiddenUI");
         break;
     }
+    $("#grid-overlay").removeClass("hiddenUI");
   }
 
   function changeBGImage(fieldID){
@@ -71,6 +72,7 @@ $(document).ready(function(){
     for(let i=0, len=previewVideos.length; i< len; i++){
       $(previewVideos[i]).addClass("hiddenUI");
     }
+    $("#grid-overlay").addClass("hiddenUI");
     $("html").css("background-color", "#DFEA4E");
   }
 
