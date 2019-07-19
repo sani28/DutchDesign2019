@@ -74,6 +74,20 @@ $(document).ready(function(){
     $("html").css("background-color", "#DFEA4E");
   }
 
+  function showTitleData(hovered){
+    let dot = hovered;
+    let title = dot.dataset.title;
+    let subtitle = dot.dataset.subtitle;
+    console.log ("Hovered on: " + title + ", " + subtitle);
+    /*PSEUDO code:
+    Look at the hovered hovered dot
+    Get the title and subtitle
+    Show title + subtitle element
+    Position this element above hovered dot
+
+    */
+  }
+
   function hideExperienceDots() {
     for (let i = 0, len = experienceDots.length; i < len; i++) {
       $(experienceDots[i]).css("display", "none");
@@ -143,6 +157,7 @@ $(document).ready(function(){
         if(interviewsActive){
           changeInactiveState(this, designerDots);
           playPreviewVideo(this.id);
+          showTitleData(this);
           hideUIElements();
           hideExperienceDots();
         }
