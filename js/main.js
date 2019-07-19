@@ -75,16 +75,17 @@ $(document).ready(function(){
   }
 
   function showTitleData(hovered){
+    //TODO: THIS CODE SEEMS SUPER DIRTY
     let dot = hovered;
-    let titleText = dot.dataset.title;
-    let subtitleText = dot.dataset.subtitle;
-    $("#hover-subtitle").text(subtitleText);
-    $("#hover-title").text(titleText);
+    let col = $(dot).parent().css("grid-column-start");
+    let row = $(dot).parent().css("grid-row-start");
+    $("#hover-subtitle").text(dot.dataset.subtitle);
+    $("#hover-title").text(dot.dataset.title);
+    $("#dot-headers").css("grid-column-start", Number(col));
+    $("#dot-headers").css("grid-column-end", Number(col)+8);
+    $("#dot-headers").css("grid-row-start", Number(row)+3)
+    $("#dot-headers").css("grid-row-end", Number(row)+4);
     $("#dot-headers").removeClass("hiddenUI");
-    /*PSEUDO code:
-    Show title + subtitle element
-    Position this element above hovered dot
-    */
   }
 
   function hideExperienceDots() {
