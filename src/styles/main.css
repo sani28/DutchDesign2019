@@ -180,6 +180,17 @@ a {
   /* display changes on JS activation */
 }
 
+.fieldnote-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 1024px;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
 .calendar-container {
   grid-area: 5/8/11/22;
   display: grid;
