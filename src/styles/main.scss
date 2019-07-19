@@ -131,19 +131,19 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  text-align: right;
   grid-column-start: 3;
   grid-column-end: 14;
   grid-row-start: 4;
   grid-row-end: 6;
   #hover-title {
     font-family: Redaction;
-    font-size: 2.3em;
+    font-size: 2.25vw;
     margin: 0;
   }
   #hover-subtitle {
     font-family: hyperMarket;
-    text-transform: capitalize;
-    font-size: 0.75em;
+    font-size: 0.75vw;
     margin: 0;
   }
 }

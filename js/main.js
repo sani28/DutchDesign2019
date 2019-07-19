@@ -81,7 +81,7 @@ $(document).ready(function(){
     let row = $(dot).parent().css("grid-row-start");
     $("#hover-subtitle").text(dot.dataset.subtitle);
     $("#hover-title").text(dot.dataset.title);
-    $("#dot-headers").css("grid-column-start", Number(col));
+    $("#dot-headers").css("grid-column-start", 0);
     $("#dot-headers").css("grid-column-end", Number(col)+8);
     $("#dot-headers").css("grid-row-start", Number(row)+3)
     $("#dot-headers").css("grid-row-end", Number(row)+4);
