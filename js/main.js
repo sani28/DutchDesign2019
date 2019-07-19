@@ -51,7 +51,7 @@ $(document).ready(function(){
     }
   }
 
-  function changeFieldNotesBG(fieldID){
+  function changeBGImage(fieldID){
     let bgImg = fieldID;
     switch (bgImg) {
       case "arnhemDot":
@@ -61,20 +61,17 @@ $(document).ready(function(){
     }
   }
 
-  function hideFieldNotesBG(){
+  function hideBGImage(){
     for(let i=0, len=fieldNotesBGs.length; i< len; i++){
       $(fieldNotesBGs[i]).addClass("hiddenUI");
     }
-  }
-  function revertBackground() {
-    hidePreviewVideos();
-    $("html").css("background-color", "#DFEA4E"); //use a variable in SASS
   }
 
   function hidePreviewVideos(){
     for(let i=0, len=previewVideos.length; i< len; i++){
       $(previewVideos[i]).addClass("hiddenUI");
     }
+    $("html").css("background-color", "#DFEA4E");
   }
 
   function hideExperienceDots() {
@@ -153,7 +150,7 @@ $(document).ready(function(){
       $(designerDots[i]).mouseout(function(){
         if(interviewsActive){
           changeInactiveState(this, designerDots);
-          revertBackground();
+          hidePreviewVideos();
           showUIElements();
           showExperienceDots();
         }
@@ -166,14 +163,14 @@ $(document).ready(function(){
       $(experienceDots[j]).mouseenter(function(){
         if(!interviewsActive){
           changeInactiveState(this, experienceDots);
-          changeFieldNotesBG(this.id);
+          changeBGImage(this.id);
           hideUIElements();
         }
       });
       $(experienceDots[j]).mouseout(function(){
         if(!interviewsActive){
           changeInactiveState(this, experienceDots);
-          hideFieldNotesBG();
+          hideBGImage();
           showUIElements();
         }
       });
