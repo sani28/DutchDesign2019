@@ -76,15 +76,14 @@ $(document).ready(function(){
 
   function showTitleData(hovered){
     let dot = hovered;
-    let title = dot.dataset.title;
-    let subtitle = dot.dataset.subtitle;
-    console.log ("Hovered on: " + title + ", " + subtitle);
+    let titleText = dot.dataset.title;
+    let subtitleText = dot.dataset.subtitle;
+    $("#hover-subtitle").text(subtitleText);
+    $("#hover-title").text(titleText);
+    $("#dot-headers").removeClass("hiddenUI");
     /*PSEUDO code:
-    Look at the hovered hovered dot
-    Get the title and subtitle
     Show title + subtitle element
     Position this element above hovered dot
-
     */
   }
 
@@ -166,6 +165,7 @@ $(document).ready(function(){
         if(interviewsActive){
           changeInactiveState(this, designerDots);
           hidePreviewVideos();
+          $("#dot-headers").addClass("hiddenUI");
           showUIElements();
           showExperienceDots();
         }

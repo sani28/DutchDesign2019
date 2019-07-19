@@ -77,11 +77,6 @@ a {
   text-decoration: none;
 }
 
-/* consistently use this to hide things */
-*.hiddenUI {
-  display: none;
-}
-
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -106,6 +101,11 @@ a {
   font-family: redaction;
   font-weight: bold;
   color: #7D246B;
+}
+
+/* consistently use this to hide things */
+*.hiddenUI {
+  display: none;
 }
 
 .list-navigation {
@@ -202,6 +202,27 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#dot-headers {
+  display: inline;
+  grid-area: 7/3/8/10;
+  text-align: right;
+}
+#dot-headers #hover-title {
+  font-family: Redaction;
+  font-size: 2.3em;
+  margin-top: 10px;
+}
+#dot-headers #hover-subtitle {
+  font-family: hyperMarket;
+  text-transform: capitalize;
+  font-size: 0.75em;
+  margin: 0px;
+}
+
+#dot-headers.hiddenUI {
+  display: none;
 }
 
 .designer-dot {
