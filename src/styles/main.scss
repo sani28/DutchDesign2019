@@ -23,8 +23,9 @@ a {
   font-size: 1.8em;
   font-weight: bold;
   margin-top: 0;
-  font-size: 100px;
-  font-family: Redaction;
+  font-size: 2em;
+  font-family: redaction;
+  font-weight: bold;
   color: #7D246B;
 }
 
@@ -41,6 +42,7 @@ a {
   grid-auto-flow: row;
   padding-left: 0;
   margin-top: 0;
+  font-family: hyperMarket;
 }
 
 .main-nav-list.hiddenUI{
@@ -63,6 +65,7 @@ a {
   font-size: 0.5rem;
   color: #7D246B;
   margin-top: 0;
+  font-family: hyperMarket;
 }
 
 #main-toggle {

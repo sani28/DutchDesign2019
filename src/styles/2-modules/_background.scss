@@ -6,15 +6,15 @@ html{
   background-size: 4.54vw 6.67vh;
 }
 
-// #grain {
-//   background-image: url(../imgs/GRAIN.png) no-repeat center center fixed;
-//   opacity: 0.4;
-//   mix-blend-mode:color-burn;
-//   width: 100%;
-//   background-size: contain;
-//   opacity: 0.2;
-//   top:0;
-//   left:0;
-//   position: absolute;
-//   z-index: -1;
-// }
+#grain {
+  background-image: url(../imgs/GRAIN.png) no-repeat center center fixed;
+  opacity: 0.4;
+  mix-blend-mode:color-burn;
+  width: 100%;
+  background-size: contain;
+  opacity: 0.2;
+  top:0;
+  left:0;
+  position: absolute;
+  z-index: -1;
+}
