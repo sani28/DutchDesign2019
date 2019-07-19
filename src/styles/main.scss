@@ -1,6 +1,10 @@
-@import './1-helpers/fonts';
-@import './2-modules/background';
+$width-unit: 4.54vw;
+$height-unit: 6.67vh;
+$grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+$secondary-purp: #7D246B;
 
+
+@import './1-helpers/fonts';
 *, html {
   color: white;
 }
@@ -11,6 +15,8 @@ a {
 
 
 @import './2-modules/layouts';
+@import './2-modules/background';
+
 /* --------------- grid box styling-----------------------------*/
 
 #main-logo {
@@ -22,7 +28,7 @@ a {
   font-size: 2em;
   font-family: redaction;
   font-weight: bold;
-  color: #7D246B;
+  color: $secondary-purp;
 }
 /* consistently use this to hide things */
 .hiddenUI[id] {
@@ -38,7 +44,7 @@ a {
 .main-nav-list{
   list-style: none;
   display: grid;
-  grid: 1fr / repeat(4, 9.08vw);
+  grid: 1fr / repeat(4, 2*$width-unit);
   grid-auto-flow: row;
   padding-left: 0;
   margin-top: 0;
@@ -52,7 +58,7 @@ a {
 .list-navigation .main-nav-list li{
   font-size: 0.5rem;
   text-align: left;
-  color: #7D246B;
+  color: $secondary-purp;
 }
 
 .main-nav-list li:hover{
@@ -63,7 +69,7 @@ a {
   grid-row: 2 / span 2;
   grid-column: 14 / 22;
   font-size: 0.5rem;
-  color: #7D246B;
+  color: $secondary-purp;
   margin-top: 0;
   font-family: hyperMarket;
 }
@@ -75,7 +81,7 @@ a {
   grid-row: 13;
   grid-column: 18 / span 4;
   display: grid;
-  grid: 1fr / repeat(2, 9.08vw);
+  grid: 1fr / repeat(2, 2*$width-unit);
 }
 
 .landing-toggle{
@@ -89,21 +95,6 @@ a {
 
 
 /* -----------------DOTS AND VIDEO STYLING----------------- */
-.bg-preview-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -2;
-  background-image: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em),
-  linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
-  background-size: 4.54vw 6.67vh;
-  transform: translate(-50%, -50%);
-  /* display changes on JS activation */
-}
 
 .fieldnote-bg{
   position: fixed;
@@ -119,7 +110,7 @@ a {
 .calendar-container{
   grid-area: 5 / 8 / 11/ 22;
   display: grid;
-  grid: repeat(6, 6.67vh)/repeat(14, 4.54vw);
+  grid: repeat(6, $height-unit)/repeat(14, $width-unit);
   margin-top: 0;
 }
 
@@ -146,7 +137,7 @@ a {
   }
   #hover-subtitle {
     font-family: hyperMarket;
-    font-size: 0.75vw;
+    font-size: 0.85vw;
     margin: 0;
   }
 }
@@ -174,7 +165,7 @@ a {
 }
 
 .active-dot.nav-highlighted {
-  background-color: #7D246B;
+  background-color: $secondary-purp;
 }
 
 .experience-dot {
