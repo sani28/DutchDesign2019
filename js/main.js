@@ -85,7 +85,7 @@ $(document).ready(function(){
     $("#hover-title").text(dot.dataset.title);
     $("#dot-headers").css("grid-column-start", 0);
     $("#dot-headers").css("grid-column-end", Number(col)+8);
-    $("#dot-headers").css("grid-row-start", Number(row)+3)
+    $("#dot-headers").css("grid-row-start", Number(row)+4)
     $("#dot-headers").css("grid-row-end", Number(row)+4);
     $("#dot-headers").removeClass("hiddenUI");
   }

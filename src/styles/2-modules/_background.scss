@@ -1,6 +1,3 @@
-$grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
-
-
 html{
   background-color: #DFEA4E;
   background-image: $grid-background;
@@ -20,17 +17,25 @@ html{
   z-index: -1;
 }
 
+.bg-video-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
 .bg-preview-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  /* display changes on JS activation */
 }
 
 #grid-overlay{
