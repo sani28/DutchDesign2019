@@ -87,18 +87,6 @@ html {
   border: 1px solid white;
 }
 
-.wid-container {
-  border: 1px solid black;
-  width: 80%;
-  height: 80px;
-}
-
-.circle-nav-cotnainer {
-  border: 1px solid black;
-  width: 90vw;
-  height: 30vh;
-}
-
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -122,14 +110,31 @@ a {
   text-decoration: none;
 }
 
+a#home:hover {
+  text-align: right;
+}
+
 a#current {
   border-bottom: 2px solid purple;
 }
 
-.home {
+#back-btn {
+  grid-row: 1;
+  grid-column: 2/5;
   font-family: redaction;
-  font-size: 16px;
-  display: flex;
+  font-size: 1.1rem;
+  display: inline;
+  margin-top: 1%;
+  width: 200px;
+  color: white;
+}
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 h2 {
@@ -153,7 +158,7 @@ h2 {
 .circle-nav-container {
   grid-area: 10/4/10/16;
   display: grid;
-  grid: repeat(1, 3vh)/repeat(16, 4.54vw);
+  grid: repeat(1, 7vh)/repeat(16, 4.54vw);
   margin-top: 0;
 }
 

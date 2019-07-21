@@ -3,8 +3,6 @@
 @import '../1-helpers/variables';
 @import '../2-modules/background';
 @import '../2-modules/layouts';
-@import '../2-modules/circlenav';
-
 
 .grid-layout-container {
   display: grid;
@@ -18,7 +16,6 @@
   padding: 0px;
   border: 1px solid white;
 }
-
 
 #pepe-voice {
 
@@ -91,15 +88,31 @@ a {
   text-decoration: none;
 }
 
+a#home:hover {
+  text-align: right;
+}
 
 a#current {
   border-bottom: 2px solid purple;
 }
 
-.home {
+#back-btn {
+  grid-row: 1;
+  grid-column: 2/5;
   font-family: redaction;
-  font-size: 16px;
-  display: flex;
+  font-size: 1.1rem;
+  display: inline;
+  margin-top: 1%;
+  width: 200px;
+  color:white;
+}
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color:white;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 h2 {
@@ -124,7 +137,7 @@ h2 {
 .circle-nav-container {
   grid-area: 10/4/10/16;
   display: grid;
-  grid: repeat(1, 3vh)/repeat(16, 4.54vw);
+  grid: repeat(1, 7vh)/repeat(16, 4.54vw);
   margin-top: 0;
 }
 
