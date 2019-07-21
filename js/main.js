@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   //ELEMENTS
   const designerDots = $(".designer-dot").get();

@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
   <link rel="stylesheet" type="text/css" href="../src/styles/5-pages/whatisdesign.css">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="../js/main.js" async defer></script>
+  <script type="text/javascript" src="../js/wid.js" async defer></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
     <div id="back-btn">
       <a href="index.html" id="home"><span class="home-dot"></span></a>
-  </div>
+    </div>
 
       <h2> WHAT IS DESIGN </h2>
       <div id="wid-blurb">
@@ -37,26 +37,34 @@
       </nav>
 
       <div class="circle-nav-container">
-        <div class="wid-item"><a href=""><span class="dot" id="pepe-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="ineke-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="momkai-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="lava-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="aldo-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="rebecca-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="corunum-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="floris-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="valentin-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="lex-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="jurgen-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="nienke-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="truly-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="main-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="sm-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="if-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/pepe.jpg" data-fx="1"><span class="dot" id="pepe-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/ineke.jpg" data-fx="1"><span class="dot" id="ineke-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/momkai.jpg" data-fx="1"><span class="dot" id="momkai-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/lava.jpg" data-fx="1"><span class="dot" id="lava-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/aldo.jpg" data-fx="1"><span class="dot" id="aldo-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/rebecca.jpg" data-fx="1"><span class="dot" id="rebecca-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/corunum.jpg" data-fx="1"><span class="dot" id="corunum-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/floris.jpg" data-fx="1"><span class="dot" id="floris-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/valentin.jpg" data-fx="1"><span class="dot" id="valentin-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/lex.jpg" data-fx="1"><span class="dot" id="lex-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/jurgen.jpg" data-fx="1"><span class="dot" id="jurgen-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/nienke.jpg" data-fx="1"><span class="dot" id="nienke-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/trulytruly.jpg" data-fx="1"><span class="dot" id="truly-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/main.jpg" data-fx="1"><span class="dot" id="main-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/sm.jpg" data-fx="1"><span class="dot" id="sm-voice"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/if.jpg" data-fx="1"><span class="dot" id="if-voice"></span></a></div>
       </div>
 
 
-    </div>
+    </div> <!-- end of grid container -->
+
+
+    <!-- javascript srcs for hover effect -->
+
+    <script src="../js/charming.min.js"></script>
+    <script src="../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/TweenMax.min.js"></script>
+    <script src="../js/demo.js"></script>
 
   </body>
 
