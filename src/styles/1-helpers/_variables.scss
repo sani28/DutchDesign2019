@@ -3,7 +3,7 @@
 //************************
 /// Regular font family
 /// @type List
-$font-regular: 'Redaction10', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$redaction: 'redaction', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $font-medium: 'Redaction20', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $font-bold: 'Redaction70', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
@@ -12,7 +12,7 @@ $font-bold: 'Redaction70', 'Hypermarket', 'Helvetica Neue', 'Helvetica', 'Arial'
 //************************
 /// @type Color
 $brand-color: rgb(229, 0, 80) !default;
-
+$background-color: #DFEA4E;
 
 // ***********************
 ///  C O N T A I N E R   L E N G T H S
@@ -31,8 +31,8 @@ $breakpoints: (
   'mobile': 400px,
   'tablet': 768px,
   'laptop': 950px,
-  'desktop' 1200px,
-) !default;
+  'desktop': 1200px)
+   !default;
 
 
 
