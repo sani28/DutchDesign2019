@@ -1,6 +1,10 @@
-@import './1-helpers/_fonts';
-@import './2-modules/background';
+$width-unit: 4.54vw;
+$height-unit: 6.67vh;
+$grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+$secondary-purp: #7D246B;
 
+
+@import './1-helpers/fonts';
 *, html {
   color: white;
 }
@@ -9,12 +13,10 @@ a {
   text-decoration: none;
 }
 
-/* consistently use this to hide things */
-*.hiddenUI {
-  display: none;
-}
 
 @import './2-modules/layouts';
+@import './2-modules/background';
+
 /* --------------- grid box styling-----------------------------*/
 
 #main-logo {
@@ -23,9 +25,14 @@ a {
   font-size: 1.8em;
   font-weight: bold;
   margin-top: 0;
-  font-size: 100px;
-  font-family: Redaction;
-  color: #7D246B;
+  font-size: 2em;
+  font-family: redaction;
+  font-weight: bold;
+  color: $secondary-purp;
+}
+/* consistently use this to hide things */
+.hiddenUI[id] {
+  display: none;
 }
 
 .list-navigation {
@@ -37,10 +44,11 @@ a {
 .main-nav-list{
   list-style: none;
   display: grid;
-  grid: 1fr / repeat(4, 9.08vw);
+  grid: 1fr / repeat(4, 2*$width-unit);
   grid-auto-flow: row;
   padding-left: 0;
   margin-top: 0;
+  font-family: hyperMarket;
 }
 
 .main-nav-list.hiddenUI{
@@ -50,7 +58,7 @@ a {
 .list-navigation .main-nav-list li{
   font-size: 0.5rem;
   text-align: left;
-  color: #7D246B;
+  color: $secondary-purp;
 }
 
 .main-nav-list li:hover{
@@ -61,8 +69,9 @@ a {
   grid-row: 2 / span 2;
   grid-column: 14 / 22;
   font-size: 0.5rem;
-  color: #7D246B;
+  color: $secondary-purp;
   margin-top: 0;
+  font-family: hyperMarket;
 }
 
 #main-toggle {
@@ -72,7 +81,7 @@ a {
   grid-row: 13;
   grid-column: 18 / span 4;
   display: grid;
-  grid: 1fr / repeat(2, 9.08vw);
+  grid: 1fr / repeat(2, 2*$width-unit);
 }
 
 .landing-toggle{
@@ -86,23 +95,22 @@ a {
 
 
 /* -----------------DOTS AND VIDEO STYLING----------------- */
-.bg-preview-video {
+
+.fieldnote-bg{
   position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
+  top: 0;
+  left: 0;
+  min-width: 1024px;
   min-height: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
   z-index: -1;
-  transform: translate(-50%, -50%);
-  /* display changes on JS activation */
 }
 
 .calendar-container{
   grid-area: 5 / 8 / 11/ 22;
   display: grid;
-  grid: repeat(6, 6.67vh)/repeat(14, 4.54vw);
+  grid: repeat(6, $height-unit)/repeat(14, $width-unit);
   margin-top: 0;
 }
 
@@ -110,6 +118,32 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+#dot-headers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  #hover-title {
+    font-family: Redaction;
+    font-size: 2.25vw;
+    margin: 0;
+  }
+  #hover-subtitle {
+    font-family: hyperMarket;
+    font-size: 0.85vw;
+    margin: 0;
+  }
+}
+
+#dot-headers.hiddenUI{
+  display: none;
 }
 
 .designer-dot {
@@ -131,7 +165,7 @@ a {
 }
 
 .active-dot.nav-highlighted {
-  background-color: #7D246B;
+  background-color: $secondary-purp;
 }
 
 .experience-dot {
