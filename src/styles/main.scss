@@ -340,20 +340,21 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+
   .video-subheader {
     font-family: hyperMarket;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     margin-bottom: 0
   }
   .designer-video-header {
     font-family: Redaction;
-    font-size: 5em;
+    font-size: 5rem;
     margin: 0 auto;
   }
   .designer-video-blurb{
-    text-align: center;
     font-family: Maison Neue;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     line-height: 125%;
     width: 48%;
   }
