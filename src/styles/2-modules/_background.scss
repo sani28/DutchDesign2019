@@ -4,6 +4,12 @@ html{
   background-size: $width-unit $height-unit;
 }
 
+html.designer-page-body{
+  background-color: white;
+  // background-image: $grid-background-lightbg;
+  // background-size: $width-unit $height-unit;
+}
+
 #grain {
   background-image: url(../imgs/GRAIN.png) no-repeat center center fixed;
   opacity: 0.4;
@@ -17,6 +23,7 @@ html{
   z-index: -1;
 }
 
+//not 100% sure the video-container is necessary.
 .bg-video-container{
   position: absolute;
   top: 0;

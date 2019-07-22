@@ -1,6 +1,7 @@
 $width-unit: 4.54vw;
 $height-unit: 6.67vh;
 $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+$grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
 $secondary-purp: #7D246B;
 
 
@@ -310,4 +311,28 @@ a {
 
 #btsItem{
   grid-area: 5/7;
+}
+
+/* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
+
+.designer-video-wrapper {
+  background-color: black;
+  grid-column: 1/ span 22;
+  grid-row: 1 / span 14;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.designer-video{
+  border: none;
+  grid-column: 2;
+  max-height: 100%;
+  width: auto;
+  outline: none;
+}
+
+.purple {
+  color: purple;
 }
