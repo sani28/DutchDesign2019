@@ -1,3 +1,8 @@
+$width-unit: 4.54vw;
+$height-unit: 6.67vh;
+$grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+$secondary-purp: #7D246B;
+
 @import '../1-helpers/fonts';
 @import '../1-helpers/mixins';
 @import '../1-helpers/variables';
@@ -17,68 +22,7 @@
   border: 1px solid white;
 }
 
-#pepe-voice {
-
-}
-
-#ineke-voice {
-
-}
-
-#momkai-voice {
-
-}
-
-#lava-voice {
-
-}
-
-#aldo-voice {
-
-}
-
-#rebecca-voice {
-
-}
-
-#corunum-voice {
-
-}
-
-#floris-voice {
-
-}
-
-#valentin-voice{
-
-}
-
-#lex-voice{
-
-}
-
-#jurgen-voice {
-
-}
-
-#nienke-voice {
-
-}
-
-#truly-voice {
-
-}
-
-#main-voice {
-
-}
-
-#sm-voice {
-
-}
-
 /* body */
-
 html {
   max-height: 100vh;
   max-width: 100vw;
@@ -93,6 +37,22 @@ a#home:hover {
   text-align: right;
 }
 
+a:active {
+  border-bottom: 2px solid purple;
+}
+
+.wid-item a:hover {
+  cursor: url(../../../imgs/play-cursor.png), auto;
+}
+
+/* .wid-item a:hover:after {
+  transform: scale(0.1);
+  content: url(../../../imgs/portraits/lava.jpg);
+  display: inline-grid;
+  grid-row: 10;
+  grid-column: 2/22;
+} */
+
 a#current {
   border-bottom: 2px solid purple;
 }
@@ -105,22 +65,27 @@ a#current {
   display: inline;
   margin-top: 1%;
   width: 200px;
-  color:white;
+  color: white;
 }
 
 .home-dot {
   height: 35px;
   width: 35px;
-  background-color:white;
+  background-color: white;
   border-radius: 50%;
   display: inline-block;
 }
 
+#portrait-preview {
+  display: grid;
+  grid-area: 3/4/12/20;
+}
+
 h2 {
   font-size: 3em;
-  width: 400px;
+  width: 500px;
   grid-row: 3;
-  grid-column: 3/22;
+  grid-column: 3/5;
   font-family: redaction;
   color: #7D246B;
 }
@@ -134,7 +99,6 @@ h2 {
 }
 
 /* -----------circle nav ------------ */
-
 .circle-nav-container {
   grid-area: 12/4/12/16;
   display: grid;
@@ -144,7 +108,7 @@ h2 {
 
 .wid-item {
   display: flex;
-  position:sticky;
+  position: sticky;
   align-items: center;
   justify-content: center;
 }
@@ -160,7 +124,6 @@ h2 {
 
 span:hover {
   background-color: purple;
-    cursor: url(../../../imgs/play-cursor.png), auto;
 }
 
 /* toggle interviews + experiences */
@@ -183,48 +146,52 @@ span:hover {
   justify-content: center;
 }
 
-.block {
-	padding: 0 4rem 20vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
+ /* .block {
+  padding: 0 4rem 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
 
 @keyframes loop {
-	0% { transform-origin: 0% 50%; transform: scale3d(0,1,1); }
-	50% { transform-origin: 0% 50%; transform: scale3d(1,1,1); }
-	51% { transform-origin: 100% 50%; }
-	100% { transform-origin: 100% 50%; transform: scale3d(0,1,1); }
+  0% {
+    transform-origin: 0% 50%;
+    transform: scale3d(0, 1, 1);
+  }
+  50% {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+  51% {
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+  }
 }
 
 .hover-reveal {
-	position: fixed;
-	width: 200px;
-	height: 150px;
-	top: 0;
-	left: 0;
-	pointer-events: none;
-	opacity: 0;
+  position: fixed;
+  width: 500px;
+  height: 510px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .hover-reveal__inner,
 .hover-reveal__img {
-	width: 100%;
-	height: 100%;
-	position: relative;
+  display: grid;
+  grid-area: 2/4/12/20;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-
-.hover-reveal__deco {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #181314;
-}
-
 .hover-reveal__img {
-	background-size: cover;
-	background-position: 30% 50%;
+  background-size: cover;
+  background-position: 30% 50%;
 }
+
+/*# sourceMappingURL=whatisdesign.css.map */

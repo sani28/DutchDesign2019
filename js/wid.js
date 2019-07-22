@@ -18,6 +18,7 @@
     // Generate a random float.
     const getRandomFloat = (min, max) => (Math.random() * (max - min) + min).toFixed(2);
 
+
     // Effect 1
     class HoverImgFx1 {
         constructor(el) {
@@ -39,8 +40,7 @@
                     left : document.body.scrollLeft + document.documentElement.scrollLeft,
                     top : document.body.scrollTop + document.documentElement.scrollTop
                 };
-                this.DOM.reveal.style.top = `${mousePos.y-200-docScrolls.top}px`;
-                this.DOM.reveal.style.left = `${mousePos.x+20-docScrolls.left}px`;
+
             };
             this.mouseenterFn = (ev) => {
                 this.positionElement(ev);
@@ -120,5 +120,5 @@
     //         contentel.appendChild(imgel);
     //     }
     // });
-    imagesLoaded(document.querySelectorAll('.preload'), () => document.body.classList.remove('loading'));
+    // imagesLoaded(document.querySelectorAll('.preload'), () => document.body.classList.remove('loading'));
 }
