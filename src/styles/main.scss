@@ -322,11 +322,13 @@ a {
   margin: 0;
 }
 
-.designer-video {
-  max-height: 100vh;
+#designer-vid {
+  box-sizing: border-box;
+  height: 100vh;
   width: auto;
   outline: none;
   z-index: -1;
+  object-fit: cover;
 }
 
 .video-overlay {
