@@ -18,7 +18,6 @@
     // Generate a random float.
     const getRandomFloat = (min, max) => (Math.random() * (max - min) + min).toFixed(2);
 
-
     // Effect 1
     class HoverImgFx1 {
         constructor(el) {

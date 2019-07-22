@@ -295,7 +295,7 @@ span:hover {
 .hover-reveal {
   position: fixed;
   width: 500px;
-  height: 510px;
+  height: 570px;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -305,7 +305,7 @@ span:hover {
 .hover-reveal__inner,
 .hover-reveal__img {
   display: grid;
-  grid-area: 2/4/12/20;
+  grid-area: 3/4/12/20;
   width: 100%;
   height: 100%;
   position: relative;
