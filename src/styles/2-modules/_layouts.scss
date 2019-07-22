@@ -17,11 +17,7 @@
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-  ". video ."
-  ". section1 ."
-  ". section2 ."
-  ". section3 ."
-  ". footer .";
+  ". video .";
   align-items: center;
   justify-content: center;
 }
