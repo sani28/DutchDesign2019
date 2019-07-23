@@ -54,19 +54,19 @@
 }
 @font-face {
   font-family: maisonBold;
-  src: url(../../../fonts/MaisonMono-Bold.otf);
+  src: url(../../fonts/MaisonMono-Bold.otf);
 }
 @font-face {
   font-family: maisonMedium;
-  src: url(../../../fonts/MaisonNeue-Medium.ttf);
+  src: url(../../fonts/MaisonNeue-Medium.ttf);
 }
 @font-face {
   font-family: maisonNeue-Mono;
-  src: url(../../../fonts/MaisonNeue-Mono.otf);
+  src: url(../../fonts/MaisonNeue-Mono.otf);
 }
 @font-face {
   font-family: maisonNeueExt-Mono;
-  src: url(../../../fonts/MaisonNeueExt-Medium.otf);
+  src: url(../../fonts/MaisonNeueExt-Medium.otf);
 }
 *, html {
   color: white;
@@ -110,6 +110,7 @@ a {
   grid-template-rows: 2;
   gap: 1.5em;
   align-items: start;
+  margin-bottom: 6em;
 }
 .photo-section-1 .section-image:first-child {
   grid-row: 1;
@@ -167,7 +168,7 @@ a {
   align-self: end;
   width: 100%;
   font-size: 0.85em;
-  font-family: Maison Mono;
+  font-family: maisonBold;
   font-style: bold;
   color: black;
   margin-bottom: 0;
@@ -563,10 +564,26 @@ html.designer-page-body {
   margin: 0 auto;
 }
 .video-overlay .designer-video-blurb {
-  font-family: MaisonNeue-Mono;
+  font-family: maisonBold;
   font-size: 0.8rem;
   line-height: 125%;
   width: 48%;
+}
+
+.show {
+  transition: opacity 50ms;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.play-cursor {
+  cursor: url(../../assets/images/play.png), auto;
+}
+
+.pause-cursor {
+  cursor: url(../../assets/images/pause.png), auto;
 }
 
 /*# sourceMappingURL=main.css.map */

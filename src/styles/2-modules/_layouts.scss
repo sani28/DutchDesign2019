@@ -49,6 +49,7 @@
   grid-template-rows: 2;
   gap: 1.5em;
   align-items: start;
+  margin-bottom: 6em;
   .section-image:first-child{
     grid-row: 1;
     grid-column: 4 / 13;
@@ -106,7 +107,7 @@
     align-self: end;
     width: 100%;
     font-size: 0.85em;
-    font-family: Maison Mono;
+    font-family: maisonBold;
     font-style: bold;
     color: black;
     margin-bottom: 0;

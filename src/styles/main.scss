@@ -353,9 +353,24 @@ a {
     margin: 0 auto;
   }
   .designer-video-blurb{
-    font-family: MaisonNeue-Mono;
+    font-family: maisonBold;
     font-size: 0.8rem;
     line-height: 125%;
     width: 48%;
   }
+}
+
+.show {
+  transition: opacity 50ms;
+}
+.hide {
+  opacity: 0;
+}
+
+.play-cursor {
+  cursor: url(../../assets/images/play.png), auto;
+}
+
+.pause-cursor {
+  cursor: url(../../assets/images/pause.png), auto;
 }
