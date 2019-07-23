@@ -353,31 +353,9 @@ a {
     margin: 0 auto;
   }
   .designer-video-blurb{
-    font-family: Maison Neue;
+    font-family: MaisonNeue-Mono;
     font-size: 0.8rem;
     line-height: 125%;
     width: 48%;
-  }
-}
-
-.photo-section-1 {
-  grid-area: splash;
-  width: 100%;
-  margin: 5em 0;
-  .section-image:first-child{
-    grid-row: 1;
-    grid-column: 4 / 12;
-    width: 100%;
-
-  }
-  .section-image:nth-child(2){
-    grid-row: 2;
-    grid-column: 6 / 11;
-    width: 100%;
-  }
-  .section-image:nth-child(3){
-    grid-row: 2;
-    grid-column: 11 / 18;
-    width: 100%;
   }
 }
