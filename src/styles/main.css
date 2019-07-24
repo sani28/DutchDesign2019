@@ -1,3 +1,609 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1dc14c2c320b94a0ca3dbe63c3f083ef47870588d0e1e54564abcf201f1b3eee
-size 10361
+/* ----- fonts ------ */
+@font-face {
+  font-family: hyperMarket;
+  src: url(../../fonts/hypermarket-regular.ttf);
+  font-weight: bold;
+}
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../../fonts/bebas.otf);
+}
+@font-face {
+  font-family: brandon;
+  src: url(../../fonts/brandon.otf);
+}
+@font-face {
+  font-family: karla;
+  src: url(../../fonts/karla.ttf);
+}
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../../fonts/helveticaneue-bold.otf);
+}
+@font-face {
+  font-family: museosans-100;
+  src: url(../../fonts/museosans-100.otf);
+}
+@font-face {
+  font-family: novecento;
+  src: url(../../fonts/novecento.otf);
+}
+@font-face {
+  font-family: katarinestd;
+  src: url(../../fonts/katarinestd.otf);
+}
+@font-face {
+  font-family: monsterrat;
+  src: url(../../fonts/monsterrat.otf);
+}
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../../fonts/neuehaasgroteskblack.otf);
+}
+<<<<<<< HEAD
+/* ----- DD19 BRAND FONTS ------ */
+=======
+>>>>>>> 2dda5f3352dfb9ded39cd0d94e732e832eb137e5
+@font-face {
+  font-family: redaction;
+  src: url(../../fonts/Redaction-Regular.otf);
+}
+@font-face {
+  font-family: redaction;
+  src: url(../../fonts/Redaction-Bold.otf);
+  font-weight: bold;
+<<<<<<< HEAD
+  text-transform: capitalize;
+}
+@font-face {
+  font-family: maisonBold;
+  src: url(../../fonts/MaisonMono-Bold.otf);
+}
+@font-face {
+  font-family: maisonMedium;
+  src: url(../../fonts/MaisonNeue-Medium.ttf);
+}
+@font-face {
+  font-family: maisonNeue-Mono;
+  src: url(../../fonts/MaisonNeue-Mono.otf);
+}
+@font-face {
+  font-family: maisonNeueExt-Mono;
+  src: url(../../fonts/MaisonNeueExt-Medium.otf);
+=======
+>>>>>>> 2dda5f3352dfb9ded39cd0d94e732e832eb137e5
+}
+*, html {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-layout-container {
+  display: grid;
+  /* top row has adjustable space, then 13 even 6.67 vh rows*/
+  /* left column has adjustable space, then 21 even 4.54 vw rows*/
+<<<<<<< HEAD
+  grid: repeat(13, 6.67vh) 1fr/1fr repeat(21, 4.54vw);
+  gap: none none;
+=======
+  grid: repeat(13, 6.67vh)/1fr repeat(20, 4.54vw) 4.54vw;
+  grid-gap: none;
+>>>>>>> 2dda5f3352dfb9ded39cd0d94e732e832eb137e5
+  margin: 0 auto;
+  max-width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  border: 1px solid white;
+}
+
+<<<<<<< HEAD
+.designer-layout-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". video ." ". splash ." ". section1." ". section2." ". section3." ". section4 ." ". bott-splash .";
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-section-2, .photo-section-1 {
+  grid-row: 2;
+  width: 100%;
+  margin-top: 6em;
+}
+
+.photo-section-1 {
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
+  grid-template-rows: 2;
+  gap: 1.5em;
+  align-items: start;
+  margin-bottom: 6em;
+}
+.photo-section-1 .section-image:first-child {
+  grid-row: 1;
+  grid-column: 4/13;
+  width: 100%;
+}
+.photo-section-1 .section-image:nth-child(2) {
+  grid-row: 2;
+  grid-column: 7/12;
+  width: 100%;
+}
+.photo-section-1 .section-image:nth-child(3) {
+  grid-row: 2;
+  grid-column: 12/18;
+  width: 100%;
+}
+
+.photo-section-2 {
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
+  grid-template-rows: repeat(5, 16.66vh) 1fr;
+  gap: 1.5em;
+  align-items: start;
+}
+.photo-section-2 .section-image:first-child {
+  grid-row: 2/4;
+  grid-column: 4/8;
+  height: 100%;
+  overflow: hidden;
+  text-indent: -25%;
+}
+.photo-section-2 .section-image:first-child img {
+  height: 100%;
+  margin: 0;
+}
+.photo-section-2 .section-image:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 8/12;
+  height: 100%;
+  overflow: hidden;
+  text-indent: -15%;
+}
+.photo-section-2 .section-image:nth-child(2) img {
+  height: 100%;
+  margin: 0;
+}
+.photo-section-2 .section-image:nth-child(3) {
+  grid-row: 3/6;
+  grid-column: 8/15;
+  height: 100%;
+}
+.photo-section-2 .section-quote {
+  grid-row: 2/3;
+  grid-column: 12/16;
+  align-self: end;
+  width: 100%;
+  font-size: 0.85em;
+  font-family: maisonBold;
+  font-style: bold;
+  color: black;
+  margin-bottom: 0;
+}
+
+=======
+>>>>>>> 2dda5f3352dfb9ded39cd0d94e732e832eb137e5
+html {
+  background-color: #DFEA4E;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
+  background-size: 4.54vw 6.67vh;
+}
+
+<<<<<<< HEAD
+html.designer-page-body {
+  background-color: white;
+}
+
+=======
+>>>>>>> 2dda5f3352dfb9ded39cd0d94e732e832eb137e5
+#grain {
+  background-image: url(../imgs/GRAIN.png) no-repeat center center fixed;
+  opacity: 0.4;
+  mix-blend-mode: color-burn;
+  width: 100%;
+  background-size: contain;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.bg-preview-video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#grid-overlay {
+  position: absolute;
+  float: left;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
+  background-size: 4.54vw 6.67vh;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* --------------- grid box styling-----------------------------*/
+#main-logo {
+  grid-row: 2;
+  grid-column: 2/span 4;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 0;
+  font-size: 2em;
+  font-family: redaction;
+  font-weight: bold;
+  color: #7D246B;
+}
+
+/* consistently use this to hide things */
+.hiddenUI[id] {
+  display: none;
+}
+
+.list-navigation {
+  grid-row: 13/span 1;
+  grid-column: 2/13;
+  font-size: 0.8em;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: grid;
+  grid: 1fr/repeat(4, 9.08vw);
+  grid-auto-flow: row;
+  padding-left: 0;
+  margin-top: 0;
+  font-family: hyperMarket;
+}
+
+.main-nav-list.hiddenUI {
+  display: none;
+}
+
+.list-navigation .main-nav-list li {
+  font-size: 0.5rem;
+  text-align: left;
+  color: #7D246B;
+}
+
+.main-nav-list li:hover {
+  background-color: white;
+}
+
+#main-blurb {
+  grid-row: 2/span 2;
+  grid-column: 14/22;
+  font-size: 0.5rem;
+  color: #7D246B;
+  margin-top: 0;
+  font-family: hyperMarket;
+}
+
+#main-toggle {
+  font-size: 0.5em;
+  font-family: hyperMarket;
+  color: white;
+  grid-row: 13;
+  grid-column: 18/span 4;
+  display: grid;
+  grid: 1fr/repeat(2, 9.08vw);
+}
+
+.landing-toggle {
+  color: purple;
+}
+
+.landing-toggle.active-toggle {
+  text-decoration: underline;
+  stroke-width: 5px;
+}
+
+/* -----------------DOTS AND VIDEO STYLING----------------- */
+.fieldnote-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 1024px;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.calendar-container {
+  grid-area: 5/8/11/22;
+  display: grid;
+  grid: repeat(6, 6.67vh)/repeat(14, 4.54vw);
+  margin-top: 0;
+}
+
+.cal-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dot-headers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: end;
+  text-align: right;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+#dot-headers #hover-title {
+  font-family: Redaction;
+  font-size: 2.25vw;
+  margin: 0;
+}
+#dot-headers #hover-subtitle {
+  font-family: hyperMarket;
+  font-size: 0.85vw;
+  margin: 0;
+}
+
+#dot-headers.hiddenUI {
+  display: none;
+}
+
+.designer-dot {
+  background-color: white;
+  display: inline;
+  border-radius: 50%;
+  height: 1vw;
+  width: 1vw;
+}
+
+.active-dot {
+  height: 2.25vw;
+  width: 2.25vw;
+}
+
+.dot-unhovered.designer-dot {
+  background-color: transparent;
+  border: 1px white solid;
+}
+
+.active-dot.nav-highlighted {
+  background-color: #7D246B;
+}
+
+.experience-dot {
+  background-color: white;
+  display: inline-block;
+  border-radius: 50%;
+  height: 1vw;
+  width: 1vw;
+}
+
+.experience-dot.active-dot {
+  height: 2.25vw;
+  width: 2.25vw;
+}
+
+.dot-unhovered.experience-dot {
+  background-color: transparent;
+  border: 1px white solid;
+}
+
+#reglazeItem {
+  grid-area: 5/14;
+}
+
+#whatItem {
+  grid-area: 5/12;
+}
+
+#trulyItem {
+  grid-area: 5/4;
+}
+
+#nienkeItem {
+  grid-area: 5/3;
+}
+
+#jurgenItem {
+  grid-area: 5/2;
+}
+
+#lexItem {
+  grid-area: 5/1;
+}
+
+#edwinItem {
+  grid-area: 4/6;
+}
+
+#valentinItem {
+  grid-area: 4/2;
+}
+
+#florisItem {
+  grid-area: 3/12;
+}
+
+#corunumItem {
+  grid-area: 3/9;
+}
+
+#rebeccaItem {
+  grid-area: 3/6;
+}
+
+#aldoItem {
+  grid-area: 2/11;
+}
+
+#lavaItem {
+  grid-area: 2/10;
+}
+
+#momkaiItem {
+  grid-area: 2/9;
+}
+
+#inekeItem {
+  grid-area: 2/7;
+}
+
+#pepeItem {
+  grid-area: 2/6;
+}
+
+#matthewsItem {
+  grid-area: 1/8;
+}
+
+#futuresItem {
+  grid-area: 1/7;
+}
+
+#arnhemItem {
+  grid-area: 2/1;
+}
+
+#romeItem {
+  grid-area: 2/3;
+}
+
+#appianItem {
+  grid-area: 2/7;
+}
+
+#andreaItem {
+  grid-area: 2/13;
+}
+
+#farmItem {
+  grid-area: 2/14;
+}
+
+#texelsItem {
+  grid-area: 3/1;
+}
+
+#burgundyItem {
+  grid-area: 3/3;
+}
+
+#feltingItem {
+  grid-area: 3/4;
+}
+
+#milkItem {
+  grid-area: 3/11;
+}
+
+#breweryItem {
+  grid-area: 3/14;
+}
+
+#kikiItem {
+  grid-area: 4/1;
+}
+
+#rensItem {
+  grid-area: 4/10;
+}
+
+#atelierItem {
+  grid-area: 4/14;
+}
+
+#btsItem {
+  grid-area: 5/7;
+}
+
+<<<<<<< HEAD
+/* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
+.video-section {
+  grid-area: video;
+  max-height: 100vh;
+  width: auto;
+  margin: 0;
+}
+
+#designer-vid {
+  box-sizing: border-box;
+  max-height: 100vh;
+  width: auto;
+  outline: none;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 40%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.video-overlay .video-subheader {
+  font-family: hyperMarket;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+.video-overlay .designer-video-header {
+  font-family: Redaction;
+  font-size: 5rem;
+  margin: 0 auto;
+}
+.video-overlay .designer-video-blurb {
+  font-family: maisonBold;
+  font-size: 0.8rem;
+  line-height: 125%;
+  width: 48%;
+}
+
+.show {
+  transition: opacity 50ms;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.play-cursor {
+  cursor: url(../../assets/images/play.png), auto;
+}
+
+.pause-cursor {
+  cursor: url(../../assets/images/pause.png), auto;
+}
+
+=======
+>>>>>>> 2dda5f3352dfb9ded39cd0d94e732e832eb137e5
+/*# sourceMappingURL=main.css.map */
