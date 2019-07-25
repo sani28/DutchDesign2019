@@ -324,6 +324,13 @@ a {
   position: relative;
   align-items: center;
   justify-content: center;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.video-section:hover .vid-controls{
+  transform: translateY(0);
+  transition: all .25s;
 }
 
 #designer-vid {
@@ -331,7 +338,6 @@ a {
   width: 100%;
   outline: none;
   z-index: -1;
-  object-fit: cover;
 }
 
 .video-overlay {
@@ -339,6 +345,7 @@ a {
   left: 10%;
   right: 10%;
   top: 40%;
+  bottom: 30;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -347,17 +354,17 @@ a {
 
   .video-subheader {
     font-family: hyperMarket;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     margin-bottom: 0
   }
   .designer-video-header {
     font-family: Redaction;
-    font-size: 5rem;
+    font-size: 5em;
     margin: 0 auto;
   }
   .designer-video-blurb{
     font-family: maisonBold;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     line-height: 125%;
     width: 48%;
   }
@@ -389,15 +396,40 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 4%;
+  height: 5%;
   flex-wrap: wrap;
   background-color: rgba(223, 234, 78, 0.7);
-  #play-pause{
-    background-color: transparent;
-    border: none;
+  transform: translateY(100%) translateY(-8px);
+  transition: all .25s;
+  .grey-bar{
+    height: 8px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    .purple-playback{
+      height: 8px;
+      background-color: $secondary-purp;
+    }
+  }
+}
+
+.vid-buttons {
+  button {
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
     color: purple;
     font-family: hyperMarket;
-    position: absolute;
-    bottom: 0;
+    display: inline-block;
+  }
+  button.play:before {
+    content: "PLAY";
+    text-transform: capitalize;
+  }
+  button.pause:after{
+    content: "PAUSE";
+    text-transform: capitalize;
   }
 }

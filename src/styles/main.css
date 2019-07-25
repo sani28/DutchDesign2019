@@ -536,6 +536,13 @@ html.designer-page-body {
   position: relative;
   align-items: center;
   justify-content: center;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.video-section:hover .vid-controls {
+  transform: translateY(0);
+  transition: all 0.25s;
 }
 
 #designer-vid {
@@ -543,7 +550,6 @@ html.designer-page-body {
   width: 100%;
   outline: none;
   z-index: -1;
-  object-fit: cover;
 }
 
 .video-overlay {
@@ -551,6 +557,7 @@ html.designer-page-body {
   left: 10%;
   right: 10%;
   top: 40%;
+  bottom: 30;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -559,17 +566,17 @@ html.designer-page-body {
 }
 .video-overlay .video-subheader {
   font-family: hyperMarket;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   margin-bottom: 0;
 }
 .video-overlay .designer-video-header {
   font-family: Redaction;
-  font-size: 5rem;
+  font-size: 5em;
   margin: 0 auto;
 }
 .video-overlay .designer-video-blurb {
   font-family: maisonBold;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   line-height: 125%;
   width: 48%;
 }
@@ -600,17 +607,40 @@ html.designer-page-body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 4%;
+  height: 5%;
   flex-wrap: wrap;
   background-color: rgba(223, 234, 78, 0.7);
+  transform: translateY(100%) translateY(-8px);
+  transition: all 0.25s;
 }
-.vid-controls #play-pause {
-  background-color: transparent;
-  border: none;
+.vid-controls .grey-bar {
+  height: 8px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.vid-controls .grey-bar .purple-playback {
+  height: 8px;
+  background-color: #7D246B;
+}
+
+.vid-buttons button {
+  background: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
   color: purple;
   font-family: hyperMarket;
-  position: absolute;
-  bottom: 0;
+  display: inline-block;
+}
+.vid-buttons button.play:before {
+  content: "PLAY";
+  text-transform: capitalize;
+}
+.vid-buttons button.pause:after {
+  content: "PAUSE";
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=main.css.map */
