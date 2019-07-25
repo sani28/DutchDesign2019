@@ -1,3 +1,403 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:002e27cde2a36998e5309e9b0cfcd862d84eb79dabb94771631898fe6f979197
-size 5653
+$width-unit: 4.54vw;
+$height-unit: 6.67vh;
+$grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+$grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
+$secondary-purp: #7D246B;
+
+
+@import './1-helpers/fonts';
+*, html {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+@import './2-modules/layouts';
+@import './2-modules/background';
+/* --------------- grid box styling-----------------------------*/
+#main-logo {
+  grid-row: 2;
+  grid-column: 2 / span 4;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 0;
+  font-size: 2em;
+  font-family: redaction;
+  font-weight: bold;
+  color: $secondary-purp;
+}
+/* consistently use this to hide things */
+.hiddenUI[id] {
+  display: none;
+}
+
+.list-navigation {
+  grid-row: 13 / span 1;
+  grid-column: 2 / 13;
+  font-size: 0.8em;
+}
+
+.main-nav-list{
+  list-style: none;
+  display: grid;
+  grid: 1fr / repeat(4, 2*$width-unit);
+  grid-auto-flow: row;
+  padding-left: 0;
+  margin-top: 0;
+  font-family: hyperMarket;
+}
+
+.main-nav-list.hiddenUI{
+  display: none;
+}
+
+.list-navigation .main-nav-list li{
+  font-size: 0.5rem;
+  text-align: left;
+  color: $secondary-purp;
+}
+
+.main-nav-list li:hover{
+  background-color: white;
+}
+
+#main-blurb {
+  grid-row: 2 / span 2;
+  grid-column: 14 / 22;
+  font-size: 0.5rem;
+  color: $secondary-purp;
+  margin-top: 0;
+  font-family: hyperMarket;
+}
+
+#main-toggle {
+  font-size: 0.5em;
+  font-family: hyperMarket;
+  color: white;
+  grid-row: 13;
+  grid-column: 18 / span 4;
+  display: grid;
+  grid: 1fr / repeat(2, 2*$width-unit);
+}
+
+.landing-toggle{
+  color: purple;
+}
+
+.landing-toggle.active-toggle{
+  text-decoration: underline;
+  stroke-width: 5px;
+}
+
+
+/* -----------------DOTS AND VIDEO STYLING----------------- */
+
+.fieldnote-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 1024px;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.calendar-container{
+  grid-area: 5 / 8 / 11/ 22;
+  display: grid;
+  grid: repeat(6, $height-unit)/repeat(14, $width-unit);
+  margin-top: 0;
+}
+
+.cal-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#dot-headers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: end;
+  text-align: right;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  #hover-title {
+    font-family: Redaction;
+    font-size: 2.25vw;
+    margin: 0;
+  }
+  #hover-subtitle {
+    font-family: hyperMarket;
+    font-size: 0.85vw;
+    margin: 0;
+  }
+}
+
+#dot-headers.hiddenUI{
+  display: none;
+}
+
+.designer-dot {
+  background-color: white;
+  display: inline;
+  border-radius: 50%;
+  height: 1vw;
+  width: 1vw;
+}
+
+.active-dot{
+  height: 2.25vw;
+  width: 2.25vw;
+}
+
+.dot-unhovered.designer-dot {
+  background-color: transparent;
+  border: 1px white solid;
+}
+
+.active-dot.nav-highlight {
+  background-color: $secondary-purp;
+}
+
+.experience-dot {
+  background-color: white;
+  display: inline-block;
+  border-radius: 50%;
+  height: 1vw;
+  width: 1vw;
+}
+
+.experience-dot.active-dot{
+  height: 2.25vw;
+  width: 2.25vw;
+}
+
+.dot-unhovered.experience-dot{
+  background-color: transparent;
+  border: 1px white solid;
+}
+
+#reglazeItem{
+  grid-area: 5/14;
+}
+
+#whatItem{
+  grid-area: 5/12 ;
+}
+
+#trulyItem{
+  grid-area: 5/4;
+}
+
+#nienkeItem{
+  grid-area: 5/3;
+}
+
+#jurgenItem{
+  grid-area: 5/2;
+}
+
+#lexItem{
+  grid-area: 5/1;
+}
+
+#edwinItem{
+  grid-area: 4/6;
+}
+
+#valentinItem{
+  grid-area: 4/2;
+}
+
+#florisItem{
+  grid-area: 3/12;
+}
+
+#corunumItem{
+  grid-area: 3/9;
+}
+
+#rebeccaItem{
+  grid-area: 3/6;
+}
+
+#aldoItem{
+  grid-area: 2/11;
+}
+
+#lavaItem{
+  grid-area: 2/10;
+}
+
+#momkaiItem{
+  grid-area: 2/9;
+}
+
+#inekeItem{
+  grid-area: 2/7;
+}
+
+#pepeItem{
+  grid-area: 2/6;
+}
+
+#matthewsItem{
+  grid-area: 1/8;
+}
+
+#futuresItem{
+  grid-area: 1/7;
+}
+
+#arnhemItem{
+  grid-area: 2/1;
+}
+
+#romeItem{
+  grid-area: 2/3;
+}
+
+#appianItem{
+  grid-area: 2/7;
+}
+
+#andreaItem{
+  grid-area: 2/13;
+}
+
+#farmItem{
+  grid-area: 2/14;
+}
+
+#texelsItem{
+  grid-area: 3/1;
+}
+
+#burgundyItem{
+  grid-area: 3/3;
+}
+
+#feltingItem{
+  grid-area: 3/4;
+}
+
+#milkItem{
+  grid-area: 3/11;
+}
+
+#breweryItem{
+  grid-area: 3/14;
+}
+
+#kikiItem{
+  grid-area: 4/1;
+}
+
+#rensItem{
+  grid-area: 4/10;
+}
+
+#atelierItem{
+  grid-area: 4/14;
+}
+
+#btsItem{
+  grid-area: 5/7;
+}
+/* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
+
+.video-section{
+  grid-area: video;
+  display: flex;
+  width: 100%;
+  max-width: 80vw;
+  margin: 0;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+#designer-vid {
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 40%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .video-subheader {
+    font-family: hyperMarket;
+    font-size: 0.75rem;
+    margin-bottom: 0
+  }
+  .designer-video-header {
+    font-family: Redaction;
+    font-size: 5rem;
+    margin: 0 auto;
+  }
+  .designer-video-blurb{
+    font-family: maisonBold;
+    font-size: 0.8rem;
+    line-height: 125%;
+    width: 48%;
+  }
+}
+
+.shown-item {
+  opacity: 0;
+}
+
+.shown-item.visible {
+  opacity: 1;
+  -webkit-transition: all 0.15s ease-in;
+					 -moz-transition: all 0.15s ease-in;
+						-ms-transition: all 0.15s ease-in;
+						 -o-transition: all 0.15s ease-in;
+								transition: all 0.15s ease-in;
+}
+
+.play-cursor {
+  cursor: url(../../assets/images/play.png), auto;
+}
+
+.pause-cursor {
+  cursor: url(../../assets/images/pause.png), auto;
+}
+
+.vid-controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4%;
+  flex-wrap: wrap;
+  background-color: rgba(223, 234, 78, 0.7);
+  #play-pause{
+    background-color: transparent;
+    border: none;
+    color: purple;
+    font-family: hyperMarket;
+    position: absolute;
+    bottom: 0;
+  }
+}

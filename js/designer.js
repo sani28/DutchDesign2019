@@ -29,6 +29,24 @@ $(document).ready(function(){
 
 
   //VIDEO OVERLAY SHOW/HIDE
+  vid.addEventListener("playing", function(){
+    $("#top-video-section").removeClass("play-cursor");
+    $("#top-video-section").addClass("pause-cursor");
+  });
+
+  vid.addEventListener("paused", function(){
+    $("#top-video-section").removeClass("pause-cursor");
+    $("#top-video-section").addClass("play-cursor");
+  });
+
+  overlay.addEventListener("click", function(){
+    vid.play();
+  });
+
+  vidSection.addEventListener("click", function(){
+    vid.play();
+  });
+
   vid.addEventListener("play", function(){
     overlay.style.display = "none";
     $("#top-video-section").removeClass("play-cursor");
@@ -39,16 +57,10 @@ $(document).ready(function(){
     overlay.style.display = "";
     $("#top-video-section").removeClass("pause-cursor");
     $("#top-video-section").addClass("play-cursor");
+    vidSection.addEventListener("click", function(){
+      vid.play();
+    });
   });
 
-  vid.addEventListener("playing", function(){
-    $("#top-video-section").removeClass("play-cursor");
-    $("#top-video-section").addClass("pause-cursor");
-  });
-
-  vid.addEventListener("paused", function(){
-    $("#top-video-section").removeClass("pause-cursor");
-    $("#top-video-section").addClass("play-cursor");
-  });
 
 });
