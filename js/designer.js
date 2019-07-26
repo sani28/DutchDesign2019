@@ -3,7 +3,7 @@ $(document).ready(function(){
   const playback = document.querySelector(".purple-playback");
   const playPause = document.getElementById("play-pause");
   const overlay = document.getElementById("designer-overlay");
-  const vidSection = document.getElementById("top-video-section");
+  const vidSection = document.getElementById("vid-container");
   const orderedDesignerImages =
   [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
   document.getElementById('floris-quote1'), document.getElementById("floris-workshop"), document.getElementById("floris-space")];
@@ -32,23 +32,22 @@ $(document).ready(function(){
 
 
   //VIDEO OVERLAY SHOW/HIDE
-  vid.addEventListener("playing", function(){
-    $("#top-video-section").removeClass("play-cursor");
-    $("#top-video-section").addClass("pause-cursor");
-  });
-
-  vid.addEventListener("paused", function(){
-    $("#top-video-section").removeClass("pause-cursor");
-    $("#top-video-section").addClass("play-cursor");
-  });
+  // vid.addEventListener("playing", function(){
+  //   $("#top-video-section").removeClass("play-cursor");
+  //   $("#top-video-section").addClass("pause-cursor");
+  // });
+  //
+  // vid.addEventListener("paused", function(){
+  //   $("#top-video-section").removeClass("pause-cursor");
+  //   $("#top-video-section").addClass("play-cursor");
+  // });
 
   overlay.addEventListener("click", function(){
     togglePlayPause();
   });
-
-  vidSection.addEventListener("click", function(){
+  vid.addEventListener("click", function() {
     togglePlayPause();
-  });
+  })
 
   playPause.onclick = function(){
     togglePlayPause();
