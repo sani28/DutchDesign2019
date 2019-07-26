@@ -624,6 +624,9 @@ html.designer-page-body {
   height: 8px;
   background-color: #7D246B;
 }
+.vid-controls .timeblock div {
+  display: inline-block;
+}
 
 .vid-buttons button {
   background: none;

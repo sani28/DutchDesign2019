@@ -17,7 +17,7 @@ $(document).ready(function(){
       reverse: true
     })
     .setClassToggle(orderedDesignerImages[i], "visible")
-    // .addIndicators({name: "image " + (i + 1)}) //USE FOR DEBUG
+    .addIndicators({name: "image " + (i + 1)}) //USE FOR DEBUG
     .addTo(scrollControl);
   }
   new ScrollMagic.Scene({
@@ -27,6 +27,7 @@ $(document).ready(function(){
     reverse: true
   })
   .setClassToggle("#floris-wip", "visible")
+  .addIndicators({name: "image " + (7)})
   .addTo(scrollControl);
 
 
@@ -53,38 +54,34 @@ $(document).ready(function(){
     togglePlayPause();
   }
 
-  vid.addEventListener("play", function(){
-
-  });
-
-  vid.addEventListener("pause", function(){
-    vidSection.addEventListener("click", function(){
-      vid.play();
-    });
-  });
-
-
+  // vid.addEventListener("pause", function(){
+  //   vidSection.addEventListener("click", function(){
+  //     vid.play();
+  //   });
+  // });
 
 function togglePlayPause(){
   if(vid.paused){
     playPause.className = 'pause';
-    overlay.style.display = "none";
-    $("#top-video-section").removeClass("play-cursor");
-    $("#top-video-section").addClass("pause-cursor");
     vid.play();
+    overlay.style.display = "none";
   }
   else {
     playPause.className = 'play';
-    overlay.style.display = "";
-    $("#top-video-section").removeClass("pause-cursor");
-    $("#top-video-section").addClass("play-cursor");
     vid.pause();
+    overlay.style.display = "";
   }
 }
 
+function onTrackedVideoFrame(currentTime, duration){
+    $("#currentTime").text(currentTime); //Change #current to currentTime
+    $("#vidDuration").text(duration)
+}
+
 vid.addEventListener('timeupdate', function(){
-  var playbackPos = (vid.currentTime / vid.duration);
-  // playback.style.width = playback
+  let playbackPos = (vid.currentTime/vid.duration);
+  playback.style.width = playbackPos * 100 + "%";
+  onTrackedVideoFrame(this.currentTime, this.duration);
 });
 
 
