@@ -363,7 +363,7 @@ a {
     margin: 0 auto;
   }
   .designer-video-blurb{
-    font-family: maisonBold;
+    font-family: Maison Neue;
     font-size: 0.8em;
     line-height: 125%;
     width: 48%;
@@ -412,8 +412,14 @@ a {
       background-color: $secondary-purp;
     }
   }
-  .timeblock div{
-    display: inline-block;
+  .timeblock {
+    margin-left: 0.75em;
+    div{
+      display: inline-block;
+      font-family: Maison Neue;
+      font-size: 0.75em;
+      color: $secondary-purp;
+    }
   }
 }
 
@@ -423,9 +429,10 @@ a {
     border: 0;
     outline: none;
     cursor: pointer;
-    color: purple;
+    color: $secondary-purp;
     font-family: hyperMarket;
     display: inline-block;
+    font-size: 0.75em;
   }
   button.play:before {
     content: "PLAY";

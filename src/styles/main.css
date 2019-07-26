@@ -575,7 +575,7 @@ html.designer-page-body {
   margin: 0 auto;
 }
 .video-overlay .designer-video-blurb {
-  font-family: maisonBold;
+  font-family: Maison Neue;
   font-size: 0.8em;
   line-height: 125%;
   width: 48%;
@@ -616,8 +616,14 @@ html.designer-page-body {
   height: 8px;
   background-color: #7D246B;
 }
+.vid-controls .timeblock {
+  margin-left: 0.75em;
+}
 .vid-controls .timeblock div {
   display: inline-block;
+  font-family: Maison Neue;
+  font-size: 0.75em;
+  color: #7D246B;
 }
 
 .vid-buttons button {
@@ -625,9 +631,10 @@ html.designer-page-body {
   border: 0;
   outline: none;
   cursor: pointer;
-  color: purple;
+  color: #7D246B;
   font-family: hyperMarket;
   display: inline-block;
+  font-size: 0.75em;
 }
 .vid-buttons button.play:before {
   content: "PLAY";

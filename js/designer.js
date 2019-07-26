@@ -48,7 +48,6 @@ $(document).ready(function(){
   vid.addEventListener("click", function() {
     togglePlayPause();
   })
-
   playPause.onclick = function(){
     togglePlayPause();
   }
@@ -73,13 +72,19 @@ function togglePlayPause(){
 }
 
 function onTrackedVideoFrame(currentTime, duration){
-    $("#currentTime").text(currentTime); //Change #current to currentTime
-    $("#vidDuration").text(duration)
+    let curr = Math.floor(currentTime);
+    let dur = Math.floor(duration);
+    $("#currentTime").text(formatTime(curr));
+    $("#vidDuration").text(formatTime(dur));
+}
+
+function formatTime(s){
+  return(s-(s%=60))/60+(9<s?':':':0')+s
 }
 
 vid.addEventListener('timeupdate', function(){
   let playbackPos = (vid.currentTime/vid.duration);
-  playback.style.width = playbackPos * 100 + "%";
+  playback.style.width = (playbackPos * 100) + "%";
   onTrackedVideoFrame(this.currentTime, this.duration);
 });
 
