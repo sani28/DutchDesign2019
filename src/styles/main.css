@@ -601,7 +601,7 @@ html.designer-page-body {
   width: 100%;
   height: 5%;
   flex-wrap: wrap;
-  background-color: rgba(223, 234, 78, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   transform: translateY(100%) translateY(-8px);
   transition: all 0.25s;
 }
@@ -610,7 +610,7 @@ html.designer-page-body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(175, 175, 175, 0.9);
 }
 .vid-controls .grey-bar .purple-playback {
   height: 8px;
@@ -633,7 +633,6 @@ html.designer-page-body {
   cursor: pointer;
   color: #7D246B;
   font-family: hyperMarket;
-  display: inline-block;
   font-size: 0.75em;
 }
 .vid-buttons button.play:before {
@@ -643,6 +642,11 @@ html.designer-page-body {
 .vid-buttons button.pause:after {
   content: "PAUSE";
   text-transform: capitalize;
+}
+
+.vid-buttons.fs {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
