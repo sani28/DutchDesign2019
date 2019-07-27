@@ -367,6 +367,7 @@ a {
 }
 .designer-name {
   font-family: Redaction;
+  width: 40%;
   font-size: 5em;
   margin: 0 auto;
   text-transform: uppercase;
@@ -441,7 +442,7 @@ a {
     color: $secondary-purp;
     font-family: hyperMarket;
     font-size: 0.75em;
-    text-transform: uppercase;  
+    text-transform: uppercase;
   }
   button.play:before {
     content: "PLAY";
