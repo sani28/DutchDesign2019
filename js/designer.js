@@ -4,6 +4,7 @@ $(document).ready(function(){
   const playPause = document.getElementById("play-pause");
   const overlay = document.getElementById("designer-overlay");
   const vidSection = document.getElementById("vid-container");
+  const fullscreenBtn = document.getElementById("fullscreen");
   const progress = document.getElementById("progress")
   const orderedDesignerImages =
   [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
@@ -93,6 +94,38 @@ progress.addEventListener('click', function(e) {
    var pos = (e.pageX  - vidSection.offsetLeft) / this.offsetWidth;
    vid.currentTime = pos * vid.duration;
 });
+
+fullscreen.addEventListener('click', function(){
+  toggleFullScreen();
+});
+
+
+
+function toggleFullScreen() {
+    console.log('fs request');
+    if (vid.requestFullscreen) {
+        vid.requestFullscreen();
+    } else if (vid.mozRequestFullScreen) {
+        vid.mozRequestFullScreen();
+    } else if (vid.webkitRequestFullscreen) {
+        vid.webkitRequestFullscreen();
+    } else if (vid.msRequestFullscreen) {
+        vid.msRequestFullscreen();
+    }
+    if(window.innerHeight == screen.height) {
+        console.log('already fs');
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if(document.mozCancelFullscreen) {
+            document.mozCancelFullscreen();
+        } else if(document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+  };
+
 
 
   /**************************************************
