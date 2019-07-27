@@ -94,9 +94,11 @@ a {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: auto;
-  grid-template-areas: ". video ." ". splash ." ". section1." ". section2." ". section3." ". section4 ." ". bott-splash .";
+  grid-template-areas: ". video .";
   align-items: center;
   justify-content: center;
+  background-color: #DFEA4E;
+  padding-bottom: 5em;
 }
 
 .photo-section-2, .photo-section-1 {
@@ -538,6 +540,7 @@ html.designer-page-body {
   justify-content: center;
   margin-top: 2em;
   overflow: hidden;
+  z-index: 1;
 }
 
 .video-section:hover .vid-controls {
@@ -578,7 +581,7 @@ html.designer-page-body {
   font-family: Maison Neue;
   font-size: 0.8em;
   line-height: 125%;
-  width: 48%;
+  width: 60%;
 }
 
 .shown-item {

@@ -1,3 +1,59 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1598820a8ed6b51602c1a246e48703021a8d898a33babc0ee5a235bb8be3c990
-size 1117
+html{
+  background-color: $primary-green;
+  background-image: $grid-background;
+  background-size: $width-unit $height-unit;
+}
+
+
+html.designer-page-body{
+  background-color: white;
+  // background-image: $grid-background-lightbg;
+  // background-size: $width-unit $height-unit;
+}
+
+#grain {
+  background-image: url(../imgs/GRAIN.png) no-repeat center center fixed;
+  opacity: 0.4;
+  mix-blend-mode:color-burn;
+  width: 100%;
+  background-size: contain;
+  opacity: 0.2;
+  top:0;
+  left:0;
+  position: absolute;
+  z-index: -1;
+}
+
+//not 100% sure the video-container is necessary.
+.bg-video-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.bg-preview-video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#grid-overlay{
+  position:absolute;
+  float:left;
+  min-width:100%;
+  min-height:100%;
+  background-color: transparent;
+  background-image: $grid-background;
+  background-size: $width-unit $height-unit;
+  z-index: -1;
+  opacity: 0.5;
+}

@@ -2,6 +2,7 @@ $width-unit: 4.54vw;
 $height-unit: 6.67vh;
 $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
 $grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
+$primary-green: #DFEA4E;
 $secondary-purp: #7D246B;
 
 
@@ -326,6 +327,7 @@ a {
   justify-content: center;
   margin-top: 2em;
   overflow: hidden;
+  z-index: 1;
 }
 
 .video-section:hover .vid-controls{
@@ -366,7 +368,7 @@ a {
     font-family: Maison Neue;
     font-size: 0.8em;
     line-height: 125%;
-    width: 48%;
+    width: 60%;
   }
 }
 
