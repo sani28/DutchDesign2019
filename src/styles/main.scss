@@ -342,7 +342,7 @@ a {
   z-index: -1;
 }
 
-.video-overlay {
+.video-overlay{
   position: absolute;
   left: 10%;
   right: 10%;
@@ -353,24 +353,31 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  .video-subheader {
-    font-family: hyperMarket;
-    font-size: 0.75em;
-    margin-bottom: 0
-  }
-  .designer-video-header {
-    font-family: Redaction;
-    font-size: 5em;
-    margin: 0 auto;
-  }
-  .designer-video-blurb{
-    font-family: Maison Neue;
-    font-size: 0.8em;
-    line-height: 125%;
-    width: 60%;
+  .white-txt{
+    color: white;
   }
 }
+
+
+.designer-tagline{
+  font-family: hyperMarket;
+  font-size: 0.75em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.designer-name {
+  font-family: Redaction;
+  font-size: 5em;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.designer-blurb{
+  font-family: Maison Neue;
+  font-size: 0.8em;
+  line-height: 125%;
+  width: 60%;
+}
+
 
 .shown-item {
   opacity: 0;
@@ -400,7 +407,7 @@ a {
   width: 100%;
   height: 5%;
   flex-wrap: wrap;
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(223,234,78, 0.7);
   transform: translateY(100%) translateY(-6px);
   transition: all .25s;
   .grey-bar{
@@ -448,4 +455,48 @@ a {
 .vid-buttons.fs{
   margin-left: auto;
   margin-right: 0;
+}
+
+.designer-top-section{
+  display: grid;
+  grid-template-columns: 1fr repeat(16, 4vw) 1fr;
+  gap: 1.5em;
+  width: 100%;
+
+  #designer-toggle{
+    grid-column: 3 / span 14;
+    margin-left: -1em;
+    margin-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 2px solid rgb(225,225,225);
+    .content-toggle{
+      margin-right: 2em;
+      color: $secondary-purp;
+      font-family: hyperMarket;
+      font-size: 1em;
+      text-transform: uppercase;
+      padding-bottom: 0.25em;
+    }
+    .content-toggle.active-toggle{
+      border-bottom: 2px solid $secondary-purp;
+    }
+  }
+
+  .designer-summary {
+    grid-column: 3 / span 14;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .black-txt{
+      color: black;
+    }
+    .designer-blurb{
+      width: 65% //overrides previous width;
+    }
+  }
 }
