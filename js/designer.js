@@ -1,9 +1,10 @@
 $(document).ready(function(){
   const vid = document.getElementById("designer-vid");
-  const playback = document.querySelector(".purple-playback");
+  const playback = document.getElementById("playback");
   const playPause = document.getElementById("play-pause");
   const overlay = document.getElementById("designer-overlay");
   const vidSection = document.getElementById("vid-container");
+  const progress = document.getElementById("progress")
   const orderedDesignerImages =
   [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
   document.getElementById('floris-quote1'), document.getElementById("floris-workshop"), document.getElementById("floris-space")];
@@ -86,6 +87,11 @@ vid.addEventListener('timeupdate', function(){
   let playbackPos = (vid.currentTime/vid.duration);
   playback.style.width = (playbackPos * 100) + "%";
   onTrackedVideoFrame(this.currentTime, this.duration);
+});
+
+progress.addEventListener('click', function(e) {
+   var pos = (e.pageX  - vidSection.offsetLeft) / this.offsetWidth;
+   vid.currentTime = pos * vid.duration;
 });
 
 

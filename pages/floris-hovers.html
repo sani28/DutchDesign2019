@@ -16,14 +16,14 @@
   </head>
   <body>
     <div class="designer-layout-container">
-      <figure class="video-section play-cursor" id="top-video-section">
+      <figure class="video-section play-cursor" id="vid-container">
         <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
           <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
         </video>
 
         <div class="vid-controls">
-          <div class="grey-bar">
-            <div class="purple-playback"></div>
+          <div class="grey-bar" id="progress">
+            <div class="purple-playback" id="playback"></div>
           </div>
           <div class="vid-buttons">
             <button class="play" id="play-pause"></button>
