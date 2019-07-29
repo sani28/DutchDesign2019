@@ -507,3 +507,26 @@ a {
   height: 700px; //placeholder, should be auto
   background-color: salmon;
 }
+
+.designer-footer{
+  display: flex;
+  flex-direction: column;
+  margin: 2em 10%;
+  text-transform: uppercase;
+  p {
+    font-family: maisonNeue-Mono;
+    font-size: 0.75rem;
+    color: black;
+    display: inline;
+    margin-bottom: 0.25rem;
+    line-height: 125%;
+  }
+  a{
+    font-family: hyperMarket;
+    font-size: 0.75rem;
+    color: $secondary-purp;
+    display: inline;
+    margin-bottom: 2rem;
+  }
+
+}
