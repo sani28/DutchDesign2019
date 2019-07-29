@@ -13,10 +13,12 @@ $(document).ready(function(){
   document.getElementById("toysketch"),
   document.getElementById("scraps"),
   document.getElementById("quote2"),
+  document.getElementById("caption1"),
+  document.getElementById("plankchair"),
   document.getElementById("chair-closeup"),
   document.getElementById("quote3"),
-  document.getElementById("caption1"),
-  document.getElementById("plankchair")];
+  document.getElementById("compmap"),
+  document.getElementById("quote4")];
 
   var scrollControl = new ScrollMagic.Controller();
   for(let i=0; i<orderedDesignerImages.length; i++){
@@ -39,6 +41,16 @@ $(document).ready(function(){
   .setClassToggle("#floris-wip", "visible")
   .addIndicators({name: "image " + (7)})
   .addTo(scrollControl);
+
+new ScrollMagic.Scene({
+  triggerElement: "#mapsketch",
+  triggerHook: 0.8,
+  offset: 250,
+  reverse: true
+})
+.setClassToggle("#mapsketch", "visible")
+.addIndicators({name: "mapsketch"})
+.addTo(scrollControl);
 
 
   //VIDEO OVERLAY SHOW/HIDE
