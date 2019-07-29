@@ -8,7 +8,15 @@ $(document).ready(function(){
   const progress = document.getElementById("progress")
   const orderedDesignerImages =
   [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
-  document.getElementById('floris-quote1'), document.getElementById("floris-workshop"), document.getElementById("floris-space")];
+  document.getElementById('quote1'),
+  document.getElementById("floris-workshop"), document.getElementById("floris-space"),
+  document.getElementById("toysketch"),
+  document.getElementById("scraps"),
+  document.getElementById("quote2"),
+  document.getElementById("chair-closeup"),
+  document.getElementById("quote3"),
+  document.getElementById("caption1"),
+  document.getElementById("plankchair")];
 
   var scrollControl = new ScrollMagic.Controller();
   for(let i=0; i<orderedDesignerImages.length; i++){

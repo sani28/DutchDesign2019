@@ -101,18 +101,24 @@ a {
   padding-bottom: 5em;
 }
 
-.photo-section-2, .photo-section-1 {
-  grid-row: 2;
+.photo-section-4, .photo-section-3, .photo-section-2, .photo-section-1 {
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
+  gap: 1.5em;
   width: 100%;
   margin-top: 6em;
+  align-items: start;
+}
+
+.section-quote {
+  font-size: 0.85em;
+  font-family: maisonBold;
+  font-style: bold;
+  color: black;
 }
 
 .photo-section-1 {
-  display: grid;
-  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
-  grid-template-rows: 2;
-  gap: 1.5em;
-  align-items: start;
+  grid-template-rows: 1fr 1fr;
   margin-bottom: 8em;
 }
 .photo-section-1 .layout-item:first-child {
@@ -132,11 +138,7 @@ a {
 }
 
 .photo-section-2 {
-  display: grid;
-  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   grid-template-rows: repeat(5, 16.66vh) 1fr;
-  gap: 1.5em;
-  align-items: start;
 }
 .photo-section-2 .layout-item:first-child {
   grid-row: 2/4;
@@ -170,11 +172,55 @@ a {
   grid-column: 12/16;
   align-self: end;
   width: 100%;
+  margin-bottom: 0;
+}
+
+.photo-section-3 {
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 5em;
+}
+.photo-section-3 .layout-item:first-child {
+  grid-column: 4/16;
+  grid-row: 1;
+  width: 100%;
+  border: 1px solid grey;
+}
+.photo-section-3 .layout-item:nth-child(2) {
+  grid-column: 3/11;
+  grid-row: 2;
+  width: 100%;
+  border: 1px solid grey;
+}
+.photo-section-3 .section-quote {
+  grid-column: 11/17;
+  grid-row: 2;
+  align-self: center;
   font-size: 0.85em;
   font-family: maisonBold;
   font-style: bold;
   color: black;
-  margin-bottom: 0;
+}
+
+.photo-section-4 .layout-item:first-child {
+  grid-column: 4/10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+.photo-section-4 .layout-item:nth-child(2) {
+  grid-column: 10/16;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.photo-section-4 section-caption {
+  font-family: Maison Mono;
+  font-size: 0.6em;
+  font-style: normal;
+  color: black;
 }
 
 html {
