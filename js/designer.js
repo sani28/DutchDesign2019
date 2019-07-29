@@ -5,54 +5,8 @@ $(document).ready(function(){
   const overlay = document.getElementById("designer-overlay");
   const vidSection = document.getElementById("vid-container");
   const fullscreenBtn = document.getElementById("fullscreen");
-  const progress = document.getElementById("progress")
-  const orderedDesignerImages =
-  [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
-  document.getElementById('quote1'),
-  document.getElementById("floris-workshop"), document.getElementById("floris-space"),
-  document.getElementById("toysketch"),
-  document.getElementById("scraps"),
-  document.getElementById("quote2"),
-  document.getElementById("caption1"),
-  document.getElementById("plankchair"),
-  document.getElementById("chair-closeup"),
-  document.getElementById("quote3"),
-  document.getElementById("compmap"),
-  document.getElementById("quote4")];
-
-  var scrollControl = new ScrollMagic.Controller();
-  for(let i=0; i<orderedDesignerImages.length; i++){
-    new ScrollMagic.Scene({
-      triggerElement: orderedDesignerImages[i],
-      triggerHook: 0.8,
-      offset: 100,
-      reverse: true
-    })
-    .setClassToggle(orderedDesignerImages[i], "visible")
-    .addIndicators({name: "image " + (i + 1)}) //USE FOR DEBUG
-    .addTo(scrollControl);
-  }
-  new ScrollMagic.Scene({
-    triggerElement:  "#floris-wip",
-    triggerHook: 0.8,
-    offset: 150,
-    reverse: true
-  })
-  .setClassToggle("#floris-wip", "visible")
-  .addIndicators({name: "image " + (7)})
-  .addTo(scrollControl);
-
-new ScrollMagic.Scene({
-  triggerElement: "#mapsketch",
-  triggerHook: 0.8,
-  offset: 250,
-  reverse: true
-})
-.setClassToggle("#mapsketch", "visible")
-.addIndicators({name: "mapsketch"})
-.addTo(scrollControl);
-
-
+  const progress = document.getElementById("progress");
+  
   //VIDEO OVERLAY SHOW/HIDE
   // vid.addEventListener("playing", function(){
   //   $("#top-video-section").removeClass("play-cursor");

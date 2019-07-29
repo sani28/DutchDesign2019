@@ -800,5 +800,8 @@ html.designer-page-body {
   display: inline;
   margin-bottom: 2rem;
 }
+.designer-footer a:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=main.css.map */
