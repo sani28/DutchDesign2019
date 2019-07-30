@@ -101,7 +101,7 @@ a {
   padding-bottom: 5em;
 }
 
-.photo-section-7, .photo-section-5, .photo-section-4, .photo-section-3, .photo-section-2, .photo-section-1 {
+.photo-section-7, .photo-section-6, .photo-section-5, .photo-section-4, .photo-section-3, .photo-section-2, .photo-section-1 {
   display: grid;
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1.5em;
@@ -261,9 +261,35 @@ a {
   padding-top: 2em;
 }
 
+.photo-section-6 {
+  grid-template-rows: repeat(7, 1fr);
+}
+.photo-section-6 .layout-item:first-child {
+  grid-row: 1/4;
+  grid-column: 7/11;
+  width: 100%;
+}
+.photo-section-6 .layout-item:nth-child(2) {
+  grid-row: 2/5;
+  grid-column: 11/15;
+  width: 100%;
+}
+.photo-section-6 .layout-item:nth-child(3) {
+  grid-row: 4/7;
+  grid-column: 5/11;
+  width: 100%;
+}
+.photo-section-6 .section-quote {
+  grid-row: 5/7;
+  grid-column: 11/16;
+  width: 50%;
+  align-self: end;
+  line-height: 150%;
+}
+
 .photo-section-7 {
   grid-template-rows: 2;
-  margin-bottom: 5em;
+  width: 100%;
 }
 .photo-section-7 .layout-item:first-child {
   grid-row: 1;

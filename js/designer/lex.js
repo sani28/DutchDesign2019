@@ -1,6 +1,10 @@
 $(document).ready(function(){
   const orderedDesignerImages =
-  [document.getElementById('widespace'),
+  [document.getElementById('lex-candid'),
+   document.getElementById('lexhands'),
+   document.getElementById('lexhands2'),
+   document.getElementById('quote1'),
+   document.getElementById('widespace'),
    document.getElementById('lex_space'),
    document.getElementById('machinary'),
    document.getElementById('truecolours'),
