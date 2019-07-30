@@ -135,7 +135,7 @@
 
 .photo-section-4{
   @extend %photo-section;
-  margin-bottom: 5em;
+  padding-bottom: 5em;
   .layout-item:first-child{
     grid-column: 5/11;
     display: flex;
@@ -191,6 +191,7 @@
 .photo-section-6{
   @extend %photo-section;
   grid-template-rows: repeat(7, 1fr);
+  margin-bottom: -5em;
   .layout-item:first-child{
     grid-row: 1/4;
     grid-column: 7/11;

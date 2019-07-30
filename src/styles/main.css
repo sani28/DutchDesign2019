@@ -209,7 +209,7 @@ a {
 }
 
 .photo-section-4 {
-  margin-bottom: 5em;
+  padding-bottom: 5em;
 }
 .photo-section-4 .layout-item:first-child {
   grid-column: 5/11;
@@ -263,6 +263,7 @@ a {
 
 .photo-section-6 {
   grid-template-rows: repeat(7, 1fr);
+  margin-bottom: -5em;
 }
 .photo-section-6 .layout-item:first-child {
   grid-row: 1/4;
@@ -837,6 +838,7 @@ html.designer-page-body {
   width: 100%;
   height: auto;
   background-color: salmon;
+  margin-top: 5em;
 }
 
 .designer-footer {

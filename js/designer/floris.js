@@ -27,7 +27,7 @@ $(document).ready(function(){
   new ScrollMagic.Scene({
     triggerElement:  "#floris-wip",
     triggerHook: 0.8,
-    offset: 150,
+    offset: 200,
     reverse: true
   })
   .setClassToggle("#floris-wip", "visible")
