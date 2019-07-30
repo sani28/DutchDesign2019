@@ -6,7 +6,26 @@ $(document).ready(function(){
   const vidSection = document.getElementById("vid-container");
   const fullscreenBtn = document.getElementById("fullscreen");
   const progress = document.getElementById("progress");
-  
+  const scrollProg = document.getElementById("scroll-progress");
+  var controller = new ScrollMagic.Controller();
+  var totalHeight = $(document).height();
+
+  function pathPrepare ($el) {
+    let lineLength = $el.getTotalLength();
+    $el.style.strokeDasharray = lineLength;
+    $el.style.strokeDashoffset = lineLength;
+  }
+  // prepare SVG
+  pathPrepare(scrollProg);
+
+  var tween = new TimelineLite()
+    .add(TweenLite.to(scrollProg, 1.0, {strokeDashoffset: 0, ease:Linear.easeNone}));
+
+  var scene = new ScrollMagic.Scene({duration: totalHeight-950, offset: 175, tweenChanges: true})
+          .setTween(tween)
+          .addTo(controller);
+
+
   //VIDEO OVERLAY SHOW/HIDE
   // vid.addEventListener("playing", function(){
   //   $("#top-video-section").removeClass("play-cursor");
@@ -16,22 +35,6 @@ $(document).ready(function(){
   // vid.addEventListener("paused", function(){
   //   $("#top-video-section").removeClass("pause-cursor");
   //   $("#top-video-section").addClass("play-cursor");
-  // });
-
-  overlay.addEventListener("click", function(){
-    togglePlayPause();
-  });
-  vid.addEventListener("click", function() {
-    togglePlayPause();
-  })
-  playPause.onclick = function(){
-    togglePlayPause();
-  }
-
-  // vid.addEventListener("pause", function(){
-  //   vidSection.addEventListener("click", function(){
-  //     vid.play();
-  //   });
   // });
 
 function togglePlayPause(){
@@ -72,6 +75,18 @@ progress.addEventListener('click', function(e) {
 fullscreen.addEventListener('click', function(){
   toggleFullScreen();
 });
+
+overlay.addEventListener("click", function(){
+  togglePlayPause();
+});
+
+vid.addEventListener("click", function() {
+  togglePlayPause();
+});
+
+playPause.onclick = function(){
+  togglePlayPause();
+}
 
 
 

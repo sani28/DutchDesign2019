@@ -532,5 +532,26 @@ a {
   a:hover{
     text-decoration: underline;
   }
+}
 
+.scroll-util {
+  position: fixed;
+  bottom: 10%;
+  right: 4%;
+  z-index: 1;
+  svg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .inner-util{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -70%);
+    font-size: 0.75rem;
+    color: black;
+    text-align: center;
+  }
 }
