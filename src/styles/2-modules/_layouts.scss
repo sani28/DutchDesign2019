@@ -79,10 +79,9 @@
   grid-template-rows: repeat(5, 16.66vh) 1fr;
   .layout-item:first-child{
     grid-row: 2/4;
-    grid-column: 4 / 8;
-    height: 100%;
+    grid-column: 5 / 9;
+    width: 100%;
     overflow: hidden;
-    text-indent: -25%;
     img {
       height: 100%;
       margin: 0;
@@ -90,10 +89,9 @@
   }
   .layout-item:nth-child(2){
     grid-row: 1/3;
-    grid-column: 8 / 12;
+    grid-column: 9 / 13;
     height: 100%;
     overflow: hidden;
-    text-indent: -15%;
     img {
       height: 100%;
       margin: 0;
@@ -101,13 +99,20 @@
   }
   .layout-item:nth-child(3){
     grid-row: 3/6;
-    grid-column: 8 / 15;
+    grid-column: 9 / 16;
     height: 100%;
   }
-  .section-quote{
+  .section-quote.type-one{
     grid-row: 2/3;
     grid-column: 12 / 16;
     align-self: end;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .section-quote.type-two{
+    grid-row: 4/6;
+    grid-column: 6 / 9;
+    align-self: start;
     width: 100%;
     margin-bottom: 0;
   }
@@ -148,12 +153,18 @@
     height: 100%;
     width: 100%;
     padding-bottom: 2em;
+    img{
+      width: 100%;
+    }
   }
   .layout-item:nth-child(2){
     grid-column: 11/17;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
+    img{
+      width: 100%;
+    }
   }
 }
 
@@ -161,23 +172,48 @@
   @extend %photo-section;
   margin-bottom: 5em;
   .layout-item:first-child{
-    grid-column: 4/9;
+    grid-column: 3/9;
     grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+    img{
+      width: 100%;
+    }
   }
   .layout-item:nth-child(2){
-    grid-column: 9/117;
+    grid-column: 9/17;
     grid-row: 1;
-    height: 100%;
+    width: 100%;
+
   }
   .layout-item:nth-child(3){
     grid-column: 11/17;
     grid-row: 2;
     width: 100%;
     padding-top: 2em;
+  }
+}
+
+.photo-section-7 {
+  @extend %photo-section;
+  grid-template-rows: 2;
+  margin-bottom: 5em;
+  .layout-item:first-child{
+    grid-row: 1;
+    grid-column: 6/13;
+    width: 100%;
+  }
+  .layout-item:nth-child(2){
+    grid-row: 2;
+    grid-column: 4/8;
+    width: 100%;
+  }
+  .layout-item:nth-child(3){
+    grid-row: 2;
+    grid-column: 8/18;
+    width: 100%;
   }
 }
