@@ -736,6 +736,15 @@ html.designer-page-body {
   transition: all 0.15s ease-in;
 }
 
+.shown-item.visible-slow {
+  opacity: 1;
+  -webkit-transition: all 0.45s ease-in;
+  -moz-transition: all 0.45s ease-in;
+  -ms-transition: all 0.45s ease-in;
+  -o-transition: all 0.45s ease-in;
+  transition: all 0.45s ease-in;
+}
+
 .vid-controls {
   display: flex;
   position: absolute;
@@ -878,6 +887,10 @@ html.designer-page-body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.scroll-util svg path {
+  transform: scale(-1, 1) rotate(90deg);
+  transform-origin: 50% 50%;
+}
 .scroll-util .inner-util {
   position: absolute;
   left: 50%;
@@ -886,6 +899,7 @@ html.designer-page-body {
   font-size: 0.75rem;
   color: black;
   text-align: center;
+  font-family: hyperMarket;
 }
 
 /*# sourceMappingURL=main.css.map */

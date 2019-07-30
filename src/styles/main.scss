@@ -392,6 +392,15 @@ a {
 								transition: all 0.15s ease-in;
 }
 
+.shown-item.visible-slow {
+  opacity: 1;
+  -webkit-transition: all 0.45s ease-in;
+					 -moz-transition: all 0.45s ease-in;
+						-ms-transition: all 0.45s ease-in;
+						 -o-transition: all 0.45s ease-in;
+								transition: all 0.45s ease-in;
+}
+
 // .play-cursor {
 //   cursor: url(../../assets/images/play.png), auto;
 // }
@@ -544,6 +553,10 @@ a {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    path{
+      transform: scale(-1, 1) rotate(90deg);
+      transform-origin: 50% 50%;
+    }
   }
   .inner-util{
     position: absolute;
@@ -553,5 +566,6 @@ a {
     font-size: 0.75rem;
     color: black;
     text-align: center;
+    font-family: hyperMarket;
   }
 }
