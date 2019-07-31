@@ -6,30 +6,6 @@ $(document).ready(function(){
   const vidSection = document.getElementById("vid-container");
   const fullscreenBtn = document.getElementById("fullscreen");
   const progress = document.getElementById("progress");
-  const scrollProg = document.getElementById("scroll-progress");
-  var controller = new ScrollMagic.Controller();
-  var progController = new ScrollMagic.Controller();
-  var totalHeight = $(document).height();
-
-  function pathPrepare ($el) {
-    let lineLength = $el.getTotalLength();
-    $el.style.strokeDasharray = lineLength;
-    $el.style.strokeDashoffset = lineLength;
-  }
-  // prepare SVG
-  pathPrepare(scrollProg);
-
-  var tween = new TimelineLite()
-    .add(TweenLite.to(scrollProg, 1.0, {strokeDashoffset: 0, ease:Linear.easeNone}));
-
-  new ScrollMagic.Scene({
-          duration: totalHeight-950,
-          offset: 175,
-          tweenChanges: true
-        })
-        .setTween(tween)
-        .addTo(controller);
-        
   //VIDEO OVERLAY SHOW/HIDE
   // vid.addEventListener("playing", function(){
   //   $("#top-video-section").removeClass("play-cursor");
