@@ -8,10 +8,11 @@ $(document).ready(function() {
       const progress = document.getElementById("progress");
       const scrollController = new ScrollMagic.Controller();
 
-      var backTopAnimation = TweenLite.from("#animate", 0.3, {
+      var backTopAnimation = TweenLite.from("#animate", 0.5, {
         autoAlpha: 0,
         scale: 0.7
       });
+
       var backTopScene = new ScrollMagic.Scene({
           triggerElement: "a#scroll-top",
           duration: 200,
@@ -70,9 +71,13 @@ function toggleFullScreen() {
     }
   }
 
-// change behaviour of controller to animate scroll instead of jump
+
 scrollController.scrollTo(function (newpos) {
-  TweenLite.to(window, 0.5, {scrollTo: {y: newpos}});
+  if(window.pageYOffset > (document.body.clientHeight * 0.45)){
+    TweenLite.to(window, 1.3, {scrollTo: {y: newpos}, ease: Power1.easeIn });
+  } else {
+    TweenLite.to(window, 0.6, {scrollTo: {y: newpos}, ease: Power1.easeIn });
+  }
 });
 
 //  bind scroll to anchor links

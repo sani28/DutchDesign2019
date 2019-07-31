@@ -16,7 +16,7 @@ $(document).ready(function(){
   const scrollProg = document.getElementById("scroll-progress");
   var controller = new ScrollMagic.Controller();
   var progController = new ScrollMagic.Controller();
-  var totalHeight = $(document).height();
+  var totalHeight = document.body.clientHeight;
 
   function pathPrepare ($el) {
     let lineLength = $el.getTotalLength();
@@ -35,7 +35,7 @@ $(document).ready(function(){
         })
         .setTween(tween)
         .addTo(controller);
-
+  
   var scrollControl = new ScrollMagic.Controller();
   for(let i=0; i<orderedDesignerImages.length; i++){
     new ScrollMagic.Scene({
