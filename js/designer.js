@@ -6,7 +6,11 @@ $(document).ready(function() {
       const vidSection = document.getElementById("vid-container");
       const fullscreenBtn = document.getElementById("fullscreen");
       const progress = document.getElementById("progress");
-      const scrollController = new ScrollMagic.Controller();
+      const scrollProg = document.getElementById("scroll-progress");
+      var scrollController = new ScrollMagic.Controller();
+      var progController = new ScrollMagic.Controller();
+      var totalHeight = document.body.clientHeight;
+
 
       var backTopAnimation = TweenLite.from("#animate", 0.5, {
         autoAlpha: 0,
@@ -21,7 +25,27 @@ $(document).ready(function() {
         .setTween(backTopAnimation)
         .addTo(scrollController);
 
+      var tween = new TimelineLite()
+        .add(TweenLite.to(scrollProg, 1.0, {strokeDashoffset: 0, ease:Linear.easeNone}));
 
+      new ScrollMagic.Scene({
+              duration: totalHeight - 950,
+              offset: 175,
+              tweenChanges: true
+            })
+            .setTween(tween)
+            .addTo(progController);
+
+
+function pathPrepare ($el) {
+  let lineLength = $el.getTotalLength();
+  $el.style.strokeDasharray = lineLength;
+  $el.style.strokeDashoffset = lineLength;
+}
+
+pathPrepare(scrollProg);
+
+      
 function togglePlayPause(){
   if(vid.paused){
     playPause.className = 'pause';

@@ -19,6 +19,7 @@ $(document).ready(function(){
    document.getElementById('quote4') ];
 
   var scrollControl = new ScrollMagic.Controller();
+  
   for(let i=0; i<orderedDesignerImages.length; i++){
     new ScrollMagic.Scene({
       triggerElement: orderedDesignerImages[i],
