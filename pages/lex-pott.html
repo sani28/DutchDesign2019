@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="designer-page-body">
+  <head>
+    <meta charset="utf-8">
+    <title>Dutch Design 2019 - Lex Pott</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="../js/designer.js" async defer></script>
+    <script type="text/javascript" src="../js/designer/lex.js" async defer></script>
+  </head>
+  <body>
+    <div id="scroll-tool" class="scroll-util">
+      <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0"/>
+      </svg>
+      <p class="inner-util" id="scroll-top">BACK TO TOP</p>
+    </div>
+    <div id="scroll-tool" class="scroll-util">
+      <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0"/>
+      </svg>
+      <p class="inner-util" id="scroll-top">BACK TO TOP</p>
+    </div>
+    <section class="designer-video-section">
+      <figure class="video-section play-cursor" id="vid-container">
+        <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
+          <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
+        </video>
+
+        <div class="vid-controls">
+          <div class="grey-bar" id="progress">
+            <div class="purple-playback" id="playback"></div>
+          </div>
+          <div class="vid-buttons">
+            <button class="play" id="play-pause"></button>
+          </div>
+          <div class="timeblock">
+            <div id="currentTime">00:00</div>
+            <span style="color: purple">/<span>
+            <div id="vidDuration">00:00</div>
+          </div>
+          <div class="vid-buttons fs">
+            <button id="fullscreen">FULLSCREEN</button>
+          </div>
+        </div>
+
+        <div class="video-overlay" id="designer-overlay">
+          <h2 class="designer-tagline white-txt">Rotterdam - Products</h2>
+          <h1 class="designer-name white-txt">Lex Pott</h1>
+          <p class="designer-blurb white-txt">An independent designer who looks for a moment in the production process to intervene, do something unexpected, and see how that changes outcomes — including products that have existed for 100's of years </p>
+        </div>
+      </figure>
+    </section>
+    <section class=designer-top-section>
+      <nav id="designer-toggle">
+        <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
+        <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>
+      </nav>
+      <div class=designer-summary>
+        <h2 class="designer-tagline black-txt">Rotterdam - Products</h2>
+        <h1 class="designer-name black-txt">Lex Pott</h1>
+        <p class="designer-blurb black-txt">An independent designer who looks for a moment in the production process to intervene, do something unexpected, and see how that changes outcomes — including products that have existed for 100's of years</p>
+      </div>
+    </section>
+    <div class="scroll-container">
+      <section class="photo-section-6">
+        <img class="layout-item shown-item" id="lex-candid" src="../assets/images/lex/lex_section6_img1.jpg"></img>
+        <img class="layout-item shown-item" id="lexhands" src="../assets/images/lex/lex_section6_img2.jpg"></img>
+        <img class="layout-item shown-item" id="lexhands2" src="../assets/images/lex/lex_section6_img3.jpg"></img>
+        <p class="section-quote shown-item" id="quote1">I'm not a designer that designs objects or shapes, they're mostly an outcome of a process.</p>
+      </section>
+      <section class="photo-section-7">
+        <img class="layout-item shown-item" id="widespace" src="../assets/images/lex/lex_section7_img1.jpg"></img>
+        <img class="layout-item shown-item" id="lex_space" src="../assets/images/lex/lex_section7_img2.jpg"></img>
+        <img class="layout-item shown-item" id="machinary" src="../assets/images/lex/lex_section7_img3.jpg"></img>
+      </section>
+      <section class="photo-section-5">
+        <div class="layout-item shown-item" id="truecolours">
+          <p class="section-caption" id="caption2">True Colours started as an investigation of cultivated material colour and natural material behaviour. <p>
+          <img id="coloursclose" src="../assets/images/lex/lex_section5_img1.jpg"></img>
+        </div>
+        <img class="layout-item shown-item" id="colours" src="../assets/images/lex/lex_section5_img2.jpg"></img>
+        <p class="section-quote layout-item shown-item" id="quote2">Once you have a sharp line between something cultivated and something natural, it creates dialogue.</p>
+      </section>
+      <section class="photo-section-2">
+        <img class="layout-item shown-item" id="roughclog" src="../assets/images/lex/lex_section2_img1.jpg"></img>
+        <img class=" layout-item shown-item" id="manyclogs" src="../assets/images/lex/lex_section2_img2.jpg"></img>
+        <img class="layout-item shown-item" id="clogcolours" src="../assets/images/lex/lex_section2_img3.jpg"></img>
+        <p class="section-quote type-two layout-item shown-item" id="quote3">As a designer you try to re-evaluate all the ingredients. Not only shape, but also colour, texture, etcetera.</p>
+      </section>
+      <section class="photo-section-4">
+        <div class="layout-item">
+          <img class="shown-item" id="roughcandles" src="../assets/images/lex/lex_section4_img1.jpg"></img>
+          <p class="section-quote" id="quote4">One of the qualities of making something your own is that you don't have to repeat the process endlessly, but that you can make each product unique.<p>
+        </div>
+        <div class="layout-item shown-item" id="pillar">
+          <p class="section-caption">As the candle melts, the wax drips accumulate upon the following levels. So as the candle is used, it gets shorter but the base gets wider; depicting the story of the wax becoming liquid.</p>
+          <img src="../assets/images/lex/lex_section4_img2.jpg"></img>
+        </div>
+      </section>
+      <img class="fullbleed" src="../assets/images/lex/lex_end.jpg"></div>
+      <footer class="designer-footer">
+        <p>Interview by: <a id="interviewers" href="#">Marine Au Yeung & Sanny Trinh</a>,<br> <a href="#">Meet the Team</a></p>
+        <p>Lex's website is: <br><a href="http://www.lexpott.nl">www.lexpott.nl</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

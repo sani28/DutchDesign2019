@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="designer-page-body">
+  <head>
+    <meta charset="utf-8">
+    <title>Dutch Design 2019 - Pepe Heykoop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="../js/designer.js" async defer></script>
+    <script type="text/javascript" src="../js/designer/pepe.js" async defer></script>
+  </head>
+  <body>
+    <div id="scroll-tool" class="scroll-util">
+      <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0"/>
+      </svg>
+      <p class="inner-util" id="scroll-top">BACK TO TOP</p>
+    </div>
+    <section class="designer-video-section">
+      <figure class="video-section play-cursor" id="vid-container">
+        <!-- TODO: add poster and source link for video -->
+        <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
+          <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
+        </video>
+
+        <div class="vid-controls">
+          <div class="grey-bar" id="progress">
+            <div class="purple-playback" id="playback"></div>
+          </div>
+          <div class="vid-buttons">
+            <button class="play" id="play-pause"></button>
+          </div>
+          <div class="timeblock">
+            <div id="currentTime">00:00</div>
+            <span style="color: purple">/<span>
+            <div id="vidDuration">00:00</div>
+          </div>
+          <div class="vid-buttons fs">
+            <button id="fullscreen">Fullscreen</button>
+          </div>
+        </div>
+
+        <div class="video-overlay" id="designer-overlay">
+          <h2 class="designer-tagline white-txt">Amsterdam - Art & Product</h2>
+          <h1 class="designer-name white-txt">Pepe Heykoop</h1>
+          <p class="designer-blurb white-txt">Pepe Heykoop is at a transitional point in his career. Although most of his pieces are in the vein of product design, he does not necessarily define himself as a designer. Instead, he is in search of Nothingness.</p>
+        </div>
+      </figure>
+    </section>
+    <section class=designer-top-section>
+      <nav id="designer-toggle">
+        <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
+        <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>
+      </nav>
+      <div class=designer-summary>
+        <h2 class="designer-tagline black-txt">Amsterdam - Art & Product</h2>
+        <h1 class="designer-name black-txt">Pepe Heykoop</h1>
+        <p class="designer-blurb black-txt">Pepe Heykoop is at a transitional point in his career. Although most of his pieces are in the vein of product design, he does not necessarily define himself as a designer. Instead, he is in search of Nothingness. </p>
+      </div>
+    </section>
+    <section class="photo-section-2">
+      <img class="layout-item shown-item" id="pepecandid" src="../assets/images/pepe/pepe_section2_img1.jpg"></img>
+      <img class=" layout-item shown-item" id="pepecandid2" src="../assets/images/pepe/pepe_section2_img2.jpg"></img>
+      <img class="layout-item shown-item" id="pepecandid3" src="../assets/images/pepe/pepe_section2_img3.jpg"></img>
+      <p class="section-quote type-two layout-item shown-item" id="quote1">I'm Pepe Heykoop. And...I don't know if I'm a designer.</p>
+    </section>
+    <section class="photo-section-4">
+      <div class="layout-item">
+        <img class="shown-item" id="skintoy" src="../assets/images/pepe/pepe_section4_img1.jpg"></img>
+        <p class="section-quote" id="quote2">It's a process of not knowing what you're going to find<p>
+      </div>
+      <div class="layout-item shown-item" id="skinlamp">
+        <p class="section-caption">Pepe Heykoop describes the process of covering the items of the Skin Collection with leather as 'letting go' and 'moving away' from trying to control what you're doing. </p>
+        <img src="../assets/images/pepe/pepe_section4_img2.jpg"></img>
+      </div>
+    </section>
+    <section class="photo-section-5">
+      <div class="layout-item shown-item" id="nothingness">
+        <p class="section-caption" id="caption2">In Search of Nothingness gave Pepe Heykoop joy and relief because it was not driven by intentions or the pressure of the industry <p>
+        <img id="coloursclose" src="../assets/images/pepe/pepe_section5_img1.jpg"></img>
+      </div>
+      <img class="layout-item shown-item" id="pepenothing" src="../assets/images/pepe/pepe_section5_img2.jpg"></img>
+      <p class="section-quote layout-item shown-item" id="quote3">I felt like I've been limiting myself for a long time by making objects.</p>
+    </section>
+    <img class="fullbleed" src="../assets/images/pepe/pepe_end.jpg"></div>
+    <footer class="designer-footer">
+      <p>Interview by: <a id="interviewers" href="#">Gabe Hendry & Linda Shu</a>,<br> <a href="#">Meet the Team</a></p>
+      <p>Pepe's website is: <br><a href="http://www.pepeheykoop.nl/">www.pepeheykoop.nl</a></p>
+    </footer>
+  </body>
+</html>

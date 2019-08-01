@@ -1,7 +1,20 @@
 html{
+<<<<<<< HEAD
   background-color: #DFEA4E;
   background-image: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);;
   background-size: 4.54vw 6.67vh;
+=======
+  background-color: $primary-green;
+  background-image: $grid-background;
+  background-size: $width-unit $height-unit;
+>>>>>>> d50fe36c397977fea92d41874db0a2752e893a0e
+}
+
+
+html.designer-page-body{
+  background-color: white;
+  // background-image: $grid-background-lightbg;
+  // background-size: $width-unit $height-unit;
 }
 
 #grain {
@@ -17,6 +30,7 @@ html{
   z-index: -1;
 }
 
+//not 100% sure the video-container is necessary.
 .bg-video-container{
   position: absolute;
   top: 0;
