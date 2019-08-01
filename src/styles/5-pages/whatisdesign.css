@@ -206,7 +206,9 @@ html {
 
 a {
   text-decoration: none;
-  color: #DFEA4E;
+  color: purple;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
 
 nav a:hover {
@@ -283,7 +285,7 @@ h5 {
 
 #wid-blurb {
   font-family: redaction-bold;
-  color: white;
+  color: purple;
   grid-row: 3/span 1;
   grid-column: 4/20;
   font-size: 1.4em;
@@ -345,12 +347,6 @@ span:hover {
   justify-content: center;
 }
 
-/* .block {
-  padding: 0 4rem 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 @keyframes loop {
   0% {
     transform-origin: 0% 50%;
@@ -384,7 +380,7 @@ span:hover {
   height: 75%;
   display: grid;
   grid-row: 1/10;
-  grid-column: 3/22;
+  grid-column: 2/22;
   position: relative;
 }
 
