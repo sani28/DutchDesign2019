@@ -212,7 +212,7 @@ a {
 }
 
 nav a:hover {
-  border-bottom: 2px solid #DFEA4E;
+  border-bottom: 2px solid purple;
 }
 
 a#home:hover {
@@ -220,7 +220,7 @@ a#home:hover {
 }
 
 a:active {
-  border-bottom: 2px solid #DFEA4E;
+  border-bottom: 2px solid purple;
   color: purple;
 }
 
