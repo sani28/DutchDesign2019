@@ -1,0 +1,117 @@
+// $width-unit: 4.54vw;
+// $height-unit: 6.67vh;
+// $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+// $grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
+// $primary-green: #DFEA4E;
+// $secondary-purp: #7D246B;
+
+@import '../2-modules/_layouts';
+
+html {
+  background-color: #000;
+}
+
+body {
+  color: white;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.experience-landing {
+  display: grid;
+  grid-row: 0/20;
+  grid-column: 0/10;
+  padding: 1.5em;
+  width: 100vw;
+  height: 50vh;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+#exp-landing-photo {
+  width: 80vw;
+  height: 70vh;
+  display: grid;
+  grid-row: 1/20;
+  grid-column: 0/10;
+  border: 1px solid white;
+  background-image: url("../../assets/images/arnhem-cover.JPG");
+}
+
+#exp-title {
+  // position: absolute;
+  // bottom:0;
+  // right:0;
+  // display: block;
+  // border: 1px solid red;
+}
+
+// .geographic-info {
+//   border: 1px solid red;
+//   transform: rotateX(-180);
+//   height: 30%;
+// }
+
+.exp-tagline {
+  font-size: 0.5em;
+  font-family: maisonNeue;
+}
+
+.exp-title {
+  font-family: redaction;
+  font-size: 2em;
+}
+
+
+// .designer-tagline{
+//   font-family: hyperMarket;
+//   font-size: 0.75em;
+//   margin-bottom: 0;
+//   text-transform: uppercase;
+// }
+// .designer-name {
+//   font-family: Redaction;
+//   font-size: 5em;
+//   margin: 0 auto;
+//   text-transform: uppercase;
+// }
+// .designer-blurb{
+//   font-family: Maison Neue;
+//   font-size: 0.8em;
+//   line-height: 125%;
+//   width: 60%;
+// }
+
+.shown-item {
+  opacity: 0;
+}
+
+.shown-item.visible {
+  opacity: 1;
+  -webkit-transition: all 0.15s ease-in;
+					 -moz-transition: all 0.15s ease-in;
+						-ms-transition: all 0.15s ease-in;
+						 -o-transition: all 0.15s ease-in;
+								transition: all 0.15s ease-in;
+}
+
+.shown-item.visible-slow {
+  opacity: 1;
+  -webkit-transition: all 0.45s ease-in;
+					 -moz-transition: all 0.45s ease-in;
+						-ms-transition: all 0.45s ease-in;
+						 -o-transition: all 0.45s ease-in;
+								transition: all 0.45s ease-in;
+}
+
+
+.fullbleed {
+  width: 100%;
+  height: auto; //placeholder, should be auto
+  background-color: salmon;
+  margin-top: 5em;
+}
+
+
+
+
+/*# sourceMappingURL=experiences.css.map */
