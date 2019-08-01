@@ -675,6 +675,115 @@ html.designer-page-body {
 }
 
 /* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
+.video-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background-color: white;
+  overflow: hidden;
+  top: 0;
+}
+.video-container .embed-container {
+  position: relative;
+  padding-bottom: 52.25%;
+  top: -1vh;
+  overflow: hidden;
+  max-width: 100%;
+}
+.video-container .embed-container iframe, .video-container .embed-container object,
+.video-container .embed-container embed, .video-container .embed-container video {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-container .video-overlay {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.video-container .video-overlay h1 {
+  font-size: 5vw;
+  font-family: redaction;
+  margin-bottom: 2%;
+  color: white;
+}
+.video-container .video-overlay p {
+  font-size: 1vw;
+  font-family: maisonNeue-Mono;
+  width: 50%;
+  margin: 0;
+  color: white;
+}
+.video-container .video-controls {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  bottom: 10vh;
+  background: transparent;
+  width: 100%;
+  height: 10vh;
+}
+.video-container .video-controls .progress {
+  position: relative;
+  width: 94%;
+  height: 0.3vh;
+  right: 3%;
+  left: 3%;
+  background-color: white;
+}
+.video-container .video-controls .progress .bar {
+  position: absolute;
+  background-color: purple;
+  height: 1.5vh;
+  width: 5%;
+  max-width: 100%;
+  left: 0;
+  top: -0.75vh;
+}
+.video-container .video-controls .timeblock {
+  align-self: flex-start;
+  margin-left: 3%;
+}
+.video-container .video-controls .timeblock div {
+  display: inline-block;
+  font-family: Maison Neue;
+  font-size: 0.75em;
+  color: white;
+}
+.video-container .video-controls .vid-buttons {
+  align-self: flex-start;
+  margin-left: 3%;
+}
+.video-container .video-controls .vid-buttons button {
+  background: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  color: #7D246B;
+  font-family: hyperMarket;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+.video-container .video-controls .vid-buttons button.play:before {
+  content: "PLAY";
+  text-transform: capitalize;
+}
+.video-container .video-controls .vid-buttons button.pause:after {
+  content: "PAUSE";
+  text-transform: capitalize;
+}
+
 .video-section {
   grid-area: video;
   display: flex;
@@ -692,13 +801,6 @@ html.designer-page-body {
 .video-section:hover .vid-controls {
   transform: translateY(0);
   transition: all 0.25s;
-}
-
-#designer-vid {
-  box-sizing: border-box;
-  width: 100%;
-  outline: none;
-  z-index: -1;
 }
 
 .video-overlay {
@@ -766,62 +868,6 @@ html.designer-page-body {
 
 .pause-cursor {
   cursor: url(../../assets/images/pause.png), auto;
-}
-
-.vid-controls {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 5%;
-  flex-wrap: wrap;
-  background-color: rgba(223, 234, 78, 0.7);
-  transform: translateY(100%) translateY(-6px);
-  transition: all 0.25s;
-}
-.vid-controls .grey-bar {
-  height: 8px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(175, 175, 175, 0.9);
-}
-.vid-controls .grey-bar .purple-playback {
-  height: 8px;
-  background-color: #7D246B;
-}
-.vid-controls .timeblock {
-  margin-left: 0.75em;
-}
-.vid-controls .timeblock div {
-  display: inline-block;
-  font-family: Maison Neue;
-  font-size: 0.75em;
-  color: #7D246B;
-}
-
-.vid-buttons button {
-  background: none;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  color: #7D246B;
-  font-family: hyperMarket;
-  font-size: 0.75em;
-  text-transform: uppercase;
-}
-.vid-buttons button.play:before {
-  content: "PLAY";
-  text-transform: capitalize;
-}
-.vid-buttons button.pause:after {
-  content: "PAUSE";
-  text-transform: capitalize;
-}
-
-.vid-buttons.fs {
-  margin-left: auto;
-  margin-right: 0;
 }
 
 .designer-top-section {

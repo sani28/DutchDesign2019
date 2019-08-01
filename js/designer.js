@@ -47,12 +47,12 @@ pathPrepare(scrollProg);
 
 function togglePlayPause(){
   if(vid.paused){
-    playPause.className = 'pause';
+    // playPause.className = 'pause';
     vid.play();
     overlay.style.display = "none";
   }
   else {
-    playPause.className = 'play';
+    // playPause.className = 'play';
     vid.pause();
     overlay.style.display = "";
   }
@@ -115,14 +115,14 @@ vid.addEventListener('timeupdate', function(){
   onTrackedVideoFrame(this.currentTime, this.duration);
 });
 
-progress.addEventListener('click', function(e) {
-   var pos = (e.pageX  - vidSection.offsetLeft) / this.offsetWidth;
-   vid.currentTime = pos * vid.duration;
-});
+// progress.addEventListener('click', function(e) {
+//    var pos = (e.pageX  - vidSection.offsetLeft) / this.offsetWidth;
+//    vid.currentTime = pos * vid.duration;
+// });
 
-fullscreen.addEventListener('click', function(){
-  toggleFullScreen();
-});
+// fullscreen.addEventListener('click', function(){
+//   toggleFullScreen();
+// });
 
 overlay.addEventListener("click", function(){
   togglePlayPause();
