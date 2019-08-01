@@ -11,7 +11,6 @@ $(document).ready(function() {
       var progController = new ScrollMagic.Controller();
       var totalHeight = document.body.clientHeight;
 
-
       var backTopAnimation = TweenLite.from("#animate", 0.5, {
         autoAlpha: 0,
         scale: 0.7
@@ -45,7 +44,7 @@ function pathPrepare ($el) {
 
 pathPrepare(scrollProg);
 
-      
+
 function togglePlayPause(){
   if(vid.paused){
     playPause.className = 'pause';
@@ -137,14 +136,14 @@ playPause.onclick = function(){
   togglePlayPause();
 }
 
-    //VIDEO OVERLAY SHOW/HIDE
-    // vid.addEventListener("playing", function(){
-    //   $("#top-video-section").removeClass("play-cursor");
-    //   $("#top-video-section").addClass("pause-cursor");
-    // });
-    //
-    // vid.addEventListener("paused", function(){
-    //   $("#top-video-section").removeClass("pause-cursor");
-    //   $("#top-video-section").addClass("play-cursor");
-    // });
+    // VIDEO OVERLAY SHOW/HIDE
+    vid.addEventListener("playing", function(){
+      $("#top-video-section").removeClass("play-cursor");
+      $("#top-video-section").addClass("pause-cursor");
+    });
+
+    vid.addEventListener("paused", function(){
+      $("#top-video-section").removeClass("pause-cursor");
+      $("#top-video-section").addClass("play-cursor");
+    });
 });

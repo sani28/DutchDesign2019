@@ -305,11 +305,6 @@ a {
   grid-column: 8/18;
   width: 100%;
 }
-.photo-section-7 #nienkequote {
-  grid-row: 3;
-  grid-column: 9/18;
-  width: 100%;
-}
 
 html {
   background-color: #DFEA4E;
@@ -746,6 +741,14 @@ html.designer-page-body {
   -ms-transition: all 0.45s ease-in;
   -o-transition: all 0.45s ease-in;
   transition: all 0.45s ease-in;
+}
+
+.play-cursor {
+  cursor: url(../../assets/images/play.png), auto;
+}
+
+.pause-cursor {
+  cursor: url(../../assets/images/pause.png), auto;
 }
 
 .vid-controls {
