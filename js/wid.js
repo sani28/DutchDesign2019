@@ -1,4 +1,64 @@
-{
+// Credit to David Thomas for display text on span hover --- :-) https://stackoverflow.com/users/82548/david-thomas
+
+// textFrom : String, the attribute from which the text
+//            should come,
+// delta :    String or Number, the distance from the cursor at
+//            which the tooltip should appear
+function instantTooltips(textFrom, delta) {
+  // if delta exists, and can be parsed to a number, we use it,
+  // otherwise we use the default of 5:
+  delta = parseFloat(delta) ? parseFloat(delta) : 5;
+
+  // function to handle repositioning of the created tooltip:
+  function reposition(e) {
+    // get the tooltip element:
+    var tooltip = this.nextSibling;
+    // setting the position according to the position of the
+    // pointer:
+    tooltip.style.top = (e.pageY + delta) + 'px';
+    tooltip.style.left = (e.pageX + delta) + 'px';
+  }
+
+  // get all elements that have an attribute from which we
+  // want to get the tooltip text from:
+  var toTitle = document.querySelectorAll('[' + textFrom + ']'),
+    //create a span element:
+    span = document.createElement('span'),
+    // find if we should use textContent or innerText (IE):
+    textProp = 'textContent' in document ? 'textContent' : 'innerText',
+    // caching variables for use in the upcoming forEach:
+    parent, spanClone;
+  // adding a class-name (for CSS styling):
+  span.classList.add('createdTooltip');
+  // iterating over each of the elements with a title attribute:
+  [].forEach.call(toTitle, function(elem) {
+    // reference to the element's parentNode:
+    parent = elem.parentNode;
+    // cloning the span, to avoid creating multiple elements:
+    spanClone = span.cloneNode();
+    // setting the text of the cloned span to the text
+    // of the attribute from which the text should be taken:
+    spanClone[textProp] = elem.getAttribute(textFrom);
+
+    // inserting the created/cloned span into the
+    // document, after the element:
+    parent.insertBefore(spanClone, elem.nextSibling);
+
+    // binding the reposition function to the mousemove
+    // event:
+    elem.addEventListener('mousemove', reposition);
+
+    // we're setting textFrom attribute to an empty string
+    // so that the CSS will still apply, but which
+    // should still not be shown by the browser:
+    elem.setAttribute(textFrom, '');
+  });
+}
+
+// calling the function:
+instantTooltips('title', 20);
+
+
   const mapNumber = (X,A,B,C,D) => (X-A)*(D-C)/(B-A)+C;
     // from http://www.quirksmode.org/js/events_properties.html#position
 	const getMousePos = (e) => {
@@ -18,7 +78,6 @@
     // Generate a random float.
     const getRandomFloat = (min, max) => (Math.random() * (max - min) + min).toFixed(2);
 
-    // Effect 1
     class HoverImgFx1 {
         constructor(el) {
             this.DOM = {el: el};
@@ -52,9 +111,14 @@
                 this.hideImage();
             };
 
+            this.mouseclickFn = () => {
+                this.hideImage();
+            };
+
             this.DOM.el.addEventListener('mouseenter', this.mouseenterFn);
             this.DOM.el.addEventListener('mousemove', this.mousemoveFn);
             this.DOM.el.addEventListener('mouseleave', this.mouseleaveFn);
+            this.DOM.el.addEventListener('mouseclick', this.mouseclickFn);
         }
         showImage() {
             TweenMax.killTweensOf(this.DOM.revealInner);
@@ -67,12 +131,12 @@
                 }
             })
             .add('begin')
-            .add(new TweenMax(this.DOM.revealInner, 0.2, {
+            .add(new TweenMax(this.DOM.revealInner, 0.4, {
                 ease: Sine.easeOut,
                 startAt: {x: '-100%'},
                 x: '0%'
             }), 'begin')
-            .add(new TweenMax(this.DOM.revealImg, 0.2, {
+            .add(new TweenMax(this.DOM.revealImg, 0.4, {
                 ease: Sine.easeOut,
                 startAt: {x: '100%'},
                 x: '0%'
@@ -92,12 +156,12 @@
                 }
             })
             .add('begin')
-            .add(new TweenMax(this.DOM.revealInner, 0.2, {
+            .add(new TweenMax(this.DOM.revealInner, 0.4, {
                 ease: Sine.easeOut,
                 x: '100%'
             }), 'begin')
 
-            .add(new TweenMax(this.DOM.revealImg, 0.2, {
+            .add(new TweenMax(this.DOM.revealImg, 0.4, {
                 ease: Sine.easeOut,
                 x: '-100%'
             }), 'begin');
@@ -106,18 +170,16 @@
 
     [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
 
-    // // Demo purspose only: Preload all the images in the page..
-    // const contentel = document.querySelector('.content');
-    // [...document.querySelectorAll('.block__title, .block__link, .content__text-link')].forEach((el) => {
-    //     const imgsArr = el.dataset.img.split(',');
-    //     for (let i = 0, len = imgsArr.length; i <= len-1; ++i ) {
-    //         const imgel = document.createElement('img');
-    //         imgel.style.visibility = 'hidden';
-    //         imgel.style.width = 0;
-    //         imgel.src = imgsArr[i];
-    //         imgel.className = 'preload';
-    //         contentel.appendChild(imgel);
-    //     }
-    // });
-    // imagesLoaded(document.querySelectorAll('.preload'), () => document.body.classList.remove('loading'));
-}
+// ------------------- "CLIPS" MOUSECLICK EVENTS  ---------------------- //
+
+    //1 - Text to purple 2 - Circle Nav Appears 3 - Clip link set to active class 4- remove click functionality on clips
+$('#showClips').click(function(e) {
+   e.preventDefault();
+  $('.circle-nav-container').toggleClass("hidden unhidden");
+  $('body').css('background-image', 'none');
+  $('#wid-blurb, nav a').css('color','purple');
+  $(this).addClass('active').css('border-bottom', '2px solid purple');
+  $('nav a#showClips').removeAttr("href").off("click");
+});
+
+// -------------------  "FULL FILM" MOUSECLICK EVENTS  ---------------------- //

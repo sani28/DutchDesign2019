@@ -9,6 +9,57 @@ $secondary-purp: #7D246B;
 @import '../2-modules/background';
 @import '../2-modules/layouts';
 
+html {
+  background-color: #DFEA4E;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
+  background-size: 4.54vw 6.67vh;
+}
+
+#grain {
+  background-image: url(../../../imgs/BARS.png) no-repeat center center fixed;
+  opacity: 0.4;
+  mix-blend-mode: color-burn;
+  width: 100%;
+  background-size: contain;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.bg-video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.bg-preview-video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#grid-overlay {
+  position: absolute;
+  float: left;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
+  background-size: 4.54vw 6.67vh;
+  z-index: -1;
+  opacity: 0.5;
+}
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -19,7 +70,6 @@ $secondary-purp: #7D246B;
   max-width: 100vw;
   height: 100vh;
   padding: 0px;
-  border: 1px solid white;
 }
 
 /* body */
@@ -31,6 +81,11 @@ html {
 
 a {
   text-decoration: none;
+  color: #DFEA4E;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #DFEA4E;
 }
 
 a#home:hover {
@@ -38,11 +93,19 @@ a#home:hover {
 }
 
 a:active {
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid #DFEA4E;
+  color: purple;
 }
 
 .wid-item a:hover {
   cursor: url(../../../imgs/play-cursor.png), auto;
+}
+
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  background-image: url(../../../imgs/wid.png);
+  background-size: cover;
+  background-repeat: none;
 }
 
 /* .wid-item a:hover:after {
@@ -52,8 +115,7 @@ a:active {
   grid-row: 10;
   grid-column: 2/22;
 } */
-
-a#current {
+a#active {
   border-bottom: 2px solid purple;
 }
 
@@ -74,6 +136,7 @@ a#current {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
+  margin-top: 5%;
 }
 
 #portrait-preview {
@@ -81,26 +144,41 @@ a#current {
   grid-area: 3/4/12/20;
 }
 
-h2 {
-  font-size: 3em;
-  width: 500px;
-  grid-row: 3;
-  grid-column: 3/5;
+h5 {
+  font-family: maisonNeue-Mono;
+  font-size: 0.4em;
+  grid-row: 3/span 2;
+  grid-column: 4/22;
+}
+
+#title {
   font-family: redaction;
-  color: #7D246B;
+  font-size: 3em;
 }
 
 #wid-blurb {
-  font-family: maisonNeue-Mono;
-  font-size: 0.8em;
-  color: #7D246B;
-  grid-row: 6/span 1;
-  grid-column: 3/22;
+  font-family: redaction-bold;
+  color: white;
+  grid-row: 3/span 1;
+  grid-column: 4/20;
+  font-size: 1.4em;
+  text-align: center;
 }
 
 /* -----------circle nav ------------ */
 .circle-nav-container {
-  grid-area: 12/4/12/16;
+  grid-area: 13/4/13/16;
+  display: grid;
+  grid: repeat(1, 7vh)/repeat(16, 4.54vw);
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  grid-area: 13/4/13/16;
   display: grid;
   grid: repeat(1, 7vh)/repeat(16, 4.54vw);
   margin-top: 0;
@@ -108,7 +186,6 @@ h2 {
 
 .wid-item {
   display: flex;
-  position: sticky;
   align-items: center;
   justify-content: center;
 }
@@ -133,26 +210,22 @@ span:hover {
   font-family: maisonNeue-Mono;
   font-size: 0.6em;
   display: grid;
-  grid-row: 10/span 1;
+  grid-row: 12/span 1;
   grid-column: 2/22;
 }
 
 #film {
-  display: inline;
-  margin: 4px 5px;
   font-family: 12px;
-  text-transform: uppercase;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 }
 
- /* .block {
+/* .block {
   padding: 0 4rem 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 } */
-
 @keyframes loop {
   0% {
     transform-origin: 0% 50%;
@@ -170,28 +243,105 @@ span:hover {
     transform: scale3d(0, 1, 1);
   }
 }
-
 .hover-reveal {
   position: fixed;
   width: 500px;
-  height: 570px;
-  top: 0;
-  left: 0;
+  height: 900px;
+  top: 5vh;
+  left: 28vw;
   pointer-events: none;
   opacity: 0;
 }
 
 .hover-reveal__inner,
 .hover-reveal__img {
+  width: 95%;
+  height: 75%;
   display: grid;
-  grid-area: 3/4/12/20;
-  width: 100%;
-  height: 100%;
+  grid-row: 1/10;
+  grid-column: 3/22;
   position: relative;
 }
+
 .hover-reveal__img {
   background-size: cover;
   background-position: 30% 50%;
 }
 
-/*# sourceMappingURL=whatisdesign.css.map */
+/* ----------  tooltip label for designers  ------------------- */
+[title] {
+  display: block;
+  margin: 0 0 1em 0;
+}
+
+/*
+  hiding, and styling, the elements we'll be creating
+*/
+[title] + span.createdTooltip {
+  display: none;
+  color: #7D246B;
+  font-family: maisonNeue-Mono;
+  font-size: 0.6em;
+  padding: 0.2em 0.5em;
+  border-radius: 0.75em;
+}
+
+/*
+  showing the created elements on hovering the element we want to
+  show tooltips for
+*/
+[title]:hover + span.createdTooltip {
+  display: block;
+  position: absolute;
+}
+
+/* -------------  MODAL  ------------------  */
+.modal-window {
+  position: fixed;
+  display: grid;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border: 1px solid purple;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  width: 55vw;
+  height: 50vh;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #ffffff;
+}
+
+.modal-close {
+  color: #DFEA4E;
+  font-family: maisonNeue-Mono;
+  line-height: 50px;
+  font-size: 0.6em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
+}
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
