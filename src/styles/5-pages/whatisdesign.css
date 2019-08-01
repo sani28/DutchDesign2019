@@ -1,82 +1,15 @@
-<<<<<<< HEAD
-/* ----- fonts ------ */
-@font-face {
-  font-family: hyperMarket;
-  src: url(../../fonts/hypermarket-regular.ttf);
-  font-weight: bold;
-}
-/* ----- legacy fonts ------ */
-@font-face {
-  font-family: bebas;
-  src: url(../../fonts/bebas.otf);
-}
-@font-face {
-  font-family: brandon;
-  src: url(../../fonts/brandon.otf);
-}
-@font-face {
-  font-family: karla;
-  src: url(../../fonts/karla.ttf);
-}
-@font-face {
-  font-family: helveticaneue-bold;
-  src: url(../../fonts/helveticaneue-bold.otf);
-}
-@font-face {
-  font-family: museosans-100;
-  src: url(../../fonts/museosans-100.otf);
-}
-@font-face {
-  font-family: novecento;
-  src: url(../../fonts/novecento.otf);
-}
-@font-face {
-  font-family: katarinestd;
-  src: url(../../fonts/katarinestd.otf);
-}
-@font-face {
-  font-family: monsterrat;
-  src: url(../../fonts/monsterrat.otf);
-}
-@font-face {
-  font-family: neuehaasgroteskblack;
-  src: url(../../fonts/neuehaasgroteskblack.otf);
-}
-/* ----- DD19 BRAND FONTS ------ */
-@font-face {
-  font-family: redaction;
-  src: url(../../fonts/Redaction-Regular.otf);
-}
-@font-face {
-  font-family: redaction-bold;
-  src: url(../../fonts/Redaction-Bold.otf);
-  font-weight: bold;
-  text-transform: capitalize;
-}
-@font-face {
-  font-family: maisonBold;
-  src: url(../../../fonts/MaisonMono-Bold.otf);
-}
-@font-face {
-  font-family: maisonMedium;
-  src: url(../../../fonts/MaisonNeue-Medium.ttf);
-}
-@font-face {
-  font-family: maisonNeue-Mono;
-  src: url(../../../fonts/MaisonNeue-Mono.otf);
-}
-@font-face {
-  font-family: maisonNeueExt-Mono;
-  src: url(../../../fonts/MaisonNeueExt-Medium.otf);
-}
 html {
   background-color: #DFEA4E;
   background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
 }
 
+html.designer-page-body {
+  background-color: white;
+}
+
 #grain {
-  background-image: url(../../../imgs/BARS.png) no-repeat center center fixed;
+  background-image: url(../imgs/GRAIN.png) no-repeat center center fixed;
   opacity: 0.4;
   mix-blend-mode: color-burn;
   width: 100%;
@@ -85,7 +18,7 @@ html {
   top: 0;
   left: 0;
   position: absolute;
-  z-index: 10;
+  z-index: -1;
 }
 
 .bg-video-container {
@@ -125,13 +58,231 @@ html {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
   /* left column has adjustable space, then 21 even 4.54 vw rows*/
-  grid: repeat(13, 6.67vh)/1fr repeat(20, 4.54vw) 4.54vw;
-  grid-gap: none;
+  grid: repeat(13, 6.67vw) 1fr/repeat(21, 4.54vh);
+  gap: none none;
   margin: 0 auto;
   max-width: 100vw;
   height: 100vh;
   padding: 0px;
-  border: 1px solid white;
+}
+
+.designer-video-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". video .";
+  align-items: center;
+  justify-content: center;
+  background-color: #DFEA4E;
+  padding-bottom: 5em;
+}
+
+.photo-section-7, .photo-section-6, .photo-section-5, .photo-section-4, .photo-section-3, .photo-section-2, .photo-section-1 {
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
+  gap: 1.5em;
+  width: 100%;
+  margin-top: 6em;
+  align-items: start;
+  width: 100%;
+}
+
+.section-quote {
+  font-size: 0.9em;
+  font-family: maisonNeue-Mono;
+  color: black;
+}
+
+.section-caption {
+  font-family: maisonNeue-Mono;
+  font-size: 0.75em;
+  font-weight: lighter;
+  line-height: 150%;
+  color: grey;
+}
+
+.photo-section-1 {
+  grid-template-rows: 1fr 1fr;
+}
+.photo-section-1 .layout-item:first-child {
+  grid-row: 1;
+  grid-column: 4/13;
+  width: 100%;
+}
+.photo-section-1 .layout-item:nth-child(2) {
+  grid-row: 2;
+  grid-column: 7/12;
+  width: 100%;
+}
+.photo-section-1 .layout-item:nth-child(3) {
+  grid-row: 2;
+  grid-column: 12/18;
+  width: 100%;
+}
+
+.photo-section-2 {
+  grid-template-rows: repeat(5, 16.66vh) 1fr;
+}
+.photo-section-2 .layout-item:first-child {
+  grid-row: 2/4;
+  grid-column: 5/9;
+  width: 100%;
+  overflow: hidden;
+}
+.photo-section-2 .layout-item:first-child img {
+  width: 100%;
+  margin: 0;
+}
+.photo-section-2 .layout-item:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 9/13;
+  height: 100%;
+  overflow: hidden;
+}
+.photo-section-2 .layout-item:nth-child(2) img {
+  width: 100%;
+  margin: 0;
+}
+.photo-section-2 .layout-item:nth-child(3) {
+  grid-row: 3/6;
+  grid-column: 9/16;
+  width: 100%;
+}
+.photo-section-2 .section-quote.type-one {
+  grid-row: 2/3;
+  grid-column: 12/16;
+  align-self: end;
+  width: 100%;
+  margin-bottom: 0;
+}
+.photo-section-2 .section-quote.type-two {
+  grid-row: 4/6;
+  grid-column: 6/9;
+  align-self: start;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.photo-section-3 {
+  grid-template-rows: 1fr 1fr;
+}
+.photo-section-3 .layout-item:first-child {
+  grid-column: 5/17;
+  grid-row: 1;
+  width: 100%;
+  border: 1px solid grey;
+}
+.photo-section-3 .layout-item:nth-child(2) {
+  grid-column: 4/12;
+  grid-row: 2;
+  width: 100%;
+  border: 1px solid grey;
+}
+.photo-section-3 .section-quote {
+  grid-column: 12/18;
+  grid-row: 2;
+  align-self: center;
+  color: black;
+}
+
+.photo-section-4 {
+  padding-bottom: 5em;
+}
+.photo-section-4 .layout-item:first-child {
+  grid-column: 4/10;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  padding-bottom: 2em;
+}
+.photo-section-4 .layout-item:first-child img {
+  width: 100%;
+}
+.photo-section-4 .layout-item:nth-child(2) {
+  grid-column: 10/16;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.photo-section-4 .layout-item:nth-child(2) img {
+  width: 100%;
+  height: auto;
+}
+
+.photo-section-5 {
+  margin-bottom: 5em;
+}
+.photo-section-5 .layout-item:first-child {
+  grid-column: 3/9;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.photo-section-5 .layout-item:first-child img {
+  width: 100%;
+}
+.photo-section-5 .layout-item:nth-child(2) {
+  grid-column: 9/17;
+  grid-row: 1;
+  width: 100%;
+}
+.photo-section-5 .layout-item:nth-child(3) {
+  grid-column: 11/17;
+  grid-row: 2;
+  width: 100%;
+  padding-top: 2em;
+}
+
+.photo-section-6 {
+  grid-template-rows: repeat(7, 1fr);
+  margin-bottom: -5em;
+}
+.photo-section-6 .layout-item:first-child {
+  grid-row: 1/4;
+  grid-column: 7/11;
+  width: 100%;
+}
+.photo-section-6 .layout-item:nth-child(2) {
+  grid-row: 2/5;
+  grid-column: 11/15;
+  width: 100%;
+}
+.photo-section-6 .layout-item:nth-child(3) {
+  grid-row: 4/7;
+  grid-column: 5/11;
+  width: 100%;
+}
+.photo-section-6 .section-quote {
+  grid-row: 5/7;
+  grid-column: 11/16;
+  width: 50%;
+  align-self: end;
+  line-height: 150%;
+}
+
+.photo-section-7 {
+  grid-template-rows: 2;
+}
+.photo-section-7 .layout-item:first-child {
+  grid-row: 1;
+  grid-column: 6/13;
+  width: 100%;
+}
+.photo-section-7 .layout-item:nth-child(2) {
+  grid-row: 2;
+  grid-column: 4/8;
+  width: 100%;
+}
+.photo-section-7 .layout-item:nth-child(3) {
+  grid-row: 2;
+  grid-column: 8/18;
+  width: 100%;
 }
 
 html {
@@ -207,13 +358,11 @@ html {
 
 a {
   text-decoration: none;
-  color: purple;
-  font-size: 0.9em;
-  text-transform: uppercase;
+  color: #DFEA4E;
 }
 
 nav a:hover {
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid #DFEA4E;
 }
 
 a#home:hover {
@@ -221,7 +370,7 @@ a#home:hover {
 }
 
 a:active {
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid #DFEA4E;
   color: purple;
 }
 
@@ -286,7 +435,7 @@ h5 {
 
 #wid-blurb {
   font-family: redaction-bold;
-  color: purple;
+  color: #7D246B;
   grid-row: 3/span 1;
   grid-column: 4/20;
   font-size: 1.4em;
@@ -380,8 +529,8 @@ span:hover {
   width: 95%;
   height: 75%;
   display: grid;
-  grid-row: 1/10;
-  grid-column: 2/22;
+  grid-row: 3/10 span 2;
+  grid-column: 6/22;
   position: relative;
 }
 
@@ -472,8 +621,3 @@ span:hover {
 }
 
 /*# sourceMappingURL=whatisdesign.css.map */
-=======
-version https://git-lfs.github.com/spec/v1
-oid sha256:ab64cc462455263a492cc376858966b5a24dfdf7d6df95084234968a3db79155
-size 4107
->>>>>>> d50fe36c397977fea92d41874db0a2752e893a0e
