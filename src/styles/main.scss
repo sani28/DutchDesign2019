@@ -367,8 +367,6 @@ a {
       color: white;
     }
   }
-
-
   .video-controls {
     display: inline-flex;
     flex-wrap: wrap;
@@ -434,49 +432,13 @@ a {
   }
 }
 
-
-.video-section{
-  grid-area: video;
-  display: flex;
-  width: 100%;
-  max-width: 80vw;
-  margin: 0;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2em;
-  overflow: hidden;
-  z-index: 1;
+.play-cursor {
+  cursor: url(../../assets/images/play.png), auto;
 }
 
-.video-section:hover .vid-controls{
-  transform: translateY(0);
-  transition: all .25s;
+.pause-cursor {
+  cursor: url(../../assets/images/pause.png), auto;
 }
-
-// #designer-vid {
-//   box-sizing: border-box;
-//   width: 100%;
-//   outline: none;
-//   z-index: -1;
-// }
-
-.video-overlay{
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 40%;
-  bottom: 30;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  .white-txt{
-    color: white;
-  }
-}
-
 
 .designer-tagline{
   font-family: hyperMarket;
@@ -496,6 +458,7 @@ a {
   line-height: 125%;
   width: 60%;
 }
+
 
 
 .shown-item {
@@ -519,72 +482,6 @@ a {
 						 -o-transition: all 0.45s ease-in;
 								transition: all 0.45s ease-in;
 }
-
-.play-cursor {
-  cursor: url(../../assets/images/play.png), auto;
-}
-
-.pause-cursor {
-  cursor: url(../../assets/images/pause.png), auto;
-}
-
-// .vid-controls {
-//   display: flex;
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 5%;
-//   flex-wrap: wrap;
-//   background-color: rgba(223,234,78, 0.7);
-//   transform: translateY(100%) translateY(-6px);
-//   transition: all .25s;
-//   .grey-bar{
-//     height: 8px;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     background-color: rgba(175, 175, 175, 0.9);
-//     .purple-playback{
-//       height: 8px;
-//       background-color: $secondary-purp;
-//     }
-//   }
-//   .timeblock {
-//     margin-left: 0.75em;
-//     div{
-//       display: inline-block;
-//       font-family: Maison Neue;
-//       font-size: 0.75em;
-//       color: $secondary-purp;
-//     }
-//   }
-// }
-//
-// .vid-buttons {
-//   button {
-//     background: none;
-//     border: 0;
-//     outline: none;
-//     cursor: pointer;
-//     color: $secondary-purp;
-//     font-family: hyperMarket;
-//     font-size: 0.75em;
-//     text-transform: uppercase;
-//   }
-//   button.play:before {
-//     content: "PLAY";
-//     text-transform: capitalize;
-//   }
-//   button.pause:after{
-//     content: "PAUSE";
-//     text-transform: capitalize;
-//   }
-// }
-//
-// .vid-buttons.fs{
-//   margin-left: auto;
-//   margin-right: 0;
-// }
 
 .designer-top-section{
   display: grid;

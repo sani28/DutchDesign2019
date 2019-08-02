@@ -1,5 +1,5 @@
 $(document).ready(function() {
-      const vid = document.getElementById("designer-vid");
+      var vid = document.getElementById("designer-vid");
       const playback = document.getElementById("playback");
       const playPause = document.getElementById("play-pause");
       const overlay = document.getElementById("designer-overlay");
@@ -43,6 +43,7 @@ function pathPrepare ($el) {
 
 pathPrepare(scrollProg);
 
+console.log(vid);
 
 function togglePlayPause(){
   if(vid.paused){
@@ -138,12 +139,12 @@ playPause.onclick = function(){
 
     // VIDEO OVERLAY SHOW/HIDE
     vid.addEventListener("playing", function(){
-      $("#top-video-section").removeClass("play-cursor");
-      $("#top-video-section").addClass("pause-cursor");
+      $("#designer-vid").removeClass("play-cursor");
+      $("#designer-vid").addClass("pause-cursor");
     });
 
     vid.addEventListener("paused", function(){
-      $("#top-video-section").removeClass("pause-cursor");
-      $("#top-video-section").addClass("play-cursor");
+      $("#designer-vid").removeClass("pause-cursor");
+      $("#designer-vid").addClass("play-cursor");
     });
 });
