@@ -25,36 +25,35 @@
       </svg>
       <a class="inner-util" id="scroll-top" name="vid-container">BACK TO TOP</a>
     </div>
-    <section class="designer-video-section">
-      <figure class="video-section play-cursor" id="vid-container">
+    <figure class="video-container play-cursor" id="video-fig">
+      <div class='embed-container'>
         <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
           <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
         </video>
-
-        <div class="vid-controls">
-          <div class="grey-bar" id="progress">
-            <div class="purple-playback" id="playback"></div>
-          </div>
-          <div class="vid-buttons">
-            <button class="play" id="play-pause"></button>
-          </div>
-          <div class="timeblock">
-            <div id="currentTime">00:00</div>
-            <span style="color: purple">/<span>
-            <div id="vidDuration">00:00</div>
-          </div>
-          <div class="vid-buttons fs">
-            <button id="fullscreen">FULLSCREEN</button>
-          </div>
+        <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
+      </div>
+      <div class="video-overlay" id="designer-overlay">
+        <h2 class="designer-tagline white-txt">Maastricht - Art & Product</h2>
+        <h1 class="designer-name white-txt">Valentin Loellmann</h1>
+        <p class="designer-blurb white-txt">Creating furniture, sculptures, and architectural spaces in Maastricht Valentin Loellmann is in the midst of a shift in his life and career. He aims to make his work more accessible to the public rather than just creating for private clientele.</p>
+      </div>
+      <div class="video-controls" id="vid-controls">
+        <div class="progress" id="progress">
+          <span class="vidbar" id="playback"></span>
         </div>
-
-        <div class="video-overlay" id="designer-overlay">
-          <h2 class="designer-tagline white-txt">Maastricht - Art & Product</h2>
-          <h1 class="designer-name white-txt">Valentin Loellmann</h1>
-          <p class="designer-blurb white-txt">Creating furniture, sculptures, and architectural spaces in Maastricht Valentin Loellmann is in the midst of a shift in his life and career. He aims to make his work more accessible to the public rather than just creating for private clientele.</p>
+        <div class="vid-buttons">
+          <button class="play" id="play-pause"></button>
         </div>
-      </figure>
-    </section>
+        <div class="timeblock">
+          <div id="currentTime">00:00</div>
+          <span style="color: purple">/<span>
+          <div id="vidDuration">00:00</div>
+        </div>
+        <div class="vid-buttons fs">
+          <button class="fullscreen" id="fs">FULLSCREEN</button>
+        </div>
+      </div>
+    </figure>
     <section class=designer-top-section>
       <nav id="designer-toggle">
         <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
