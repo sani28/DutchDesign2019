@@ -195,13 +195,11 @@ a {
   grid-column: 5/17;
   grid-row: 1;
   width: 100%;
-  border: 1px solid grey;
 }
 .photo-section-3 .layout-item:nth-child(2) {
   grid-column: 4/12;
   grid-row: 2;
   width: 100%;
-  border: 1px solid grey;
 }
 .photo-section-3 .section-quote {
   grid-column: 12/18;
