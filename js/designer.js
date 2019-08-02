@@ -3,8 +3,7 @@ $(document).ready(function() {
       const playback = document.getElementById("playback");
       const playPause = document.getElementById("play-pause");
       const overlay = document.getElementById("designer-overlay");
-      const vidSection = document.getElementById("vid-container");
-      const fullscreenBtn = document.getElementById("fullscreen");
+      const fullscreen = document.getElementById("fs");
       const progress = document.getElementById("progress");
       const scrollProg = document.getElementById("scroll-progress");
       var scrollController = new ScrollMagic.Controller();
@@ -47,12 +46,12 @@ pathPrepare(scrollProg);
 
 function togglePlayPause(){
   if(vid.paused){
-    // playPause.className = 'pause';
+    playPause.className = 'pause';
     vid.play();
     overlay.style.display = "none";
   }
   else {
-    // playPause.className = 'play';
+    playPause.className = 'play';
     vid.pause();
     overlay.style.display = "";
   }
@@ -115,14 +114,15 @@ vid.addEventListener('timeupdate', function(){
   onTrackedVideoFrame(this.currentTime, this.duration);
 });
 
-// progress.addEventListener('click', function(e) {
-//    var pos = (e.pageX  - vidSection.offsetLeft) / this.offsetWidth;
-//    vid.currentTime = pos * vid.duration;
-// });
+progress.addEventListener('click', function(e) {
+   var pos = (e.pageX  - progress.offsetLeft) / this.offsetWidth;
+   vid.currentTime = pos * vid.duration;
+});
 
-// fullscreen.addEventListener('click', function(){
-//   toggleFullScreen();
-// });
+fullscreen.addEventListener('click', function(){
+  toggleFullScreen();
+});
+
 
 overlay.addEventListener("click", function(){
   togglePlayPause();
