@@ -211,7 +211,7 @@
   .section-quote{
     grid-row: 5/7;
     grid-column: 11/16;
-    width: 50%;
+    width: 90%;
     align-self: end;
     line-height: 150%;
   }
@@ -252,5 +252,20 @@
     img{
       width: 100%;
     }
+  }
+}
+
+.quote-section {
+  display: flex;
+  flex-wrap: none;
+  width: 60%;
+  margin: 3em auto;
+  justify-content: center;
+  align-content: center;
+  .layout-item{
+    display: inline;
+    margin: 0 auto;
+    margin-left: 1em;
+    width: 40%;
   }
 }
