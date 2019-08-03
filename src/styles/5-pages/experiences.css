@@ -1,3 +1,77 @@
+/* ----- fonts ------ */
+@font-face {
+  font-family: hyperMarket;
+  src: url(../../fonts/hypermarket-regular.ttf);
+  font-weight: bold;
+}
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../../fonts/bebas.otf);
+}
+@font-face {
+  font-family: brandon;
+  src: url(../../fonts/brandon.otf);
+}
+@font-face {
+  font-family: karla;
+  src: url(../../fonts/karla.ttf);
+}
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../../fonts/helveticaneue-bold.otf);
+}
+@font-face {
+  font-family: museosans-100;
+  src: url(../../fonts/museosans-100.otf);
+}
+@font-face {
+  font-family: novecento;
+  src: url(../../fonts/novecento.otf);
+}
+@font-face {
+  font-family: katarinestd;
+  src: url(../../fonts/katarinestd.otf);
+}
+@font-face {
+  font-family: monsterrat;
+  src: url(../../fonts/monsterrat.otf);
+}
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../../fonts/neuehaasgroteskblack.otf);
+}
+/* ----- DD19 BRAND FONTS ------ */
+@font-face {
+  font-family: redaction;
+  src: url(../../fonts/Redaction-Regular.otf);
+}
+@font-face {
+  font-family: redaction-bold;
+  src: url(../../fonts/Redaction-Bold.otf);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+@font-face {
+  font-family: maisonBold;
+  src: url(../../../fonts/MaisonMono-Bold.otf);
+}
+@font-face {
+  font-family: maisonMedium;
+  src: url(../../../fonts/MaisonNeue-Medium.ttf);
+}
+@font-face {
+  font-family: maisonNeue-Mono;
+  src: url(../../../fonts/MaisonNeue-Mono.otf);
+}
+@font-face {
+  font-family: maisonNeueExt-Mono;
+  src: url(../../../fonts/MaisonNeueExt-Medium.otf);
+}
+@font-face {
+  font-family: maisonMono-Regular;
+  src: url(../../../fonts/MaisonMono-Regular.otf);
+}
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -242,33 +316,65 @@ body {
   display: grid;
   grid-row: 0/20;
   grid-column: 0/10;
-  padding: 1.5em;
+  padding: 1.5%;
   width: 100vw;
-  height: 50vh;
+  height: 80vh;
   justify-content: center;
-  border: 1px solid white;
+}
+
+.geo-info#right {
+  display: inline-block;
+  right: 0;
+  justify-content: flex-start;
+  position: absolute;
+  width: 20px;
+  height: 500px;
+  font-family: maisonMono-Regular;
+  font-size: 0.5em;
+  letter-spacing: 0.6em;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.geo-info#left {
+  display: inline-block;
+  left: 15px;
+  justify-content: flex-start;
+  position: absolute;
+  width: 20px;
+  height: 500px;
+  font-family: maisonMono-Regular;
+  font-size: 0.5em;
+  letter-spacing: 0.6em;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
 }
 
 #exp-landing-photo {
-  border: 1px solid white;
   width: 80vw;
   height: 70vh;
   display: grid;
-  grid-row: 1 /20;
+  grid-row: 1/20;
   grid-column: 0/10;
   background-image: url("../../../assets/images/arnhem-cover.JPG");
   background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.exp-tagline {
-  font-size: 0.5em;
-  font-family: maisonNeue;
+  background-repeat: repeat;
+  margin: 1vw;
 }
 
 .exp-title {
+  text-align: right;
+  width: 80vw;
+}
+
+#exp-tagline {
+  font-family: hyperMarket;
+  font-size: calc(0.9em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#exp-title {
   font-family: redaction;
-  font-size: 2em;
+  font-size: calc(4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .shown-item {

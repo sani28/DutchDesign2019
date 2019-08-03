@@ -5,6 +5,7 @@
 // $primary-green: #DFEA4E;
 // $secondary-purp: #7D246B;
 
+@import '../1-helpers/_fonts';
 @import '../2-modules/_layouts';
 
 html {
@@ -20,66 +21,89 @@ body {
   display: grid;
   grid-row: 0/20;
   grid-column: 0/10;
-  padding: 1.5em;
+  padding: 1.5%;
   width: 100vw;
-  height: 50vh;
+  height: 80vh;
   justify-content: center;
-  border: 1px solid white;
 }
+
+.geo-info#right {
+  display: inline-block;
+  right:0;
+  // padding: 1.5%;
+  justify-content: flex-start;
+  position: absolute;
+  width: 20px;
+  height: 500px;
+  font-family: maisonMono-Regular;
+  font-size: 0.5em;
+  letter-spacing: 0.6em;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.geo-info#left {
+  display: inline-block;
+  left:15px;
+  // padding: 1.5%;
+  justify-content: flex-start;
+  position: absolute;
+  width: 20px;
+  height: 500px;
+  font-family: maisonMono-Regular;
+  font-size: 0.5em;
+  letter-spacing: 0.6em;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+
+// .geo-info {
+//   grid-area: 19/22;
+//   border:1px solid white;
+//   writing-mode: vertical-rl;
+//   text-orientation: mixed;
+//   font-size: 0.5em;
+//   font-family: maisonMono-Regular;
+//   height: 60vh;
+//   letter-spacing: 0.2em;
+//   margin-left: 80px;
+//   align-self: baseline;
+//   display: flex;
+//   justify-content: space-between;
+//   transform: rotate(-180deg);
+// }
+
+// .geo-container {
+//   display: inline-flex;
+// }
 
 #exp-landing-photo {
   width: 80vw;
   height: 70vh;
   display: grid;
-  grid-row: 1/20;
+  grid-row: 1 /20;
   grid-column: 0/10;
-  border: 1px solid white;
-  background-image: url("../../assets/images/arnhem-cover.JPG");
-}
-
-#exp-title {
-  // position: absolute;
-  // bottom:0;
-  // right:0;
-  // display: block;
-  // border: 1px solid red;
-}
-
-// .geographic-info {
-//   border: 1px solid red;
-//   transform: rotateX(-180);
-//   height: 30%;
-// }
-
-.exp-tagline {
-  font-size: 0.5em;
-  font-family: maisonNeue;
+  background-image: url("../../../assets/images/arnhem-cover.JPG");
+  background-size: contain;
+  background-repeat: repeat;
+  margin: 1vw;
 }
 
 .exp-title {
-  font-family: redaction;
-  font-size: 2em;
+  text-align: right;
+  width: 80vw;
 }
 
+#exp-tagline {
+  font-family: hyperMarket;
+  font-size: calc(0.9em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
 
-// .designer-tagline{
-//   font-family: hyperMarket;
-//   font-size: 0.75em;
-//   margin-bottom: 0;
-//   text-transform: uppercase;
-// }
-// .designer-name {
-//   font-family: Redaction;
-//   font-size: 5em;
-//   margin: 0 auto;
-//   text-transform: uppercase;
-// }
-// .designer-blurb{
-//   font-family: Maison Neue;
-//   font-size: 0.8em;
-//   line-height: 125%;
-//   width: 60%;
-// }
+#exp-title {
+  font-family: redaction;
+  font-size: calc(4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
 
 .shown-item {
   opacity: 0;
