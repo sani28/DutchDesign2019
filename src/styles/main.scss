@@ -590,6 +590,33 @@ a {
   }
 }
 
+.section-quote{
+  font-size: 0.9em;
+  font-family: maisonNeue-Mono;
+  color: black;
+  line-height: 150%;
+}
+
+.section-quote::before{
+  content: '“';
+  font-size: 4rem;
+  font-family: redaction;
+  color: $primary-green;
+  position: relative;
+  top: 1rem;
+  left: -1rem;
+  opacity: 0.75;
+  padding: 0;
+}
+
+.section-caption{
+  font-family: maisonNeue-Mono;
+  font-size: 0.75em;
+  font-weight: lighter;
+  line-height: 150%;
+  color: grey;
+}
+
 #nienkequote {
   display: inline-block;
   float: right;

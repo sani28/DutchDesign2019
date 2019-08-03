@@ -39,6 +39,15 @@
   color: black;
   line-height: 150%;
 }
+
+.section-quote::before{
+  content: '“';
+  font-size: 3rem;
+  font-family: redaction;
+  color: #DFEA4E;
+  opacity: 0.5;
+}
+
 .section-caption{
   font-family: maisonNeue-Mono;
   font-size: 0.75em;

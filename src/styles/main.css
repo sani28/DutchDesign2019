@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ----- fonts ------ */
 @font-face {
   font-family: hyperMarket;
@@ -116,6 +117,14 @@ a {
   font-family: maisonNeue-Mono;
   color: black;
   line-height: 150%;
+}
+
+.section-quote::before {
+  content: "“";
+  font-size: 3rem;
+  font-family: redaction;
+  color: #DFEA4E;
+  opacity: 0.5;
 }
 
 .section-caption {
@@ -954,6 +963,33 @@ html.designer-page-body {
 .scroll-util .inner-util:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.section-quote {
+  font-size: 0.9em;
+  font-family: maisonNeue-Mono;
+  color: black;
+  line-height: 150%;
+}
+
+.section-quote::before {
+  content: "“";
+  font-size: 4rem;
+  font-family: redaction;
+  color: #DFEA4E;
+  position: relative;
+  top: 1rem;
+  left: -1rem;
+  opacity: 0.75;
+  padding: 0;
+}
+
+.section-caption {
+  font-family: maisonNeue-Mono;
+  font-size: 0.75em;
+  font-weight: lighter;
+  line-height: 150%;
+  color: grey;
 }
 
 #nienkequote {
