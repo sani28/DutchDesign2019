@@ -91,18 +91,24 @@ a {
 
 
 .overview {
-  border: 2px solid green;
   width: 100vw;
   height: 90vh;
 }
 
+
 .transcript {
-  width: 80vw;
+  width: 100vw;
   height: 90vh;
-  margin-left: 20%;
-  margin-right: 20%;
+  display: flex;
+  padding: 5em;
   font-family: Maison Neue;
-  font-size: 0.7em;
+  line-height: 125%;
+  text-align: justify;
+  font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#transcript-container {
+  width: 80vw;
 }
 
 .designer-video-section {
