@@ -72,6 +72,7 @@
   font-family: maisonMono-Regular;
   src: url(../../../fonts/MaisonMono-Regular.otf);
 }
+
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -100,33 +101,59 @@
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1.5em;
   width: 100%;
-  margin-top: 1em;
+  margin-top: 5em;
   align-items: start;
   width: 100%;
 }
 
-#quote1 {
-  border:1px solid white;
-  width: 200px;
-}
 
 .section-quote {
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-family: maisonNeue-Mono;
   color: white;
 }
 
 .section-caption {
   font-family: maisonNeue-Mono;
-  font-size: 0.75em;
+  font-size: 0.65em;
   font-weight: lighter;
   line-height: 150%;
-  color: grey;
+  color: white;
 }
+
+/*types of section capitions: baseline, top align, end caption*/
 
 #baseline {
   grid-row: 1/ span 2;
   grid-column: 1/5;
+}
+
+#baseline-2 {
+  grid-row: 6/8;
+  grid-column: 10/15;
+  width: 100%;
+}
+
+#baseline-3 {
+  grid-row: 9/12;
+  grid-column:10/15;
+  width: 100%;
+}
+
+#top-align {
+  grid-row: 1/4;
+  grid-column: 2/10;
+  text-align: justify;
+}
+
+#end {
+  width: 80%;
+  margin-left: 10%;
+  margin-right:10%;
+  display: block;
+  justify-content: center;
+  align-self: center;
+  text-align: justify;
 }
 
 .photo-section-1 {
@@ -174,12 +201,11 @@
 .photo-section-2 .layout-item:nth-child(2) img {
   width: 100%;
   margin: 0;
-  border: 3px solid green;
 }
 .photo-section-2 .layout-item:nth-child(3) {
   grid-row: 2/ span 2;
   grid-column: 10/17;
-  width: 100%;
+  width: 90%;
 }
 .photo-section-2 .section-quote.type-one {
   grid-row: 2/3;
@@ -196,6 +222,13 @@
   margin-bottom: 0;
 }
 
+.photo-section-2 .layout-item:nth-child(4) {
+  grid-column: 2/10;
+  grid-row: 5/10;
+  width: 100%;
+  margin:0;
+}
+
 .photo-section-3 {
   grid-template-rows: 1fr 1fr;
 }
@@ -203,13 +236,11 @@
   grid-column: 5/17;
   grid-row: 1;
   width: 100%;
-  border: 1px solid grey;
 }
 .photo-section-3 .layout-item:nth-child(2) {
   grid-column: 4/12;
   grid-row: 2;
   width: 100%;
-  border: 1px solid grey;
 }
 .photo-section-3 .section-quote {
   grid-column: 12/18;
@@ -222,23 +253,28 @@
   padding-bottom: 5em;
 }
 .photo-section-4 .layout-item:first-child {
-  grid-column: 4/10;
-  align-self: flex-end;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  grid-column: 1/15;
+  grid-row: 1;
   width: 100%;
   padding-bottom: 2em;
 }
+
 .photo-section-4 .layout-item:first-child img {
   width: 100%;
+  grid-row: 2;
 }
 .photo-section-4 .layout-item:nth-child(2) {
-  grid-column: 10/16;
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  display: grid;
+  grid-row: 2/4;
+  grid-column:1/8;
+}
+
+.photo-section-4 .layout-item:nth-child(3) {
+  width: 100%;
+  display: grid;
+  grid-row: 2;
+  grid-column: 8/28;
 }
 .photo-section-4 .layout-item:nth-child(2) img {
   width: 100%;
@@ -248,6 +284,7 @@
 .photo-section-5 {
   margin-bottom: 5em;
 }
+
 .photo-section-5 .layout-item:first-child {
   grid-column: 3/9;
   grid-row: 1;
@@ -273,29 +310,29 @@
 }
 
 .photo-section-6 {
-  grid-template-rows: repeat(7, 1fr);
-  margin-bottom: -5em;
 }
 .photo-section-6 .layout-item:first-child {
   grid-row: 1/4;
-  grid-column: 7/11;
-  width: 100%;
+  grid-column: 10/17;
+  width: 90%;
 }
-.photo-section-6 .layout-item:nth-child(2) {
+.photo-section-6 .layout-item:nth-child(2){
   grid-row: 2/5;
-  grid-column: 11/15;
+  grid-column: 4/12;
   width: 100%;
 }
 .photo-section-6 .layout-item:nth-child(3) {
-  grid-row: 4/7;
-  grid-column: 5/11;
+  grid-row: 2/7;
+  grid-column: 2/10;
   width: 100%;
 }
+
 .photo-section-6 .section-quote {
   grid-row: 5/7;
   grid-column: 11/16;
-  width: 50%;
+  width: 70%;
   align-self: end;
+  text-align: justify;
   line-height: 150%;
 }
 
@@ -324,7 +361,8 @@ html {
 
 body {
   color: white;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  padding: 2vw;
 }
 
 .experience-landing {
@@ -421,6 +459,7 @@ body {
   height: auto;
   background-color: salmon;
   margin-top: 5em;
+  padding:0;
 }
 
 /*# sourceMappingURL=experiences.css.map */
