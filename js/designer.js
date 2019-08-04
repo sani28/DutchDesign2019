@@ -1,4 +1,23 @@
 $(document).ready(function() {
+
+    //toggle to transcript
+    $('#toggle-transcript').click(function(e) {
+      e.preventDefault();
+      $(this).addClass('.active-toggle');
+      $('.designer-summary').fadeOut("slow").hide();
+      $('#overview').fadeOut("slow").hide();
+      $('.transcript').slideToggle("slow");
+    });
+
+    //toggle to overview
+    $('#toggle-overview').click(function(e) {
+      e.preventDefault();
+      $(this).addClass('.active-toggle');
+      $('.designer-summary').slideToggle("slow")
+      $('#overview').slideToggle("slow")
+      $('.transcript').fadeOut("slow").hide();
+    });
+
       const vid = document.getElementById("designer-vid");
       const playback = document.getElementById("playback");
       const playPause = document.getElementById("play-pause");
@@ -45,7 +64,7 @@ function pathPrepare ($el) {
 
 pathPrepare(scrollProg);
 
-      
+
 function togglePlayPause(){
   if(vid.paused){
     playPause.className = 'pause';
