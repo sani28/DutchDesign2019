@@ -1,4 +1,15 @@
 $(document).ready(function(){
+
+  $('#toggle-transcript').click(function(e){
+  e.preventDefault();
+    $(this).addClass('.active-toggle');
+   $('.designer-summary').fadeOut("slow").hide();
+   $('#overview').fadeOut("slow").hide();
+   $('.transcript').fadeIn("slow");
+
+ });
+
+
   const orderedDesignerImages =
   [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
   document.getElementById('quote1'),
@@ -35,7 +46,7 @@ $(document).ready(function(){
         })
         .setTween(tween)
         .addTo(controller);
-  
+
   var scrollControl = new ScrollMagic.Controller();
   for(let i=0; i<orderedDesignerImages.length; i++){
     new ScrollMagic.Scene({

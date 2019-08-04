@@ -68,14 +68,13 @@
   font-family: maisonNeueExt-Mono;
   src: url(../../fonts/MaisonNeueExt-Medium.otf);
 }
-*, html {
-  color: white;
-}
 
 a {
   text-decoration: none;
   display: block;
 }
+
+
 
 .grid-layout-container {
   display: grid;
@@ -88,6 +87,22 @@ a {
   height: 100vh;
   padding: 0px;
   border: 1px solid white;
+}
+
+
+.overview {
+  border: 2px solid green;
+  width: 100vw;
+  height: 90vh;
+}
+
+.transcript {
+  width: 80vw;
+  height: 90vh;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: Maison Neue;
+  font-size: 0.7em;
 }
 
 .designer-video-section {
@@ -179,6 +194,7 @@ a {
   width: 100%;
   margin-bottom: 0;
 }
+
 .photo-section-2 .section-quote.type-two {
   grid-row: 4/6;
   grid-column: 6/9;
