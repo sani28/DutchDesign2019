@@ -579,14 +579,38 @@ a {
   height: 100vh;
   display: flex;
   padding: 5em;
+  display: none;
   font-family: Maison Neue;
   line-height: 125%;
-  text-align: justify;
+  text-align: left;
   font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
-#transcript-container {
+#transcript-container{
   width: 80vw;
   margin-bottom: 30%;
   height: 90vh;
+}
+
+p span {
+  background-color: $primary-green;
+}
+
+#transcript-container h3 {
+  font-size: 1.5em;
+  background-color: $primary-green;
+  width: 30%;
+  color: $secondary-purp;
+  font-family: hyperMarket;
+  text-transform: uppercase;
+}
+
+h3#intro {
+  color: black;
+  font-size: 1.5em;
+  background-color: white;
+}
+
+h3#keyword {
+  border: 2px solid red;
 }
