@@ -408,6 +408,7 @@ body {
   width: 80vw;
   height: 500px;
   display: grid;
+  border: none;
   grid-row: 1/20;
   grid-column: 0/10;
   background-image: url("../../../assets/images/arnhem.png");
