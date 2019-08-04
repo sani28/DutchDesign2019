@@ -1,25 +1,5 @@
 $(document).ready(function() {
 
-
-  //toggle to transcript
-  $('#toggle-transcript').click(function(e) {
-    e.preventDefault();
-    $(this).addClass('.active-toggle');
-    $('.designer-summary').fadeOut("slow").hide();
-    $('#overview').fadeOut("slow").hide();
-    $('.transcript').slideToggle("slow");
-  });
-
-  //toggle to overview
-  $('#toggle-overview').click(function(e) {
-    e.preventDefault();
-    $(this).addClass('.active-toggle');
-    $('.designer-summary').slideToggle("slow")
-    $('#overview').slideToggle("slow")
-    $('.transcript').fadeOut("slow").hide();
-  });
-
-
   const orderedDesignerImages = [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"), document.getElementById("floris-candid3"),
     document.getElementById('quote1'),
     document.getElementById("floris-workshop"), document.getElementById("floris-space"),
