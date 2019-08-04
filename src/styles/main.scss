@@ -7,9 +7,7 @@ $secondary-purp: #7D246B;
 
 
 @import './1-helpers/fonts';
-*, html {
-  color: white;
-}
+
 
 a {
   text-decoration: none;
@@ -572,4 +570,23 @@ a {
     text-decoration: underline;
     cursor: pointer;
   }
+}
+
+
+/*---------- transcripts ------------- */
+.transcript {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 5em;
+  font-family: Maison Neue;
+  line-height: 125%;
+  text-align: justify;
+  font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#transcript-container {
+  width: 80vw;
+  margin-bottom: 30%;
+  height: 90vh;
 }
