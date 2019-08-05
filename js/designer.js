@@ -41,10 +41,6 @@ function pathPrepare ($el) {
   $el.style.strokeDashoffset = lineLength;
 }
 
-pathPrepare(scrollProg);
-
-console.log(vid);
-
 function togglePlayPause(){
   if(vid.paused){
     playPause.className = 'pause';
@@ -95,56 +91,54 @@ function toggleFullScreen() {
   }
 
 
-scrollController.scrollTo(function (newpos) {
-  if(window.pageYOffset > (document.body.clientHeight * 0.45)){
-    TweenLite.to(window, 1.3, {scrollTo: {y: newpos}, ease: Power1.easeIn });
-  } else {
-    TweenLite.to(window, 0.6, {scrollTo: {y: newpos}, ease: Power1.easeIn });
-  }
-});
 
-//  bind scroll to anchor links
-$(document).on("click", "#scroll-top", function (e) {
-  scrollController.scrollTo("#vid-container");
-});
+//////////////////// SCROLLING BEHAVIOUR ////////////
+
+  // for the scroll-progress bar
+  pathPrepare(scrollProg);
+
+  $(document).on("click", "#scroll-top", function (e) {
+    scrollController.scrollTo("#vid-container");
+  });
+
+  scrollController.scrollTo(function (newpos) {
+    if(window.pageYOffset > (document.body.clientHeight * 0.45)){
+      TweenLite.to(window, 1.3, {scrollTo: {y: newpos}, ease: Power1.easeIn });
+    } else {
+      TweenLite.to(window, 0.6, {scrollTo: {y: newpos}, ease: Power1.easeIn });
+    }
+  });
+
+//////////// VIDEO PLAYER BEHAVIOUR ////////
+
+  vid.addEventListener('timeupdate', function(){
+    let playbackPos = (vid.currentTime/vid.duration);
+    playback.style.width = (playbackPos * 100) + "%";
+    onTrackedVideoFrame(this.currentTime, this.duration);
+  });
+
+  progress.addEventListener('click', function(e) {
+     var pos = (e.pageX  - progress.offsetLeft) / this.offsetWidth;
+     vid.currentTime = pos * vid.duration;
+  });
+
+  fullscreen.addEventListener('click', function(){
+    toggleFullScreen();
+  });
+
+  $(document).on("click touchend", "#designer-overlay, #designer-vid, #play-pause", function() {
+    togglePlayPause();
+  });
 
 
-vid.addEventListener('timeupdate', function(){
-  let playbackPos = (vid.currentTime/vid.duration);
-  playback.style.width = (playbackPos * 100) + "%";
-  onTrackedVideoFrame(this.currentTime, this.duration);
-});
+  vid.addEventListener("playing", function(){
+    $("#video-fig").removeClass("play-cursor");
+    $("#video-fig").addClass("pause-cursor");
+  });
 
-progress.addEventListener('click', function(e) {
-   var pos = (e.pageX  - progress.offsetLeft) / this.offsetWidth;
-   vid.currentTime = pos * vid.duration;
-});
+  vid.addEventListener("pause", function(){
+    $("#video-fig").removeClass("pause-cursor");
+    $("#video-fig").addClass("play-cursor");
+  });
 
-fullscreen.addEventListener('click', function(){
-  toggleFullScreen();
-});
-
-
-overlay.addEventListener("click", function(){
-  togglePlayPause();
-});
-
-vid.addEventListener("click", function() {
-  togglePlayPause();
-});
-
-playPause.onclick = function(){
-  togglePlayPause();
-}
-
-    // VIDEO OVERLAY SHOW/HIDE
-    vid.addEventListener("playing", function(){
-      $("#designer-vid").removeClass("play-cursor");
-      $("#designer-vid").addClass("pause-cursor");
-    });
-
-    vid.addEventListener("paused", function(){
-      $("#designer-vid").removeClass("pause-cursor");
-      $("#designer-vid").addClass("play-cursor");
-    });
 });
