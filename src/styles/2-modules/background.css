@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:07a914e37963c4788076e2e6a1d1ba9fe916106648fe0eb3ae921c97931bfefd
-size 281
+html {
+  background-color: #DFEA4E;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
+  background-size: 4.54vw 6.67vh;
+}
+
+/*# sourceMappingURL=background.css.map */
