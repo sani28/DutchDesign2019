@@ -14,6 +14,8 @@ $(document).ready(function() {
     document.getElementById("quote4")
   ];
 
+<<<<<<< HEAD
+=======
   const scrollProg = document.getElementById("scroll-progress");
   var controller = new ScrollMagic.Controller();
   var progController = new ScrollMagic.Controller();
@@ -40,6 +42,7 @@ $(document).ready(function() {
     .setTween(tween)
     .addTo(controller);
 
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
   var scrollControl = new ScrollMagic.Controller();
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
