@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   //ELEMENTS
   const designerDots = $(".designer-dot").get();
@@ -16,7 +17,6 @@ $(document).ready(function(){
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
 /////////////////////////////////////////////////////////////////////////
   initLandingPage();
-
 
   function initLandingPage(){
     toggleDotState();
@@ -143,11 +143,11 @@ $(document).ready(function(){
     for(let i=0; i < designerNavList.length; i++){
       $(designerNavList[i]).mouseenter(function(){
         let currentID = this.id;
-        $("#" + currentID + "Dot").addClass("nav-highlighted");
+        $("#" + currentID + "Dot").addClass("nav-highlight");
       });
       $(designerNavList[i]).mouseout(function(){
         let currentID = this.id;
-        $("#" + currentID + "Dot").removeClass("nav-highlighted");
+        $("#" + currentID + "Dot").removeClass("nav-highlight");
       });
     }
   }
