@@ -1,3 +1,75 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74bd43e4d6282421a7482f13a5c242b5293b66cbffc8f6749442bb8bd70dcab7
-size 1567
+/* ----- fonts ------ */
+@font-face {
+  font-family: hyperMarket;
+  src: url(../../fonts/hypermarket-regular.ttf);
+  font-weight: bold;
+}
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../../fonts/bebas.otf);
+}
+@font-face {
+  font-family: brandon;
+  src: url(../../fonts/brandon.otf);
+}
+@font-face {
+  font-family: karla;
+  src: url(../../fonts/karla.ttf);
+}
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../../fonts/helveticaneue-bold.otf);
+}
+@font-face {
+  font-family: museosans-100;
+  src: url(../../fonts/museosans-100.otf);
+}
+@font-face {
+  font-family: novecento;
+  src: url(../../fonts/novecento.otf);
+}
+@font-face {
+  font-family: katarinestd;
+  src: url(../../fonts/katarinestd.otf);
+}
+@font-face {
+  font-family: monsterrat;
+  src: url(../../fonts/monsterrat.otf);
+}
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../../fonts/neuehaasgroteskblack.otf);
+}
+/* ----- DD19 BRAND FONTS ------ */
+@font-face {
+  font-family: redaction;
+  src: url(../../fonts/Redaction-Regular.otf);
+}
+@font-face {
+  font-family: redaction-bold;
+  src: url(../../fonts/Redaction-Bold.otf);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+@font-face {
+  font-family: maisonBold;
+  src: url(../../../fonts/MaisonMono-Bold.otf);
+}
+@font-face {
+  font-family: maisonMedium;
+  src: url(../../../fonts/MaisonNeue-Medium.ttf);
+}
+@font-face {
+  font-family: maisonNeue-Mono;
+  src: url(../../../fonts/MaisonNeue-Mono.otf);
+}
+@font-face {
+  font-family: maisonNeueExt-Mono;
+  src: url(../../../fonts/MaisonNeueExt-Medium.otf);
+}
+
+@font-face {
+  font-family: maisonMono-Regular;
+  src: url(../../../fonts/MaisonMono-Regular.otf);
+}

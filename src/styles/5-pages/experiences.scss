@@ -1,0 +1,141 @@
+// $width-unit: 4.54vw;
+// $height-unit: 6.67vh;
+// $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+// $grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
+// $primary-green: #DFEA4E;
+// $secondary-purp: #7D246B;
+
+@import '../1-helpers/_fonts';
+@import '../2-modules/_layouts';
+
+html {
+  background-color: #000;
+}
+
+body {
+  color: white;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.experience-landing {
+  display: grid;
+  grid-row: 0/20;
+  grid-column: 0/10;
+  padding: 1.5%;
+  width: 100vw;
+  height: 80vh;
+  justify-content: center;
+  background-size: contain;
+}
+
+.geo-info#right {
+  display: inline-block;
+  right:0;
+  // padding: 1.5%;
+  justify-content: flex-start;
+  position: absolute;
+  width: 20px;
+  height: 500px;
+  font-family: maisonMono-Regular;
+  font-size: 0.5em;
+  letter-spacing: 0.6em;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.geo-info#left {
+  display: inline-block;
+  left:15px;
+  // padding: 1.5%;
+  justify-content: flex-start;
+  position: absolute;
+  width: 20px;
+  height: 500px;
+  font-family: maisonMono-Regular;
+  font-size: 0.5em;
+  letter-spacing: 0.6em;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+
+// .geo-info {
+//   grid-area: 19/22;
+//   border:1px solid white;
+//   writing-mode: vertical-rl;
+//   text-orientation: mixed;
+//   font-size: 0.5em;
+//   font-family: maisonMono-Regular;
+//   height: 60vh;
+//   letter-spacing: 0.2em;
+//   margin-left: 80px;
+//   align-self: baseline;
+//   display: flex;
+//   justify-content: space-between;
+//   transform: rotate(-180deg);
+// }
+
+// .geo-container {
+//   display: inline-flex;
+// }
+
+#exp-landing-photo {
+  width: 80vw;
+  height: 500px;
+  display: grid;
+  grid-row: 1 /20;
+  grid-column: 0/10;
+  background-image: url("../../../assets/images/arnhem.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1vw
+}
+
+.exp-title {
+  text-align: right;
+  width: 80vw;
+}
+
+#exp-tagline {
+  font-family: hyperMarket;
+  font-size: calc(0.9em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#exp-title {
+  font-family: redaction;
+  font-size: calc(4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.shown-item {
+  opacity: 0;
+}
+
+.shown-item.visible {
+  opacity: 1;
+  -webkit-transition: all 0.15s ease-in;
+					 -moz-transition: all 0.15s ease-in;
+						-ms-transition: all 0.15s ease-in;
+						 -o-transition: all 0.15s ease-in;
+								transition: all 0.15s ease-in;
+}
+
+.shown-item.visible-slow {
+  opacity: 1;
+  -webkit-transition: all 0.45s ease-in;
+					 -moz-transition: all 0.45s ease-in;
+						-ms-transition: all 0.45s ease-in;
+						 -o-transition: all 0.45s ease-in;
+								transition: all 0.45s ease-in;
+}
+
+
+.fullbleed {
+  width: 100%;
+  height: auto; //placeholder, should be auto
+  background-color: salmon;
+  margin-top: 5em;
+}
+
+
+/*# sourceMappingURL=experiences.css.map */
