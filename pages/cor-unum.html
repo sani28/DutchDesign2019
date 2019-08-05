@@ -19,38 +19,42 @@
     <script type="text/javascript" src="../js/designer/corunum.js" async defer></script>
   </head>
   <body>
-    <section class="designer-video-section">
-      <figure class="video-section play-cursor" id="vid-container">
-        <!-- TODO: add poster and source link for video -->
+    <div id="scroll-tool" class="scroll-util">
+      <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0"/>
+      </svg>
+      <p class="inner-util" id="scroll-top">BACK TO TOP</p>
+    </div>
+    <figure class="video-container play-cursor" id="video-fig">
+      <div class='embed-container'>
         <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
           <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
         </video>
-
-        <div class="vid-controls">
-          <div class="grey-bar" id="progress">
-            <div class="purple-playback" id="playback"></div>
-          </div>
-          <div class="vid-buttons">
-            <button class="play" id="play-pause"></button>
-          </div>
-          <div class="timeblock">
-            <div id="currentTime">00:00</div>
-            <span style="color: purple">/<span>
-            <div id="vidDuration">00:00</div>
-          </div>
-          <div class="vid-buttons fs">
-            <button id="fullscreen">Fullscreen</button>
-          </div>
+        <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
+      </div>
+      <div class="video-overlay" id="designer-overlay">
+        <h2 class="designer-tagline white-txt">Den Bosch - Ceramics Manufacturing</h2>
+        <h1 class="designer-name white-txt">Cor Unum</h1>
+        <p class="designer-blurb white-txt">Lotte Landsheer is both a key designer and the company’s director of this social workplace. She works with students, volunteers, people with distance from the workforce, and outside designers to bring innovation to the ceramics space.</p>
+      </div>
+      <div class="video-controls" id="vid-controls">
+        <div class="progress" id="progress">
+          <span class="vidbar" id="playback"></span>
         </div>
-
-        <div class="video-overlay" id="designer-overlay">
-          <h2 class="designer-tagline white-txt">Den Bosch - Ceramics Manufacturing</h2>
-          <h1 class="designer-name white-txt">Cor Unum</h1>
-          <p class="designer-blurb white-txt">Lotte Landsheer is both a key designer and the company’s director of this social workplace. She works with students, volunteers, people with distance from the workforce, and outside designers to bring innovation to the ceramics space.</p>
+        <div class="vid-buttons">
+          <button class="play" id="play-pause"></button>
         </div>
-      </figure>
-    </section>
-    <section class="designer-top-section">
+        <div class="timeblock">
+          <div id="currentTime">00:00</div>
+          <span style="color: purple">/<span>
+          <div id="vidDuration">00:00</div>
+        </div>
+        <div class="vid-buttons fs">
+          <button class="fullscreen" id="fs">FULLSCREEN</button>
+        </div>
+      </div>
+    </figure>
+    <section class=designer-top-section>
       <nav id="designer-toggle">
         <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
         <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>
@@ -61,7 +65,39 @@
         <p class="designer-blurb black-txt">Lotte Landsheer is both a key designer and the company’s director of this social workplace. She works with students, volunteers, people with distance from the workforce, and outside designers to bring innovation to the ceramics space.</p>
       </div>
     </section>
-
+    <section class="photo-section-7">
+      <img class="layout-item shown-item" id="lottework" src="../assets/images/corunum/corunum_section7_img1.jpg"></img>
+      <img class="layout-item shown-item" id="unfired" src="../assets/images/corunum/corunum_section7_img2.jpg"></img>
+      <img class="layout-item shown-item" id="workspace" src="../assets/images/corunum/corunum_section7_img3.jpg"></img>
+    </section>
+    <p class="section-quote shown-item" id="lottequote">I want to show that people with a disability don't have to make ceramics with disabilities. They can make beautiful things for designers.</p>
+    <section class="photo-section-2">
+      <img class="layout-item shown-item" id="lottecandid" src="../assets/images/corunum/corunum_section2_img1.jpg"></img>
+      <img class=" layout-item shown-item" id="lottecandid2" src="../assets/images/corunum/corunum_section2_img2.jpg"></img>
+      <img class="layout-item shown-item" id="lottecandid3" src="../assets/images/corunum/corunum_section2_img3.jpg"></img>
+      <p class="section-quote type-two layout-item shown-item" id="quote1">Design is a tool to tell my story. I want change to happen. </p>
+    </section>
+    <section class="photo-section-6">
+      <img class="layout-item shown-item" id="employee" src="../assets/images/corunum/corunum_section6_img1.jpg"></img>
+      <img class="layout-item shown-item" id="employee2" src="../assets/images/corunum/corunum_section6_img2.jpg"></img>
+      <img class="layout-item shown-item" id="employee3" src="../assets/images/corunum/corunum_section6_img3.jpg"></img>
+      <p class="section-quote shown-item" id="quote1">When you create, you become happy. And when you become happy, you can become better again. That is what Cor Unum stands for.</p>
+    </section>
+    <section class="photo-section-2">
+      <img class="layout-item shown-item" id="reglazeclose" src="../assets/images/corunum/corunum_section2_img4.jpg"></img>
+      <img class=" layout-item shown-item" id="reglazemid" src="../assets/images/corunum/corunum_section2_img5.jpg"></img>
+      <img class="layout-item shown-item" id="reglazehands" src="../assets/images/corunum/corunum_section2_img6.jpg"></img>
+      <p class="section-quote type-two layout-item shown-item" id="quote1">Reglaze is not only reusing old material or waste, it also stands for the people who work here. This is really Cor Unum.</p>
+    </section>
+    <p class="section-quote shown-item" id="lottequote2">The form is especially made for people who work for two or three hours a week because I think it's very important that they can work in our process.</p>
+    <section class="photo-section-8">
+      <img class="layout-item shown-item" id="reglazemisc" src="../assets/images/corunum/corunum_section8_img1.jpg"></img>
+      <div class="layout-item shown-item" id="reglazeplates">
+        <img class="layout-item" src="../assets/images/corunum/corunum_section8_img2.jpg"></img>
+        <p class="section-caption" id="caption1">Every plate, cup, and bowl has a different colour because the reglaze material is made out of assorted glaze waste from Cor Unum's production process.</p>
+      </div>
+    </section>
+    <img class="fullbleed" src="../assets/images/corunum/corunum_section7_img3.jpg"></img>
     <section id="overview">
     </section>
 
@@ -92,6 +128,13 @@
     <p>I love my job. It's really beautiful. And that is mostly because of <a data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"><span> working with people.</span></a> That's the main thing of Cor Unum, and <a data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"><span>beautiful people</span></a> make <a data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"><span>beautiful things</span></a> with designers.</p>
   </div>
   </section>
+  <footer class="designer-footer">
+    <p>Interview by: <a id="interviewers" href="#">Alex Fung & Angus Lei</a>,<br> <a href="#">Meet the Team</a></p>
+    <p>Lotte Landsheer is featured in our short film <br><a href="#">Reglaze</a> </p>
+    <p>Cor Unum's website is: <br><a href="http://www.cor-unum.com/">www.cor-unum.com</a></p>
+  </footer>
+
+
   </body>
   <!-- javascript srcs for hover effect -->
 

@@ -18,38 +18,42 @@
     <script type="text/javascript" src="../js/designer.js" async defer></script>
   </head>
   <body>
-    <section class="designer-video-section">
-      <figure class="video-section play-cursor" id="vid-container">
-        <!-- TODO: add poster and source link for video -->
+    <figure class="video-container play-cursor" id="video-fig">
+      <div class='embed-container'>
         <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
           <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
         </video>
-
-        <div class="vid-controls">
-          <div class="grey-bar" id="progress">
-            <div class="purple-playback" id="playback"></div>
-          </div>
-          <div class="vid-buttons">
-            <button class="play" id="play-pause"></button>
-          </div>
-          <div class="timeblock">
-            <div id="currentTime">00:00</div>
-            <span style="color: purple">/<span>
-            <div id="vidDuration">00:00</div>
-          </div>
-          <div class="vid-buttons fs">
-            <button id="fullscreen">Fullscreen</button>
-          </div>
+        <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
+      </div>
+      <div class="video-overlay" id="designer-overlay">
+        <h2 class="designer-tagline white-txt">Amsterdam - Graphic & Editorial</h2>
+        <h1 class="designer-name white-txt">Main Studio</h1>
+        <p class="designer-blurb white-txt">Edwin van Gelder is a graphic designer with an editorial focus. His body of work centers on topics of architecture, art, and design and the underlying patterns that link them all together.</p>
+      </div>
+      <div class="video-controls" id="vid-controls">
+        <div class="progress" id="progress">
+          <span class="vidbar" id="playback"></span>
         </div>
-
-        <div class="video-overlay" id="designer-overlay">
-          <h2 class="designer-tagline white-txt">Amsterdam - Graphic and Editorial</h2>
-          <h1 class="designer-name white-txt">Main Studio</h1>
-          <p class="designer-blurb white-txt">Edwin van Gelder is a graphic designer with an editorial focus. His body of work centers on topics of architecture, art, and design and the underlying patterns that link them all together.</p>
+        <div class="vid-buttons">
+          <button class="play" id="play-pause"></button>
         </div>
+<<<<<<< HEAD
+        <div class="timeblock">
+          <div id="currentTime">00:00</div>
+          <span style="color: purple">/<span>
+          <div id="vidDuration">00:00</div>
+        </div>
+        <div class="vid-buttons fs">
+          <button class="fullscreen" id="fs">FULLSCREEN</button>
+        </div>
+      </div>
+    </figure>
+    <section class=designer-top-section>
+=======
       </figure>
     </section>
     <section class="designer-top-section">
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
       <nav id="designer-toggle">
         <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
         <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>

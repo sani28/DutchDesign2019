@@ -1,4 +1,22 @@
 $(document).ready(function() {
+<<<<<<< HEAD
+      var vid = document.getElementById("designer-vid");
+      const playback = document.getElementById("playback");
+      const playPause = document.getElementById("play-pause");
+      const overlay = document.getElementById("designer-overlay");
+      const fullscreen = document.getElementById("fs");
+      const progress = document.getElementById("progress");
+      const scrollProg = document.getElementById("scroll-progress");
+      var scrollController = new ScrollMagic.Controller();
+      var progController = new ScrollMagic.Controller();
+      var totalHeight = document.body.clientHeight;
+
+      var backTopAnimation = TweenLite.from("#animate", 0.5, {
+        autoAlpha: 0,
+        scale: 0.7
+      });
+=======
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
 
   //toggle to transcript
   $('#toggle-transcript').click(function(e) {
@@ -33,6 +51,13 @@ $(document).ready(function() {
   var totalHeight = document.body.clientHeight;
 
 
+<<<<<<< HEAD
+function togglePlayPause(){
+  if(vid.paused){
+    playPause.className = 'pause';
+    vid.play();
+    overlay.style.display = "none";
+=======
   var backTopAnimation = TweenLite.from("#animate", 0.5, {
     autoAlpha: 0,
     scale: 0.7
@@ -65,6 +90,7 @@ $(document).ready(function() {
     let lineLength = $el.getTotalLength();
     $el.style.strokeDasharray = lineLength;
     $el.style.strokeDashoffset = lineLength;
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
   }
 
   pathPrepare(scrollProg);
@@ -119,6 +145,59 @@ $(document).ready(function() {
   }
 
 
+<<<<<<< HEAD
+
+//////////////////// SCROLLING BEHAVIOUR ////////////
+
+  // for the scroll-progress bar
+  pathPrepare(scrollProg);
+
+  $(document).on("click", "#scroll-top", function (e) {
+    scrollController.scrollTo("#vid-container");
+  });
+
+  scrollController.scrollTo(function (newpos) {
+    if(window.pageYOffset > (document.body.clientHeight * 0.45)){
+      TweenLite.to(window, 1.3, {scrollTo: {y: newpos}, ease: Power1.easeIn });
+    } else {
+      TweenLite.to(window, 0.6, {scrollTo: {y: newpos}, ease: Power1.easeIn });
+    }
+  });
+
+//////////// VIDEO PLAYER BEHAVIOUR ////////
+
+  vid.addEventListener('timeupdate', function(){
+    let playbackPos = (vid.currentTime/vid.duration);
+    playback.style.width = (playbackPos * 100) + "%";
+    onTrackedVideoFrame(this.currentTime, this.duration);
+  });
+
+  progress.addEventListener('click', function(e) {
+     var pos = (e.pageX  - progress.offsetLeft) / this.offsetWidth;
+     vid.currentTime = pos * vid.duration;
+  });
+
+  fullscreen.addEventListener('click', function(){
+    toggleFullScreen();
+  });
+
+  $(document).on("click touchend", "#designer-overlay, #designer-vid, #play-pause", function() {
+    togglePlayPause();
+  });
+
+
+  vid.addEventListener("playing", function(){
+    $("#video-fig").removeClass("play-cursor");
+    $("#video-fig").addClass("pause-cursor");
+  });
+
+  vid.addEventListener("pause", function(){
+    $("#video-fig").removeClass("pause-cursor");
+    $("#video-fig").addClass("play-cursor");
+  });
+
+});
+=======
   scrollController.scrollTo(function(newpos) {
     if (window.pageYOffset > (document.body.clientHeight * 0.45)) {
       TweenLite.to(window, 1.3, {
@@ -288,3 +367,4 @@ class HoverImgFx1 {
 }
 
 [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
