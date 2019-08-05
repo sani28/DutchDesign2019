@@ -18,21 +18,22 @@ $(document).ready(function() {
   //toggle to transcript
   $('#toggle-transcript').click(function(e) {
     e.preventDefault();
-    $(this).addClass('.active-toggle');
+    $(this).addClass('active');
+    $('#toggle-overview').removeClass('active');
     $('.designer-summary').fadeOut("slow").hide();
     $('#overview').fadeOut("slow").hide();
-    $('.transcript').slideToggle("slow");
+    $('.transcript').fadeIn("slow");
   });
 
   //toggle to overview
   $('#toggle-overview').click(function(e) {
     e.preventDefault();
-    $(this).addClass('.active-toggle');
-    $('.designer-summary').slideToggle("slow")
-    $('#overview').slideToggle("slow")
+    $(this).addClass('active');
+    $('#toggle-transcript').removeClass('active');
+    $('.designer-summary').fadeIn("slow")
+    $('#overview').fadeIn("slow")
     $('.transcript').fadeOut("slow").hide();
   });
-
 
   const vid = document.getElementById("designer-vid");
   const playback = document.getElementById("playback");

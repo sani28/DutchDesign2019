@@ -18,6 +18,10 @@ a#imgHover {
   display: inline;
 }
 
+.active {
+  border-bottom: 2px solid purple;
+}
+
 .block[data-fx="1"] a::after,
 a.content__text-link[data-fx="1"]::after{
 content: '';
@@ -666,6 +670,7 @@ a.content__text-link[data-fx="1"]::after{
   display: flex;
   padding: 5em;
   display: none;
+  margin-bottom: 400px;
   font-family: Maison Neue;
   line-height: 125%;
   text-align: left;
@@ -674,7 +679,6 @@ a.content__text-link[data-fx="1"]::after{
 
 #transcript-container{
   width: 80vw;
-  margin-bottom: 30%;
   height: 90vh;
 }
 
