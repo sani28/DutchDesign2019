@@ -81,6 +81,10 @@ a#imgHover {
   display: inline;
 }
 
+.active {
+  border-bottom: 2px solid purple;
+}
+
 .block[data-fx="1"] a::after,
 a.content__text-link[data-fx="1"]::after {
   content: "";
