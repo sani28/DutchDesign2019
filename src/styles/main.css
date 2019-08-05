@@ -963,6 +963,7 @@ html.designer-page-body {
   text-decoration: underline;
   cursor: pointer;
 }
+
 .section-quote {
   font-size: 0.9em;
   font-family: maisonNeue-Mono;
@@ -1010,6 +1011,7 @@ html.designer-page-body {
   margin: 0 auto;
   padding: 5em 0;
 }
+
 /*---------- transcripts ------------- */
 .transcript {
   width: 100vw;

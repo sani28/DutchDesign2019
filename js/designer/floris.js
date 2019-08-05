@@ -14,35 +14,6 @@ $(document).ready(function() {
     document.getElementById("quote4")
   ];
 
-<<<<<<< HEAD
-=======
-  const scrollProg = document.getElementById("scroll-progress");
-  var controller = new ScrollMagic.Controller();
-  var progController = new ScrollMagic.Controller();
-  var totalHeight = document.body.clientHeight;
-
-  function pathPrepare($el) {
-    let lineLength = $el.getTotalLength();
-    $el.style.strokeDasharray = lineLength;
-    $el.style.strokeDashoffset = lineLength;
-  }
-  // prepare SVG
-  pathPrepare(scrollProg);
-  var tween = new TimelineLite()
-    .add(TweenLite.to(scrollProg, 1.0, {
-      strokeDashoffset: 0,
-      ease: Linear.easeNone
-    }));
-
-  new ScrollMagic.Scene({
-      duration: totalHeight - 900,
-      offset: 175,
-      tweenChanges: true
-    })
-    .setTween(tween)
-    .addTo(controller);
-
->>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
   var scrollControl = new ScrollMagic.Controller();
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
