@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
     <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
@@ -18,47 +18,89 @@
     <script type="text/javascript" src="../js/designer.js" async defer></script>
   </head>
   <body>
-    <section class="designer-video-section">
-      <figure class="video-section play-cursor" id="vid-container">
-        <!-- TODO: add poster and source link for video -->
+    <figure class="video-container play-cursor" id="video-fig">
+      <div class='embed-container'>
         <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
           <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
         </video>
-
-        <div class="vid-controls">
-          <div class="grey-bar" id="progress">
-            <div class="purple-playback" id="playback"></div>
-          </div>
-          <div class="vid-buttons">
-            <button class="play" id="play-pause"></button>
-          </div>
-          <div class="timeblock">
-            <div id="currentTime">00:00</div>
-            <span style="color: purple">/<span>
-            <div id="vidDuration">00:00</div>
-          </div>
-          <div class="vid-buttons fs">
-            <button id="fullscreen">Fullscreen</button>
-          </div>
+        <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
+      </div>
+      <div class="video-overlay" id="designer-overlay">
+        <h2 class="designer-tagline white-txt">Rotterdam - Architecture & Exhibition</h2>
+        <h1 class="designer-name white-txt">Studio<br>Makkink & Bey</h1>
+        <p class="designer-blurb white-txt">Jurgen Bey along with his partner Rianne Makkink lead an architecture and design practise. Their current research and exhibitions are on how we can use design to push for new realities, rather than accepting how the world is today.</p>
+      </div>
+      <div class="video-controls" id="vid-controls">
+        <div class="progress" id="progress">
+          <span class="vidbar" id="playback"></span>
         </div>
-
-        <div class="video-overlay" id="designer-overlay">
-          <h2 class="designer-tagline white-txt">Rotterdam - Architecture & Exhibition</h2>
-          <h1 class="designer-name white-txt">Studio<br>Makkink & Bey</h1>
-          <p class="designer-blurb white-txt">Jurgen Bey along with his partner Rianne Makkink lead an architecture and design practise. Their current research and exhibitions are on how we can use design to push for new realities, rather than accepting how the world is today.</p>
+        <div class="vid-buttons">
+          <button class="play" id="play-pause"></button>
         </div>
+<<<<<<< HEAD
+        <div class="timeblock">
+          <div id="currentTime">00:00</div>
+          <span style="color: purple">/<span>
+          <div id="vidDuration">00:00</div>
+        </div>
+        <div class="vid-buttons fs">
+          <button class="fullscreen" id="fs">FULLSCREEN</button>
+        </div>
+      </div>
+    </figure>
+    <section class=designer-top-section>
+=======
       </figure>
     </section>
-    <section class=designer-top-section>
+    <section class="designer-top-section">
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
       <nav id="designer-toggle">
         <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
         <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>
       </nav>
-      <div class=designer-summary>
+      <div class="designer-summary">
         <h2 class="designer-tagline black-txt">Rotterdam - Architecture & Exhibition</h2>
         <h1 class="designer-name black-txt">Studio<br>Makkink & Bey</h1>
         <p class="designer-blurb black-txt">Jurgen Bey along with his partner Rianne Makkink lead an architecture and design practise. Their current research and exhibitions are on how we can use design to push for new realities, rather than accepting how the world is today.</p>
       </div>
     </section>
+
+    <section class="transcript">
+    <div id="transcript-container">
+      <h3 id="intro">Introduction</h3>
+      <p>00:00</p>
+      <p>After a time of economics we're heading for a time that's extremely cultural driven. It's like the movie makers, it's the literature writers that are able to bring us into a world that doesn't get questioned or debated when it just starts. Only at the end is this what we want? Is this what we expect? And I think it's a very important position. So we don't start with the problems that need to be sold, but we try to start with a world we believe in and try to push our reality towards that.</p>
+      <p>00:00</p>
+      <p>I'm <span id=“keyword”>Jurgen Bey</span>, I'm a part of the studio Makkink and Bey. Both me and Rhianne we have the name, but I think it's more about the studio with the individual designers that work with us and grow with us.</p>
+      <h3 id=“keyword”>Water School</h3>
+      <p>00:00</p>
+      <p>We were asked to do a project in India about Dwarka, which is like an area which are used development, but where the water has never been properly part of the whole infrastructure. And so we made with a group of architects a big urban plan where we would solve like let’s say the whole water flow by having a gorgeous park and things like that.</p>
+      <p>00:00</p>
+      <p>So the question is a little bit like how do you think it will work? And that was for me a reason as a product designer to scale down to say like, okay, if this would be an answer, how could we start? How could we try to convince people that this is a way to act on the whole water question?</p>
+      <p>00:00</p>
+      <p>And so what we thought said, let's make just <span id=“keyword”>one big school</span>. And then use the whole community that's part of a school and education to take care of that garden. Because then there's a big difference whether it's like public space or whether it's the place where your kids go to school.
+      And so in that sense we started the idea of like, what if education would be brought only on this topic water. So that it’s always part of it.</p>
+      <p>00:00</p>
+      <p>I think to get much more involved in education means that we would develop like a cultural landscape. And for me that's one of the main reasons to go into this idea of water school and pick out like <span id=“keyword”>all kinds of projects</span> that are related to the topic, but not to explain it or to only make solve the problem. It's like living with it.</p>
+      <p>00:00</p>
+      <p>It's not about the morals of how to deal with water. Millions of people trying to raise that question, solve it. And you think as a designer you just sit behind the table, make a small thing and it will be gold. I can't believe that. I really can't. I can only believe that if you step into a certain culture you could make a difference and of course you want to make a difference in getting it better.</p>
+      <h3>On Being an Initiator</h3>
+      <p>00:00</p>
+      <p>If I look at the work that I've done, then I do know sometimes people say that there is so much humor in it, but like, no, I do think that everything I make is serious. But of course, it doesn't mean that it's not allowed to be funny. It's fine to be funny. But if it is just, if it would just be put away as funny design, then I don't like it.</p>
+      <p>00:00</p>
+      <p>I read once like, which I think still is like one of the most nicest essays I read from (Dutch name), a Dutch writer, and he said, It was a clown or a couple of clowns and then they had like the grand piano on the left and the stool on the right.</p>
+      <p>00:00</p>
+      <p>And then instead of all going to the stool and just getting the stool next to the grand piano, they all went to the grand piano. Just pushed and tried to pull it. Trying to get that thing close, to the stool to be able to start playing the music.</p>
+      <p>00:00</p>
+      <p>And what he said with that, and I still really like it, is that like you could say that it's like either stupid or just to be funny. But imagine in a world where the weather is changing constantly, where the characters of people are constantly changing. Why would things always be as they are?</p>
+      <p>00:00</p>
+      <p>Imagine that it would be a split second that a grand piano can weigh like a feather. That would be this moment. We would never notice it if we only would be in the sufficiency and thinking cause we would have never seen it because we wouldn't have been there. But just because we have the clowns just because we have the people that act completely different than expected when that moment is there it will be revealed was there was still people trying for it.</p>
+      <p>00:00</p>
+      <p>And this is exactly what I like about it is this kind of thinking that there are things to be there for a certain moment in a certain time they can only reveal themselves in a certain way, but then someone has to be there and the question is who will be there, the followers or the initiators and then still like are they the there the so called craziness or are the so called sameness?</p>
+
+    </div>
+    </section>
+
+
   </body>
 </html>

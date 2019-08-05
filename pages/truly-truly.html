@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
     <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
@@ -16,49 +16,145 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script type="text/javascript" src="../js/designer.js" async defer></script>
+    <script type="text/javascript" src="../js/designer/truly.js" async defer></script>
   </head>
   <body>
-    <section class="designer-video-section">
-      <figure class="video-section play-cursor" id="vid-container">
-        <!-- TODO: add poster and source link for video -->
+    <figure class="video-container play-cursor" id="video-fig">
+      <div class='embed-container'>
         <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
           <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
         </video>
-
-        <div class="vid-controls">
-          <div class="grey-bar" id="progress">
-            <div class="purple-playback" id="playback"></div>
-          </div>
-          <div class="vid-buttons">
-            <button class="play" id="play-pause"></button>
-          </div>
-          <div class="timeblock">
-            <div id="currentTime">00:00</div>
-            <span style="color: purple">/<span>
-            <div id="vidDuration">00:00</div>
-          </div>
-          <div class="vid-buttons fs">
-            <button id="fullscreen">Fullscreen</button>
-          </div>
+        <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
+      </div>
+      <div class="video-overlay" id="designer-overlay">
+        <h2 class="designer-tagline white-txt">Rottedam - Product</h2>
+        <h1 class="designer-name white-txt">Studio Truly Truly</h1>
+        <p class="designer-blurb white-txt">Kate and Joel Booy are based in Rotterdam, but are originally from Australia. Partners in work and in life, they specialize in installations and objects for living — applying design principles across disciplines.</p>
+      </div>
+      <div class="video-controls" id="vid-controls">
+        <div class="progress" id="progress">
+          <span class="vidbar" id="playback"></span>
         </div>
-
-        <div class="video-overlay" id="designer-overlay">
-          <h2 class="designer-tagline white-txt">Rotterdam - Products</h2>
-          <h1 class="designer-name white-txt">Studio Truly Truly</h1>
-          <p class="designer-blurb white-txt">Kate and Joel Booy are based in Rotterdam, but are originally from Australia. Partners in work and in life, they specialize in installations and objects for living — applying design principles across disciplines.</p>
+        <div class="vid-buttons">
+          <button class="play" id="play-pause"></button>
         </div>
+<<<<<<< HEAD
+        <div class="timeblock">
+          <div id="currentTime">00:00</div>
+          <span style="color: purple">/<span>
+          <div id="vidDuration">00:00</div>
+        </div>
+        <div class="vid-buttons fs">
+          <button class="fullscreen" id="fs">FULLSCREEN</button>
+        </div>
+      </div>
+    </figure>
+    <section class=designer-top-section>
+=======
       </figure>
     </section>
-    <section class=designer-top-section>
+
+    <section class="designer-top-section">
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
       <nav id="designer-toggle">
         <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
         <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>
       </nav>
+<<<<<<< HEAD
       <div class=designer-summary>
+        <h2 class="designer-tagline black-txt">Rotterdam - Product</h2>
+=======
+      <div class="designer-summary">
         <h2 class="designer-tagline black-txt">Rotterdam - Products</h2>
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
         <h1 class="designer-name black-txt">Studio Truly Truly</h1>
         <p class="designer-blurb black-txt">Kate and Joel Booy are based in Rotterdam, but are originally from Australia. Partners in work and in life, they specialize in installations and objects for living — applying design principles across disciplines.</p>
       </div>
     </section>
+<<<<<<< HEAD
+    <section class="photo-section-2">
+      <div class="layout-item cropbox">
+        <img class="shown-item" id="trulycandid1" src="../assets/images/truly/truly_section2_img1.jpg"></img>
+      </div>
+      <div class="layout-item cropbox">
+        <img class="shown-item" id="trulycandid2" src="../assets/images/truly/truly_section2_img2.jpg"></img>
+      </div>
+      <img class="layout-item shown-item" id="trulycandid3" src="../assets/images/truly/truly_section2_img3.jpg"></img>
+      <p class="layout-item section-quote type-two shown-item" id="quote1">Anything that we create will communicate to an audience in one way or another, whether that's a chair or a piece of graphic design or an installation of a space. — Kate </p>
+    </section>
+    <section class="photo-section-5">
+      <div class="layout-item shown-item" id="sofaclose">
+        <p class="section-caption" id="caption2">Kate and Joel Booy design by doing. The IKEA PS Sofa was a result of Kate and Joel manipulating the cushions to learn and discover different form possibilities. <p>
+        <img id="mappieces" src="../assets/images/truly/truly_section5_img1.jpg"></img>
+      </div>
+      <img class="layout-item shown-item" id="sofawide" src="../assets/images/truly/truly_section5_img2.jpg"></img>
+      <p class="section-quote layout-item shown-item" id="quote2">The future of this was to design by doing, to learn by doing. — Joel</p>
+    </section>
+    <section class="photo-section-6">
+      <img class="layout-item shown-item" id="typo1" src="../assets/images/truly/truly_section6_img1.jpg"></img>
+      <img class="layout-item shown-item" id="typo2" src="../assets/images/truly/truly_section6_img2.jpg"></img>
+      <img class="layout-item shown-item" id="typo3" src="../assets/images/truly/truly_section6_img3.jpg"></img>
+      <p class="section-quote shown-item" id="quote3">Our creativity is mixing different things and finding a beautiful place in between - Joel</p>
+    </section>
+    <section class="quote-section">
+      <p class="section-quote layout-item shown-item" id="joelquote">If you find your personal fascination, express it as boldly as possible. - Joel</p>
+      <p class="section-quote layout-item shown-item" id="katequote">It gives you your unique voice in a place where there's so many voices. - Kate</p>
+    </section>
+    <img class="fullbleed" src="../assets/images/floris/floris_end.jpg"></div>
+=======
+
+    <section id="overview">
+    </section>
+
+    <section class="transcript">
+      <div id="transcript-container">
+        <h3 id="intro">Process</h3>
+        <p>00:00</p>
+        <p>KATE: I think it comes down to process and for us, we, the process that we've learned for ourselves has, it's kind of formulated into something that allows us to tackle any kind of question in design.</p>
+        <p>00:00</p>
+        <p>JOEL: Yeah, and creativity is a big part of it. You know, and understanding your own creativity is also really important. And that's something that we've gotten to know as a result of doing a lot of different kinds of projects. Understanding that the process that we've built up can fit in making an art gallery product or making a product for IKEA or making a product for ourselves.</p>
+        <h3>Introduction</h3>
+        <p>00:00</p>
+        <p>KATE: We’re Studio Truly Truly, I'm <span id=“keyword”>Kate Booy, this is Joel Booy</span>. We’re partners in life and in work. We run a design practice that specializes in creating all kinds of objects for the living environment.</p>
+        <p>00:00</p>
+        <p>JOEL: we also do installation work, which helps us to understand how those objects fit in an environment as well.</p>
+        <p>KATE: Yeah. We're based here in Rotterdam, in the Netherlands, but we’re originally from Australia.</p>
+        <h3 id=“keyword”>Sofa For IKEA PS-2017</h3>
+        <p>00:00</p>
+        <p>KATE: Looking at a bigger space like a house or you know, an interior space that sparks certain, you know, considerations or questions about how we're using objects in the space, what kind of objects you might be putting together and then that, you know, influences what you might be doing on an object level.</p>
+        <p>00:00</p>
+        <p>JOEL: The brief was explore comforts or the living space. And so we're like, okay, what’s more comfortable than a cloud of cushions?</p>
+        <p>00:00</p>
+        <p>JOEL: One thing we really wanted to do was to strip apart the idea of a sofa being made with MDF and glued on foam. And all these things where everything's all together and thrown out altogether. So that's why the <span id=“keyword”>Sofa is, it's just cushions</span>. And then the process of making it was, well, we don't have any experience with making a sofa anyways, so let's, let's try it out when, and that was to play with play with some, an idea that we had.</p>
+        <p>00:00</p>
+        <p>KATE: Yeah. Manipulating the forms. We literally got the cushions in our hands and started playing with
+        <p>JOEL: stapling them to lots of wood,</p>
+        <p>KATE: and what can we create with this. Yes. It became a material that we were playing with.</p>
+        <p>00:00</p>
+        <p>JOEL: So the form of that cushion is created by the natural force, squeezing it in the middle and then it creates this beautiful plume sort of image. And we didn't, we didn't, we, it's a form by, by gravity, by tension, by you know. It's not by drawing it, it's by finding it.</p>
+        <p>00:00</p>
+        <p>JOEL:  And really, the future of this was to design by doing, to learn, by doing, because the idea of upholstery, you know, like, do you know what's in there? You don't until you've done it until you've tried to do something that's wrong. So that's what that was all about.</p>
+        <h3 id=“keyword”>Typography Lighting</h3>
+        <p>00:00</p>
+        <p>KATE: Rakumba an Australian lighting company, they approached us and we had a real discussion a conversation about lighting, where it was heading. And the question was, would it be possible to design a decorative track lighting system of sorts.</p>
+        <p>00:00</p>
+        <p>JOEL: Like typographies you've got all these <span id=“keyword”>different elements</span> that when you put them together, they have to look beautiful together, but they're all completely different. Like a ‘k’ looks different to a ‘u’, but somehow you have to put enough, tweaked uh little details in there that make it work. And, because then we can play with all these different things and it gives us a lot of anchor points.</p>
+        <p>00:00</p>
+        <p>JOEL: And this is something that we do a lot in our way of working, you know we always have kind of anchor points that help us to make it interesting to give it depth. So there's all these, there's all these details in typography that we knew deeply being typography designers, graphic designers.</p>
+        <p>00:00</p>
+        <p>KATE: it sort of ties into this anyway, the objects for the living space for the future that can be interpreted a little more abstractly so that they might be used in multiple ways, but it's not like a, a multi-use object where it's like a Swiss army knife and all the uses are really described. But more abstract pieces.</p>
+        <h3>Communication</h3>
+        <p>00:00</p>
+        <p>KATE: Communication is a big part of our design philosophy. We believe that anything that we create will communicate to an audience in one way or another, whether that's a chair or a piece of graphic design or an installation of a space. And so when we're choosing all the different features of this thing that we're making, we're thinking about that in our mind. Like, okay, what will this rough texture communicate? Well, what will that feel like? What's the overall composition of all these choices that we're making and how does that apply?</p>
+        <p>00:00</p>
+        <p>JOEL: It's all just about the right decisions. Every decision, every single one is, is it is what a designer what a designer is all about.</p>
+        <p>KATE: And sometimes that's a decision to go back a few steps and start a little look again.</p>
+
+
+
+      </div>
+    </section>
+
+>>>>>>> e1cefc3b92d482d3cee752a716245f391b9fb3d1
   </body>
 </html>
