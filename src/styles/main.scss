@@ -111,18 +111,17 @@ a {
   text-align: left;
   color: $secondary-purp;
   text-transform: uppercase;
+  margin-bottom: 0.3rem;
 }
 
 
 .main-nav-list li:hover{
-  background-color: white;
+  background-color: $secondary-purp;
+  color: white;
 }
 
 
 #main-toggle {
-  font-size: 0.7em;
-  font-family: hyperMarket;
-  color: white;
   grid-row: 13 / span 1;
   grid-column: 2 / span 4;
   display: grid;
@@ -130,13 +129,16 @@ a {
 }
 
 .landing-toggle{
-  color: purple;
+  color: $secondary-purp;
+  font-size: 0.8rem;
+  font-family: hyperMarket;
   text-transform: uppercase;
+  height: 1rem;
 }
 
 .landing-toggle.active{
-  text-decoration: underline;
-  stroke-width: 5px;
+  color: $primary-green;
+  background-color: $secondary-purp;
 }
 
 

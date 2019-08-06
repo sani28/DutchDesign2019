@@ -465,16 +465,15 @@ html.designer-page-body {
   text-align: left;
   color: #7D246B;
   text-transform: uppercase;
+  margin-bottom: 0.3rem;
 }
 
 .main-nav-list li:hover {
-  background-color: white;
+  background-color: #7D246B;
+  color: white;
 }
 
 #main-toggle {
-  font-size: 0.7em;
-  font-family: hyperMarket;
-  color: white;
   grid-row: 13/span 1;
   grid-column: 2/span 4;
   display: grid;
@@ -482,13 +481,16 @@ html.designer-page-body {
 }
 
 .landing-toggle {
-  color: purple;
+  color: #7D246B;
+  font-size: 0.8rem;
+  font-family: hyperMarket;
   text-transform: uppercase;
+  height: 1rem;
 }
 
 .landing-toggle.active {
-  text-decoration: underline;
-  stroke-width: 5px;
+  color: #DFEA4E;
+  background-color: #7D246B;
 }
 
 /* -----------------DOTS AND VIDEO STYLING----------------- */
