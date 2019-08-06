@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
   //ELEMENTS
   const designerDots = $(".designer-dot").get();
   const experienceDots = $(".experience-dot").get();
@@ -220,6 +221,5 @@ $(document).ready(function(){
       }
     });
   }
-
-
+  
 }); //DOCREADY DON'T DELETE
