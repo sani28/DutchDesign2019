@@ -69,6 +69,10 @@
   font-family: maisonNeueExt-Mono;
   src: url(../../fonts/MaisonNeueExt-Medium.otf);
 }
+@font-face {
+  font-family: maisonMono-Regular;
+  src: url(../../fonts/MaisonMono-Regular.otf);
+}
 *, html {
   color: black;
 }
@@ -96,7 +100,6 @@ a#imgHover {
   max-width: 100vw;
   height: 100vh;
   padding: 0px;
-  border: 1px solid white;
 }
 
 .designer-video-section {
