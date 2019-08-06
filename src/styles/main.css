@@ -96,24 +96,8 @@ a#imgHover {
   border-bottom: 2px solid purple;
 }
 
-body .cursor {
-  pointer-events: none;
-}
-
-body .cursor__ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  mix-blend-mode: difference;
-}
-
-body .cursor__ball circle {
-  fill: purple;
-}
-
-body .cursor__ball--big {
-  display: none;
+*.hiddenUI {
+  display: none !important;
 }
 
 .grid-layout-container {
@@ -437,15 +421,6 @@ html.designer-page-body {
   color: #DFEA4E;
 }
 
-#top-nav.hiddenUI {
-  display: none;
-}
-
-/* consistently use this to hide things */
-[id].hiddenUI {
-  display: none;
-}
-
 #main-nav {
   grid-row: 13/span 1;
   grid-column: 7/-1;
@@ -453,14 +428,16 @@ html.designer-page-body {
 
 .main-nav-list {
   list-style: none;
-  display: grid;
-  grid: repeat(4, 1fr)/repeat(5, 13.62vw);
-  grid-auto-flow: column;
   padding-left: 0;
   margin-top: 0;
   font-family: hyperMarket;
 }
 
+#designer-list {
+  display: grid;
+  grid: repeat(4, 1fr)/repeat(5, 13.62vw);
+  grid-auto-flow: column;
+}
 #designer-list #wid {
   grid-row: 1/2;
   grid-column: 1/2;
@@ -492,6 +469,12 @@ html.designer-page-body {
 }
 #designer-list #ineke #pepe #matthews #futures {
   grid-column: 5/6;
+}
+
+#fnotes-list {
+  display: grid;
+  grid: repeat(3, 1fr)/repeat(5, 13.62vw);
+  grid-auto-flow: column;
 }
 
 .main-nav-list.hiddenUI {
@@ -534,6 +517,20 @@ html.designer-page-body {
 }
 
 /* -----------------DOTS AND VIDEO STYLING----------------- */
+.blurb-container {
+  grid-area: 4/8/10/22;
+  justify-content: grid-start;
+}
+.blurb-container h1 {
+  font-family: Redaction;
+  font-size: 2.25vw;
+  color: #7D246B;
+  line-height: 125%;
+  letter-spacing: 0.035em;
+  text-align: justify;
+  margin-top: 0;
+}
+
 .fieldnote-bg {
   position: fixed;
   top: 0;
@@ -573,11 +570,13 @@ html.designer-page-body {
   font-family: Redaction;
   font-size: 2.25vw;
   margin: 0;
+  color: white;
 }
 #dot-headers #hover-subtitle {
   font-family: hyperMarket;
   font-size: 0.85vw;
   margin: 0;
+  color: white;
 }
 
 #dot-headers.hiddenUI {
@@ -596,6 +595,7 @@ html.designer-page-body {
   height: 2.25vw;
   width: 2.25vw;
   transition: width 0.185s cubic-bezier(0.55, 1, 0.85, 1), height 0.185s cubic-bezier(0.55, 1, 0.85, 1);
+  transition-delay: 0.1s;
 }
 
 .dot-unhovered.designer-dot {

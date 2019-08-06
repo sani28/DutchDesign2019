@@ -10,7 +10,6 @@ $(document).ready(function(){
   var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
   var fieldToggle = $("#toggle-field");
-
   //STATES
   var interviewsActive = true; // T/F toggle interviews and experiences
 
@@ -37,7 +36,12 @@ $(document).ready(function(){
       $(hiddenElements[i]).removeClass("hiddenUI");
     }
   }
+  function toggleBlurb(){
+    $("#home-cal").fadeToggle(350);
+    $("#home-blurb").fadeToggle(350).toggleClass("hiddenUI");
+  }
 
+  $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
 
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;
@@ -221,5 +225,5 @@ $(document).ready(function(){
       }
     });
   }
-  
+
 }); //DOCREADY DON'T DELETE

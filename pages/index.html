@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
   <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <script type="text/javascript" src="../js/main.js" async defer></script>
 </head>
 
@@ -27,10 +30,13 @@
     <div class="grid-layout-container">
       <nav id="top-nav">
         <a href="#" class="top-nav-item" id="nav-team">Team</a>
-        <a href="#" class="top-nav-item" id="nav-legacy">Legacy</a>
+        <a href="./legacy.html" class="top-nav-item" id="nav-legacy">Legacy</a>
         <a href="#" class="top-nav-item" id="nav-blurb">DutchDesign</a>
       </nav>
-      <div class="calendar-container">
+      <div class="blurb-container hiddenUI" id="home-blurb">
+        <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing platform for field research, observation, and reportage. The protagonists are individuals who define their own worlds; who blur and destroy boundaries, definitions, and limitations. It attempts to make Dutch design culture fleetingly visible while leaving space for it to describe itself.</h1>
+      </div>
+      <div class="calendar-container" id="home-cal">
         <div class="cal-item" id="futuresItem"><a href="#" class="designer-dot active-dot" id="futuresDot" data-title="INTENTIONAL FUTURES" data-subtitle="SEATTLE // DIGITAL"></a></div>
         <div class="cal-item" id="matthewsItem"><a href="#" class="designer-dot active-dot" id="matthewsDot" data-title="STUDIO MATTHEWS" data-subtitle="SEATTLE // BRANDING"></a></div>
         <div class="cal-item" id="pepeItem"><a href="./pepe-heykoop.html" class="designer-dot active-dot" id="pepeDot" data-title="PEPE HEYKOOP" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
@@ -65,12 +71,10 @@
         <div class="cal-item" id="atelierItem"><a href="#" class="experience-dot" id="atelierDot" data-title="ATELIER NL - ON LOCAL SOIL"></a></div>
         <div class="cal-item" id="btsItem"><a href="#" class="experience-dot" id="btsDot" data-title="BEHIND THE INTERVIEW"></a></div>
       </div> <!-- calender-container ends here -->
-
       <div class="header-display hiddenUI" id="dot-headers">
         <h3 id="hover-subtitle"></h3>
         <h2 id="hover-title"><h2>
       </div>
-
       <nav class="list-navigation" id="main-nav">
         <ul class="main-nav-list" id="designer-list">
           <a href="./wid.html" id="wid"><li>What is Design</li></a>
@@ -106,6 +110,7 @@
           <a href="#"><li id="kiki">Kiki Van Eijk</li></a>
           <a href="#"><li id="rens">Rens</li></a>
           <a href="#"><li id="atelier">Atelier NL</li></a>
+          <a href="#"><li id="bts">Behind the Scenes</li></a>
         </ul>
       </nav>
 
