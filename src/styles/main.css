@@ -96,6 +96,26 @@ a#imgHover {
   border-bottom: 2px solid purple;
 }
 
+body .cursor {
+  pointer-events: none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  mix-blend-mode: difference;
+}
+
+body .cursor__ball circle {
+  fill: purple;
+}
+
+body .cursor__ball--big {
+  display: none;
+}
+
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -488,7 +508,7 @@ html.designer-page-body {
 
 .main-nav-list li:hover {
   background-color: #7D246B;
-  color: white;
+  color: #DFEA4E;
 }
 
 #main-toggle {

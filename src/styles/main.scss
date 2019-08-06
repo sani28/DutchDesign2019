@@ -17,7 +17,6 @@ h1.title {
 }
 
 /* ---------------- Links and cursor styling -------------------------- */
-
 a {
   text-decoration: none;
   display: block;
@@ -29,6 +28,24 @@ a#imgHover {
 
 .active {
   border-bottom: 2px solid purple;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  mix-blend-mode:difference;
+}
+body .cursor__ball circle {
+  fill: purple;
+}
+
+body .cursor__ball--big {
+  display: none;
 }
 
 
@@ -136,7 +153,7 @@ a#imgHover {
 
 .main-nav-list li:hover{
   background-color: $secondary-purp;
-  color: white;
+  color: $primary-green;
 }
 
 
