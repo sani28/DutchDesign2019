@@ -24,8 +24,6 @@ a {
   grid-column: 2 / span 4;
   display: grid;
   grid-template-columns: repeat(3, 2*$width-unit);
-  font-size: 1.8em;
-  font-weight: bold;
   margin-top: 0;
   a.top-nav-item {
     font-size: 0.8rem;
@@ -54,7 +52,6 @@ a {
 #main-nav {
   grid-row: 13 / span 1;
   grid-column: 7 / -1;
-  font-size: 0.8em;
 }
 
 .main-nav-list{
@@ -139,6 +136,9 @@ a {
   font-family: hyperMarket;
   text-transform: uppercase;
   height: 1rem;
+  padding-top: 2px;
+
+  border: 1px solid $secondary-purp;
 }
 
 .landing-toggle.active{
@@ -211,6 +211,7 @@ a {
 .active-dot{
   height: 2.25vw;
   width: 2.25vw;
+  transition: width 0.185s cubic-bezier(.55,1,.85,1), height 0.185s cubic-bezier(.55,1,.85,1) ;
 }
 
 .dot-unhovered.designer-dot {
