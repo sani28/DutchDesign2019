@@ -5,7 +5,7 @@ $(document).ready(function(){
   const experienceDots = $(".experience-dot").get();
   const previewVideos = $(".bg-preview-video").get();
   const fieldNotesBGs = $(".fieldnote-bg").get();
-  const hiddenElements = ["#main-blurb", "#main-nav", "#main-logo", "#main-toggle", "#toggle-int", "#toggle-field"];
+  const hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle", "#toggle-int", "#toggle-field"];
   var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
   var fieldToggle = $("#toggle-field");
@@ -201,8 +201,8 @@ $(document).ready(function(){
       }
       else{
         interviewsActive = false;
-        $(this).addClass("active-toggle");
-        $("#toggle-int").removeClass("active-toggle");
+        $(this).addClass("active");
+        $("#toggle-int").removeClass("active");
         toggleDotSize();
         changeMenuItems();
       }
@@ -213,8 +213,8 @@ $(document).ready(function(){
       }
       else{
         interviewsActive = true;
-        $(this).addClass("active-toggle");
-        $("#toggle-field").removeClass("active-toggle");
+        $(this).addClass("active");
+        $("#toggle-field").removeClass("active");
         toggleDotSize();
         changeMenuItems();
       }

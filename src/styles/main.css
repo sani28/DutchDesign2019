@@ -387,37 +387,82 @@ html.designer-page-body {
 }
 
 /* --------------- grid box styling-----------------------------*/
-#main-logo {
+#top-nav {
   grid-row: 2;
   grid-column: 2/span 4;
-  font-size: 1.8em;
-  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(3, 9.08vw);
   margin-top: 0;
-  font-size: 2em;
-  font-family: redaction;
+}
+#top-nav a.top-nav-item {
+  font-size: 0.8rem;
+  font-family: hyperMarket;
   font-weight: bold;
   color: #7D246B;
+  text-transform: uppercase;
+  height: 1rem;
+  padding: 3px 0px;
+}
+#top-nav a.top-nav-item:hover {
+  background-color: #7D246B;
+  color: #DFEA4E;
 }
 
-/* consistently use this to hide things */
-.hiddenUI[id] {
+#top-nav.hiddenUI {
   display: none;
 }
 
-.list-navigation {
+/* consistently use this to hide things */
+[id].hiddenUI {
+  display: none;
+}
+
+#main-nav {
   grid-row: 13/span 1;
-  grid-column: 2/13;
-  font-size: 0.8em;
+  grid-column: 7/-1;
 }
 
 .main-nav-list {
   list-style: none;
   display: grid;
-  grid: 1fr/repeat(4, 9.08vw);
-  grid-auto-flow: row;
+  grid: repeat(4, 1fr)/repeat(5, 13.62vw);
+  grid-auto-flow: column;
   padding-left: 0;
   margin-top: 0;
   font-family: hyperMarket;
+}
+
+#designer-list #wid {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+#designer-list #reglaze {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+#designer-list #edwin #truly #jurgen #nienke {
+  grid-column: 2/3;
+}
+#designer-list #edwin {
+  grid-row: 1/2;
+}
+#designer-list #truly {
+  grid: -row 2/3;
+}
+#designer-list #jurgen {
+  grid-row: 3/4;
+}
+#designer-list #nienke {
+  grid-row: 4/5;
+}
+#designer-list #lex #valentin #corunum #floris {
+  grid-column: 3/4;
+}
+#designer-list #rebecca #aldo #momkai #lava {
+  grid-column: 4/5;
+}
+#designer-list #ineke #pepe #matthews #futures {
+  grid-column: 5/6;
 }
 
 .main-nav-list.hiddenUI {
@@ -425,41 +470,38 @@ html.designer-page-body {
 }
 
 .list-navigation .main-nav-list li {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   text-align: left;
   color: #7D246B;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
 }
 
 .main-nav-list li:hover {
-  background-color: white;
-}
-
-#main-blurb {
-  grid-row: 2/span 2;
-  grid-column: 14/22;
-  font-size: 0.5rem;
-  color: #7D246B;
-  margin-top: 0;
-  font-family: hyperMarket;
+  background-color: #7D246B;
+  color: white;
 }
 
 #main-toggle {
-  font-size: 0.5em;
-  font-family: hyperMarket;
-  color: white;
-  grid-row: 13;
-  grid-column: 18/span 4;
+  grid-row: 13/span 1;
+  grid-column: 2/span 4;
   display: grid;
   grid: 1fr/repeat(2, 9.08vw);
 }
 
 .landing-toggle {
-  color: purple;
+  color: #7D246B;
+  font-size: 0.8rem;
+  font-family: hyperMarket;
+  text-transform: uppercase;
+  height: 1rem;
+  padding-top: 2px;
+  border: 1px solid #7D246B;
 }
 
-.landing-toggle.active-toggle {
-  text-decoration: underline;
-  stroke-width: 5px;
+.landing-toggle.active {
+  color: #DFEA4E;
+  background-color: #7D246B;
 }
 
 /* -----------------DOTS AND VIDEO STYLING----------------- */
@@ -524,6 +566,7 @@ html.designer-page-body {
 .active-dot {
   height: 2.25vw;
   width: 2.25vw;
+  transition: width 0.185s cubic-bezier(0.55, 1, 0.85, 1), height 0.185s cubic-bezier(0.55, 1, 0.85, 1);
 }
 
 .dot-unhovered.designer-dot {
@@ -868,7 +911,7 @@ html.designer-page-body {
   text-transform: uppercase;
   padding-bottom: 0.25em;
 }
-.designer-top-section #designer-toggle .content-toggle.active-toggle {
+.designer-top-section #designer-toggle .content-toggle.active {
   border-bottom: 2px solid #7D246B;
 }
 .designer-top-section .designer-summary {
