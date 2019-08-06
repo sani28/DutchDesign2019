@@ -37,8 +37,8 @@ $(document).ready(function(){
     }
   }
   function toggleBlurb(){
-    $("#home-cal").fadeToggle(500);
-    $("#home-blurb").fadeToggle(500).toggleClass("hiddenUI");
+    $("#home-cal").fadeToggle(350);
+    $("#home-blurb").fadeToggle(350).toggleClass("hiddenUI");
   }
 
   $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
@@ -225,5 +225,5 @@ $(document).ready(function(){
       }
     });
   }
-  
+
 }); //DOCREADY DON'T DELETE
