@@ -19,16 +19,21 @@ a {
 @import './2-modules/layouts';
 @import './2-modules/background';
 /* --------------- grid box styling-----------------------------*/
-#main-logo {
+#top-nav {
   grid-row: 2;
   grid-column: 2 / span 4;
+  display: grid;
+  grid-template-columns: repeat(3, 2*$width-unit);
   font-size: 1.8em;
   font-weight: bold;
   margin-top: 0;
-  font-size: 2em;
-  font-family: redaction;
-  font-weight: bold;
-  color: $secondary-purp;
+  a.top-nav-item {
+    font-size: 0.8rem;
+    font-family: hyperMarket;
+    font-weight: bold;
+    color: $secondary-purp;
+    text-transform: uppercase;
+  }
 }
 /* consistently use this to hide things */
 .hiddenUI[id] {
