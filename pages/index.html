@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <title>Dutch Design 2019</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
   <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="../js/main.js" async defer></script>
 </head>
 
@@ -20,105 +18,188 @@
       <source src="../assets/videos/preview_valentin.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="bg-preview-video hiddenUI" id="lex-preview-vid" preload="none"     playsinline autoplay muted loop>
+    <video class="bg-preview-video hiddenUI" id="lex-preview-vid" preload="none" playsinline autoplay muted loop>
       <source src="../assets/videos/preview_lex.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
   </div>
-  <img class="fieldnote-bg hiddenUI" id="arnhem-bg" preload="none" src="../assets/images/arnhem-cover.jpg"></img>
+  <!-- <img class="fieldnote-bg hiddenUI" id="arnhem-bg" preload="none" src="../assets/images/arnhem-cover.jpg"></img> -->
   <!-- ~~~~~~~~~~~~~ grid container  ~~~~~~~~~~~~~~~`` -->
-    <div class="grid-layout-container">
-      <nav id="top-nav">
-        <a href="#" class="top-nav-item" id="nav-team">Team</a>
-        <a href="./legacy.html" class="top-nav-item" id="nav-legacy">Legacy</a>
-        <a href="#" class="top-nav-item" id="nav-blurb">DutchDesign</a>
-      </nav>
-      <div class="blurb-container hiddenUI" id="home-blurb">
-        <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing platform for field research, observation, and reportage. The protagonists are individuals who define their own worlds; who blur and destroy boundaries, definitions, and limitations. It attempts to make Dutch design culture fleetingly visible while leaving space for it to describe itself.</h1>
+  <div class="grid-layout-container">
+    <nav id="top-nav">
+      <a href="#" class="top-nav-item hoverable" id="nav-team">Team</a>
+      <a href="./legacy.html" class="top-nav-item hoverable" id="nav-legacy">Legacy</a>
+      <a href="#" class="top-nav-item" id="nav-blurb">DutchDesign</a>
+    </nav>
+    <div class="blurb-container hiddenUI" id="home-blurb">
+      <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing platform for field research, observation, and reportage. The protagonists are individuals who define their own worlds; who blur and destroy boundaries,
+        definitions, and limitations. It attempts to make Dutch design culture fleetingly visible while leaving space for it to describe itself.</h1>
+    </div>
+    <div class="calendar-container" id="home-cal">
+      <div class="cal-item" id="futuresItem"><a href="#" class="designer-dot active-dot" id="futuresDot" data-title="INTENTIONAL FUTURES" data-subtitle="SEATTLE // DIGITAL"></a></div>
+      <div class="cal-item" id="matthewsItem"><a href="#" class="designer-dot active-dot" id="matthewsDot" data-title="STUDIO MATTHEWS" data-subtitle="SEATTLE // BRANDING"></a></div>
+      <div class="cal-item" id="pepeItem"><a href="./pepe-heykoop.html" class="designer-dot active-dot" id="pepeDot" data-title="PEPE HEYKOOP" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
+      <div class="cal-item" id="inekeItem"><a href="./ineke-hans.html" class="designer-dot active-dot" id="inekeDot" data-title="INEKE HANS" data-subtitle="ARNHEM // PRODUCT & EXHIBITION"></a></div>
+      <div class="cal-item" id="momkaiItem"><a href="./momkai.html" class="designer-dot active-dot" id="momkaiDot" data-title="MOMKAI" data-subtitle="AMSTERDAM // DIGITAL"></a></div>
+      <div class="cal-item" id="lavaItem"><a href="./lava.html" class="designer-dot active-dot" id="lavaDot" data-title="LAVA" data-subtitle="AMSTERDAM // BRANDING"></a></div>
+      <div class="cal-item" id="aldoItem"><a href="./aldo-bakker.html" class="designer-dot active-dot" id="aldoDot" data-title="ALDO BAKKER" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
+      <div class="cal-item" id="rebeccaItem"><a href="./rebecca-geskus.html" class="designer-dot active-dot" id="rebeccaDot" data-title="REBECCA GESKUS" data-subtitle="TEXEL // TEXTILES"></a></div>
+      <div class="cal-item" id="corunumItem"><a href="./cor-unum.html" class="designer-dot active-dot" id="corunumDot" data-title="COR UNUM" data-subtitle="DEN BOSCH // CERAMICS"></a></div>
+      <div class="cal-item" id="florisItem"><a href="./floris-hovers.html" class="designer-dot active-dot" id="florisDot" data-title="FLORIS HOVERS" data-subtitle="RAMMSDONKSVEER // PRODUCT"></a></div>
+      <div class="cal-item" id="valentinItem"><a href="./valentin-loellmann.html" class="designer-dot active-dot" id="valentinDot" data-title="VALENTIN LOELLMANN" data-subtitle="MAASTRICHT // ART & PRODUCT"></a></div>
+      <div class="cal-item" id="edwinItem"><a href="./main-studio.html" class="designer-dot active-dot" id="edwinDot" data-title="MAIN STUDIO" data-subtitle="AMSTERDAM // EDITORIAL & GRAPHIC"></a></div>
+      <div class="cal-item" id="lexItem"><a href="./lex-pott.html" class="designer-dot active-dot" id="lexDot" data-title="LEX POTT" data-subtitle="ROTTERDAM // PRODUCT"></a></div>
+      <div class="cal-item" id="jurgenItem"><a href="./jurgen-bey.html" class="designer-dot active-dot" id="jurgenDot" data-title="STUDIO MAKKINK & BEY" data-subtitle="ROTTERDAM // RESEARCH & EXHIBITION"></a></div>
+      <div class="cal-item" id="nienkeItem"><a href="./nienke-hoogvliet.html" class="designer-dot active-dot" id="nienkeDot" data-title="NIENKE HOOGVLIET" data-subtitle="THE HAGUE // RESEARCH & PRODUCT"></a></div>
+      <div class="cal-item" id="trulyItem"><a href="./truky-truly.html" class="designer-dot active-dot" id="trulyDot" data-title="STUDIO TRULY TRULY" data-subtitle="ROTTERDAM // PRODUCT"></a></div>
+      <div class="cal-item" id="whatItem"><a href="#" class="designer-dot active-dot" id="whatDot" data-title="WHAT IS DESIGN?" data-subtitle="SHORT FILM"></a></div>
+      <div class="cal-item" id="reglazeItem"><span class="designer-dot active-dot" id="reglazeDot" data-title="REGLAZE" data-subtitle="SHORT FILM"></span></div>
+
+      <div class="cal-item" id="arnhemItem"><a href="#" class="experience-dot" id="arnhemDot" data-title="A DAY IN ARNHEM"></a></div>
+      <div class="cal-item" id="romeItem"><a href="#" class="experience-dot" id="romeDot" data-title="A WEEK IN ROMA"></a></div>
+      <div class="cal-item" id="appianItem"><a href="#" class="experience-dot" id="appianDot" data-title="THE APPIAN WAY RIDE"></a></div>
+      <div class="cal-item" id="andreaItem"><a href="#" class="experience-dot" id="andreaDot" data-title="WATERCOLOUR WORKSHOP"></a></div>
+      <div class="cal-item" id="farmItem"><a href="#" class="experience-dot" id="farmDot" data-title="A WEEK IN LEEUWARDEN"></a></div>
+      <div class="cal-item" id="texelsItem"><a href="#" class="experience-dot" id="texelsDot" data-title="A DAY IN TEXELS"></a></div>
+      <div class="cal-item" id="burgundyItem"><a href="#" class="experience-dot" id="burgundyDot" data-title="BURGUNDIAN BLACK"></a></div>
+      <div class="cal-item" id="feltingItem"><a href="#" class="experience-dot" id="feltingDot" data-title="FELTING WORKSHOP"></a></div>
+      <div class="cal-item" id="milkItem"><a href="#" class="experience-dot" id="milkDot" data-title="THE MILK RIDE"></a></div>
+      <div class="cal-item" id="breweryItem"><a href="#" class="experience-dot" id="breweryDot" data-title="CANTILLON BREWERY"></a></div>
+      <div class="cal-item" id="kikiItem"><a href="#" class="experience-dot" id="kikiDot" data-title="KIKI VAN IJK - ON CURIOUSITY"></a></div>
+      <div class="cal-item" id="rensItem"><a href="#" class="experience-dot" id="rensDot" data-title="RENS  - ON NATURAL DYES"></a></div>
+      <div class="cal-item" id="atelierItem"><a href="#" class="experience-dot" id="atelierDot" data-title="ATELIER NL - ON LOCAL SOIL"></a></div>
+      <div class="cal-item" id="btsItem"><a href="#" class="experience-dot" id="btsDot" data-title="BEHIND THE INTERVIEW"></a></div>
+    </div> <!-- calender-container ends here -->
+    <div class="header-display hiddenUI" id="dot-headers">
+      <h3 id="hover-subtitle"></h3>
+      <h2 id="hover-title">
+        <h2>
+    </div>
+    <nav class="list-navigation" id="main-nav">
+      <ul class="main-nav-list" id="designer-list">
+        <a href="./wid.html" class="hoverable" id="wid">
+          <li>What is Design</li>
+        </a>
+        <a href="./reglaze.html" class="hoverable" id="reglaze">
+          <li>Reglaze</li>
+        </a>
+        <a href="./main-studio.html" class="hoverable" id="edwin">
+          <li>Main Studio</li>
+        </a>
+        <a href="./truly-truly.html" class="hoverable" id="truly">
+          <li>Studio Truly Truly</li>
+        </a>
+        <a href="./jurgen-bey.html" class="hoverable" id="jurgen">
+          <li>Jurgen Bey</li>
+        </a>
+        <a href="./nienke-hoogvliet.html" class="hoverable" id="nienke">
+          <li>Nienke Hoogvliet</li>
+        </a>
+        <a href="./lex-pott.html" class="hoverable" id="lex">
+          <li>Lex Pott</li>
+        </a>
+        <a href="./valentin-loellmann.html" class="hoverable" id="valentin">
+          <li>Valentin Loellmann</li>
+        </a>
+        <a href="./cor-unum.html" class="hoverable" id="corunum">
+          <li>Cor Unum</li>
+        </a>
+        <a href="./floris-hovers.html" class="hoverable" id="floris">
+          <li>Floris Hovers</li>
+        </a>
+        <a href="./rebecca-geskus.html" class="hoverable" id="rebecca">
+          <li>Rebecca Geskus</li>
+        </a>
+        <a href="./aldo-bakker.html" class="hoverable" id="aldo">
+          <li>Aldo Bakker</li>
+        </a>
+        <a href="./momkai.html" class="hoverable" id="momkai">
+          <li>Momkai Studios</li>
+        </a>
+        <a href="./lava.html" class="hoverable"  id="lava">
+          <li>Lava Amsterdam</li>
+        </a>
+        <a href="./ineke-hans.html" class="hoverable" id="ineke">
+          <li>Ineke Hans</li>
+        </a>
+        <a href="./pepe-heykoop.html"class="hoverable"  id="pepe">
+          <li>Pepe Heykoop</li>
+        </a>
+        <a href="#" id="matthews" class="hoverable">
+          <li>Studio Matthews</li>
+        </a>
+        <a href="#" id="futures" class="hoverable">
+          <li>Intentional Futures</li>
+        </a>
+      </ul>
+      <ul class="main-nav-list hiddenUI" id="fnotes-list">
+        <a href="#">
+          <li id="arnhem">Arnhem</li>
+        </a>
+        <a href="#">
+          <li id="rome">Roma</li>
+        </a>
+        <a href="#">
+          <li id="appian">Appian Way</li>
+        </a>
+        <a href="#">
+          <li id="andrea">Andrea's Workshop</li>
+        </a>
+        <a href="#">
+          <li id="farm">Farm Life</li>
+        </a>
+        <a href="#">
+          <li id="texels">Texels</li>
+        </a>
+        <a href="#">
+          <li id="burgundy">Burgundian Black</li>
+        </a>
+        <a href="#">
+          <li id="felting">Claudy's Workshop</li>
+        </a>
+        <a href="#">
+          <li id="milk">'T Melkhuisje</li>
+        </a>
+        <a href="#">
+          <li id="brewery">Cantillon Brewery</li>
+        </a>
+        <a href="#">
+          <li id="kiki">Kiki Van Eijk</li>
+        </a>
+        <a href="#">
+          <li id="rens">Rens</li>
+        </a>
+        <a href="#">
+          <li id="atelier">Atelier NL</li>
+        </a>
+        <a href="#">
+          <li id="bts">Behind the Scenes</li>
+        </a>
+      </ul>
+    </nav>
+
+    <div class="cursor">
+      <div class="cursor__ball--big ">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
       </div>
-      <div class="calendar-container" id="home-cal">
-        <div class="cal-item" id="futuresItem"><a href="#" class="designer-dot active-dot" id="futuresDot" data-title="INTENTIONAL FUTURES" data-subtitle="SEATTLE // DIGITAL"></a></div>
-        <div class="cal-item" id="matthewsItem"><a href="#" class="designer-dot active-dot" id="matthewsDot" data-title="STUDIO MATTHEWS" data-subtitle="SEATTLE // BRANDING"></a></div>
-        <div class="cal-item" id="pepeItem"><a href="./pepe-heykoop.html" class="designer-dot active-dot" id="pepeDot" data-title="PEPE HEYKOOP" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
-        <div class="cal-item" id="inekeItem"><a href="./ineke-hans.html" class="designer-dot active-dot" id="inekeDot" data-title="INEKE HANS" data-subtitle="ARNHEM // PRODUCT & EXHIBITION"></a></div>
-        <div class="cal-item" id="momkaiItem"><a href="./momkai.html" class="designer-dot active-dot" id="momkaiDot" data-title="MOMKAI" data-subtitle="AMSTERDAM // DIGITAL"></a></div>
-        <div class="cal-item" id="lavaItem"><a href="./lava.html" class="designer-dot active-dot" id="lavaDot" data-title="LAVA" data-subtitle="AMSTERDAM // BRANDING"></a></div>
-        <div class="cal-item" id="aldoItem"><a href="./aldo-bakker.html" class="designer-dot active-dot" id="aldoDot" data-title="ALDO BAKKER" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
-        <div class="cal-item" id="rebeccaItem"><a href="./rebecca-geskus.html" class="designer-dot active-dot" id="rebeccaDot" data-title="REBECCA GESKUS" data-subtitle="TEXEL // TEXTILES"></a></div>
-        <div class="cal-item" id="corunumItem"><a href="./cor-unum.html" class="designer-dot active-dot" id="corunumDot" data-title="COR UNUM" data-subtitle="DEN BOSCH // CERAMICS"></a></div>
-        <div class="cal-item" id="florisItem"><a href="./floris-hovers.html" class="designer-dot active-dot" id="florisDot" data-title="FLORIS HOVERS" data-subtitle="RAMMSDONKSVEER // PRODUCT"></a></div>
-        <div class="cal-item" id="valentinItem"><a href="./valentin-loellmann.html" class="designer-dot active-dot" id="valentinDot" data-title="VALENTIN LOELLMANN" data-subtitle="MAASTRICHT // ART & PRODUCT"></a></div>
-        <div class="cal-item" id="edwinItem"><a href="./main-studio.html" class="designer-dot active-dot" id="edwinDot" data-title="MAIN STUDIO" data-subtitle="AMSTERDAM // EDITORIAL & GRAPHIC"></a></div>
-        <div class="cal-item" id="lexItem"><a href="./lex-pott.html" class="designer-dot active-dot" id="lexDot" data-title="LEX POTT" data-subtitle="ROTTERDAM // PRODUCT"></a></div>
-        <div class="cal-item" id="jurgenItem"><a href="./jurgen-bey.html" class="designer-dot active-dot" id="jurgenDot" data-title="STUDIO MAKKINK & BEY" data-subtitle="ROTTERDAM // RESEARCH & EXHIBITION"></a></div>
-        <div class="cal-item" id="nienkeItem"><a href="./nienke-hoogvliet.html" class="designer-dot active-dot" id="nienkeDot" data-title="NIENKE HOOGVLIET" data-subtitle="THE HAGUE // RESEARCH & PRODUCT"></a></div>
-        <div class="cal-item" id="trulyItem"><a href="./truky-truly.html" class="designer-dot active-dot" id="trulyDot" data-title="STUDIO TRULY TRULY" data-subtitle="ROTTERDAM // PRODUCT"></a></div>
-        <div class="cal-item" id="whatItem"><a href="#" class="designer-dot active-dot" id="whatDot" data-title="WHAT IS DESIGN?" data-subtitle="SHORT FILM"></a></div>
-        <div class="cal-item" id="reglazeItem"><span class="designer-dot active-dot" id="reglazeDot" data-title="REGLAZE" data-subtitle="SHORT FILM"></span></div>
-
-        <div class="cal-item" id="arnhemItem"><a href="#" class="experience-dot" id="arnhemDot" data-title="A DAY IN ARNHEM"></a></div>
-        <div class="cal-item" id="romeItem"><a href="#" class="experience-dot" id="romeDot" data-title="A WEEK IN ROMA"></a></div>
-        <div class="cal-item" id="appianItem"><a href="#" class="experience-dot" id="appianDot" data-title="THE APPIAN WAY RIDE"></a></div>
-        <div class="cal-item" id="andreaItem"><a href="#" class="experience-dot" id="andreaDot" data-title="WATERCOLOUR WORKSHOP"></a></div>
-        <div class="cal-item" id="farmItem"><a href="#" class="experience-dot" id="farmDot" data-title="A WEEK IN LEEUWARDEN"></a></div>
-        <div class="cal-item" id="texelsItem"><a href="#" class="experience-dot" id="texelsDot" data-title="A DAY IN TEXELS"></a></div>
-        <div class="cal-item" id="burgundyItem"><a href="#" class="experience-dot" id="burgundyDot" data-title="BURGUNDIAN BLACK"></a></div>
-        <div class="cal-item" id="feltingItem"><a href="#" class="experience-dot" id="feltingDot" data-title="FELTING WORKSHOP"></a></div>
-        <div class="cal-item" id="milkItem"><a href="#" class="experience-dot" id="milkDot" data-title="THE MILK RIDE"></a></div>
-        <div class="cal-item" id="breweryItem"><a href="#" class="experience-dot" id="breweryDot" data-title="CANTILLON BREWERY"></a></div>
-        <div class="cal-item" id="kikiItem"><a href="#" class="experience-dot" id="kikiDot" data-title="KIKI VAN IJK - ON CURIOUSITY"></a></div>
-        <div class="cal-item" id="rensItem"><a href="#" class="experience-dot" id="rensDot" data-title="RENS  - ON NATURAL DYES"></a></div>
-        <div class="cal-item" id="atelierItem"><a href="#" class="experience-dot" id="atelierDot" data-title="ATELIER NL - ON LOCAL SOIL"></a></div>
-        <div class="cal-item" id="btsItem"><a href="#" class="experience-dot" id="btsDot" data-title="BEHIND THE INTERVIEW"></a></div>
-      </div> <!-- calender-container ends here -->
-      <div class="header-display hiddenUI" id="dot-headers">
-        <h3 id="hover-subtitle"></h3>
-        <h2 id="hover-title"><h2>
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
       </div>
-      <nav class="list-navigation" id="main-nav">
-        <ul class="main-nav-list" id="designer-list">
-          <a href="./wid.html" id="wid"><li>What is Design</li></a>
-          <a href="./reglaze.html" id="reglaze"><li>Reglaze</li></a>
-          <a href="./main-studio.html" id="edwin"><li>Main Studio</li></a>
-          <a href="./truly-truly.html" id="truly"><li>Studio Truly Truly</li></a>
-          <a href="./jurgen-bey.html" id="jurgen"><li>Jurgen Bey</li></a>
-          <a href="./nienke-hoogvliet.html" id="nienke"><li>Nienke Hoogvliet</li></a>
-          <a href="./lex-pott.html" id="lex"><li>Lex Pott</li></a>
-          <a href="./valentin-loellmann.html" id="valentin"><li>Valentin Loellmann</li></a>
-          <a href="./cor-unum.html" id="corunum"><li>Cor Unum</li></a>
-          <a href="./floris-hovers.html" id="floris"><li>Floris Hovers</li></a>
-          <a href="./rebecca-geskus.html" id="rebecca"><li>Rebecca Geskus</li></a>
-          <a href="./aldo-bakker.html" id="aldo"><li>Aldo Bakker</li></a>
-          <a href="./momkai.html" id="momkai"><li>Momkai Studios</li></a>
-          <a href="./lava.html" id="lava"><li>Lava Amsterdam</li></a>
-          <a href="./ineke-hans.html" id="ineke"><li>Ineke Hans</li> </a>
-          <a href="./pepe-heykoop.html" id="pepe"><li>Pepe Heykoop</li></a>
-          <a href="#" id="matthews"><li>Studio Matthews</li></a>
-          <a href="#" id="futures"><li>Intentional Futures</li></a>
-        </ul>
-        <ul class="main-nav-list hiddenUI" id="fnotes-list">
-          <a href="#"><li id="arnhem">Arnhem</li></a>
-          <a href="#"><li id="rome">Roma</li></a>
-          <a href="#"><li id="appian">Appian Way</li></a>
-          <a href="#"><li id="andrea">Andrea's Workshop</li></a>
-          <a href="#"><li id="farm">Farm Life</li></a>
-          <a href="#"><li id="texels">Texels</li></a>
-          <a href="#"><li id="burgundy">Burgundian Black</li></a>
-          <a href="#"><li id="felting">Claudy's Workshop</li></a>
-          <a href="#"><li id="milk">'T Melkhuisje</li></a>
-          <a href="#"><li id="brewery">Cantillon Brewery</li></a>
-          <a href="#"><li id="kiki">Kiki Van Eijk</li></a>
-          <a href="#"><li id="rens">Rens</li></a>
-          <a href="#"><li id="atelier">Atelier NL</li></a>
-          <a href="#"><li id="bts">Behind the Scenes</li></a>
-        </ul>
-      </nav>
+    </div>
 
-      <nav class="grid-item" id="main-toggle">
-        <a href="#" class="landing-toggle active" id="toggle-int"> Films </a>
-        <a href="#" class="landing-toggle" id="toggle-field">Field Notes</a>
-      </nav>
+    <nav class="grid-item" id="main-toggle">
+      <a href="#" class="landing-toggle active" id="toggle-int"> Films </a>
+      <a href="#" class="landing-toggle" id="toggle-field">Field Notes</a>
+    </nav>
 
-    </div> <!-- grid ends here -->
-  </body>
+  </div> <!-- grid ends here -->
+
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+
 </html>

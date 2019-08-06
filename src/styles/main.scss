@@ -6,6 +6,8 @@ $primary-green: #DFEA4E;
 $secondary-purp: #7D246B;
 
 @import './1-helpers/fonts';
+@import './2-modules/layouts';
+@import './2-modules/background';
 
 *, html {
   color: black;
@@ -33,8 +35,27 @@ a#imgHover {
 *.hiddenUI {
   display: none !important;
 }
-@import './2-modules/layouts';
-@import './2-modules/background';
+
+
+body .cursor__ball--big  {
+  display: none;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+  z-index: 1000;
+}
+body .cursor__ball circle {
+  fill: purple;
+}
+
+
 
 /* --------------- grid box styling-----------------------------*/
 #top-nav {

@@ -73,33 +73,6 @@
   font-family: maisonMono-Regular;
   src: url(../../fonts/MaisonMono-Regular.otf);
 }
-*, html {
-  color: black;
-}
-
-h1.title {
-  display: inline-block;
-  margin: 50px;
-}
-
-/* ---------------- Links and cursor styling -------------------------- */
-a {
-  text-decoration: none;
-  display: block;
-}
-
-a#imgHover {
-  display: inline;
-}
-
-.active {
-  border-bottom: 2px solid purple;
-}
-
-*.hiddenUI {
-  display: none !important;
-}
-
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -397,6 +370,53 @@ html.designer-page-body {
   background-size: 4.54vw 6.67vh;
   z-index: -1;
   opacity: 0.5;
+}
+
+*, html {
+  color: black;
+}
+
+h1.title {
+  display: inline-block;
+  margin: 50px;
+}
+
+/* ---------------- Links and cursor styling -------------------------- */
+a {
+  text-decoration: none;
+  display: block;
+}
+
+a#imgHover {
+  display: inline;
+}
+
+.active {
+  border-bottom: 2px solid purple;
+}
+
+*.hiddenUI {
+  display: none !important;
+}
+
+body .cursor__ball--big {
+  display: none;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+  z-index: 1000;
+}
+
+body .cursor__ball circle {
+  fill: purple;
 }
 
 /* --------------- grid box styling-----------------------------*/
