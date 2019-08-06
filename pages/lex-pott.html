@@ -1,111 +1,184 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="designer-page-body">
-  <head>
-    <meta charset="utf-8">
-    <title>Dutch Design 2019 - Lex Pott</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script type="text/javascript" src="../js/designer.js" async defer></script>
-    <script type="text/javascript" src="../js/designer/lex.js" async defer></script>
-  </head>
-  <body>
-    <div id="scroll-tool" class="scroll-util">
-      <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0"/>
-      </svg>
-      <p class="inner-util" id="scroll-top">BACK TO TOP</p>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dutch Design 2019 - Lex Pott</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script type="text/javascript" src="../js/designer.js" async defer></script>
+  <script type="text/javascript" src="../js/designer/lex.js" async defer></script>
+</head>
+
+<body>
+  <div id="scroll-tool" class="scroll-util">
+    <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0" />
+    </svg>
+    <p class="inner-util" id="scroll-top">BACK TO TOP</p>
+  </div>
+
+  <figure class="video-container play-cursor" id="video-fig">
+    <div class='embed-container'>
+      <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
+        <source src="../assets/videos/interview_floris.mp4" type="video/mp4">
+        </source>
+      </video>
+      <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
     </div>
-    <figure class="video-container play-cursor" id="video-fig">
-      <div class='embed-container'>
-        <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
-          <source src="../assets/videos/interview_floris.mp4" type="video/mp4"></source>
-        </video>
-        <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
+    <div class="video-overlay" id="designer-overlay">
+      <h2 class="designer-tagline white-txt">Rotterdam - Product</h2>
+      <h1 class="designer-name white-txt">Lex Pott</h1>
+      <p class="designer-blurb white-txt">An independent designer who looks for a moment in the production process to intervene, do something unexpected, and see how that changes outcomes — including products that have existed for 100's of years.</p>
+    </div>
+    <div class="video-controls" id="vid-controls">
+      <div class="progress" id="progress">
+        <span class="vidbar" id="playback"></span>
       </div>
-      <div class="video-overlay" id="designer-overlay">
-        <h2 class="designer-tagline white-txt">Rotterdam -  Product</h2>
-        <h1 class="designer-name white-txt">Lex Pott</h1>
-        <p class="designer-blurb white-txt">An independent designer who looks for a moment in the production process to intervene, do something unexpected, and see how that changes outcomes — including products that have existed for 100's of years.</p>
+      <div class="vid-buttons">
+        <button class="play" id="play-pause"></button>
       </div>
-      <div class="video-controls" id="vid-controls">
-        <div class="progress" id="progress">
-          <span class="vidbar" id="playback"></span>
-        </div>
-        <div class="vid-buttons">
-          <button class="play" id="play-pause"></button>
-        </div>
-        <div class="timeblock">
-          <div id="currentTime">00:00</div>
-          <span style="color: purple">/<span>
-          <div id="vidDuration">00:00</div>
-        </div>
-        <div class="vid-buttons fs">
-          <button class="fullscreen" id="fs">FULLSCREEN</button>
-        </div>
+      <div class="timeblock">
+        <div id="currentTime">00:00</div>
+        <span style="color: purple">/<span>
+            <div id="vidDuration">00:00</div>
       </div>
-    </figure>
-    <section class=designer-top-section>
-      <nav id="designer-toggle">
-        <a href="#" class="content-toggle active-toggle" id="toggle-overview">Overview</a>
-        <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>
-      </nav>
-      <div class=designer-summary>
-        <h2 class="designer-tagline black-txt">Rotterdam - Products</h2>
-        <h1 class="designer-name black-txt">Lex Pott</h1>
-        <p class="designer-blurb black-txt">An independent designer who looks for a moment in the production process to intervene, do something unexpected, and see how that changes outcomes — including products that have existed for 100's of years.</p>
+      <div class="vid-buttons fs">
+        <button class="fullscreen" id="fs">FULLSCREEN</button>
+      </div>
+    </div>
+  </figure>
+
+  <!-- DESIGNER TOP SECTION -->
+  <section class="designer-top-section">
+    <nav id="designer-toggle">
+      <a href="#" class="content-toggle active" id="toggle-overview">Overview</a>
+      <a href="#" class="content-toggle" id="toggle-transcript">Transcript</a>
+    </nav>
+    <div class="designer-summary">
+      <h2 class="designer-tagline black-txt">Rotterdam - Products</h2>
+      <h1 class="designer-name black-txt">Lex Pott</h1>
+      <p class="designer-blurb black-txt">An independent designer who looks for a moment in the production process to intervene, do something unexpected, and see how that changes outcomes — including products that have existed for 100's of years.</p>
+    </div>
+  </section>
+
+  <!-- DESIGNER OVERVIEW -->
+  <section id="overview">
+    <section class="photo-section-6">
+      <img class="layout-item shown-item" id="lex-candid" src="../assets/images/lex/lex_section6_img1.jpg"></img>
+      <img class="layout-item shown-item" id="lexhands" src="../assets/images/lex/lex_section6_img2.jpg"></img>
+      <img class="layout-item shown-item" id="lexhands2" src="../assets/images/lex/lex_section6_img3.jpg"></img>
+      <p class="section-quote shown-item" id="quote1">I'm not a designer that designs objects or shapes, they're mostly an outcome of a process.</p>
+    </section>
+    <section class="photo-section-7">
+      <img class="layout-item shown-item" id="widespace" src="../assets/images/lex/lex_section7_img1.jpg"></img>
+      <img class="layout-item shown-item" id="lex_space" src="../assets/images/lex/lex_section7_img2.jpg"></img>
+      <img class="layout-item shown-item" id="machinary" src="../assets/images/lex/lex_section7_img3.jpg"></img>
+    </section>
+    <section class="photo-section-5">
+      <div class="layout-item shown-item" id="truecolours">
+        <p class="section-caption" id="caption2">True Colours started as an investigation of cultivated material colour and natural material behaviour. <p>
+            <img id="coloursclose" src="../assets/images/lex/lex_section5_img1.jpg"></img>
+      </div>
+      <img class="layout-item shown-item" id="colours" src="../assets/images/lex/lex_section5_img2.jpg"></img>
+      <p class="section-quote layout-item shown-item" id="quote2">Once you have a sharp line between something cultivated and something natural, it creates dialogue.</p>
+    </section>
+    <section class="photo-section-2">
+      <img class="layout-item shown-item" id="roughclog" src="../assets/images/lex/lex_section2_img1.jpg"></img>
+      <img class=" layout-item shown-item" id="manyclogs" src="../assets/images/lex/lex_section2_img2.jpg"></img>
+      <img class="layout-item shown-item" id="clogcolours" src="../assets/images/lex/lex_section2_img3.jpg"></img>
+      <p class="section-quote type-two layout-item shown-item" id="quote3">As a designer you try to re-evaluate all the ingredients. Not only shape, but also colour, texture, etcetera.</p>
+    </section>
+    <section class="photo-section-4">
+      <div class="layout-item">
+        <img class="shown-item" id="roughcandles" src="../assets/images/lex/lex_section4_img1.jpg"></img>
+        <p class="section-quote" id="quote4">One of the qualities of making something your own is that you don't have to repeat the process endlessly, but that you can make each product unique.<p>
+      </div>
+      <div class="layout-item shown-item" id="pillar">
+        <p class="section-caption">As the candle melts, the wax drips accumulate upon the following levels. So as the candle is used, it gets shorter but the base gets wider; depicting the story of the wax becoming liquid.</p>
+        <img src="../assets/images/lex/lex_section4_img2.jpg"></img>
       </div>
     </section>
-    <div class="scroll-container">
-      <section class="photo-section-6">
-        <img class="layout-item shown-item" id="lex-candid" src="../assets/images/lex/lex_section6_img1.jpg"></img>
-        <img class="layout-item shown-item" id="lexhands" src="../assets/images/lex/lex_section6_img2.jpg"></img>
-        <img class="layout-item shown-item" id="lexhands2" src="../assets/images/lex/lex_section6_img3.jpg"></img>
-        <p class="section-quote shown-item" id="quote1">I'm not a designer that designs objects or shapes, they're mostly an outcome of a process.</p>
-      </section>
-      <section class="photo-section-7">
-        <img class="layout-item shown-item" id="widespace" src="../assets/images/lex/lex_section7_img1.jpg"></img>
-        <img class="layout-item shown-item" id="lex_space" src="../assets/images/lex/lex_section7_img2.jpg"></img>
-        <img class="layout-item shown-item" id="machinary" src="../assets/images/lex/lex_section7_img3.jpg"></img>
-      </section>
-      <section class="photo-section-5">
-        <div class="layout-item shown-item" id="truecolours">
-          <p class="section-caption" id="caption2">True Colours started as an investigation of cultivated material colour and natural material behaviour. <p>
-          <img id="coloursclose" src="../assets/images/lex/lex_section5_img1.jpg"></img>
-        </div>
-        <img class="layout-item shown-item" id="colours" src="../assets/images/lex/lex_section5_img2.jpg"></img>
-        <p class="section-quote layout-item shown-item" id="quote2">Once you have a sharp line between something cultivated and something natural, it creates dialogue.</p>
-      </section>
-      <section class="photo-section-2">
-        <img class="layout-item shown-item" id="roughclog" src="../assets/images/lex/lex_section2_img1.jpg"></img>
-        <img class=" layout-item shown-item" id="manyclogs" src="../assets/images/lex/lex_section2_img2.jpg"></img>
-        <img class="layout-item shown-item" id="clogcolours" src="../assets/images/lex/lex_section2_img3.jpg"></img>
-        <p class="section-quote type-two layout-item shown-item" id="quote3">As a designer you try to re-evaluate all the ingredients. Not only shape, but also colour, texture, etcetera.</p>
-      </section>
-      <section class="photo-section-4">
-        <div class="layout-item">
-          <img class="shown-item" id="roughcandles" src="../assets/images/lex/lex_section4_img1.jpg"></img>
-          <p class="section-quote" id="quote4">One of the qualities of making something your own is that you don't have to repeat the process endlessly, but that you can make each product unique.<p>
-        </div>
-        <div class="layout-item shown-item" id="pillar">
-          <p class="section-caption">As the candle melts, the wax drips accumulate upon the following levels. So as the candle is used, it gets shorter but the base gets wider; depicting the story of the wax becoming liquid.</p>
-          <img src="../assets/images/lex/lex_section4_img2.jpg"></img>
-        </div>
-      </section>
-      <img class="fullbleed" src="../assets/images/lex/lex_end.jpg"></img>
-      <footer class="designer-footer">
-        <p>Interview by: <a id="interviewers" href="#">Marine Au Yeung & Sanny Trinh</a>,<br> <a href="#">Meet the Team</a></p>
-        <p>Lex's website is: <br><a href="http://www.lexpott.nl">www.lexpott.nl</a></p>
-      </footer>
+    <img class="fullbleed" src="../assets/images/lex/lex_end.jpg"></img>
+    <footer class="designer-footer">
+      <p>Interview by: <a id="interviewers" href="#">Marine Au Yeung & Sanny Trinh</a>,<br> <a href="#">Meet the Team</a></p>
+      <p>Lex's website is: <br><a href="http://www.lexpott.nl">www.lexpott.nl</a></p>
+    </footer>
+  </section>
+
+  <!-- DESIGNER TRANSCRIPT -->
+  <section class="transcript">
+    <div id="transcript-container">
+      <h3 id="intro">Introduction</h3>
+      <p>00:00</p>
+      <p>I've always have been focusing very much on designing the product set I like to design or that I want to do maybe even without a demand or without a question.</p>
+      <p>00:00</p>
+      <p>I am <a data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"><span>Lex Pott </span>. I studied in Eindhoven at the design academy and currently I'm an independent designer working and living in Rotterdam.</p>
+      <h3 id=“keyword”>True Colours</h3>
+      <p>00:00</p>
+      <p>People always have the tendency to cultivate metals. But if you leave it up to nature, it will slowly transform into another color. And that was actually the starting point of the true colors. A project where I wanted to show the <span
+          id=“keyword”>cultivated material color</span> and the <span id=“keyword”>natural behavior</span>. </p>
+      <p>00:00</p>
+      <p>Once you frame it, it automatically creates a dialogue because within this border the tension is happening.
+        And for me it was a process that I was showing, these <span id=“keyword”>six panels with six different chemical formulas</span> and people actually saw them as an end product.</p>
+      <p>00:00</p>
+      <p>
+        And that gave me the motivation to go deeper into it. And at a certain point I found the necessity to make it into a <a data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"><span>product</span></a> for myself.</p>
+      <h3>Pillar Candles</h3>
+      <p>00:00</p>
+      <p>It's very important for me to look at the world as a designer. So basically you see a product or a process, it involves certain steps which are already done before. And I think I'm constantly looking for those interventions where you change
+        something in the process that leads to a different outcome all the way at the end. </p>
+      <p>00:00</p>
+      <p>And I think <a data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"><span>the candles</span></a> are a good example of looking at what's already out there. And, in the past I've been working on candle holders quite
+        often because a lot of labels are interested in candle holders as homeware accessories.</p>
+      <p>00:00</p>
+      <p>And when you think of a candle holder, basically you're designing a holder for a candle but not the actual candle itself. So that triggered me to work on a candle without and sort of ignoring the candle holder as an object.
+        The beautiful thing that happened is I started with the rustic candle, but it has this cracked irregular skin on the outside. And I literally put an existing candle in <span id=“keyword”>the lathe</span>, and tried to spin it as a carpenter
+        would do or as a craftsman would do.</p>
+      <p>00:00</p>
+      <p>I was doubting, should I do this? Is a good enough, maybe, maybe it's not nice or it doesn't make sense. I think maybe it's just me, but I think more people have it that they're very insecure in a certain way of what they're doing. And for
+        me the insecurity is a way of questioning yourself and questioning the design, questioning the process.</p>
+      <h3>Poplars</h3>
+      <p>00:00</p>
+      <p>For me, design is very much about a personal necessity. So, uh, almost designing from intuition and from what you believe is good. So basically the <a data-img="https://via.placeholder.com/840x540.png" data-fx="1"
+          id="imgHover"><span>poplars</span></a> were, a nice example of self initiated work done for an exhibition.</p>
+      <p>00:00</p>
+      <p>Play with heritage, play with legacy, the fact that I'm Dutch and what kind of products match with that and personal necessity because I really wanted to have a wooden shoe for my own garden, reinvented, redesign it. And then luckily a label
+        was interested in this case Weltevree, to put it on the market.</p>
+      <p>00:00</p>
+      <p>And in the beginning they were a bit skeptical. Like why would you reinvent a shoe that has been the same for five hundred years? Because it's legacy, it's an icon, it's archetype. So why would you change it? You know, if you change it, no
+        one wants it.</p>
+      <p>00:00</p>
+      <p>And we actually said the opposite because it's the same. Less and less people use it. It ends up as being a touristic icon while the people that should actually use it aren't. So I said, why don't you<a
+          data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"> <span>redesign the shape</span></a>, and make it accessible for people in urban environments.</p>
+      <p>00:00</p>
+      <p>And one of the intentions I have with the, with the project is to make the wooden shoe much more slim as we nowadays all have sneakers. With a sneaker, you could say a rubber sole has flex to it. So it, it's automatically very comfortable,
+        but a wooden shoe is stiff and hard. So all the comfort needs to be in the shape. For instance, if you walk, they always say a wooden shoe needs to roll basically.</p>
+      <p>00:00</p>
+      <p>But as a designer you try to reevaluate all the ingredients, are not only shape but also colour, texture, et cetera, et cetera. Somehow the normal behavior in the wooden shoe industry is to make each wooden shoe high gloss. By making it <a
+          data-img="https://via.placeholder.com/840x540.png" data-fx="1" id="imgHover"><span>>matte</span></a>, the light is much more absorbed, which emphasizes the shape in a much stronger way. So this still has been to classical or referring to
+        the past. And for me, this is a reflection towards the future and hopefully the future potential that this wooden shoe will have.</p>
+      <p>00:00</p>
+      <p>I think personal necessity is one thing. But public necessity for instance, is very relevant when you add function to an investigation. And in that sense, you could say, I'm not a designer that designs objects or shapes, but they're mostly
+        an outcome of a process.</p>
     </div>
-  </body>
+  </section>
+
+</body>
+<!-- javascript srcs for hover effect -->
+
+<script src="../js/charming.min.js"></script>
+<script src="../js/imagesloaded.pkgd.min.js"></script>
+<script src="../js/TweenMax.min.js"></script>
+
 </html>
