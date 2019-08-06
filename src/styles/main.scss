@@ -466,6 +466,7 @@ a#imgHover {
     background: rgb(15,15,5);
     width: 100%;
     height: 6vh;
+    cursor: pointer;
     .progress{
       position: absolute;
       width: 100%;
@@ -474,7 +475,6 @@ a#imgHover {
       background-color: rgb(255,255,255,0.8);
       margin-bottom: 10px;
       top: 0;
-
       .vidbar{
         position: absolute;
         background-color: purple;
@@ -525,11 +525,11 @@ a#imgHover {
 }
 
 .play-cursor {
-  cursor: url(../../assets/images/play.png), auto;
+  cursor: url(../../assets/images/play45x45.png) 20 20, auto;
 }
 
 .pause-cursor {
-  cursor: url(../../assets/images/pause.png), auto;
+  cursor: url(../../assets/images/pause30x45.png) 15 20, auto;
 }
 
 .designer-tagline{
