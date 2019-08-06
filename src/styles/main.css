@@ -394,6 +394,12 @@ html.designer-page-body {
   font-weight: bold;
   color: #7D246B;
   text-transform: uppercase;
+  height: 1rem;
+  padding: 3px 0px;
+}
+#top-nav a.top-nav-item:hover {
+  background-color: #7D246B;
+  color: #DFEA4E;
 }
 
 /* consistently use this to hide things */
@@ -466,7 +472,7 @@ html.designer-page-body {
 }
 
 #main-toggle {
-  font-size: 0.5em;
+  font-size: 0.7em;
   font-family: hyperMarket;
   color: white;
   grid-row: 13/span 1;
@@ -477,6 +483,7 @@ html.designer-page-body {
 
 .landing-toggle {
   color: purple;
+  text-transform: uppercase;
 }
 
 .landing-toggle.active {

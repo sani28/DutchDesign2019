@@ -33,6 +33,12 @@ a {
     font-weight: bold;
     color: $secondary-purp;
     text-transform: uppercase;
+    height: 1rem;
+    padding: 3px 0px;
+  }
+  a.top-nav-item:hover{
+    background-color: $secondary-purp;
+    color: $primary-green;
   }
 }
 /* consistently use this to hide things */
@@ -114,7 +120,7 @@ a {
 
 
 #main-toggle {
-  font-size: 0.5em;
+  font-size: 0.7em;
   font-family: hyperMarket;
   color: white;
   grid-row: 13 / span 1;
@@ -125,6 +131,7 @@ a {
 
 .landing-toggle{
   color: purple;
+  text-transform: uppercase;
 }
 
 .landing-toggle.active{

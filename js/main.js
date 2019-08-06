@@ -201,8 +201,8 @@ $(document).ready(function(){
       }
       else{
         interviewsActive = false;
-        $(this).addClass("active-toggle");
-        $("#toggle-int").removeClass("active-toggle");
+        $(this).addClass("active");
+        $("#toggle-int").removeClass("active");
         toggleDotSize();
         changeMenuItems();
       }
@@ -213,8 +213,8 @@ $(document).ready(function(){
       }
       else{
         interviewsActive = true;
-        $(this).addClass("active-toggle");
-        $("#toggle-field").removeClass("active-toggle");
+        $(this).addClass("active");
+        $("#toggle-field").removeClass("active");
         toggleDotSize();
         changeMenuItems();
       }
