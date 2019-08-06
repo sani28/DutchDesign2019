@@ -808,39 +808,40 @@ html.designer-page-body {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  bottom: 9vh;
-  background: linear-gradient(0deg, lightgrey, transparent);
+  bottom: 6vh;
+  background: #0f0f05;
   width: 100%;
-  height: 8vh;
+  height: 6vh;
 }
 .video-container .video-controls .progress {
-  position: relative;
-  width: 94%;
-  height: 10px;
-  right: 3%;
-  left: 3%;
-  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 9px;
+  background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 10px;
+  top: 0;
 }
 .video-container .video-controls .progress .vidbar {
   position: absolute;
   background-color: purple;
-  height: 10px;
+  height: 9px;
   width: 0%;
 }
 .video-container .video-controls .timeblock {
-  align-self: flex-start;
-  margin-top: none;
+  margin-top: 5px;
 }
 .video-container .video-controls .timeblock div {
   display: inline-block;
   font-family: Maison Neue;
   font-size: 0.75em;
-  color: #7D246B;
+  color: #DFEA4E;
+}
+.video-container .video-controls .timeblock span {
+  color: #DFEA4E;
 }
 .video-container .video-controls .vid-buttons {
-  align-self: flex-start;
-  margin-left: 3%;
+  margin-top: 5px;
+  margin-left: 2%;
   width: 6%;
 }
 .video-container .video-controls .vid-buttons button {
@@ -848,8 +849,8 @@ html.designer-page-body {
   border: 0;
   outline: none;
   cursor: pointer;
-  color: #7D246B;
-  font-family: hyperMarket;
+  color: #DFEA4E;
+  font-family: Maison Neue;
   font-size: 0.75em;
   text-transform: uppercase;
 }
@@ -863,7 +864,7 @@ html.designer-page-body {
 }
 .video-container .video-controls .vid-buttons.fs {
   margin-left: auto;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 
 .play-cursor {
@@ -879,6 +880,7 @@ html.designer-page-body {
   font-size: 0.75em;
   margin-bottom: 0;
   text-transform: uppercase;
+  color: white;
 }
 
 .designer-name {
