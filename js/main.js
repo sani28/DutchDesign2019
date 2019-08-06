@@ -36,7 +36,12 @@ $(document).ready(function(){
       $(hiddenElements[i]).removeClass("hiddenUI");
     }
   }
+  function toggleBlurb(){
+    $("#home-blurb").toggleClass("hiddenUI");
+    $("#home-cal").toggleClass("hiddenUI");
+  }
 
+  $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
 
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;

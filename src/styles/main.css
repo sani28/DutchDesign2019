@@ -78,6 +78,10 @@ a {
   display: block;
 }
 
+*.hiddenUI {
+  display: none !important;
+}
+
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -400,15 +404,6 @@ html.designer-page-body {
   color: #DFEA4E;
 }
 
-#top-nav.hiddenUI {
-  display: none;
-}
-
-/* consistently use this to hide things */
-[id].hiddenUI {
-  display: none;
-}
-
 #main-nav {
   grid-row: 13/span 1;
   grid-column: 7/-1;
@@ -497,6 +492,20 @@ html.designer-page-body {
 }
 
 /* -----------------DOTS AND VIDEO STYLING----------------- */
+.blurb-container {
+  grid-area: 4/8/10/22;
+  justify-content: grid-start;
+}
+.blurb-container h1 {
+  font-family: Redaction;
+  font-size: 2.25vw;
+  color: #7D246B;
+  line-height: 125%;
+  letter-spacing: 0.035em;
+  text-align: justify;
+  margin-top: 0;
+}
+
 .fieldnote-bg {
   position: fixed;
   top: 0;
@@ -559,6 +568,7 @@ html.designer-page-body {
   height: 2.25vw;
   width: 2.25vw;
   transition: width 0.185s cubic-bezier(0.55, 1, 0.85, 1), height 0.185s cubic-bezier(0.55, 1, 0.85, 1);
+  transition-delay: 0.1s;
 }
 
 .dot-unhovered.designer-dot {
