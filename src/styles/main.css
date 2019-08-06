@@ -449,7 +449,7 @@ html.designer-page-body {
   color: purple;
 }
 
-.landing-toggle.active-toggle {
+.landing-toggle.active {
   text-decoration: underline;
   stroke-width: 5px;
 }
@@ -860,7 +860,7 @@ html.designer-page-body {
   text-transform: uppercase;
   padding-bottom: 0.25em;
 }
-.designer-top-section #designer-toggle .content-toggle.active-toggle {
+.designer-top-section #designer-toggle .content-toggle.active {
   border-bottom: 2px solid #7D246B;
 }
 .designer-top-section .designer-summary {
