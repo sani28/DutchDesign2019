@@ -40,20 +40,60 @@ a {
   display: none;
 }
 
-.list-navigation {
+#main-nav {
   grid-row: 13 / span 1;
-  grid-column: 2 / 13;
+  grid-column: 7 / -1;
   font-size: 0.8em;
 }
 
 .main-nav-list{
   list-style: none;
   display: grid;
-  grid: 1fr / repeat(4, 2*$width-unit);
-  grid-auto-flow: row;
+  grid: repeat(4, 1fr) / repeat(5, 3*$width-unit);
+  grid-auto-flow: column;
   padding-left: 0;
   margin-top: 0;
   font-family: hyperMarket;
+}
+
+#designer-list {
+  #wid{
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  #reglaze{
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  #edwin #truly #jurgen #nienke{
+    grid-column: 2/3;
+  }
+  #edwin {
+    grid-row: 1/2;
+  }
+
+  #truly {
+    grid:-row 2/3;
+  }
+
+  #jurgen{
+    grid-row: 3/4;
+  }
+
+  #nienke{
+    grid-row: 4/5;
+  }
+  #lex #valentin #corunum #floris {
+    grid-column: 3/4;
+  }
+  #rebecca #aldo #momkai #lava {
+    grid-column: 4/5;
+  }
+  #ineke #pepe #matthews #futures {
+    grid-column: 5/6;
+  }
 }
 
 .main-nav-list.hiddenUI{
@@ -61,30 +101,24 @@ a {
 }
 
 .list-navigation .main-nav-list li{
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   text-align: left;
   color: $secondary-purp;
+  text-transform: uppercase;
 }
+
 
 .main-nav-list li:hover{
   background-color: white;
 }
 
-#main-blurb {
-  grid-row: 2 / span 2;
-  grid-column: 14 / 22;
-  font-size: 0.5rem;
-  color: $secondary-purp;
-  margin-top: 0;
-  font-family: hyperMarket;
-}
 
 #main-toggle {
   font-size: 0.5em;
   font-family: hyperMarket;
   color: white;
-  grid-row: 13;
-  grid-column: 18 / span 4;
+  grid-row: 13 / span 1;
+  grid-column: 2 / span 4;
   display: grid;
   grid: 1fr / repeat(2, 2*$width-unit);
 }

@@ -401,20 +401,53 @@ html.designer-page-body {
   display: none;
 }
 
-.list-navigation {
+#main-nav {
   grid-row: 13/span 1;
-  grid-column: 2/13;
+  grid-column: 7/-1;
   font-size: 0.8em;
 }
 
 .main-nav-list {
   list-style: none;
   display: grid;
-  grid: 1fr/repeat(4, 9.08vw);
-  grid-auto-flow: row;
+  grid: repeat(4, 1fr)/repeat(5, 13.62vw);
+  grid-auto-flow: column;
   padding-left: 0;
   margin-top: 0;
   font-family: hyperMarket;
+}
+
+#designer-list #wid {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+#designer-list #reglaze {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+#designer-list #edwin #truly #jurgen #nienke {
+  grid-column: 2/3;
+}
+#designer-list #edwin {
+  grid-row: 1/2;
+}
+#designer-list #truly {
+  grid: -row 2/3;
+}
+#designer-list #jurgen {
+  grid-row: 3/4;
+}
+#designer-list #nienke {
+  grid-row: 4/5;
+}
+#designer-list #lex #valentin #corunum #floris {
+  grid-column: 3/4;
+}
+#designer-list #rebecca #aldo #momkai #lava {
+  grid-column: 4/5;
+}
+#designer-list #ineke #pepe #matthews #futures {
+  grid-column: 5/6;
 }
 
 .main-nav-list.hiddenUI {
@@ -422,30 +455,22 @@ html.designer-page-body {
 }
 
 .list-navigation .main-nav-list li {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   text-align: left;
   color: #7D246B;
+  text-transform: uppercase;
 }
 
 .main-nav-list li:hover {
   background-color: white;
 }
 
-#main-blurb {
-  grid-row: 2/span 2;
-  grid-column: 14/22;
-  font-size: 0.5rem;
-  color: #7D246B;
-  margin-top: 0;
-  font-family: hyperMarket;
-}
-
 #main-toggle {
   font-size: 0.5em;
   font-family: hyperMarket;
   color: white;
-  grid-row: 13;
-  grid-column: 18/span 4;
+  grid-row: 13/span 1;
+  grid-column: 2/span 4;
   display: grid;
   grid: 1fr/repeat(2, 9.08vw);
 }
