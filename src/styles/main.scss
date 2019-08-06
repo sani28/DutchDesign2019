@@ -31,7 +31,9 @@ a#imgHover {
   border-bottom: 2px solid purple;
 }
 
-
+*.hiddenUI {
+  display: none !important;
+}
 @import './2-modules/layouts';
 @import './2-modules/background';
 
@@ -57,14 +59,6 @@ a#imgHover {
   }
 }
 
-#top-nav.hiddenUI {
-  display: none;
-}
-
-/* consistently use this to hide things */
-[id].hiddenUI {
-  display: none;
-}
 
 #main-nav {
   grid-row: 13 / span 1;
@@ -165,7 +159,19 @@ a#imgHover {
 
 
 /* -----------------DOTS AND VIDEO STYLING----------------- */
-
+.blurb-container{
+  grid-area: 4 / 8 / 10/ 22;
+  justify-content: grid-start;
+  h1{
+    font-family: Redaction;
+    font-size: 2.25vw;
+    color: $secondary-purp;
+    line-height: 125%;
+    letter-spacing: 0.035em;
+    text-align: justify;
+    margin-top: 0;
+  }
+}
 .fieldnote-bg{
   position: fixed;
   top: 0;
@@ -228,7 +234,8 @@ a#imgHover {
 .active-dot{
   height: 2.25vw;
   width: 2.25vw;
-  transition: width 0.185s cubic-bezier(.55,1,.85,1), height 0.185s cubic-bezier(.55,1,.85,1) ;
+  transition: width 0.185s cubic-bezier(.55,1,.85,1), height 0.185s cubic-bezier(.55,1,.85,1);
+  transition-delay: 0.1s;
 }
 
 .dot-unhovered.designer-dot {
@@ -385,6 +392,9 @@ a#imgHover {
 #btsItem{
   grid-area: 5/7;
 }
+
+
+
 /* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
 .video-container{
   position: relative;
