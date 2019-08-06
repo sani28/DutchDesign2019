@@ -428,14 +428,16 @@ html.designer-page-body {
 
 .main-nav-list {
   list-style: none;
-  display: grid;
-  grid: repeat(4, 1fr)/repeat(5, 13.62vw);
-  grid-auto-flow: column;
   padding-left: 0;
   margin-top: 0;
   font-family: hyperMarket;
 }
 
+#designer-list {
+  display: grid;
+  grid: repeat(4, 1fr)/repeat(5, 13.62vw);
+  grid-auto-flow: column;
+}
 #designer-list #wid {
   grid-row: 1/2;
   grid-column: 1/2;
@@ -467,6 +469,12 @@ html.designer-page-body {
 }
 #designer-list #ineke #pepe #matthews #futures {
   grid-column: 5/6;
+}
+
+#fnotes-list {
+  display: grid;
+  grid: repeat(3, 1fr)/repeat(5, 13.62vw);
+  grid-auto-flow: column;
 }
 
 .main-nav-list.hiddenUI {
