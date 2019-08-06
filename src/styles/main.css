@@ -402,8 +402,12 @@ html.designer-page-body {
   color: #DFEA4E;
 }
 
+#top-nav.hiddenUI {
+  display: none;
+}
+
 /* consistently use this to hide things */
-.hiddenUI[id] {
+[id].hiddenUI {
   display: none;
 }
 

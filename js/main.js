@@ -5,7 +5,7 @@ $(document).ready(function(){
   const experienceDots = $(".experience-dot").get();
   const previewVideos = $(".bg-preview-video").get();
   const fieldNotesBGs = $(".fieldnote-bg").get();
-  const hiddenElements = ["#main-blurb", "#main-nav", "#main-logo", "#main-toggle", "#toggle-int", "#toggle-field"];
+  const hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle", "#toggle-int", "#toggle-field"];
   var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
   var fieldToggle = $("#toggle-field");

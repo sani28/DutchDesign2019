@@ -41,8 +41,13 @@ a {
     color: $primary-green;
   }
 }
+
+#top-nav.hiddenUI {
+  display: none;
+}
+
 /* consistently use this to hide things */
-.hiddenUI[id] {
+[id].hiddenUI {
   display: none;
 }
 
