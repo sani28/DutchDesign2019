@@ -151,6 +151,13 @@ a#imgHover {
   grid-column: 12/18;
   width: 100%;
 }
+.photo-section-1 #physical {
+  grid-column: 6/11;
+}
+.photo-section-1 #digital {
+  grid-column: 11/17;
+  width: 125%;
+}
 
 .photo-section-2 {
   grid-template-rows: repeat(5, 16.66vh) 1fr;
@@ -294,6 +301,11 @@ a#imgHover {
   width: 90%;
   align-self: end;
   line-height: 150%;
+}
+.photo-section-6 #oncodevid {
+  grid-row: 3/6;
+  grid-column: 11/17;
+  height: 100%;
 }
 
 .photo-section-7 .layout-item:first-child {

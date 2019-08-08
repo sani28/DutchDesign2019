@@ -58,6 +58,13 @@ $secondary-purp: #7D246B;
     grid-column: 12 / 18;
     width: 100%;
   }
+  #physical{
+    grid-column: 6 / 11;
+  }
+  #digital{
+    grid-column: 11 / 17;
+    width: 125%;
+  }
 }
 
 .photo-section-2 {
@@ -206,6 +213,11 @@ $secondary-purp: #7D246B;
     width: 90%;
     align-self: end;
     line-height: 150%;
+  }
+  #oncodevid{
+    grid-row: 3/6;
+    grid-column: 11/17;
+    height: 100%;
   }
 }
 
