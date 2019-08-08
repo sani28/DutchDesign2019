@@ -238,6 +238,13 @@ $secondary-purp: #7D246B;
     grid-column: 8/18;
     width: 100%;
   }
+  #fogocaption{
+    grid-row: 3;
+    grid-column: 2/8;
+    width: 100%;
+    align-self: start;
+    margin-top: -8.5vh;
+  }
 }
 
 .photo-section-8 {
