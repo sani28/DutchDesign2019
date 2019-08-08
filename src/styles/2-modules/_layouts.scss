@@ -58,6 +58,13 @@ $secondary-purp: #7D246B;
     grid-column: 12 / 18;
     width: 100%;
   }
+  #physical{
+    grid-column: 6 / 11;
+  }
+  #digital{
+    grid-column: 11 / 17;
+    width: 125%;
+  }
 }
 
 .photo-section-2 {
@@ -207,6 +214,11 @@ $secondary-purp: #7D246B;
     align-self: end;
     line-height: 150%;
   }
+  #oncodevid{
+    grid-row: 3/6;
+    grid-column: 11/17;
+    height: 100%;
+  }
 }
 
 .photo-section-7 {
@@ -225,6 +237,13 @@ $secondary-purp: #7D246B;
     grid-row: 2;
     grid-column: 8/18;
     width: 100%;
+  }
+  #fogocaption{
+    grid-row: 3;
+    grid-column: 2/8;
+    width: 100%;
+    align-self: start;
+    margin-top: -8.5vh;
   }
 }
 

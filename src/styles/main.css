@@ -124,6 +124,13 @@
   grid-column: 12/18;
   width: 100%;
 }
+.photo-section-1 #physical {
+  grid-column: 6/11;
+}
+.photo-section-1 #digital {
+  grid-column: 11/17;
+  width: 125%;
+}
 
 .photo-section-2 {
   grid-template-rows: repeat(5, 16.66vh) 1fr;
@@ -268,6 +275,11 @@
   align-self: end;
   line-height: 150%;
 }
+.photo-section-6 #oncodevid {
+  grid-row: 3/6;
+  grid-column: 11/17;
+  height: 100%;
+}
 
 .photo-section-7 .layout-item:first-child {
   grid-row: 1;
@@ -283,6 +295,13 @@
   grid-row: 2;
   grid-column: 8/18;
   width: 100%;
+}
+.photo-section-7 #fogocaption {
+  grid-row: 3;
+  grid-column: 2/8;
+  width: 100%;
+  align-self: start;
+  margin-top: -8.5vh;
 }
 
 .photo-section-8 .layout-item:first-child {
@@ -828,39 +847,41 @@ body .cursor__ball circle {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  bottom: 9vh;
-  background: linear-gradient(0deg, lightgrey, transparent);
+  bottom: 6vh;
+  background: #0f0f05;
   width: 100%;
-  height: 8vh;
+  height: 6vh;
+  cursor: pointer;
 }
 .video-container .video-controls .progress {
-  position: relative;
-  width: 94%;
-  height: 10px;
-  right: 3%;
-  left: 3%;
-  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 9px;
+  background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 10px;
+  top: 0;
 }
 .video-container .video-controls .progress .vidbar {
   position: absolute;
   background-color: purple;
-  height: 10px;
+  height: 9px;
   width: 0%;
 }
 .video-container .video-controls .timeblock {
-  align-self: flex-start;
-  margin-top: none;
+  margin-top: 5px;
 }
 .video-container .video-controls .timeblock div {
   display: inline-block;
   font-family: Maison Neue;
   font-size: 0.75em;
-  color: #7D246B;
+  color: #DFEA4E;
+}
+.video-container .video-controls .timeblock span {
+  color: #DFEA4E;
 }
 .video-container .video-controls .vid-buttons {
-  align-self: flex-start;
-  margin-left: 3%;
+  margin-top: 5px;
+  margin-left: 2%;
   width: 6%;
 }
 .video-container .video-controls .vid-buttons button {
@@ -868,8 +889,8 @@ body .cursor__ball circle {
   border: 0;
   outline: none;
   cursor: pointer;
-  color: #7D246B;
-  font-family: hyperMarket;
+  color: #DFEA4E;
+  font-family: Maison Neue;
   font-size: 0.75em;
   text-transform: uppercase;
 }
@@ -883,15 +904,15 @@ body .cursor__ball circle {
 }
 .video-container .video-controls .vid-buttons.fs {
   margin-left: auto;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 
 .play-cursor {
-  cursor: url(../../assets/images/play.png), auto;
+  cursor: url(../../assets/images/play45x45.png) 20 20, auto;
 }
 
 .pause-cursor {
-  cursor: url(../../assets/images/pause.png), auto;
+  cursor: url(../../assets/images/pause30x45.png) 15 20, auto;
 }
 
 .designer-tagline {
@@ -899,6 +920,7 @@ body .cursor__ball circle {
   font-size: 0.75em;
   margin-bottom: 0;
   text-transform: uppercase;
+  color: white;
 }
 
 .designer-name {
@@ -1083,30 +1105,37 @@ body .cursor__ball circle {
   padding: 5em 0;
 }
 
-#lottequote2 {
+.center-quote {
   display: block;
   width: 40%;
   margin: 0 auto;
   padding: 5em 0;
 }
 
+#inekequote {
+  width: 46%;
+}
+
+#aldoquote2 {
+  margin-top: -5em;
+}
+
 /*---------- transcripts ------------- */
 .transcript {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  padding: 5em;
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   display: none;
-  margin-bottom: 400px;
-  font-family: Maison Neue;
-  line-height: 125%;
-  text-align: left;
   font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #transcript-container {
-  width: 80vw;
+  grid-column: 2/-2;
+  width: 100%;
   height: 90vh;
+  padding-bottom: 400px;
+  font-family: Maison Neue;
+  line-height: 125%;
+  text-align: left;
 }
 
 p span {

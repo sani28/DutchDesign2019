@@ -1,25 +1,4 @@
 $(document).ready(function() {
-
-      //toggle to transcript
-    $('#toggle-transcript').click(function(e) {
-      e.preventDefault();
-      $(this).addClass('active');
-      $('#toggle-overview').removeClass('active');
-      $('.designer-summary').fadeOut("slow").hide();
-      $('#overview').fadeOut("slow").hide();
-      $('.transcript').fadeIn("slow");
-    });
-
-    //toggle to overview
-    $('#toggle-overview').click(function(e) {
-      e.preventDefault();
-      $(this).addClass('active');
-      $('#toggle-transcript').removeClass('active');
-      $('.designer-summary').fadeIn("slow")
-      $('#overview').fadeIn("slow")
-      $('.transcript').fadeOut("slow").hide();
-    });
-
       var vid = document.getElementById("designer-vid");
       const playback = document.getElementById("playback");
       const playPause = document.getElementById("play-pause");
@@ -31,11 +10,18 @@ $(document).ready(function() {
       var progController = new ScrollMagic.Controller();
       var totalHeight = document.body.clientHeight;
 
+      // scroll-progress line
       var backTopAnimation = TweenLite.from("#animate", 0.5, {
         autoAlpha: 0,
         scale: 0.7
       });
 
+      var slowHide = TweenLite.to(".target", 2, {
+        opacity:0,
+        display:"none"
+      });
+
+      //scroll to top
       var backTopScene = new ScrollMagic.Scene({
           triggerElement: "a#scroll-top",
           duration: 200,
@@ -111,7 +97,26 @@ function toggleFullScreen() {
     }
   }
 
+   // TODO: Remove dependancy on JQuery show/hide because it depends on inline styling - use CSS classes instead. CSS will change to
+  //toggle to transcript
+$('#toggle-transcript').click(function(e) {
+  e.preventDefault();
+  $(this).addClass('active');
+  $('#toggle-overview').removeClass('active');
+  $('.designer-summary').hide();
+  $('#overview').hide();
+  $('.transcript').show();
+});
 
+//toggle to overview
+$('#toggle-overview').click(function(e) {
+  e.preventDefault();
+  $(this).addClass('active');
+  $('#toggle-transcript').removeClass('active');
+  $('.designer-summary').fadeIn("slow");
+  $('#overview').fadeIn("slow");
+  $('.transcript').hide();
+});
 
 //////////////////// SCROLLING BEHAVIOUR ////////////
 
@@ -119,7 +124,7 @@ function toggleFullScreen() {
   pathPrepare(scrollProg);
 
   $(document).on("click", "#scroll-top", function (e) {
-    scrollController.scrollTo("#vid-container");
+    scrollController.scrollTo("#video-fig");
   });
 
   scrollController.scrollTo(function (newpos) {
