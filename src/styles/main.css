@@ -961,12 +961,12 @@ body .cursor__ball circle {
 
 .designer-top-section {
   display: grid;
-  grid-template-columns: repeat(17, 4.54vw) 1fr;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1.5em;
   width: 100%;
 }
 .designer-top-section #designer-toggle {
-  grid-column: 3/span 12;
+  grid-column: 3/-4;
   margin-top: 2em;
   padding-bottom: 2em;
   display: flex;
@@ -985,7 +985,7 @@ body .cursor__ball circle {
   border-bottom: 2px solid #7D246B;
 }
 .designer-top-section .designer-summary {
-  grid-column: 3/span 14;
+  grid-column: 3/-4;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
@@ -997,7 +997,7 @@ body .cursor__ball circle {
   color: black;
 }
 .designer-top-section .designer-summary .designer-blurb {
-  width: 75%;
+  width: 55%;
 }
 
 .fullbleed {
@@ -1139,7 +1139,7 @@ body .cursor__ball circle {
   text-align: left;
 }
 #transcript-container p:last-child {
-  margin-bottom: 200px;
+  margin-bottom: 6vh;
 }
 
 p span {
