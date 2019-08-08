@@ -42,6 +42,7 @@ $(document).ready(function() {
             .addTo(progController);
 
 
+
 function pathPrepare ($el) {
   let lineLength = $el.getTotalLength();
   $el.style.strokeDasharray = lineLength;
@@ -97,15 +98,18 @@ function toggleFullScreen() {
     }
   }
 
-   // TODO: Remove dependancy on JQuery show/hide because it depends on inline styling - use CSS classes instead. CSS will change to
-  //toggle to transcript
+//REPOSITION FOOTER
+
 $('#toggle-transcript').click(function(e) {
   e.preventDefault();
   $(this).addClass('active');
   $('#toggle-overview').removeClass('active');
   $('.designer-summary').hide();
   $('#overview').hide();
+  $("#footer").hide();
   $('.transcript').show();
+  $('.transcript').css("display", "grid");
+
 });
 
 //toggle to overview
@@ -115,6 +119,7 @@ $('#toggle-overview').click(function(e) {
   $('#toggle-transcript').removeClass('active');
   $('.designer-summary').fadeIn("slow");
   $('#overview').fadeIn("slow");
+  $("#footer").show();
   $('.transcript').hide();
 });
 
