@@ -8,6 +8,7 @@ $(document).ready(function(){
    document.getElementById('correspondents'),
    document.getElementById('physical'),
    document.getElementById('digital'),
+   document.getElementById('haraldquote'),
 ];
 
   var scrollControl = new ScrollMagic.Controller();
