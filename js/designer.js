@@ -106,6 +106,7 @@ $('#toggle-transcript').click(function(e) {
   $('.designer-summary').hide();
   $('#overview').hide();
   $('.transcript').show();
+  $('.transcript').css("display", "grid");
 });
 
 //toggle to overview
