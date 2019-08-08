@@ -1066,11 +1066,15 @@ html.designer-page-body {
   padding: 5em 0;
 }
 
-#lottequote2 {
+.center-quote {
   display: block;
   width: 40%;
   margin: 0 auto;
   padding: 5em 0;
+}
+
+#aldoquote2 {
+  margin-top: -5em;
 }
 
 /*---------- transcripts ------------- */

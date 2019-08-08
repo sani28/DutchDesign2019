@@ -2,7 +2,6 @@ $(document).ready(function(){
   const orderedDesignerImages =
   [document.getElementById('lottework'),
    document.getElementById('unfired'),
-   document.getElementById('workspace'),
    document.getElementById('lottequote'),
    document.getElementById('lottecandid'),
    document.getElementById('lottecandid2'),
@@ -29,4 +28,14 @@ $(document).ready(function(){
      .setClassToggle(orderedDesignerImages[i], "visible")
      .addTo(scrollControl);
    }
+
+   new ScrollMagic.Scene({
+     triggerElement: "#workspace",
+     triggerHook: 0.8,
+     offset: 320,
+     reverse: true
+   })
+   .setClassToggle("#workspace", "visible")
+   .addTo(scrollControl);
+
 });
