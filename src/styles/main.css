@@ -1009,9 +1009,11 @@ body .cursor__ball circle {
 
 .designer-footer {
   display: flex;
+  position: relative;
   flex-direction: column;
   margin: 2em 10%;
   text-transform: uppercase;
+  bottom: 0;
 }
 .designer-footer p {
   font-family: maisonNeue-Mono;
