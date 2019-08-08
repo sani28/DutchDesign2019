@@ -7,6 +7,7 @@
 
 @import '../1-helpers/_fonts';
 @import '../2-modules/_layouts';
+@import '../2-modules/_cursor';
 
 /* ----- fonts ------ */
 @font-face {
@@ -381,7 +382,6 @@
   line-height: 150%;
 }
 
-
 html {
   background-color: #000;
 }
@@ -390,6 +390,35 @@ body {
   color: white;
   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   padding: 1em;
+}
+
+a#home:hover {
+  text-align: right;
+}
+
+.back-btn {
+  grid-row: 1;
+  grid-column: 2/5;
+  font-family: redaction;
+  font-size: 1.1rem;
+  display: inline;
+  margin-top: 1%;
+  width: 200px;
+  color: white;
+}
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color:white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#back {
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
 }
 
 .experience-landing {

@@ -315,6 +315,26 @@
   width: 40%;
 }
 
+body .cursor__ball--big {
+  display: none;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+  z-index: 1000;
+}
+
+body .cursor__ball circle {
+  fill: purple;
+}
+
 /* ----- fonts ------ */
 @font-face {
   font-family: hyperMarket;
@@ -707,6 +727,35 @@ body {
   color: white;
   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   padding: 1em;
+}
+
+a#home:hover {
+  text-align: right;
+}
+
+.back-btn {
+  grid-row: 1;
+  grid-column: 2/5;
+  font-family: redaction;
+  font-size: 1.1rem;
+  display: inline;
+  margin-top: 1%;
+  width: 200px;
+  color: white;
+}
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#back {
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
 }
 
 .experience-landing {
