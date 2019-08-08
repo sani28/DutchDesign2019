@@ -2,6 +2,12 @@ $(document).ready(function(){
   const orderedDesignerImages =
   [document.getElementById('harald1'),
    document.getElementById('harald2'),
+   document.getElementById('queen'),
+   document.getElementById('oncodevid'),
+   document.getElementById('oncode'),
+   document.getElementById('correspondents'),
+   document.getElementById('physical'),
+   document.getElementById('digital'),
 ];
 
   var scrollControl = new ScrollMagic.Controller();
