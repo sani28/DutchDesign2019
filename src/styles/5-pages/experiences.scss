@@ -259,6 +259,7 @@
 
 .photo-section-5 {
   margin-bottom: 5em;
+  margin-top:5em;
 }
 
 .photo-section-5 .layout-item:first-child {
@@ -309,6 +310,14 @@
 .photo-section-6 .section-quote {
   grid-row: 5/7;
   grid-column: 11/16;
+  width: 90%;
+  align-self: end;
+  line-height: 150%;
+}
+
+.photo-section-6 .section-caption {
+  grid-row: 1;
+  grid-column: 3/7;
   width: 90%;
   align-self: end;
   line-height: 150%;

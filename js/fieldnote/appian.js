@@ -2,18 +2,16 @@ $(document).ready(function(){
     document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/appian/appian-1.jpg')";
 
   const orderedDesignerImages = [
-    document.getElementById("enroute"),
-    document.getElementById("alexSihloutte"),
-    document.getElementById("krollerMuller"),
-    document.getElementById("riding-1"),
-    document.getElementById("riding-2"),
-    document.getElementById("top-align"),
-    document.getElementById("baseline"),
-    document.getElementById("baseline-2"),
-    document.getElementById("baseline-3"),
-    document.getElementById("onGrass"),
-    document.getElementById("dune1"),
-    document.getElementById("dune2"),
+    document.getElementById("keyroad"),
+    document.getElementById("appianroad"),
+    document.getElementById("catacomb"),
+    document.getElementById("ap-bike-1"),
+    document.getElementById("ap-bike-vid"),
+    document.getElementById("inGrass"),
+    document.getElementById("ap-field-vid"),
+    document.getElementById("appianStone"),
+    document.getElementById("quote1"),
+    document.getElementById("caption2"),
     document.getElementById("end")];
 
 
