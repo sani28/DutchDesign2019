@@ -13,29 +13,29 @@ $primary-green: #DFEA4E;
 
 /* ----------------------- chapter marker list ------------------- */
 
+*, html {
+  color: black;
+}
+
+h1.title {
+  display:inline-block;
+  margin:50px;
+}
+
+*.hiddenUI {
+  display: none !important;
+}
+
 .main-nav-list.hiddenUI {
   display: none;
 }
 
-.list-navigation .main-nav-list li {
-  font-size: 0.75rem;
-  text-align: left;
-  color: #7D246B;
-  text-transform: uppercase;
-  margin-bottom: 0.3rem;
-}
-
-.main-nav-list li:hover {
-  background-color: #7D246B;
-  color: #DFEA4E;
-}
-
 #main-nav {
-  grid-row: 5;
-  grid-column: 7/30;
+  grid-row: 13 / span 1;
+  grid-column: 7 / -1;
 }
 
-.main-nav-list {
+.main-nav-list{
   list-style: none;
   padding-left: 0;
   margin-top: 0;
@@ -89,6 +89,24 @@ $primary-green: #DFEA4E;
   display: grid;
   grid: repeat(3, 1fr) / repeat(5, 3*$width-unit);
   grid-auto-flow: column;
+}
+
+.main-nav-list.hiddenUI{
+  display: none;
+}
+
+.list-navigation .main-nav-list li{
+  font-size: 0.75rem;
+  text-align: left;
+  color: $secondary-purp;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+
+.main-nav-list li:hover{
+  background-color: $secondary-purp;
+  color: $primary-green;
 }
 
 /* ----------------------- container, body ------------------- */
@@ -249,156 +267,149 @@ h5 {
 }
 
 /* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
-.video-container{
+.video-container {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   margin: 0;
   background-color: white;
   overflow: hidden;
-  border: 2px solid red;
   top: 0;
-
-  .embed-container {
-    position: relative;
-    padding-bottom: 54.25%;
-    top: -1vh;
-    overflow: hidden;
-    max-width: 100%;
-
-    iframe, object,
-     embed, video {
-      position: absolute;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .video-overlay {
-    position: absolute;
-    left: 0;
-    top: 40%;
-    width: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    h1{
-      font-size: 5vw;
-      font-family: redaction;
-      margin-bottom: 2%;
-      color: white;
-    }
-
-    p {
-      font-size: 1vw;
-      font-family: maisonNeue-Mono;
-      width: 50%;
-      margin: 0;
-      color: white;
-    }
-  }
-  .video-controls {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    bottom: 6vh;
-    background: rgb(15,15,5);
-    width: 100%;
-    height: 6vh;
-    cursor: pointer;
-    .progress{
-      position: absolute;
-      width: 100%;
-      height: 9px;
-      background-color: rgb(255,255,255,0.8);
-      margin-bottom: 10px;
-      top: 0;
-      .vidbar{
-        position: absolute;
-        background-color: purple;
-        height: 9px;
-        width: 0%;
-      }
-    }
-    .timeblock{
-      margin-top: 5px;
-      div{
-        display: inline-block;
-        font-family: Maison Neue;
-        font-size: 0.75em;
-        color: $primary-green;
-      }
-      span{
-        color: $primary-green;
-      }
-    }
-    .vid-buttons {
-      margin-top: 5px;
-      margin-left: 2%;
-      width: 6%;
-      button {
-        background: none;
-        border: 0;
-        outline: none;
-        cursor: pointer;
-        color: $primary-green;
-        font-family: Maison Neue;
-        font-size: 0.75em;
-        text-transform: uppercase;
-      }
-      button.play:before {
-        content: "PLAY";
-        text-transform: capitalize;
-      }
-      button.pause:after{
-        content: "PAUSE";
-        text-transform: capitalize;
-      }
-    }
-    .vid-buttons.fs{
-      margin-left: auto;
-      margin-right: 2%;
-    }
-  }
+}
+.video-container .embed-container {
+  position: relative;
+  padding-bottom: 54.25%;
+  top: -1vh;
+  overflow: hidden;
+  max-width: 100%;
+}
+.video-container .embed-container iframe, .video-container .embed-container object,
+.video-container .embed-container embed, .video-container .embed-container video {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-container .video-overlay {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.video-container .video-overlay h1 {
+  font-size: 5vw;
+  font-family: redaction;
+  margin-bottom: 2%;
+  color: white;
+}
+.video-container .video-overlay p {
+  font-size: 1vw;
+  font-family: maisonNeue-Mono;
+  width: 50%;
+  margin: 0;
+  color: white;
+}
+.video-container .video-controls {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  bottom: 6vh;
+  background: #0f0f05;
+  width: 100%;
+  height: 6vh;
+  cursor: pointer;
+}
+.video-container .video-controls .progress {
+  position: absolute;
+  width: 100%;
+  height: 9px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+  top: 0;
+}
+.video-container .video-controls .progress .vidbar {
+  position: absolute;
+  background-color: purple;
+  height: 9px;
+  width: 0%;
+}
+.video-container .video-controls .timeblock {
+  margin-top: 5px;
+}
+.video-container .video-controls .timeblock div {
+  display: inline-block;
+  font-family: Maison Neue;
+  font-size: 0.75em;
+  color: #DFEA4E;
+}
+.video-container .video-controls .timeblock span {
+  color: #DFEA4E;
+}
+.video-container .video-controls .vid-buttons {
+  margin-top: 5px;
+  margin-left: 2%;
+  width: 6%;
+}
+.video-container .video-controls .vid-buttons button {
+  background: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  color: #DFEA4E;
+  font-family: Maison Neue;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+.video-container .video-controls .vid-buttons button.play:before {
+  content: "PLAY";
+  text-transform: capitalize;
+}
+.video-container .video-controls .vid-buttons button.pause:after {
+  content: "PAUSE";
+  text-transform: capitalize;
+}
+.video-container .video-controls .vid-buttons.fs {
+  margin-left: auto;
+  margin-right: 2%;
 }
 
 .play-cursor {
-  cursor: url(../../../assets/images/play45x45.png) 20 20, auto;
+  cursor: url(../../assets/images/play45x45.png) 20 20, auto;
 }
 
 .pause-cursor {
   cursor: url(../../assets/images/pause30x45.png) 15 20, auto;
 }
 
-.designer-tagline{
+.designer-tagline {
   font-family: hyperMarket;
   font-size: 0.75em;
   margin-bottom: 0;
   text-transform: uppercase;
   color: white;
 }
+
 .designer-name {
   font-family: Redaction;
   font-size: 5em;
   margin: 0 auto;
   text-transform: uppercase;
 }
-.designer-blurb{
+
+.designer-blurb {
   font-family: Maison Neue;
   font-size: 0.8em;
   line-height: 125%;
   width: 60%;
 }
-
-
 
 .shown-item {
   opacity: 0;
@@ -407,17 +418,65 @@ h5 {
 .shown-item.visible {
   opacity: 1;
   -webkit-transition: all 0.15s ease-in;
-					 -moz-transition: all 0.15s ease-in;
-						-ms-transition: all 0.15s ease-in;
-						 -o-transition: all 0.15s ease-in;
-								transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -ms-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 .shown-item.visible-slow {
   opacity: 1;
   -webkit-transition: all 0.45s ease-in;
-					 -moz-transition: all 0.45s ease-in;
-						-ms-transition: all 0.45s ease-in;
-						 -o-transition: all 0.45s ease-in;
-								transition: all 0.45s ease-in;
+  -moz-transition: all 0.45s ease-in;
+  -ms-transition: all 0.45s ease-in;
+  -o-transition: all 0.45s ease-in;
+  transition: all 0.45s ease-in;
+}
+
+.designer-top-section {
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
+  gap: 1.5em;
+  width: 100%;
+}
+.designer-top-section #designer-toggle {
+  grid-column: 3/-4;
+  margin-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 2px solid #e1e1e1;
+}
+.designer-top-section #designer-toggle .content-toggle {
+  margin-right: 2em;
+  color: #7D246B;
+  font-family: hyperMarket;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding-bottom: 0.25em;
+}
+.designer-top-section #designer-toggle .content-toggle.active {
+  border-bottom: 2px solid #7D246B;
+}
+.designer-top-section .designer-summary {
+  grid-column: 3/-4;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.designer-top-section .designer-summary .black-txt {
+  color: black;
+}
+.designer-top-section .designer-summary .designer-blurb {
+  width: 55%;
+}
+
+.fullbleed {
+  width: 100%;
+  height: auto;
+  background-color: salmon;
+  margin-top: 5em;
 }

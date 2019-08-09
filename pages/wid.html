@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -7,56 +8,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
   <link rel="stylesheet" type="text/css" href="../src/styles/5-pages/whatisdesign.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="../js/main.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script type="text/javascript" src="../js/designer.js" async defer></script>
+  <script type="text/javascript" src="../js/wid.js" async defer></script>
 </head>
 
 <body>
 
   <!-- ~~~~~~~~~~~~~ container  ~~~~~~~~~~~~~~~  -->
+<!--
+  <div class="grid-layout-container"> -->
 
-  <div class="grid-layout-container">
+    <!-- <div class="back-btn">
+      <a href="index.html" class="hoverable" id="back">
+        ⬤
+      </a>
+    </div> -->
 
-    <div id="back-btn">
-      <a href="index.html" id="home"><span class="home-dot"></span></a>
-  </div>
+    <!-- <div id="portraitPreview"></div> -->
 
-      <h2> WHAT IS DESIGN </h2>
-      <div id="wid-blurb">
-        <p> Both a thoughtful and absurd request, we ask designers to describe how and why they design at this particular moment in their life. We documented 16 possible answers to a nearly impossible question. This is the 10th annual edition of the film. </p>
-      </div>
+    <!-- <div id="wid-blurb">
+      <h5> This is the 10th annual edition of the film. </h5>
+      <div id="title"> WHAT IS DESIGN </div>
+      <p> Both a thoughtful and absurd request, we ask designers to describe how and why they design at this particular moment in their life. We documented 16 possible answers to a nearly impossible question.</p>
+    </div> -->
 
-      <!-- Toggle Film + Voices -->
-
-      <!-- <br> -->
-      <nav class="toggle">
-        <div id="film">
-          <a href=""> Watch Film &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
-          <a href="" id="current">  Voices </a>
+      <figure class="video-container play-cursor" id="video-fig">
+        <div class='embed-container'>
+          <video id="designer-vid" poster="../assets/images/video-posters/FlorisCover.jpg" preload="none" playsinline>
+            <source src="../assets/videos/interview_floris.mp4" type="video/mp4">
+            </source>
+          </video>
+          <!-- <iframe id="designer-vid"       src='https://player.vimeo.com/video/284810491'  frameborder='0' webkitAllowFullScreen    mozallowfullscreen allowFullScreen></iframe> -->
         </div>
-      </nav>
+        <div class="video-overlay" id="designer-overlay">
+          <h2 class="designer-tagline">Rotterdam - Product</h2>
+          <h1 class="designer-name">Lex Pott</h1>
+          <p class="designer-blurb">An independent designer who looks for a moment in the production process to intervene, do something unexpected, and see how that changes outcomes — including products that have existed for 100's of years.</p>
+        </div>
+        <div class="video-controls" id="vid-controls">
+          <div class="progress" id="progress">
+            <span class="vidbar" id="playback"></span>
+          </div>
+          <div class="vid-buttons">
+            <button class="play" id="play-pause"></button>
+          </div>
+          <div class="timeblock">
+            <div id="currentTime">00:00</div>
+            <span>/<span>
+                <div id="vidDuration">00:00</div>
+          </div>
+          <div class="vid-buttons fs">
+            <button class="fullscreen" id="fs">FULLSCREEN</button>
+          </div>
+        </div>
+      </figure>
 
-      <div class="circle-nav-container">
-        <div class="wid-item"><a href=""><span class="dot" id="pepe-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="ineke-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="momkai-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="lava-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="aldo-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="rebecca-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="corunum-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="floris-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="valentin-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="lex-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="jurgen-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="nienke-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="truly-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="main-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="sm-voice"></span></a></div>
-        <div class="wid-item"><a href=""><span class="dot" id="if-voice"></span></a></div>
+      <!-- <div class="circle-nav-container">
+        <div class="wid-item"><a data-img="../imgs/portraits/pepe.jpg" data-fx="1"><span class="dot" id="pepe-voice" title="Pepe Heykoop"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/ineke.jpg" data-fx="1"><span class="dot" id="ineke-voice" title="Ineke Hans"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/momkai.jpg" data-fx="1"><span class="dot" id="momkai-voice" title="Momkai"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/lava.jpg" data-fx="1"><span class="dot" id="lava-voice" title="LAVA"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/aldo.jpg" data-fx="1"><span class="dot" id="aldo-voice" title="Aldo"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/rebecca.jpg" data-fx="1"><span class="dot" id="rebecca-voice" title="Rebecca"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/corunum.jpg" data-fx="1"><span class="dot" id="corunum-voice" title="Cor Unum"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/floris.jpg" data-fx="1"><span class="dot" id="floris-voice" title="Floris Hovers"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/valentin.jpg" data-fx="1"><span class="dot" id="valentin-voice" title="Valentin Loellmann"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/lex.jpg" data-fx="1"><span class="dot" id="lex-voice" title="Lex Pott"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/jurgen.jpg" data-fx="1"><span class="dot" id="jurgen-voice" title="Jurgen Bey"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/nienke.jpg" data-fx="1"><span class="dot" id="nienke-voice" title="Nienke "></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/trulytruly.jpg" data-fx="1"><span class="dot" id="truly-voice" title="Studio Truly truly"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/main.jpg" data-fx="1"><span class="dot" id="main-voice" title="Main Studio"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/sm.jpg" data-fx="1"><span class="dot" id="sm-voice" title="Studio Matthews"></span></a></div>
+        <div class="wid-item"><a data-img="../imgs/portraits/if.jpg" data-fx="1"><span class="dot" id="if-voice" title="Intentional Futures"></span></a></div>
+      </div> -->
+
+
+    <!-- <nav class="list-navigation" id="main-nav">
+      <ul class="main-nav-list" id="designer-list">
+        <a href="./wid.html" class="hoverable" id="wid">
+          <li>What is Design</li>
+        </a>
+        <a href="./reglaze.html" class="hoverable" id="reglaze">
+          <li>Reglaze</li>
+        </a>
+        <a href="./main-studio.html" class="hoverable" id="edwin">
+          <li>Main Studio</li>
+        </a>
+        <a href="./truly-truly.html" class="hoverable" id="truly">
+          <li>Studio Truly Truly</li>
+        </a>
+        <a href="./jurgen-bey.html" class="hoverable" id="jurgen">
+          <li>Jurgen Bey</li>
+        </a>
+        <a href="./nienke-hoogvliet.html" class="hoverable" id="nienke">
+          <li>Nienke Hoogvliet</li>
+        </a>
+        <a href="./lex-pott.html" class="hoverable" id="lex">
+          <li>Lex Pott</li>
+        </a>
+        <a href="./valentin-loellmann.html" class="hoverable" id="valentin">
+          <li>Valentin Loellmann</li>
+        </a>
+        <a href="./cor-unum.html" class="hoverable" id="corunum">
+          <li>Cor Unum</li>
+        </a>
+        <a href="./floris-hovers.html" class="hoverable" id="floris">
+          <li>Floris Hovers</li>
+        </a>
+        <a href="./rebecca-geskus.html" class="hoverable" id="rebecca">
+          <li>Rebecca Geskus</li>
+        </a>
+        <a href="./aldo-bakker.html" class="hoverable" id="aldo">
+          <li>Aldo Bakker</li>
+        </a>
+        <a href="./momkai.html" class="hoverable" id="momkai">
+          <li>Momkai Studios</li>
+        </a>
+        <a href="./lava.html" class="hoverable"  id="lava">
+          <li>Lava Amsterdam</li>
+        </a>
+        <a href="./ineke-hans.html" class="hoverable" id="ineke">
+          <li>Ineke Hans</li>
+        </a>
+        <a href="./pepe-heykoop.html"class="hoverable"  id="pepe">
+          <li>Pepe Heykoop</li>
+        </a>
+        <a href="#" id="matthews" class="hoverable">
+          <li>Studio Matthews</li>
+        </a>
+        <a href="#" id="futures" class="hoverable">
+          <li>Intentional Futures</li>
+        </a>
+      </ul>
+      <ul class="main-nav-list hiddenUI" id="fnotes-list">
+        <a href="#">
+          <li id="arnhem">Arnhem</li>
+        </a>
+        <a href="#">
+          <li id="rome">Roma</li>
+        </a>
+        <a href="#">
+          <li id="appian">Appian Way</li>
+        </a>
+        <a href="#">
+          <li id="andrea">Andrea's Workshop</li>
+        </a>
+        <a href="#">
+          <li id="farm">Farm Life</li>
+        </a>
+        <a href="#">
+          <li id="texels">Texels</li>
+        </a>
+        <a href="#">
+          <li id="burgundy">Burgundian Black</li>
+        </a>
+        <a href="#">
+          <li id="felting">Claudy's Workshop</li>
+        </a>
+        <a href="#">
+          <li id="milk">'T Melkhuisje</li>
+        </a>
+        <a href="#">
+          <li id="brewery">Cantillon Brewery</li>
+        </a>
+        <a href="#">
+          <li id="kiki">Kiki Van Eijk</li>
+        </a>
+        <a href="#">
+          <li id="rens">Rens</li>
+        </a>
+        <a href="#">
+          <li id="atelier">Atelier NL</li>
+        </a>
+        <a href="#">
+          <li id="bts">Behind the Scenes</li>
+        </a>
+      </ul>
+    </nav> -->
+
+
+     <!-- end of grid container -->
+
+    <!-- <div class="cursor">
+      <div class="cursor__ball--big ">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
       </div>
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div> -->
 
-
-    </div>
+    <!-- javascript srcs for hover effect -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+    <script src="../js/charming.min.js"></script>
+    <script src="../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/TweenMax.min.js"></script>
 
   </body>
 

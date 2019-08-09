@@ -411,26 +411,26 @@ body .cursor__ball circle {
 }
 
 /* ----------------------- chapter marker list ------------------- */
+*, html {
+  color: black;
+}
+
+h1.title {
+  display: inline-block;
+  margin: 50px;
+}
+
+*.hiddenUI {
+  display: none !important;
+}
+
 .main-nav-list.hiddenUI {
   display: none;
 }
 
-.list-navigation .main-nav-list li {
-  font-size: 0.75rem;
-  text-align: left;
-  color: #7D246B;
-  text-transform: uppercase;
-  margin-bottom: 0.3rem;
-}
-
-.main-nav-list li:hover {
-  background-color: #7D246B;
-  color: #DFEA4E;
-}
-
 #main-nav {
-  grid-row: 5;
-  grid-column: 7/30;
+  grid-row: 13/span 1;
+  grid-column: 7/-1;
 }
 
 .main-nav-list {
@@ -482,6 +482,23 @@ body .cursor__ball circle {
   display: grid;
   grid: repeat(3, 1fr)/repeat(5, 13.62vw);
   grid-auto-flow: column;
+}
+
+.main-nav-list.hiddenUI {
+  display: none;
+}
+
+.list-navigation .main-nav-list li {
+  font-size: 0.75rem;
+  text-align: left;
+  color: #7D246B;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.main-nav-list li:hover {
+  background-color: #7D246B;
+  color: #DFEA4E;
 }
 
 /* ----------------------- container, body ------------------- */
@@ -640,14 +657,13 @@ h5 {
 /* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
 .video-container {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   margin: 0;
   background-color: white;
   overflow: hidden;
-  border: 2px solid red;
   top: 0;
 }
+
 .video-container .embed-container {
   position: relative;
   padding-bottom: 54.25%;
@@ -655,6 +671,7 @@ h5 {
   overflow: hidden;
   max-width: 100%;
 }
+
 .video-container .embed-container iframe, .video-container .embed-container object,
 .video-container .embed-container embed, .video-container .embed-container video {
   position: absolute;
@@ -664,6 +681,7 @@ h5 {
   width: 100%;
   height: 100%;
 }
+
 .video-container .video-overlay {
   position: absolute;
   left: 0;
@@ -675,12 +693,14 @@ h5 {
   justify-content: center;
   text-align: center;
 }
+
 .video-container .video-overlay h1 {
   font-size: 5vw;
   font-family: redaction;
   margin-bottom: 2%;
   color: white;
 }
+
 .video-container .video-overlay p {
   font-size: 1vw;
   font-family: maisonNeue-Mono;
@@ -688,6 +708,7 @@ h5 {
   margin: 0;
   color: white;
 }
+
 .video-container .video-controls {
   display: inline-flex;
   flex-wrap: wrap;
@@ -700,6 +721,7 @@ h5 {
   height: 6vh;
   cursor: pointer;
 }
+
 .video-container .video-controls .progress {
   position: absolute;
   width: 100%;
@@ -708,29 +730,35 @@ h5 {
   margin-bottom: 10px;
   top: 0;
 }
+
 .video-container .video-controls .progress .vidbar {
   position: absolute;
   background-color: purple;
   height: 9px;
   width: 0%;
 }
+
 .video-container .video-controls .timeblock {
   margin-top: 5px;
 }
+
 .video-container .video-controls .timeblock div {
   display: inline-block;
   font-family: Maison Neue;
   font-size: 0.75em;
   color: #DFEA4E;
 }
+
 .video-container .video-controls .timeblock span {
   color: #DFEA4E;
 }
+
 .video-container .video-controls .vid-buttons {
   margin-top: 5px;
   margin-left: 2%;
   width: 6%;
 }
+
 .video-container .video-controls .vid-buttons button {
   background: none;
   border: 0;
@@ -741,21 +769,24 @@ h5 {
   font-size: 0.75em;
   text-transform: uppercase;
 }
+
 .video-container .video-controls .vid-buttons button.play:before {
   content: "PLAY";
   text-transform: capitalize;
 }
+
 .video-container .video-controls .vid-buttons button.pause:after {
   content: "PAUSE";
   text-transform: capitalize;
 }
+
 .video-container .video-controls .vid-buttons.fs {
   margin-left: auto;
   margin-right: 2%;
 }
 
 .play-cursor {
-  cursor: url(../../../assets/images/play45x45.png) 20 20, auto;
+  cursor: url(../../assets/images/play45x45.png) 20 20, auto;
 }
 
 .pause-cursor {
@@ -804,6 +835,60 @@ h5 {
   -ms-transition: all 0.45s ease-in;
   -o-transition: all 0.45s ease-in;
   transition: all 0.45s ease-in;
+}
+
+.designer-top-section {
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
+  gap: 1.5em;
+  width: 100%;
+}
+
+.designer-top-section #designer-toggle {
+  grid-column: 3/-4;
+  margin-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.designer-top-section #designer-toggle .content-toggle {
+  margin-right: 2em;
+  color: #7D246B;
+  font-family: hyperMarket;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding-bottom: 0.25em;
+}
+
+.designer-top-section #designer-toggle .content-toggle.active {
+  border-bottom: 2px solid #7D246B;
+}
+
+.designer-top-section .designer-summary {
+  grid-column: 3/-4;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.designer-top-section .designer-summary .black-txt {
+  color: black;
+}
+
+.designer-top-section .designer-summary .designer-blurb {
+  width: 55%;
+}
+
+.fullbleed {
+  width: 100%;
+  height: auto;
+  background-color: salmon;
+  margin-top: 5em;
 }
 
 /*# sourceMappingURL=whatisdesign.css.map */
