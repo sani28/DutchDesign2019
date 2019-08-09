@@ -1,8 +1,97 @@
-@import '../1-helpers/fonts';
-@import '../1-helpers/mixins';
-@import '../1-helpers/variables';
-@import '../2-modules/background';
-@import '../2-modules/layouts';
+$width-unit: 4.54vw;
+$height-unit: 6.67vh;
+$grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+$secondary-purp: #7D246B;
+$primary-green: #DFEA4E;
+
+
+@import '../1-helpers/_fonts';
+@import '../1-helpers/_variables';
+@import '../2-modules/_background';
+@import '../2-modules/_layouts';
+@import '../2-modules/_cursor';
+
+/* ----------------------- chapter marker list ------------------- */
+
+.main-nav-list.hiddenUI {
+  display: none;
+}
+
+.list-navigation .main-nav-list li {
+  font-size: 0.75rem;
+  text-align: left;
+  color: #7D246B;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.main-nav-list li:hover {
+  background-color: #7D246B;
+  color: #DFEA4E;
+}
+
+#main-nav {
+  grid-row: 5;
+  grid-column: 7/30;
+}
+
+.main-nav-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  font-family: hyperMarket;
+}
+
+#designer-list {
+  display: grid;
+  grid: repeat(4, 1fr) / repeat(5, 3*$width-unit);
+  grid-auto-flow: column;
+  #wid{
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  #reglaze{
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  #edwin #truly #jurgen #nienke{
+    grid-column: 2/3;
+  }
+  #edwin {
+    grid-row: 1/2;
+  }
+
+  #truly {
+    grid:-row 2/3;
+  }
+
+  #jurgen{
+    grid-row: 3/4;
+  }
+
+  #nienke{
+    grid-row: 4/5;
+  }
+  #lex #valentin #corunum #floris {
+    grid-column: 3/4;
+  }
+  #rebecca #aldo #momkai #lava {
+    grid-column: 4/5;
+  }
+  #ineke #pepe #matthews #futures {
+    grid-column: 5/6;
+  }
+}
+
+#fnotes-list {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(5, 3*$width-unit);
+  grid-auto-flow: column;
+}
+
+/* ----------------------- container, body ------------------- */
 
 .grid-layout-container {
   display: grid;
@@ -14,71 +103,9 @@
   max-width: 100vw;
   height: 100vh;
   padding: 0px;
-  border: 1px solid white;
-}
-
-#pepe-voice {
-
-}
-
-#ineke-voice {
-
-}
-
-#momkai-voice {
-
-}
-
-#lava-voice {
-
-}
-
-#aldo-voice {
-
-}
-
-#rebecca-voice {
-
-}
-
-#corunum-voice {
-
-}
-
-#floris-voice {
-
-}
-
-#valentin-voice{
-
-}
-
-#lex-voice{
-
-}
-
-#jurgen-voice {
-
-}
-
-#nienke-voice {
-
-}
-
-#truly-voice {
-
-}
-
-#main-voice {
-
-}
-
-#sm-voice {
-
 }
 
 /* body */
-
 html {
   max-height: 100vh;
   max-width: 100vw;
@@ -86,17 +113,27 @@ html {
 
 a {
   text-decoration: none;
+  color: #DFEA4E;
 }
 
-a#home:hover {
-  text-align: right;
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  background-size: cover;
+  background-repeat: none;
 }
 
-a#current {
-  border-bottom: 2px solid purple;
+/* ----------------------- links ------------------- */
+
+nav a:hover {
+  border-bottom: 2px solid #DFEA4E;
 }
 
-#back-btn {
+a:active {
+  border-bottom: 2px solid #DFEA4E;
+  color: purple;
+}
+
+.back-btn {
   grid-row: 1;
   grid-column: 2/5;
   font-family: redaction;
@@ -104,79 +141,283 @@ a#current {
   display: inline;
   margin-top: 1%;
   width: 200px;
-  color:white;
+  color: white;
 }
 
-.home-dot {
-  height: 35px;
-  width: 35px;
-  background-color:white;
-  border-radius: 50%;
-  display: inline-block;
+#back {
+  color: white;
+  font-size: 3.5em;
+  text-decoration: none;
 }
 
-h2 {
-  font-size: 3em;
-  width: 400px;
-  grid-row: 3;
-  grid-column: 3/22;
+#portrait-preview {
+  display: grid;
+  grid-area: 3/4/12/20;
+}
+
+h5 {
+  font-family: maisonNeue-Mono;
+  font-size: 0.4em;
+  grid-row: 3/span 2;
+  grid-column: 4/22;
+}
+
+#title {
   font-family: redaction;
-  color: #7D246B;
+  font-size: 3em;
 }
 
 #wid-blurb {
-  font-family: maisonNeue-Mono;
-  font-size: 0.8em;
+  font-family: redaction-bold;
   color: #7D246B;
-  grid-row: 5/span 1;
-  grid-column: 3/22;
+  grid-row: 3/span 1;
+  grid-column: 4/20;
+  font-size: 1.4em;
+  text-align: center;
 }
 
-/* -----------circle nav ------------ */
+/* ----------------------- image reveal  ------------------- */
 
-.circle-nav-container {
-  grid-area: 10/4/10/16;
+@keyframes loop {
+  0% {
+    transform-origin: 0% 50%;
+    transform: scale3d(0, 1, 1);
+  }
+  50% {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+  51% {
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+  }
+}
+
+.hover-reveal {
+  position: fixed;
+  width: 500px;
+  height: 900px;
+  top: 5vh;
+  left: 28vw;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.hover-reveal__inner,
+.hover-reveal__img {
+  width: 95%;
+  height: 75%;
   display: grid;
-  grid: repeat(1, 7vh)/repeat(16, 4.54vw);
-  margin-top: 0;
+  grid-row: 3/10 span 2;
+  grid-column: 6/22;
+  position: relative;
 }
 
-.wid-item {
-  display: flex;
-  position:sticky;
-  align-items: center;
-  justify-content: center;
+.hover-reveal__img {
+  background-size: cover;
+  background-position: 30% 50%;
 }
 
-.dot {
-  height: 15px;
-  width: 15px;
-  background-color: none;
-  border: 1px solid white;
-  border-radius: 50%;
-  display: inline-block;
+/* ----------  tooltip label for designers  ------------------- */
+[title] {
+  display: block;
+  margin: 0 0 1em 0;
 }
 
-span:hover {
-  background-color: purple;
-}
-
-/* toggle interviews + experiences */
-.toggle {
-  width: 100%;
-  max-height: 1vh;
+/*
+  hiding, and styling, the elements we'll be creating
+*/
+[title] + span.createdTooltip {
+  display: none;
+  color: #7D246B;
   font-family: maisonNeue-Mono;
   font-size: 0.6em;
-  display: grid;
-  grid-row: 8/span 1;
-  grid-column: 2/22;
+  padding: 0.2em 0.5em;
+  border-radius: 0.75em;
 }
 
-#film {
-  display: inline;
-  margin: 4px 5px;
-  font-family: 12px;
+/*
+  showing the created elements on hovering the element we want to
+  show tooltips for
+*/
+[title]:hover + span.createdTooltip {
+  display: block;
+  position: absolute;
+}
+
+/* ----------------- DESIGNER PAGE SPECIFIC---------------------- */
+.video-container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+  overflow: hidden;
+  border: 2px solid red;
+  top: 0;
+
+  .embed-container {
+    position: relative;
+    padding-bottom: 54.25%;
+    top: -1vh;
+    overflow: hidden;
+    max-width: 100%;
+
+    iframe, object,
+     embed, video {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .video-overlay {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1{
+      font-size: 5vw;
+      font-family: redaction;
+      margin-bottom: 2%;
+      color: white;
+    }
+
+    p {
+      font-size: 1vw;
+      font-family: maisonNeue-Mono;
+      width: 50%;
+      margin: 0;
+      color: white;
+    }
+  }
+  .video-controls {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    bottom: 6vh;
+    background: rgb(15,15,5);
+    width: 100%;
+    height: 6vh;
+    cursor: pointer;
+    .progress{
+      position: absolute;
+      width: 100%;
+      height: 9px;
+      background-color: rgb(255,255,255,0.8);
+      margin-bottom: 10px;
+      top: 0;
+      .vidbar{
+        position: absolute;
+        background-color: purple;
+        height: 9px;
+        width: 0%;
+      }
+    }
+    .timeblock{
+      margin-top: 5px;
+      div{
+        display: inline-block;
+        font-family: Maison Neue;
+        font-size: 0.75em;
+        color: $primary-green;
+      }
+      span{
+        color: $primary-green;
+      }
+    }
+    .vid-buttons {
+      margin-top: 5px;
+      margin-left: 2%;
+      width: 6%;
+      button {
+        background: none;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        color: $primary-green;
+        font-family: Maison Neue;
+        font-size: 0.75em;
+        text-transform: uppercase;
+      }
+      button.play:before {
+        content: "PLAY";
+        text-transform: capitalize;
+      }
+      button.pause:after{
+        content: "PAUSE";
+        text-transform: capitalize;
+      }
+    }
+    .vid-buttons.fs{
+      margin-left: auto;
+      margin-right: 2%;
+    }
+  }
+}
+
+.play-cursor {
+  cursor: url(../../../assets/images/play45x45.png) 20 20, auto;
+}
+
+.pause-cursor {
+  cursor: url(../../assets/images/pause30x45.png) 15 20, auto;
+}
+
+.designer-tagline{
+  font-family: hyperMarket;
+  font-size: 0.75em;
+  margin-bottom: 0;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
+  color: white;
+}
+.designer-name {
+  font-family: Redaction;
+  font-size: 5em;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.designer-blurb{
+  font-family: Maison Neue;
+  font-size: 0.8em;
+  line-height: 125%;
+  width: 60%;
+}
+
+
+
+.shown-item {
+  opacity: 0;
+}
+
+.shown-item.visible {
+  opacity: 1;
+  -webkit-transition: all 0.15s ease-in;
+					 -moz-transition: all 0.15s ease-in;
+						-ms-transition: all 0.15s ease-in;
+						 -o-transition: all 0.15s ease-in;
+								transition: all 0.15s ease-in;
+}
+
+.shown-item.visible-slow {
+  opacity: 1;
+  -webkit-transition: all 0.45s ease-in;
+					 -moz-transition: all 0.45s ease-in;
+						-ms-transition: all 0.45s ease-in;
+						 -o-transition: all 0.45s ease-in;
+								transition: all 0.45s ease-in;
 }
