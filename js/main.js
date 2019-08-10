@@ -96,7 +96,6 @@ $(document).ready(function(){
         break;
     }
     observer.observe();
-    console.log("in theory, observing");
   }
 
   function hideBGImage(){
