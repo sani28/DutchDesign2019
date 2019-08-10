@@ -33,11 +33,6 @@ $(document).ready(function() {
       var tween = new TimelineLite()
         .add(TweenLite.to(scrollProg, 1.0, {strokeDashoffset: 0, ease:Linear.easeNone}));
 
-      var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy"
-        // ... more custom settings?
-      });
-
       new ScrollMagic.Scene({
               duration: totalHeight - 950,
               offset: 175,
