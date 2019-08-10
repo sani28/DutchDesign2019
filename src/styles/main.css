@@ -418,6 +418,40 @@ a#imgHover {
   display: none !important;
 }
 
+#back-btn {
+  position: fixed;
+  display: block;
+  top: 1em;
+  left: 1em;
+  width: 10vw;
+  color: white;
+  z-index: 1;
+}
+#back-btn p {
+  display: none;
+  font-family: hyperMarket;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+#back-btn:hover #home-text {
+  color: purple;
+  display: inline-block;
+  float: right;
+}
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#back-btn:hover .home-dot {
+  background-color: purple;
+}
+
 body .cursor__ball--big {
   display: none;
 }
