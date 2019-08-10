@@ -1,37 +1,34 @@
 
 $(document).ready(function(){
+//CURSOR
+  const $bigBall = document.querySelector('.cursor__ball--big');
+  const $smallBall = document.querySelector('.cursor__ball--small');
+  const $hoverables = document.querySelectorAll('.hoverable');
 
+  // Listeners
+  document.body.addEventListener('mousemove', onMouseMove);
+  for (let i = 0; i < $hoverables.length; i++) {
+    $hoverables[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+  }
 
+  // Move the cursor
+  function onMouseMove(e) {
+    TweenMax.to($smallBall, .1, {
+      x: e.pageX - 5,
+      y: e.pageY - 7 });
 
-    //CURSOR
-      const $bigBall = document.querySelector('.cursor__ball--big');
-      const $smallBall = document.querySelector('.cursor__ball--small');
-      const $hoverables = document.querySelectorAll('.hoverable');
+  }
+  // Hover an element
+  function onMouseHover() {
+    TweenMax.to($smallBall, .3, {
+      scale: 4 });
 
-      // Listeners
-      document.body.addEventListener('mousemove', onMouseMove);
-      for (let i = 0; i < $hoverables.length; i++) {
-        $hoverables[i].addEventListener('mouseenter', onMouseHover);
-        $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-      }
-
-      // Move the cursor
-      function onMouseMove(e) {
-        TweenMax.to($smallBall, .1, {
-          x: e.pageX - 5,
-          y: e.pageY - 7 });
-
-      }
-      // Hover an element
-      function onMouseHover() {
-        TweenMax.to($smallBall, .3, {
-          scale: 4 });
-
-      }
-      function onMouseHoverOut() {
-        TweenMax.to($smallBall, .3, {
-          scale: 1 });
-      }
+  }
+  function onMouseHoverOut() {
+    TweenMax.to($smallBall, .3, {
+      scale: 1 });
+  }
 
   //ELEMENTS
   const designerDots = $(".designer-dot").get();
@@ -49,6 +46,7 @@ $(document).ready(function(){
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
 /////////////////////////////////////////////////////////////////////////
   initLandingPage();
+  document.addEventListener("DOMContentLoaded", yall);
 
   function initLandingPage(){
     toggleDotState();
