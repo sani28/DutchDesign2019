@@ -525,7 +525,7 @@ body .cursor__ball circle {
   text-align: left;
   color: #7D246B;
   text-transform: uppercase;
-  margin-bottom: 0.3rem;
+  padding: 0.3rem 0.2rem;
 }
 
 .main-nav-list li:hover {
@@ -546,7 +546,8 @@ body .cursor__ball circle {
   font-family: hyperMarket;
   text-transform: uppercase;
   height: 1rem;
-  padding-top: 2px;
+  padding-top: 0.2rem;
+  padding-left: 0.2rem;
   border: 1px solid #7D246B;
 }
 
