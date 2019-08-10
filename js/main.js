@@ -45,6 +45,8 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////////////////////////
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
 /////////////////////////////////////////////////////////////////////////
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
   initLandingPage();
 
   function initLandingPage(){
@@ -82,6 +84,7 @@ $(document).ready(function(){
         $("#valentin-preview-vid").removeClass("hiddenUI");
         break;
     }
+    observer.observe();
     $("#grid-overlay").removeClass("hiddenUI");
   }
 
@@ -92,6 +95,8 @@ $(document).ready(function(){
         $("#arnhem-bg").removeClass("hiddenUI");
         break;
     }
+    observer.observe();
+    console.log("in theory, observing");
   }
 
   function hideBGImage(){
