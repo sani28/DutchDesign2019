@@ -15,12 +15,12 @@
 <body>
   <div id="grid-overlay" class="hiddenUI"></div>
   <div class="bg-video-container">
-    <video class="lazy bg-preview-video hiddenUI" id="valentin-preview-vid" preload="none" data-src="../assets/videos/preview_valentin.mp4" playsinline autoplay muted loop>
-      <source data-src="../assets/videos/preview_valentin.mp4" type="video/mp4">
+    <video class="bg-preview-video hiddenUI" id="valentin-preview-vid" preload="metadata" playsinline autoplay muted loop>
+      <source src="../assets/videos/preview_valentin.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="lazy bg-preview-video hiddenUI" id="lex-preview-vid" preload="none" data-src="../assets/videos/preview_lex.mp4" playsinline autoplay muted loop>
-      <source data-src="../assets/videos/preview_lex.mp4" type="video/mp4">
+    <video class="bg-preview-video hiddenUI" id="lex-preview-vid" preload="metadata" playsinline autoplay muted loop>
+      <source src="../assets/videos/preview_lex.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
   </div>
@@ -198,6 +198,5 @@
     </nav>
 
   </div> <!-- grid ends here -->
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 </body>
 </html>
