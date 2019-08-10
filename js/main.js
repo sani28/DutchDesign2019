@@ -46,7 +46,6 @@ $(document).ready(function(){
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
 /////////////////////////////////////////////////////////////////////////
   initLandingPage();
-  document.addEventListener("DOMContentLoaded", yall);
 
   function initLandingPage(){
     toggleDotState();
@@ -90,7 +89,6 @@ $(document).ready(function(){
     let bgImg = fieldID;
     switch (bgImg) {
       case "arnhemDot":
-        console.log(bgImg);
         $("#arnhem-bg").removeClass("hiddenUI");
         break;
     }
