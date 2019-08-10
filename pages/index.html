@@ -8,19 +8,19 @@
   <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
   <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="../js/yall.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
   <script type="text/javascript" src="../js/main.js" async defer></script>
 </head>
 
 <body>
   <div id="grid-overlay" class="hiddenUI"></div>
   <div class="bg-video-container">
-    <video class="lazy bg-preview-video hiddenUI" id="valentin-preview-vid" preload="none" playsinline autoplay muted loop>
-      <source src="../assets/videos/preview_valentin.mp4" type="video/mp4">
+    <video class="lazy bg-preview-video hiddenUI" id="valentin-preview-vid" preload="none" data-src="../assets/videos/preview_valentin.mp4" playsinline autoplay muted loop>
+      <source data-src="../assets/videos/preview_valentin.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="lazy bg-preview-video hiddenUI" id="lex-preview-vid" preload="none" playsinline autoplay muted loop>
-      <source src="../assets/videos/preview_lex.mp4" type="video/mp4">
+    <video class="lazy bg-preview-video hiddenUI" id="lex-preview-vid" preload="none" data-src="../assets/videos/preview_lex.mp4" playsinline autoplay muted loop>
+      <source data-src="../assets/videos/preview_lex.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
   </div>
@@ -198,9 +198,6 @@
     </nav>
 
   </div> <!-- grid ends here -->
-
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 </body>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-
 </html>
