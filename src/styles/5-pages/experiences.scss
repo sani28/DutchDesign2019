@@ -336,11 +336,14 @@
   grid-column: 11/15;
   width: 100%;
 }
+
+// TODO: ask linda to fix crop on appian way
 .photo-section-6 .layout-item:nth-child(3) {
   grid-row: 4/7;
   grid-column: 5/11;
   width: 100%;
 }
+
 .photo-section-6 .section-quote {
   grid-row: 5/7;
   grid-column: 11/16;
@@ -365,6 +368,15 @@
   grid-column: 11/15;
   align-self: end;
   font-size: 0.6em;
+  text-align: justify;
+  line-height: 150%;
+}
+
+.photo-section-6 .section-caption#rome {
+  width: 90%;
+  grid-row: 1/span 4;
+  grid-column: 3/7;
+  align-self: start;
   text-align: justify;
   line-height: 150%;
 }

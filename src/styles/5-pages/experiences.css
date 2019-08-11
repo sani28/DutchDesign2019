@@ -707,6 +707,15 @@ body .cursor__ball circle {
   line-height: 150%;
 }
 
+.photo-section-6 .section-caption#rome {
+  width: 90%;
+  grid-row: 1/span 4;
+  grid-column: 3/7;
+  align-self: start;
+  text-align: justify;
+  line-height: 150%;
+}
+
 /*-------------- PHOTO SECITON 6 VARIATION 2 -------------------- */
 .photo-section-6-v2 {
   grid-template-rows: repeat(7, 1fr);
