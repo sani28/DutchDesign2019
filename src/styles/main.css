@@ -151,6 +151,13 @@
   height: 100%;
   overflow: hidden;
 }
+.photo-section-2 .layout-item:nth-child(2) video {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  margin: 0;
+}
 .photo-section-2 .layout-item:nth-child(2) img {
   width: 100%;
   margin: 0;
