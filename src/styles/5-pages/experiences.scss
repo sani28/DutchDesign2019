@@ -175,6 +175,7 @@
   height: 100%;
   overflow: hidden;
 }
+
 .photo-section-2 .layout-item:nth-child(2) img {
   width: 100%;
   margin: 0;
@@ -191,6 +192,7 @@
   width: 100%;
   margin-bottom: 0;
 }
+
 .photo-section-2 .section-quote.type-two {
   grid-row: 4/6;
   grid-column: 6/9;
@@ -226,6 +228,14 @@
   grid-row: 2;
   align-self: center;
   color: black;
+}
+
+.photo-section-3 .section-caption#melkhuis {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: center;
 }
 
 .photo-section-4 {
@@ -388,6 +398,20 @@
   line-height: 150%;
 }
 
+.photo-section-6 .section-caption#texels-cap-2 {
+  grid-row: 1/4;
+  grid-column: 3/6;
+  width: 100%;
+  align-self: end;
+}
+
+.photo-section-6 .section-caption#texels-cap-3 {
+  grid-row: 4/6;
+  align-self: end;
+  grid-column: 11/15;
+  width: 100%;
+}
+
 /*-------------- PHOTO SECITON 6 VARIATION 2 -------------------- */
 
 .photo-section-6-v2 {
@@ -462,11 +486,18 @@
 
 .end-caption {
   grid-template-rows: repeat(1, 10vh) 1fr;
+  border:2px solid green;
+  margin-bottom: 10em;
 }
 
 .end-caption .section-caption {
   grid-column: 4/15;
   line-height: 150%;
+}
+
+.end-caption .section-caption#melkhuis {
+    grid-column: 5/13;
+    grid-row: 1;
 }
 
 html {
