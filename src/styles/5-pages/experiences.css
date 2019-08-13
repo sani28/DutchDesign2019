@@ -81,7 +81,7 @@
   margin: 0 auto;
   max-width: 100vw;
   height: 100vh;
-  padding: 1em;
+  padding: 0px;
 }
 
 .designer-video-section {
@@ -288,7 +288,6 @@
   grid-column: 4/12;
   width: 100%;
   align-self: end;
-  margin-top: 30vh;
 }
 .photo-section-8 .layout-item:nth-child(2) {
   grid-column: 12/16;
@@ -297,7 +296,6 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .photo-section-8 .layout-item:nth-child(2) img {
   width: 100%;
 }
@@ -477,6 +475,13 @@ body .cursor__ball circle {
   text-align: justify;
 }
 
+.photo-section-1 .section-caption#bb-cap-3 {
+  grid-row: 1;
+  grid-column: 13/17;
+  align-self: flex-end;
+  text-align: justify;
+}
+
 /*-------------- PHOTO SECITON 2 -------------------- */
 .photo-section-2 {
   grid-template-rows: repeat(5, 16.66vh) 1fr;
@@ -567,6 +572,14 @@ body .cursor__ball circle {
   width: 100%;
   text-align: justify;
   align-self: center;
+}
+
+.photo-section-3 .section-caption#bb-cap-2 {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: top;
 }
 
 .photo-section-4 {
@@ -844,6 +857,8 @@ html {
 body {
   color: white;
   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  padding: 1em;
+  overflow-x: hidden;
 }
 
 a#home:hover {
@@ -888,7 +903,7 @@ a#home:hover {
   height: 500px;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.6em;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }

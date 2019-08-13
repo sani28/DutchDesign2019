@@ -1,15 +1,10 @@
 
 $(document).ready(function(){
 
-  $(".geo-info").codex({
-    speed: 30,
-    duration: 2000
-  });
-
-
     function removeBackground(){
     	document.getElementById("exp-landing-photo").style.background= "none";
     }
+
 
     //CURSOR
       const $bigBall = document.querySelector('.cursor__ball--big');
@@ -265,6 +260,12 @@ $(document).ready(function(){
       }
     });
   }
+
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
 
 
 }); //DOCREADY DON'T DELETE

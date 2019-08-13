@@ -1,3 +1,4 @@
+
 // $width-unit: 4.54vw;
 // $height-unit: 6.67vh;
 // $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
@@ -150,6 +151,14 @@
   text-align: justify;
 }
 
+.photo-section-1 .section-caption#bb-cap-3{
+  grid-row: 1;
+  grid-column: 13/17;
+  align-self: flex-end;
+  text-align: justify;
+}
+
+
 /*-------------- PHOTO SECITON 2 -------------------- */
 
 .photo-section-2 {
@@ -236,6 +245,14 @@
   width: 100%;
   text-align: justify;
   align-self: center;
+}
+
+.photo-section-3 .section-caption#bb-cap-2 {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: top;
 }
 
 .photo-section-4 {
@@ -486,7 +503,6 @@
 
 .end-caption {
   grid-template-rows: repeat(1, 10vh) 1fr;
-  border:2px solid green;
   margin-bottom: 10em;
 }
 
@@ -508,6 +524,7 @@ body {
   color: white;
   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   padding: 1em;
+  overflow-x: hidden;
 }
 
 a#home:hover {
