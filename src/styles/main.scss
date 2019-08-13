@@ -470,7 +470,6 @@ body .cursor__ball circle {
   .embed-container {
     position: relative;
     padding-bottom: 54.25%;
-    top: -1vh;
     overflow: hidden;
     max-width: 100%;
 
@@ -488,7 +487,7 @@ body .cursor__ball circle {
   .video-overlay {
     position: absolute;
     left: 0;
-    top: 40%;
+    top: 30%;
     width: 100%;
     display: inline-flex;
     flex-direction: column;
@@ -499,7 +498,6 @@ body .cursor__ball circle {
     h1{
       font-size: 5vw;
       font-family: redaction;
-      margin-bottom: 2%;
       color: white;
     }
 
