@@ -4,8 +4,6 @@ $(document).ready(function(){
     function removeBackground(){
     	document.getElementById("exp-landing-photo").style.background= "none";
     }
-
-
     //CURSOR
       const $bigBall = document.querySelector('.cursor__ball--big');
       const $smallBall = document.querySelector('.cursor__ball--small');
