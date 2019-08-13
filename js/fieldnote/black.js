@@ -11,7 +11,6 @@ $(document).ready(function(){
     document.getElementById("bb-5"),
     document.getElementById("bb-6"),
     document.getElementById("bb-7"),
-    document.getElementById("caption2"),
     document.getElementById("end")];
 
 

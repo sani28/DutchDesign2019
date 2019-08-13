@@ -582,6 +582,14 @@ body .cursor__ball circle {
   align-self: top;
 }
 
+.photo-section-3 .section-caption#cant-cap-3 {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: top;
+}
+
 .photo-section-4 {
   padding-bottom: 5em;
 }
@@ -655,7 +663,7 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 5 -------------------- */
 .photo-section-5 {
   margin-bottom: 5em;
-  margin-top: 5em;
+  margin-top: 10em;
 }
 
 .photo-section-5 .layout-item:first-child {
