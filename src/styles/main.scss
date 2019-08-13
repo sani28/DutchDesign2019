@@ -604,6 +604,25 @@ body .cursor__ball circle {
   width: 60%;
 }
 
+#video-fig:fullscreen {
+  background-color: black;
+  .embed-container{
+    position: relative;
+    // top: 50%;
+    // bottom: 50%;
+    padding-bottom: 70.25%;
+    // video{
+    //   padding-top: 15%;
+    // }
+  }
+  .video-overlay{
+    top: 40%;
+  }
+  .video-controls {
+    position: fixed;
+    bottom: 0;
+  }
+}
 
 
 .shown-item {

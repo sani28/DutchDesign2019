@@ -83,16 +83,17 @@ function toggleFullScreen() {
         vidFig.webkitRequestFullscreen();
     } else if (vidFig.msRequestFullscreen) {
         vidFig.msRequestFullscreen();
-    } else {
-      if(document.exitFullscreen) {
-          document.exitFullscreen();
-      } else if(document.mozCancelFullscreen) {
-          document.mozCancelFullscreen();
-      } else if(document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-      }
+    }
+    if(window.innerHeight == screen.height) {
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if(document.mozCancelFullscreen) {
+            document.mozCancelFullscreen();
+        } else if(document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
     }
   }
 

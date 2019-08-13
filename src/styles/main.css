@@ -977,6 +977,21 @@ body .cursor__ball circle {
   width: 60%;
 }
 
+#video-fig:fullscreen {
+  background-color: black;
+}
+#video-fig:fullscreen .embed-container {
+  position: relative;
+  padding-bottom: 70.25%;
+}
+#video-fig:fullscreen .video-overlay {
+  top: 40%;
+}
+#video-fig:fullscreen .video-controls {
+  position: fixed;
+  bottom: 0;
+}
+
 .shown-item {
   opacity: 0;
 }
