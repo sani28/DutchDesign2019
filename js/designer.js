@@ -1,5 +1,6 @@
 $(document).ready(function() {
       var vid = document.getElementById("designer-vid");
+      var vidFig = document.getElementById("video-fig");
       const playback = document.getElementById("playback");
       const playPause = document.getElementById("play-pause");
       const overlay = document.getElementById("designer-overlay");
@@ -74,27 +75,24 @@ function formatTime(s){
 }
 
 function toggleFullScreen() {
-    console.log('fs request');
-    if (vid.requestFullscreen) {
-        vid.requestFullscreen();
-    } else if (vid.mozRequestFullScreen) {
-        vid.mozRequestFullScreen();
-    } else if (vid.webkitRequestFullscreen) {
-        vid.webkitRequestFullscreen();
-    } else if (vid.msRequestFullscreen) {
-        vid.msRequestFullscreen();
-    }
-    if(window.innerHeight == screen.height) {
-        console.log('already fs');
-        if(document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if(document.mozCancelFullscreen) {
-            document.mozCancelFullscreen();
-        } else if(document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-        }
+    if (vidFig.requestFullscreen) {
+        vidFig.requestFullscreen();
+    } else if (vidFig.mozRequestFullScreen) {
+        vidFig.mozRequestFullScreen();
+    } else if (vidFig.webkitRequestFullscreen) {
+        vidFig.webkitRequestFullscreen();
+    } else if (vidFig.msRequestFullscreen) {
+        vidFig.msRequestFullscreen();
+    } else {
+      if(document.exitFullscreen) {
+          document.exitFullscreen();
+      } else if(document.mozCancelFullscreen) {
+          document.mozCancelFullscreen();
+      } else if(document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+      }
     }
   }
 
