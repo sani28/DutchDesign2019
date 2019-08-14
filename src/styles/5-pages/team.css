@@ -109,8 +109,17 @@ html {
 #team-bio {
   display: grid;
   grid-row: 7/10;
-  grid-column: 7/18;
+  grid-column: 9/16;
   line-height: 80%;
+  text-align: justify;
+  z-index: 99;
+}
+
+.photo-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: 0;
 }
 
 .portfolio-link {
@@ -131,6 +140,24 @@ p.team {
 }
 
 /* ---------------- Links and cursor styling -------------------------- */
+.back-btn {
+  margin-left: 5%;
+  grid-column: 1/9;
+  font-family: redaction;
+  font-size: 3rem;
+  display: inline;
+  margin-top: 1%;
+  width: 200px;
+  color: white;
+  z-index: 99;
+}
+
+#back {
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -151,12 +178,116 @@ body .cursor__ball {
   position: fixed;
   top: 0;
   left: 0;
-  mix-blend-mode: overlay;
+  mix-blend-mode: screen;
   z-index: 1000;
 }
 
 body .cursor__ball circle {
-  fill: purple;
+  fill: #DFEA4E;
+}
+
+/* -----------circle nav ------------ */
+.circle-nav-container {
+  grid-area: 12/4/12/16;
+  display: grid;
+  grid: repeat(1, 7vh)/repeat(16, 4.54vw);
+  margin-top: 0;
+}
+
+.wid-item {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+span:hover {
+  background-color: #DFEA4E;
+}
+
+/* ------------------------- Plugin MARQUEE CSS -------------------------------- */
+.str_wrap {
+  overflow: hidden;
+  position: relative;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  background: none;
+  white-space: nowrap;
+}
+
+.str_move {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: move;
+}
+
+.str_move_clone {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.str_vertical .str_move_clone {
+  left: 0;
+  top: 100%;
+}
+
+.str_down .str_move_clone {
+  left: 0;
+  bottom: 100%;
+}
+
+.str_vertical .str_move,
+.str_down .str_move {
+  white-space: normal;
+  width: 100%;
+}
+
+.str_static .str_move,
+.no_drag .str_move,
+.noStop .str_move {
+  cursor: inherit;
+}
+
+.str_wrap img {
+  max-width: none !important;
+}
+
+.str4 {
+  position: relative;
+  height: 100%;
+}
+
+#gabe-1 {
+  width: 400px;
+}
+
+#gabe-2 {
+  grid-row: 5;
+  grid-column: 12/20;
+  width: 400px;
+}
+
+#gabe-3 {
+  grid-row: 6;
+}
+
+#gabe-4 {
+  grid-row: 10;
 }
 
 /*# sourceMappingURL=team.css.map */
