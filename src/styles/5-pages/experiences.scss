@@ -98,7 +98,7 @@
 }
 
 
-.photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
+.photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
   display: grid;
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1.5em;
@@ -525,6 +525,26 @@
   grid-row: 2/8;
 }
 
+.photo-section-8 .section-caption#melk-cap-2 {
+  align-self: start;
+  text-align: justify;
+  grid-row: 1/2;
+}
+
+.photo-section-8 .section-caption#farm-cap-1{
+  grid-row: 1;
+  margin-top: 35%;
+  align-self: start;
+  text-align: justify;
+  grid-column: 4/8;
+}
+
+.photo-section-8 #farm-1 {
+  grid-row: 1;
+  display: grid;
+}
+
+
 .end-caption {
   grid-template-rows: repeat(1, 10vh) 1fr;
   margin-bottom: 10em;
@@ -629,6 +649,13 @@ a#home:hover {
   text-align: right;
   width: 80vw;
   line-height: 100%;
+}
+
+.exp-title-twoline {
+  text-align: right;
+  font-size: 3em;
+  font-family: Redaction-Bold;
+  line-height: 150%;
 }
 
 h3#exp-title-secondary {
