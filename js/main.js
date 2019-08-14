@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+
+
     function removeBackground(){
     	document.getElementById("exp-landing-photo").style.background= "none";
     }
@@ -23,12 +25,13 @@ $(document).ready(function(){
           y: e.pageY - 7 });
 
       }
+
       // Hover an element
       function onMouseHover() {
         TweenMax.to($smallBall, .3, {
           scale: 4 });
-
       }
+
       function onMouseHoverOut() {
         TweenMax.to($smallBall, .3, {
           scale: 1 });
