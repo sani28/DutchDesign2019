@@ -144,6 +144,10 @@ $('#toggle-overview').click(function(e) {
     scrollController.scrollTo("#video-fig");
   });
 
+  $(document).on("click", "#scroll-text", function (e) {
+    scrollController.scrollTo("#video-fig");
+  });
+
   scrollController.scrollTo(function (newpos) {
     if(window.pageYOffset > (document.body.clientHeight * 0.45)){
       TweenLite.to(window, 1.3, {scrollTo: {y: newpos}, ease: Power1.easeIn });

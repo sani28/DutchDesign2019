@@ -8,7 +8,8 @@ $(document).ready(function(){
    document.getElementById('skintoy'),
    document.getElementById('quote2'),
    document.getElementById('nothingness'),
-   document.getElementById('quote3')
+   document.getElementById('quote3'),
+   document.getElementById('pepequote1'),
   ];
 
    var scrollControl = new ScrollMagic.Controller();

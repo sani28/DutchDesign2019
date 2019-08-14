@@ -219,7 +219,7 @@
   width: 100%;
 }
 .photo-section-4 .layout-item:nth-child(2) {
-  grid-column: 10/16;
+  grid-column: 10/17;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -947,7 +947,7 @@ body .cursor__ball circle {
 }
 
 .play-cursor {
-  cursor: url(../../assets/images/play45x45.png) 20 20, auto;
+  cursor: url(../../assets/images/play.png) 20 20, auto;
 }
 
 .play-cursor.hoveraction {
@@ -955,7 +955,7 @@ body .cursor__ball circle {
 }
 
 .pause-cursor {
-  cursor: url(../../assets/images/pause30x45.png) 15 20, auto;
+  cursor: url(../../assets/images/pause.png) 15 20, auto;
 }
 
 .pause-cursor.hoveraction {
@@ -973,14 +973,14 @@ body .cursor__ball circle {
 .designer-name {
   font-family: Redaction;
   font-size: 5em;
-  margin: 0 auto;
+  margin: 0;
   text-transform: uppercase;
 }
 
 .designer-blurb {
   font-family: Maison Neue;
   font-size: 0.8em;
-  line-height: 125%;
+  line-height: 150%;
   width: 60%;
 }
 
@@ -1055,15 +1055,21 @@ body .cursor__ball circle {
   margin-top: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 .designer-top-section .designer-summary .black-txt {
   color: black;
 }
+.designer-top-section .designer-summary .designer-tagline {
+  margin-bottom: 1em;
+}
 .designer-top-section .designer-summary .designer-blurb {
-  width: 55%;
+  width: 50%;
+  line-height: 170%;
+  color: grey;
+  margin-top: 2em;
 }
 
 .fullbleed {
@@ -1105,6 +1111,7 @@ body .cursor__ball circle {
   bottom: 10%;
   right: 4%;
   z-index: 1;
+  cursor: pointer;
 }
 .scroll-util svg {
   position: absolute;
@@ -1112,7 +1119,7 @@ body .cursor__ball circle {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.scroll-util svg path {
+.scroll-util svg #scroll-progress {
   transform: scale(-1, 1) rotate(90deg);
   transform-origin: 50% 50%;
 }
@@ -1120,14 +1127,14 @@ body .cursor__ball circle {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   font-size: 0.75rem;
-  color: black;
+  color: #7D246B;
   text-align: center;
   font-family: hyperMarket;
 }
 .scroll-util .inner-util:hover {
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
 
