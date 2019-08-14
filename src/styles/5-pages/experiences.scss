@@ -258,6 +258,11 @@
   color: black;
 }
 
+.photo-section-3 #bb-4 {
+  margin-top: 1em;
+  grid-column: 4/11;
+}
+
 .photo-section-3 .section-caption#melkhuis {
   grid-column: 12/17;
   grid-row: 2/4;
@@ -267,8 +272,8 @@
 }
 
 .photo-section-3 .section-caption#bb-cap-2 {
-  grid-column: 12/17;
-  grid-row: 2/4;
+  grid-column: 11/17;
+  grid-row: 2/5;
   width: 100%;
   text-align: justify;
   align-self: top;
@@ -595,7 +600,18 @@
   align-self: end;
 }
 
+.photo-section-8 #bb-claudy-cap {
+  grid-column: 4/9;
+  grid-row: 1/10;
+  width: 100%;
+  margin-top: 30%;
+  align-self: start;
+}
 
+.photo-section-8 #bb-1 {
+  grid-row: 1;
+  display: grid;
+}
 
 .end-caption {
   grid-template-rows: repeat(1, 10vh) 1fr;
@@ -611,6 +627,13 @@
     grid-column: 5/13;
     grid-row: 1;
 }
+
+.end-caption .section-caption#farm-end-cap{
+    grid-row: 1/5;
+    grid-column: 6/14;
+    text-align: justify;
+}
+
 
 html {
   background-color: #222222;
