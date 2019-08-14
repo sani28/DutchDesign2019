@@ -13,7 +13,7 @@
 /* ----- fonts ------ */
 @font-face {
   font-family: hyperMarket;
-  src: url(../../fonts/hypermarket-regular.ttf);
+  src: url(../../../fonts/hypermarket-regular.ttf);
   font-weight: bold;
 }
 /* ----- legacy fonts ------ */
@@ -110,15 +110,16 @@
 
 .section-quote {
   font-size: 0.9em;
-  font-family: maisonNeue-Mono;
+  font-family: maisonMono-Regular;
   color: white;
 }
 
 .section-caption {
-  font-family: maisonNeue-Mono;
+  font-family: maisonMono-Regular;
   font-size: 0.65em;
   font-weight: lighter;
   line-height: 150%;
+  text-align: justify;
   color: white;
 }
 
@@ -241,7 +242,7 @@
   grid-template-rows: 1fr 1fr;
 }
 .photo-section-3 .layout-item:first-child {
-  grid-column: 5/17;
+  grid-column: 5/15;
   grid-row: 1;
   width: 100%;
 }
@@ -507,6 +508,7 @@
 .photo-section-7 {
   grid-template-rows: 2;
   margin-bottom: 20%;
+  padding: 2em;
 }
 .photo-section-7 .layout-item:first-child {
   grid-row: 1;
@@ -515,7 +517,7 @@
 .photo-section-7 .layout-item:nth-child(2) {
   grid-row: 2/3;
   grid-column: 2/9;
-  width: 72%;
+  width: 70%;
 }
 .photo-section-7 .layout-item:nth-child(3) {
   grid-row: 2;
@@ -544,7 +546,8 @@
 .photo-section-7 #farm-cap-4 {
   align-self: end;
   text-align: justify;
-  grid-row: 2/8;
+  grid-row: 1/5;
+  grid-column: 1/7;
 }
 
 .photo-section-7 .section-caption#dyes-cap-2{
@@ -573,6 +576,26 @@
   display: grid;
 }
 
+.photo-section-8 #andrea-cap-1 {
+  text-align: justify;
+}
+
+.photo-section-8 #andrea-cap-2 {
+  grid-row: 1;
+  margin-top: 35%;
+  align-self: start;
+  text-align: justify;
+  grid-column: 4/8;
+}
+
+.photo-section-8 #in-workshop {
+  grid-column: 4/12;
+  grid-row: 1;
+  width: 100%;
+  align-self: end;
+}
+
+
 
 .end-caption {
   grid-template-rows: repeat(1, 10vh) 1fr;
@@ -590,13 +613,12 @@
 }
 
 html {
-  background-color: #000;
+  background-color: #222222;
 }
 
 body {
   color: white;
   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  padding: 1em;
   overflow-x: hidden;
 }
 
@@ -694,7 +716,7 @@ h3#exp-title-secondary {
 
 #exp-tagline {
   font-family: hyperMarket;
-  font-size: calc(0.9em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #exp-title {
