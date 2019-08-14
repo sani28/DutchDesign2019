@@ -489,6 +489,13 @@ body .cursor__ball circle {
   text-align: justify;
 }
 
+.photo-section-1 .section-caption#dyes-cap-1 {
+  grid-row: 1;
+  grid-column: 13/17;
+  align-self: flex-end;
+  text-align: justify;
+}
+
 /*-------------- PHOTO SECITON 2 -------------------- */
 .photo-section-2 {
   grid-template-rows: repeat(5, 16.66vh) 1fr;
@@ -875,6 +882,11 @@ body .cursor__ball circle {
   grid-row: 2/8;
 }
 
+.photo-section-7 .section-caption#dyes-cap-2 {
+  grid-row: 3/8;
+  text-align: justify;
+}
+
 .photo-section-8 .section-caption#melk-cap-2 {
   align-self: start;
   text-align: justify;
@@ -955,7 +967,7 @@ a#home:hover {
 
 .geo-info#right {
   display: inline-block;
-  right: 0;
+  right: 20px;
   justify-content: flex-start;
   position: absolute;
   width: 20px;
