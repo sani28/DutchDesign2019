@@ -846,7 +846,6 @@ body .cursor__ball circle {
 .video-container .embed-container {
   position: relative;
   padding-bottom: 54.25%;
-  overflow: hidden;
   max-width: 100%;
 }
 .video-container .embed-container iframe, .video-container .embed-container object,
@@ -951,8 +950,16 @@ body .cursor__ball circle {
   cursor: url(../../assets/images/play45x45.png) 20 20, auto;
 }
 
+.play-cursor.hoveraction {
+  cursor: none;
+}
+
 .pause-cursor {
   cursor: url(../../assets/images/pause30x45.png) 15 20, auto;
+}
+
+.pause-cursor.hoveraction {
+  cursor: none;
 }
 
 .designer-tagline {
@@ -990,6 +997,10 @@ body .cursor__ball circle {
 #video-fig:fullscreen .video-controls {
   position: fixed;
   bottom: 0;
+}
+
+#video-fig:fullscreen .video-controls.hoveraction {
+  transform: translateY(6vh);
 }
 
 .shown-item {
