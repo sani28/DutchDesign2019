@@ -274,6 +274,14 @@
   align-self: top;
 }
 
+.photo-section-3 .section-caption#farm-cap-3 {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: top;
+}
+
 .photo-section-4 {
   padding-bottom: 5em;
 }
@@ -520,6 +528,12 @@
 }
 
 .photo-section-7 .section-caption#soil-cap-3 {
+  align-self: end;
+  text-align: justify;
+  grid-row: 2/8;
+}
+
+.photo-section-7 #farm-cap-4 {
   align-self: end;
   text-align: justify;
   grid-row: 2/8;
