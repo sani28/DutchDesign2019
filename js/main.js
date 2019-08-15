@@ -269,7 +269,7 @@ $(window).load(function() {
     loop:-1,
     scrolldelay: 0,
     scrollamount:90,
-    circular: true,
-    drag: true
+    circular: false,
+    drag: false
   });
 })

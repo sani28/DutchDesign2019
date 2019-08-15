@@ -76,6 +76,7 @@ html {
   background-color: #000;
   background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
+  overflow: hidden;
 }
 
 .grid-layout-container {
@@ -115,11 +116,13 @@ html {
   z-index: 99;
 }
 
-.photo-container {
+.photo-section {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
   left: 0;
+  display: grid;
+  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
 }
 
 .portfolio-link {
@@ -188,7 +191,7 @@ body .cursor__ball circle {
 
 /* -----------circle nav ------------ */
 .circle-nav-container {
-  grid-area: 12/4/12/16;
+  grid-area: 12/6/12/16;
   display: grid;
   grid: repeat(1, 7vh)/repeat(16, 4.54vw);
   margin-top: 0;
@@ -268,8 +271,9 @@ span:hover {
 }
 
 .str4 {
-  position: relative;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
 }
 
 #gabe-1 {
@@ -277,17 +281,13 @@ span:hover {
 }
 
 #gabe-2 {
-  grid-row: 5;
-  grid-column: 12/20;
-  width: 400px;
+  width: 300px;
+  margin-left: 50%;
 }
 
 #gabe-3 {
-  grid-row: 6;
-}
-
-#gabe-4 {
-  grid-row: 10;
+  width: 300px;
+  margin-left: 50%;
 }
 
 /*# sourceMappingURL=team.css.map */

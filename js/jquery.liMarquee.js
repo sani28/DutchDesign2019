@@ -172,7 +172,7 @@
 								});
 
 								if (p.drag) {
-									strWrap.on('mousedown', function (e) {
+									strWrap.on('scroll', function (e) {
 										if(p.inverthover){
 											strMove.stop(true);
 										}
@@ -188,7 +188,7 @@
 
 
 
-										$(this).on('mousemove', function (e) {
+										$(this).on('scroll', function (e) {
 											fMove = true;
 
 											//drag
@@ -234,7 +234,7 @@
 
 
 
-										}).on('mouseup', function () {
+										}).on('scroll', function () {
 											$(this).off('mousemove');
 											if(p.inverthover){
 												strMove.trigger('mouseenter')
