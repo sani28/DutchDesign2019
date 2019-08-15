@@ -28,7 +28,7 @@ html {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.1;
 }
 
 *, html {
@@ -49,13 +49,12 @@ html {
   height: 100vh;
   position: absolute;
   left:0;
-  display: grid;
-  grid-template-columns: 1fr repeat(18, 4vw) 1fr;
 }
 
 .portfolio-link {
-  font-size: 0.7em;
-  letter-spacing: 0.2em;
+  font-size: 0.6em;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
   font-family: maisonNeue-Mono;
 }
 
@@ -127,7 +126,7 @@ body .cursor__ball circle {
   margin-top: 0;
 }
 
-.wid-item {
+.team-item {
   display: flex;
   position: sticky;
   align-items: center;
@@ -200,28 +199,79 @@ span:hover {
 	max-width:none !important;
 }
 
-.str4 {
-   height: 100vh;
-   width: 100vw;
-   display: grid;
+.str4{
+  width: 100vw;
+  height: 100vh;
 }
 
+// %photo-section{
+//   display: grid;
+//   grid-template-columns: 1fr repeat(3, 4vw) 1fr;
+//   gap: 1.5em;
+//   margin-top: -20%;
+//   grid-row:1;
+//   border: 2px solid red;
+// }
+//
+// .photo-section-3{
+//   @extend %photo-section;
+//   grid-template-rows: 1fr 1fr;
+//   .layout-item:first-child{
+//     grid-column: 1 / 9  ;
+//     grid-row: 1;
+//     width: 100%;
+//   }
+//   .layout-item:nth-child(2){
+//     grid-column: 30 / 55;
+//     grid-row: 2/10;
+//     width: 100%;
+//   }
+//
+//   .layout-item:nth-child(3){
+//     grid-column: 4/ 14;
+//     grid-row: 9;
+//     width: 100%;
+//   }
+//
+//   .layout-item:nth-child(4){
+//     grid-column: 35 / 47 ;
+//     grid-row: 1;
+//     width: 100%;
+//   }
+// }
+
+#ps-1 {
+
+
+}
+#ps-2 {
+
+}
+#ps-3 {
+
+}
+
+#ps-4 {
+
+}
 
 #gabe-1 {
-  width: 400px;
+  width: 25em;
 }
 
 #gabe-2 {
-  width: 300px;
-  margin-left: 50%;
+  width: 32em;
+  margin-left: 67%;
 }
 
 #gabe-3 {
-  width: 300px;
-  margin-left: 50%;
+  width: 25em;
+  position: absolute;
+  margin-left: 10%;
 }
 
 #gabe-4 {
-  width: 150px;
-  margin-left: 45%;
+  width: 20em;
+  margin-left: 67%;
+  margin-top: 30%;
 }
