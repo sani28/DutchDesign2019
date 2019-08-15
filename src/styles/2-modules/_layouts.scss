@@ -137,6 +137,10 @@ $secondary-purp: #7D246B;
     align-self: center;
     color: black;
   }
+  #museums1, #museums2{
+    outline: 3px solid white;
+    outline-offset: -3px;
+  }
 }
 
 .photo-section-4{

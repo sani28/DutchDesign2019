@@ -9,9 +9,11 @@ $(document).ready(function(){
    document.getElementById('employee'),
    document.getElementById('employee2'),
    document.getElementById('employee3'),
+   document.getElementById('quote1'),
    document.getElementById('reglazeclose'),
    document.getElementById('reglazemid'),
    document.getElementById('reglazehands'),
+   document.getElementById('quote2'),
    document.getElementById('lottequote2'),
    document.getElementById('reglazemisc'),
    document.getElementById('reglazeplates')];

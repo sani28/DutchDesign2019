@@ -9,6 +9,7 @@ $(document).ready(function(){
    document.getElementById('quote2'),
    document.getElementById('aldoquote'),
    document.getElementById('swing'),
+   document.getElementById('quote3'),
    document.getElementById('aldoquote2'),
    ];
 
