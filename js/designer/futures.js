@@ -2,11 +2,9 @@ $(document).ready(function(){
   const orderedDesignerImages =
   [document.getElementById('ifcandid'),
    document.getElementById('ifcandid2'),
-   document.getElementById('ifcandid3'),
    document.getElementById('quote1'),
    document.getElementById('ifquote1'),
    document.getElementById('kexp'),
-   document.getElementById('kexpspace'),
    document.getElementById('kexp-print1'),
    document.getElementById('kexp-print2'),
    document.getElementById('kexp-print3'),
@@ -26,4 +24,22 @@ $(document).ready(function(){
     .setClassToggle(orderedDesignerImages[i], "visible")
     .addTo(scrollControl);
   }
+
+  new ScrollMagic.Scene({
+    triggerElement: "#ifcandid3",
+    triggerHook: 0.8,
+    offset: 300,
+    reverse: true
+  })
+  .setClassToggle("#ifcandid3", "visible")
+  .addTo(scrollControl);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#kexpspace",
+    triggerHook: 0.8,
+    offset: 300,
+    reverse: true
+  })
+  .setClassToggle("#kexpspace", "visible")
+  .addTo(scrollControl);
 });
