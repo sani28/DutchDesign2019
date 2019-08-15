@@ -90,8 +90,6 @@ body .cursor__ball circle {
   fill: purple;
 }
 
-
-
 /* --------------- grid box styling-----------------------------*/
 #top-nav {
   grid-row: 2;
@@ -694,7 +692,7 @@ body .cursor__ball circle {
       margin-bottom: 1em;
     }
     .designer-blurb{
-      width: 50%; //overrides previous width;
+      width: 60%; //overrides previous width;
       line-height: 170%;
       color: grey;
       margin-top: 2em;
