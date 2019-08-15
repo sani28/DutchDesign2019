@@ -21,11 +21,18 @@
 </head>
 
 <body>
+  <div id="back-btn">
+    <a href="index.html" id="home">
+      <span class="home-dot"></span>
+      <p id="home-text">BACK HOME</p>
+    </a>
+  </div>
   <div id="scroll-tool" class="scroll-util">
-    <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="scroll-top" width="75" height="75" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="none" stroke="#D1D1D1" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0" />
       <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0" />
+      <path d="M45 37L53.6603 52H36.3397L45 37Z" fill="#7D246B"/>
     </svg>
-    <p class="inner-util" id="scroll-top">BACK TO TOP</p>
   </div>
   <figure class="video-container play-cursor" id="video-fig">
     <div class='embed-container'>
@@ -87,7 +94,10 @@
     </div>
     <div class="layout-item shown-item" id="skinlamp">
       <p class="section-caption">Pepe Heykoop describes the process of covering the items of the Skin Collection with leather as 'letting go' and 'moving away' from trying to control what you're doing. </p>
-      <img src="../assets/images/pepe/pepe_section4_img2.jpg"></img>
+      <figure>
+        <img src="../assets/images/pepe/pepe_section4_img2.jpg">
+        <figcaption>Skin Collection</figcaption>
+      </figure>
     </div>
   </section>
   <section class="photo-section-5">
@@ -95,7 +105,10 @@
       <p class="section-caption" id="caption2">In Search of Nothingness gave Pepe Heykoop joy and relief because it was not driven by intentions or the pressure of the industry <p>
           <img id="coloursclose" src="../assets/images/pepe/pepe_section5_img1.jpg"></img>
     </div>
-    <img class="layout-item shown-item" id="pepenothing" src="../assets/images/pepe/pepe_section5_img2.jpg"></img>
+    <figure class="layout-item shown-item" id="pepenothing">
+      <img src="../assets/images/pepe/pepe_section5_img2.jpg">
+      <figcaption>In Search for Nothingness</figcaption>
+    </figure>
     <p class="section-quote layout-item shown-item" id="quote3">I felt like I've been limiting myself for a long time by making objects.</p>
   </section>
   <p class="section-quote shown-item center-quote" id="pepequote1">I was born free. By growing up we get filters that narrow us down. So it's about throwing off these filters. Becoming free again</p>
