@@ -12,8 +12,7 @@ $(document).ready(function(){
     document.getElementById("roma-5"),
     document.getElementById("roma-6"),
     document.getElementById("roma-7"),
-    document.getElementById("texels-cap-2"),
-    document.getElementById("texels-cap-3"),
+    document.getElementById("roma-8"),
     document.getElementById("quote1"),
     document.getElementById("end")];
 

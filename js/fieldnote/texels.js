@@ -12,9 +12,10 @@ $(document).ready(function(){
     document.getElementById("texels-4"),
     document.getElementById("texels-5"),
     document.getElementById("texels-6"),
-    document.getElementById("texels-7"),  
+    document.getElementById("texels-7"),
     document.getElementById("texels-cap-2"),
     document.getElementById("texels-cap-3"),
+    document.getElementById("texels-cap-4"),
     document.getElementById("quote1"),
     document.getElementById("end")];
 
