@@ -124,15 +124,16 @@ html {
 }
 
 .portfolio-link {
-  font-size: 0.6em;
-  letter-spacing: 0.1em;
-  text-transform: lowercase;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   font-family: maisonNeue-Mono;
 }
 
 h1 {
   display: inline-block;
   font-family: Redaction;
+  font-size: 3.3em;
 }
 
 p.team {
@@ -158,6 +159,10 @@ p.team {
   color: white;
   font-size: 1em;
   text-decoration: none;
+}
+
+a:hover {
+  color: #DFEA4E;
 }
 
 a {
