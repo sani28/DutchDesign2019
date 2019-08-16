@@ -12,36 +12,39 @@ $(document).ready(function() {
       var progController = new ScrollMagic.Controller();
       var totalHeight = document.body.clientHeight;
 
-      // scroll-progress line
       var backTopAnimation = TweenLite.from("#animate", 0.5, {
         autoAlpha: 0,
         scale: 0.7
       });
 
-      var slowHide = TweenLite.to(".target", 2, {
-        opacity:0,
-        display:"none"
-      });
+      var fillProgAnimation = new TimelineLite()
+        .add(TweenLite.to(scrollProg, 1.0, {strokeDashoffset: 0, ease:Linear.easeNone})
+      );
 
-      //scroll to top
-      var backTopScene = new ScrollMagic.Scene({
+      var showScrollProgress = new ScrollMagic.Scene({
+          offset: 200,
+          reverse: true
+      })
+      .setClassToggle("#scroll-tool", "visible")
+      .addTo(progController);
+
+      var scrollToTop = new ScrollMagic.Scene({
           triggerElement: "a#scroll-top",
           duration: 200,
           triggerHook: "onLeave"
-        })
-        .setTween(backTopAnimation)
-        .addTo(scrollController);
+      })
+      .setTween(backTopAnimation)
+      .addTo(scrollController);
 
-      var tween = new TimelineLite()
-        .add(TweenLite.to(scrollProg, 1.0, {strokeDashoffset: 0, ease:Linear.easeNone}));
 
-      new ScrollMagic.Scene({
-              duration: totalHeight - 950,
-              offset: 175,
-              tweenChanges: true
-            })
-            .setTween(tween)
-            .addTo(progController);
+      var fillScrollProgress = new ScrollMagic.Scene({
+        //TODO: duration is hardcoded
+        duration: totalHeight - 950,
+        offset: 175,
+        tweenChanges: true
+      })
+      .setTween(fillProgAnimation)
+      .addTo(progController);
 
 
 $("#designer-vid").mousemove(function() {
@@ -189,6 +192,8 @@ $('#toggle-overview').click(function(e) {
   });
 
 });
+
+/////////////////////// MOUSE AND HOVER INTERACTIONS ///////////////////
 
 const mapNumber = (X, A, B, C, D) => (X - A) * (D - C) / (B - A) + C;
 
