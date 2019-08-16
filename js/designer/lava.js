@@ -3,7 +3,6 @@ $(document).ready(function(){
   [
     document.getElementById('lavacandid1'),
     document.getElementById('lavacandid2'),
-    document.getElementById('lavacandid3'),
     document.getElementById('antonquote'),
     document.getElementById('enigma1'),
     document.getElementById('enigma2'),
@@ -27,4 +26,12 @@ $(document).ready(function(){
     .setClassToggle(orderedDesignerImages[i], "visible")
     .addTo(scrollControl);
   }
+  new ScrollMagic.Scene({
+    triggerElement: "#lavacandid3",
+    triggerHook: 0.8,
+    offset: 300,
+    reverse: true
+  })
+  .setClassToggle("#lavacandid3", "visible")
+  .addTo(scrollControl);
 });

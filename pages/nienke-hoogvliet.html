@@ -21,13 +21,18 @@
 </head>
 
 <body>
-
-
+  <div id="back-btn">
+    <a href="index.html" id="home">
+      <span class="home-dot"></span>
+      <p id="home-text">BACK HOME</p>
+    </a>
+  </div>
   <div id="scroll-tool" class="scroll-util">
-    <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="scroll-top" width="75" height="75" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="none" stroke="#D1D1D1" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0" />
       <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0" />
+      <path d="M45 37L53.6603 52H36.3397L45 37Z" fill="#7D246B"/>
     </svg>
-    <p class="inner-util" id="scroll-top">BACK TO TOP</p>
   </div>
   <figure class="video-container play-cursor" id="video-fig">
     <div class='embed-container'>
@@ -86,9 +91,12 @@
   <section class="photo-section-7">
     <img class="layout-item shown-item" id="netting" src="../assets/images/nienke/nienke_section7_img1.jpg"></img>
     <img class="layout-item shown-item" id="samples" src="../assets/images/nienke/nienke_section7_img2.jpg"></img>
-    <img class="layout-item shown-item" id="seame" src="../assets/images/nienke/nienke_section7_img3.jpg"></img>
+    <figure class="layout-item shown-item" id="seame">
+      <img src="../assets/images/nienke/nienke_section7_img3.jpg">
+      <figcaption>Sea Me</figcaption>
+    </figure>
   </section>
-  <p class="section-quote layout-item shown-item" id="nienkequote">I wanted to show the sea has so much to offer, so we need to be more protective of it.</p>
+  <p class="section-quote layout-item shown-item" id="quote2">I wanted to show the sea has so much to offer, so we need to be more protective of it.</p>
   <section class="photo-section-4">
     <div class="layout-item">
       <img class="shown-item" id="mournsmall" src="../assets/images/nienke/nienke_section4_img1.jpg"></img>
@@ -96,9 +104,13 @@
     </div>
     <div class="layout-item shown-item" id="mourn">
       <p class="section-caption">Mourn is not a traditional urn where the ashes are hidden, but rather it's incorporated into the object. Mourn includes ashes in the structural material and colour.</p>
-      <img src="../assets/images/nienke/nienke_section4_img2.jpg"></img>
+      <figure>
+        <img src="../assets/images/nienke/nienke_section4_img2.jpg">
+        <figcaption>Mourn<figcaption>
+      </figure>
     </div>
   </section>
+  <p class="section-quote center-quote shown-item" id="nienkequote">My designs inspire a little bit of hope and inspire people to a more hopeful vision</p>
   <img class="fullbleed" src="../assets/images/nienke/nienke_end.jpg"></img>
 </section>
 

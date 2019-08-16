@@ -5,10 +5,11 @@ $(document).ready(function(){
    document.getElementById('queen'),
    document.getElementById('oncodevid'),
    document.getElementById('oncode'),
+   document.getElementById('haraldquote'),
    document.getElementById('correspondents'),
    document.getElementById('physical'),
    document.getElementById('digital'),
-   document.getElementById('haraldquote'),
+   document.getElementById('haraldquote2'),
 ];
 
   var scrollControl = new ScrollMagic.Controller();

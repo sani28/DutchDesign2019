@@ -9,7 +9,9 @@ $(document).ready(function(){
     document.getElementById("quote1"),
     document.getElementById("stairs"),
     document.getElementById("stairswide"),
-    document.getElementById("quote2")];
+    document.getElementById("quote2"),
+    document.getElementById("cornerbench"),
+    document.getElementById("cornerclose")];
 
   var scrollControl = new ScrollMagic.Controller();
 

@@ -1,12 +1,13 @@
 $(document).ready(function(){
   const orderedDesignerImages =
-  [document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
-  document.getElementById('quote1'),
+  [
   document.getElementById("floris-workshop"), document.getElementById("floris-space"),
+  document.getElementById("caption0"),
+  document.getElementById("floris-candid2"), document.getElementById("floris-candid1"),  document.getElementById("floris-candid3"),
+  document.getElementById('quote1'),
   document.getElementById("toysketch"),
   document.getElementById("scraps"),
   document.getElementById("quote2"),
-  document.getElementById("caption1"),
   document.getElementById("plankchair"),
   document.getElementById("chair-closeup"),
   document.getElementById("quote3"),

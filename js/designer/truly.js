@@ -9,6 +9,7 @@ $(document).ready(function(){
    document.getElementById('typo1'),
    document.getElementById('typo2'),
    document.getElementById('typo3'),
+   document.getElementById('typocaption'),
    document.getElementById('quote3'),
    document.getElementById('joelquote'),
    document.getElementById('katequote')

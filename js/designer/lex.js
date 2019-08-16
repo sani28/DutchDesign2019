@@ -16,10 +16,11 @@ $(document).ready(function(){
    document.getElementById('quote3'),
    document.getElementById('pillar'),
    document.getElementById('roughcandles'),
-   document.getElementById('quote4') ];
+   document.getElementById('quote4'),
+   document.getElementById('lexquote') ];
 
   var scrollControl = new ScrollMagic.Controller();
-  
+
   for(let i=0; i<orderedDesignerImages.length; i++){
     new ScrollMagic.Scene({
       triggerElement: orderedDesignerImages[i],

@@ -5,13 +5,14 @@ $(document).ready(function(){
    document.getElementById('rebeccajan1'),
    document.getElementById('rebeccajan2'),
    document.getElementById('rebeccajan3'),
+   document.getElementById('quote1'),
    document.getElementById('wool'),
    document.getElementById('woolnet'),
    document.getElementById('fishnet'),
-   document.getElementById('quote1'),
+   document.getElementById('quote2'),
    document.getElementById('sheepgif'),
    document.getElementById('maarten'),
-   document.getElementById('quote2'),];
+   document.getElementById('quote3')];
 
    var scrollControl = new ScrollMagic.Controller();
 

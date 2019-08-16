@@ -702,9 +702,10 @@ body .cursor__ball circle {
 
 .fullbleed {
   width: 100%;
+  min-height: 300px;
   height: auto; //placeholder, should be auto
   background-color: salmon;
-  margin-top: 5em;
+  margin-top: 6em;
 }
 
 .designer-footer{

@@ -6,9 +6,10 @@ $(document).ready(function(){
    document.getElementById('quote1'),
    document.getElementById('netting'),
    document.getElementById('samples'),
-   document.getElementById('nienkequote'),
+   document.getElementById('quote2'),
    document.getElementById('mournsmall'),
-   document.getElementById('mourn')];
+   document.getElementById('mourn'),
+   document.getElementById('nienkequote')];
 
    var scrollControl = new ScrollMagic.Controller();
 

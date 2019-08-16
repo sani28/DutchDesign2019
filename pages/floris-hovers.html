@@ -21,11 +21,18 @@
 </head>
 
 <body>
+  <div id="back-btn">
+    <a href="index.html" id="home">
+      <span class="home-dot"></span>
+      <p id="home-text">BACK HOME</p>
+    </a>
+  </div>
   <div id="scroll-tool" class="scroll-util">
-    <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="scroll-top" width="75" height="75" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="none" stroke="#D1D1D1" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0" />
       <path id="scroll-progress" fill="none" stroke="#DFEA4E" stroke-width="6px" stroke-linecap="butt" stroke-linejoin="miter" d="M3,45.5a42.5,42.5 0 1,0 85,0a42.5,42.5 0 1,0 -85,0" />
+      <path d="M45 37L53.6603 52H36.3397L45 37Z" fill="#7D246B"/>
     </svg>
-    <p class="inner-util" id="scroll-top">BACK TO TOP</p>
   </div>
   <figure class="video-container play-cursor" id="video-fig">
     <div class='embed-container'>
@@ -74,10 +81,10 @@
   <!-- DESIGNER OVERVIEW -->
   <section id="overview">
     <section class="photo-section-1">
-      <img class="layout-item shown-item" id="floris-workshop" src="../assets/images/floris/floris_section1_img1.jpg"></img>
-      <img class="layout-item shown-item" id="floris-space" src="../assets/images/floris/floris_section1_img2.jpg"></img>
-      <img class="layout-item shown-item" id="floris-wip" src="../assets/images/floris/floris_section1_img3.jpg"></img>
-      <!-- TODO: caption "Floris Hover's workshop is his grandfather's old concrete factory. The materials he works with come straight from the warehouse" -->
+      <img class="layout-item shown-item" id="floris-workshop" src="../assets/images/floris/floris_section1_img1.jpg">
+      <img class="layout-item shown-item" id="floris-space" src="../assets/images/floris/floris_section1_img2.jpg">
+      <img class="layout-item shown-item" id="floris-wip" src="../assets/images/floris/floris_section1_img3.jpg">
+      <p class="section-caption shown-item" id="caption0">Floris Hover' workshop was once his grandfather's concrete factory.</p>
     </section>
     <section class="photo-section-2">
       <div class="layout-item cropbox">
@@ -90,8 +97,14 @@
       <p class="section-quote type-two layout-item shown-item" id="quote1">I like to have an opportunity to think totally free and to be like a child and naïve.</p>
     </section>
     <section class="photo-section-3">
-      <img class="layout-item shown-item" id="toysketch" src="../assets/images/floris/floris_section3_img1.jpg"></img>
-      <img class="layout-item shown-item" id="scraps" src="../assets/images/floris/floris_section3_img2.jpg"></img>
+      <figure class="layout-item shown-item" id="toysketch">
+        <img src="../assets/images/floris/floris_section3_img1.jpg">
+        <figcaption>Sketches for Archetoys</figcaption>
+      </figure>
+      <figure class="layout-item shown-item" id="scraps">
+        <img src="../assets/images/floris/floris_section3_img2.jpg">
+        <figcaption>Composed Maps in progress</figcaption>
+      </figure>
       <p class="section-quote layout-item shown-item" id="quote2">I want to work with my hands and to do, to think about things I do and react on the world.</p>
     </section>
     <section class="photo-section-4">
@@ -100,10 +113,11 @@
         <p class="section-quote" id="quote3">When you look at this chair I made by myself, it's not perfect. And that's what we are. We are not perfect.<p>
       </div>
       <div class="layout-item shown-item" id="plankchair">
-        <p class="section-caption">Floris Hovers deliberately sets himself constraints with materials and techniques. These boundaries allow himself to dive deeper and discover new possibilities within those materials. He made this
-          chair
-          himself from one standard plank of wood.</p>
-        <img class="layout-item"  src="../assets/images/floris/floris_section4_img2.jpg"></img>
+        <p class="section-caption">Floris Hovers deliberately sets himself constraints with materials and techniques. These boundaries allow himself to dive deeper and discover new possibilities within those materials. He made this chair himself from one standard plank of wood.</p>
+        <figure>
+          <img src="../assets/images/floris/floris_section4_img2.jpg">
+          <figcaption>Plankfurniture</figcaption>
+        </figure>
       </div>
     </section>
     <section class="photo-section-5">
@@ -111,8 +125,11 @@
         <p class="section-caption" id="caption2">Floris Hovers begins his Composed Maps as three dimensional sketches, often made with scrap wood and found objects from his workshop.<p>
             <img id="mappieces" src="../assets/images/floris/floris_section5_img1.jpg"></img>
       </div>
-      <img class="layout-item shown-item" id="compmap" src="../assets/images/floris/floris_section5_img2.jpg"></img>
-      <p class="section-quote layout-item shown-item" id="quote4">I'm more interested in the human feeling in a product.</p>
+      <figure class="layout-item shown-item" id="compmap">
+        <img src="../assets/images/floris/floris_section5_img2.jpg">
+        <figcaption>Composed Maps</figcaption>
+      </figure>
+      <p class="section-quote layout-item shown-item" id="quote4">I'm more interested in the human feeling in a product</p>
     </section>
     <img class="fullbleed" src="../assets/images/floris/floris_end.jpg"></div>
   </section>
