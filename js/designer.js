@@ -124,7 +124,6 @@ $('#toggle-transcript').click(function(e) {
   $("#footer").hide();
   $('.transcript').show();
   $('.transcript').css("display", "grid");
-
 });
 
 //toggle to overview
