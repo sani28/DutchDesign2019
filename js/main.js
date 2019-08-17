@@ -11,7 +11,7 @@ $(document).ready(function(){
   const $allDots = [ ...$designerDots, ...$experienceDots ];
   const $previewVideos = document.querySelectorAll(".bg-preview-video");
   const $fieldNotesBGs = document.querySelectorAll(".fieldnote-bg");
-  const $hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle", "#toggle-int", "#toggle-field"];
+  const $hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle"];
   var $animateDots = [];
   var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
@@ -51,39 +51,29 @@ $(document).ready(function(){
 /////////////////////// ANIMATION RELATED  ///////////////////////////
 /////////////////////////////////////////////////////////////////////////
 var initTL = new TimelineLite({delay:0.5});
-var nestTL = new TimelineLite({delay:0.1});
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
   while (0 !== currentIndex) {
-
-    // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
 
-    // And swap it with the current element.
     temporaryValue = array[currentIndex];
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
   return array;
 }
+
 function initAnimation() {
   $animateDots = shuffle($allDots);
   for(let i=0; i<$animateDots.length; i++){
     initTL.from($animateDots[i], 0.08, {opacity: 0});
   }
   for(let i=0; i<$hiddenElements.length; i++){
-    initTL.from($hiddenElements[i], 1, {opacity: 0, delay: 0.2},  "phase2");
+    initTL.from($hiddenElements[i], 1.35, {opacity: 0, delay: 0.65},  "phase2");
   }
 }
-
-
-
-
-
 
 /////////////////////////////////////////////////////////////////////////
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
