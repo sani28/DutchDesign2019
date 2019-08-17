@@ -46,7 +46,7 @@ $(document).ready(function() {
       .setTween(fillProgAnimation)
       .addTo(progController);
 
-
+//TODO: could refactor, has some glitchy flashing moments
 $("#designer-vid").mousemove(function() {
     if (vidMouseTimer) {
         clearTimeout(vidMouseTimer);
@@ -57,7 +57,7 @@ $("#designer-vid").mousemove(function() {
     vidMousetimer = setTimeout(function() {
         $('#vid-controls').addClass("hoveraction");
         $("#video-fig").addClass("hoveraction");
-    }, 3000)
+    }, 4000)
 });
 
 function pathPrepare ($el) {
