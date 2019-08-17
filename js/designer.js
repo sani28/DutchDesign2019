@@ -8,6 +8,7 @@ $(document).ready(function() {
       const fullscreen = document.getElementById("fs");
       const progress = document.getElementById("progress");
       const scrollProg = document.getElementById("scroll-progress");
+      var jumpController = new ScrollMagic.Controller();
       var scrollController = new ScrollMagic.Controller();
       var progController = new ScrollMagic.Controller();
       var totalHeight = document.body.clientHeight;
@@ -35,7 +36,6 @@ $(document).ready(function() {
       })
       .setTween(backTopAnimation)
       .addTo(scrollController);
-
 
       var fillScrollProgress = new ScrollMagic.Scene({
         //TODO: duration is hardcoded
