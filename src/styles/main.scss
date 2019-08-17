@@ -41,8 +41,9 @@ a#imgHover {
   top: 1em;
   left: 1em;
   width: 10vw;
-  color: white;
+  color: $secondary-purp;
   z-index: 1;
+  mix-blend-mode: difference;
 
   p {
     display: none;

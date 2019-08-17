@@ -471,8 +471,9 @@ a#imgHover {
   top: 1em;
   left: 1em;
   width: 10vw;
-  color: white;
+  color: #7D246B;
   z-index: 1;
+  mix-blend-mode: difference;
 }
 #back-btn p {
   display: none;

@@ -31,11 +31,11 @@ $(document).ready(function(){
   }
 
   //ELEMENTS
-  const designerDots = $(".designer-dot").get();
-  const experienceDots = $(".experience-dot").get();
-  const previewVideos = $(".bg-preview-video").get();
-  const fieldNotesBGs = $(".fieldnote-bg").get();
-  const hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle", "#toggle-int", "#toggle-field"];
+  const $designerDots = document.querySelectorAll(".designer-dot");
+  const $experienceDots = document.querySelectorAll(".experience-dot");
+  const $previewVideos = document.querySelectorAll(".bg-preview-video");
+  const $fieldNotesBGs = document.querySelectorAll(".fieldnote-bg");
+  const $hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle", "#toggle-int", "#toggle-field"];
   var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
   var fieldToggle = $("#toggle-field");
@@ -57,14 +57,14 @@ $(document).ready(function(){
   }
 
   function hideUIElements(){
-    for (let i=0; i<hiddenElements.length; i++){
-      $(hiddenElements[i]).addClass("hiddenUI");
+    for (let i=0; i<$hiddenElements.length; i++){
+      $($hiddenElements[i]).addClass("hiddenUI");
     }
   }
 
   function showUIElements(){
-    for (let i=0; i<hiddenElements.length; i++){
-      $(hiddenElements[i]).removeClass("hiddenUI");
+    for (let i=0; i<$hiddenElements.length; i++){
+      $($hiddenElements[i]).removeClass("hiddenUI");
     }
   }
   function toggleBlurb(){
@@ -99,14 +99,14 @@ $(document).ready(function(){
   }
 
   function hideBGImage(){
-    for(let i=0, len=fieldNotesBGs.length; i< len; i++){
-      $(fieldNotesBGs[i]).addClass("hiddenUI");
+    for(let i=0, len=$fieldNotesBGs.length; i< len; i++){
+      $($fieldNotesBGs[i]).addClass("hiddenUI");
     }
   }
 
   function hidePreviewVideos(){
-    for(let i=0, len=previewVideos.length; i< len; i++){
-      $(previewVideos[i]).addClass("hiddenUI");
+    for(let i=0, len=$previewVideos.length; i< len; i++){
+      $($previewVideos[i]).addClass("hiddenUI");
     }
     $("#grid-overlay").addClass("hiddenUI");
     $("html").css("background-color", "#DFEA4E");
@@ -127,14 +127,14 @@ $(document).ready(function(){
   }
 
   function hideExperienceDots() {
-    for (let i = 0, len = experienceDots.length; i < len; i++) {
-      $(experienceDots[i]).css("display", "none");
+    for (let i = 0, len = $experienceDots.length; i < len; i++) {
+      $($experienceDots[i]).css("display", "none");
     }
   }
 
   function showExperienceDots() {
-    for (let i = 0, len = experienceDots.length; i < len; i++) {
-      $(experienceDots[i]).css("display", "inline-block");
+    for (let i = 0, len = $experienceDots.length; i < len; i++) {
+      $($experienceDots[i]).css("display", "inline-block");
     }
   }
 
@@ -150,18 +150,18 @@ $(document).ready(function(){
 
   function toggleDotSize(){
     if(interviewsActive){
-      for(let i=0; i<designerDots.length; i++ ){
-        $(designerDots[i]).addClass("active-dot");
+      for(let i=0; i<$designerDots.length; i++ ){
+        $($designerDots[i]).addClass("active-dot");
       }
-      for (let j=0; j<experienceDots.length; j++){
-        $(experienceDots[j]).removeClass("active-dot");
+      for (let j=0; j<$experienceDots.length; j++){
+        $($experienceDots[j]).removeClass("active-dot");
       }
     } else {
-      for (let j=0; j<experienceDots.length; j++){
-        $(experienceDots[j]).addClass("active-dot");
+      for (let j=0; j<$experienceDots.length; j++){
+        $($experienceDots[j]).addClass("active-dot");
       }
-      for(let i=0; i<designerDots.length; i++ ){
-        $(designerDots[i]).removeClass("active-dot");
+      for(let i=0; i<$designerDots.length; i++ ){
+        $($designerDots[i]).removeClass("active-dot");
       }
     }
   }
@@ -190,19 +190,19 @@ $(document).ready(function(){
   }
 
   function initDesignerDotHover(){
-    for (let i=0, len=designerDots.length; i < len; i++){
-      $(designerDots[i]).mouseenter(function(){
+    for (let i=0, len=$designerDots.length; i < len; i++){
+      $($designerDots[i]).mouseenter(function(){
         if(interviewsActive){
-          changeInactiveState(this, designerDots);
+          changeInactiveState(this, $designerDots);
           playPreviewVideo(this.id);
           showTitleData(this);
           hideUIElements();
           hideExperienceDots();
         }
       });
-      $(designerDots[i]).mouseout(function(){
+      $($designerDots[i]).mouseout(function(){
         if(interviewsActive){
-          changeInactiveState(this, designerDots);
+          changeInactiveState(this, $designerDots);
           hidePreviewVideos();
           $("#dot-headers").addClass("hiddenUI");
           showUIElements();
@@ -213,17 +213,17 @@ $(document).ready(function(){
   }
 
   function initFieldNoteDotHover(){
-    for (let j=0, len=experienceDots.length; j < len; j++){
-      $(experienceDots[j]).mouseenter(function(){
+    for (let j=0, len=$experienceDots.length; j < len; j++){
+      $($experienceDots[j]).mouseenter(function(){
         if(!interviewsActive){
-          changeInactiveState(this, experienceDots);
+          changeInactiveState(this, $experienceDots);
           changeBGImage(this.id);
           hideUIElements();
         }
       });
-      $(experienceDots[j]).mouseout(function(){
+      $($experienceDots[j]).mouseout(function(){
         if(!interviewsActive){
-          changeInactiveState(this, experienceDots);
+          changeInactiveState(this, $experienceDots);
           hideBGImage();
           showUIElements();
         }
