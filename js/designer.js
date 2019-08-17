@@ -13,7 +13,7 @@ $(document).ready(function() {
       var progController = new ScrollMagic.Controller();
       var totalHeight = document.body.clientHeight;
 
-      var backTopAnimation = TweenLite.from("#animate", 0.5, {
+      var revertProgress = TweenLite.from("#animate", 0.5, {
         autoAlpha: 0,
         scale: 0.7
       });
@@ -29,12 +29,12 @@ $(document).ready(function() {
       .setClassToggle("#scroll-tool", "visible")
       .addTo(progController);
 
-      var scrollToTop = new ScrollMagic.Scene({
+      var scrollBackProgress = new ScrollMagic.Scene({
           triggerElement: "a#scroll-top",
           duration: 200,
           triggerHook: "onLeave"
       })
-      .setTween(backTopAnimation)
+      .setTween(revertProgress)
       .addTo(scrollController);
 
       var fillScrollProgress = new ScrollMagic.Scene({
@@ -149,6 +149,14 @@ $('#toggle-overview').click(function(e) {
 
   $(document).on("click", "#scroll-text", function (e) {
     scrollController.scrollTo("#video-fig");
+  });
+
+  $(document).on("click", "#scroll-down", function (e) {
+    jumpController.scrollTo("#designer-toggle");
+  });
+
+  jumpController.scrollTo(function (newpos){
+    TweenLite.to(window, 0.6, {scrollTo: {y: newpos - 30}, ease: Power1.easein });
   });
 
   scrollController.scrollTo(function (newpos) {

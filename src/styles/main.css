@@ -1048,6 +1048,9 @@ body .cursor__ball circle {
 #video-fig:fullscreen {
   background-color: black;
 }
+#video-fig:fullscreen .scroll-hint {
+  display: none;
+}
 #video-fig:fullscreen .embed-container {
   position: relative;
   padding-bottom: 70.25%;
@@ -1066,6 +1069,14 @@ body .cursor__ball circle {
 
 .shown-item {
   opacity: 0;
+}
+
+.invis-item {
+  visibility: hidden;
+}
+
+.invis-item.visible {
+  visibility: visible;
 }
 
 .shown-item.visible {
