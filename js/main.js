@@ -88,7 +88,6 @@ function initAnimation() {
     initDesignerDotHover();
     initFieldNoteDotHover();
     initAnimation();
-    initTL.play();
   }
 
   function hideUIElements(){
