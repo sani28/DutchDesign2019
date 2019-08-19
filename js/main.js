@@ -251,6 +251,7 @@ function initAnimation() {
       $($experienceDots[j]).mouseenter(function(){
         if(!interviewsActive){
           changeInactiveState(this, $experienceDots);
+          showTitleData(this);
           changeBGImage(this.id);
           hideUIElements();
         }
@@ -259,6 +260,7 @@ function initAnimation() {
         if(!interviewsActive){
           changeInactiveState(this, $experienceDots);
           hideBGImage();
+          $("#dot-headers").addClass("hiddenUI");
           showUIElements();
         }
       });
