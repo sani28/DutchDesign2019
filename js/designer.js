@@ -121,6 +121,7 @@ $('#toggle-transcript').click(function(e) {
   $('#toggle-overview').removeClass('active');
   $('.designer-summary').hide();
   $('#overview').hide();
+  $('#scroll-tool').hide();
   $("#footer").hide();
   $('.transcript').show();
   $('.transcript').css("display", "grid");
@@ -133,6 +134,7 @@ $('#toggle-overview').click(function(e) {
   $('#toggle-transcript').removeClass('active');
   $('.designer-summary').fadeIn("slow");
   $('#overview').fadeIn("slow");
+  $('#scroll-tool').show();
   $("#footer").show();
   $('.transcript').hide();
 });
