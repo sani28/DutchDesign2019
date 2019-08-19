@@ -46,7 +46,6 @@ $(document).ready(function(){
   }
 
 
-
 /////////////////////////////////////////////////////////////////////////
 /////////////////////// ANIMATION RELATED  ///////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -127,6 +126,39 @@ function initAnimation() {
     switch (bgImg) {
       case "arnhemDot":
         $("#arnhem-bg").removeClass("hiddenUI");
+        break;
+      case "appianDot":
+        $("#appian-bg").removeClass("hiddenUI");
+        break;
+      case "burgundyDot":
+        $("#burgundian-bg").removeClass("hiddenUI");
+        break;
+      case "breweryDot":
+        $("#cantillion-bg").removeClass("hiddenUI");
+        break;
+      case "feltingDot":
+        $("#felting-bg").removeClass("hiddenUI");
+        break;
+      case "kikiDot":
+        $("#kiki-bg").removeClass("hiddenUI");
+        break;
+      case "farmDot":
+        $("#leeuwarden-bg").removeClass("hiddenUI");
+        break;
+      case "milkDot":
+        $("#melkhuis-bg").removeClass("hiddenUI");
+        break;
+      case "rensDot":
+        $("#rens-bg").removeClass("hiddenUI");
+        break;
+      case "romeDot":
+        $("#roma-bg").removeClass("hiddenUI");
+        break;
+      case "texelsDot":
+        $("#texels-bg").removeClass("hiddenUI");
+        break;
+      case "andreaDot":
+        $("#andrea-bg").removeClass("hiddenUI");
         break;
     }
     observer.observe();

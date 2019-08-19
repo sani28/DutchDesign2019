@@ -93,7 +93,7 @@
   align-items: center;
   justify-content: center;
   background-color: #DFEA4E;
-  padding-bottom: 5em;
+  padding-bottom: 4em;
 }
 
 .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-5, .photo-section-4, .photo-section-3, .photo-section-2, .photo-section-1 {
@@ -405,6 +405,16 @@ html.designer-page-body {
 }
 
 .bg-video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.bg-photo-container {
   position: absolute;
   top: 0;
   bottom: 0;
