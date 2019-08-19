@@ -473,7 +473,6 @@ a#imgHover {
   width: 10vw;
   color: #7D246B;
   z-index: 1;
-  mix-blend-mode: difference;
 }
 #back-btn p {
   display: none;
