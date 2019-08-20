@@ -417,7 +417,7 @@ body .cursor__ball circle {
   gap: none none;
   margin: 0 auto;
   max-width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 0px;
 }
 
@@ -426,9 +426,8 @@ body .cursor__ball circle {
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 0.8em;
   width: 100%;
-  margin-top: 5em;
+  margin-top: 2%;
   align-items: start;
-  width: 100%;
 }
 
 .section-quote {
@@ -1031,18 +1030,19 @@ a#home:hover {
   grid-column: 0/10;
   padding: 1.5%;
   width: 100vw;
-  height: 80vh;
+  height: 30em;
   justify-content: center;
   background-size: contain;
+  z-index: 5;
 }
 
 .geo-info#right {
   display: inline-block;
-  right: 20px;
-  justify-content: flex-start;
+  right: 15px;
   position: absolute;
   width: 20px;
-  height: 500px;
+  height: 100%;
+  top: 5px;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
   letter-spacing: 0.6em;
@@ -1053,13 +1053,12 @@ a#home:hover {
 .geo-info#left {
   display: inline-block;
   left: 20px;
-  justify-content: flex-start;
   position: absolute;
   width: 20px;
   height: 500px;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.4em;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }
@@ -1081,6 +1080,9 @@ a#home:hover {
   text-align: right;
   width: 80vw;
   line-height: 100%;
+  display: block;
+  height: 100%;
+  padding-right: 2%;
 }
 
 .exp-title-twoline {
@@ -1088,6 +1090,8 @@ a#home:hover {
   font-size: 3em;
   font-family: Redaction-Bold;
   line-height: 150%;
+  display: block;
+  height: 100%;
 }
 
 h3#exp-title-secondary {
@@ -1134,6 +1138,15 @@ h3#exp-title-secondary {
   padding: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
+    width: 100vw;
+    height: 100%;
+    display: block;
+    border: 2px solid purple;
+    margin-top: 20em;
+  }
+}
 /*# sourceMappingURL=experiences.css.map */
 /*# sourceMappingURL=experiences.css.map */
 
