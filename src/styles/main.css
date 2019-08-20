@@ -957,7 +957,7 @@ body .cursor__ball circle {
 .video-container .video-overlay {
   position: absolute;
   left: 0;
-  top: 45%;
+  top: 30%;
   width: 100%;
   display: inline-flex;
   flex-direction: column;
