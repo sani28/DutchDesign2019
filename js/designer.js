@@ -9,9 +9,10 @@ $(document).ready(function() {
       const progress = document.getElementById("progress");
       const scrollProg = document.getElementById("scroll-progress");
       var jumpController = new ScrollMagic.Controller();
-      var scrollController = new ScrollMagic.Controller();
+      var scrollController = new ScrollMagic.Controller({globalSceneOptions: {duration: 5900}});
       var progController = new ScrollMagic.Controller();
       var totalHeight = document.body.clientHeight;
+      var endImg = $("#endimg").height();
 
       var revertProgress = TweenLite.from("#animate", 0.5, {
         autoAlpha: 0,
@@ -46,9 +47,9 @@ $(document).ready(function() {
       .setTween(fillProgAnimation)
       .addTo(progController);
 
-      var backButtonColor =  new ScrollMagic.Scene({
+      var backButtonDarken =  new ScrollMagic.Scene({
         triggerElement: "#designer-toggle",
-        triggerHook: 0.1,
+        triggerHook: 0.14,
         reverse: true
       })
       .setClassToggle(".home-dot", "purple")

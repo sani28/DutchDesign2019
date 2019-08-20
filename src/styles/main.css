@@ -505,6 +505,11 @@ a#imgHover {
 }
 #back-btn .home-dot {
   background-color: white;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -ms-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
 }
 #back-btn .home-dot.purple {
   background-color: #7D246B;
