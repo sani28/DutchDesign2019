@@ -65,12 +65,18 @@ function shuffle(array) {
 }
 
 function initAnimation() {
-  $animateDots = shuffle($allDots);
-  for(let i=0; i<$animateDots.length; i++){
-    initTL.from($animateDots[i], 0.08, {opacity: 0});
-  }
-  for(let i=0; i<$hiddenElements.length; i++){
-    initTL.from($hiddenElements[i], 1.35, {opacity: 0, delay: 0.65},  "phase2");
+  let visited = sessionStorage.getItem("visited");
+  console.log(sessionStorage.getItem("visited"));
+  if(visited !== null) {
+    return;
+  } else {
+    $animateDots = shuffle($allDots);
+    for(let i=0; i<$animateDots.length; i++){
+      initTL.from($animateDots[i], 0.08, {opacity: 0});
+    }
+    for(let i=0; i<$hiddenElements.length; i++){
+      initTL.from($hiddenElements[i], 1.35, {opacity: 0, delay: 0.65},  "phase2");
+    }
   }
 }
 
@@ -88,6 +94,7 @@ function initAnimation() {
     initFieldNoteDotHover();
     initAnimation();
     $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
+    sessionStorage.visited = "true";
   }
 
 
@@ -182,6 +189,11 @@ function initAnimation() {
     }
     $("#grid-overlay").addClass("hiddenUI");
     $("html").css("background-color", "#DFEA4E");
+  }
+
+  function hideTitleOverlap(hovered){
+    let headerWidth = $("#dot-headers").width();
+    console.log("Header total width: " + headerWidth );
   }
 
   function showTitleData(hovered){
@@ -280,6 +292,7 @@ function initAnimation() {
           changeInactiveState(this, $designerDots);
           playPreviewVideo(this.id);
           showTitleData(this);
+          hideTitleOverlap(this);
           hideUIElements();
           hideExperienceDots();
         }
