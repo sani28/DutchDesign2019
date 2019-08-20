@@ -109,11 +109,12 @@ html {
 
 #team-bio {
   display: grid;
-  grid-row: 5/10;
+  grid-row: 4/5;
   grid-column: 9/16;
-  line-height: 80%;
+  line-height: 210%;
   text-align: justify;
   z-index: 99;
+  max-height: 500px;
 }
 
 .photo-section {
@@ -139,7 +140,7 @@ h1 {
 p.team {
   font-family: maisonNeue-Mono;
   line-height: 200%;
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 /* ---------------- Links and cursor styling -------------------------- */
@@ -279,6 +280,34 @@ span:hover {
   height: 100vh;
 }
 
+/* ------------------ MEDIA QUERIES  ------------------ */
+@media only screen and (max-width: 900px) {
+  .circle-nav-container {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 98vw;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 55px;
+  }
+
+  p.team {
+    font-family: maisonNeue-Mono;
+    line-height: 200%;
+    font-size: 0.7em;
+  }
+
+  #team-bio {
+    grid-row: 4/5;
+    grid-column: 6/20;
+    line-height: 210%;
+  }
+}
+/* ------------------ INDIVIDUAL PHOTO STYLING  ------------------ */
 #gabe-1 {
   width: 25em;
 }
