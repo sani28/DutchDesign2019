@@ -299,6 +299,8 @@ span:hover {
     font-family: maisonNeue-Mono;
     line-height: 200%;
     font-size: 0.7em;
+    padding: 1em;
+    background-color: black;
   }
 
   #team-bio {
