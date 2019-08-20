@@ -304,9 +304,12 @@ span:hover {
   }
 
   #team-bio {
-    grid-row: 4/5;
+    grid-row: 3/5;
     grid-column: 6/20;
-    line-height: 210%;
+  }
+
+  h1 {
+    line-height: 100%;
   }
 }
 /* ------------------ INDIVIDUAL PHOTO STYLING  ------------------ */
