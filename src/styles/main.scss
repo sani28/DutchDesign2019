@@ -41,9 +41,14 @@ a#imgHover {
   top: 1em;
   left: 1em;
   width: 10vw;
-  color: $secondary-purp;
   z-index: 1;
+  .home-dot {
+    background-color: white;
+  }
 
+  .home-dot.purple {
+    background-color: $secondary-purp;
+  }
   p {
     display: none;
     font-family: hyperMarket;
@@ -53,7 +58,7 @@ a#imgHover {
 }
 
 #back-btn:hover #home-text {
-  color: purple;
+  color: $primary-green;
   display: inline-block;
   float: right;
 }
@@ -67,7 +72,7 @@ a#imgHover {
 }
 
 #back-btn:hover .home-dot {
-  background-color: purple;
+  background-color: $primary-green;
 }
 
 body .cursor__ball--big {

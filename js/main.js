@@ -66,7 +66,6 @@ function shuffle(array) {
 
 function initAnimation() {
   let visited = sessionStorage.getItem("visited");
-  console.log(sessionStorage.getItem("visited"));
   if(visited !== null) {
     return;
   } else {

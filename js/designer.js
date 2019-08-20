@@ -46,6 +46,15 @@ $(document).ready(function() {
       .setTween(fillProgAnimation)
       .addTo(progController);
 
+      var backButtonColor =  new ScrollMagic.Scene({
+        triggerElement: "#designer-toggle",
+        triggerHook: 0.1,
+        reverse: true
+      })
+      .setClassToggle(".home-dot", "purple")
+      .addIndicators()
+      .addTo(scrollController);
+
 //TODO: could refactor, has some glitchy flashing moments
 $("#designer-vid").mousemove(function() {
     if (vidMouseTimer) {
