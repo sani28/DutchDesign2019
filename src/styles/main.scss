@@ -50,20 +50,33 @@ a#imgHover {
     -o-transition: all 0.15s ease-in;
     transition: all 0.15s ease-in;
   }
-
-  .home-dot.purple {
-    background-color: $secondary-purp;
-  }
   p {
     display: none;
     font-family: hyperMarket;
     font-size: 0.9em;
     text-transform: uppercase;
+    color: white;
+  }
+}
+#back-btn.purple{
+  .home-dot{
+    background-color: $secondary-purp;
+  }
+  p {
+    color: $secondary-purp;
+  }
+}
+
+#back-btn.purple.white{
+  .home-dot{
+    background-color: white;
+  }
+  p{
+    color: white;
   }
 }
 
 #back-btn:hover #home-text {
-  color: $primary-green;
   display: inline-block;
   float: right;
 }
@@ -74,10 +87,6 @@ a#imgHover {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-}
-
-#back-btn:hover .home-dot {
-  background-color: $primary-green;
 }
 
 body .cursor__ball--big {

@@ -8,8 +8,9 @@ $(document).ready(function() {
       const fullscreen = document.getElementById("fs");
       const progress = document.getElementById("progress");
       const scrollProg = document.getElementById("scroll-progress");
+      var scrollController = new ScrollMagic.Controller();
+      var scrollControl = new ScrollMagic.Controller();
       var jumpController = new ScrollMagic.Controller();
-      var scrollController = new ScrollMagic.Controller({globalSceneOptions: {duration: 5900}});
       var progController = new ScrollMagic.Controller();
       var totalHeight = document.body.clientHeight;
       var endImg = $("#endimg").height();
@@ -47,14 +48,24 @@ $(document).ready(function() {
       .setTween(fillProgAnimation)
       .addTo(progController);
 
+
       var backButtonDarken =  new ScrollMagic.Scene({
         triggerElement: "#designer-toggle",
         triggerHook: 0.14,
         reverse: true
       })
-      .setClassToggle(".home-dot", "purple")
-      .addIndicators()
-      .addTo(scrollController);
+      .setClassToggle("#back-btn", "purple")
+      .addTo(scrollControl);
+
+      var backButtonLighten =  new ScrollMagic.Scene({
+        triggerElement: "#endimg",
+        triggerHook: 0.14,
+        offset: 60,
+        reverse: true
+      })
+      .setClassToggle("#back-btn", "white")
+      .addTo(scrollControl);
+
 
 //TODO: could refactor, has some glitchy flashing moments
 $("#designer-vid").mousemove(function() {

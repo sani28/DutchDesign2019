@@ -511,18 +511,29 @@ a#imgHover {
   -o-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
 }
-#back-btn .home-dot.purple {
-  background-color: #7D246B;
-}
 #back-btn p {
   display: none;
   font-family: hyperMarket;
   font-size: 0.9em;
   text-transform: uppercase;
+  color: white;
+}
+
+#back-btn.purple .home-dot {
+  background-color: #7D246B;
+}
+#back-btn.purple p {
+  color: #7D246B;
+}
+
+#back-btn.purple.white .home-dot {
+  background-color: white;
+}
+#back-btn.purple.white p {
+  color: white;
 }
 
 #back-btn:hover #home-text {
-  color: #DFEA4E;
   display: inline-block;
   float: right;
 }
@@ -533,10 +544,6 @@ a#imgHover {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-}
-
-#back-btn:hover .home-dot {
-  background-color: #DFEA4E;
 }
 
 body .cursor__ball--big {
