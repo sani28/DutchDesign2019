@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
@@ -20,12 +19,6 @@ $(document).ready(function(){
 
   //STATES & STYLES
   var interviewsActive = true;
-
-    function removeBackground(){
-    	document.getElementById("exp-landing-photo").style.background= "none";
-    }
-
-
 //////////////////////////////////////////////////////////////////////
 /////////////// CURSOR SPECIFIC FUNCTIONS///////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -101,7 +94,6 @@ function initAnimation() {
     $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
     sessionStorage.visited = "true";
   }
-
 
   function hideUIElements(){
     for (let i=0; i<$hiddenElements.length; i++){
@@ -179,7 +171,6 @@ function initAnimation() {
         $("#bts-bg").removeClass("hiddenUI");
         break;
     }
-    observer.observe();
   }
 
   function hideBGImage(){
@@ -187,6 +178,10 @@ function initAnimation() {
       $($fieldNotesBGs[i]).addClass("hiddenUI");
     }
   }
+
+  // function removeBackground(){
+  //   document.getElementById("exp-landing-photo").style.background= "none";
+  // }
 
   function hidePreviewVideos(){
     for(let i=0, len=$previewVideos.length; i< len; i++){
@@ -198,7 +193,7 @@ function initAnimation() {
 
   function hideTitleOverlap(hovered){
     let headerWidth = $("#dot-headers").width();
-    console.log("Header total width: " + headerWidth );
+    //TODO: Complete overlap
   }
 
   function showTitleData(hovered){
@@ -210,8 +205,8 @@ function initAnimation() {
     $("#hover-title").text(dot.dataset.title);
     $("#dot-headers").css("grid-column-start", 0);
     $("#dot-headers").css("grid-column-end", Number(col)+8);
-    $("#dot-headers").css("grid-row-start", Number(row)+4)
-    $("#dot-headers").css("grid-row-end", Number(row)+4);
+    $("#dot-headers").css("grid-row-start", Number(row)+3)
+    $("#dot-headers").css("grid-row-end", Number(row)+3);
     $("#dot-headers").removeClass("hiddenUI");
   }
 
@@ -281,10 +276,12 @@ function initAnimation() {
     for(let i=0; i < designerNavList.length; i++){
       $(designerNavList[i]).mouseenter(function(){
         let currentID = this.id;
+        console.log(currentID);
         $("#" + currentID + "Dot").addClass("nav-highlight");
       });
       $(designerNavList[i]).mouseout(function(){
         let currentID = this.id;
+        console.log(currentID);
         $("#" + currentID + "Dot").removeClass("nav-highlight");
       });
     }
@@ -364,16 +361,16 @@ function initAnimation() {
     });
   }
 
+  $(window).load(function() {
+    $('.str4').liMarquee({
+      direction: 'up',
+      loop:-1,
+      scrolldelay: 0,
+      scrollamount: 90,
+      inverthover: false,
+      hoverstop: false,
+    });
+  });
+
 
 }); //DOCREADY DON'T DELETE
-
-$(window).load(function() {
-  $('.str4').liMarquee({
-    direction: 'up',
-    loop:-1,
-    scrolldelay: 0,
-    scrollamount: 90,
-    inverthover: false,
-    hoverstop: false,
-  });
-})
