@@ -7,6 +7,24 @@ html {
   overflow: hidden;
 }
 
+#team-blurb{
+    font-family: redaction-bold;
+    color: #7D246B;
+    grid-row: 3/span 1;
+    grid-column: 3/22;
+    font-size: 1.4em;
+    text-align: center;
+    max-height: 400px;
+}
+
+
+#title {
+  font-family: redaction;
+  font-size: 2em;
+  text-align: justify;
+  padding-bottom: 5%;
+}
+
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -69,6 +87,14 @@ p.team {
   font-family: maisonNeue-Mono;
   line-height: 200%;
   font-size: 0.7em;
+}
+
+p.small {
+  font-family: maisonNeue-Mono;
+  grid-row: 3;
+  grid-column: 10/20;
+  line-height: 180%;
+  font-size: calc(0.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 
