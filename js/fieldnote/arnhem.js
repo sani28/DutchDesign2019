@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/arnhem/arnhem-8.png')";
 
   $(".geo-info").codex({
     speed: 30,

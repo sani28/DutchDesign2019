@@ -343,7 +343,7 @@
 /*-------------- PHOTO SECITON 4 VARIATION 2 -------------------- */
 
 .photo-section-4-v2 {
-  grid-template-rows: repeat(1, 6.34vh) 1fr;
+  grid-template-rows: repeat(1, 8vh) 1fr;
 }
 
 .photo-section-4-v2 .layout-item:first-child {
@@ -355,14 +355,15 @@
 .photo-section-4-v2 .layout-item:nth-child(2) {
   width: 100%;
   grid-column: 11/15;
-  grid-row:1;
+  grid-row: 1;
 }
+
 
 .photo-section-4-v2 .section-caption:nth-child(4) {
   align-self: start;
   line-height: 150%;
   grid-column: 11/15;
-  grid-row: 3/10;
+  grid-row: 3/9;
   text-align: justify;
 }
 
@@ -520,8 +521,8 @@
 .photo-section-6-v2 .section-caption {
   grid-row: 5/7;
   grid-column: 11/16;
-  width: 90%;
-  align-self: start;
+  width: 80%;
+  align-self: end;
   line-height: 150%;
 }
 
@@ -664,7 +665,7 @@
 }
 
 .end-caption .section-caption {
-  grid-column: 6/15;
+  grid-column: 5/15;
   line-height: 150%;
 }
 
