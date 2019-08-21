@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+
+
       var vidMouseTimer;
       var vid = document.getElementById("designer-vid");
       var vidFig = document.getElementById("video-fig");
@@ -134,6 +137,7 @@ function toggleFullScreen() {
     }
   }
 
+
 //REPOSITION FOOTER
 
 $('#toggle-transcript').click(function(e) {
@@ -159,6 +163,7 @@ $('#toggle-overview').click(function(e) {
   $("#footer").show();
   $('.transcript').hide();
 });
+
 
 //////////////////// SCROLLING BEHAVIOUR ////////////
 
@@ -333,3 +338,10 @@ class HoverImgFx1 {
 }
 
 [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
+
+
+  //scramble text for field note geo info
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
