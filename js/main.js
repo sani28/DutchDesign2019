@@ -358,6 +358,11 @@ function initAnimation() {
     });
   }
 
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
   $(window).load(function() {
     $('.str4').liMarquee({
       direction: 'up',
@@ -368,6 +373,8 @@ function initAnimation() {
       hoverstop: false,
     });
   });
+
+
 
 
 }); //DOCREADY DON'T DELETE
