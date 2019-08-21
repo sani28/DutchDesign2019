@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 
-
       var vidMouseTimer;
       var vid = document.getElementById("designer-vid");
       var vidFig = document.getElementById("video-fig");
