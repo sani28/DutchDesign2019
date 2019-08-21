@@ -100,8 +100,9 @@
 .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
   display: grid;
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
-  gap: 1.8em;
-  width: 98%;
+  gap: 0.8em;
+  width: 100%;
+  padding: 6em;
   margin-top: 2%;
   align-items: start;
 }
@@ -493,8 +494,9 @@
 /*-------------- PHOTO SECITON 6 VARIATION 2 -------------------- */
 
 .photo-section-6-v2 {
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(18, 1fr);
   margin-bottom: -5em;
+  // margin-left: 10%;
 }
 
 .photo-section-6-v2 .layout-item:first-child {
@@ -542,7 +544,7 @@
 .photo-section-7 .layout-item:nth-child(2) {
   grid-row: 2/3;
   grid-column: 4/9;
-  width: 70%;
+  width: 76%;
 }
 .photo-section-7 .layout-item:nth-child(3) {
   grid-row: 2;
@@ -873,7 +875,6 @@ h3#exp-title-secondary {
       display: block;
       margin-top: 20em;
   }
-
 
 }
 
