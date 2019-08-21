@@ -5,6 +5,7 @@ $(document).ready(function(){
   const $smallBall = document.querySelector('.cursor__ball--small');
   const $hoverables = document.querySelectorAll('.hoverable');
 
+
   //ELEMENTS
   const $designerDots = document.querySelectorAll(".designer-dot");
   const $experienceDots = document.querySelectorAll(".experience-dot");
@@ -19,6 +20,11 @@ $(document).ready(function(){
 
   //STATES & STYLES
   var interviewsActive = true;
+
+    function removeBackground(){
+    	document.getElementById("exp-landing-photo").style.background= "none";
+    }
+
 
 //////////////////////////////////////////////////////////////////////
 /////////////// CURSOR SPECIFIC FUNCTIONS///////////////////////
@@ -328,3 +334,14 @@ function initAnimation() {
 
 
 }); //DOCREADY DON'T DELETE
+
+$(window).load(function() {
+  $('.str4').liMarquee({
+    direction: 'up',
+    loop:-1,
+    scrolldelay: 0,
+    scrollamount: 90,
+    inverthover: false,
+    hoverstop: false,
+  });
+})
