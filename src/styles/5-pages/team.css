@@ -82,9 +82,10 @@ html {
 #team-blurb {
   font-family: redaction-bold;
   color: #7D246B;
-  grid-row: 3/span 1;
+  grid-row: 4/span 1;
   grid-column: 3/22;
-  font-size: 1.4em;
+  padding-right: 3em;
+  font-size: calc( 1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
   max-height: 400px;
 }
@@ -117,7 +118,7 @@ html {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.5;
 }
 
 *, html {
@@ -145,7 +146,9 @@ html {
   font-size: 0.8em;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-family: maisonNeue-Mono;
+  grid-row: 7/10;
+  grid-column: 7/18;
+  line-height: 80%;
 }
 
 h1 {
@@ -162,7 +165,7 @@ p.team {
 
 p.small {
   font-family: maisonNeue-Mono;
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 10/20;
   line-height: 180%;
   font-size: calc(0.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -191,6 +194,7 @@ a:hover {
   color: #DFEA4E;
 }
 
+/* ---------------- Links and cursor styling -------------------------- */
 a {
   text-decoration: none;
 }
@@ -212,6 +216,7 @@ body .cursor__ball {
   top: 0;
   left: 0;
   mix-blend-mode: screen;
+  mix-blend-mode: overlay;
   z-index: 1000;
 }
 
@@ -221,7 +226,7 @@ body .cursor__ball circle {
 
 /* -----------circle nav ------------ */
 .circle-nav-container {
-  grid-area: 12/6/12/16;
+  grid-area: 14/6/14/16;
   display: grid;
   grid: repeat(1, 7vh)/repeat(16, 4.54vw);
   margin-top: 0;
@@ -328,6 +333,15 @@ span:hover {
     background-color: black;
   }
 
+  #team-blurb {
+    grid-row: 3;
+  }
+
+  p.small {
+    font-size: 0.7em;
+    text-align: justify;
+  }
+
   #team-bio {
     grid-row: 3/5;
     grid-column: 6/20;
@@ -357,6 +371,7 @@ span:hover {
   width: 20em;
   margin-left: 67%;
   margin-top: 30%;
+  fill: purple;
 }
 
 /*# sourceMappingURL=team.css.map */

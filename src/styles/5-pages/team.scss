@@ -10,9 +10,10 @@ html {
 #team-blurb{
     font-family: redaction-bold;
     color: #7D246B;
-    grid-row: 3/span 1;
+    grid-row: 4/span 1;
     grid-column: 3/22;
-    font-size: 1.4em;
+    padding-right: 3em;
+  font-size: calc( 1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     text-align: center;
     max-height: 400px;
 }
@@ -54,7 +55,6 @@ html {
 
 #team-bio {
   display: grid;
-<<<<<<< HEAD
   grid-row: 4/5;
   grid-column: 9/16;
   line-height: 210%;
@@ -96,7 +96,7 @@ p.team {
 
 p.small {
   font-family: maisonNeue-Mono;
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 10/20;
   line-height: 180%;
   font-size: calc(0.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -160,7 +160,7 @@ body .cursor__ball circle {
 
 /* -----------circle nav ------------ */
 .circle-nav-container {
-  grid-area: 12/6/12/16;
+  grid-area: 14/6/14/16;
   display: grid;
   grid: repeat(1, 7vh)/repeat(16, 4.54vw);
   margin-top: 0;
@@ -304,6 +304,15 @@ span:hover {
     font-size: 0.7em;
     padding: 1em;
     background-color: black;
+  }
+
+  #team-blurb {
+    grid-row: 3;
+  }
+
+  p.small {
+    font-size: 0.7em;
+    text-align: justify;
   }
 
   #team-bio {
