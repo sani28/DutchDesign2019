@@ -492,7 +492,6 @@ body .cursor__ball circle {
   gap: 0.8em;
   width: 100%;
   padding: 6em;
-  margin-top: 2%;
   align-items: start;
 }
 
@@ -1177,7 +1176,6 @@ a#home:hover {
   font-family: Redaction-Bold;
   line-height: 150%;
   display: block;
-  height: 100%;
 }
 
 h3#exp-title-secondary {
@@ -1230,6 +1228,11 @@ h3#exp-title-secondary {
     height: 100%;
     display: block;
     margin-top: 20em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
+    padding: 3em;
   }
 }
 /*# sourceMappingURL=experiences.css.map */
