@@ -695,7 +695,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-4 {
-  padding-bottom: 5em;
+  margin-bottom: 13%;
 }
 
 .photo-section-4 .layout-item:first-child {
@@ -974,7 +974,7 @@ body .cursor__ball circle {
 
 .photo-section-8 {
   margin-top: -2em;
-  margin-bottom: 20%;
+  margin-bottom: 30%;
 }
 
 .photo-section-8 .section-caption#melk-cap-2 {
@@ -1188,7 +1188,7 @@ h1#exp-title {
 
 h3#exp-title-secondary {
   line-height: 0%;
-  font-size: 1.6em;
+  font-size: calc(1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #exp-tagline {
