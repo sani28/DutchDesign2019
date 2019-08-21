@@ -504,7 +504,7 @@ body .cursor__ball circle {
 
 .section-caption {
   font-family: maisonMono-Regular;
-  font-size: 0.65em;
+  font-size: 0.54em;
   font-weight: lighter;
   line-height: 150%;
   text-align: justify;
@@ -935,9 +935,9 @@ body .cursor__ball circle {
 }
 
 .photo-section-7 .layout-item:nth-child(2) {
-  grid-row: 2/3;
-  grid-column: 4/9;
-  width: 76%;
+  grid-row: 2;
+  grid-column: 1/8;
+  width: 100%;
 }
 
 .photo-section-7 .layout-item:nth-child(3) {
@@ -1009,8 +1009,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-8 #andrea-cap-2 {
-  grid-row: 1;
-  margin-top: 35%;
+  grid-row: 2;
   align-self: start;
   text-align: justify;
   grid-column: 4/8;

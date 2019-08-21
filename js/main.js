@@ -4,7 +4,6 @@ $(document).ready(function(){
   const $smallBall = document.querySelector('.cursor__ball--small');
   const $hoverables = document.querySelectorAll('.hoverable');
 
-
   //ELEMENTS
   const $designerDots = document.querySelectorAll(".designer-dot");
   const $experienceDots = document.querySelectorAll(".experience-dot");
