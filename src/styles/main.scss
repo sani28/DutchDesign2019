@@ -45,19 +45,42 @@ a#imgHover {
   top: 1em;
   left: 1em;
   width: 10vw;
-  color: $secondary-purp;
   z-index: 1;
-
+  .home-dot {
+    background-color: white;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    -ms-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+  }
   p {
     display: none;
     font-family: hyperMarket;
     font-size: 0.9em;
     text-transform: uppercase;
+    color: white;
+  }
+}
+#back-btn.purple{
+  .home-dot{
+    background-color: $secondary-purp;
+  }
+  p {
+    color: $secondary-purp;
+  }
+}
+
+#back-btn.purple.white{
+  .home-dot{
+    background-color: white;
+  }
+  p{
+    color: white;
   }
 }
 
 #back-btn:hover #home-text {
-  color: purple;
   display: inline-block;
   float: right;
 }
@@ -68,10 +91,6 @@ a#imgHover {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-}
-
-#back-btn:hover .home-dot {
-  background-color: purple;
 }
 
 body .cursor__ball--big {
@@ -238,17 +257,6 @@ body .cursor__ball circle {
   }
 }
 
-.fieldnote-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 1024px;
-  min-height: 100%;
-  width: 100%;
-  height: auto;
-  z-index: -1;
-}
-
 .calendar-container {
   grid-area: 5 / 8 / 11/ 22;
   display: grid;
@@ -268,6 +276,7 @@ body .cursor__ball circle {
   align-items: flex-end;
   align-self: end;
   text-align: right;
+  margin-right: 0.25em;
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
@@ -276,7 +285,8 @@ body .cursor__ball circle {
   #hover-title {
     font-family: Redaction;
     font-size: 2.25vw;
-    margin: 0;
+    margin-bottom: 0.25em;
+    margin-top: 0;
     color: white;
   }
 
@@ -511,7 +521,7 @@ body .cursor__ball circle {
   .video-overlay {
     position: absolute;
     left: 0;
-    top: 45%;
+    top: 30%;
     width: 100%;
     display: inline-flex;
     flex-direction: column;

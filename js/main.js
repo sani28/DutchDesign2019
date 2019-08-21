@@ -71,19 +71,24 @@ function shuffle(array) {
 }
 
 function initAnimation() {
-  $animateDots = shuffle($allDots);
-  for(let i=0; i<$animateDots.length; i++){
-    initTL.from($animateDots[i], 0.08, {opacity: 0});
-  }
-  for(let i=0; i<$hiddenElements.length; i++){
-    initTL.from($hiddenElements[i], 1.35, {opacity: 0, delay: 0.65},  "phase2");
+  let visited = sessionStorage.getItem("visited");
+  if(visited !== null) {
+    return;
+  } else {
+    $animateDots = shuffle($allDots);
+    for(let i=0; i<$animateDots.length; i++){
+      initTL.from($animateDots[i], 0.08, {opacity: 0});
+    }
+    for(let i=0; i<$hiddenElements.length; i++){
+      initTL.from($hiddenElements[i], 1.35, {opacity: 0, delay: 0.65},  "phase2");
+    }
   }
 }
 
 /////////////////////////////////////////////////////////////////////////
 /////////////// LANDING PAGE FUNCTIONS START HERE ///////////////////////
 /////////////////////////////////////////////////////////////////////////
-  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  const observer = lozad(); // lazy loads elements with '.lozad' selector
   observer.observe();
   initLandingPage();
 
@@ -93,7 +98,10 @@ function initAnimation() {
     initDesignerDotHover();
     initFieldNoteDotHover();
     initAnimation();
+    $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
+    sessionStorage.visited = "true";
   }
+
 
   function hideUIElements(){
     for (let i=0; i<$hiddenElements.length; i++){
@@ -110,8 +118,6 @@ function initAnimation() {
     $("#home-cal").fadeToggle(350);
     $("#home-blurb").fadeToggle(350).toggleClass("hiddenUI");
   }
-
-  $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
 
   function playPreviewVideo(videoID) {
     let currentVideo = videoID;
@@ -135,6 +141,9 @@ function initAnimation() {
         break;
       case "appianDot":
         $("#appian-bg").removeClass("hiddenUI");
+        break;
+      case "atelierDot":
+        $("#atelier-bg").removeClass("hiddenUI");
         break;
       case "burgundyDot":
         $("#burgundian-bg").removeClass("hiddenUI");
@@ -166,6 +175,9 @@ function initAnimation() {
       case "andreaDot":
         $("#andrea-bg").removeClass("hiddenUI");
         break;
+      case "btsDot":
+        $("#bts-bg").removeClass("hiddenUI");
+        break;
     }
     observer.observe();
   }
@@ -184,6 +196,11 @@ function initAnimation() {
     $("html").css("background-color", "#DFEA4E");
   }
 
+  function hideTitleOverlap(hovered){
+    let headerWidth = $("#dot-headers").width();
+    console.log("Header total width: " + headerWidth );
+  }
+
   function showTitleData(hovered){
     //TODO: THIS CODE SEEMS SUPER DIRTY
     let dot = hovered;
@@ -198,6 +215,12 @@ function initAnimation() {
     $("#dot-headers").removeClass("hiddenUI");
   }
 
+  function hideDesignerDots(){
+    for (let i=0, len=$designerDots.length; i < len; i++){
+      $($designerDots[i]).css("display", "none");
+    }
+  }
+
   function hideExperienceDots() {
     for (let i = 0, len = $experienceDots.length; i < len; i++) {
       $($experienceDots[i]).css("display", "none");
@@ -207,6 +230,12 @@ function initAnimation() {
   function showExperienceDots() {
     for (let i = 0, len = $experienceDots.length; i < len; i++) {
       $($experienceDots[i]).css("display", "inline-block");
+    }
+  }
+
+  function showDesignerDots() {
+    for (let i = 0, len = $designerDots.length; i < len; i++) {
+      $($designerDots[i]).css("display", "inline-block");
     }
   }
 
@@ -268,6 +297,7 @@ function initAnimation() {
           changeInactiveState(this, $designerDots);
           playPreviewVideo(this.id);
           showTitleData(this);
+          hideTitleOverlap(this);
           hideUIElements();
           hideExperienceDots();
         }
@@ -292,6 +322,7 @@ function initAnimation() {
           showTitleData(this);
           changeBGImage(this.id);
           hideUIElements();
+          hideDesignerDots();
         }
       });
       $($experienceDots[j]).mouseout(function(){
@@ -300,6 +331,7 @@ function initAnimation() {
           hideBGImage();
           $("#dot-headers").addClass("hiddenUI");
           showUIElements();
+          showDesignerDots();
         }
       });
     }
