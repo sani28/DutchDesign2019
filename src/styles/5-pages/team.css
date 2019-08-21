@@ -171,9 +171,9 @@ p.team {
 p.small {
   font-family: maisonNeue-Mono;
   grid-row: 4;
-  grid-column: 10/20;
+  grid-column: 12/18;
   line-height: 180%;
-  font-size: calc(0.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* ---------------- Links and cursor styling -------------------------- */

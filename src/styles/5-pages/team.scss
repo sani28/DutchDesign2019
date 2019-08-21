@@ -100,9 +100,9 @@ p.team {
 p.small {
   font-family: maisonNeue-Mono;
   grid-row: 4;
-  grid-column: 10/20;
+  grid-column: 12/18;
   line-height: 180%;
-  font-size: calc(0.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 
@@ -246,43 +246,6 @@ span:hover {
   width: 100vw;
   height: 100vh;
 }
-
-// %photo-section{
-//   display: grid;
-//   grid-template-columns: 1fr repeat(3, 4vw) 1fr;
-//   gap: 1.5em;
-//   margin-top: -20%;
-//   grid-row:1;
-//   border: 2px solid red;
-// }
-//
-// .photo-section-3{
-//   @extend %photo-section;
-//   grid-template-rows: 1fr 1fr;
-//   .layout-item:first-child{
-//     grid-column: 1 / 9  ;
-//     grid-row: 1;
-//     width: 100%;
-//   }
-//   .layout-item:nth-child(2){
-//     grid-column: 30 / 55;
-//     grid-row: 2/10;
-//     width: 100%;
-//   }
-//
-//   .layout-item:nth-child(3){
-//     grid-column: 4/ 14;
-//     grid-row: 9;
-//     width: 100%;
-//   }
-//
-//   .layout-item:nth-child(4){
-//     grid-column: 35 / 47 ;
-//     grid-row: 1;
-//     width: 100%;
-//   }
-// }
-
 
 /* ------------------ MEDIA QUERIES  ------------------ */
 
