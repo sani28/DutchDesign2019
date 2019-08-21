@@ -694,23 +694,61 @@ a#home:hover {
   text-align: right;
 }
 
-.back-btn {
-  margin-left: 5%;
-  grid-column: 1/9;
-  font-family: redaction;
-  font-size: 3rem;
-  display: inline;
-  margin-top: 1%;
-  width: 200px;
-  color: white;
-  z-index: 99;
+#back-btn {
+  position: fixed;
+  display: block;
+  top: 1em;
+  left: 1em;
+  width: 10vw;
+  z-index: 1;
+  .home-dot {
+    background-color: white;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    -ms-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+  }
+  p {
+    display: none;
+    font-family: hyperMarket;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: white;
+  }
 }
 
-#back {
-  color: white;
-  font-size: 1em;
-  text-decoration: none;
+#back-btn.purple{
+  .home-dot{
+    background-color: $secondary-purp;
+  }
+  p {
+    color: $secondary-purp;
+  }
 }
+
+// #back-btn.purple.white{
+//   .home-dot{
+//     background-color: white;
+//   }
+//   p{
+//     color: white;
+//   }
+// }
+
+// #back-btn:hover #home-text {
+//   display: inline-block;
+//   float: right;
+// }
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 
 .experience-landing {
   display: grid;
@@ -773,11 +811,12 @@ a#home:hover {
   display: block;
   height: 100%;
   padding-right: 2%;
+  font-size: calc(0.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .exp-title-twoline {
   text-align: right;
-  font-size: 3em;
+  font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   font-family: Redaction-Bold;
   line-height: 150%;
   display: block;
@@ -834,14 +873,12 @@ h3#exp-title-secondary {
       width: 100vw;
       height: 100%;
       display: block;
-      border:2px solid purple;
       margin-top: 20em;
   }
-}
 
-@media screen and (min-width: 700px)  {
 
 }
+
 
 /*# sourceMappingURL=experiences.css.map */
 
