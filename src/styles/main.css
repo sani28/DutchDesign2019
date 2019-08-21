@@ -463,6 +463,10 @@ a {
   display: block;
 }
 
+a:hover {
+  fill: purple;
+}
+
 a#imgHover {
   display: inline;
 }
@@ -521,12 +525,12 @@ body .cursor__ball {
   position: fixed;
   top: 0;
   left: 0;
-  mix-blend-mode: overlay;
+  mix-blend-mode: screen;
   z-index: 1000;
 }
 
 body .cursor__ball circle {
-  fill: purple;
+  fill: #DFEA4E;
 }
 
 /* --------------- grid box styling-----------------------------*/
@@ -1241,7 +1245,7 @@ body .cursor__ball circle {
 }
 
 .section-caption {
-  font-family: maisonNeue-Mono;
+  font-family: maisonMono-Regular;
   font-size: 0.75em;
   font-weight: lighter;
   line-height: 150%;

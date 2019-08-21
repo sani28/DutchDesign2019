@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="designer-page-body">
+
+<head>
+  <meta charset="utf-8">
+  <title> Watercolour Workshop </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../../src/styles/0-vendors/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../src/styles/5-pages/experiences.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+  <script type="text/javascript" src="../../js/designer.js" async defer></script>
+  <script type="text/javascript" src="../../js/main.js" async defer></script>
+  <script type="text/javascript" src="../../js/jquery.codex.js" async defer></script>
+  <script type="text/javascript" src="../../js/fieldnote/texels.js" async defer></script>
+</head>
+
+<body>
+
+  <div class="grid-layout-container">
+    <div class="back-btn">
+      <a href="../index.html" class="hoverable" id="back">⬤</a>
+    </div>
+
+    <section class="experience-landing">
+      <div id="exp-landing-photo"></div>
+      <section class="exp-title">
+        <h2 id="exp-tagline"> TEXELS, NETHERLANDS </h2>
+        <h1 id="exp-title"> A DAY IN TEXELS </h1>
+      </section>
+
+      <div class="geo-info" id="right">
+        13 / 13 &nbsp; &nbsp;  2019 05 13 &nbsp; &nbsp; 53.0548° N, 4.7977° E
+      </div>
+
+      <div class="geo-info" id="left">
+        15 °C NE 14 KM/H
+      </div>
+    </section>
+
+  </div> <!-- end of grid layout -->
+
+  <!-- ////////////////////  PHOTO SECTION 4 /////////////////////  -->
+
+  <section class="photo-section-4">
+    <div class="layout-item">
+      <video class="layout-item shown-item" id="texels-vid" src="../../assets/images/texels/texels_section4_img1.MOV" autoplay="true" muted loop></video>
+      <p class="section-caption"> We drove from Leeuwarden, along the 32 kilometere Afsluitdijk (the longest dyke in the world), boarded the ferry, and finally arrived in the tiny port town of Oudeschild.  <p>
+    </div>
+    <div class="layout-item shown-item" id="texels-cap-1">
+      <p class="section-caption">Texels is the southernmost island of the chain of islands along the North coast of the Netherlands. The island has a long history, ships once left its ports for the Dutch East and West Indies during the Dutch Golden Age until the end of the 19th century.</p>
+      <img class="shown-item" id="texels-1" src="../../assets/images/texels/texels_section4_img2.jpg"></img>
+    </div>
+  </section>
+
+  <!-- ////////////////////  PHOTO SECTION 6  /////////////////////  -->
+
+  <section class="photo-section-6">
+    <img class="layout-item shown-item" id="texels-2" src="../../assets/images/texels/texels_section6_img1.jpg"></img>
+    <img class="layout-item shown-item" id="texels-3" src="../../assets/images/texels/texels_section6_img2.jpg"></img>
+    <img class="layout-item shown-item" id="texels-4" src="../../assets/images/texels/texels_section6_img3.jpg"></img>
+    <p class="section-caption" id="texels-cap-2"> Our 6th interview was scheduled on the island, but it was also just a day to enjoy ocean waves and dunes with some food and local beer.</p>
+    <p class="section-caption" id="texels-cap-3"> After a pleasant interview with Rebecca Geskus, and a visit to a local sheep farm, we spent the rest of our day out by the sea. </p>
+  </section>
+
+  <!-- ////////////////////  PHOTO SECTION 2  /////////////////////  -->
+
+<!-- TODO: fix photo section 2 layout -->
+  <section class="photo-section-2">
+    <img class="layout-item shown-item" id="texels-5" src="../../assets/images/texels/texels_section8_img.jpg"></img>
+    <img class="layout-item shown-item" id="texels-6" src="../../assets/images/texels/texels_section8_img2.jpg"></img>
+    <img class="layout-item shown-item" id="texels-7" src="../../assets/images/texels/texels_section8_img1.jpg"></img>
+    <p class="section-caption" id="texels-cap-4">Soft sand, cool sea water, tall grass, and blue skies along the dunes were there to greet us. The sunset was breathtaking.  </p>
+  </section>
+
+
+  <!-- ////////////////////  Full Bleed Image //////////////////////  -->
+  <img class="fullbleed" src="../../assets/images/texels/texels_hover.jpg"></img>
+
+  <!-- ////////////// CURSOR /////////////////////////// --->
+  <div class="cursor">
+    <div class="cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

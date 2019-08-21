@@ -338,7 +338,7 @@ body .cursor__ball circle {
 /* ----- fonts ------ */
 @font-face {
   font-family: hyperMarket;
-  src: url(../../fonts/hypermarket-regular.ttf);
+  src: url(../../../fonts/hypermarket-regular.ttf);
   font-weight: bold;
 }
 /* ----- legacy fonts ------ */
@@ -417,31 +417,31 @@ body .cursor__ball circle {
   gap: none none;
   margin: 0 auto;
   max-width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 0px;
 }
 
-.photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
+.photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
   display: grid;
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
-  gap: 1.5em;
+  gap: 0.8em;
   width: 100%;
-  margin-top: 5em;
+  margin-top: 2%;
   align-items: start;
-  width: 100%;
 }
 
 .section-quote {
   font-size: 0.9em;
-  font-family: maisonNeue-Mono;
+  font-family: maisonMono-Regular;
   color: white;
 }
 
 .section-caption {
-  font-family: maisonNeue-Mono;
+  font-family: maisonMono-Regular;
   font-size: 0.65em;
   font-weight: lighter;
   line-height: 150%;
+  text-align: justify;
   color: white;
 }
 
@@ -452,25 +452,46 @@ body .cursor__ball circle {
 
 .photo-section-1 .layout-item:first-child {
   grid-row: 1;
-  grid-column: 4/13;
+  grid-column: 3/12;
   width: 100%;
 }
 
 .photo-section-1 .layout-item:nth-child(2) {
   grid-row: 2;
-  grid-column: 7/12;
+  grid-column: 6/11;
   width: 100%;
 }
 
 .photo-section-1 .layout-item:nth-child(3) {
   grid-row: 2;
-  grid-column: 12/18;
+  grid-column: 11/17;
   width: 100%;
 }
 
 .photo-section-1 .section-caption#kiki {
   grid-row: 1;
-  grid-column: 13/18;
+  grid-column: 12/17;
+  align-self: flex-end;
+  text-align: justify;
+}
+
+.photo-section-1 .section-caption#bb-cap-3 {
+  grid-row: 1;
+  grid-column: 12/17;
+  align-self: flex-end;
+  text-align: justify;
+}
+
+.photo-section-1 .section-caption#soil-cap-2 {
+  grid-row: 1;
+  grid-column: 12/16;
+  align-self: flex-end;
+  text-align: justify;
+}
+
+.photo-section-1 .section-caption#dyes-cap-1 {
+  grid-row: 1;
+  grid-column: 12/17;
   align-self: flex-end;
   text-align: justify;
 }
@@ -481,7 +502,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-2 .layout-item:first-child {
-  grid-row: 1/10;
+  grid-row: 2/10;
   grid-column: 5/10;
   width: 100%;
   overflow: hidden;
@@ -495,8 +516,8 @@ body .cursor__ball circle {
 }
 
 .photo-section-2 .layout-item:nth-child(2) {
-  grid-row: 5/3;
-  grid-column: 9/13;
+  grid-row: 1/3;
+  grid-column: 10/13;
   height: 100%;
   overflow: hidden;
 }
@@ -507,7 +528,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-2 .layout-item:nth-child(3) {
-  grid-row: 2/span 2;
+  grid-row: 3/span 2;
   grid-column: 10/17;
   width: 90%;
 }
@@ -535,19 +556,30 @@ body .cursor__ball circle {
   margin: 0;
 }
 
+.photo-section-2 .section-caption#soil-cap-1 {
+  align-self: start;
+  grid-column: 5/10;
+}
+
+.photo-section-2 .section-caption#texels-cap-4 {
+  align-self: start;
+  grid-row: 3;
+  grid-column: 5/10;
+}
+
 /*-------------- PHOTO SECITON 3  -------------------- */
 .photo-section-3 {
   grid-template-rows: 1fr 1fr;
 }
 
 .photo-section-3 .layout-item:first-child {
-  grid-column: 5/17;
+  grid-column: 5/15;
   grid-row: 1;
   width: 100%;
 }
 
 .photo-section-3 .layout-item:nth-child(2) {
-  grid-column: 4/12;
+  grid-column: 4/11;
   grid-row: 2;
   width: 100%;
 }
@@ -557,6 +589,43 @@ body .cursor__ball circle {
   grid-row: 2;
   align-self: center;
   color: black;
+}
+
+.photo-section-3 #bb-4 {
+  margin-top: 1em;
+  grid-column: 4/11;
+}
+
+.photo-section-3 .section-caption#melkhuis {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: center;
+}
+
+.photo-section-3 .section-caption#bb-cap-2 {
+  grid-column: 11/17;
+  grid-row: 2/5;
+  width: 100%;
+  text-align: justify;
+  align-self: top;
+}
+
+.photo-section-3 .section-caption#cant-cap-3 {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: top;
+}
+
+.photo-section-3 .section-caption#farm-cap-3 {
+  grid-column: 12/17;
+  grid-row: 2/4;
+  width: 100%;
+  text-align: justify;
+  align-self: top;
 }
 
 .photo-section-4 {
@@ -632,11 +701,11 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 5 -------------------- */
 .photo-section-5 {
   margin-bottom: 5em;
-  margin-top: 5em;
+  margin-top: 10em;
 }
 
 .photo-section-5 .layout-item:first-child {
-  grid-column: 3/9;
+  grid-column: 3/8;
   grid-row: 1;
   display: flex;
   flex-direction: column;
@@ -650,7 +719,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-5 .layout-item:nth-child(2) {
-  grid-column: 9/17;
+  grid-column: 8/16;
   grid-row: 1;
   width: 100%;
 }
@@ -662,20 +731,27 @@ body .cursor__ball circle {
   padding-top: 2em;
 }
 
+.photo-section-5 .section-caption#quote4 {
+  grid-column: 8/16;
+  grid-row: 2;
+}
+
 /*-------------- PHOTO SECITON 6 -------------------- */
 .photo-section-6 {
   grid-template-rows: repeat(7, 1fr);
   margin-bottom: -5em;
+  margin-left: 5%;
 }
 
 .photo-section-6 .layout-item:first-child {
+  margin-top: 4%;
   grid-row: 1/4;
   grid-column: 7/11;
   width: 100%;
 }
 
 .photo-section-6 .layout-item:nth-child(2) {
-  grid-row: 2/5;
+  grid-row: 2/6;
   grid-column: 11/15;
   width: 100%;
 }
@@ -686,18 +762,22 @@ body .cursor__ball circle {
   width: 100%;
 }
 
-.photo-section-6 .section-quote {
-  grid-row: 5/7;
-  grid-column: 11/16;
-  width: 90%;
+.photo-section-6 #roma-cap-2 {
+  grid-row: 3;
   align-self: end;
-  line-height: 150%;
+  grid-column: 2/7;
+}
+
+.photo-section-6 #roma-cap-3 {
+  grid-row: 6/10;
+  grid-column: 11/15;
+  text-align: justify;
 }
 
 .photo-section-6 .section-caption#felting {
   width: 90%;
   grid-row: 2/4;
-  grid-column: 2/7;
+  grid-column: 3/7;
   align-self: end;
   font-size: 0.6em;
   text-align: justify;
@@ -721,6 +801,20 @@ body .cursor__ball circle {
   align-self: start;
   text-align: justify;
   line-height: 150%;
+}
+
+.photo-section-6 .section-caption#texels-cap-2 {
+  grid-row: 1/4;
+  grid-column: 3/6;
+  width: 100%;
+  align-self: end;
+}
+
+.photo-section-6 .section-caption#texels-cap-3 {
+  grid-row: 4/6;
+  align-self: end;
+  grid-column: 11/15;
+  width: 100%;
 }
 
 /*-------------- PHOTO SECITON 6 VARIATION 2 -------------------- */
@@ -767,54 +861,145 @@ body .cursor__ball circle {
 .photo-section-7 {
   grid-template-rows: 2;
   margin-bottom: 20%;
+  padding: 2em;
 }
 
 .photo-section-7 .layout-item:first-child {
   grid-row: 1;
-  grid-column: 4/11;
+  grid-column: 5/10;
 }
 
 .photo-section-7 .layout-item:nth-child(2) {
   grid-row: 2/3;
-  grid-column: 2/9;
-  width: 72%;
+  grid-column: 4/9;
+  width: 70%;
 }
 
 .photo-section-7 .layout-item:nth-child(3) {
   grid-row: 2;
-  grid-column: 7/17;
+  grid-column: 8/18;
   width: 100%;
 }
 
 .photo-section-7 .section-caption {
-  grid-row: 2/5;
-  grid-column: 2/7;
-  align-self: end;
+  grid-row: 3/5;
+  grid-column: 3/8;
+  align-self: start;
 }
 
 .photo-section-7 .section-caption#kiki-end {
-  align-self: flex-end;
+  align-self: start;
+  grid-row: 3;
+}
+
+.photo-section-7 .section-caption#soil-cap-3 {
+  align-self: end;
   text-align: justify;
-  grid-row: 4/8;
+  grid-row: 2/8;
+}
+
+.photo-section-7 #farm-cap-4 {
+  align-self: end;
+  text-align: justify;
+  grid-row: 1/5;
+  grid-column: 1/7;
+}
+
+.photo-section-8 .section-caption#melk-cap-2 {
+  grid-column: 4/9;
+  grid-row: 1/10;
+  width: 100%;
+  margin-top: 30%;
+  align-self: start;
+}
+
+.photo-section-8 #melkhuis-1 {
+  display: grid;
+  grid-row: 1;
+}
+
+.photo-section-8 .section-caption#farm-cap-1 {
+  grid-row: 1;
+  margin-top: 35%;
+  align-self: start;
+  text-align: justify;
+  grid-column: 4/8;
+}
+
+.photo-section-8 #angus {
+  margin-bottom: 22%;
+}
+
+.photo-section-8 #felting-vid {
+  grid-column: 3/8;
+}
+
+.photo-section-8 #farm-1 {
+  grid-row: 1;
+  display: grid;
+}
+
+.photo-section-8 #andrea-cap-1 {
+  text-align: justify;
+}
+
+.photo-section-8 #andrea-cap-2 {
+  grid-row: 1;
+  margin-top: 35%;
+  align-self: start;
+  text-align: justify;
+  grid-column: 4/8;
+}
+
+.photo-section-8 #in-workshop {
+  grid-column: 4/12;
+  grid-row: 1;
+  width: 100%;
+  align-self: end;
+}
+
+.photo-section-8 #bb-claudy-cap {
+  grid-column: 4/9;
+  grid-row: 1/10;
+  width: 100%;
+  margin-top: 30%;
+  align-self: start;
+}
+
+.photo-section-8 #bb-1 {
+  grid-row: 1;
+  display: grid;
 }
 
 .end-caption {
   grid-template-rows: repeat(1, 10vh) 1fr;
+  margin-bottom: 10em;
 }
 
 .end-caption .section-caption {
-  grid-column: 4/15;
+  grid-column: 6/14;
   line-height: 150%;
 }
 
+.end-caption .section-caption#melkhuis {
+  grid-column: 5/13;
+  grid-row: 1;
+}
+
+.end-caption .section-caption#farm-end-cap {
+  grid-row: 1/5;
+  grid-column: 6/14;
+  text-align: justify;
+}
+
 html {
-  background-color: #000;
+  background-color: #222222;
 }
 
 body {
   color: white;
   font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  padding: 1em;
+  overflow-x: hidden;
 }
 
 a#home:hover {
@@ -845,18 +1030,19 @@ a#home:hover {
   grid-column: 0/10;
   padding: 1.5%;
   width: 100vw;
-  height: 80vh;
+  height: 30em;
   justify-content: center;
   background-size: contain;
+  z-index: 5;
 }
 
 .geo-info#right {
   display: inline-block;
-  right: 0;
-  justify-content: flex-start;
+  right: 15px;
   position: absolute;
   width: 20px;
-  height: 500px;
+  height: 100%;
+  top: 5px;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
   letter-spacing: 0.6em;
@@ -867,13 +1053,12 @@ a#home:hover {
 .geo-info#left {
   display: inline-block;
   left: 20px;
-  justify-content: flex-start;
   position: absolute;
   width: 20px;
   height: 500px;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.4em;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }
@@ -894,11 +1079,29 @@ a#home:hover {
 .exp-title {
   text-align: right;
   width: 80vw;
+  line-height: 100%;
+  display: block;
+  height: 100%;
+  padding-right: 2%;
+}
+
+.exp-title-twoline {
+  text-align: right;
+  font-size: 3em;
+  font-family: Redaction-Bold;
+  line-height: 150%;
+  display: block;
+  height: 100%;
+}
+
+h3#exp-title-secondary {
+  line-height: 0%;
+  font-size: 1.6em;
 }
 
 #exp-tagline {
   font-family: hyperMarket;
-  font-size: calc(0.9em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #exp-title {
@@ -935,6 +1138,15 @@ a#home:hover {
   padding: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
+    width: 100vw;
+    height: 100%;
+    display: block;
+    border: 2px solid purple;
+    margin-top: 20em;
+  }
+}
 /*# sourceMappingURL=experiences.css.map */
 /*# sourceMappingURL=experiences.css.map */
 
