@@ -635,6 +635,7 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 3  -------------------- */
 .photo-section-3 {
   grid-template-rows: 1fr 1fr;
+  margin-bottom: 10em;
 }
 
 .photo-section-3 .layout-item:first-child {
@@ -766,7 +767,8 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 5 -------------------- */
 .photo-section-5 {
   margin-bottom: 5em;
-  margin-top: 10em;
+  margin-top: -380px;
+  margin-left: 4%;
 }
 
 .photo-section-5 .layout-item:first-child {
@@ -796,15 +798,16 @@ body .cursor__ball circle {
   padding-top: 2em;
 }
 
-.photo-section-5 .section-caption#quote4 {
+.photo-section-5 .section-caption#app-cap-2 {
   grid-column: 8/16;
-  grid-row: 2;
+  align-self: start;
+  margin-top: -30px;
 }
 
 /*-------------- PHOTO SECITON 6 -------------------- */
 .photo-section-6 {
   grid-template-rows: repeat(7, 1fr);
-  margin-bottom: 2%;
+  margin-bottom: 3%;
   margin-left: 5%;
 }
 
@@ -932,19 +935,18 @@ body .cursor__ball circle {
 
 .photo-section-7 .layout-item:first-child {
   grid-row: 1;
-  grid-column: 5/10;
+  grid-column: 5/12;
 }
 
 .photo-section-7 .layout-item:nth-child(2) {
   grid-row: 2;
   grid-column: 1/8;
-  width: 100%;
 }
 
 .photo-section-7 .layout-item:nth-child(3) {
   grid-row: 2;
-  grid-column: 8/18;
-  width: 100%;
+  grid-column: 7/18;
+  width: 93%;
 }
 
 .photo-section-7 .section-caption {
@@ -952,6 +954,14 @@ body .cursor__ball circle {
   grid-column: 3/8;
   align-self: start;
   margin-top: -8px;
+}
+
+.photo-section-7 #farm-7 {
+  grid-column: 2/9;
+}
+
+.photo-section-7 #farm-8 {
+  grid-column: 9/19;
 }
 
 .photo-section-7 .section-caption#kiki-end {
@@ -968,8 +978,8 @@ body .cursor__ball circle {
 .photo-section-7 #farm-cap-4 {
   align-self: end;
   text-align: justify;
-  grid-row: 1/5;
-  grid-column: 1/7;
+  grid-row: 3/5;
+  grid-column: 2/7;
 }
 
 .photo-section-8 {
@@ -992,7 +1002,7 @@ body .cursor__ball circle {
 
 .photo-section-8 .section-caption#farm-cap-1 {
   grid-row: 1;
-  margin-top: 35%;
+  margin-top: 120px;
   align-self: start;
   text-align: justify;
   grid-column: 4/8;
@@ -1045,23 +1055,18 @@ body .cursor__ball circle {
 
 .end-caption {
   grid-template-rows: repeat(1, 10vh) 1fr;
-  margin-bottom: 10em;
+  height: 5em;
+  margin-bottom: 10%;
 }
 
 .end-caption .section-caption {
-  grid-column: 4/12;
+  grid-column: 6/15;
   line-height: 150%;
 }
 
 .end-caption .section-caption#melkhuis {
   grid-column: 4/13;
   grid-row: 1;
-}
-
-.end-caption .section-caption#farm-end-cap {
-  grid-row: 1/5;
-  grid-column: 6/14;
-  text-align: justify;
 }
 
 html {
@@ -1175,7 +1180,7 @@ a#home:hover {
   line-height: 100%;
   display: block;
   height: 100%;
-  padding-right: 2%;
+  margin-left: 2%;
   font-size: calc(0.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 

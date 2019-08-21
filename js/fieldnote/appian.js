@@ -12,6 +12,8 @@ $(document).ready(function(){
     document.getElementById("appianStone"),
     document.getElementById("quote1"),
     document.getElementById("caption2"),
+    document.getElementById("app-cap-1"),
+    document.getElementById("app-cap-2"),
     document.getElementById("end")];
 
 
