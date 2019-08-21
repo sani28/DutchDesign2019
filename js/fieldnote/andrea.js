@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/andrea/water-1.jpg')";
+    document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/andrea/water_banner.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("in-workshop"),
