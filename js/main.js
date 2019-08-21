@@ -276,12 +276,10 @@ function initAnimation() {
     for(let i=0; i < designerNavList.length; i++){
       $(designerNavList[i]).mouseenter(function(){
         let currentID = this.id;
-        console.log(currentID);
         $("#" + currentID + "Dot").addClass("nav-highlight");
       });
       $(designerNavList[i]).mouseout(function(){
         let currentID = this.id;
-        console.log(currentID);
         $("#" + currentID + "Dot").removeClass("nav-highlight");
       });
     }
