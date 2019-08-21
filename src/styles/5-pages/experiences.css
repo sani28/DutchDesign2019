@@ -804,7 +804,7 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 6 -------------------- */
 .photo-section-6 {
   grid-template-rows: repeat(7, 1fr);
-  margin-bottom: -5em;
+  margin-bottom: 2%;
   margin-left: 5%;
 }
 
@@ -819,6 +819,7 @@ body .cursor__ball circle {
   grid-row: 2/6;
   grid-column: 11/15;
   width: 100%;
+  height: 90%;
 }
 
 .photo-section-6 .layout-item:nth-child(3) {
@@ -834,7 +835,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-6 #roma-cap-3 {
-  grid-row: 6/10;
+  grid-row: 2/7;
   grid-column: 11/15;
   text-align: justify;
 }
@@ -925,7 +926,8 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 7  -------------------- */
 .photo-section-7 {
   grid-template-rows: 2;
-  margin-bottom: 20%;
+  margin-top: -300px;
+  margin-bottom: 10%;
 }
 
 .photo-section-7 .layout-item:first-child {
@@ -949,6 +951,7 @@ body .cursor__ball circle {
   grid-row: 3/5;
   grid-column: 3/8;
   align-self: start;
+  margin-top: -8px;
 }
 
 .photo-section-7 .section-caption#kiki-end {
@@ -967,6 +970,11 @@ body .cursor__ball circle {
   text-align: justify;
   grid-row: 1/5;
   grid-column: 1/7;
+}
+
+.photo-section-8 {
+  margin-top: -2em;
+  margin-bottom: 10%;
 }
 
 .photo-section-8 .section-caption#melk-cap-2 {
@@ -1012,6 +1020,7 @@ body .cursor__ball circle {
   align-self: start;
   text-align: justify;
   grid-column: 4/8;
+  margin-top: -2px;
 }
 
 .photo-section-8 #in-workshop {
