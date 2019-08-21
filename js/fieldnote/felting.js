@@ -1,5 +1,11 @@
 $(document).ready(function(){
-    document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/felting/felting-1.jpg')";
+
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
+  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/felting/felting-1.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("felt-2"),

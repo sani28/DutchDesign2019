@@ -1,5 +1,12 @@
-$(document).ready(function(){
-    document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/black/bb_banner.jpg')";
+$(document).ready(function() {
+
+
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
+  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/black/bb_banner.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("bb-1"),
@@ -11,20 +18,21 @@ $(document).ready(function(){
     document.getElementById("bb-5"),
     document.getElementById("bb-6"),
     document.getElementById("bb-7"),
-    document.getElementById("end")];
+    document.getElementById("end")
+  ];
 
 
   var scrollControl = new ScrollMagic.Controller();
 
 
-  for(let i=0; i<orderedDesignerImages.length; i++){
+  for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
-      triggerElement: orderedDesignerImages[i],
-      triggerHook: 0.8,
-      offset: 100,
-      reverse: true
-    })
-    .setClassToggle(orderedDesignerImages[i], "visible")
-    .addTo(scrollControl);
+        triggerElement: orderedDesignerImages[i],
+        triggerHook: 0.8,
+        offset: 100,
+        reverse: true
+      })
+      .setClassToggle(orderedDesignerImages[i], "visible")
+      .addTo(scrollControl);
   }
 });

@@ -1,5 +1,12 @@
 $(document).ready(function(){
-    document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/andrea/water_banner.jpg')";
+
+  //scramble text for field note geo info
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
+  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/andrea/water_banner.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("in-workshop"),

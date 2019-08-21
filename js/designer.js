@@ -337,10 +337,3 @@ class HoverImgFx1 {
 }
 
 [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
-
-
-  //scramble text for field note geo info
-  $(".geo-info").codex({
-    speed: 30,
-    duration: 2000
-  });

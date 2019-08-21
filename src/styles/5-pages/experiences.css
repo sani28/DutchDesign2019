@@ -1126,11 +1126,11 @@ a#home:hover {
 
 .geo-info#right {
   display: inline-block;
-  right: 15px;
+  right: 2em;
   position: absolute;
   width: 20px;
-  height: 100%;
-  top: 5px;
+  top: 1em;
+  height: 90%;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
   letter-spacing: 0.6em;

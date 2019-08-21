@@ -344,8 +344,9 @@ span:hover {
   }
 
   p.small {
-    font-size: 0.7em;
-    text-align: justify;
+    font-size: 0.5em;
+    line-height: 250%;
+    text-align: left;
   }
 
   #team-bio {

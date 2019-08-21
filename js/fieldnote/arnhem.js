@@ -1,4 +1,11 @@
-$(document).ready(function(){
+$(document).ready(function() {
+
+
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
   const orderedDesignerImages = [
     document.getElementById("enroute"),
     document.getElementById("alexSihloutte"),
@@ -12,20 +19,21 @@ $(document).ready(function(){
     document.getElementById("onGrass"),
     document.getElementById("dune1"),
     document.getElementById("dune2"),
-    document.getElementById("end")];
+    document.getElementById("end")
+  ];
 
 
   var scrollControl = new ScrollMagic.Controller();
 
 
-  for(let i=0; i<orderedDesignerImages.length; i++){
+  for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
-      triggerElement: orderedDesignerImages[i],
-      triggerHook: 0.8,
-      offset: 100,
-      reverse: true
-    })
-    .setClassToggle(orderedDesignerImages[i], "visible")
-    .addTo(scrollControl);
+        triggerElement: orderedDesignerImages[i],
+        triggerHook: 0.8,
+        offset: 100,
+        reverse: true
+      })
+      .setClassToggle(orderedDesignerImages[i], "visible")
+      .addTo(scrollControl);
   }
 });

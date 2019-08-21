@@ -1,5 +1,11 @@
-$(document).ready(function(){
-    document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/soil/ateliernl_section1_img1.jpg')";
+$(document).ready(function() {
+
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
+  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/soil/ateliernl_section1_img1.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("soil-1"),
@@ -14,20 +20,21 @@ $(document).ready(function(){
     document.getElementById("soil-7"),
     document.getElementById("soil-8"),
     document.getElementById("soil-9"),
-    document.getElementById("wrkshop-vid")];
+    document.getElementById("wrkshop-vid")
+  ];
 
 
   var scrollControl = new ScrollMagic.Controller();
 
 
-  for(let i=0; i<orderedDesignerImages.length; i++){
+  for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
-      triggerElement: orderedDesignerImages[i],
-      triggerHook: 0.8,
-      offset: 100,
-      reverse: true
-    })
-    .setClassToggle(orderedDesignerImages[i], "visible")
-    .addTo(scrollControl);
+        triggerElement: orderedDesignerImages[i],
+        triggerHook: 0.8,
+        offset: 100,
+        reverse: true
+      })
+      .setClassToggle(orderedDesignerImages[i], "visible")
+      .addTo(scrollControl);
   }
 });

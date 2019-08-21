@@ -1,5 +1,11 @@
 $(document).ready(function(){
-    document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/roma/roma_banner.jpg')";
+
+  $(".geo-info").codex({
+    speed: 30,
+    duration: 2000
+  });
+
+  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/roma/roma_banner.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("roma-1"),
