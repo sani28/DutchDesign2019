@@ -127,8 +127,8 @@ html {
 
 #team-bio {
   display: grid;
-  grid-row: 4/5;
-  grid-column: 9/16;
+  grid-row: 4;
+  grid-column: 8/16;
   line-height: 210%;
   text-align: justify;
   z-index: 99;
@@ -146,8 +146,9 @@ html {
   font-size: 0.8em;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  grid-row: 7/10;
-  grid-column: 7/18;
+  font-family: maisonNeue-Mono;
+  grid-row: 3;
+  grid-column: 3/19;
   line-height: 80%;
 }
 
@@ -155,12 +156,16 @@ h1 {
   display: inline-block;
   font-family: Redaction;
   font-size: 3em;
+  grid-row: 3;
+  grid-column: 7/16;
 }
 
 p.team {
   font-family: maisonNeue-Mono;
   line-height: 200%;
   font-size: 0.7em;
+  grid-row: 4/10;
+  grid-column: 9/15;
 }
 
 p.small {
@@ -323,6 +328,7 @@ span:hover {
     justify-content: space-around;
     align-items: center;
     height: 55px;
+    z-index: 100;
   }
 
   p.team {
