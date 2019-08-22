@@ -367,10 +367,23 @@ h1 {
 
 #yearfifteen {
   letter-spacing: 10px;
+  font-size: 2.3em;
 }
 
 #yearsixteen {
   letter-spacing: 8px;
+}
+
+#yearseventeen {
+  font-size: 2.1em;
+}
+
+#yeareighteen {
+  font-size: 2.16em;
+}
+
+#yearninteen {
+  font-size: 2.5em;
 }
 
 /*# sourceMappingURL=legacy.css.map */
