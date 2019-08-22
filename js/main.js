@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
   const $smallBall = document.querySelector('.cursor__ball--small');

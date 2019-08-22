@@ -1,3 +1,13 @@
+$(window).load(function() {
+  $('.str4').liMarquee({
+    direction: 'up',
+    loop:-1,
+    scrolldelay: 0,
+    scrollamount: 90,
+    inverthover: false,
+    hoverstop: false,
+  });
+});
 
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
@@ -31,16 +41,29 @@ function onMouseHoverOut() {
     scale: 1 });
 }
 
-$(window).load(function() {
-  $('.str4').liMarquee({
-    direction: 'up',
-    loop:-1,
-    scrolldelay: 0,
-    scrollamount: 90,
-    inverthover: false,
-    hoverstop: false,
-  });
-});
+const alex = document.getElementById("a").id = "alex";
+const angus = document.getElementById("a").id = "angus";
+const brandon = document.getElementById("a").id = "brandon";
+const breanne = document.getElementById("a").id = "breanne";
+const gabe = document.getElementById("a").id = "gabe";
+const jenny = document.getElementById("a").id = "jenny";
+const linda = document.getElementById("a").id = "linda";
+const marie = document.getElementById("a").id = "marie";
+const marine = document.getElementById("a").id = "marine";
+const nikita = document.getElementById("a").id = "nikita";
+const rocky = document.getElementById("a").id = "rocky";
+const russell = document.getElementById("a").id = "russell";
+const sanny = document.getElementById("a").id = "sanny";
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+}
 
 /* ----------------- DOTS JS ----------------------------- */
 
@@ -104,7 +127,6 @@ $(window).load(function() {
 [].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
   new DotNav( nav, {
     callback : function( idx ) {
-      // console.log( idx )
     }
   } );
 } );
