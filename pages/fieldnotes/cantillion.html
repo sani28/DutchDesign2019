@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="designer-page-body">
+
+<head>
+  <meta charset="utf-8">
+  <title> Cantillion Brewery </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../../src/styles/0-vendors/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../src/styles/5-pages/experiences.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+  <script type="text/javascript" src="../../js/designer.js" async defer></script>
+  <script type="text/javascript" src="../../js/main.js" async defer></script>
+  <script type="text/javascript" src="../../js/jquery.codex.js" async defer></script>
+  <script type="text/javascript" src="../../js/fieldnote/cantillion.js" async defer></script>
+</head>
+
+
+<body>
+
+  <div class="grid-layout-container">
+    <div id="back-btn">
+      <a href="../index.html" id="home">
+        <span class="home-dot"></span>
+        <p id="home-text">BACK HOME</p>
+      </a>
+    </div>
+
+    <section class="experience-landing">
+      <div id="exp-landing-photo"> </div>
+      <section class="exp-title">
+        <h2 id="exp-tagline"> BRUSSELS, BELGIUM </h2>
+        <div class="exp-title-twoline"> CANTILLION BREWERY </div>
+      </section>
+
+      <div class="geo-info" id="right">
+        8 / 13 &nbsp; &nbsp;  2019 05 30 &nbsp; &nbsp;  50.8503° N, 4.3517° E
+      </div>
+
+      <div class="geo-info" id="left">
+        20 °C SW 23 KM/H
+      </div>
+
+    </section>
+
+  </div> <!-- end of grid layout -->
+
+
+  <!-- //////////////////// PHOTO SECITON 5 /////////////////////  -->
+
+  <section class="photo-section-5">
+    <div class="layout-item shown-item" id="cant-1">
+      <p class="section-caption" id="cant-cap-1">People always talk about Belgian beer. The variety, the sours, the craftsmanship — why?<p>
+          <img id="mappieces" src="../../assets/images/cantillion/cantillion_section5_img1.jpg"></img>
+    </div>
+    <img class="layout-item shown-item" id="cant-2" src="../../assets/images/cantillion/cantillion_section5_img2.jpg"></img>
+    <p class="section-caption layout-item shown-item" id="cant-cap-2">We went to Cantillon Brewery, a facility that is equal parts 18th century historic building, museum, and operating brewery to find out. </p>
+  </section>
+
+  <!-- ////////////////////  PHOTO SECTION 3 /////////////////////  -->
+
+  <section class="photo-section-3">
+    <img class="layout-item shown-item" id="cant-3" src="../../assets/images/cantillion/cantillion_section3_img1.jpg"></img>
+    <img class="layout-item shown-item" id="cant-4" src="../../assets/images/cantillion/cantillion_section3_img2.jpg"></img>
+    <p class="section-caption layout-item" id="cant-cap-3">It is one of the few remaining breweries in Belgium that still brews “Lambic”, “Kriek”  and “Geuze” beers the traditional way.
+Interestingly, they don’t add yeast. The yeast is baked into the wooden beams above the cooling vat and the ventilation circulates it into the beer.</p>
+  </section>
+
+  <!-- ////////////////////  PHOTO SECTION 4 /////////////////////  -->
+
+  <section class="photo-section-4">
+    <div class="layout-item">
+      <img class="shown-item" id="cant-5" src="../../assets/images/cantillion/cantillion_section4_img1.jpg"></img>
+      <p class="section-caption" id="cant-cap-4">The old, fermenting barrels bubbling in the basement are aged and mixed to create the sour, flat Lambic beer which serves as the base for all of their beers.<p>
+    </div>
+    <div class="layout-item">
+      <p class="section-caption" id="cant-cap-5">A blend of young and aged Lambic creates the Geuze. Meanwhile, Krieke beer is Geuze infused with real fruit and fermented again, bringing back carbonation to the brew — it’s like a blend of wine and beer. </p>
+      <img class="layout-item shown-item" id="cant-6" src="../../assets/images/cantillion/cantillion_section4_img2.jpg"></img>
+    </div>
+  </section>
+
+  <!-- ////////////////////  END CAPTION  /////////////////////  -->
+
+  <section class="end-caption">
+    <p class="section-caption">The tour of the Museum and brewhouse, as well as the tasting was a highlight, bringing culinary and cultural understanding about what makes the city of Brussels unique outside of the Art Nouveau architecture by Victor Horta and, of course, the amazing seafood.</p>
+  </section>
+
+  <!-- ////////////////////  Full Bleed Image //////////////////////  -->
+  <img class="fullbleed" src="../../assets/images/cantillion/cantillion_end.jpg">
+
+
+  <!-- ////////////// CURSOR /////////////////////////// --->
+  <div class="cursor">
+    <div class="cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -19,6 +19,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
   <script type="text/javascript" src="../../js/designer.js" async defer></script>
   <script type="text/javascript" src="../../js/main.js" async defer></script>
+  <script type="text/javascript" src="../../js/jquery.codex.js" async defer></script>
   <script type="text/javascript" src="../../js/fieldnote/arnhem.js" async defer></script>
 </head>
 
@@ -26,9 +27,10 @@
 <body>
 
   <div class="grid-layout-container">
-    <div class="back-btn">
-      <a href="../index.html" class="hoverable" id="back">
-        ⬤
+    <div id="back-btn">
+      <a href="../index.html" id="home">
+        <span class="home-dot"></span>
+        <p id="home-text">BACK HOME</p>
       </a>
     </div>
 
@@ -36,15 +38,15 @@
       <div id="exp-landing-photo"> </div>
       <section class="exp-title">
         <h2 id="exp-tagline"> ARNHEM, NETHERLANDS </h2>
-        <h1 id="exp-title">A DAY IN ARNHEM </h1>
+        <div class="exp-title-twoline">A DAY IN ARNHEM </div>
       </section>
 
       <div class="geo-info" id="right">
-        4 9 &nbsp; &nbsp; 2019 04 31 &nbsp; &nbsp; 2019 04 31
+      8 / 13 &nbsp; &nbsp;  2019 04 26&nbsp; &nbsp;  51.9851° N, 5.8987° E
       </div>
 
       <div class="geo-info" id="left">
-        17 °C NW 11 KM/H
+          18 °C NW 11 KM/H
       </div>
 
     </section>
@@ -52,13 +54,14 @@
   </div> <!-- end of grid layout -->
 
 
+
   <!-- //////////////////// PHOTO SECITON 6 - VARIATION 1 /////////////////////  -->
   <section class="photo-section-6-v2">
     <img class="layout-item shown-item" id="enroute" src="../../assets/images/arnhem/arnhem-1.png"></img>
     <img class="layout-item shown-item" id="alexSihloutte" src="../../assets/images/arnhem/arnhem-2.png"></img>
     <img class="layout-item shown-item" id="krollerMuller" src="../../assets/images/arnhem/arnhem-3.png"></img>
-    <p class="section-caption">The museum houses an extensive collection of early 20th century art, and the 2nd largest collection of Vincent Van Gogh in the world</p>
-    <p class="section-caption">Triumphant after interviewing Ineke Hans in Arnhem, our second interview in the Netherlands, we set out to enjoy the nearby, world-famous Kröller-Müller Museum.</p>
+    <p class="section-caption" id="arnhem-cap-1">The museum houses an extensive collection of early 20th century art, and the 2nd largest collection of Vincent Van Gogh in the world</p>
+    <p class="section-caption" id="arnehm-cap-2">Triumphant after interviewing Ineke Hans in Arnhem, our second interview in the Netherlands, we set out to enjoy the nearby, world-famous Kröller-Müller Museum.</p>
   </section>
 
 
@@ -66,8 +69,8 @@
   <section class="photo-section-4-v2">
     <img class="layout-item shown-item" id="riding-1" src="../../assets/images/arnhem/arnhem-5.png"></img>
     <img class="layout-item shown-item" id="riding-2" src="../../assets/images/arnhem/arnhem-4.png"></img>
-    <p class="section-caption"> It is embedded within the heart of the largest nature reserve in the Netherlands, nestled close to the German border: the extraordinary Hoge Veluwe National Park </p>
-    <p class="section-caption"> The museum and Hoge Veluwe park are accessible by free-to-use, white bicycles within the park. The natural vegetations and soils change as you ride: sometimes rolling sand dunes with open
+    <p class="section-caption" id="arnhem-cap-3"> It is embedded within the heart of the largest nature reserve in the Netherlands, nestled close to the German border: the extraordinary Hoge Veluwe National Park </p>
+    <p class="section-caption" id="arnhem-cap-4"> The museum and Hoge Veluwe park are accessible by free-to-use, white bicycles within the park. The natural vegetations and soils change as you ride: sometimes rolling sand dunes with open
       skies, and sometimes dots of moss and short yellow grass with impossibly green canopies of leaves above.</p>
   </section>
 
@@ -80,6 +83,7 @@
 
   <!-- ////////////////////  END CAPTION  /////////////////////  -->
 
+
   <section class="end-caption">
     <p class="section-caption">The experience taught us the importance of being in the moment, celebrating milestones, and being willing to go farther to find the extraordinary that few will experience. A glorious picnic, with good
       conversation and reflection was had on a hilltop, high above the dunes</p>
@@ -89,19 +93,6 @@
   <img class="fullbleed" src="../../assets/images/arnhem/arnhem-9.png">
 
 
-  <!-- ////////////// CURSOR /////////////////////////// --->
-  <div class="cursor">
-    <div class="cursor__ball--big ">
-      <svg height="30" width="30">
-        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-      </svg>
-    </div>
-    <div class="cursor__ball cursor__ball--small">
-      <svg height="10" width="10">
-        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-      </svg>
-    </div>
-  </div>
 
 </body>
 

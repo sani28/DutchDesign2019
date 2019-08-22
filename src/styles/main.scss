@@ -23,6 +23,10 @@ a {
   display: block;
 }
 
+a:hover {
+  fill: purple;
+}
+
 a#imgHover {
   display: inline;
 }
@@ -101,12 +105,12 @@ body .cursor__ball {
   position: fixed;
   top: 0;
   left: 0;
-  mix-blend-mode: overlay;
+  mix-blend-mode:screen;
   z-index: 1000;
 }
 
 body .cursor__ball circle {
-  fill: purple;
+  fill: $secondary-purp;
 }
 /* --------------- grid box styling-----------------------------*/
 #top-nav {
@@ -149,45 +153,29 @@ body .cursor__ball circle {
   grid: repeat(4, 1fr) / repeat(5, 3*$width-unit);
   grid-auto-flow: column;
 
-  #wid {
+  #widA {
     grid-row: 1/2;
     grid-column: 1/2;
   }
 
-  #reglaze {
+  #reglazeA {
     grid-row: 2/3;
     grid-column: 1/2;
   }
 
-  #edwin #truly #jurgen #nienke {
+  #edwinA, #trulyA, #jurgenA, #nienkeA, {
     grid-column: 2/3;
   }
 
-  #edwin {
-    grid-row: 1/2;
-  }
-
-  #truly {
-    grid: -row 2/3;
-  }
-
-  #jurgen {
-    grid-row: 3/4;
-  }
-
-  #nienke {
-    grid-row: 4/5;
-  }
-
-  #lex #valentin #corunum #floris {
+  #lexA, #valentinA, #corunumA, #florisA {
     grid-column: 3/4;
   }
 
-  #rebecca #aldo #momkai #lava {
+  #rebeccaA, #aldoA, #momkaiA, #lavaA {
     grid-column: 4/5;
   }
 
-  #ineke #pepe #matthews #futures {
+  #inekeA, #pepeA, #matthewsA, #futuresA {
     grid-column: 5/6;
   }
 }
@@ -281,8 +269,7 @@ body .cursor__ball circle {
   #hover-title {
     font-family: Redaction;
     font-size: 2.25vw;
-    margin-bottom: 0.25em;
-    margin-top: 0;
+    margin: 0;
     color: white;
   }
 
@@ -365,7 +352,7 @@ body .cursor__ball circle {
 }
 
 #edwinItem {
-  grid-area: 4/6;
+  grid-area: 5/6;
 }
 
 #valentinItem {
@@ -397,19 +384,27 @@ body .cursor__ball circle {
 }
 
 #inekeItem {
-  grid-area: 2/7;
-}
-
-#pepeItem {
   grid-area: 2/6;
 }
 
+#pepeItem {
+  grid-area: 2/5;
+}
+
 #matthewsItem {
-  grid-area: 1/8;
+  grid-area: 1/7;
 }
 
 #futuresItem {
-  grid-area: 1/7;
+  grid-area: 1/6;
+}
+
+#reglazeItem {
+  grid-area: 5/12;
+}
+
+#widItem {
+  grid-area: 5/14;
 }
 
 #arnhemItem {
@@ -856,8 +851,8 @@ body .cursor__ball circle {
   padding: 0;
 }
 
-.section-caption {
-  font-family: maisonNeue-Mono;
+.section-caption{
+  font-family: maisonMono-Regular;
   font-size: 0.75em;
   font-weight: lighter;
   line-height: 150%;

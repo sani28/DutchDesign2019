@@ -1,25 +1,143 @@
+$width-unit: 4.54vw;
+$height-unit: 6.67vh;
+$grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
+$grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
+$primary-green: #DFEA4E;
+$secondary-purp: #7D246B;
+
 /* ------------------- containers ------------------------------------- */
 @import '../1-helpers/fonts';
 @import '../2-modules/background';
+
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../../../fonts/bebas.otf);
+}
+
+@font-face {
+  font-family: brandon;
+  src: url(../../../fonts/brandon.otf);
+}
+
+@font-face {
+  font-family: karla;
+  src: url(../../../fonts/karla.ttf);
+}
+
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../../../fonts/helveticaneue-bold.otf);
+}
+
+@font-face {
+  font-family: museosans-100;
+  src: url(../../../fonts/museosans-100.otf);
+}
+
+@font-face {
+  font-family: novecento;
+  src: url(../../../fonts/novecento.otf);
+}
+
+@font-face {
+  font-family: katarinestd;
+  src: url(../../../fonts/katarinestd.otf);
+}
+
+@font-face {
+  font-family: monsterrat;
+  src: url(../../../fonts/monsterrat.otf);
+}
+
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../../../fonts/neuehaasgroteskblack.otf);
+}
+
+@font-face {
+  font-family: hyperMarket;
+  src: url(../../../fonts/hypermarket-regular.ttf);
+  font-weight: bold;
+}
+
+#back-btn {
+  position: fixed;
+  display: block;
+  top: 1em;
+  left: 1em;
+  width: 10vw;
+  z-index: 1;
+  .home-dot {
+    background-color: white;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    -ms-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+  }
+  p {
+    display: none;
+    font-family: hyperMarket;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: white;
+  }
+}
+#back-btn.purple{
+  .home-dot{
+    background-color: $secondary-purp;
+  }
+  p {
+    color: $secondary-purp;
+  }
+}
+
+#back-btn.purple.white{
+  .home-dot{
+    background-color: white;
+  }
+  p{
+    color: white;
+  }
+}
+
+#back-btn:hover #home-text {
+  display: inline-block;
+  float: right;
+}
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 253px;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-size: 3.1em;
+  font-size: calc(2.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .year {
-  margin-top: 100%;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
 }
 
 .legacy-year {
   transform: rotate(-90deg);
   color: #7D246B;
+  font-size: calc(2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .legacy-container {
@@ -27,7 +145,8 @@
   flex-wrap: nowrap;
   overflow-y: scroll;
   height: 100vh;
-  bottom: 0;
+  bottom:0;
+  left:0;
   position: absolute;
   z-index: -1;
 }
@@ -46,52 +165,79 @@ h1 {
   font-family: helveticaneue-bold;
 }
 #eleven{
-  font-family: museosans-100;
+    font-family: museosans-100;
+    text-align: justify;
+    letter-spacing: 0.09em;
 }
 #twelve {
   font-family: novecento;
+  text-align: justify;
+  font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 #thirteen{
   font-family: bebas;
+  text-align: justify;
+  font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 #fourteen{
   font-family: monsterrat;
+  font-size: calc(1.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-align: justify;
 }
 #fifteen{
   font-family: katarinestd;
+    text-align: justify;
 }
 #sixteen{
   font-family: karla;
 }
 #seventeen{
   font-family: arial;
+  letter-spacing: 10px;
 }
 #eighteen{
   font-family: neuehaasgroteskblack;
 }
+
 #nineteen{
   font-family: redaction;
 }
 
 #yeartwelve {
-  font-size: 2.2em;
+  text-align: justify;
   letter-spacing: 10px;
+  margin-right: 20px;
 }
 
 #yearthirteen {
-  font-size: 2.2em;
-  letter-spacing: 10px;
+    font-size: 2.3em;
+    letter-spacing: 10px;
+    margin-left: 25px;
 }
 
 #yearfourteen {
-  font-size: 5rem;
-  letter-spacing: 12px;
+    text-align: justify;
+    letter-spacing: 12px;
+    font-size: 2.8em;
 }
 
 #yearfifteen {
   letter-spacing: 10px;
+  font-size: 2.3em;
 }
 
 #yearsixteen {
   letter-spacing: 8px;
+}
+
+#yearseventeen{
+  font-size: 2.1em;
+}
+
+#yeareighteen{
+  font-size: 2.16em;
+}
+
+#yearninteen{
+  font-size: 2.5em;
 }

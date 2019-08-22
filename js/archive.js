@@ -60,7 +60,7 @@ for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack contai
 
   $("#sixteen").hover(function() {
       $("#sixteen").css("background-image", "url(../assets/2016.png)");
-      $("#yearsixteen").css("color", "#4cb883");
+      $("#yearsixteen").css("color", "white");
     },
     function() {
       $("#sixteen").css("background-image", "none");

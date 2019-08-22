@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
       var vidMouseTimer;
       var vid = document.getElementById("designer-vid");
       var vidFig = document.getElementById("video-fig");
@@ -85,6 +87,7 @@ function pathPrepare ($el) {
   let lineLength = $el.getTotalLength();
   $el.style.strokeDasharray = lineLength;
   $el.style.strokeDashoffset = lineLength;
+  totalHeight = document.body.clientHeight;
 }
 
 function togglePlayPause(){
@@ -134,6 +137,7 @@ function toggleFullScreen() {
     }
   }
 
+
 //REPOSITION FOOTER
 
 $('#toggle-transcript').click(function(e) {
@@ -159,6 +163,7 @@ $('#toggle-overview').click(function(e) {
   $("#footer").show();
   $('.transcript').hide();
 });
+
 
 //////////////////// SCROLLING BEHAVIOUR ////////////
 

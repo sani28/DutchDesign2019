@@ -1,5 +1,10 @@
-
 $(document).ready(function(){
+
+//CURSOR
+  const $bigBall = document.querySelector('.cursor__ball--big');
+  const $smallBall = document.querySelector('.cursor__ball--small');
+  const $hoverables = document.querySelectorAll('.hoverable');
+
   //ELEMENTS
   const $designerDots = document.querySelectorAll(".designer-dot");
   const $experienceDots = document.querySelectorAll(".experience-dot");
@@ -7,13 +12,37 @@ $(document).ready(function(){
   const $previewVideos = document.querySelectorAll(".bg-preview-video");
   const $fieldNotesBGs = document.querySelectorAll(".fieldnote-bg");
   const $hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle"];
-  var $animateDots = [];
   var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
   var fieldToggle = $("#toggle-field");
 
   //STATES & STYLES
   var interviewsActive = true;
+//////////////////////////////////////////////////////////////////////
+/////////////// CURSOR SPECIFIC FUNCTIONS///////////////////////
+//////////////////////////////////////////////////////////////////////
+  // Listeners
+  document.body.addEventListener('mousemove', onMouseMove);
+  for (let i = 0; i < $hoverables.length; i++) {
+    $hoverables[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+  }
+  // Move the cursor
+  function onMouseMove(e) {
+    TweenMax.to($smallBall, .1, {
+      x: e.pageX - 5,
+      y: e.pageY - 7 });
+  }
+  // Hover an element
+  function onMouseHover() {
+    TweenMax.to($smallBall, .3, {
+      scale: 4 });
+  }
+  function onMouseHoverOut() {
+    TweenMax.to($smallBall, .3, {
+      scale: 1 });
+  }
+
 
 /////////////////////////////////////////////////////////////////////////
 /////////////////////// ANIMATION RELATED  ///////////////////////////
@@ -64,7 +93,6 @@ function initAnimation() {
     $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
     sessionStorage.visited = "true";
   }
-
 
   function hideUIElements(){
     for (let i=0; i<$hiddenElements.length; i++){
@@ -142,7 +170,6 @@ function initAnimation() {
         $("#bts-bg").removeClass("hiddenUI");
         break;
     }
-    observer.observe();
   }
 
   function hideBGImage(){
@@ -150,6 +177,10 @@ function initAnimation() {
       $($fieldNotesBGs[i]).addClass("hiddenUI");
     }
   }
+
+  // function removeBackground(){
+  //   document.getElementById("exp-landing-photo").style.background= "none";
+  // }
 
   function hidePreviewVideos(){
     for(let i=0, len=$previewVideos.length; i< len; i++){
@@ -161,7 +192,7 @@ function initAnimation() {
 
   function hideTitleOverlap(hovered){
     let headerWidth = $("#dot-headers").width();
-    console.log("Header total width: " + headerWidth );
+    //TODO: Complete overlap
   }
 
   function showTitleData(hovered){
@@ -173,8 +204,8 @@ function initAnimation() {
     $("#hover-title").text(dot.dataset.title);
     $("#dot-headers").css("grid-column-start", 0);
     $("#dot-headers").css("grid-column-end", Number(col)+8);
-    $("#dot-headers").css("grid-row-start", Number(row)+4)
-    $("#dot-headers").css("grid-row-end", Number(row)+4);
+    $("#dot-headers").css("grid-row-start", Number(row)+3)
+    $("#dot-headers").css("grid-row-end", Number(row)+3);
     $("#dot-headers").removeClass("hiddenUI");
   }
 
@@ -299,6 +330,11 @@ function initAnimation() {
       });
     }
   }
+  function preloadFieldNotesImages(){
+    for (let i=0, len = $fieldNotesBGs.length; i < len; i++ ){
+        observer.triggerLoad($fieldNotesBGs[i]);
+    }
+  }
 
   function toggleDotState(){
     fieldToggle.click(function(){
@@ -311,6 +347,7 @@ function initAnimation() {
         $("#toggle-int").removeClass("active");
         toggleDotSize();
         changeMenuItems();
+        preloadFieldNotesImages();
       }
     });
     intToggle.click(function(){
@@ -326,6 +363,8 @@ function initAnimation() {
       }
     });
   }
+
+
 
 
 }); //DOCREADY DON'T DELETE
