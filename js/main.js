@@ -13,7 +13,6 @@ $(document).ready(function(){
   const $previewVideos = document.querySelectorAll(".bg-preview-video");
   const $fieldNotesBGs = document.querySelectorAll(".fieldnote-bg");
   const $hiddenElements = ["#top-nav", "#main-nav", "#main-logo", "#main-toggle"];
-  var $animateDots = [];
   var designerNavList = $("#main-nav li").get();
   var intToggle = $("#toggle-int");
   var fieldToggle = $("#toggle-field");
@@ -332,6 +331,11 @@ function initAnimation() {
       });
     }
   }
+  function preloadFieldNotesImages(){
+    for (let i=0, len = $fieldNotesBGs.length; i < len; i++ ){
+        observer.triggerLoad($fieldNotesBGs[i]);
+    }
+  }
 
   function toggleDotState(){
     fieldToggle.click(function(){
@@ -344,6 +348,7 @@ function initAnimation() {
         $("#toggle-int").removeClass("active");
         toggleDotSize();
         changeMenuItems();
+        preloadFieldNotesImages();
       }
     });
     intToggle.click(function(){
