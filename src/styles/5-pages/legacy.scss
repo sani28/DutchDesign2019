@@ -9,7 +9,57 @@ $secondary-purp: #7D246B;
 @import '../1-helpers/fonts';
 @import '../2-modules/background';
 
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../../../fonts/bebas.otf);
+}
 
+@font-face {
+  font-family: brandon;
+  src: url(../../../fonts/brandon.otf);
+}
+
+@font-face {
+  font-family: karla;
+  src: url(../../../fonts/karla.ttf);
+}
+
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../../../fonts/helveticaneue-bold.otf);
+}
+
+@font-face {
+  font-family: museosans-100;
+  src: url(../../../fonts/museosans-100.otf);
+}
+
+@font-face {
+  font-family: novecento;
+  src: url(../../../fonts/novecento.otf);
+}
+
+@font-face {
+  font-family: katarinestd;
+  src: url(../../../fonts/katarinestd.otf);
+}
+
+@font-face {
+  font-family: monsterrat;
+  src: url(../../../fonts/monsterrat.otf);
+}
+
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../../../fonts/neuehaasgroteskblack.otf);
+}
+
+@font-face {
+  font-family: hyperMarket;
+  src: url(../../../fonts/hypermarket-regular.ttf);
+  font-weight: bold;
+}
 
 #back-btn {
   position: fixed;
@@ -69,11 +119,11 @@ $secondary-purp: #7D246B;
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 253px;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-size: 3.1em;
+  font-size: calc(2.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .year {
@@ -87,6 +137,7 @@ $secondary-purp: #7D246B;
 .legacy-year {
   transform: rotate(-90deg);
   color: #7D246B;
+  font-size: calc(2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .legacy-container {
@@ -95,6 +146,7 @@ $secondary-purp: #7D246B;
   overflow-y: scroll;
   height: 100vh;
   bottom:0;
+  left:0;
   position: absolute;
   z-index: -1;
 }
@@ -113,46 +165,60 @@ h1 {
   font-family: helveticaneue-bold;
 }
 #eleven{
-  font-family: museosans-100;
+    font-family: museosans-100;
+    text-align: justify;
+    letter-spacing: 0.09em;
 }
 #twelve {
   font-family: novecento;
+  text-align: justify;
+  font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 #thirteen{
   font-family: bebas;
+  text-align: justify;
+  font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 #fourteen{
   font-family: monsterrat;
+  font-size: calc(1.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-align: justify;
 }
 #fifteen{
   font-family: katarinestd;
+    text-align: justify;
 }
 #sixteen{
   font-family: karla;
 }
 #seventeen{
   font-family: arial;
+  letter-spacing: 10px;
 }
 #eighteen{
   font-family: neuehaasgroteskblack;
 }
+
 #nineteen{
   font-family: redaction;
 }
 
 #yeartwelve {
-  font-size: 2.2em;
+  text-align: justify;
   letter-spacing: 10px;
+  margin-right: 20px;
 }
 
 #yearthirteen {
-  font-size: 2.2em;
-  letter-spacing: 10px;
+    font-size: 2.3em;
+    letter-spacing: 10px;
+    margin-left: 25px;
 }
 
 #yearfourteen {
-  font-size: 5rem;
-  letter-spacing: 12px;
+    text-align: justify;
+    letter-spacing: 12px;
+    font-size: 2.8em;
 }
 
 #yearfifteen {
