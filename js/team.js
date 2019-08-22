@@ -1,3 +1,13 @@
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  window.location.replace('russell.html');
+}
 
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
@@ -104,7 +114,6 @@ $(window).load(function() {
 [].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
   new DotNav( nav, {
     callback : function( idx ) {
-      // console.log( idx )
     }
   } );
 } );
