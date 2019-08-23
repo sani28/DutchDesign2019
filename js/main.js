@@ -190,12 +190,13 @@ function initAnimation() {
     $("html").css("background-color", "#DFEA4E");
   }
 
-  function hideOverlaps(){
+  function hideOverlaps(arr){
     let headers = document.getElementById("hover-title");
+    let dots = arr;
     for(let i=0; i<$designerDots.length; i++){
-      let curr = $designerDots[i];
-      if(collision(headers, $designerDots[i])){
-        $($designerDots[i]).css("display", "none");
+      let curr = dots[i];
+      if(collision(headers, dots[i])){
+        $(dots[i]).css("display", "none");
       }
     }
   }
@@ -323,7 +324,7 @@ function initAnimation() {
           playPreviewVideo(this.id);
           hideUIElements();
           hideExperienceDots();
-          hideOverlaps();
+          hideOverlaps($designerDots);
         }
       });
       $($designerDots[i]).mouseout(function(){
@@ -348,6 +349,7 @@ function initAnimation() {
           changeBGImage(this.id);
           hideUIElements();
           hideDesignerDots();
+          hideOverlaps($experienceDots);
         }
       });
       $($experienceDots[j]).mouseout(function(){
@@ -357,6 +359,7 @@ function initAnimation() {
           $("#dot-headers").addClass("hiddenUI");
           showUIElements();
           showDesignerDots();
+          showExperienceDots();
         }
       });
     }
