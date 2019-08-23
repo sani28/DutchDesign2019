@@ -87,6 +87,7 @@ function pathPrepare ($el) {
   let lineLength = $el.getTotalLength();
   $el.style.strokeDasharray = lineLength;
   $el.style.strokeDashoffset = lineLength;
+  totalHeight = document.body.clientHeight;
 }
 
 function togglePlayPause(){

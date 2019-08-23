@@ -610,36 +610,24 @@ body .cursor__ball circle {
   grid: repeat(4, 1fr)/repeat(5, 13.62vw);
   grid-auto-flow: column;
 }
-#designer-list #wid {
+#designer-list #widA {
   grid-row: 1/2;
   grid-column: 1/2;
 }
-#designer-list #reglaze {
+#designer-list #reglazeA {
   grid-row: 2/3;
   grid-column: 1/2;
 }
-#designer-list #edwin #truly #jurgen #nienke {
+#designer-list #edwinA, #designer-list #trulyA, #designer-list #jurgenA, #designer-list #nienkeA {
   grid-column: 2/3;
 }
-#designer-list #edwin {
-  grid-row: 1/2;
-}
-#designer-list #truly {
-  grid: -row 2/3;
-}
-#designer-list #jurgen {
-  grid-row: 3/4;
-}
-#designer-list #nienke {
-  grid-row: 4/5;
-}
-#designer-list #lex #valentin #corunum #floris {
+#designer-list #lexA, #designer-list #valentinA, #designer-list #corunumA, #designer-list #florisA {
   grid-column: 3/4;
 }
-#designer-list #rebecca #aldo #momkai #lava {
+#designer-list #rebeccaA, #designer-list #aldoA, #designer-list #momkaiA, #designer-list #lavaA {
   grid-column: 4/5;
 }
-#designer-list #ineke #pepe #matthews #futures {
+#designer-list #inekeA, #designer-list #pepeA, #designer-list #matthewsA, #designer-list #futuresA {
   grid-column: 5/6;
 }
 
@@ -813,7 +801,7 @@ body .cursor__ball circle {
 }
 
 #edwinItem {
-  grid-area: 4/6;
+  grid-area: 5/6;
 }
 
 #valentinItem {
@@ -845,19 +833,27 @@ body .cursor__ball circle {
 }
 
 #inekeItem {
-  grid-area: 2/7;
-}
-
-#pepeItem {
   grid-area: 2/6;
 }
 
+#pepeItem {
+  grid-area: 2/5;
+}
+
 #matthewsItem {
-  grid-area: 1/8;
+  grid-area: 1/7;
 }
 
 #futuresItem {
-  grid-area: 1/7;
+  grid-area: 1/6;
+}
+
+#reglazeItem {
+  grid-area: 5/12;
+}
+
+#widItem {
+  grid-area: 5/14;
 }
 
 #arnhemItem {
