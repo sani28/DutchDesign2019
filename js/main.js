@@ -190,10 +190,40 @@ function initAnimation() {
     $("html").css("background-color", "#DFEA4E");
   }
 
-  function hideTitleOverlap(hovered){
-    let headerWidth = $("#dot-headers").width();
-    //TODO: Complete overlap
+  function hideOverlaps(){
+    let headers = document.getElementById("hover-title");
+    for(let i=0; i<$designerDots.length; i++){
+      let curr = $designerDots[i];
+      if(collision(headers, $designerDots[i])){
+        $($designerDots[i]).css("display", "none");
+      }
+    }
   }
+
+  function collision(el1, el2){
+    let r1 = $(el1);
+    let r2 = $(el2);
+
+    let r1x = r1.offset().left;
+    let r1w = r1.width();
+    let r1y = r1.offset().top;
+    let r1h = r1.height();
+
+    let r2x = r2.offset().left;
+    let r2w = r2.width();
+    let r2y = r2.offset().top;
+    let r2h = r2.height();
+
+    if( r1y+r1h < r2y ||
+        r1y > r2y+r2h ||
+        r1x > r2x+r2w ||
+        r1x+r1w < r2x ){
+        return false;
+    }else{
+        return true;
+    }
+
+}//end function
 
   function showTitleData(hovered){
     //TODO: THIS CODE SEEMS SUPER DIRTY
@@ -289,11 +319,11 @@ function initAnimation() {
       $($designerDots[i]).mouseenter(function(){
         if(interviewsActive){
           changeInactiveState(this, $designerDots);
-          playPreviewVideo(this.id);
           showTitleData(this);
-          hideTitleOverlap(this);
+          playPreviewVideo(this.id);
           hideUIElements();
           hideExperienceDots();
+          hideOverlaps();
         }
       });
       $($designerDots[i]).mouseout(function(){
@@ -303,6 +333,7 @@ function initAnimation() {
           $("#dot-headers").addClass("hiddenUI");
           showUIElements();
           showExperienceDots();
+          showDesignerDots();
         }
       });
     }
