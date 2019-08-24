@@ -63,6 +63,7 @@ function loadDoc() {
       this.responseText;
     }
   };
+
 }
 
 /* ----------------- DOTS JS ----------------------------- */
