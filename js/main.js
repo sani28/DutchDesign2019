@@ -315,12 +315,21 @@ function initAnimation() {
     }
   }
 
+  function scrambleSubheader(){
+    $("#hover-subtitle").codex({
+      speed: 65,
+      duration: 400,
+      keep_whitespaces: true
+    });
+  }
+
   function initDesignerDotHover(){
     for (let i=0, len=$designerDots.length; i < len; i++){
       $($designerDots[i]).mouseenter(function(){
         if(interviewsActive){
           changeInactiveState(this, $designerDots);
           showTitleData(this);
+          scrambleSubheader();
           playPreviewVideo(this.id);
           hideUIElements();
           hideExperienceDots();
@@ -346,6 +355,7 @@ function initAnimation() {
         if(!interviewsActive){
           changeInactiveState(this, $experienceDots);
           showTitleData(this);
+          scrambleSubheader();
           changeBGImage(this.id);
           hideUIElements();
           hideDesignerDots();
