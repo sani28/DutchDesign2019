@@ -104,6 +104,11 @@
   width: 100%;
   padding: 6em;
   align-items: start;
+
+  figcaption {
+    font-size: 0.4em;
+  }
+
 }
 
 .section-quote {
@@ -116,7 +121,7 @@
   font-family: maisonMono-Regular;
   font-size: 0.54em;
   font-weight: lighter;
-  line-height: 150%;
+  line-height: 180%;
   text-align: justify;
   color: white;
 }
@@ -236,9 +241,12 @@
 }
 
 .photo-section-2 .section-caption#texels-cap-4 {
-  align-self: start;
-  grid-row: 3;
+  grid-row: 4/6;
   grid-column: 5/10;
+  align-self: start;
+  width: 100%;
+  margin-top: 30%;
+  margin-bottom: 0;
 }
 /*-------------- PHOTO SECITON 3  -------------------- */
 
@@ -269,7 +277,7 @@
 }
 
 .photo-section-3 .section-caption#melkhuis {
-  grid-column: 12/17;
+  grid-column: 11/16;
   grid-row: 2/4;
   width: 100%;
   text-align: justify;
@@ -281,15 +289,17 @@
   grid-row: 2/5;
   width: 100%;
   text-align: justify;
-  align-self: top;
+  align-self: start;
+  padding-top: 1%;
 }
 
+
 .photo-section-3 .section-caption#cant-cap-3 {
-  grid-column: 12/17;
+  grid-column: 11/16;
   grid-row: 2/4;
   width: 100%;
   text-align: justify;
-  align-self: top;
+  align-self: start;
 }
 
 .photo-section-3 .section-caption#farm-cap-3 {
@@ -411,6 +421,10 @@
   align-self: start;
 }
 
+.photo-section-5 .section-caption#cant-cap-2 {
+      grid-column: 10/16;
+      align-self: start;
+}
 
 /*-------------- PHOTO SECITON 6 -------------------- */
 
@@ -418,24 +432,28 @@
   grid-template-rows: repeat(7, 1fr);
   margin-bottom: 3%;
   margin-left: 5%;
+
 }
 .photo-section-6 .layout-item:first-child {
   margin-top: 4%;
   grid-row: 1/4;
   grid-column: 7/11;
   width: 100%;
+  object-fit: contain;
+
 }
 .photo-section-6 .layout-item:nth-child(2) {
   grid-row: 2/6;
   grid-column: 11/15;
   width: 100%;
-  height: 80%;
+  object-fit: contain;
 }
 
 .photo-section-6 .layout-item:nth-child(3) {
   grid-row: 4/7;
   grid-column: 5/11;
   width: 100%;
+  object-fit: contain;
 }
 
 .photo-section-6 #roma-cap-2 {
@@ -469,7 +487,7 @@
 }
 
 .photo-section-6 .section-caption#felting-2 {
-  width: 90%;
+  width: 100%;
   grid-row: 5/7;
   grid-column: 11/15;
   align-self: end;
@@ -577,7 +595,7 @@
 .photo-section-7 .section-caption#soil-cap-3 {
   align-self: end;
   text-align: justify;
-  grid-row: 2/8;
+  grid-column: 1/8;
 }
 
 .photo-section-7 #farm-cap-4 {
@@ -591,11 +609,17 @@
   margin-top: -2em;
   margin-bottom: 30%;
 }
+
+.photo-section-8 figcaption {
+    bottom: -20px;
+    align-self: end;
+}
+
 .photo-section-8 .section-caption#melk-cap-2 {
   grid-column: 4/9;
-  grid-row: 1/10;
+  grid-row: 1;
   width: 100%;
-  margin-top: 30%;
+  margin-top: 50%;
   align-self: start;
 }
 
@@ -616,7 +640,6 @@
     margin-bottom: 22%;
 }
 
-
 .photo-section-8 #felting-vid {
     grid-column: 3/8;;
 }
@@ -631,11 +654,10 @@
 }
 
 .photo-section-8 #andrea-cap-2 {
-  grid-row: 2;
-  align-self: start;
-  text-align: justify;
-  grid-column: 4/8;
-  margin-top: -2px;
+  display: grid;
+  grid-column: 4/9;
+  width: 400px;
+  text-align: start;
 }
 
 .photo-section-8 #in-workshop {
@@ -649,7 +671,7 @@
   grid-column: 4/9;
   grid-row: 1/10;
   width: 100%;
-  margin-top: 30%;
+  margin-top: 35%;
   align-self: start;
 }
 
@@ -669,10 +691,6 @@
   line-height: 150%;
 }
 
-.end-caption .section-caption#melkhuis {
-    grid-column: 4/13;
-    grid-row: 1;
-}
 
 html {
   background-color: #222222;
@@ -680,7 +698,7 @@ html {
 
 body {
   color: white;
-  font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   overflow-x: hidden;
 }
 
@@ -760,9 +778,9 @@ a#home:hover {
   display: inline-block;
   right: 2em;
   position: absolute;
-  width: 20px;
-  top: 1em;
-  height: 90%;
+  max-width: 20px;
+  top: 1.5em;
+  min-height: 100%;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
   letter-spacing: 0.6em;
@@ -816,6 +834,10 @@ h1#exp-title{
   font-family: Redaction-Bold;
   line-height: 150%;
   display: block;
+}
+
+.exp-title-twoline#black {
+  font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h3#exp-title-secondary {
