@@ -784,6 +784,7 @@ body .cursor__ball circle {
   line-height: 150%;
   grid-column: 11/15;
   grid-row: 3/9;
+  margin-top: -70px;
   text-align: justify;
 }
 
