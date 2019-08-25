@@ -854,7 +854,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-6 .layout-item:first-child {
-  margin-top: 4%;
+  margin-top: 42%;
   grid-row: 1/4;
   grid-column: 7/11;
   width: 100%;
@@ -901,7 +901,7 @@ body .cursor__ball circle {
   width: 100%;
   grid-row: 5/7;
   grid-column: 11/15;
-  align-self: end;
+  align-self: start;
   font-size: 0.6em;
   text-align: justify;
   line-height: 150%;
@@ -1118,11 +1118,13 @@ body .cursor__ball circle {
   grid-template-rows: repeat(1, 10vh) 1fr;
   height: 5em;
   margin-bottom: 10%;
+  grid-column: 5/14;
+  line-height: 180%;
 }
 
 .end-caption .section-caption {
-  grid-column: 5/15;
-  line-height: 150%;
+  grid-column: 5/14;
+  line-height: 180%;
 }
 
 html {
