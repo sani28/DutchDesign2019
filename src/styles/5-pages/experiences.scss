@@ -176,6 +176,14 @@
 }
 
 
+.photo-section-1 .section-caption#bts-cap-1{
+  grid-row: 1;
+  grid-column: 12/17;
+  align-self: flex-end;
+  text-align: justify;
+}
+
+
 /*-------------- PHOTO SECITON 2 -------------------- */
 
 .photo-section-2 {
@@ -233,6 +241,11 @@
   grid-row: 5/10;
   width: 100%;
   margin:0;
+}
+
+.photo-section-2 .section-caption#bts-cap-2{
+  align-self: start;
+  grid-column: 5/10;
 }
 
 .photo-section-2 .section-caption#soil-cap-1 {
@@ -579,6 +592,19 @@
   margin-top: -8px;
 }
 
+.photo-section-7 #bts-sec7-img2 {
+  height: 100%;
+  width: 100%;
+  grid-column: 1/8;
+  object-fit: contain;
+}
+
+.photo-section-7 #bts-sec7-img3 {
+  grid-row: 2;
+  grid-column: 7/17;
+
+}
+
 .photo-section-7 #farm-7 {
   grid-column: 2/9;
 }
@@ -590,6 +616,12 @@
 .photo-section-7 .section-caption#kiki-end {
   align-self: start;
   grid-row: 3;
+}
+
+.photo-section-7 .section-caption#bti-cap-2 {
+  grid-column: 1/7;
+  align-self: start;
+  width: 98%;
 }
 
 .photo-section-7 .section-caption#soil-cap-3 {
@@ -838,6 +870,10 @@ h1#exp-title{
 
 .exp-title-twoline#black {
   font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.exp-title-twoline#bts {
+  font-size: calc(2.4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h3#exp-title-secondary {

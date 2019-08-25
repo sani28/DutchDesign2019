@@ -5,22 +5,22 @@ $(document).ready(function() {
     duration: 2000
   });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('')";
+  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/bts/bti_banner.jpg')";
 
   const orderedDesignerImages = [
-    document.getElementById("cant-1"),
-    document.getElementById("cant-2"),
-    document.getElementById("cant-3"),
-    document.getElementById("cant-4"),
-    document.getElementById("cant-cap-1"),
-    document.getElementById("cant-cap-2"),
-    document.getElementById("cant-5"),
-    document.getElementById("cant-6"),
-    document.getElementById("cant-cap-3"),
-    document.getElementById("cant-cap-4"),
+    document.getElementById("bti-1"),
+    document.getElementById("bti-2"),
+    document.getElementById("bti-3"),
+    document.getElementById("bti-4"),
+    document.getElementById("bti-5"),
+    document.getElementById("bti-6"),
+    document.getElementById("bti-7"),
+    document.getElementById("bts-sec7-img2"),
+    document.getElementById("bts-sec7-img3"),
+    document.getElementById("bts-cap-1"),
+    document.getElementById("bts-cap-2"),
     document.getElementById("end")
   ];
-
 
   var scrollControl = new ScrollMagic.Controller();
 
