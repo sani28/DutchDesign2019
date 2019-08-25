@@ -715,6 +715,7 @@ body .cursor__ball circle {
   width: 100%;
   text-align: justify;
   align-self: start;
+  margin-top: -1px;
 }
 
 .photo-section-3 .section-caption#farm-cap-3 {
@@ -836,6 +837,9 @@ body .cursor__ball circle {
 .photo-section-5 .section-caption#cant-cap-2 {
   grid-column: 10/16;
   align-self: start;
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
 }
 
 /*-------------- PHOTO SECITON 6 -------------------- */
@@ -1248,6 +1252,10 @@ h1#exp-title {
 
 .exp-title-twoline#bts {
   font-size: calc(2.4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.exp-title-twoline#andrea {
+  font-size: calc(2.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h3#exp-title-secondary {
