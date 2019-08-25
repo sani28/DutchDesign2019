@@ -111,6 +111,7 @@
 }
 .photo-section-8 figure img, .photo-section-7 figure img, .photo-section-6 figure img, .photo-section-5 figure img, .photo-section-4 figure img, .photo-section-3 figure img, .photo-section-2 figure img, .photo-section-1 figure img, .photo-section-8 figure video, .photo-section-7 figure video, .photo-section-6 figure video, .photo-section-5 figure video, .photo-section-4 figure video, .photo-section-3 figure video, .photo-section-2 figure video, .photo-section-1 figure video {
   width: 100%;
+  object-fit: contain;
 }
 .photo-section-8 figcaption, .photo-section-7 figcaption, .photo-section-6 figcaption, .photo-section-5 figcaption, .photo-section-4 figcaption, .photo-section-3 figcaption, .photo-section-2 figcaption, .photo-section-1 figcaption {
   position: absolute;
@@ -164,6 +165,7 @@
 }
 .photo-section-2 .layout-item:first-child img {
   width: 100%;
+  object-fit: contain;
   margin: 0;
 }
 .photo-section-2 .layout-item:nth-child(2) {
@@ -181,6 +183,7 @@
 }
 .photo-section-2 .layout-item:nth-child(2) img {
   width: 100%;
+  object-fit: contain;
   margin: 0;
 }
 .photo-section-2 .layout-item:nth-child(3) {
@@ -242,6 +245,7 @@
 }
 .photo-section-4 .layout-item:first-child img {
   width: 100%;
+  object-fit: contain;
 }
 .photo-section-4 .layout-item:nth-child(2) {
   grid-column: 10/17;
@@ -252,6 +256,7 @@
 .photo-section-4 .layout-item:nth-child(2) img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .photo-section-5 {
@@ -268,6 +273,7 @@
 }
 .photo-section-5 .layout-item:first-child img {
   width: 100%;
+  object-fit: contain;
 }
 .photo-section-5 .layout-item:nth-child(2) {
   grid-column: 10/18;
@@ -277,6 +283,7 @@
 }
 .photo-section-5 .layout-item:nth-child(2) img {
   width: 100%;
+  object-fit: contain;
 }
 .photo-section-5 .layout-item:nth-child(3) {
   grid-column: 12/18;
@@ -341,6 +348,7 @@
 }
 .photo-section-7 .layout-item:nth-child(3) img {
   width: 100%;
+  object-fit: contain;
 }
 .photo-section-7 #fogocaption {
   grid-row: 1;
@@ -363,6 +371,10 @@
 }
 .photo-section-8 .layout-item:nth-child(2) img {
   width: 100%;
+  object-fit: contain;
+}
+.photo-section-8 .section-caption {
+  grid-column: 4/8;
 }
 
 .quote-section {
@@ -494,6 +506,9 @@ body .cursor__ball circle {
   padding: 6em;
   align-items: start;
 }
+.photo-section-8 figcaption, .photo-section-7 figcaption, .photo-section-6 figcaption, .photo-section-6-v2 figcaption, .photo-section-5 figcaption, .photo-section-4 figcaption, .photo-section-4-v2 figcaption, .photo-section-3 figcaption, .photo-section-2 figcaption, .photo-section-1 figcaption, .end-caption figcaption {
+  font-size: 0.4em;
+}
 
 .section-quote {
   font-size: 0.9em;
@@ -505,7 +520,7 @@ body .cursor__ball circle {
   font-family: maisonMono-Regular;
   font-size: 0.54em;
   font-weight: lighter;
-  line-height: 150%;
+  line-height: 180%;
   text-align: justify;
   color: white;
 }
@@ -555,6 +570,13 @@ body .cursor__ball circle {
 }
 
 .photo-section-1 .section-caption#dyes-cap-1 {
+  grid-row: 1;
+  grid-column: 12/17;
+  align-self: flex-end;
+  text-align: justify;
+}
+
+.photo-section-1 .section-caption#bts-cap-1 {
   grid-row: 1;
   grid-column: 12/17;
   align-self: flex-end;
@@ -621,15 +643,23 @@ body .cursor__ball circle {
   margin: 0;
 }
 
+.photo-section-2 .section-caption#bts-cap-2 {
+  align-self: start;
+  grid-column: 5/10;
+}
+
 .photo-section-2 .section-caption#soil-cap-1 {
   align-self: start;
   grid-column: 5/10;
 }
 
 .photo-section-2 .section-caption#texels-cap-4 {
-  align-self: start;
-  grid-row: 3;
+  grid-row: 4/6;
   grid-column: 5/10;
+  align-self: start;
+  width: 100%;
+  margin-top: 30%;
+  margin-bottom: 0;
 }
 
 /*-------------- PHOTO SECITON 3  -------------------- */
@@ -663,7 +693,7 @@ body .cursor__ball circle {
 }
 
 .photo-section-3 .section-caption#melkhuis {
-  grid-column: 12/17;
+  grid-column: 11/16;
   grid-row: 2/4;
   width: 100%;
   text-align: justify;
@@ -675,15 +705,17 @@ body .cursor__ball circle {
   grid-row: 2/5;
   width: 100%;
   text-align: justify;
-  align-self: top;
+  align-self: start;
+  padding-top: 1%;
 }
 
 .photo-section-3 .section-caption#cant-cap-3 {
-  grid-column: 12/17;
+  grid-column: 11/16;
   grid-row: 2/4;
   width: 100%;
   text-align: justify;
-  align-self: top;
+  align-self: start;
+  margin-top: -1px;
 }
 
 .photo-section-3 .section-caption#farm-cap-3 {
@@ -696,6 +728,10 @@ body .cursor__ball circle {
 
 .photo-section-4 {
   margin-bottom: 13%;
+}
+
+.photo-section-4 .section-caption#texels-cap {
+  margin-top: -35px;
 }
 
 .photo-section-4 .layout-item:first-child {
@@ -753,6 +789,7 @@ body .cursor__ball circle {
   line-height: 150%;
   grid-column: 11/15;
   grid-row: 3/9;
+  margin-top: -70px;
   text-align: justify;
 }
 
@@ -801,6 +838,14 @@ body .cursor__ball circle {
   align-self: start;
 }
 
+.photo-section-5 .section-caption#cant-cap-2 {
+  grid-column: 10/16;
+  align-self: start;
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
+}
+
 /*-------------- PHOTO SECITON 6 -------------------- */
 .photo-section-6 {
   grid-template-rows: repeat(7, 1fr);
@@ -809,23 +854,25 @@ body .cursor__ball circle {
 }
 
 .photo-section-6 .layout-item:first-child {
-  margin-top: 4%;
+  margin-top: 42%;
   grid-row: 1/4;
   grid-column: 7/11;
   width: 100%;
+  object-fit: contain;
 }
 
 .photo-section-6 .layout-item:nth-child(2) {
   grid-row: 2/6;
   grid-column: 11/15;
   width: 100%;
-  height: 80%;
+  object-fit: contain;
 }
 
 .photo-section-6 .layout-item:nth-child(3) {
   grid-row: 4/7;
   grid-column: 5/11;
   width: 100%;
+  object-fit: contain;
 }
 
 .photo-section-6 #roma-cap-2 {
@@ -851,10 +898,10 @@ body .cursor__ball circle {
 }
 
 .photo-section-6 .section-caption#felting-2 {
-  width: 90%;
+  width: 100%;
   grid-row: 5/7;
   grid-column: 11/15;
-  align-self: end;
+  align-self: start;
   font-size: 0.6em;
   text-align: justify;
   line-height: 150%;
@@ -930,7 +977,9 @@ body .cursor__ball circle {
 
 .photo-section-7 .layout-item:nth-child(2) {
   grid-row: 2;
-  grid-column: 1/8;
+  grid-column: 3/8;
+  object-fit: cover;
+  width: 100%;
 }
 
 .photo-section-7 .layout-item:nth-child(3) {
@@ -946,6 +995,18 @@ body .cursor__ball circle {
   margin-top: -8px;
 }
 
+.photo-section-7 #bts-sec7-img2 {
+  height: 100%;
+  width: 100%;
+  grid-column: 1/8;
+  object-fit: contain;
+}
+
+.photo-section-7 #bts-sec7-img3 {
+  grid-row: 2;
+  grid-column: 7/17;
+}
+
 .photo-section-7 #farm-7 {
   grid-column: 2/9;
 }
@@ -959,10 +1020,16 @@ body .cursor__ball circle {
   grid-row: 3;
 }
 
+.photo-section-7 .section-caption#bti-cap-2 {
+  grid-column: 1/7;
+  align-self: start;
+  width: 98%;
+}
+
 .photo-section-7 .section-caption#soil-cap-3 {
   align-self: end;
   text-align: justify;
-  grid-row: 2/8;
+  grid-column: 1/8;
 }
 
 .photo-section-7 #farm-cap-4 {
@@ -977,11 +1044,16 @@ body .cursor__ball circle {
   margin-bottom: 30%;
 }
 
+.photo-section-8 figcaption {
+  bottom: -20px;
+  align-self: end;
+}
+
 .photo-section-8 .section-caption#melk-cap-2 {
   grid-column: 4/9;
-  grid-row: 1/10;
+  grid-row: 1;
   width: 100%;
-  margin-top: 30%;
+  margin-top: 50%;
   align-self: start;
 }
 
@@ -1016,11 +1088,10 @@ body .cursor__ball circle {
 }
 
 .photo-section-8 #andrea-cap-2 {
-  grid-row: 2;
-  align-self: start;
-  text-align: justify;
-  grid-column: 4/8;
-  margin-top: -2px;
+  display: grid;
+  grid-column: 4/9;
+  width: 400px;
+  text-align: start;
 }
 
 .photo-section-8 #in-workshop {
@@ -1034,7 +1105,7 @@ body .cursor__ball circle {
   grid-column: 4/9;
   grid-row: 1/10;
   width: 100%;
-  margin-top: 30%;
+  margin-top: 35%;
   align-self: start;
 }
 
@@ -1047,16 +1118,13 @@ body .cursor__ball circle {
   grid-template-rows: repeat(1, 10vh) 1fr;
   height: 5em;
   margin-bottom: 10%;
+  grid-column: 5/14;
+  line-height: 180%;
 }
 
 .end-caption .section-caption {
-  grid-column: 5/15;
-  line-height: 150%;
-}
-
-.end-caption .section-caption#melkhuis {
-  grid-column: 4/13;
-  grid-row: 1;
+  grid-column: 5/14;
+  line-height: 180%;
 }
 
 html {
@@ -1065,7 +1133,7 @@ html {
 
 body {
   color: white;
-  font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   overflow-x: hidden;
 }
 
@@ -1128,9 +1196,9 @@ a#home:hover {
   display: inline-block;
   right: 2em;
   position: absolute;
-  width: 20px;
-  top: 1em;
-  height: 90%;
+  max-width: 20px;
+  top: 1.5em;
+  min-height: 100%;
   font-family: maisonMono-Regular;
   font-size: 0.5em;
   letter-spacing: 0.6em;
@@ -1184,6 +1252,18 @@ h1#exp-title {
   font-family: Redaction-Bold;
   line-height: 150%;
   display: block;
+}
+
+.exp-title-twoline#black {
+  font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.exp-title-twoline#bts {
+  font-size: calc(2.4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.exp-title-twoline#andrea {
+  font-size: calc(2.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h3#exp-title-secondary {
