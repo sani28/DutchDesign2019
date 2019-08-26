@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="../src/styles/5-pages/whatisdesign.css">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
   <script type="text/javascript" src="../js/wid.js"></script>
 </head>
 
@@ -25,19 +26,19 @@
     <nav class="wid-nav" id="nav-overlay">
       <h3>Jump To </h3>
       <ul class="main-nav-list" id="vid-markers">
-        <li class="vid-marker" id="pepe" data-time="5">Pepe Heykoop</li></a>
-        <li class="vid-marker" id="ineke" data-time="9">Ineke Hans</li></a>
-        <li class="vid-marker" id="matthews" data-time="">Studio Matthews</li></a>
+        <li data-time="5" class="vid-marker" id="pepe">Pepe Heykoop</li>
+        <li class="vid-marker" id="ineke" data-time="9">Ineke Hans</li>
+        <li class="vid-marker" id="matthews" data-time="">Studio Matthews</li>
         <li class="vid-marker" id="futures" data-time="">Intentional Futures</li>
-        <li class="vid-marker" id="truly" data-time="">Studio Truly Truly</li></a>
-        <li class="vid-marker" id="lava" data-time="">LAVA</li></a>
-        <li class="vid-marker" id="momkai" data-time="">Momkai</li></a>
-        <li class="vid-marker" id="main" data-time="">Main Studio</li></a>
-        <li class="vid-marker" id="corunum" data-time="">Cor Unum</li></a>
-        <li class="vid-marker" id="floris" data-time="">Floris Hovers</li></a>
-        <li class="vid-marker" id="valentin" data-time="">Valentin Loellmann</li></a>
-        <li class="vid-marker" id="jurgen" data-time="">Studio Makkink & Bey</li></a>
-        <li class="vid-marker" id="nienke" data-time="">Nienke Hoogvliet</li></a>
+        <li class="vid-marker" id="truly" data-time="">Studio Truly Truly</li>
+        <li class="vid-marker" id="lava" data-time="">LAVA</li>
+        <li class="vid-marker" id="momkai" data-time="">Momkai</li>
+        <li class="vid-marker" id="main" data-time="">Main Studio</li>
+        <li class="vid-marker" id="corunum" data-time="">Cor Unum</li>
+        <li class="vid-marker" id="floris" data-time="">Floris Hovers</li>
+        <li class="vid-marker" id="valentin" data-time="">Valentin Loellmann</li>
+        <li class="vid-marker" id="jurgen" data-time="">Studio Makkink & Bey</li>
+        <li class="vid-marker" id="nienke" data-time="">Nienke Hoogvliet</li>
       </ul>
     </nav>
     <div class="video-controls" id="vid-controls">
@@ -61,7 +62,6 @@
     <a href="index.html" id="home"><span class="home-dot"></span></a>
     <p id="home-text">BACK HOME</p>
   </div>
-
 </body>
 
 </html>

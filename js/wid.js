@@ -59,6 +59,137 @@ $(document).ready(function() {
   // calling the function:
   instantTooltips('title', 20);
 
+  // ------------------- "CLIPS" MOUSECLICK EVENTS  ---------------------
+  //1 - Text to purple 2 - Circle Nav Appears 3 - Clip link set to active class 4- remove click functionality on clips
+  $('#showClips').click(function(e) {
+    e.preventDefault();
+    $('.circle-nav-container').toggleClass("hidden unhidden");
+    $('body').css('background-image', 'none');
+    $('#wid-blurb, nav a').css('color', 'purple');
+    $(this).addClass('active').css('border-bottom', '2px solid purple');
+    $('nav a#showClips').removeAttr("href").off("click");
+  });
+
+//////////////////VIDEO BEHAVIOUR ///////////////////////
+
+  var vidMouseTimer;
+  var widVid = document.getElementById("wid-video");
+  var vidFig = document.getElementById("vid-container");
+  var blurb = document.getElementById("blurb");
+  var timeStamps = document.querySelectorAll(".vid-marker");
+  var hideUI = ["#blurb", "#nav-overlay"];
+  var fullscreen = document.getElementById("fs");
+
+  widVid.addEventListener('timeupdate', function() {
+    let playbackPos = (widVid.currentTime / widVid.duration);
+    playback.style.width = (playbackPos * 100) + "%";
+    onTrackedVideoFrame(this.currentTime, this.duration);
+  });
+
+  progress.addEventListener('click', function(e) {
+    var pos = (e.pageX - progress.offsetLeft) / this.offsetWidth;
+    widVid.currentTime = pos * vid.duration;
+  });
+
+  function togglePlayPause() {
+    if (widVid.paused) {
+      playPause.className = 'pause';
+      widVid.play();
+      overlay.style.display = "none";
+    } else {
+      playPause.className = 'play';
+      widVid.pause();
+      overlay.style.display = "";
+    }
+  }
+
+  function onTrackedVideoFrame(currentTime, duration) {
+    let curr = Math.floor(currentTime);
+    let dur = Math.floor(duration);
+    $("#currentTime").text(formatTime(curr));
+    $("#vidDuration").text(formatTime(dur));
+  }
+
+  function formatTime(s) {
+    return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s
+  }
+
+  function toggleFullScreen() {
+    if (vidFig.requestFullscreen) {
+      vidFig.requestFullscreen();
+    } else if (vidFig.mozRequestFullScreen) {
+      vidFig.mozRequestFullScreen();
+    } else if (vidFig.webkitRequestFullscreen) {
+      vidFig.webkitRequestFullscreen();
+    } else if (vidFig.msRequestFullscreen) {
+      vidFig.msRequestFullscreen();
+    }
+    if (window.innerHeight == screen.height) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullscreen) {
+        document.mozCancelFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+  }
+
+  function setVideoTimestamps() {
+    for (let i = 0, len = timeStamps.length; i < len; i++) {
+      $(timeStamps[i]).click(function(){
+        widVid.currentTime = $(this).data("time");
+        widVid.play();
+      })
+    }
+  }
+
+  widVid.addEventListener("playing", function(){;
+    $("#vid-container").addClass("pause-cursor");
+    $("#vid-container").removeClass("play-cursor");
+  });
+
+  widVid.addEventListener("pause", function(){
+    $("#vid-container").addClass("play-cursor");
+    $("#vid-container").removeClass("pause-cursor");
+  });
+
+  function togglePlayPause(){
+    if(widVid.paused){
+      $("#blurb").css("display", "none");
+      $("#nav-overlay").css("display", "none");
+      widVid.play();
+    }
+    else {
+      widVid.pause();
+      $("#nav-overlay").css("display", "grid");
+    }
+  }
+
+  $("#wid-video").mousemove(function() {
+      if (vidMouseTimer) {
+          clearTimeout(vidMouseTimer);
+          vidMouseTimer = 0;
+      }
+      $("#vid-container").removeClass("hoveraction");
+      vidMousetimer = setTimeout(function() {
+          $("#vid-container").addClass("hoveraction");
+      }, 4000)
+  });
+
+  $(document).on("click", "#wid-video, #play-pause, #blurb", function() {
+    togglePlayPause();
+  });
+
+  fullscreen.addEventListener('click', function() {
+    toggleFullScreen();
+  });
+
+  setVideoTimestamps();
+
+
   const mapNumber = (X, A, B, C, D) => (X - A) * (D - C) / (B - A) + C;
   // from http://www.quirksmode.org/js/events_properties.html#position
   const getMousePos = (e) => {
@@ -184,84 +315,5 @@ $(document).ready(function() {
   }
 
   [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(sppan => new HoverImgFx1(link));
-
-  // ------------------- "CLIPS" MOUSECLICK EVENTS  ---------------------- //
-
-  //1 - Text to purple 2 - Circle Nav Appears 3 - Clip link set to active class 4- remove click functionality on clips
-  $('#showClips').click(function(e) {
-    e.preventDefault();
-    $('.circle-nav-container').toggleClass("hidden unhidden");
-    $('body').css('background-image', 'none');
-    $('#wid-blurb, nav a').css('color', 'purple');
-    $(this).addClass('active').css('border-bottom', '2px solid purple');
-    $('nav a#showClips').removeAttr("href").off("click");
-  });
-
-
-//////////////////VIDEO BEHAVIOUR ///////////////////////
-
-  var vidMouseTimer;
-  var widVid = document.getElementById("wid-video");
-  var blurb = document.getElementById("blurb");
-  var timeStamps = document.querySelectorAll(".vid-marker");
-  var hideUI = ["#blurb", "#nav-overlay"];
-
-  function skipVideo() {
-    for (let i = 0, len = timeStamps.length; i < len; i++) {
-      $(timeStamps[i]).click(function(){
-        widVid.currentTime = $(this).data("time");
-        widVid.play();
-      })
-    }
-  }
-
-  function initPage(){
-    skipVideo();
-  }
-
-  widVid.addEventListener("playing", function(){;
-    // $("#wid-video").addClass("pause-cursor");
-    // $("#wid-video").removeClass("play-cursor");
-    $("#vid-container").addClass("pause-cursor");
-    $("#vid-container").removeClass("play-cursor");
-  });
-
-  widVid.addEventListener("pause", function(){
-    // $("#wid-video").removeClass("pause-cursor");
-    // $("#wid-video").addClass("play-cursor");
-    $("#vid-container").addClass("play-cursor");
-    $("#vid-container").removeClass("pause-cursor");
-  });
-
-  function togglePlayPause(){
-    if(widVid.paused){
-      widVid.play();
-      $("#blurb").css("display", "none");
-      $("#nav-overlay").css("display", "none");
-    }
-    else {
-      widVid.pause();
-      $("#nav-overlay").css("display", "grid");
-    }
-  }
-
-
-  $("#wid-video").mousemove(function() {
-      if (vidMouseTimer) {
-          clearTimeout(vidMouseTimer);
-          vidMouseTimer = 0;
-      }
-      $("#vid-container").removeClass("hoveraction");
-      vidMousetimer = setTimeout(function() {
-          $("#vid-container").addClass("hoveraction");
-      }, 4000)
-  });
-
-  $(document).on("click", "#blurb, #vid-container", function() {
-    console.log("click registered");
-    togglePlayPause();
-  });
-
-  initPage();
 });
 // -------------------  "FULL FILM" MOUSECLICK EVENTS  ---------------------- //

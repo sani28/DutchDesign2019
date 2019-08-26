@@ -89,52 +89,6 @@ $(document).ready(function() {
     totalHeight = document.body.clientHeight;
   }
 
-  function togglePlayPause() {
-    if (vid.paused) {
-      playPause.className = 'pause';
-      vid.play();
-      overlay.style.display = "none";
-    } else {
-      playPause.className = 'play';
-      vid.pause();
-      overlay.style.display = "";
-    }
-  }
-
-  function onTrackedVideoFrame(currentTime, duration) {
-    let curr = Math.floor(currentTime);
-    let dur = Math.floor(duration);
-    $("#currentTime").text(formatTime(curr));
-    $("#vidDuration").text(formatTime(dur));
-  }
-
-  function formatTime(s) {
-    return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s
-  }
-
-  function toggleFullScreen() {
-    if (vidFig.requestFullscreen) {
-      vidFig.requestFullscreen();
-    } else if (vidFig.mozRequestFullScreen) {
-      vidFig.mozRequestFullScreen();
-    } else if (vidFig.webkitRequestFullscreen) {
-      vidFig.webkitRequestFullscreen();
-    } else if (vidFig.msRequestFullscreen) {
-      vidFig.msRequestFullscreen();
-    }
-    if (window.innerHeight == screen.height) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullscreen) {
-        document.mozCancelFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
-    }
-  }
-
 
   //REPOSITION FOOTER
 
@@ -209,6 +163,52 @@ $(document).ready(function() {
 
   //////////// VIDEO PLAYER BEHAVIOUR ////////
 
+  function togglePlayPause() {
+    if (vid.paused) {
+      playPause.className = 'pause';
+      vid.play();
+      overlay.style.display = "none";
+    } else {
+      playPause.className = 'play';
+      vid.pause();
+      overlay.style.display = "";
+    }
+  }
+
+  function onTrackedVideoFrame(currentTime, duration) {
+    let curr = Math.floor(currentTime);
+    let dur = Math.floor(duration);
+    $("#currentTime").text(formatTime(curr));
+    $("#vidDuration").text(formatTime(dur));
+  }
+
+  function formatTime(s) {
+    return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s
+  }
+
+  function toggleFullScreen() {
+    if (vidFig.requestFullscreen) {
+      vidFig.requestFullscreen();
+    } else if (vidFig.mozRequestFullScreen) {
+      vidFig.mozRequestFullScreen();
+    } else if (vidFig.webkitRequestFullscreen) {
+      vidFig.webkitRequestFullscreen();
+    } else if (vidFig.msRequestFullscreen) {
+      vidFig.msRequestFullscreen();
+    }
+    if (window.innerHeight == screen.height) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullscreen) {
+        document.mozCancelFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+  }
+
   vid.addEventListener('timeupdate', function() {
     let playbackPos = (vid.currentTime / vid.duration);
     playback.style.width = (playbackPos * 100) + "%";
@@ -227,7 +227,6 @@ $(document).ready(function() {
   $(document).on("click touchend", "#designer-overlay, #designer-vid, #play-pause", function() {
     togglePlayPause();
   });
-
 
   vid.addEventListener("playing", function() {
     $("#video-fig").removeClass("play-cursor");
