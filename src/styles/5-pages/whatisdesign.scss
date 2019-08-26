@@ -126,6 +126,7 @@ a#current {
     background: rgb(15,15,5);
     width: 100%;
     height: 6vh;
+    opacity: 100;
     cursor: pointer;
 
     .progress {
@@ -237,6 +238,10 @@ a#current {
 
 .pause-cursor.hoveraction{
   cursor: none;
+}
+
+#vid-container:fullscreen .video-controls.hoveraction {
+  opacity: 0;
 }
 
 #nav-overlay {

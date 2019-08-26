@@ -141,6 +141,8 @@ $(document).ready(function() {
     for (let i = 0, len = timeStamps.length; i < len; i++) {
       $(timeStamps[i]).click(function(){
         widVid.currentTime = $(this).data("time");
+        //TODO: the below could be removed depending on how we implement
+        $("#nav-overlay").css("display", "none");
         widVid.play();
       })
     }
@@ -148,12 +150,16 @@ $(document).ready(function() {
 
   widVid.addEventListener("playing", function(){;
     $("#vid-container").addClass("pause-cursor");
+    $("#blurb").addClass("pause-cursor");
     $("#vid-container").removeClass("play-cursor");
+    $("#blurb").removeClass("play-cursor");
   });
 
   widVid.addEventListener("pause", function(){
     $("#vid-container").addClass("play-cursor");
+    $("#blurb").addClass("play-cursor");
     $("#vid-container").removeClass("pause-cursor");
+    $("#blurb").removeClass("pause-cursor");
   });
 
   function togglePlayPause(){
@@ -173,8 +179,10 @@ $(document).ready(function() {
           clearTimeout(vidMouseTimer);
           vidMouseTimer = 0;
       }
+      $('#vid-controls').removeClass("hoveraction");
       $("#vid-container").removeClass("hoveraction");
       vidMousetimer = setTimeout(function() {
+          $('#vid-controls').addClass("hoveraction");
           $("#vid-container").addClass("hoveraction");
       }, 4000)
   });
@@ -188,7 +196,6 @@ $(document).ready(function() {
   });
 
   setVideoTimestamps();
-
 
   const mapNumber = (X, A, B, C, D) => (X - A) * (D - C) / (B - A) + C;
   // from http://www.quirksmode.org/js/events_properties.html#position
