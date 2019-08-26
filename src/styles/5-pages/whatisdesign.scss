@@ -73,6 +73,9 @@ a#current {
     -o-transition: all 0.15s ease-in;
     transition: all 0.15s ease-in;
   }
+  .home-dot:hover{
+    background-color: purple;
+  }
   p {
     display: none;
     font-family: hyperMarket;
@@ -81,43 +84,21 @@ a#current {
     color: white;
   }
 }
-#back-btn.purple{
-  .home-dot{
-    background-color: $secondary-purp;
-  }
-  p {
-    color: $secondary-purp;
-  }
-}
-
-#back-btn.purple.white{
-  .home-dot{
-    background-color: white;
-  }
-  p{
-    color: white;
-  }
-}
 
 #back-btn:hover #home-text {
   display: inline-block;
   float: right;
+  color: purple;
 }
 
 .home-dot {
   height: 35px;
   width: 35px;
-  background-color: white;
   border-radius: 50%;
   display: inline-block;
 }
-.home-dot {
-  height: 35px;
-  width: 35px;
-  background-color:white;
-  border-radius: 50%;
-  display: inline-block;
-}
+
+
 .blurb-container{
   grid-row: 4/-5;
   grid-column: 3/22;
@@ -127,7 +108,6 @@ a#current {
   color: white;
   margin: auto 0;
   #blurb-body {
-    font-family: redaction;
     font-size: 3vw;
     margin: 2vh 10%;
     text-align: left;
@@ -138,26 +118,41 @@ a#current {
     margin: auto 0;
     font-family: redaction;
   }
+  #play-prompt{
+    font-family: redaction;
+    text-transform: uppercase;
+  }
 }
 
+
+.pause-cursor {
+  cursor: url("../../../assets/images/pause.png") 15 20, auto;
+}
+
+.play-cursor {
+  cursor: url("../../../assets/images/play.png") 20 20, auto;
+}
 
 #nav-overlay {
   grid-row: -3/-1;
   grid-column: 2/-2;
   display: grid;
   grid-template-columns: repeat(19, $width-unit);
+  grid-template-rows: repeat(5, 1fr);
   align-content: start;
   justify-content: start;
   color: white;
   text-transform: uppercase;
   h3{
     grid-column: 1/3;
+    grid-row: 5;
     padding: 0;
     margin: 0;
     font-family: hyperMarket;
   }
   #vid-markers{
     grid-column: 4;
+    grid-row: 5;
     display: grid;
     grid-template-columns: repeat(5, ($width-unit * 3));
     grid-template-rows: repeat(3, 1fr);
@@ -165,6 +160,7 @@ a#current {
     list-style: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
     .vid-marker{
       font-family: hyperMarket;
       font-size: 0.8em;

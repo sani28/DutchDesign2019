@@ -460,6 +460,9 @@ a#current {
   -o-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
 }
+#back-btn .home-dot:hover {
+  background-color: purple;
+}
 #back-btn p {
   display: none;
   font-family: hyperMarket;
@@ -468,37 +471,15 @@ a#current {
   color: white;
 }
 
-#back-btn.purple .home-dot {
-  background-color: #7D246B;
-}
-#back-btn.purple p {
-  color: #7D246B;
-}
-
-#back-btn.purple.white .home-dot {
-  background-color: white;
-}
-#back-btn.purple.white p {
-  color: white;
-}
-
 #back-btn:hover #home-text {
   display: inline-block;
   float: right;
+  color: purple;
 }
 
 .home-dot {
   height: 35px;
   width: 35px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.home-dot {
-  height: 35px;
-  width: 35px;
-  background-color: white;
   border-radius: 50%;
   display: inline-block;
 }
@@ -513,7 +494,6 @@ a#current {
   margin: auto 0;
 }
 .blurb-container #blurb-body {
-  font-family: redaction;
   font-size: 3vw;
   margin: 2vh 10%;
   text-align: left;
@@ -524,12 +504,25 @@ a#current {
   margin: auto 0;
   font-family: redaction;
 }
+.blurb-container #play-prompt {
+  font-family: redaction;
+  text-transform: uppercase;
+}
+
+.pause-cursor {
+  cursor: url("../../../assets/images/pause.png") 15 20, auto;
+}
+
+.play-cursor {
+  cursor: url("../../../assets/images/play.png") 20 20, auto;
+}
 
 #nav-overlay {
   grid-row: -3/-1;
   grid-column: 2/-2;
   display: grid;
   grid-template-columns: repeat(19, 4.54vw);
+  grid-template-rows: repeat(5, 1fr);
   align-content: start;
   justify-content: start;
   color: white;
@@ -537,12 +530,14 @@ a#current {
 }
 #nav-overlay h3 {
   grid-column: 1/3;
+  grid-row: 5;
   padding: 0;
   margin: 0;
   font-family: hyperMarket;
 }
 #nav-overlay #vid-markers {
   grid-column: 4;
+  grid-row: 5;
   display: grid;
   grid-template-columns: repeat(5, 13.62vw);
   grid-template-rows: repeat(3, 1fr);
@@ -550,6 +545,7 @@ a#current {
   list-style: none;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 #nav-overlay #vid-markers .vid-marker {
   font-family: hyperMarket;

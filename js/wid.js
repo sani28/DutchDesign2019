@@ -198,8 +198,10 @@ $(document).ready(function() {
   });
 
 
-  var widVid = document.getElementById("wid-video");;
+  var widVid = document.getElementById("wid-video");
+  var blurb = document.getElementById("blurb");
   var timeStamps = document.querySelectorAll(".vid-marker");
+  var hideUI = ["#blurb", "#nav-overlay"];
 
   function skipVideo() {
     for (let i = 0, len = timeStamps.length; i < len; i++) {
@@ -209,6 +211,42 @@ $(document).ready(function() {
       })
     }
   }
-  skipVideo();
+
+  function initPage(){
+    skipVideo();
+  }
+
+  widVid.addEventListener("playing", function(){;
+    $("#wid-video").addClass("pause-cursor");
+    $("#wid-video").removeClass("play-cursor")
+    $("#vid-container").addClass("pause-cursor");
+    $("#vid-container").removeClass("play-cursor");
+  });
+
+  widVid.addEventListener("pause", function(){
+    $("#wid-video").removeClass("pause-cursor");
+    $("#wid-video").addClass("play-cursor");
+    $("#vid-container").addClass("play-cursor");
+    $("#vid-container").removeClass("pause-cursor");
+  });
+
+  function togglePlayPause(){
+    if(widVid.paused){
+      widVid.play();
+      $("#blurb").css("display", "flex");
+      $("#nav-overlay").css("display", "grid");
+    }
+    else {
+      widVid.pause();
+      $("#blurb").css("display", "none");
+      $("#nav-overlay").css("display", "none");
+    }
+  }
+
+  $(document).on("click touchend", "#blurb, #wid-video", function() {
+    togglePlayPause();
+  });
+
+  initPage();
 });
 // -------------------  "FULL FILM" MOUSECLICK EVENTS  ---------------------- //
