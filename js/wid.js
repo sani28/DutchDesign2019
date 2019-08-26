@@ -198,6 +198,9 @@ $(document).ready(function() {
   });
 
 
+//////////////////VIDEO BEHAVIOUR ///////////////////////
+
+  var vidMouseTimer;
   var widVid = document.getElementById("wid-video");
   var blurb = document.getElementById("blurb");
   var timeStamps = document.querySelectorAll(".vid-marker");
@@ -238,10 +241,21 @@ $(document).ready(function() {
     }
     else {
       widVid.pause();
-      $("#blurb").css("display", "flex");
       $("#nav-overlay").css("display", "grid");
     }
   }
+
+
+  $("#wid-video").mousemove(function() {
+      if (vidMouseTimer) {
+          clearTimeout(vidMouseTimer);
+          vidMouseTimer = 0;
+      }
+      $("#vid-container").removeClass("hoveraction");
+      vidMousetimer = setTimeout(function() {
+          $("#vid-container").addClass("hoveraction");
+      }, 4000)
+  });
 
   $(document).on("click", "#blurb, #vid-container", function() {
     console.log("click registered");
