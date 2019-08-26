@@ -217,15 +217,15 @@ $(document).ready(function() {
   }
 
   widVid.addEventListener("playing", function(){;
-    $("#wid-video").addClass("pause-cursor");
-    $("#wid-video").removeClass("play-cursor")
+    // $("#wid-video").addClass("pause-cursor");
+    // $("#wid-video").removeClass("play-cursor");
     $("#vid-container").addClass("pause-cursor");
     $("#vid-container").removeClass("play-cursor");
   });
 
   widVid.addEventListener("pause", function(){
-    $("#wid-video").removeClass("pause-cursor");
-    $("#wid-video").addClass("play-cursor");
+    // $("#wid-video").removeClass("pause-cursor");
+    // $("#wid-video").addClass("play-cursor");
     $("#vid-container").addClass("play-cursor");
     $("#vid-container").removeClass("pause-cursor");
   });
@@ -233,17 +233,18 @@ $(document).ready(function() {
   function togglePlayPause(){
     if(widVid.paused){
       widVid.play();
-      $("#blurb").css("display", "flex");
-      $("#nav-overlay").css("display", "grid");
-    }
-    else {
-      widVid.pause();
       $("#blurb").css("display", "none");
       $("#nav-overlay").css("display", "none");
     }
+    else {
+      widVid.pause();
+      $("#blurb").css("display", "flex");
+      $("#nav-overlay").css("display", "grid");
+    }
   }
 
-  $(document).on("click touchend", "#blurb, #wid-video", function() {
+  $(document).on("click", "#blurb, #vid-container", function() {
+    console.log("click registered");
     togglePlayPause();
   });
 
