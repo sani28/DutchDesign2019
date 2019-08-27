@@ -85,31 +85,33 @@ function initAnimation() {
 
   function initLandingPage(){
     setState();
+    initAnimation();
+    
+    showHideBlurb();
+    // --------------------------//
     toggleDotState();
     highlightDotsOnNavHover();
     initDesignerDotHover();
     initFieldNoteDotHover();
-    changeMenuItems();
-    initAnimation();
-    $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
     sessionStorage.visited = "true";
-    sessionStorage.digestif = "designer";
   }
-
 
   //sessionStorage for last seen nav, and active states
   function setState(){
     let state = sessionStorage.getItem("digestif");
     console.log(state);
-    if (state == "designer") {
+    if (state == "designer"){
       interviewsActive = true;
-    } else if (state == "fieldnotes") {
+    } else if (state == "fieldnotes"){
       interviewsActive = false;
-    } else {
-      return;
+    } else if (state == null){
+      interviewsActive = true;
     }
   }
 
+  function showHideBlurb(){
+    $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
+  }
   //state dependant, changes dot sizes
   function toggleDotSize(){
     if(interviewsActive){
@@ -132,11 +134,9 @@ function initAnimation() {
   //state dependant, changes menu list
   function changeMenuItems(){
     if(interviewsActive){
-      switchToInterviews();
       $("#designer-list").removeClass("hiddenUI");
       $("#fnotes-list").addClass("hiddenUI");
     } else {
-      switchToFieldnotes();
       $("#fnotes-list").removeClass("hiddenUI");
       $("#designer-list").addClass("hiddenUI");
     }
@@ -194,42 +194,33 @@ function initAnimation() {
       });
     }
   }
-  function switchToFieldnotes(){
-    $("#toggle-field").addClass("active");
-    $("#toggle-int").removeClass("active");
-  }
 
-  function switchToInterviews(){
-    $("#toggle-int").addClass("active");
-    $("#toggle-field").removeClass("active");
+  function changeActiveSwitch(){
+    if(interviewsActive){
+      $("#toggle-int").addClass("active");
+      $("#toggle-field").removeClass("active");
+    } else{
+      $("#toggle-field").addClass("active");
+      $("#toggle-int").removeClass("active");
+    }
   }
 
   // behaviour on click for field notes + designer switch
   function toggleDotState(){
     fieldToggle.click(function(){
-      if(!interviewsActive){
-        return;
-      }
-      else{
         interviewsActive = false;
         sessionStorage.digestif = "fieldnotes";
-        switchToFieldnotes();
+        changeActiveSwitch();
         toggleDotSize();
         changeMenuItems();
         preloadFieldNotesImages();
-      }
     });
     intToggle.click(function(){
-      if(interviewsActive){
-        return;
-      }
-      else{
         interviewsActive = true;
         sessionStorage.digestif = "designer";
-        switchToInterviews();
+        changeActiveSwitch();
         toggleDotSize();
         changeMenuItems();
-      }
     });
   }
 
@@ -436,9 +427,5 @@ function initAnimation() {
         observer.triggerLoad($fieldNotesBGs[i]);
     }
   }
-
-
-
-
 
 }); //DOCREADY DON'T DELETE
