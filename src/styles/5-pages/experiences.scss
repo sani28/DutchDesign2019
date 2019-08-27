@@ -753,7 +753,7 @@ a#home:hover {
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 1;
+  z-index: 99;
   .home-dot {
     background-color: white;
     -webkit-transition: all 0.15s ease-in;
@@ -957,6 +957,13 @@ transform: scale(0.8);}
   }
 }
 @media screen and (max-width: 800px)  {
+
+  #back-btn {
+    transform: scale(0.7);
+    top: 0.5em;
+    left: 0.5em;
+  }
+  
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption{
     display: none;
   }
