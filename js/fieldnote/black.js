@@ -6,6 +6,13 @@ $(document).ready(function() {
     duration: 2000
   });
 
+  $('.mobile-slider').slick({
+    arrow: false,
+    dots: true,
+    lazyload: true,
+    infinite: true,
+   });
+
   document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/black/bb_banner.jpg')";
 
   const orderedDesignerImages = [
