@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+  $('.mobile-slider').slick({
+    arrow: false,
+    dots: true,
+    lazyload: true,
+    infinite: true,
+   });
+
   //scramble text for field note geo info
   $(".geo-info").codex({
     speed: 30,
@@ -35,4 +42,6 @@ $(document).ready(function(){
     .setClassToggle(orderedDesignerImages[i], "visible")
     .addTo(scrollControl);
   }
+
+
 });

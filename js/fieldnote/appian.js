@@ -1,6 +1,13 @@
 $(document).ready(function() {
 
-  
+  $('.mobile-slider').slick({
+    arrow: false,
+    dots: true,
+    lazyload: true,
+    infinite: true,
+   });
+
+
   //scramble text for field note geo info
   $(".geo-info").codex({
     speed: 30,
