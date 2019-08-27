@@ -9,43 +9,59 @@
   <link rel="stylesheet" type="text/css" href="../src/styles/5-pages/whatisdesign.css">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script type="text/javascript" src="../js/wid.js"></script>
 </head>
 
 <body>
-  <div class="grid-layout-container">
-    <div id="back-btn">
-      <a href="index.html" id="home"><span class="home-dot"></span></a>
-    </div>
-    <div class="blurb-container">
+  <figure class="wid-video-container" id="vid-container">
+    <video class="fullbleed-video" id="wid-video" poster="../assets/images/video-posters/PepeOverlay.jpg" preload="none" playsinline>
+      <source src="https://player.vimeo.com/external/353639144.hd.mp4?s=14be4c8231becec1f4a823ef6976afdcd6860c07&profile_id=175" type="video/mp4"></source>
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <div class="blurb-container play-cursor" id="blurb">
       <h2 id="blurb-header"> WHAT IS DESIGN </h2>
-      <p id="blurb-body">Both a thoughtful & absurd request, we ask 16 designers to describe how & why they design at this particular moment in their life.</p>
-    </div>
-    <div class="bg-video-container">
-      <video class="bg-preview-video" poster="../assets/images/video-posters/PepeOverlay.jpg" preload="none" playsinline>
-        <source data-src="https://player.vimeo.com/external/353639144.hd.mp4?s=14be4c8231becec1f4a823ef6976afdcd6860c07&profile_id=175" type="video/mp4"></source>
-        Your browser doesn't support HTML5 videos.
-      </video>
+      <p id="blurb-body">both a thoughtful & absurd request, we ask 16 designers to describe how & why they design at this particular moment in their life.</p>
     </div>
     <nav class="wid-nav" id="nav-overlay">
       <h3>Jump To </h3>
       <ul class="main-nav-list" id="vid-markers">
-        <li id="pepe" data-time="">Pepe Heykoop</li>
-        <li id="ineke" data-time="">Ineke Hans</li>
-        <li id="matthews" data-time="">Studio Matthews</li>
-        <li id="futures" data-time="">Intentional Futures</li>
-        <li id="truly" data-time="">Studio Truly Truly
-        <li id="lava" data-time="">LAVA</li>
-        <li id="momkai" data-time="">Momkai</li>
-        <li id="main" data-time="">Main Studio</li>
-        <li id="corunum" data-time="">Cor Unum</li>
-        <li id="floris" data-time="">Floris Hovers</li>
-        <li id="valentin" data-time="">Valentin Loellmann</li>
-        <li id="jurgen" data-time="">Studio Makkink & Bey</li>
-        <li id="nienke" data-time="">Nienke Hoogvliet</li>
+        <li class="vid-marker" id="pepe" data-time="10" >Pepe Heykoop</li>
+        <li class="vid-marker" id="ineke" data-time="20">Ineke Hans</li>
+        <li class="vid-marker" id="matthews" data-time="30">Studio Matthews</li>
+        <li class="vid-marker" id="futures" data-time="45">Intentional Futures</li>
+        <li class="vid-marker" id="truly" data-time="55">Studio Truly Truly</li>
+        <li class="vid-marker" id="lava" data-time="115">LAVA</li>
+        <li class="vid-marker" id="momkai" data-time="135">Momkai</li>
+        <li class="vid-marker" id="main" data-time="145">Main Studio</li>
+        <li class="vid-marker" id="corunum" data-time="175">Cor Unum</li>
+        <li class="vid-marker" id="floris" data-time="195">Floris Hovers</li>
+        <li class="vid-marker" id="valentin" data-time="206">Valentin Loellmann</li>
+        <li class="vid-marker" id="jurgen" data-time="217">Studio Makkink & Bey</li>
+        <li class="vid-marker" id="nienke" data-time="230">Nienke Hoogvliet</li>
       </ul>
     </nav>
-  </div><!-- End of .grid-layout-container -->
-
+    <div class="video-controls" id="vid-controls">
+      <div class="progress" id="progress">
+        <span class="vidbar" id="playback"></span>
+      </div>
+      <div class="vid-buttons">
+        <button class="play" id="play-pause"></button>
+      </div>
+      <div class="timeblock">
+        <div id="currentTime">00:00</div>
+        <span style="color: purple">/<span>
+            <div id="vidDuration">00:00</div>
+      </div>
+      <div class="vid-buttons fs">
+        <button class="fullscreen" id="fs">FULLSCREEN</button>
+      </div>
+    </div>
+  </figure>
+  <div id="back-btn">
+    <a href="index.html" id="home"><span class="home-dot"></span></a>
+    <p id="home-text">BACK HOME</p>
+  </div>
 </body>
 
 </html>
