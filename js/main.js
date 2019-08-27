@@ -43,7 +43,6 @@ $(document).ready(function(){
       scale: 1 });
   }
 
-
 /////////////////////////////////////////////////////////////////////////
 /////////////////////// ANIMATION RELATED  ///////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -85,13 +84,33 @@ function initAnimation() {
   initLandingPage();
 
   function initLandingPage(){
+    setState();
     toggleDotState();
     highlightDotsOnNavHover();
     initDesignerDotHover();
     initFieldNoteDotHover();
+    changeMenuItems();
     initAnimation();
     $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
     sessionStorage.visited = "true";
+    sessionStorage.digestif = "designer";
+  }
+
+  function setState(){
+    let state = sessionStorage.getItem("digestif");
+    console.log(state);
+    if (state == "designer") {
+      interviewsActive = true;
+    } else if (state == "fieldnotes") {
+      interviewsActive = false;
+    } else {
+      return;
+    }
+  }
+
+  //TODO: set active toggle
+  function toggleToggle(){
+
   }
 
   function hideUIElements(){
@@ -178,9 +197,6 @@ function initAnimation() {
     }
   }
 
-  // function removeBackground(){
-  //   document.getElementById("exp-landing-photo").style.background= "none";
-  // }
 
   function hidePreviewVideos(){
     for(let i=0, len=$previewVideos.length; i< len; i++){
@@ -223,8 +239,7 @@ function initAnimation() {
     }else{
         return true;
     }
-
-}//end function
+}
 
   function showTitleData(hovered){
     //TODO: THIS CODE SEEMS SUPER DIRTY
@@ -294,9 +309,11 @@ function initAnimation() {
 
   function changeMenuItems(){
     if(interviewsActive){
+      switchToInterviews();
       $("#designer-list").removeClass("hiddenUI");
       $("#fnotes-list").addClass("hiddenUI");
     } else {
+      switchToFieldnotes();
       $("#fnotes-list").removeClass("hiddenUI");
       $("#designer-list").addClass("hiddenUI");
     }
@@ -380,6 +397,16 @@ function initAnimation() {
     }
   }
 
+  function switchToFieldnotes(){
+    $("#toggle-field").addClass("active");
+    $("#toggle-int").removeClass("active");
+  }
+
+  function switchToInterviews(){
+    $("#toggle-int").addClass("active");
+    $("#toggle-field").removeClass("active");
+  }
+
   function toggleDotState(){
     fieldToggle.click(function(){
       if(!interviewsActive){
@@ -387,8 +414,8 @@ function initAnimation() {
       }
       else{
         interviewsActive = false;
-        $(this).addClass("active");
-        $("#toggle-int").removeClass("active");
+        sessionStorage.digestif = "fieldnotes";
+        switchToFieldnotes();
         toggleDotSize();
         changeMenuItems();
         preloadFieldNotesImages();
@@ -400,8 +427,8 @@ function initAnimation() {
       }
       else{
         interviewsActive = true;
-        $(this).addClass("active");
-        $("#toggle-field").removeClass("active");
+        sessionStorage.digestif = "designer";
+        switchToInterviews();
         toggleDotSize();
         changeMenuItems();
       }
