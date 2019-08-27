@@ -1310,29 +1310,76 @@ h3#exp-title-secondary {
   padding: 0;
 }
 
+.mobile-photo-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-slider {
+  width: 70%;
+}
+
+.slick-dots li {
+  transform: scale(0.8);
+}
+
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
+@media screen and (min-width: 800px) {
+  .mobile-caption {
+    display: none;
+  }
+}
 @media screen and (max-width: 800px) {
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
-    display: block;
-    width: 100vw;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    margin-top: 15em;
-  }
-
-  .layout-item {
-    transform: scale(0.9);
+    display: none;
   }
 
   .section-caption {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-self: center;
     width: 70vw;
     height: 100%;
-    margin: 0;
-    padding: 6em;
-    font-size: 0.8em;
+    margin: 2em;
+    font-size: 0.9em;
     text-align: justify;
+  }
+
+  .mobile-wrapper {
+    display: block;
+    justify-content: center;
+    margin-top: 10em;
+  }
+
+  .mobile-caption {
+    font-size: 0.67em;
+    width: 100%;
+    font-family: maisonMono-Regular;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 0.5em;
+    margin-bottom: 5%;
+  }
+
+  .mobile-caption p {
+    width: 80%;
+    line-height: 200%;
+    text-align: justify;
+  }
+
+  .grid-layout-container {
+    padding-bottom: 10em;
+  }
+
+  .mobile-photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
   }
 }
 @media screen and (min-width: 1000px) {
