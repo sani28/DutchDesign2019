@@ -1330,6 +1330,10 @@ h3#exp-title-secondary {
   .mobile-caption {
     display: none;
   }
+
+  .mobile-photo-container {
+    display: none;
+  }
 }
 @media screen and (max-width: 800px) {
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
