@@ -86,10 +86,11 @@ function initAnimation() {
   function initLandingPage(){
     setState();
     initAnimation();
-    
     showHideBlurb();
-    // --------------------------//
     toggleDotState();
+    changeActiveSwitch();
+    toggleDotSize();
+    changeMenuItems();
     highlightDotsOnNavHover();
     initDesignerDotHover();
     initFieldNoteDotHover();
@@ -99,7 +100,6 @@ function initAnimation() {
   //sessionStorage for last seen nav, and active states
   function setState(){
     let state = sessionStorage.getItem("digestif");
-    console.log(state);
     if (state == "designer"){
       interviewsActive = true;
     } else if (state == "fieldnotes"){
@@ -209,18 +209,18 @@ function initAnimation() {
   function toggleDotState(){
     fieldToggle.click(function(){
         interviewsActive = false;
-        sessionStorage.digestif = "fieldnotes";
         changeActiveSwitch();
         toggleDotSize();
         changeMenuItems();
         preloadFieldNotesImages();
+        sessionStorage.digestif = "fieldnotes";
     });
     intToggle.click(function(){
         interviewsActive = true;
-        sessionStorage.digestif = "designer";
         changeActiveSwitch();
         toggleDotSize();
         changeMenuItems();
+        sessionStorage.digestif = "designer";
     });
   }
 
