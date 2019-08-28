@@ -12,8 +12,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/milk/melkhuis_banner.jpg')";
-
   const orderedDesignerImages = [
     document.getElementById("texels-vid"),
     document.getElementById("melkhuis-1"),

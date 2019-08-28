@@ -11,9 +11,7 @@ $(document).ready(function() {
     lazyload: true,
     infinite: true,
    });
-   
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/soil/ateliernl_section1_img1.jpg')";
-
+  
   const orderedDesignerImages = [
     document.getElementById("soil-1"),
     document.getElementById("soil-2"),

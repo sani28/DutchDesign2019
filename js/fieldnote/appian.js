@@ -14,7 +14,6 @@ $(document).ready(function() {
     duration: 2000
   });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/appian/appian-1.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("keyroad"),

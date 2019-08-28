@@ -11,9 +11,7 @@ $(document).ready(function() {
     lazyload: true,
     infinite: true,
    });
-   
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/bts/bti_banner.jpg')";
-
+  
   const orderedDesignerImages = [
     document.getElementById("bti-1"),
     document.getElementById("bti-2"),

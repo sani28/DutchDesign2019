@@ -13,7 +13,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/black/bb_banner.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("bb-1"),

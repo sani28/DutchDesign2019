@@ -11,7 +11,6 @@ $(document).ready(function(){
     lazyload: true,
     infinite: true,
    });
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/felting/felting-1.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("felt-2"),

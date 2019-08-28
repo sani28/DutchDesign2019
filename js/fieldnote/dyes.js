@@ -12,8 +12,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/dyes/rens_banner.jpg')";
-
   const orderedDesignerImages = [
     document.getElementById("dyes-1"),
     document.getElementById("dyes-2"),
