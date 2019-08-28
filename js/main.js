@@ -43,7 +43,6 @@ $(document).ready(function(){
       scale: 1 });
   }
 
-
 /////////////////////////////////////////////////////////////////////////
 /////////////////////// ANIMATION RELATED  ///////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -85,29 +84,144 @@ function initAnimation() {
   initLandingPage();
 
   function initLandingPage(){
+    setState();
+    initAnimation();
+    showHideBlurb();
     toggleDotState();
+    changeActiveSwitch();
+    toggleDotSize();
+    changeMenuItems();
     highlightDotsOnNavHover();
     initDesignerDotHover();
     initFieldNoteDotHover();
-    initAnimation();
-    $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
     sessionStorage.visited = "true";
   }
 
-  function hideUIElements(){
-    for (let i=0; i<$hiddenElements.length; i++){
-      $($hiddenElements[i]).addClass("hiddenUI");
+  //sessionStorage for last seen nav, and active states
+  function setState(){
+    let state = sessionStorage.getItem("digestif");
+    if (state == "designer"){
+      interviewsActive = true;
+    } else if (state == "fieldnotes"){
+      interviewsActive = false;
+    } else if (state == null){
+      interviewsActive = true;
     }
   }
 
-  function showUIElements(){
-    for (let i=0; i<$hiddenElements.length; i++){
-      $($hiddenElements[i]).removeClass("hiddenUI");
+  function showHideBlurb(){
+    $("#nav-blurb").mouseenter(toggleBlurb).mouseout(toggleBlurb);
+  }
+  //state dependant, changes dot sizes
+  function toggleDotSize(){
+    if(interviewsActive){
+      for(let i=0; i<$designerDots.length; i++ ){
+        $($designerDots[i]).addClass("active-dot");
+      }
+      for (let j=0; j<$experienceDots.length; j++){
+        $($experienceDots[j]).removeClass("active-dot");
+      }
+    } else {
+      for (let j=0; j<$experienceDots.length; j++){
+        $($experienceDots[j]).addClass("active-dot");
+      }
+      for(let i=0; i<$designerDots.length; i++ ){
+        $($designerDots[i]).removeClass("active-dot");
+      }
     }
   }
-  function toggleBlurb(){
-    $("#home-cal").fadeToggle(350);
-    $("#home-blurb").fadeToggle(350).toggleClass("hiddenUI");
+
+  //state dependant, changes menu list
+  function changeMenuItems(){
+    if(interviewsActive){
+      $("#designer-list").removeClass("hiddenUI");
+      $("#fnotes-list").addClass("hiddenUI");
+    } else {
+      $("#fnotes-list").removeClass("hiddenUI");
+      $("#designer-list").addClass("hiddenUI");
+    }
+  }
+
+  //state dependant dot controller
+  function initDesignerDotHover(){
+    for (let i=0, len=$designerDots.length; i < len; i++){
+      $($designerDots[i]).mouseenter(function(){
+        if(interviewsActive){
+          changeInactiveState(this, $designerDots);
+          showTitleData(this);
+          scrambleSubheader();
+          playPreviewVideo(this.id);
+          hideUIElements();
+          hideExperienceDots();
+          hideOverlaps($designerDots);
+        }
+      });
+      $($designerDots[i]).mouseout(function(){
+        if(interviewsActive){
+          changeInactiveState(this, $designerDots);
+          hidePreviewVideos();
+          $("#dot-headers").addClass("hiddenUI");
+          showUIElements();
+          showExperienceDots();
+          showDesignerDots();
+        }
+      });
+    }
+  }
+
+  function initFieldNoteDotHover(){
+    for (let j=0, len=$experienceDots.length; j < len; j++){
+      $($experienceDots[j]).mouseenter(function(){
+        if(!interviewsActive){
+          changeInactiveState(this, $experienceDots);
+          showTitleData(this);
+          scrambleSubheader();
+          changeBGImage(this.id);
+          hideUIElements();
+          hideDesignerDots();
+          hideOverlaps($experienceDots);
+        }
+      });
+      $($experienceDots[j]).mouseout(function(){
+        if(!interviewsActive){
+          changeInactiveState(this, $experienceDots);
+          hideBGImage();
+          $("#dot-headers").addClass("hiddenUI");
+          showUIElements();
+          showDesignerDots();
+          showExperienceDots();
+        }
+      });
+    }
+  }
+
+  function changeActiveSwitch(){
+    if(interviewsActive){
+      $("#toggle-int").addClass("active");
+      $("#toggle-field").removeClass("active");
+    } else{
+      $("#toggle-field").addClass("active");
+      $("#toggle-int").removeClass("active");
+    }
+  }
+
+  // behaviour on click for field notes + designer switch
+  function toggleDotState(){
+    fieldToggle.click(function(){
+        interviewsActive = false;
+        changeActiveSwitch();
+        toggleDotSize();
+        changeMenuItems();
+        preloadFieldNotesImages();
+        sessionStorage.digestif = "fieldnotes";
+    });
+    intToggle.click(function(){
+        interviewsActive = true;
+        changeActiveSwitch();
+        toggleDotSize();
+        changeMenuItems();
+        sessionStorage.digestif = "designer";
+    });
   }
 
   function playPreviewVideo(videoID) {
@@ -178,9 +292,6 @@ function initAnimation() {
     }
   }
 
-  // function removeBackground(){
-  //   document.getElementById("exp-landing-photo").style.background= "none";
-  // }
 
   function hidePreviewVideos(){
     for(let i=0, len=$previewVideos.length; i< len; i++){
@@ -223,8 +334,7 @@ function initAnimation() {
     }else{
         return true;
     }
-
-}//end function
+}
 
   function showTitleData(hovered){
     //TODO: THIS CODE SEEMS SUPER DIRTY
@@ -238,6 +348,23 @@ function initAnimation() {
     $("#dot-headers").css("grid-row-start", Number(row)+3)
     $("#dot-headers").css("grid-row-end", Number(row)+3);
     $("#dot-headers").removeClass("hiddenUI");
+  }
+
+
+  function hideUIElements(){
+    for (let i=0; i<$hiddenElements.length; i++){
+      $($hiddenElements[i]).addClass("hiddenUI");
+    }
+  }
+
+  function showUIElements(){
+    for (let i=0; i<$hiddenElements.length; i++){
+      $($hiddenElements[i]).removeClass("hiddenUI");
+    }
+  }
+  function toggleBlurb(){
+    $("#home-cal").fadeToggle(350);
+    $("#home-blurb").fadeToggle(350).toggleClass("hiddenUI");
   }
 
   function hideDesignerDots(){
@@ -274,34 +401,6 @@ function initAnimation() {
     }
   }
 
-  function toggleDotSize(){
-    if(interviewsActive){
-      for(let i=0; i<$designerDots.length; i++ ){
-        $($designerDots[i]).addClass("active-dot");
-      }
-      for (let j=0; j<$experienceDots.length; j++){
-        $($experienceDots[j]).removeClass("active-dot");
-      }
-    } else {
-      for (let j=0; j<$experienceDots.length; j++){
-        $($experienceDots[j]).addClass("active-dot");
-      }
-      for(let i=0; i<$designerDots.length; i++ ){
-        $($designerDots[i]).removeClass("active-dot");
-      }
-    }
-  }
-
-  function changeMenuItems(){
-    if(interviewsActive){
-      $("#designer-list").removeClass("hiddenUI");
-      $("#fnotes-list").addClass("hiddenUI");
-    } else {
-      $("#fnotes-list").removeClass("hiddenUI");
-      $("#designer-list").addClass("hiddenUI");
-    }
-  }
-
   function highlightDotsOnNavHover(){
     for(let i=0; i < designerNavList.length; i++){
       $(designerNavList[i]).mouseenter(function(){
@@ -323,92 +422,10 @@ function initAnimation() {
     });
   }
 
-  function initDesignerDotHover(){
-    for (let i=0, len=$designerDots.length; i < len; i++){
-      $($designerDots[i]).mouseenter(function(){
-        if(interviewsActive){
-          changeInactiveState(this, $designerDots);
-          showTitleData(this);
-          scrambleSubheader();
-          playPreviewVideo(this.id);
-          hideUIElements();
-          hideExperienceDots();
-          hideOverlaps($designerDots);
-        }
-      });
-      $($designerDots[i]).mouseout(function(){
-        if(interviewsActive){
-          changeInactiveState(this, $designerDots);
-          hidePreviewVideos();
-          $("#dot-headers").addClass("hiddenUI");
-          showUIElements();
-          showExperienceDots();
-          showDesignerDots();
-        }
-      });
-    }
-  }
-
-  function initFieldNoteDotHover(){
-    for (let j=0, len=$experienceDots.length; j < len; j++){
-      $($experienceDots[j]).mouseenter(function(){
-        if(!interviewsActive){
-          changeInactiveState(this, $experienceDots);
-          showTitleData(this);
-          scrambleSubheader();
-          changeBGImage(this.id);
-          hideUIElements();
-          hideDesignerDots();
-          hideOverlaps($experienceDots);
-        }
-      });
-      $($experienceDots[j]).mouseout(function(){
-        if(!interviewsActive){
-          changeInactiveState(this, $experienceDots);
-          hideBGImage();
-          $("#dot-headers").addClass("hiddenUI");
-          showUIElements();
-          showDesignerDots();
-          showExperienceDots();
-        }
-      });
-    }
-  }
   function preloadFieldNotesImages(){
     for (let i=0, len = $fieldNotesBGs.length; i < len; i++ ){
         observer.triggerLoad($fieldNotesBGs[i]);
     }
   }
-
-  function toggleDotState(){
-    fieldToggle.click(function(){
-      if(!interviewsActive){
-        return;
-      }
-      else{
-        interviewsActive = false;
-        $(this).addClass("active");
-        $("#toggle-int").removeClass("active");
-        toggleDotSize();
-        changeMenuItems();
-        preloadFieldNotesImages();
-      }
-    });
-    intToggle.click(function(){
-      if(interviewsActive){
-        return;
-      }
-      else{
-        interviewsActive = true;
-        $(this).addClass("active");
-        $("#toggle-field").removeClass("active");
-        toggleDotSize();
-        changeMenuItems();
-      }
-    });
-  }
-
-
-
 
 }); //DOCREADY DON'T DELETE

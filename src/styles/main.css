@@ -568,6 +568,7 @@ body .cursor__ball--big {
 
 body .cursor {
   pointer-events: none;
+  cursor: none;
 }
 
 body .cursor__ball {
@@ -758,6 +759,10 @@ body .cursor__ball circle {
   width: 2.25vw;
   transition: width 0.185s cubic-bezier(0.55, 1, 0.85, 1), height 0.185s cubic-bezier(0.55, 1, 0.85, 1);
   transition-delay: 0.1s;
+}
+
+.designer-dot.active-dot:hover {
+  background-color: #7D246B;
 }
 
 .dot-unhovered.designer-dot {
