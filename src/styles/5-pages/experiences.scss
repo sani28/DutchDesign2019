@@ -97,6 +97,8 @@
   padding: 0px;
 }
 
+
+
 .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
   display: grid;
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
@@ -842,7 +844,7 @@ a#home:hover {
   transform: rotate(-180deg);
 }
 
-#exp-landing-photo {
+.exp-landing-photo {
   width: 82vw;
   height: 500px;
   display: grid;
@@ -853,6 +855,62 @@ a#home:hover {
   background-position: center;
   background-repeat: no-repeat;
   border-style: none;
+}
+
+#andrea-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/andrea/water_banner.jpg");
+}
+
+#appian-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/appian/appian-1.jpg");
+}
+
+#arnhem-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/arnhem/arnhem-8.png");
+}
+
+#burgundian-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/black/bb_banner.jpg");
+}
+
+#burgundian-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/black/bb_banner.jpg");
+}
+
+#bts-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/bts/bti_banner.jpg");
+}
+
+#cantillion-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/cantillion/cantillion_banner.jpg");
+}
+
+#dyes-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/dyes/rens_banner.jpg");
+}
+
+#farm-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/farm/leeuwarden_banner.jpg");
+}
+
+#felting-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/felting/felting-1.jpg");
+}
+
+#soil-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/soil/ateliernl_section1_img1.jpg");
+}
+
+#milk-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/milk/melkhuis_banner.jpg");
+}
+
+#roma-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/roma/roma_banner.jpg");
+}
+
+#texels-photo.exp-landing-photo {
+  background-image: url("../../../assets/images/texels/texels_banner.jpg");
 }
 
 h1#exp-title{

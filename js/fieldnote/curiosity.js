@@ -12,8 +12,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/curiosity/kiki_banner_end.jpg')";
-
   const orderedDesignerImages = [
     document.getElementById("kiki1"),
     document.getElementById("kiki2"),

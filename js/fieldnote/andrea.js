@@ -13,8 +13,6 @@ $(document).ready(function(){
     duration: 2000
   });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/andrea/water_banner.jpg')";
-
   const orderedDesignerImages = [
     document.getElementById("in-workshop"),
     document.getElementById("wrkshop-vid"),

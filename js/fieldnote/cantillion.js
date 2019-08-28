@@ -12,8 +12,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/cantillion/cantillion_banner.jpg')";
-
   const orderedDesignerImages = [
     document.getElementById("cant-1"),
     document.getElementById("cant-2"),

@@ -12,8 +12,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/texels/texels_banner.jpg')";
-
   const orderedDesignerImages = [
     document.getElementById("texels-vid"),
     document.getElementById("texels-1"),

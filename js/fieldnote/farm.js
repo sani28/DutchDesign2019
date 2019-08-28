@@ -12,8 +12,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/farm/leeuwarden_banner.jpg')";
-
   const orderedDesignerImages = [
     document.getElementById("farm-1"),
     document.getElementById("farm-2"),

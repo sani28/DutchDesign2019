@@ -11,7 +11,6 @@ $(document).ready(function(){
     lazyload: true,
     infinite: true,
    });
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/roma/roma_banner.jpg')";
 
   const orderedDesignerImages = [
     document.getElementById("roma-1"),

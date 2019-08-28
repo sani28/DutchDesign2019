@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  document.getElementById("exp-landing-photo").style.backgroundImage = "url('../../assets/images/arnhem/arnhem-8.png')";
-
   $('.mobile-slider').slick({
     arrow: false,
     dots: true,
@@ -9,7 +7,7 @@ $(document).ready(function() {
     infinite: true,
    });
 
-   
+
   $(".geo-info").codex({
     speed: 30,
     duration: 2000
