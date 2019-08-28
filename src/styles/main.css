@@ -112,7 +112,6 @@
 }
 .photo-section-8 figure img, .photo-section-7 figure img, .photo-section-6 figure img, .photo-section-5 figure img, .photo-section-4 figure img, .photo-section-3 figure img, .photo-section-2 figure img, .photo-section-1 figure img, .photo-section-8 figure video, .photo-section-7 figure video, .photo-section-6 figure video, .photo-section-5 figure video, .photo-section-4 figure video, .photo-section-3 figure video, .photo-section-2 figure video, .photo-section-1 figure video {
   width: 100%;
-  object-fit: contain;
 }
 .photo-section-8 figcaption, .photo-section-7 figcaption, .photo-section-6 figcaption, .photo-section-5 figcaption, .photo-section-4 figcaption, .photo-section-3 figcaption, .photo-section-2 figcaption, .photo-section-1 figcaption {
   position: absolute;
@@ -166,7 +165,6 @@
 }
 .photo-section-2 .layout-item:first-child img {
   width: 100%;
-  object-fit: contain;
   margin: 0;
 }
 .photo-section-2 .layout-item:nth-child(2) {
@@ -184,7 +182,6 @@
 }
 .photo-section-2 .layout-item:nth-child(2) img {
   width: 100%;
-  object-fit: contain;
   margin: 0;
 }
 .photo-section-2 .layout-item:nth-child(3) {
@@ -246,7 +243,6 @@
 }
 .photo-section-4 .layout-item:first-child img {
   width: 100%;
-  object-fit: contain;
 }
 .photo-section-4 .layout-item:nth-child(2) {
   grid-column: 10/17;
@@ -257,7 +253,6 @@
 .photo-section-4 .layout-item:nth-child(2) img {
   width: 100%;
   height: auto;
-  object-fit: contain;
 }
 
 .photo-section-5 {
@@ -274,7 +269,6 @@
 }
 .photo-section-5 .layout-item:first-child img {
   width: 100%;
-  object-fit: contain;
 }
 .photo-section-5 .layout-item:nth-child(2) {
   grid-column: 10/18;
@@ -284,7 +278,6 @@
 }
 .photo-section-5 .layout-item:nth-child(2) img {
   width: 100%;
-  object-fit: contain;
 }
 .photo-section-5 .layout-item:nth-child(3) {
   grid-column: 12/18;
@@ -349,7 +342,6 @@
 }
 .photo-section-7 .layout-item:nth-child(3) img {
   width: 100%;
-  object-fit: contain;
 }
 .photo-section-7 #fogocaption {
   grid-row: 1;
@@ -372,10 +364,6 @@
 }
 .photo-section-8 .layout-item:nth-child(2) img {
   width: 100%;
-  object-fit: contain;
-}
-.photo-section-8 .section-caption {
-  grid-column: 4/8;
 }
 
 .quote-section {

@@ -63,8 +63,8 @@
 }
 .slick-slide {
     float: left;
-    height: 100%;
-    object-fit: contain;
+    height: 400px;
+    object-fit: cover;
     min-height: 1px;
     [dir="rtl"] & {
         float: right;

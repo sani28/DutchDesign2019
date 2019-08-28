@@ -7,13 +7,21 @@ html {
   overflow: hidden;
 }
 
+.bg {
+  background-image: url("../../../assets/images/team/teampageBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  object-fit: contain;
+}
+
 #team-blurb{
     font-family: redaction-bold;
     color: #7D246B;
     grid-row: 4/span 1;
     grid-column: 3/22;
     padding-right: 3em;
-  font-size: calc( 1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc( 1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     text-align: center;
     max-height: 400px;
 }
@@ -51,6 +59,7 @@ html {
 
 *, html {
   color: white;
+  opacity: 1;
 }
 
 #team-bio {
