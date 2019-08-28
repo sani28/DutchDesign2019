@@ -79,6 +79,14 @@ html {
   overflow: hidden;
 }
 
+.bg {
+  background-image: url("../../../assets/images/team/teampageBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  object-fit: contain;
+}
+
 #team-blurb {
   font-family: redaction-bold;
   color: #7D246B;
@@ -123,6 +131,7 @@ html {
 
 *, html {
   color: white;
+  opacity: 1;
 }
 
 #team-bio {
@@ -453,4 +462,4 @@ span:hover {
   fill: purple;
 }
 
-/*# sourceMappingURL=Team.css.map */
+/*# sourceMappingURL=team.css.map */
