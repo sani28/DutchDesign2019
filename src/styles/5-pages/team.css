@@ -74,16 +74,16 @@
 }
 html {
   background-color: #000;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
+  border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
-  overflow: hidden;
+  z-index: -1;
 }
 
 .bg {
   background-image: url("../../../assets/images/team/teampageBG.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.8;
+  opacity: 0.9;
   object-fit: contain;
 }
 
@@ -235,7 +235,7 @@ body .cursor__ball {
 }
 
 body .cursor__ball circle {
-  fill: #DFEA4E;
+  fill: #7D246B;
 }
 
 /* -----------circle nav ------------ */
@@ -394,6 +394,29 @@ span:hover {
 
 /* ------------------ MEDIA QUERIES  ------------------ */
 @media only screen and (max-width: 900px) {
+  #team-bio {
+    grid-column: 1/15;
+    grid-row: 4/6;
+    height: 300px;
+    width: 100vw;
+    background-color: black;
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+
+  .portfolio-link {
+    font-size: 0.5em;
+    left: 10%;
+    position: absolute;
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    line-height: 180%;
+    padding-left: 2%;
+  }
+
   .circle-nav-container {
     display: flex;
     position: absolute;
@@ -417,7 +440,7 @@ span:hover {
     line-height: 200%;
     font-size: 0.7em;
     padding: 1em;
-    background-color: black;
+    width: 80%;
   }
 
   #team-blurb {
@@ -429,33 +452,24 @@ span:hover {
     line-height: 250%;
     text-align: left;
   }
-
-  #team-bio {
-    grid-row: 3/5;
-    grid-column: 6/20;
-  }
-
-  h1 {
-    line-height: 100%;
-  }
 }
 /* ------------------ INDIVIDUAL PHOTO STYLING  ------------------ */
-#gabe-1 {
+#teamphoto-1 {
   width: 25em;
 }
 
-#gabe-2 {
+#teamphoto-2 {
   width: 32em;
   margin-left: 67%;
 }
 
-#gabe-3 {
+#teamphoto-3 {
   width: 25em;
   position: absolute;
   margin-left: 10%;
 }
 
-#gabe-4 {
+#teamphoto-4 {
   width: 20em;
   margin-left: 67%;
   margin-top: 30%;

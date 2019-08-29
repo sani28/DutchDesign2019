@@ -850,7 +850,7 @@ a#home:hover {
   display: grid;
   grid-row: 1/20;
   grid-column: 0/10;
-  background-image: url("../../../assets/images/arnhem.png");
+  // background-image: url("../../../assets/images/arnhem.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -875,6 +875,10 @@ a#home:hover {
 
 #burgundian-photo.exp-landing-photo {
   background-image: url("../../../assets/images/black/bb_banner.jpg");
+}
+
+#curiosity-photo.exp-landing-photo {
+  background-image: url("");
 }
 
 #bts-photo.exp-landing-photo {
