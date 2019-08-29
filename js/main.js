@@ -230,6 +230,15 @@ function initAnimation() {
       case "lexDot":
         $("#lex-preview-vid").removeClass("hiddenUI");
         break;
+      case "valentinDot":
+        $("#valentin-preview-vid").removeClass("hiddenUI");
+        break;
+      case "corunumDot":
+        $("#corunum-preview-vid").removeClass("hiddenUI");
+        break;
+      case "florisDot":
+        $("#floris-preview-vid").removeClass("hiddenUI");
+        break;
       case "futuresDot":
         $("#futures-preview-vid").removeClass("hiddenUI");
         break;
