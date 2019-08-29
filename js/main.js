@@ -248,6 +248,12 @@ function initAnimation() {
       case "lavaDot":
         $("#lava-preview-vid").removeClass("hiddenUI");
         break
+      case "aldoDot":
+        $("#aldo-preview-vid").removeClass("hiddenUI");
+        break
+      case "rebeccaDot":
+        $("#rebecca-preview-vid").removeClass("hiddenUI");
+        break
     }
     observer.observe();
     $("#grid-overlay").removeClass("hiddenUI");
