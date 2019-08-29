@@ -235,7 +235,7 @@ body .cursor__ball {
 }
 
 body .cursor__ball circle {
-  fill: #DFEA4E;
+  fill: #7D246B;
 }
 
 /* -----------circle nav ------------ */
@@ -394,6 +394,29 @@ span:hover {
 
 /* ------------------ MEDIA QUERIES  ------------------ */
 @media only screen and (max-width: 900px) {
+  #team-bio {
+    grid-column: 1/15;
+    grid-row: 4/6;
+    height: 300px;
+    width: 100vw;
+    background-color: black;
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+
+  .portfolio-link {
+    font-size: 0.5em;
+    left: 10%;
+    position: absolute;
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    line-height: 180%;
+    padding-left: 2%;
+  }
+
   .circle-nav-container {
     display: flex;
     position: absolute;
@@ -417,7 +440,7 @@ span:hover {
     line-height: 200%;
     font-size: 0.7em;
     padding: 1em;
-    background-color: black;
+    width: 80%;
   }
 
   #team-blurb {
@@ -428,15 +451,6 @@ span:hover {
     font-size: 0.5em;
     line-height: 250%;
     text-align: left;
-  }
-
-  #team-bio {
-    grid-row: 3/5;
-    grid-column: 6/20;
-  }
-
-  h1 {
-    line-height: 100%;
   }
 }
 /* ------------------ INDIVIDUAL PHOTO STYLING  ------------------ */
