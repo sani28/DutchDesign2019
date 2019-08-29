@@ -2,18 +2,20 @@
 
 html {
   background-color: #000;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
+  border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
-  overflow: hidden;
+  z-index: -1;
 }
+
 
 .bg {
   background-image: url("../../../assets/images/team/teampageBG.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.8;
+  opacity: 0.9;
   object-fit: contain;
 }
+
 
 #team-blurb{
     font-family: redaction-bold;
@@ -439,22 +441,22 @@ span:hover {
 
 /* ------------------ INDIVIDUAL PHOTO STYLING  ------------------ */
 
-#gabe-1 {
+#teamphoto-1 {
   width: 25em;
 }
 
-#gabe-2 {
+#teamphoto-2 {
   width: 32em;
   margin-left: 67%;
 }
 
-#gabe-3 {
+#teamphoto-3 {
   width: 25em;
   position: absolute;
   margin-left: 10%;
 }
 
-#gabe-4 {
+#teamphoto-4 {
   width: 20em;
   margin-left: 67%;
   margin-top: 30%;
