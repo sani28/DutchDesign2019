@@ -301,11 +301,6 @@ body .cursor__ball circle {
   transition-delay: 0.1s;
 }
 
-.designer-dot.active-dot:hover{
-  background-color: $secondary-purp;
-  // border: 1px solid $secondary-purp;
-}
-
 .dot-unhovered.designer-dot {
   background-color: transparent;
   border: 1px white solid;
@@ -821,6 +816,22 @@ transform: scale(0.8);}
 
   #scroll-tool{
     display: none;
+  }
+
+  section.transcript {
+    display: grid;
+    grid-template-columns: 1fr 85% 1fr;
+    gap: 1.5em;
+    font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+    #transcript-container {
+      grid-column: 2/-2;
+      width: 100%;
+      height: 90vh;
+      font-family: Maison Neue;
+      line-height: 125%;
+      text-align: left;
+    }
   }
 
   .designer-top-section {
