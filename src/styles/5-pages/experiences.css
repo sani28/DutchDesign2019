@@ -491,7 +491,7 @@ body .cursor__ball circle {
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1em;
   width: 100%;
-  padding: 6em;
+  margin-bottom: 3em;
   align-items: start;
 }
 .photo-section-8 figcaption, .photo-section-7 figcaption, .photo-section-6 figcaption, .photo-section-6-v2 figcaption, .photo-section-5 figcaption, .photo-section-4 figcaption, .photo-section-4-v2 figcaption, .photo-section-3 figcaption, .photo-section-2 figcaption, .photo-section-1 figcaption, .end-caption figcaption {
@@ -653,7 +653,6 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 3  -------------------- */
 .photo-section-3 {
   grid-template-rows: 1fr 1fr;
-  margin-bottom: 10em;
 }
 
 .photo-section-3 .layout-item:first-child {
