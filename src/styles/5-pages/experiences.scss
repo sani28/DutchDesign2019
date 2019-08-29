@@ -811,10 +811,11 @@ a#home:hover {
   grid-column: 0/10;
   padding: 1.5%;
   width: 100vw;
-  height: 30em;
+  height: auto;
   justify-content: center;
   background-size: contain;
-  z-index: 5;
+  // z-index: 5;
+  margin-bottom: 5em;
 }
 
 .geo-info#right {
@@ -850,7 +851,6 @@ a#home:hover {
   display: grid;
   grid-row: 1/20;
   grid-column: 0/10;
-  background-image: url("../../../assets/images/arnhem.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -866,7 +866,7 @@ a#home:hover {
 }
 
 #arnhem-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/arnhem/arnhem-8.png");
+  background-image: url("../../../assets/images/arnhem/arnhem_banner.jpg");
 }
 
 #burgundian-photo.exp-landing-photo {
