@@ -100,7 +100,6 @@
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1.5em;
   width: 100%;
-  padding: 6em 0;
   align-items: start;
   width: 100%;
 }
@@ -227,9 +226,6 @@
   outline-offset: -3px;
 }
 
-.photo-section-4 {
-  padding-bottom: 5em;
-}
 .photo-section-4 .layout-item:first-child {
   grid-column: 4/10;
   align-self: flex-end;
@@ -1028,7 +1024,6 @@ body .cursor__ball circle {
 
 .photo-section-8 {
   margin-top: -2em;
-  margin-bottom: 30%;
 }
 
 .photo-section-8 figcaption {
