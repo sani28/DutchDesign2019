@@ -1004,6 +1004,8 @@ h3#exp-title-secondary {
 
 .slick-dots li{
 transform: scale(0.8);}
+
+
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 
 @media screen and (min-width: 800px)  {
@@ -1014,6 +1016,7 @@ transform: scale(0.8);}
     display: none;
   }
 }
+
 @media screen and (max-width: 800px)  {
 
   #back-btn {
