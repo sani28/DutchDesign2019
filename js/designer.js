@@ -89,9 +89,6 @@ $(document).ready(function() {
     totalHeight = document.body.clientHeight;
   }
 
-
-  //REPOSITION FOOTER
-
   $('#toggle-transcript').click(function(e) {
     e.preventDefault();
     $(this).addClass('active');
@@ -160,6 +157,13 @@ $(document).ready(function() {
       });
     }
   });
+
+  $('.mobile-slider').slick({
+    arrow: false,
+    dots: true,
+    lazyload: true,
+    infinite: true,
+   });
 
   //////////// VIDEO PLAYER BEHAVIOUR ////////
 

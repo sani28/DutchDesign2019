@@ -230,9 +230,24 @@ function initAnimation() {
       case "lexDot":
         $("#lex-preview-vid").removeClass("hiddenUI");
         break;
-      case "valentinDot":
-        $("#valentin-preview-vid").removeClass("hiddenUI");
+      case "futuresDot":
+        $("#futures-preview-vid").removeClass("hiddenUI");
         break;
+      case "matthewsDot":
+        $("#matthews-preview-vid").removeClass("hiddenUI");
+        break;
+      case "pepeDot":
+        $("#pepe-preview-vid").removeClass("hiddenUI");
+        break;
+      case "inekeDot":
+        $("#ineke-preview-vid").removeClass("hiddenUI");
+        break;
+      case "momkaiDot":
+        $("#momkai-preview-vid").removeClass("hiddenUI");
+        break
+      case "lavaDot":
+        $("#lava-preview-vid").removeClass("hiddenUI");
+        break
     }
     observer.observe();
     $("#grid-overlay").removeClass("hiddenUI");
