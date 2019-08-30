@@ -18,6 +18,21 @@ $('.mobile-slider').slick({
   infinite: true,
  });
 
+ const alex = document.getElementById("a").id = "alex";
+ const angus = document.getElementById("a").id = "angus";
+ const brandon = document.getElementById("a").id = "brandon";
+ const breanne = document.getElementById("a").id = "breanne";
+ const gabe = document.getElementById("a").id = "gabe";
+ const jenny = document.getElementById("a").id = "jenny";
+ const linda = document.getElementById("a").id = "linda";
+ const marie = document.getElementById("a").id = "marie";
+ const marine = document.getElementById("a").id = "marine";
+ const nikita = document.getElementById("a").id = "nikita";
+ const rocky = document.getElementById("a").id = "rocky";
+ const russell = document.getElementById("a").id = "russell";
+ const sanny = document.getElementById("a").id = "sanny";
+ const team = document.getElementById("a").id = "team";
+
 
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
@@ -50,21 +65,6 @@ function onMouseHoverOut() {
   TweenMax.to($smallBall, .3, {
     scale: 1 });
 }
-
-const alex = document.getElementById("a").id = "alex";
-const angus = document.getElementById("a").id = "angus";
-const brandon = document.getElementById("a").id = "brandon";
-const breanne = document.getElementById("a").id = "breanne";
-const gabe = document.getElementById("a").id = "gabe";
-const jenny = document.getElementById("a").id = "jenny";
-const linda = document.getElementById("a").id = "linda";
-const marie = document.getElementById("a").id = "marie";
-const marine = document.getElementById("a").id = "marine";
-const nikita = document.getElementById("a").id = "nikita";
-const rocky = document.getElementById("a").id = "rocky";
-const russell = document.getElementById("a").id = "russell";
-const sanny = document.getElementById("a").id = "sanny";
-const team = document.getElementById("a").id = "team";
 
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
@@ -141,4 +141,4 @@ function loadDoc() {
     callback : function( idx ) {
     }
   } );
-} );
+});
