@@ -7,6 +7,7 @@ $secondary-purp: #7D246B;
 @import './1-helpers/fonts';
 @import './2-modules/layouts';
 @import './2-modules/background';
+@import './2-modules/mobile';
 
 *,
 html {
@@ -573,6 +574,7 @@ body .cursor__ball circle {
 
     .timeblock {
       margin-top: 5px;
+      margin-left: 1em;
 
       div {
         display: inline-block;
@@ -588,8 +590,6 @@ body .cursor__ball circle {
 
     .vid-buttons {
       margin-top: 5px;
-      margin-left: 2%;
-      width: 6%;
 
       button {
         background: none;
@@ -600,6 +600,7 @@ body .cursor__ball circle {
         font-family: Maison Neue;
         font-size: 0.75em;
         text-transform: uppercase;
+        padding: 0 1em;
       }
 
       button.play:before {
@@ -611,11 +612,15 @@ body .cursor__ball circle {
         content: "PAUSE";
         text-transform: capitalize;
       }
+
+
     }
 
     .vid-buttons.fs {
       margin-left: auto;
-      margin-right: 2%;
+      #fs{
+        padding-right: 0.6vw;
+      }
     }
   }
 }
@@ -783,167 +788,6 @@ body .cursor__ball circle {
 transform: scale(0.8);}
 
 
-/*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
-
-@media screen and (min-width: 800px)  {
-  .mobile-caption, .mobile-quote {
-    display: none;
-  }
-  .mobile-photo-container{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px)  {
-
-  #back-btn {
-    transform: scale(1.1);
-    top: 1.2em;
-    left: 1.2em;
-  }
-
-  .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption{
-    display: none;
-  }
-
-  .section-quote, .center-quote {
-    display: none !important;
-  }
-
-  #scroll-down {
-    display: none;
-  }
-
-  #scroll-tool{
-    display: none;
-  }
-
-  section.transcript {
-    display: grid;
-    grid-template-columns: 1fr 85% 1fr;
-    gap: 1.5em;
-    font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-
-    #transcript-container {
-      grid-column: 2/-2;
-      width: 100%;
-      height: 90vh;
-      font-family: Maison Neue;
-      line-height: 125%;
-      text-align: left;
-    }
-  }
-
-  .designer-top-section {
-    display: grid;
-    grid-template-columns: 1fr 85% 1fr;
-    gap: 1.5em;
-    width: 100%;
-
-    #designer-toggle {
-      grid-column: 2 / -2;
-      margin-top: 0.5em;
-      padding-bottom: 1em;
-
-      .content-toggle {
-        margin-right: 2em;
-        color: $secondary-purp;
-        font-family: hyperMarket;
-        font-size: 3vw;
-        text-transform: uppercase;
-      }
-
-      .content-toggle.active {
-        border-bottom: 2px solid $secondary-purp;
-      }
-    }
-
-    .designer-summary {
-      grid-column: 2 / -2;
-      margin-top: 2em;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      text-align: left;
-
-
-      .designer-blurb {
-        width: 100%; //overrides previous width;
-      }
-    }
-  }
-
-  .section-caption {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    width: 70vw;
-    height: 100%;
-    margin:2em;
-    font-size: 0.9em;
-    text-align: justify;
-  }
-
-  .mobile-wrapper {
-    display:block;
-    justify-content: center;
-    margin-top: 5vh;
-  }
-
-  .mobile-caption, .mobile-quote {
-    font-size: 0.67em;
-    width: 100%;
-    font-family: maisonMono-Regular;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    padding: 0.5em;
-    margin-bottom: 5%;
-  }
-
-  .mobile-caption p {
-    width: 80%;
-    line-height: 200%;
-    text-align: justify;
-  }
-
-  .mobile-quote p {
-    width: 80%;
-    line-height: 200%;
-    text-align: justify;
-  }
-
-  .mobile-quote p::before{
-    content: '“';
-    font-size: 4rem;
-    font-family: redaction;
-    color: $primary-green;
-    position: relative;
-    top: 1rem;
-    left: -1rem;
-    opacity: 0.75;
-    padding: 0;
-  }
-
-  .grid-layout-container{
-    padding-bottom: 10em;
-  }
-
-  .mobile-photo-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2%;
-    }
-}
-
-@media screen and (min-width: 1000px)  {
-  .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
-      padding: 3em;
-  }
-}
 
 
 .fullbleed {
@@ -1020,10 +864,12 @@ transform: scale(0.8);}
 }
 
 .section-quote {
-  font-size: 0.9em;
-  font-family: maisonNeue-Mono;
+  font-size: 0.95rem;
+  font-family: maisonMono-Regular;
+  text-transform: uppercase;
+  letter-spacing: 0.13rem;
   color: black;
-  line-height: 150%;
+  line-height: 200%;
 }
 
 .section-quote::before {
