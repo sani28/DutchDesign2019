@@ -457,8 +457,8 @@ function initAnimation() {
 
   function scrambleSubheader(){
     $("#hover-subtitle").codex({
-      speed: 65,
-      duration: 400,
+      speed: 80,
+      duration: 600,
       keep_whitespaces: true
     });
   }

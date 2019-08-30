@@ -941,7 +941,7 @@ transform: scale(0.8);}
 
 @media screen and (min-width: 1000px)  {
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
-      padding: 3em;
+      padding: 3em 0;
   }
 }
 
@@ -1020,10 +1020,12 @@ transform: scale(0.8);}
 }
 
 .section-quote {
-  font-size: 0.9em;
-  font-family: maisonNeue-Mono;
+  font-size: 0.95rem;
+  font-family: maisonMono-Regular;
+  text-transform: uppercase;
+  letter-spacing: 0.13rem;
   color: black;
-  line-height: 150%;
+  line-height: 200%;
 }
 
 .section-quote::before {
