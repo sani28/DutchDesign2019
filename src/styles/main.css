@@ -749,10 +749,6 @@ body .cursor__ball circle {
   transition-delay: 0.1s;
 }
 
-.designer-dot.active-dot:hover {
-  background-color: #7D246B;
-}
-
 .dot-unhovered.designer-dot {
   background-color: transparent;
   border: 1px white solid;
@@ -1235,6 +1231,21 @@ body .cursor__ball circle {
     display: none;
   }
 
+  section.transcript {
+    display: grid;
+    grid-template-columns: 1fr 85% 1fr;
+    gap: 1.5em;
+    font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
+  section.transcript #transcript-container {
+    grid-column: 2/-2;
+    width: 100%;
+    height: 90vh;
+    font-family: Maison Neue;
+    line-height: 125%;
+    text-align: left;
+  }
+
   .designer-top-section {
     display: grid;
     grid-template-columns: 1fr 85% 1fr;
@@ -1340,10 +1351,9 @@ body .cursor__ball circle {
 }
 .fullbleed {
   width: 100%;
-  min-height: 300px;
   height: auto;
   background-color: salmon;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
 .designer-footer {

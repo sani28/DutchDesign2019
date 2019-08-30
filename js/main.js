@@ -3,7 +3,7 @@ $(document).ready(function(){
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
   const $smallBall = document.querySelector('.cursor__ball--small');
-  const $hoverables = document.querySelectorAll('.hoverable');
+  var $hoverables = document.querySelectorAll('.hoverable');
 
   //ELEMENTS
   const $designerDots = document.querySelectorAll(".designer-dot");
@@ -117,6 +117,7 @@ function initAnimation() {
     if(interviewsActive){
       for(let i=0; i<$designerDots.length; i++ ){
         $($designerDots[i]).addClass("active-dot");
+        $($designerDots[i]).addClass("hoverable");
       }
       for (let j=0; j<$experienceDots.length; j++){
         $($experienceDots[j]).removeClass("active-dot");
@@ -124,6 +125,7 @@ function initAnimation() {
     } else {
       for (let j=0; j<$experienceDots.length; j++){
         $($experienceDots[j]).addClass("active-dot");
+        $($experienceDots[j]).addClass("hoverable");
       }
       for(let i=0; i<$designerDots.length; i++ ){
         $($designerDots[i]).removeClass("active-dot");
@@ -230,6 +232,24 @@ function initAnimation() {
       case "lexDot":
         $("#lex-preview-vid").removeClass("hiddenUI");
         break;
+      case "valentinDot":
+        $("#valentin-preview-vid").removeClass("hiddenUI");
+        break;
+      case "trulyDot":
+        $("#truly-preview-vid").removeClass("hiddenUI");
+        break;
+      case "nienkeDot":
+        $("#nienke-preview-vid").removeClass("hiddenUI");
+        break;
+      case "jurgenDot":
+        $("#jurgen-preview-vid").removeClass("hiddenUI");
+        break;
+      case "corunumDot":
+        $("#corunum-preview-vid").removeClass("hiddenUI");
+        break;
+      case "florisDot":
+        $("#floris-preview-vid").removeClass("hiddenUI");
+        break;
       case "futuresDot":
         $("#futures-preview-vid").removeClass("hiddenUI");
         break;
@@ -247,6 +267,12 @@ function initAnimation() {
         break
       case "lavaDot":
         $("#lava-preview-vid").removeClass("hiddenUI");
+        break
+      case "aldoDot":
+        $("#aldo-preview-vid").removeClass("hiddenUI");
+        break
+      case "rebeccaDot":
+        $("#rebecca-preview-vid").removeClass("hiddenUI");
         break
     }
     observer.observe();

@@ -100,7 +100,6 @@
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1.5em;
   width: 100%;
-  padding: 6em 0;
   align-items: start;
   width: 100%;
 }
@@ -227,9 +226,6 @@
   outline-offset: -3px;
 }
 
-.photo-section-4 {
-  padding-bottom: 5em;
-}
 .photo-section-4 .layout-item:first-child {
   grid-column: 4/10;
   align-self: flex-end;
@@ -491,7 +487,7 @@ body .cursor__ball circle {
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1em;
   width: 100%;
-  padding: 6em;
+  margin-bottom: 3em;
   align-items: start;
 }
 .photo-section-8 figcaption, .photo-section-7 figcaption, .photo-section-6 figcaption, .photo-section-6-v2 figcaption, .photo-section-5 figcaption, .photo-section-4 figcaption, .photo-section-4-v2 figcaption, .photo-section-3 figcaption, .photo-section-2 figcaption, .photo-section-1 figcaption, .end-caption figcaption {
@@ -653,7 +649,6 @@ body .cursor__ball circle {
 /*-------------- PHOTO SECITON 3  -------------------- */
 .photo-section-3 {
   grid-template-rows: 1fr 1fr;
-  margin-bottom: 10em;
 }
 
 .photo-section-3 .layout-item:first-child {
@@ -1029,7 +1024,6 @@ body .cursor__ball circle {
 
 .photo-section-8 {
   margin-top: -2em;
-  margin-bottom: 30%;
 }
 
 .photo-section-8 figcaption {
@@ -1174,10 +1168,10 @@ a#home:hover {
   grid-column: 0/10;
   padding: 1.5%;
   width: 100vw;
-  height: 30em;
+  height: auto;
   justify-content: center;
   background-size: contain;
-  z-index: 5;
+  margin-bottom: 5em;
 }
 
 .geo-info#right {
@@ -1224,11 +1218,11 @@ a#home:hover {
 }
 
 #appian-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/appian/appian-1.jpg");
+  background-image: url("../../../assets/images/appian/appian_banner.jpg");
 }
 
 #arnhem-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/arnhem/arnhem-8.png");
+  background-image: url("../../../assets/images/arnhem/arnhem_banner.jpg");
 }
 
 #burgundian-photo.exp-landing-photo {
@@ -1264,7 +1258,7 @@ a#home:hover {
 }
 
 #soil-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/soil/ateliernl_section1_img1.jpg");
+  background-image: url("../../../assets/images/soil/ateliernl_banner.jpg");
 }
 
 #milk-photo.exp-landing-photo {
