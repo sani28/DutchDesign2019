@@ -1003,6 +1003,7 @@ body .cursor__ball circle {
 }
 .video-container .video-controls .timeblock {
   margin-top: 5px;
+  margin-left: 1em;
 }
 .video-container .video-controls .timeblock div {
   display: inline-block;
@@ -1015,8 +1016,6 @@ body .cursor__ball circle {
 }
 .video-container .video-controls .vid-buttons {
   margin-top: 5px;
-  margin-left: 2%;
-  width: 6%;
 }
 .video-container .video-controls .vid-buttons button {
   background: none;
@@ -1027,6 +1026,7 @@ body .cursor__ball circle {
   font-family: Maison Neue;
   font-size: 0.75em;
   text-transform: uppercase;
+  padding: 0 1em;
 }
 .video-container .video-controls .vid-buttons button.play:before {
   content: "PLAY";
@@ -1038,7 +1038,9 @@ body .cursor__ball circle {
 }
 .video-container .video-controls .vid-buttons.fs {
   margin-left: auto;
-  margin-right: 2%;
+}
+.video-container .video-controls .vid-buttons.fs #fs {
+  padding-right: 0.6vw;
 }
 
 .play-cursor {
@@ -1240,6 +1242,15 @@ body .cursor__ball circle {
     font-family: Maison Neue;
     line-height: 125%;
     text-align: left;
+  }
+
+  .video-container .video-overlay p {
+    display: none;
+  }
+  .video-container .video-controls {
+    height: 5vh;
+    bottom: 0;
+    margin-bottom: 2em;
   }
 
   .designer-top-section {
