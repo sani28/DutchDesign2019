@@ -1,4 +1,5 @@
 $(window).load(function() {
+
   $('.str4').liMarquee({
     direction: 'up',
     loop:-1,
@@ -8,6 +9,15 @@ $(window).load(function() {
     hoverstop: false,
   });
 });
+
+
+$('.mobile-slider').slick({
+  arrow: false,
+  dots: true,
+  lazyload: true,
+  infinite: true,
+ });
+
 
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
@@ -54,6 +64,7 @@ const nikita = document.getElementById("a").id = "nikita";
 const rocky = document.getElementById("a").id = "rocky";
 const russell = document.getElementById("a").id = "russell";
 const sanny = document.getElementById("a").id = "sanny";
+const team = document.getElementById("a").id = "team";
 
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
