@@ -735,6 +735,10 @@ body .cursor__ball circle {
     user-select: none;
   }
 
+  .tooltip .tooltiptext {
+    font-size: 0.7em;
+  }
+
   /* ------------------ owl carousel  ------------------ */
   :root {
     --main-white-color: white;
