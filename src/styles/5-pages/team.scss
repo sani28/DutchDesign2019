@@ -663,6 +663,10 @@ body .cursor__ball circle {
     z-index: 1;
   }
 
+    h1#mobile-longname {
+      font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    }
+
 
   /*---- mobile team page landingcontent ---- */
 
