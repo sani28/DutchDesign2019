@@ -10,6 +10,13 @@
   src: url(../../../fonts/MaisonMono-Regular.otf)
 }
 
+@font-face {
+  font-family: redaction-bold;
+  src: url(../../../fonts/Redaction-Bold.otf);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 /* --------- GRID LINES ----------------- */
 
 html {
@@ -21,8 +28,8 @@ html {
 
 /* --------- [LADNING] TEAM COPY ----------------- */
 #title {
-  font-family: redaction;
-  font-size: 2em;
+  font-family: redaction-bold;
+  font-size: 1.9em;
   text-align: justify;
   padding-bottom: 5%;
 }
@@ -45,14 +52,14 @@ p.small {
   font-family: maisonNeue-Mono;
   line-height: 200%;
   text-align: justify;
-  font-size: calc(3px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(5px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #para {
     display: grid;
-    grid-row: 11;
+    grid-row: 10;
     grid-column: 12/21;
-    width: 90%;
+    width: 100%;
     text-align: justify;
 }
 
