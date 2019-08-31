@@ -96,6 +96,16 @@ $(document).ready(function() {
         $("#twelve").css("background-image", "url(../assets/2012-BG.svg)");
         $("#eleven").css("background-image", "url(../assets/2011-BG.svg)");
         $("#ten").css("background-image", "url(../assets/2010-BG.svg)");
+        $("#yearten").css("color", "white");
+        $("#yeareleven").css("color", "white");
+        $("#yeartwelve").css("color", "black");
+        $("#yearthirteen").css("color", "white");
+        $("#yearfourteen").css("color", "white");
+        $("#yearfifteen").css("color", "white");
+        $("#yearsixteen").css("color", "white");
+        $("#yearseventeen").css("color", "black");
+        $("#yeareighteen").css("color", "white");
+        $("#yeareighteen").css("color", "white");
       },
 
       function() {
