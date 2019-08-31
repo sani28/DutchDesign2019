@@ -379,48 +379,32 @@ body .cursor__ball circle {
   width: 100vw;
   height: 100vh;
 }
-/* --------------- mobile scale ----------------- */
-// a {
-// 	color: #f4726d;
-// 	text-decoration: none;
-// 	outline: none;
-// }
-//
-// a:hover, a:focus {
-// 	color: #c44d48;
-// }
-// .related {
-// 	text-align: center;
-// 	font-size: 1.25em;
-// 	padding: 3em 0;
-// 	overflow: hidden;
-// }
-//
-// .related a {
-// 	display: inline-block;
-// 	text-align: left;
-// 	margin: 20px auto;
-// 	padding: 10px 20px;
-// 	opacity: 0.8;
-// 	color: #777;
-// 	-webkit-transition: opacity 0.3s;
-// 	transition: opacity 0.3s;
-// 	-webkit-backface-visibility: hidden;
-// }
-// .related a:hover,
-// .related a:active {
-// 	opacity: 1;
-// }
-//
-// .related a img {
-// 	max-width: 100%;
-// }
-//
-// .related a h3 {
-// 	font-weight: 300;
-// 	margin: 0;
-// 	padding: 0.3em 0;
-// }
+/* --------------- PAGINIATION SLIDER ----------------- */
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: none;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 
 /* ----------- TOOLTIP FOR TEAM NAMES ----------------- */
 .tooltip {
@@ -534,6 +518,7 @@ body .cursor__ball circle {
 }
 /* ------------------ MEDIA QUERIES  ------------------ */
 @media only screen and (max-width: 900px) {
+
   #team-bio {
     grid-column: 1/15;
     grid-row: 4/6;
@@ -644,9 +629,11 @@ body .cursor__ball circle {
 
 /* _________________________ DESKTOP ________________________ */
 @media screen and (min-width: 800px) {
-  .mobile-team-container {
+
+  .mobile-team-container, .swiper-container, .swiper-slide {
     display: none;
   }
+
 
   #para-mobile {
     display: none;
@@ -660,7 +647,37 @@ body .cursor__ball circle {
 /* _____________________ MOBILE __________________________ */
 @media screen and (max-width: 800px) {
 
+  .swiper-container {
+
+  }
+
+  .swiper-slide:nth-child(1) {
+    background: none;
+  }
+
+  .swiper-slide{
+    background-color: black;
+  }
+
+  .photo-section {
+    z-index: 1;
+  }
+
+
   /*---- mobile team page landingcontent ---- */
+
+  .bg-mobile {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../assets/images/team/teampageBG.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    opacity: 1;
+    z-index: -1;
+    position: absolute;
+  }
+
   #para {
     display: none;
   }
@@ -668,6 +685,12 @@ body .cursor__ball circle {
   #team-blurb {
     width: 80%;
     display: block;
+  }
+
+  #team-blurb-mobile {
+    width: 70vw;
+    padding:0;
+    margin:0;
   }
 
   #para-mobile {
@@ -714,10 +737,14 @@ body .cursor__ball circle {
   }
 
   .circle-nav-container {
-    display: inline-flex;
-    justify-content: center;
-    width: 100vw;
+    display: none;
   }
+
+  // .circle-nav-container {
+  //   display: inline-flex;
+  //   justify-content: center;
+  //   width: 100vw;
+  // }
 
   .dotstyle ul {
     display: grid;

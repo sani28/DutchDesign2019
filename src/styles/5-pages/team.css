@@ -433,7 +433,31 @@ body .cursor__ball circle {
   height: 100vh;
 }
 
-/* --------------- mobile scale ----------------- */
+/* --------------- PAGINIATION SLIDER ----------------- */
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: none;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
 /* ----------- TOOLTIP FOR TEAM NAMES ----------------- */
 .tooltip {
   position: relative;
@@ -645,7 +669,7 @@ body .cursor__ball circle {
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 /* _________________________ DESKTOP ________________________ */
 @media screen and (min-width: 800px) {
-  .mobile-team-container {
+  .mobile-team-container, .swiper-container, .swiper-slide {
     display: none;
   }
 
@@ -659,7 +683,31 @@ body .cursor__ball circle {
 }
 /* _____________________ MOBILE __________________________ */
 @media screen and (max-width: 800px) {
+  .swiper-slide:nth-child(1) {
+    background: none;
+  }
+
+  .swiper-slide {
+    background-color: black;
+  }
+
+  .photo-section {
+    z-index: 1;
+  }
+
   /*---- mobile team page landingcontent ---- */
+  .bg-mobile {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../assets/images/team/teampageBG.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    opacity: 1;
+    z-index: -1;
+    position: absolute;
+  }
+
   #para {
     display: none;
   }
@@ -667,6 +715,12 @@ body .cursor__ball circle {
   #team-blurb {
     width: 80%;
     display: block;
+  }
+
+  #team-blurb-mobile {
+    width: 70vw;
+    padding: 0;
+    margin: 0;
   }
 
   #para-mobile {
@@ -713,9 +767,7 @@ body .cursor__ball circle {
   }
 
   .circle-nav-container {
-    display: inline-flex;
-    justify-content: center;
-    width: 100vw;
+    display: none;
   }
 
   .dotstyle ul {
