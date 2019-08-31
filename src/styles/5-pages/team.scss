@@ -5,7 +5,6 @@
   font-weight: bold;
 }
 
-
 @font-face {
   font-family: maisonMono-Regular;
   src: url(../../../fonts/MaisonMono-Regular.otf)
@@ -17,6 +16,7 @@ html {
   background-color: #000;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
+  font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
 }
 
 /* --------- [LADNING] TEAM COPY ----------------- */
@@ -667,7 +667,6 @@ body .cursor__ball circle {
       font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     }
 
-
   /*---- mobile team page landingcontent ---- */
 
   .bg-mobile {
@@ -682,13 +681,12 @@ body .cursor__ball circle {
     position: absolute;
   }
 
-  #para {
+  #para, #team-blurb {
     display: none;
   }
 
-  #team-blurb {
-    width: 80%;
-    display: block;
+  .bg {
+    display: none;
   }
 
   #team-blurb-mobile {
@@ -696,18 +694,18 @@ body .cursor__ball circle {
     padding:0;
     margin:0;
   }
+  //
+  // #para-mobile {
+  //   width: 90%;
+  //   font-size: 17px;
+  // }
 
-  #para-mobile {
-    width: 90%;
-    font-size: 17px;
-  }
-
-  .bg {
-    object-fit: fill;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-  }
+  // .bg {
+  //   object-fit: fill;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   z-index: -1;
+  // }
 
   .photo-section {
     transform: scale(0.9);
@@ -770,104 +768,3 @@ body .cursor__ball circle {
   .tooltip .tooltiptext {
     font-size: 0.7em;
   }
-
-                        /* ------------------ owl carousel  ------------------ */
-                        :root {
-                          --main-white-color: white;
-                        }
-
-                        .static {
-                          position: static;
-                        }
-
-                        .cover {
-                          background-size: cover;
-                          background-position: center;
-                          background-repeat: no-repeat;
-                        }
-
-                        .owl-carousel .owl-slide {
-                          position: relative;
-                          height: 80vh;
-                          background-color: none;
-                        }
-
-                        .owl-carousel .owl-slide-animated {
-                          -webkit-transform: translateX(20px);
-                          transform: translateX(20px);
-                          opacity: 0;
-                          visibility: hidden;
-                          transition: all 0.05s;
-                        }
-
-                        .owl-carousel .owl-slide-animated.is-transitioned {
-                          -webkit-transform: none;
-                          transform: none;
-                          opacity: 1;
-                          visibility: visible;
-                          transition: all 0.5s;
-                        }
-
-                        .owl-carousel .owl-slide-title.is-transitioned {
-                          transition-delay: 0.2s;
-                        }
-
-                        .owl-carousel .owl-slide-subtitle.is-transitioned {
-                          transition-delay: 0.35s;
-                        }
-
-                        .owl-carousel .owl-slide-cta.is-transitioned {
-                          transition-delay: 0.5s;
-                        }
-
-                        .owl-carousel,
-                        .owl-carousel .owl-dots {
-                          position: absolute;
-                        }
-
-                        .owl-dots {
-                          position: absolute;
-                          bottom: 0;
-                          left: 0;
-                          display: block;
-                          width: 100vw;
-                          height: 30px;
-                        }
-
-                        .owl-carousel .owl-dots .owl-dot,
-                        .owl-carousel .owl-nav [class*="owl-"]:focus {
-                          outline: none;
-                        }
-
-                        .owl-carousel .owl-dots .owl-dot span {
-                          background: transparent;
-                          border: 2px solid var(--main-white-color);
-                          transition: all 0.2s ease;
-                        }
-
-                        .owl-carousel .owl-dots .owl-dot.active span,
-                        .owl-carousel .owl-dots .owl-dot:hover span {
-                          background: var(--main-white-color);
-                          transform: scale(1.5);
-                        }
-
-                        .owl-carousel .owl-nav {
-                          left: 50%;
-                          top: 10%;
-                          -webkit-transform: translateX(-50%);
-                          transform: translateX(-50%);
-                          margin: 0;
-                        }
-
-                        .owl-carousel .owl-nav button:hover svg {
-                          opacity: 1;
-                        }
-
-                        .owl-carousel .owl-nav [class*="owl-"]:hover {
-                          background: transparent;
-                        }
-
-                        section {
-                          display: none;
-                        }
-                      }
