@@ -526,7 +526,7 @@ body .cursor__ball circle {
     width: 100vw;
     background-color: black;
     padding-left: 10%;
-    padding-top: 10%;
+    margin-bottom: 15%;
   }
 
   .portfolio-link {
@@ -646,6 +646,7 @@ body .cursor__ball circle {
 
 /* _____________________ MOBILE __________________________ */
 @media screen and (max-width: 800px) {
+
 
   .swiper-container {
 
@@ -768,3 +769,4 @@ body .cursor__ball circle {
   .tooltip .tooltiptext {
     font-size: 0.7em;
   }
+}
