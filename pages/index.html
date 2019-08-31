@@ -15,6 +15,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
   <script type="text/javascript" src="../js/jquery.codex.js"></script>
   <script type="text/javascript" src="../js/cursor.js" async defer></script>
+  <script type="text/javascript" src="../js/slick.min.js"></script>
   <script type="text/javascript" src="../js/main.js" async defer></script>
 
 </head>
@@ -22,31 +23,31 @@
 <body>
   <div id="grid-overlay" class="hiddenUI"></div>
   <div class="bg-video-container">
-    <video class="bg-preview-video hiddenUI" id="lex-preview-vid"  autoplay muted loop playsinline>
+    <video class="bg-preview-video hiddenUI" id="lex-preview-vid" preload="none" autoplay muted loop playsinline>
       <source src="../assets/videos/preview_lex.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="bg-preview-video hiddenUI" id="truly-preview-vid"  autoplay muted loop playsinline>
+    <video class="bg-preview-video hiddenUI" id="truly-preview-vid" preload="none" autoplay muted loop playsinline>
       <source src="../assets/videos/preview_truly.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="bg-preview-video hiddenUI" id="jurgen-preview-vid"  autoplay muted loop playsinline>
+    <video class="bg-preview-video hiddenUI" id="jurgen-preview-vid" preload="none" autoplay muted loop playsinline>
       <source src="../assets/videos/preview_jurgen.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="bg-preview-video hiddenUI" id="nienke-preview-vid"  autoplay muted loop playsinline>
+    <video class="bg-preview-video hiddenUI" id="nienke-preview-vid" preload="none" autoplay muted loop playsinline>
       <source src="../assets/videos/preview_nienke.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="bg-preview-video hiddenUI" id="valentin-preview-vid"  autoplay muted loop playsinline>
+    <video class="bg-preview-video hiddenUI" id="valentin-preview-vid" preload="none" autoplay muted loop playsinline>
       <source src="../assets/videos/preview_valentin.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="bg-preview-video hiddenUI" id="floris-preview-vid"  autoplay muted loop playsinline>
+    <video class="bg-preview-video hiddenUI" id="floris-preview-vid" preload="none" autoplay muted loop playsinline>
       <source src="../assets/videos/preview_floris.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
-    <video class="bg-preview-video hiddenUI" id="corunum-preview-vid"  autoplay muted loop playsinline>
+    <video class="bg-preview-video hiddenUI" id="corunum-preview-vid" preload="none" autoplay muted loop playsinline>
       <source src="../assets/videos/preview_corunum.mp4" type="video/mp4">
       Your browser doesn't support HTML5 videos.
     </video>
@@ -271,6 +272,24 @@
       <a href="#" class="landing-toggle active hoverable" id="toggle-int"> Films </a>
       <a href="#" class="landing-toggle hoverable" id="toggle-field">Field Notes</a>
     </nav>
+
+
+    <div class="mobile-video-container">
+      <div class="mobile-video-slider">
+        <div class="blurb-container" id="mobile-blurb">
+          <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing platform for field research, observation, and reportage. The protagonists are individuals who define their own worlds; who blur and destroy boundaries,
+            definitions, and limitations. It attempts to make Dutch design culture fleetingly visible while leaving space for it to describe itself.</h1>
+        </div>
+        <video class="lozad bg-mobile-video" id="rebecca-preview-vid" preload="none" autoplay muted loop playsinline >
+          <source data-src="../assets/videos/floris-mobile.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="lozad bg-mobile-video" id="aldo-preview-vid" preload="none" autoplay muted loop playsinline >
+          <source data-src="../assets/videos/reglaze-mobile.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+      </div>
+    </div>
   </div> <!-- grid ends here -->
 </body>
 </html>

@@ -469,4 +469,17 @@ function initAnimation() {
     }
   }
 
+
+  //////////////// MOBILE ONLY ///////////////////////////
+  $('.mobile-video-slider').slick({
+    draggable: true,
+    swipeToSlide: true,
+    lazyload: 'ondemand',
+    infinite: true,
+    fade: true,
+    centerMode: true,
+    slidesToShow: 1
+   });
+
+
 }); //DOCREADY DON'T DELETE

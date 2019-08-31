@@ -9,6 +9,7 @@ $secondary-purp: #7D246B;
 @import './2-modules/background';
 @import './2-modules/mobile';
 
+
 *,
 html {
   color: black;
@@ -770,24 +771,6 @@ body .cursor__ball circle {
     }
   }
 }
-
-/* mobile views */
-
-.mobile-photo-container {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-slider {
-  width: 70%;
-}
-
-.slick-dots li{
-transform: scale(0.8);}
-
-
 
 
 .fullbleed {
