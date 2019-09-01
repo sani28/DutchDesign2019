@@ -226,7 +226,7 @@
           <li id="farm">Farm Life</li>
         </a>
         <a href="./fieldnotes/texels.html" class="hoverable">
-          <li id="texels">Texels</li>
+          <li id="texels">Texel</li>
         </a>
         <a href="./fieldnotes/black.html" class="hoverable">
           <li id="burgundy">Burgundian Black</li>
@@ -282,25 +282,47 @@
       </nav>
 
       <nav id="mobile-sidenav" class="sidenav">
+        <nav class="mobile-toggle" id="sn-toggle">
+          <a href="#" class="content-toggle active" id="sidenav-filks">Films</a>
+          <a href="#" class="content-toggle" id="sidenav-fieldnotes">Field Notes</a>
+        </nav>
         <a href="javascript:void(0)" class="closebtn" id="sidenav-close">&times;</a>
-        <a class="mobile-nav-item" href="./wid.html">What is Design</a>
-        <a class="mobile-nav-item" href="./reglaze-html">Reglaze</a>
-        <a class="mobile-nav-item" href="./studio-matthews.html">Studio Matthews</a>
-        <a class="mobile-nav-item" href="./intentional-futures.html">Intentional Futures</a>
-        <a class="mobile-nav-item" href="./pepe-heykoop.html">Pepe Heykoop</a>
-        <a class="mobile-nav-item" href="./ineke-hans.html">Ineke Hans</a>
-        <a class="mobile-nav-item" href="./lava.html">LAVA Amsterdam</a>
-        <a class="mobile-nav-item" href="./momkai.html">Momkai</a>
-        <a class="mobile-nav-item" href="./aldo-bakker.html">Aldo Bakker</a>
-        <a class="mobile-nav-item" href="./rebecca-geskus.html">Rebecca Geskus</a>
-        <a class="mobile-nav-item" href="./cor-unum.html">Cor Unum</a>
-        <a class="mobile-nav-item" href="./floris-hovers.html">Floris Hovers</a>
-        <a class="mobile-nav-item" href="./valentin-loellmann.html">Valentin Loellmann</a>
-        <a class="mobile-nav-item" href="./lex-pott.html">Lex Pott</a>
-        <a class="mobile-nav-item" href="./jurgen-bey.html">Studio Makkink & Bey</a>
-        <a class="mobile-nav-item" href="./nienke-hoogvliet.html">Nienke Hoogvliet</a>
-        <a class="mobile-nav-item" href="./truly-truly.html">Studio Truly Truly</a>
-        <a class="mobile-nav-item" href="./main-studio.html">Main Studio</a>
+        <div class="sidenav-list" id="mobile-designers-list">
+          <a class="mobile-nav-item" href="./wid.html">What is Design</a>
+          <a class="mobile-nav-item" href="./reglaze-html">Reglaze</a>
+          <a class="mobile-nav-item" href="./studio-matthews.html">Studio Matthews</a>
+          <a class="mobile-nav-item" href="./intentional-futures.html">Intentional Futures</a>
+          <a class="mobile-nav-item" href="./pepe-heykoop.html">Pepe Heykoop</a>
+          <a class="mobile-nav-item" href="./ineke-hans.html">Ineke Hans</a>
+          <a class="mobile-nav-item" href="./lava.html">LAVA Amsterdam</a>
+          <a class="mobile-nav-item" href="./momkai.html">Momkai</a>
+          <a class="mobile-nav-item" href="./aldo-bakker.html">Aldo Bakker</a>
+          <a class="mobile-nav-item" href="./rebecca-geskus.html">Rebecca Geskus</a>
+          <a class="mobile-nav-item" href="./cor-unum.html">Cor Unum</a>
+          <a class="mobile-nav-item" href="./floris-hovers.html">Floris Hovers</a>
+          <a class="mobile-nav-item" href="./valentin-loellmann.html">Valentin Loellmann</a>
+          <a class="mobile-nav-item" href="./lex-pott.html">Lex Pott</a>
+          <a class="mobile-nav-item" href="./jurgen-bey.html">Studio Makkink & Bey</a>
+          <a class="mobile-nav-item" href="./nienke-hoogvliet.html">Nienke Hoogvliet</a>
+          <a class="mobile-nav-item" href="./truly-truly.html">Studio Truly Truly</a>
+          <a class="mobile-nav-item" href="./main-studio.html">Main Studio</a>
+        </div>
+        <div class="sidenav-list hiddenUI" id="mobile-fieldnotes-list">
+          <a class="mobile-nav-item" href="">Arnhem</a>
+          <a class="mobile-nav-item" href="">Roma</a>
+          <a class="mobile-nav-item" href="">Appian Way</a>
+          <a class="mobile-nav-item" href="">Andrea's Workshop</a>
+          <a class="mobile-nav-item" href="">Farm Life</a>
+          <a class="mobile-nav-item" href="">Texel</a>
+          <a class="mobile-nav-item" href="">Burgundian Black</a>
+          <a class="mobile-nav-item" href="">Claudy's Workshop</a>
+          <a class="mobile-nav-item" href="">'T Melkhuisje</a>
+          <a class="mobile-nav-item" href="">Cantillion Brewery</a>
+          <a class="mobile-nav-item" href="">Curiosity</a>
+          <a class="mobile-nav-item" href="">Dyes</a>
+          <a class="mobile-nav-item" href="">Local Soil</a>
+          <a class="mobile-nav-item" href="">Behind the Scenes</a>
+        </div>
       </nav>
 
       <div class="mobile-video-slider">
@@ -308,12 +330,28 @@
           <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing platform for field research, observation, and reportage. The protagonists are individuals who define their own worlds; who blur and destroy boundaries,
             definitions, and limitations. It attempts to make Dutch design culture fleetingly visible while leaving space for it to describe itself.</h1>
         </div>
-        <video class="lozad bg-mobile-video" id="floris-mobile-vid" preload="none" autoplay muted loop playsinline data-title="FLORIS HOVERS" data-subtitle="RAAMSDONKSVEER // PRODUCT">
-          <source data-src="../assets/videos/floris-mobile.mp4" type="video/mp4">
+        <video class="lozad bg-mobile-video" id="reglaze-mobile-vid" preload="none" autoplay muted loop playsinline data-title="REGLAZE" data-subtitle="SHORT FILM">
+          <source data-src="../assets/videos/mobile-reglaze.mp4" type="video/mp4">
           Your browser doesn't support HTML5 videos.
         </video>
-        <video class="lozad bg-mobile-video" id="reglaze-mobile-vid" preload="none" autoplay muted loop playsinline data-title="REGLAZE" data-subtitle="SHORT FILM">
-          <source data-src="../assets/videos/reglaze-mobile.mp4" type="video/mp4">
+        <video class="lozad bg-mobile-video" id="aldo-mobile-vid" preload="none" autoplay muted loop playsinline data-title="ALDO BAKKER" data-subtitle="AMSTERDAM // PRODUCT">
+          <source data-src="../assets/videos/mobile-aldo.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="lozad bg-mobile-video" id="corunum-mobile-vid" preload="none" autoplay muted loop playsinline data-title="COR UNUM" data-subtitle="DEN BOSCH // CERAMICS">
+          <source data-src="../assets/videos/mobile-corunum.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="lozad bg-mobile-video" id="floris-mobile-vid" preload="none" autoplay muted loop playsinline data-title="FLORIS HOVERS" data-subtitle="RAAMSDONKSVEER // PRODUCT">
+          <source data-src="../assets/videos/mobile-floris.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="lozad bg-mobile-video" id="futures-mobile-vid" preload="none" autoplay muted loop playsinline data-title="INTENTIONAL FUTURES" data-subtitle="SEATTLE // DIGITAL">
+          <source data-src="../assets/videos/mobile-if.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="lozad bg-mobile-video" id="matthews-mobile-vid" preload="none" autoplay muted loop playsinline data-title="STUDIO MATTHEWS" data-subtitle="SEATTLE // BRANDING">
+          <source data-src="../assets/videos/mobile-sm.mp4" type="video/mp4">
           Your browser doesn't support HTML5 videos.
         </video>
       </div>
