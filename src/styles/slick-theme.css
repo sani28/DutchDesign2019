@@ -161,7 +161,6 @@
 .slick-dots li button:before
 {
 
-
     font-family: 'slick';
     font-size: 60px;
     line-height: 1;
@@ -192,3 +191,10 @@
     color: white;
     background-color: white;
 }
+
+/* .slick-dots li:nth-child(7) {
+  background: white;
+  border-radius: 50%;
+  left: -10px;
+  top: -10px;
+} */

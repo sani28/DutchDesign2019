@@ -319,17 +319,17 @@ class HoverImgFx1 {
         }
       })
       .add('begin')
-      .add(new TweenMax(this.DOM.revealInner, 0.2, {
+      .add(new TweenMax(this.DOM.revealInner, 0.3, {
         ease: Sine.easeOut,
         startAt: {
-          x: '-100%'
+          x: '0%'
         },
         x: '0%'
       }), 'begin')
-      .add(new TweenMax(this.DOM.revealImg, 0.2, {
+      .add(new TweenMax(this.DOM.revealImg, 0.3, {
         ease: Sine.easeOut,
         startAt: {
-          x: '100%'
+          x: '0%'
         },
         x: '0%'
       }), 'begin');
@@ -354,14 +354,14 @@ class HoverImgFx1 {
         }
       })
       .add('begin')
-      .add(new TweenMax(this.DOM.revealInner, 0.2, {
+      .add(new TweenMax(this.DOM.revealInner, 0.1, {
         ease: Sine.easeOut,
-        x: '100%'
+        x: '0%'
       }), 'begin')
 
-      .add(new TweenMax(this.DOM.revealImg, 0.2, {
+      .add(new TweenMax(this.DOM.revealImg, 0.1, {
         ease: Sine.easeOut,
-        x: '-100%'
+        x: '0%'
       }), 'begin');
   }
 }

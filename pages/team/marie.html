@@ -21,8 +21,11 @@
   <div class="grid-layout-container">
 
     <!-- BACK BTN  ------------->
-    <div class="back-btn">
-      <a href="../index.html" class="hoverable" id="back">⬤</a>
+    <div id="back-btn">
+      <a href="../index.html" id="home">
+        <span class="home-dot"></span>
+        <p id="home-text">BACK HOME</p>
+      </a>
     </div>
 
     <!-- TEAM BIO ------------->
@@ -37,10 +40,10 @@
 
     <div class="photo-section">
       <div class="str4">
-        <div id="ps-1"><img src="../team/marie/marie-1.jpg" id="teamphoto-1"></img></div>
-        <div id="ps-2"><img src="../team/marie/marie-2.jpg" id="teamphoto-2"></img></div>
-        <div id="ps-3"><img src="../team/marie/marie-3.jpg" id="teamphoto-3"></img></div>
-        <div id="p3-4"><img src="../team/marie/marie-4.jpg" id="teamphoto-4"></img></div>
+        <div id="ps-1"><img src="../../assets/images/marie/marie-1.jpg" id="teamphoto-1"></img></div>
+        <div id="ps-2"><img src="../../assets/images/marie/marie-2.jpg" id="teamphoto-2"></img></div>
+        <div id="ps-3"><img src="../../assets/images/marie/marie-3.jpg" id="teamphoto-3"></img></div>
+        <div id="p3-4"><img src="../../assets/images/marie/marie-4.jpg" id="teamphoto-4"></img></div>
       </div>
     </div>
 
@@ -49,20 +52,20 @@
     <div class="circle-nav-container">
       <div class="dotstyle dotstyle-scaleup team-item">
         <ul>
-          <li><a href="team.html"></a></li>
-          <li><a href="russell.html"></a></li>
-          <li><a href="alex.html"></a></li>
-          <li><a href="gabe.html"></a></li>
-          <li><a href="brandon.html"></a></li>
-          <li><a href="marie.html"></a></li>
-          <li><a href="breanne.html"></a></li>
-          <li class="current"><a href="marie.html"></a></li>
-          <li><a href="jenny.html"></a></li>
-          <li><a href="rocky.html"></a></li>
-          <!-- <li><a href="linda.html"></a></li> -->
-          <li><a href="nikita.html"></a></li>
-          <li><a href="sanny.html"></a></li>
-          <li><a href="marine.html"></a></li>
+          <div class="tooltip"><li><a href="team.html"></a></li><span class="tooltiptext">Team</span></div>
+          <div class="tooltip"><li><a href="alex.html" id="alex" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Alex Fung</span></div>
+          <div class="tooltip"><li><a href="angus.html" id="angus" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Angus Lei</span></div>
+          <div class="tooltip"><li><a href="brandon.html" id="brandon" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Brandon Lal</span></div>
+          <div class="tooltip"><li><a href="breanne.html" id="breanne" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Breanne Lewis</span></div>
+          <div class="tooltip"><li><a href="gabe.html" id="gabe" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Gabe Hendry</span></div>
+          <div class="tooltip"><li><a href="jenny.html" id="jenny" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Jenny Nguyen</span></div>
+          <div class="tooltip"><li><a href="linda.html" id="linda" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Linda Shu</span></div>
+          <div class="tooltip"><li class="current"><a href="marie.html" id="marie"></a></li><span class="tooltiptext">Marie Louka</span></div>
+          <div class="tooltip"><li><a href="marine.html" id="marine" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Marine Au Yeung</span></div>
+          <div class="tooltip"><li><a href="nikita.html" id="nikita" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Nikita Tauro</span></div>
+          <div class="tooltip"><li><a href="rocky.html" id="rocky" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Rocky Shah</span></div>
+          <div class="tooltip"><li><a href="russell.html" id="russell" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Russell Taylor</span></div>
+          <div class="tooltip"><li><a href="sanny.html" id="sanny" data-img="https://via.placeholder.com/650x550.png" data-fx="1" id="imgHover"></a></li><span class="tooltiptext">Sanny Trinh</span></div>
         </ul>
       </div>
     </div>
@@ -87,5 +90,5 @@
 </body>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-
+<script src="./script.js"></script>
 </html>
