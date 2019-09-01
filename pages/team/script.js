@@ -43,7 +43,7 @@ class HoverImgFx1 {
         left: document.body.scrollLeft + document.documentElement.scrollLeft,
         top: document.body.scrollTop + document.documentElement.scrollTop
       };
-      this.DOM.reveal.style.top = `${mousePos.y-570-docScrolls.top}px`;
+      this.DOM.reveal.style.top = `${mousePos.y-600-docScrolls.top}px`;
       this.DOM.reveal.style.left = `${mousePos.x+20-docScrolls.left}px`;
 
       if (mousePos.x > 650) {
@@ -126,62 +126,3 @@ class HoverImgFx1 {
 }
 
 [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
-
-/*JS way for setting height: 100vh to slides' height*/
-// const $slides = $(".owl-carousel .owl-slide");
-// $slides.css("height", $(window).height());
-// $(window).resize(() => {
-//  $slides.css("height", $(window).height());
-// });
-//
-// $(".owl-carousel").on("initialized.owl.carousel", () => {
-//   setTimeout(() => {
-//     $(".owl-item.active .owl-slide-animated").addClass("is-transitioned");
-//     $("section").show();
-//   }, 200);
-// });
-//
-// const $owlCarousel = $(".owl-carousel").owlCarousel({
-//   items: 1,
-//   loop: true,
-//   nav: true,
-//   navText: [
-//   ''] });
-//
-//
-// $owlCarousel.on("changed.owl.carousel", e => {
-//   $(".owl-slide-animated").removeClass("is-transitioned");
-//
-//   const $currentOwlItem = $(".owl-item").eq(e.item.index);
-//   $currentOwlItem.find(".owl-slide-animated").addClass("is-transitioned");
-//
-//   const $target = $currentOwlItem.find(".owl-slide-text");
-//   doDotsCalculations($target);
-// });
-//
-// $owlCarousel.on("resize.owl.carousel", () => {
-//   setTimeout(() => {
-//     setOwlDotsPosition();
-//   }, 50);
-// });
-//
-//
-// $owlCarousel.trigger("refresh.owl.carousel");
-//
-// setOwlDotsPosition();
-//
-// function setOwlDotsPosition() {
-//   const $target = $(".owl-item.active .owl-slide-text");
-//   doDotsCalculations($target);
-// }
-//
-// function doDotsCalculations(el) {
-//   const height = el.height();
-//   const { top, left } = el.position();
-//   const res = height + top + 200;
-//
-//   $(".owl-carousel .owl-dots").css({
-//     top: `${res}px`,
-//     left: `${left}px` });
-//
-// }

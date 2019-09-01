@@ -5,18 +5,31 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: maisonMono-Regular;
+  src: url(../../../fonts/MaisonMono-Regular.otf)
+}
+
+@font-face {
+  font-family: redaction-bold;
+  src: url(../../../fonts/Redaction-Bold.otf);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 /* --------- GRID LINES ----------------- */
 
 html {
   background-color: #000;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
+  font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
 }
 
 /* --------- [LADNING] TEAM COPY ----------------- */
 #title {
-  font-family: redaction;
-  font-size: 2em;
+  font-family: redaction-bold;
+  font-size: 1.9em;
   text-align: justify;
   padding-bottom: 5%;
 }
@@ -39,14 +52,14 @@ p.small {
   font-family: maisonNeue-Mono;
   line-height: 200%;
   text-align: justify;
-  font-size: calc(3px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(5px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #para {
     display: grid;
-    grid-row: 11;
+    grid-row: 10;
     grid-column: 12/21;
-    width: 90%;
+    width: 100%;
     text-align: justify;
 }
 
@@ -132,7 +145,6 @@ transform: scale(0.8);
   transform: scale(0.8);
 }
 
-
 /* --------- [INDIVIDUAL] TEAM COPY ----------------- */
 
 
@@ -142,7 +154,7 @@ transform: scale(0.8);
   grid-column: 8/16;
   line-height: 210%;
   text-align: justify;
-  z-index: 99;
+  z-index: 1;
   max-height: 500px;
 }
 
@@ -374,48 +386,32 @@ body .cursor__ball circle {
   width: 100vw;
   height: 100vh;
 }
-/* --------------- mobile scale ----------------- */
-// a {
-// 	color: #f4726d;
-// 	text-decoration: none;
-// 	outline: none;
-// }
-//
-// a:hover, a:focus {
-// 	color: #c44d48;
-// }
-// .related {
-// 	text-align: center;
-// 	font-size: 1.25em;
-// 	padding: 3em 0;
-// 	overflow: hidden;
-// }
-//
-// .related a {
-// 	display: inline-block;
-// 	text-align: left;
-// 	margin: 20px auto;
-// 	padding: 10px 20px;
-// 	opacity: 0.8;
-// 	color: #777;
-// 	-webkit-transition: opacity 0.3s;
-// 	transition: opacity 0.3s;
-// 	-webkit-backface-visibility: hidden;
-// }
-// .related a:hover,
-// .related a:active {
-// 	opacity: 1;
-// }
-//
-// .related a img {
-// 	max-width: 100%;
-// }
-//
-// .related a h3 {
-// 	font-weight: 300;
-// 	margin: 0;
-// 	padding: 0.3em 0;
-// }
+/* --------------- PAGINIATION SLIDER ----------------- */
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: none;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 
 /* ----------- TOOLTIP FOR TEAM NAMES ----------------- */
 .tooltip {
@@ -529,6 +525,7 @@ body .cursor__ball circle {
 }
 /* ------------------ MEDIA QUERIES  ------------------ */
 @media only screen and (max-width: 900px) {
+
   #team-bio {
     grid-column: 1/15;
     grid-row: 4/6;
@@ -536,7 +533,7 @@ body .cursor__ball circle {
     width: 100vw;
     background-color: black;
     padding-left: 10%;
-    padding-top: 10%;
+    margin-bottom: 15%;
   }
 
   .portfolio-link {
@@ -635,14 +632,15 @@ body .cursor__ball circle {
   background-position: 50% 50%;
 }
 
-
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 
 /* _________________________ DESKTOP ________________________ */
 @media screen and (min-width: 800px) {
-  .mobile-team-container {
+
+  .mobile-team-container, .swiper-container, .swiper-slide {
     display: none;
   }
+
 
   #para-mobile {
     display: none;
@@ -654,29 +652,89 @@ body .cursor__ball circle {
 }
 
 /* _____________________ MOBILE __________________________ */
+
+@media screen and (max-width: 900px) {
+    .circle-nav-container {
+      display: flex;
+      position: absolute;
+      left:0;
+      width: 90vw;
+      justify-content: space-around;
+      align-items: center;
+      height: 55px;
+      z-index: 10;
+    }
+
+    .dotstyle ul {
+      display: grid;
+      grid: repeat(1, 7vh)/repeat(15, 5.5vw);
+      width: 80%;
+    }
+
+}
 @media screen and (max-width: 800px) {
 
+
+  .swiper-container {
+
+  }
+
+  .swiper-slide:nth-child(1) {
+    background: none;
+  }
+
+  .swiper-slide{
+    background-color: black;
+    z-index: -1;
+  }
+
+  .photo-section {
+    z-index: -1;
+  }
+
+    h1#mobile-longname {
+      font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    }
+
   /*---- mobile team page landingcontent ---- */
-  #para {
+
+  .bg-mobile {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../assets/images/team/teampageBG.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    opacity: 1;
+    z-index: -1;
+    position: absolute;
+  }
+
+  #para, #team-blurb {
     display: none;
   }
 
-  #team-blurb {
-    width: 80%;
-    display: block;
-  }
-
-  #para-mobile {
-    width: 90%;
-    font-size: 17px;
-  }
-
   .bg {
-    object-fit: fill;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+    display: none;
   }
+
+  #team-blurb-mobile {
+    width: 70vw;
+    padding:0;
+    margin:0;
+  }
+  //
+  // #para-mobile {
+  //   width: 90%;
+  //   font-size: 17px;
+  // }
+
+  // .bg {
+  //   object-fit: fill;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   z-index: -1;
+  // }
 
   .photo-section {
     transform: scale(0.9);
@@ -702,109 +760,41 @@ body .cursor__ball circle {
   }
 
   .slick-dots li{
-  transform: scale(0.6);
+    transform: scale(0.6);
   }
 
+  .hover-reveal {
+    display: none;
+  }
 
+  .circle-nav-container {
+    display: none;
+  }
 
+  // .circle-nav-container {
+  //   display: inline-flex;
+  //   justify-content: center;
+  //   width: 100vw;
+  // }
 
-                        /* ------------------ owl carousel  ------------------ */
-                        :root {
-                          --main-white-color: white;
-                        }
+  .dotstyle ul {
+    display: grid;
+    grid: repeat(1, 7vh)/repeat(15, 6.5vw);
+    margin-top: 0;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
-                        .static {
-                          position: static;
-                        }
-
-                        .cover {
-                          background-size: cover;
-                          background-position: center;
-                          background-repeat: no-repeat;
-                        }
-
-                        .owl-carousel .owl-slide {
-                          position: relative;
-                          height: 80vh;
-                          background-color: none;
-                        }
-
-                        .owl-carousel .owl-slide-animated {
-                          -webkit-transform: translateX(20px);
-                          transform: translateX(20px);
-                          opacity: 0;
-                          visibility: hidden;
-                          transition: all 0.05s;
-                        }
-
-                        .owl-carousel .owl-slide-animated.is-transitioned {
-                          -webkit-transform: none;
-                          transform: none;
-                          opacity: 1;
-                          visibility: visible;
-                          transition: all 0.5s;
-                        }
-
-                        .owl-carousel .owl-slide-title.is-transitioned {
-                          transition-delay: 0.2s;
-                        }
-
-                        .owl-carousel .owl-slide-subtitle.is-transitioned {
-                          transition-delay: 0.35s;
-                        }
-
-                        .owl-carousel .owl-slide-cta.is-transitioned {
-                          transition-delay: 0.5s;
-                        }
-
-                        .owl-carousel,
-                        .owl-carousel .owl-dots {
-                          position: absolute;
-                        }
-
-                        .owl-dots {
-                          position: absolute;
-                          bottom: 0;
-                          left: 0;
-                          display: block;
-                          width: 100vw;
-                          height: 30px;
-                        }
-
-                        .owl-carousel .owl-dots .owl-dot,
-                        .owl-carousel .owl-nav [class*="owl-"]:focus {
-                          outline: none;
-                        }
-
-                        .owl-carousel .owl-dots .owl-dot span {
-                          background: transparent;
-                          border: 2px solid var(--main-white-color);
-                          transition: all 0.2s ease;
-                        }
-
-                        .owl-carousel .owl-dots .owl-dot.active span,
-                        .owl-carousel .owl-dots .owl-dot:hover span {
-                          background: var(--main-white-color);
-                          transform: scale(1.5);
-                        }
-
-                        .owl-carousel .owl-nav {
-                          left: 50%;
-                          top: 10%;
-                          -webkit-transform: translateX(-50%);
-                          transform: translateX(-50%);
-                          margin: 0;
-                        }
-
-                        .owl-carousel .owl-nav button:hover svg {
-                          opacity: 1;
-                        }
-
-                        .owl-carousel .owl-nav [class*="owl-"]:hover {
-                          background: transparent;
-                        }
-
-                        section {
-                          display: none;
-                        }
-                      }
+  .tooltip .tooltiptext {
+    font-size: 0.7em;
+  }
+}
