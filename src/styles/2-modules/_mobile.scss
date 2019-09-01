@@ -100,8 +100,7 @@ transform: scale(0.8);
       flex-direction: row;
       justify-content: flex-end;
       width: 100%;
-      margin: 0.5em;
-      z-index: 1;
+      z-index: 2;
       a.nav-item {
         font-size: 0.8rem;
         font-family: hyperMarket;
@@ -160,7 +159,7 @@ transform: scale(0.8);
       text-align: center;
       align-items: center;
       justify-content: center;
-      z-index: 2000;
+      z-index: 1;
 
       h1{
         font-family: Redaction;
