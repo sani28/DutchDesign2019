@@ -44,11 +44,11 @@
 }
 /* ----- DD19 BRAND FONTS ------ */
 @font-face {
-  font-family: redaction;
+  font-family: redaction-regular;
   src: url(../../fonts/Redaction-Regular.otf);
 }
 @font-face {
-  font-family: redaction;
+  font-family: redaction-bold;
   src: url(../../fonts/Redaction-Bold.otf);
   font-weight: bold;
   text-transform: capitalize;
@@ -256,7 +256,7 @@ html.designer-page-body {
 .archive-stack {
   width: 253px;
   height: 100%;
-  background-size: cover;
+  object-fit: contain;
   background-position: center;
   background-repeat: no-repeat;
   font-size: calc(2.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
