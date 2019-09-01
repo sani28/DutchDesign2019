@@ -44,11 +44,11 @@
 }
 /* ----- DD19 BRAND FONTS ------ */
 @font-face {
-  font-family: redaction;
+  font-family: redaction-regular;
   src: url(../../fonts/Redaction-Regular.otf);
 }
 @font-face {
-  font-family: redaction;
+  font-family: redaction-bold;
   src: url(../../fonts/Redaction-Bold.otf);
   font-weight: bold;
   text-transform: capitalize;
@@ -496,16 +496,20 @@ html.designer-page-body {
   }
   html .grid-layout-container .blurb-container#home-blurb {
     display: absolute !important;
-    width: 100%;
+    max-width: 100%;
     height: 25vh;
-    margin: auto 1em h1;
-    margin-font-family: Redaction;
-    margin-font-size: 3.5vw;
-    margin-color: #7D246B;
-    margin-line-height: 125%;
-    margin-letter-spacing: 0.01em;
-    margin-text-align: justify;
-    margin-margin-top: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 1em;
+  }
+  html .grid-layout-container .blurb-container#home-blurb h1 {
+    font-family: Redaction;
+    font-size: 3.5vw;
+    color: #7D246B;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    text-align: justify;
+    margin-top: 0;
   }
   html #home-cal {
     display: none;
@@ -1552,7 +1556,7 @@ p span {
 
 #transcript-container h3 {
   font-size: 1.5em;
-  background-color: #DFEA4E;
+  background-color: none;
   width: 30%;
   color: #7D246B;
   font-family: hyperMarket;
@@ -1563,10 +1567,6 @@ h3#intro {
   color: black;
   font-size: 1.5em;
   background-color: white;
-}
-
-h3#keyword {
-  border: 2px solid red;
 }
 
 span:hover {
