@@ -762,6 +762,8 @@ body .cursor__ball circle {
 #teamphoto-4 {
     transform: scale(0.5);
     width: 100%;
+    margin-left: 0%;
+    position: relative;
   }
 
   .mobile-slider {
