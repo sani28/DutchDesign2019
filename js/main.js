@@ -496,5 +496,19 @@ function initAnimation() {
       }
     });
 
+    $("#mobile-nav-menu").on("click", function(){
+      openNav();
+    });
 
+    $("#sidenav-close").on("click", function(){
+      closeNav();
+    });
+
+    function openNav() {
+      document.getElementById("mobile-sidenav").style.width = "100vw";
+    }
+
+    function closeNav() {
+      document.getElementById("mobile-sidenav").style.width = "0";
+    }
 }); //DOCREADY DON'T DELETE

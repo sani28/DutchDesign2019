@@ -546,23 +546,23 @@ html.designer-page-body {
     flex-direction: column;
   }
 
-  .mobile-container {
+  #mobile-container {
     top: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
     object-fit: fill;
   }
-  .mobile-container #mobile-nav {
+  #mobile-container #mobile-nav {
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: 100%;
     margin: 0.5em;
-    z-index: 2;
+    z-index: 1;
   }
-  .mobile-container #mobile-nav a.nav-item {
+  #mobile-container #mobile-nav a.nav-item {
     font-size: 0.8rem;
     font-family: hyperMarket;
     font-weight: bold;
@@ -571,10 +571,45 @@ html.designer-page-body {
     height: 1rem;
     margin: 1.5em;
   }
-  .mobile-container #mobile-nav a.nav-item:first-child {
-    justify-self: start;
+  #mobile-container #mobile-nav a.nav-item:first-child {
+    margin-right: auto;
   }
-  .mobile-container #mobile-title-container {
+  #mobile-container .sidenav {
+    height: 100%;
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #DFEA4E;
+    overflow-x: hidden;
+    padding-top: 3em;
+    transition: 0.5s;
+  }
+  #mobile-container .sidenav a.mobile-nav-item {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #7D246B;
+    display: block;
+    font-family: hyperMarket;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+  #mobile-container .sidenav a:hover, #mobile-container .sidenav a:active {
+    color: white;
+  }
+  #mobile-container .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    color: white;
+    padding: 0.5em;
+  }
+  #mobile-container #mobile-title-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -586,22 +621,22 @@ html.designer-page-body {
     justify-content: center;
     z-index: 2000;
   }
-  .mobile-container #mobile-title-container h1 {
+  #mobile-container #mobile-title-container h1 {
     font-family: Redaction;
     font-size: 12vw;
     margin: 0;
     color: white;
   }
-  .mobile-container #mobile-title-container h2 {
+  #mobile-container #mobile-title-container h2 {
     font-family: hyperMarket;
     font-size: 3.5vw;
     margin: 0;
     color: white;
   }
-  .mobile-container .blurb-container {
+  #mobile-container .blurb-container {
     height: 100vh;
   }
-  .mobile-container .blurb-container h1 {
+  #mobile-container .blurb-container h1 {
     margin: auto;
     left: 0;
     right: 0;
@@ -616,10 +651,10 @@ html.designer-page-body {
     line-height: 1.85rem;
     text-align: justify;
   }
-  .mobile-container .mobile-video-slider {
+  #mobile-container .mobile-video-slider {
     margin: 0;
   }
-  .mobile-container .bg-mobile-video {
+  #mobile-container .bg-mobile-video {
     width: 100%;
     height: 100%;
     z-index: -2;
