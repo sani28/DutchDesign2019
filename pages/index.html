@@ -123,7 +123,7 @@
       <div class="cal-item" id="aldoItem"><a href="./aldo-bakker.html" class="designer-dot active-dot hoverable" id="aldoDot" data-title="ALDO BAKKER" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
       <div class="cal-item" id="rebeccaItem"><a href="./rebecca-geskus.html" class="designer-dot active-dot hoverable" id="rebeccaDot" data-title="REBECCA GESKUS" data-subtitle="TEXEL // TEXTILES"></a></div>
       <div class="cal-item" id="corunumItem"><a href="./cor-unum.html" class="designer-dot active-dot hoverable" id="corunumDot" data-title="COR UNUM" data-subtitle="DEN BOSCH // CERAMICS"></a></div>
-      <div class="cal-item" id="florisItem"><a href="./floris-hovers.html" class="designer-dot active-dot hoverable" id="florisDot" data-title="FLORIS HOVERS" data-subtitle="RAMMSDONKSVEER // PRODUCT"></a></div>
+      <div class="cal-item" id="florisItem"><a href="./floris-hovers.html" class="designer-dot active-dot hoverable" id="florisDot" data-title="FLORIS HOVERS" data-subtitle="RAAMSDONKSVEER // PRODUCT"></a></div>
       <div class="cal-item" id="valentinItem"><a href="./valentin-loellmann.html" class="designer-dot active-dot hoverable" id="valentinDot" data-title="VALENTIN LOELLMANN" data-subtitle="MAASTRICHT // ART & PRODUCT"></a></div>
       <div class="cal-item" id="edwinItem"><a href="./main-studio.html" class="designer-dot active-dot hoverable" id="edwinDot" data-title="MAIN STUDIO" data-subtitle="AMSTERDAM // EDITORIAL & GRAPHIC"></a></div>
       <div class="cal-item" id="lexItem"><a href="./lex-pott.html" class="designer-dot active-dot hoverable" id="lexDot" data-title="LEX POTT" data-subtitle="ROTTERDAM // PRODUCT"></a></div>
@@ -274,22 +274,34 @@
     </nav>
 
 
-    <div class="mobile-video-container">
+    <div class="mobile-container" id="mobile-container">
+      <nav id="mobile-nav">
+        <a class="nav-item" id="mobile-nav-menu">List</a>
+        <a href="./team/team.html" class="nav-item" id="mobile-nav-team">Team</a>
+        <a href="./legacy.html" class="nav-item" id="mobile-nav-legacy">Legacy</a>
+      </nav>
+
       <div class="mobile-video-slider">
         <div class="blurb-container" id="mobile-blurb">
           <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing platform for field research, observation, and reportage. The protagonists are individuals who define their own worlds; who blur and destroy boundaries,
             definitions, and limitations. It attempts to make Dutch design culture fleetingly visible while leaving space for it to describe itself.</h1>
         </div>
-        <video class="lozad bg-mobile-video" id="rebecca-preview-vid" preload="none" autoplay muted loop playsinline >
+        <video class="lozad bg-mobile-video" id="floris-mobile-vid" preload="none" autoplay muted loop playsinline data-title="FLORIS HOVERS" data-subtitle="RAAMSDONKSVEER // PRODUCT">
           <source data-src="../assets/videos/floris-mobile.mp4" type="video/mp4">
           Your browser doesn't support HTML5 videos.
         </video>
-        <video class="lozad bg-mobile-video" id="aldo-preview-vid" preload="none" autoplay muted loop playsinline >
+        <video class="lozad bg-mobile-video" id="reglaze-mobile-vid" preload="none" autoplay muted loop playsinline data-title="REGLAZE" data-subtitle="SHORT FILM">
           <source data-src="../assets/videos/reglaze-mobile.mp4" type="video/mp4">
           Your browser doesn't support HTML5 videos.
         </video>
       </div>
-    </div>
+      <div id="mobile-title-container">
+          <h2 id="mobile-subtitle"></h2>
+          <h1 id="mobile-title"></h1>
+      </div>
+
+    </div><!-- mobile container ends here -->
+
   </div> <!-- grid ends here -->
 </body>
 </html>

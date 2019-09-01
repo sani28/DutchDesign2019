@@ -28,6 +28,9 @@ transform: scale(0.8);
   .mobile-video-slider{
     display: none;
   }
+  #mobile-container{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px)  {
@@ -35,6 +38,9 @@ transform: scale(0.8);
   html{
     background-color: $primary-green;
     background-image: none;
+  }
+  nav#top-nav a.top-nav-item {
+    color: white;
   }
 
   section.designer-top-section {
@@ -80,30 +86,60 @@ transform: scale(0.8);
   .grid-layout-container {
     display: flex;
     flex-direction: column;
-    #top-nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      margin: 0.5em;
-      z-index: 2000;
-
-      a.top-nav-item {
-        padding: 1.5em;
-      }
-      #nav-blurb{
-        display: none;
-      }
-    }
-
   }
 
-  .mobile-video-container{
-    position: absolute;
+  .mobile-container{
     top: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
     object-fit: fill;
+    #mobile-nav {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      margin: 0.5em;
+      z-index: 2;
+      a.nav-item {
+        font-size: 0.8rem;
+        font-family: hyperMarket;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        height: 1rem;
+        margin: 1.5em;
+      }
+      a.nav-item:first-child {
+        justify-self: start;
+      }
+    }
+    #mobile-title-container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+
+      h1{
+        font-family: Redaction;
+        font-size: 12vw;
+        margin: 0;
+        color: white;
+      }
+      h2{
+        font-family: hyperMarket;
+        font-size: 3.5vw;
+        margin: 0;
+        color: white;
+      }
+    }
     .blurb-container {
       height: 100vh;
     }
@@ -114,13 +150,12 @@ transform: scale(0.8);
       top: 0;
       bottom: 0;
       position: absolute;
-      height: 30vh;
+      height: 50vh;
       width: 90%;
       font-family: Redaction;
-      font-size: 3.85vw;
+      font-size: 5.5vw;
       color: $secondary-purp;
-      line-height: 1.2rem;
-      letter-spacing: 0.01em;
+      line-height: 1.85rem;
       text-align: justify;
     }
     .mobile-video-slider{
@@ -134,6 +169,10 @@ transform: scale(0.8);
   }
 
   #home-cal{
+    display: none;
+  }
+
+  nav#top-nav{
     display: none;
   }
 

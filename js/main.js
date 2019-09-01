@@ -471,6 +471,10 @@ function initAnimation() {
 
 
   //////////////// MOBILE ONLY ///////////////////////////
+  var mobileSlides = document.getElementsByClassName('bg-mobile-video');
+  var mobileHeader = $("#mobile-title");
+  var mobileSubhead = $("#mobile-subtitle");
+
   $('.mobile-video-slider').slick({
     draggable: true,
     swipeToSlide: true,
@@ -480,6 +484,17 @@ function initAnimation() {
     centerMode: true,
     slidesToShow: 1
    });
+
+   $('.mobile-video-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      let slide = mobileSlides[nextSlide-1];
+      if(nextSlide !== 0){
+        mobileHeader.text(slide.dataset.title);
+        mobileSubhead.text(slide.dataset.subtitle);
+      } else {
+        mobileHeader.text("");
+        mobileSubhead.text("");
+      }
+    });
 
 
 }); //DOCREADY DON'T DELETE

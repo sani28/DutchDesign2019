@@ -44,11 +44,11 @@
 }
 /* ----- DD19 BRAND FONTS ------ */
 @font-face {
-  font-family: redaction;
+  font-family: redaction-regular;
   src: url(../../fonts/Redaction-Regular.otf);
 }
 @font-face {
-  font-family: redaction;
+  font-family: redaction-bold;
   src: url(../../fonts/Redaction-Bold.otf);
   font-weight: bold;
   text-transform: capitalize;
@@ -492,11 +492,19 @@ html.designer-page-body {
   .mobile-video-slider {
     display: none;
   }
+
+  #mobile-container {
+    display: none;
+  }
 }
 @media screen and (max-width: 800px) {
   html {
     background-color: #DFEA4E;
     background-image: none;
+  }
+
+  nav#top-nav a.top-nav-item {
+    color: white;
   }
 
   section.designer-top-section {
@@ -537,57 +545,91 @@ html.designer-page-body {
     display: flex;
     flex-direction: column;
   }
-  .grid-layout-container #top-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 0.5em;
-    z-index: 2000;
-  }
-  .grid-layout-container #top-nav a.top-nav-item {
-    padding: 1.5em;
-  }
-  .grid-layout-container #top-nav #nav-blurb {
-    display: none;
-  }
 
-  .mobile-video-container {
-    position: absolute;
+  .mobile-container {
     top: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
     object-fit: fill;
   }
-  .mobile-video-container .blurb-container {
+  .mobile-container #mobile-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0.5em;
+    z-index: 2;
+  }
+  .mobile-container #mobile-nav a.nav-item {
+    font-size: 0.8rem;
+    font-family: hyperMarket;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    height: 1rem;
+    margin: 1.5em;
+  }
+  .mobile-container #mobile-nav a.nav-item:first-child {
+    justify-self: start;
+  }
+  .mobile-container #mobile-title-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  .mobile-container #mobile-title-container h1 {
+    font-family: Redaction;
+    font-size: 12vw;
+    margin: 0;
+    color: white;
+  }
+  .mobile-container #mobile-title-container h2 {
+    font-family: hyperMarket;
+    font-size: 3.5vw;
+    margin: 0;
+    color: white;
+  }
+  .mobile-container .blurb-container {
     height: 100vh;
   }
-  .mobile-video-container .blurb-container h1 {
+  .mobile-container .blurb-container h1 {
     margin: auto;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     position: absolute;
-    height: 30vh;
+    height: 50vh;
     width: 90%;
     font-family: Redaction;
-    font-size: 3.85vw;
+    font-size: 5.5vw;
     color: #7D246B;
-    line-height: 1.2rem;
-    letter-spacing: 0.01em;
+    line-height: 1.85rem;
     text-align: justify;
   }
-  .mobile-video-container .mobile-video-slider {
+  .mobile-container .mobile-video-slider {
     margin: 0;
   }
-  .mobile-video-container .bg-mobile-video {
+  .mobile-container .bg-mobile-video {
     width: 100%;
     height: 100%;
     z-index: -2;
   }
 
   #home-cal {
+    display: none;
+  }
+
+  nav#top-nav {
     display: none;
   }
 
