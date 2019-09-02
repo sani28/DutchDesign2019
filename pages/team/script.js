@@ -54,9 +54,9 @@ class HoverImgFx1 {
       this.positionElement(ev);
       this.showImage();
     };
-    this.mousemoveFn = ev => requestAnimationFrame(() => {
-      this.positionElement(ev);
-    });
+    // this.mousemoveFn = ev => requestAnimationFrame(() => {
+    //   this.positionElement(ev);
+    // });
     this.mouseleaveFn = () => {
       this.hideImage();
     };
