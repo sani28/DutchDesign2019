@@ -225,6 +225,10 @@ html.designer-page-body {
   color: white;
 }
 
+html {
+  overflow: hidden;
+}
+
 #back-btn.purple .home-dot {
   background-color: #7D246B;
 }
@@ -236,6 +240,7 @@ html.designer-page-body {
   display: inline;
   width: 100%;
   left: 50px;
+  top: 15px;
   position: absolute;
 }
 
@@ -381,6 +386,11 @@ h1 {
   font-size: 2.5em;
 }
 
+@media only screen and (min-width: 800px) {
+  .legacy-container-mobile {
+    display: none;
+  }
+}
 @media only screen and (max-width: 800px) {
   .legacy-year {
     transform: rotate(360deg);
@@ -408,55 +418,57 @@ h1 {
 
   .archive-stack {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 200px;
+    background-image: none !important;
+    position: relative;
+    overflow: hidden;
   }
+}
+#yeareleven {
+  letter-spacing: 0.1em;
+}
 
-  #yeareleven {
-    letter-spacing: 0.1em;
-  }
+#twelve {
+  padding-left: 2%;
+}
 
-  #twelve {
-    padding-left: 2%;
-  }
+#yeartwelve {
+  padding-bottom: 10%;
+}
 
-  #yeartwelve {
-    padding-bottom: 10%;
-  }
+#yearthirteen {
+  font-size: 2.1em;
+  margin-right: 4.5%;
+  letter-spacing: 0.1em;
+}
 
-  #yearthirteen {
-    font-size: 2.1em;
-    margin-right: 4.5%;
-    letter-spacing: 0.1em;
-  }
+#yearfourteen {
+  font-size: 3.2em;
+  letter-spacing: 0.1em;
+}
 
-  #yearfourteen {
-    font-size: 3.2em;
-    letter-spacing: 0.1em;
-  }
+#yearfifteen {
+  font-size: 2.3em;
+}
 
-  #yearfifteen {
-    font-size: 2.3em;
-  }
+#yearseventeen {
+  letter-spacing: 0.03em;
+  font-size: 2.25em;
+}
 
-  #yearseventeen {
-    letter-spacing: 0.03em;
-    font-size: 2.25em;
-  }
+#yearsixteen {
+  font-size: 2.2em;
+}
 
-  #yearsixteen {
-    font-size: 2.2em;
-  }
+#yeareighteen {
+  letter-spacing: 0.04em;
+  font-size: 2.1em;
+}
 
-  #yeareighteen {
-    letter-spacing: 0.04em;
-    font-size: 2.1em;
-  }
-
-  #nineteen {
-    font-size: 2.3em;
-    letter-spacing: 0.1em;
-  }
+#nineteen {
+  font-size: 2.3em;
+  letter-spacing: 0.1em;
 }
 
 /*# sourceMappingURL=legacy.css.map */
