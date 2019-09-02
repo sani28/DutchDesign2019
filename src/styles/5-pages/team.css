@@ -93,7 +93,6 @@ html {
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
-  overflow: hidden;
 }
 
 /* --------- [LADNING] TEAM COPY ----------------- */
@@ -753,6 +752,9 @@ body .cursor__ball circle {
     -o-background-size: cover;
     opacity: 0.8;
     z-index: -1;
+    left: 0;
+    top: 0;
+    position: absolute;
   }
 
   #para, #team-blurb {
