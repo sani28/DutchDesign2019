@@ -528,10 +528,10 @@ body .cursor__ball circle {
 @media only screen and (max-width: 900px) {
 
   #team-bio {
-    grid-column: 1/15;
+    grid-column: 5/15;
     grid-row: 4/6;
     height: 300px;
-    width: 100vw;
+    width: 90vw;
     background-color: black;
     padding-left: 10%;
     margin-bottom: 15%;
@@ -655,6 +655,10 @@ body .cursor__ball circle {
 /* _____________________ MOBILE __________________________ */
 
 @media screen and (max-width: 900px) {
+
+    .grid-layout-container {
+      display: none;
+    }
     .circle-nav-container {
       display: flex;
       position: absolute;

@@ -386,11 +386,16 @@
 <script src="../../js/swiper.min.js"></script>
 <script>
   var swiper = new Swiper('.swiper-container', {
-    pagination: {
+    loop: true,
+    loopedSlides: 14,
+     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
+      clickable: true,
+      stopOnLastSlide: false
     },
   });
 </script>
+
 
 </html>
