@@ -780,19 +780,12 @@ a#home:hover {
   }
 }
 
-// #back-btn.purple.white{
-//   .home-dot{
-//     background-color: white;
-//   }
-//   p{
-//     color: white;
-//   }
-// }
-
-// #back-btn:hover #home-text {
-//   display: inline-block;
-//   float: right;
-// }
+#back-btn:hover #home-text {
+  display: inline;
+  width: 100%;
+  left: 50px;
+  position: absolute;
+}
 
 .home-dot {
   height: 35px;
