@@ -471,7 +471,7 @@ function initAnimation() {
 
 
   //////////////// MOBILE ONLY ///////////////////////////
-  var mobileSlides = document.getElementsByClassName('bg-mobile-video');
+  var mobileVidSlides = document.getElementsByClassName('bg-mobile-video');
   var mobileHeader = $("#mobile-title");
   var mobileSubhead = $("#mobile-subtitle");
   var mobileMenuFilms = true;
@@ -487,15 +487,21 @@ function initAnimation() {
    });
 
    $('.mobile-video-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      let slide = mobileSlides[nextSlide-1];
+      let next = mobileVidSlides[nextSlide-1];
       if(nextSlide !== 0){
-        mobileHeader.text(slide.dataset.title);
-        mobileSubhead.text(slide.dataset.subtitle);
+        mobileHeader.text(next.dataset.title);
+        mobileSubhead.text(next.dataset.subtitle);
       } else {
         mobileHeader.text("");
         mobileSubhead.text("");
       }
+      if(currentSlide == 0){
+        return
+      } else {
+        $(mobileVidSlides[currentSlide-1]).stop();
+      }
     });
+
 
     //TODO: goal is to switch the views back and forth between mobile-designer-list and mobile-fieldnote-Listeners
     $("#sidenav-films").on('click', function(){
@@ -507,6 +513,7 @@ function initAnimation() {
         $("#sidenav-fn").removeClass("active");
         $("#mobile-fieldnotes-list").addClass("hiddenUI");
         $("#mobile-designers-list").removeClass("hiddenUI");
+        $("#mobile-nav-menu").text("Films");
       }
     });
 
@@ -519,6 +526,7 @@ function initAnimation() {
         $("#sidenav-films").removeClass("active");
         $("#mobile-designers-list").addClass("hiddenUI");
         $("#mobile-fieldnotes-list").removeClass("hiddenUI");
+        $("#mobile-nav-menu").text("Field Notes");
       }
     })
 
@@ -537,4 +545,5 @@ function initAnimation() {
     function closeNav() {
       document.getElementById("mobile-sidenav").style.width = "0";
     }
+
 }); //DOCREADY DON'T DELETE
