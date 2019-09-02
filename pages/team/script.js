@@ -46,7 +46,7 @@ class HoverImgFx1 {
       this.DOM.reveal.style.top = `${mousePos.y-600-docScrolls.top}px`;
       this.DOM.reveal.style.left = `${mousePos.x+20-docScrolls.left}px`;
 
-      if (mousePos.x > 650) {
+      if (mousePos.x > window.innerWidth / 2) {
               this.DOM.reveal.style.left = `${mousePos.x-500-docScrolls.left}px`;
       }
     };
