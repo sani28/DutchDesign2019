@@ -126,16 +126,3 @@ class HoverImgFx1 {
 }
 
 [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
-
-
-var swiper = new Swiper('.swiper-container', {
-  loop: true,
-  loopedSlides: 14,
-   pagination: {
-    el: '.swiper-pagination',
-    dynamicBullets: true,
-    clickable: true,
-    stopOnLastSlide: false
- }
-  },
-});
