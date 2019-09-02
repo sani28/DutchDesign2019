@@ -73,7 +73,7 @@ p.small {
                       background-position: center;
                       background-repeat: no-repeat;
                       opacity: 0.9;
-                      object-fit: cover;
+                      background-size: cover;
                       position: absolute;
                     }
 
@@ -710,14 +710,20 @@ body .cursor__ball circle {
 
   .bg-mobile {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url("../../../assets/images/team/teampageBG.jpg");
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     opacity: 0.8;
     z-index: -1;
     position: absolute;
+    top:0;
+    left:0;
   }
 
   #para, #team-blurb {
