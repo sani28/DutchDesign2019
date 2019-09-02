@@ -474,6 +474,7 @@ function initAnimation() {
   var mobileSlides = document.getElementsByClassName('bg-mobile-video');
   var mobileHeader = $("#mobile-title");
   var mobileSubhead = $("#mobile-subtitle");
+  var mobileMenuFilms = true;
 
   $('.mobile-video-slider').slick({
     draggable: true,
@@ -495,6 +496,31 @@ function initAnimation() {
         mobileSubhead.text("");
       }
     });
+
+    //TODO: goal is to switch the views back and forth between mobile-designer-list and mobile-fieldnote-Listeners
+    $("#sidenav-films").on('click', function(){
+      if(mobileMenuFilms){
+        return
+      } else{
+        mobileMenuFilms = true;
+        $(this).addClass("active");
+        $("#sidenav-fn").removeClass("active");
+        $("#mobile-fieldnotes-list").addClass("hiddenUI");
+        $("#mobile-designers-list").removeClass("hiddenUI");
+      }
+    });
+
+    $("#sidenav-fn").on('click', function(){
+      if (!mobileMenuFilms) {
+        return
+      } else{
+        mobileMenuFilms = false;
+        $(this).addClass("active");
+        $("#sidenav-films").removeClass("active");
+        $("#mobile-designers-list").addClass("hiddenUI");
+        $("#mobile-fieldnotes-list").removeClass("hiddenUI");
+      }
+    })
 
     $("#mobile-nav-menu").on("click", function(){
       openNav();

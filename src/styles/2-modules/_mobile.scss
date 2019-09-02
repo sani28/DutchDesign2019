@@ -137,8 +137,11 @@ transform: scale(0.8);
           font-size: 1rem;
         }
       }
+      .sidenav-list{
+        padding-bottom: 3em;
+      }
       a.mobile-nav-item {
-        padding: 1em 1em 1em 2.5em;
+        padding: 0.8em 0.75em 0.8em 2.5em;
         text-decoration: none;
         color: $secondary-purp;
         display: block;

@@ -598,8 +598,11 @@ html.designer-page-body {
     font-family: hyperMarket;
     font-size: 1rem;
   }
+  #mobile-container .sidenav .sidenav-list {
+    padding-bottom: 3em;
+  }
   #mobile-container .sidenav a.mobile-nav-item {
-    padding: 1em 1em 1em 2.5em;
+    padding: 0.8em 0.75em 0.8em 2.5em;
     text-decoration: none;
     color: #7D246B;
     display: block;
