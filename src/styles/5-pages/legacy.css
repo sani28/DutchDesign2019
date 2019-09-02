@@ -207,7 +207,7 @@ html.designer-page-body {
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 1;
+  z-index: 99;
 }
 #back-btn .home-dot {
   background-color: white;
@@ -232,16 +232,11 @@ html.designer-page-body {
   color: #7D246B;
 }
 
-#back-btn.purple.white .home-dot {
-  background-color: white;
-}
-#back-btn.purple.white p {
-  color: white;
-}
-
 #back-btn:hover #home-text {
-  display: inline-block;
-  float: right;
+  display: inline;
+  width: 100%;
+  left: 50px;
+  position: absolute;
 }
 
 .home-dot {

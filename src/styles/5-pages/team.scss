@@ -636,7 +636,7 @@ body .cursor__ball circle {
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 
 /* _________________________ DESKTOP ________________________ */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
 
   .mobile-team-container, .swiper-container, .swiper-slide {
     display: none;
@@ -678,7 +678,7 @@ body .cursor__ball circle {
     }
 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
   .back-btn-mobile {
     z-index: 99;

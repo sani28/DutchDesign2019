@@ -93,6 +93,7 @@ html {
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
+  overflow: hidden;
 }
 
 /* --------- [LADNING] TEAM COPY ----------------- */
@@ -678,7 +679,7 @@ body .cursor__ball circle {
 
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 /* _________________________ DESKTOP ________________________ */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .mobile-team-container, .swiper-container, .swiper-slide {
     display: none;
   }
@@ -714,7 +715,7 @@ body .cursor__ball circle {
     width: 80%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .back-btn-mobile {
     z-index: 99;
   }

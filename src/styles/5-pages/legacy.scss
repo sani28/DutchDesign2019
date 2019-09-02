@@ -68,7 +68,7 @@ $secondary-purp: #7D246B;
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 1;
+  z-index: 99;
   .home-dot {
     background-color: white;
     -webkit-transition: all 0.15s ease-in;
@@ -85,21 +85,13 @@ $secondary-purp: #7D246B;
     color: white;
   }
 }
+
 #back-btn.purple{
   .home-dot{
     background-color: $secondary-purp;
   }
   p {
     color: $secondary-purp;
-  }
-}
-
-#back-btn.purple.white{
-  .home-dot{
-    background-color: white;
-  }
-  p{
-    color: white;
   }
 }
 
