@@ -727,6 +727,8 @@ body .cursor__ball circle {
 
   .photo-section {
     z-index: -1;
+    left: 0;
+    top: 0;
   }
 
   h1#mobile-longname {
@@ -747,9 +749,6 @@ body .cursor__ball circle {
     -o-background-size: cover;
     opacity: 0.8;
     z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   #para, #team-blurb {
@@ -777,6 +776,7 @@ body .cursor__ball circle {
     transform: scale(0.5);
     width: 100%;
     margin-left: 0%;
+    margin-top: -10%;
     position: relative;
   }
 
