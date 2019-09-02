@@ -180,7 +180,7 @@ h1 {
 }
 #fourteen{
   font-family: monsterrat;
-  font-size: calc(1.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
 }
 #fifteen{
@@ -241,11 +241,6 @@ h1 {
   font-size: 2.5em;
 }
 
-@media only screen and (min-width: 800px) {
-  .legacy-container-mobile {
-    display: none;
-  }
-}
 
 @media only screen and (max-width: 800px) {
 
@@ -281,8 +276,6 @@ h1 {
     position: relative;
     overflow: hidden;
   }
-
-}
 
   #yeareleven {
     letter-spacing: 0.1em;
@@ -329,3 +322,4 @@ h1 {
     font-size: 2.3em;
     letter-spacing: 0.1em;
   }
+}

@@ -321,7 +321,7 @@ h1 {
 
 #fourteen {
   font-family: monsterrat;
-  font-size: calc(1.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
 }
 
@@ -386,11 +386,6 @@ h1 {
   font-size: 2.5em;
 }
 
-@media only screen and (min-width: 800px) {
-  .legacy-container-mobile {
-    display: none;
-  }
-}
 @media only screen and (max-width: 800px) {
   .legacy-year {
     transform: rotate(360deg);
@@ -424,51 +419,52 @@ h1 {
     position: relative;
     overflow: hidden;
   }
-}
-#yeareleven {
-  letter-spacing: 0.1em;
-}
 
-#twelve {
-  padding-left: 2%;
-}
+  #yeareleven {
+    letter-spacing: 0.1em;
+  }
 
-#yeartwelve {
-  padding-bottom: 10%;
-}
+  #twelve {
+    padding-left: 2%;
+  }
 
-#yearthirteen {
-  font-size: 2.1em;
-  margin-right: 4.5%;
-  letter-spacing: 0.1em;
-}
+  #yeartwelve {
+    padding-bottom: 10%;
+  }
 
-#yearfourteen {
-  font-size: 3.2em;
-  letter-spacing: 0.1em;
-}
+  #yearthirteen {
+    font-size: 2.1em;
+    margin-right: 4.5%;
+    letter-spacing: 0.1em;
+  }
 
-#yearfifteen {
-  font-size: 2.3em;
-}
+  #yearfourteen {
+    font-size: 3.2em;
+    letter-spacing: 0.1em;
+  }
 
-#yearseventeen {
-  letter-spacing: 0.03em;
-  font-size: 2.25em;
-}
+  #yearfifteen {
+    font-size: 2.3em;
+  }
 
-#yearsixteen {
-  font-size: 2.2em;
-}
+  #yearseventeen {
+    letter-spacing: 0.03em;
+    font-size: 2.25em;
+  }
 
-#yeareighteen {
-  letter-spacing: 0.04em;
-  font-size: 2.1em;
-}
+  #yearsixteen {
+    font-size: 2.2em;
+  }
 
-#nineteen {
-  font-size: 2.3em;
-  letter-spacing: 0.1em;
+  #yeareighteen {
+    letter-spacing: 0.04em;
+    font-size: 2.1em;
+  }
+
+  #nineteen {
+    font-size: 2.3em;
+    letter-spacing: 0.1em;
+  }
 }
 
 /*# sourceMappingURL=legacy.css.map */
