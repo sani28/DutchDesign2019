@@ -933,7 +933,7 @@ p span {
 
 #transcript-container h3 {
   font-size: 1.5em;
-  background-color: $primary-green;
+  background-color: none;
   width: 30%;
   color: $secondary-purp;
   font-family: hyperMarket;
@@ -944,10 +944,6 @@ h3#intro {
   color: black;
   font-size: 1.5em;
   background-color: white;
-}
-
-h3#keyword {
-  border: 2px solid red;
 }
 
 span:hover {

@@ -116,12 +116,11 @@ $secondary-purp: #7D246B;
   display: inline-block;
 }
 
-
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 253px;
   height: 100%;
-  background-size: cover;
+  object-fit: contain;
   background-position: center;
   background-repeat: no-repeat;
   font-size: calc(2.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));

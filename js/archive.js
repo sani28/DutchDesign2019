@@ -59,7 +59,7 @@ $(document).ready(function() {
       });
 
     $("#sixteen").hover(function() {
-        $("#sixteen").css("background-image", "url(../assets/2016-BG.svg)");
+        $("#sixteen").css("background-image", "url(../assets/2016-BG.png)");
         $("#yearsixteen").css("color", "white");
       },
       function() {
@@ -105,7 +105,7 @@ $(document).ready(function() {
         $("#yearsixteen").css("color", "white");
         $("#yearseventeen").css("color", "black");
         $("#yeareighteen").css("color", "white");
-        $("#yeareighteen").css("color", "white");
+        $("#yearnineteen").css("color", "white");
       },
 
       function() {
@@ -119,6 +119,17 @@ $(document).ready(function() {
         $("#twelve").css("background-image", "none");
         $("#eleven").css("background-image", "none");
         $("#ten").css("background-image", "none");
+        $("#yearten").css("color", "#7D246B");
+        $("#yeareleven").css("color", "#7D246B");
+        $("#yeartwelve").css("color", "#7D246B");
+        $("#yearthirteen").css("color", "#7D246B");
+        $("#yearfourteen").css("color", "#7D246B");
+        $("#yearfifteen").css("color", "#7D246B");
+        $("#yearfifteen").css("color", "#7D246B");
+        $("#yearsixteen").css("color", "#7D246B");
+        $("#yearseventeen").css("color", "#7D246B");
+        $("#yeareighteen").css("color", "#7D246B");
+        $("#yearnineteen").css("color", "#7D246B");
       });
 
   }; //end of archive loop
