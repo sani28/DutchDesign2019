@@ -665,7 +665,7 @@ html.designer-page-body {
     line-height: 1.85rem;
     text-align: justify;
   }
-  #mobile-container .mobile-video-slider {
+  #mobile-container #mobile-video-slider {
     margin: 0;
     object-fit: cover;
     position: fixed;
@@ -676,7 +676,7 @@ html.designer-page-body {
     overflow: hidden;
     object-fit: cover;
   }
-  #mobile-container .mobile-video-slider .bg-mobile-video {
+  #mobile-container #mobile-video-slider .bg-mobile-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -685,6 +685,63 @@ html.designer-page-body {
     width: 100%;
     height: 100%;
     z-index: -2;
+  }
+  #mobile-container #mobile-video-slider .slick-dots-container {
+    width: 5.5rem;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    margin: 0.625rem auto;
+    height: 0.875rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+  }
+  #mobile-container #mobile-video-slider .slick-dots-container > ul {
+    padding: 0;
+    display: flex;
+    transition: all 0.25s;
+    position: relative;
+    margin: 0;
+    list-style: none;
+    transform: translateX(0);
+    align-items: center;
+    bottom: unset;
+    height: 100%;
+  }
+  #mobile-container #mobile-video-slider .slick-dots-container > ul li {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0 0.25rem;
+    background-color: #efd5d5;
+    border: none;
+    border-radius: 50%;
+  }
+  #mobile-container #mobile-video-slider .slick-dots-container > ul li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.3125rem;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+  }
+  #mobile-container #mobile-video-slider .slick-dots-container > ul li.p-small-1,
+#mobile-container #mobile-video-slider .slick-dots-container > ul li.n-small-1 {
+    transform: scale(0.8);
+  }
+  #mobile-container #mobile-video-slider .slick-dots-container > ul li.slick-active {
+    transform: scale(1.3);
+    transform-origin: center;
+    background: #3498db;
+  }
+  #mobile-container #mobile-video-slider .slick-dots li button:before {
+    display: none;
   }
 
   #home-cal {
