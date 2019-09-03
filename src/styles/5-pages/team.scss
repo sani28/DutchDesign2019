@@ -67,6 +67,7 @@ html {
   font-size: 1.9em;
   text-align: justify;
   padding-bottom: 5%;
+  display: block;
 }
 
 #team-blurb {
@@ -87,6 +88,7 @@ p.small {
   font-family: maisonNeue-Mono;
   line-height: 200%;
   text-align: justify;
+  display: block;
   font-size: calc(5px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
@@ -340,7 +342,7 @@ body .cursor__ball circle {
   display: grid;
   grid: repeat(1, 7vh)/repeat(11, 4.54vw);
   margin-top: 0;
-  height: 120px;
+  height: 20px;
 }
 
 .team-item {
@@ -672,6 +674,21 @@ body .cursor__ball circle {
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
+
+
+/* _________________________ DESKTOP ________________________ */
+@media screen and (max-height: 600px) {
+      #title {
+        transform: scale(0.9);
+      }
+      p.small {
+            display: none;
+      }
+
+      .hover-reveal__img {
+        display: none;
+      }
+}
 
 /* _________________________ DESKTOP ________________________ */
 @media screen and (min-width: 900px) {

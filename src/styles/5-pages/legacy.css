@@ -378,6 +378,14 @@ h1 {
 }
 
 @media only screen and (max-width: 800px) {
+  #scroll-indiactor-wrapper {
+    display: none;
+  }
+
+  #scroll-indiactor {
+    display: none;
+  }
+
   .legacy-year {
     transform: rotate(360deg);
     width: 200px;
@@ -409,6 +417,10 @@ h1 {
     background-image: none !important;
     position: relative;
     overflow: hidden;
+  }
+
+  .archive-stack a:hover {
+    color: white !important;
   }
 
   #yeareleven {
