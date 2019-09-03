@@ -753,7 +753,7 @@ a#home:hover {
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 99;
+  z-index: 1;
   .home-dot {
     background-color: white;
     -webkit-transition: all 0.15s ease-in;
@@ -770,13 +770,21 @@ a#home:hover {
     color: white;
   }
 }
-
 #back-btn.purple{
   .home-dot{
     background-color: $secondary-purp;
   }
   p {
     color: $secondary-purp;
+  }
+}
+
+#back-btn.purple.white{
+  .home-dot{
+    background-color: white;
+  }
+  p{
+    color: white;
   }
 }
 
@@ -795,6 +803,13 @@ a#home:hover {
   display: inline-block;
 }
 
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 .experience-landing {
   display: grid;
