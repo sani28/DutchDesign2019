@@ -916,14 +916,13 @@ body .cursor__ball circle {
 /*---------- transcripts ------------- */
 .transcript {
   display: grid;
-  grid-template-columns: repeat(17, $width-unit) 1fr;
-  gap: 1.5em;
+  grid-template-columns: repeat(21, $width-unit) 1fr;
   display: none;
   font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #transcript-container {
-  grid-column: 3/span 12;
+  grid-column: 6/span 11;
   width: 100%;
   height: 90vh;
   font-family: Maison Neue;
