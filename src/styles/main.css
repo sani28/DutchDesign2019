@@ -768,24 +768,6 @@ html.designer-page-body {
     display: none;
   }
 
-  html .grid-layout-container .blurb-container#home-blurb {
-    display: absolute !important;
-    max-width: 100%;
-    height: 25vh;
-    top: 0;
-    bottom: 0;
-    margin: auto 1em;
-  }
-  html .grid-layout-container .blurb-container#home-blurb h1 {
-    font-family: Redaction;
-    font-size: 3.5vw;
-    color: #7D246B;
-    line-height: 125%;
-    letter-spacing: 0.01em;
-    text-align: justify;
-    margin-top: 0;
-  }
-
   nav#top-nav {
     display: none;
   }
@@ -980,8 +962,10 @@ a#imgHover {
 }
 
 #back-btn:hover #home-text {
-  display: inline-block;
-  float: right;
+  display: inline;
+  width: 100%;
+  left: 50px;
+  position: absolute;
 }
 
 .home-dot {
@@ -1490,7 +1474,7 @@ body .cursor__ball circle {
 }
 
 .play-cursor {
-  cursor: url("../../assets/images/play.png") 20 20, auto;
+  cursor: url("../../assets/images/play-button.svg") 20 20, auto;
 }
 
 .play-cursor.hoveraction {
@@ -1498,7 +1482,7 @@ body .cursor__ball circle {
 }
 
 .pause-cursor {
-  cursor: url("../../assets/images/pause.png") 15 20, auto;
+  cursor: url("../../assets/images/pause-button.svg") 15 20, auto;
 }
 
 .pause-cursor.hoveraction {
