@@ -463,6 +463,19 @@ html.designer-page-body {
   opacity: 0.5;
 }
 
+#grain-overlay {
+  position: absolute;
+  float: left;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-image: url("../../imgs/GRAIN.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+  opacity: 0.1;
+}
+
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 /* mobile views */
 .mobile-photo-container {
@@ -764,26 +777,8 @@ html.designer-page-body {
     font-family: hyperMarket;
   }
 
-  #home-cal {
+  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle .cursor {
     display: none;
-  }
-
-  nav#top-nav {
-    display: none;
-  }
-
-  .cursor {
-    display: none;
-  }
-
-  #main-nav, nav#main-toggle {
-    display: none;
-  }
-
-  #back-btn {
-    transform: scale(1.1);
-    top: 1.2em;
-    left: 1.2em;
   }
 
   section.photo-section-8, section.photo-section-7, section.photo-section-6, section.photo-section-6-v2, section.photo-section-5, section.photo-section-4, section.photo-section-4-v2, section.photo-section-3, section.photo-section-2, section.photo-section-1, .end-caption {
