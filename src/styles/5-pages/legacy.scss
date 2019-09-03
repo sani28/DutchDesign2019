@@ -7,7 +7,7 @@ $secondary-purp: #7D246B;
 
 /* ------------------- containers ------------------------------------- */
 @import '../1-helpers/fonts';
-@import '../2-modules/background';
+// @import '../2-modules/background';
 
 /* ----- legacy fonts ------ */
 @font-face {
@@ -87,6 +87,7 @@ $secondary-purp: #7D246B;
 
 html {
   overflow: hidden;
+  background-color: $primary-green;
 }
 
 #back-btn.purple{
@@ -179,7 +180,7 @@ h1 {
 }
 #fourteen{
   font-family: monsterrat;
-  font-size: calc(1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(1.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
 }
 #fifteen{
@@ -289,23 +290,23 @@ h1 {
   }
 
   #yearthirteen  {
-    font-size: 2.1em;
+    font-size: 2.2em;
     margin-right: 4.5%;
     letter-spacing: 0.1em;
   }
 
   #yearfourteen {
-    font-size: 3.2em;
+    font-size: 3.4em;
     letter-spacing: 0.1em;
   }
 
   #yearfifteen {
-    font-size: 2.3em;
+    font-size: 2.2em;
   }
 
   #yearseventeen {
-    letter-spacing: 0.03em;
-    font-size: 2.25em;
+    letter-spacing: 0.09em;
+    font-size: 2.1em;
   }
 
   #yearsixteen {
@@ -318,7 +319,7 @@ h1 {
   }
 
   #nineteen {
-    font-size: 2.3em;
+    font-size: 2.2em;
     letter-spacing: 0.1em;
   }
 }
