@@ -1166,6 +1166,7 @@ body .cursor__ball circle {
   border-radius: 50%;
   height: 1vw;
   width: 1vw;
+  pointer-events: none;
 }
 
 .active-dot {
@@ -1190,11 +1191,13 @@ body .cursor__ball circle {
   border-radius: 50%;
   height: 1vw;
   width: 1vw;
+  pointer-events: none;
 }
 
-.experience-dot.active-dot {
+.experience-dot.active-dot, .designer-dot.active-dot {
   height: 2.25vw;
   width: 2.25vw;
+  pointer-events: auto;
 }
 
 .dot-unhovered.experience-dot {
