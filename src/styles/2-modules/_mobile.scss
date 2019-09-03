@@ -257,7 +257,7 @@ transform: scale(0.8);
         width: 0.625rem;
         height: 0.625rem;
         margin: 0 0.25rem;
-        background-color: #efd5d5;
+        background-color: rgba(55,55,55,0.4);
         border: none;
         border-radius: 50%;
       }
@@ -284,15 +284,36 @@ transform: scale(0.8);
       .slick-dots-container > ul li.slick-active {
         transform: scale(1.3);
         transform-origin: center;
-        background: #3498db;
+        background: $secondary-purp;
       }
 
       .slick-dots li button:before {
         display: none;
       }
-
     }
   }
+
+  .slide-numbers {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 4rem;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+
+    span {
+      display: inline-block;
+      position: relative;
+      margin: auto;
+      color: white;
+      font-size: 1.25rem;
+      font-family: hyperMarket;
+    }
+  }
+
 
 
 

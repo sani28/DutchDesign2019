@@ -472,8 +472,10 @@ function initAnimation() {
 
   //////////////// MOBILE ONLY ///////////////////////////
   var mobileVidSlides = document.getElementsByClassName('bg-mobile-video');
-  var mobileHeader = $("#mobile-title");
-  var mobileSubhead = $("#mobile-subtitle");
+  const mobileHeader = $("#mobile-title");
+  const mobileSubhead = $("#mobile-subtitle");
+  const slideNumber = $("#current-slide");
+  var totalSlides = 14;
   var mobileMenuFilms = true;
 
 
@@ -544,6 +546,7 @@ function initAnimation() {
   $('#mobile-video-slider').slick({
     dots: true,
     draggable: true,
+    infinite: false,
     swipeToSlide: true,
     focusOnSelect: true,
     fade: true,
@@ -551,11 +554,13 @@ function initAnimation() {
    });
 
 
-   $('.mobile-video-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+   $('#mobile-video-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
       let next = mobileVidSlides[nextSlide-1];
       if(nextSlide !== 0){
         mobileHeader.text(next.dataset.title);
         mobileSubhead.text(next.dataset.subtitle);
+        slideNumber.text(next.dataset.order);
+        console.log(next.dataset.order);
       } else {
         mobileHeader.text("");
         mobileSubhead.text("");
@@ -568,7 +573,6 @@ function initAnimation() {
     });
 
 
-    //TODO: goal is to switch the views back and forth between mobile-designer-list and mobile-fieldnote-Listeners
     $("#sidenav-films").on('click', function(){
       if(mobileMenuFilms){
         return
