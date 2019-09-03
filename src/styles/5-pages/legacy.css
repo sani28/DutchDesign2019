@@ -207,7 +207,7 @@ html.designer-page-body {
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 1;
+  z-index: 99;
 }
 #back-btn .home-dot {
   background-color: white;
@@ -225,6 +225,10 @@ html.designer-page-body {
   color: white;
 }
 
+html {
+  overflow: hidden;
+}
+
 #back-btn.purple .home-dot {
   background-color: #7D246B;
 }
@@ -232,16 +236,11 @@ html.designer-page-body {
   color: #7D246B;
 }
 
-#back-btn.purple.white .home-dot {
-  background-color: white;
-}
-#back-btn.purple.white p {
-  color: white;
-}
-
 #back-btn:hover #home-text {
-  display: inline-block;
-  float: right;
+  display: inline;
+  width: 100%;
+  left: 50px;
+  position: absolute;
 }
 
 .home-dot {
@@ -321,7 +320,7 @@ h1 {
 
 #fourteen {
   font-family: monsterrat;
-  font-size: calc(1.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
 }
 
@@ -413,8 +412,11 @@ h1 {
 
   .archive-stack {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 200px;
+    background-image: none !important;
+    position: relative;
+    overflow: hidden;
   }
 
   #yeareleven {

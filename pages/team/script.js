@@ -43,20 +43,26 @@ class HoverImgFx1 {
         left: document.body.scrollLeft + document.documentElement.scrollLeft,
         top: document.body.scrollTop + document.documentElement.scrollTop
       };
-      this.DOM.reveal.style.top = `${mousePos.y-600-docScrolls.top}px`;
-      this.DOM.reveal.style.left = `${mousePos.x+20-docScrolls.left}px`;
+      this.DOM.reveal.style.top = `${mousePos.y-610-docScrolls.top}px`;
+      this.DOM.reveal.style.left = `${mousePos.x-100-docScrolls.left}px`;
 
-      if (mousePos.x > 650) {
+      if (mousePos.x > window.innerWidth / 2) {
               this.DOM.reveal.style.left = `${mousePos.x-500-docScrolls.left}px`;
       }
+
+      // if(mousePos.y <  500) {
+      //   this.DOM.reveal.style.top = `${mousePos.y-400-docScrolls.top}px`;
+      //   this.DOM.reveal.style.left = `${mousePos.x-130-docScrolls.left}px`;
+      //
+      // }
     };
     this.mouseenterFn = (ev) => {
       this.positionElement(ev);
       this.showImage();
     };
-    this.mousemoveFn = ev => requestAnimationFrame(() => {
-      this.positionElement(ev);
-    });
+    // this.mousemoveFn = ev => requestAnimationFrame(() => {
+    //   this.positionElement(ev);
+    // });
     this.mouseleaveFn = () => {
       this.hideImage();
     };

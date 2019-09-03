@@ -15,7 +15,6 @@ $secondary-purp: #7D246B;
   src: url(../../../fonts/bebas.otf);
 }
 
-
 @font-face {
   font-family: brandon;
   src: url(../../../fonts/brandon.otf);
@@ -68,7 +67,7 @@ $secondary-purp: #7D246B;
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 1;
+  z-index: 99;
   .home-dot {
     background-color: white;
     -webkit-transition: all 0.15s ease-in;
@@ -85,6 +84,11 @@ $secondary-purp: #7D246B;
     color: white;
   }
 }
+
+html {
+  overflow: hidden;
+}
+
 #back-btn.purple{
   .home-dot{
     background-color: $secondary-purp;
@@ -94,18 +98,11 @@ $secondary-purp: #7D246B;
   }
 }
 
-#back-btn.purple.white{
-  .home-dot{
-    background-color: white;
-  }
-  p{
-    color: white;
-  }
-}
-
 #back-btn:hover #home-text {
-  display: inline-block;
-  float: right;
+  display: inline;
+  width: 100%;
+  left: 50px;
+  position: absolute;
 }
 
 .home-dot {
@@ -115,6 +112,7 @@ $secondary-purp: #7D246B;
   border-radius: 50%;
   display: inline-block;
 }
+
 
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
@@ -181,7 +179,7 @@ h1 {
 }
 #fourteen{
   font-family: monsterrat;
-  font-size: calc(1.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
 }
 #fifteen{
@@ -244,6 +242,7 @@ h1 {
 
 
 @media only screen and (max-width: 800px) {
+
   .legacy-year {
     transform: rotate(360deg);
     width: 200px;
@@ -270,8 +269,11 @@ h1 {
 
   .archive-stack {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 200px;
+    background-image: none !important;
+    position: relative;
+    overflow: hidden;
   }
 
   #yeareleven {
@@ -319,7 +321,4 @@ h1 {
     font-size: 2.3em;
     letter-spacing: 0.1em;
   }
-
-
-
 }

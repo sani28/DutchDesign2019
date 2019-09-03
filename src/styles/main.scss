@@ -82,8 +82,10 @@ a#imgHover {
 }
 
 #back-btn:hover #home-text {
-  display: inline-block;
-  float: right;
+  display: inline;
+  width: 100%;
+  left: 50px;
+  position: absolute;
 }
 
 .home-dot {

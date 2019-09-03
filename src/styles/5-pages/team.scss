@@ -24,6 +24,7 @@ html {
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
+  overflow: hidden;
 }
 
 /* --------- [LADNING] TEAM COPY ----------------- */
@@ -73,7 +74,7 @@ p.small {
                       background-position: center;
                       background-repeat: no-repeat;
                       opacity: 0.9;
-                      object-fit: cover;
+                      background-size: cover;
                       position: absolute;
                     }
 
@@ -154,7 +155,7 @@ transform: scale(0.8);
   grid-column: 8/16;
   line-height: 210%;
   text-align: justify;
-  z-index: 1;
+  z-index:-1;
   max-height: 500px;
 }
 
@@ -163,7 +164,7 @@ transform: scale(0.8);
   height: 100vh;
   position: absolute;
   left: 0;
-  z-index: -1;
+  z-index: -5;
 }
 
 .portfolio-link {
@@ -212,7 +213,7 @@ p.team {
 #teamphoto-4 {
   width: 20em;
   margin-left: 67%;
-  margin-top: 30%;
+  margin-top: 40%;
   fill: purple;
 }
 
@@ -224,7 +225,7 @@ p.team {
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 1;
+  z-index: 99;
   .home-dot {
     background-color: white;
     -webkit-transition: all 0.15s ease-in;
@@ -264,7 +265,7 @@ p.team {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-  z-index: 10;
+  z-index: 99;
 }
 
 /* ---------------- Links and cursor styling -------------------------- */
@@ -432,7 +433,7 @@ body .cursor__ball circle {
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 50%;
+  left: 55%;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
@@ -528,10 +529,10 @@ body .cursor__ball circle {
 @media only screen and (max-width: 900px) {
 
   #team-bio {
-    grid-column: 1/15;
+    grid-column: 5/15;
     grid-row: 4/6;
     height: 300px;
-    width: 100vw;
+    width: 90vw;
     background-color: black;
     padding-left: 10%;
     margin-bottom: 15%;
@@ -573,12 +574,7 @@ body .cursor__ball circle {
     padding: 1em;
     width: 80%;
   }
-  // #team-blurb {
-  //   grid-row: 3;
-  //   margin-top: 25%;
-  //   padding-left: 10%;
-  //   padding-right: 10%;
-  // }
+
   p.small {
     font-size: 0.7em;
     line-height: 200%;
@@ -617,6 +613,7 @@ body .cursor__ball circle {
   left: 0;
   pointer-events: none;
   opacity: 0;
+  z-index: 99;
 }
 
 .hover-reveal__img,
@@ -625,18 +622,21 @@ body .cursor__ball circle {
   height: 100%;
   position: relative;
   display: grid;
+  z-index: 99;
 }
+
 
 .hover-reveal__img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  z-index: 99;
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 
 /* _________________________ DESKTOP ________________________ */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
 
   .mobile-team-container, .swiper-container, .swiper-slide {
     display: none;
@@ -655,6 +655,11 @@ body .cursor__ball circle {
 /* _____________________ MOBILE __________________________ */
 
 @media screen and (max-width: 900px) {
+
+    .grid-layout-container {
+      display: none;
+    }
+
     .circle-nav-container {
       display: flex;
       position: absolute;
@@ -673,7 +678,11 @@ body .cursor__ball circle {
     }
 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+
+  .back-btn-mobile {
+    z-index: 99;
+  }
 
 
   .swiper-container {
@@ -691,6 +700,8 @@ body .cursor__ball circle {
 
   .photo-section {
     z-index: -1;
+    left:0;
+    top:0;
   }
 
     h1#mobile-longname {
@@ -701,13 +712,19 @@ body .cursor__ball circle {
 
   .bg-mobile {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url("../../../assets/images/team/teampageBG.jpg");
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
-    opacity: 1;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    opacity: 0.8;
     z-index: -1;
+    left:0;
+    top:0;
     position: absolute;
   }
 
@@ -748,6 +765,7 @@ body .cursor__ball circle {
     transform: scale(0.5);
     width: 100%;
     margin-left: 0%;
+    margin-top: -10%;
     position: relative;
   }
 
