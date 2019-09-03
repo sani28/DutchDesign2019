@@ -68,20 +68,6 @@ $(document).ready(function() {
     .addTo(scrollControl);
 
 
-  //TODO: could refactor, has some glitchy flashing moments
-  $("#designer-vid").mousemove(function() {
-    if (vidMouseTimer) {
-      clearTimeout(vidMouseTimer);
-      vidMouseTimer = 0;
-    }
-    $('#vid-controls').removeClass("hoveraction");
-    $("#video-fig").removeClass("hoveraction");
-    vidMousetimer = setTimeout(function() {
-      $('#vid-controls').addClass("hoveraction");
-      $("#video-fig").addClass("hoveraction");
-    }, 4000)
-  });
-
   function pathPrepare($el) {
     let lineLength = $el.getTotalLength();
     $el.style.strokeDasharray = lineLength;
@@ -235,6 +221,18 @@ $(document).ready(function() {
   vid.addEventListener("playing", function() {
     $("#video-fig").removeClass("play-cursor");
     $("#video-fig").addClass("pause-cursor");
+    $("#designer-vid").mousemove(function() {
+      if (vidMouseTimer) {
+        clearTimeout(vidMouseTimer);
+        vidMouseTimer = 0;
+      }
+      $('#vid-controls').removeClass("hoveraction");
+      $("#video-fig").removeClass("hoveraction");
+      vidMousetimer = setTimeout(function() {
+        $('#vid-controls').addClass("hoveraction");
+        $("#video-fig").addClass("hoveraction");
+      }, 4000)
+    });
   });
 
   vid.addEventListener("pause", function() {
