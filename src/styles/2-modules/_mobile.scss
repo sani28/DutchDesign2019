@@ -317,26 +317,8 @@ transform: scale(0.8);
 
 
 
-  #home-cal{
+  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle .cursor{
     display: none;
-  }
-
-  nav#top-nav{
-    display: none;
-  }
-
-  .cursor{
-    display: none;
-  }
-
-  #main-nav, nav#main-toggle {
-    display: none;
-  }
-
-  #back-btn {
-    transform: scale(1.1);
-    top: 1.2em;
-    left: 1.2em;
   }
 
   section.photo-section-8, section.photo-section-7, section.photo-section-6, section.photo-section-6-v2, section.photo-section-5, section.photo-section-4, section.photo-section-4-v2, section.photo-section-3, section.photo-section-2, section.photo-section-1, .end-caption{
