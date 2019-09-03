@@ -628,7 +628,7 @@ body .cursor__ball circle {
 }
 
 .play-cursor {
-  cursor: url("../../assets/images/play.png") 20 20, auto;
+  cursor: url("../../assets/images/play-button.svg") 20 20, auto;
 }
 
 .play-cursor.hoveraction {
@@ -636,7 +636,7 @@ body .cursor__ball circle {
 }
 
 .pause-cursor {
-  cursor: url("../../assets/images/pause.png") 15 20, auto;
+  cursor: url("../../assets/images/pause-button.svg") 15 20, auto;
 }
 
 .pause-cursor.hoveraction {
