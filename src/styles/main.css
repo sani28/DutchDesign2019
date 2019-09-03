@@ -1167,6 +1167,8 @@ body .cursor__ball circle {
   height: 1vw;
   width: 1vw;
   pointer-events: none;
+  transition: width 0.185s cubic-bezier(0.55, 1, 0.85, 1), height 0.185s cubic-bezier(0.55, 1, 0.85, 1);
+  transition-delay: 0.1s;
 }
 
 .active-dot {
@@ -1192,6 +1194,8 @@ body .cursor__ball circle {
   height: 1vw;
   width: 1vw;
   pointer-events: none;
+  transition: width 0.185s cubic-bezier(0.55, 1, 0.85, 1), height 0.185s cubic-bezier(0.55, 1, 0.85, 1);
+  transition-delay: 0.1s;
 }
 
 .experience-dot.active-dot, .designer-dot.active-dot {
