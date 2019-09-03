@@ -8,6 +8,7 @@ $(document).ready(function() {
   const fullscreen = document.getElementById("fs");
   const progress = document.getElementById("progress");
   const scrollProg = document.getElementById("scroll-progress");
+  const mq = window.matchMedia( "(min-width: 500px)" );
   var scrollController = new ScrollMagic.Controller();
   var scrollControl = new ScrollMagic.Controller();
   var jumpController = new ScrollMagic.Controller();
@@ -158,6 +159,7 @@ $(document).ready(function() {
       playPause.className = 'pause';
       vid.play();
       overlay.style.display = "none";
+      $(".overlayBG").removeClass("hiddenUI");
     } else {
       playPause.className = 'play';
       vid.pause();
@@ -199,6 +201,11 @@ $(document).ready(function() {
     }
   }
 
+  function toggleFullScreenMobile(){
+    vid.webkitEnterFullscreen();
+    vid.enterFullscreen();
+  }
+
   vid.addEventListener('timeupdate', function() {
     let playbackPos = (vid.currentTime / vid.duration);
     playback.style.width = (playbackPos * 100) + "%";
@@ -211,10 +218,14 @@ $(document).ready(function() {
   });
 
   fullscreen.addEventListener('click', function() {
+    if (mq.matches) {
     toggleFullScreen();
+    } else {
+    toggleFullScreenMobile();
+    }
   });
 
-  $(document).on("click touchend", "#designer-overlay, #designer-vid, #play-pause", function() {
+  $(document).on("click touchend", "#designer-overlay, .overlayBG, #designer-vid, #play-pause", function() {
     togglePlayPause();
   });
 
