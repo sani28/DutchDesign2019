@@ -94,8 +94,61 @@ html {
   background-size: 4.54vw 6.67vh;
   font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
   overflow: hidden;
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* --------- [LADNING] TEAM COPY ----------------- */
 #title {
   font-family: redaction-bold;
@@ -136,12 +189,13 @@ p.small {
 .bg {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../../assets/images/team/teampageBG.jpg");
+  object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.9;
   background-size: cover;
   position: absolute;
+  z-index: -1;
 }
 
 .grid-layout-container {
@@ -218,7 +272,7 @@ html {
   grid-column: 8/16;
   line-height: 210%;
   text-align: justify;
-  z-index: -1;
+  z-index: 1;
   max-height: 500px;
 }
 
@@ -239,6 +293,7 @@ html {
   padding-top: 2%;
   grid-column: 8/16;
   line-height: 80%;
+  z-index: 10;
 }
 
 h1 {
@@ -580,10 +635,10 @@ body .cursor__ball circle {
 /* ------------------ MEDIA QUERIES  ------------------ */
 @media only screen and (max-width: 900px) {
   #team-bio {
-    grid-column: 5/15;
+    grid-column: 7/15;
     grid-row: 4/6;
     height: 300px;
-    width: 90vw;
+    width: 85vw;
     background-color: black;
     padding-left: 10%;
     margin-bottom: 15%;
@@ -592,6 +647,7 @@ body .cursor__ball circle {
   .portfolio-link {
     font-size: 0.6em;
     margin-left: 2%;
+    z-index: 10;
   }
 
   h1 {
