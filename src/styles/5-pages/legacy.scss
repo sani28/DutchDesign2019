@@ -149,9 +149,10 @@ html {
 
 #back-btn:hover #home-text {
   display: inline;
-  width: 100%;
-  left: 50px;
+  width:  100px;
   position: absolute;
+  left: 50px;
+  font-size: 0.75rem
 }
 
 .home-dot {
