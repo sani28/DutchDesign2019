@@ -8,6 +8,7 @@ $secondary-purp: #7D246B;
 @import './2-modules/layouts';
 @import './2-modules/background';
 @import './2-modules/mobile';
+@import './2-modules/cursor';
 
 *,
 html {
@@ -96,26 +97,6 @@ a#imgHover {
   display: inline-block;
 }
 
-body .cursor__ball--big {
-  display: none;
-}
-
-body .cursor {
-  pointer-events: none;
-  cursor: none;
-}
-
-body .cursor__ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  mix-blend-mode:screen;
-  z-index: 1000;
-}
-
-body .cursor__ball circle {
-  fill: $secondary-purp;
-}
 /* --------------- grid box styling-----------------------------*/
 #top-nav {
   grid-row: 2;

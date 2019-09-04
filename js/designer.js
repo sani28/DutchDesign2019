@@ -42,7 +42,6 @@ $(document).ready(function() {
     .addTo(scrollController);
 
   var fillScrollProgress = new ScrollMagic.Scene({
-      //TODO: duration is hardcoded
       duration: totalHeight - 950,
       offset: 175,
       tweenChanges: true
@@ -67,7 +66,6 @@ $(document).ready(function() {
     })
     .setClassToggle("#back-btn", "white")
     .addTo(scrollControl);
-
 
   function pathPrepare($el) {
     let lineLength = $el.getTotalLength();

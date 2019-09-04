@@ -777,7 +777,7 @@ html.designer-page-body {
     font-family: hyperMarket;
   }
 
-  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle .cursor {
+  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle, .cursor {
     display: none;
   }
 
@@ -886,6 +886,26 @@ html.designer-page-body {
     padding: 3em 0;
   }
 }
+body .cursor__ball--big {
+  display: none;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: screen;
+  z-index: 1000;
+}
+
+body .cursor__ball circle {
+  fill: purple;
+}
+
 *,
 html {
   color: black;
@@ -969,27 +989,6 @@ a#imgHover {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-}
-
-body .cursor__ball--big {
-  display: none;
-}
-
-body .cursor {
-  pointer-events: none;
-  cursor: none;
-}
-
-body .cursor__ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  mix-blend-mode: screen;
-  z-index: 1000;
-}
-
-body .cursor__ball circle {
-  fill: #7D246B;
 }
 
 /* --------------- grid box styling-----------------------------*/
