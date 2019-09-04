@@ -289,7 +289,7 @@ html {
 .portfolio-link {
   font-size: 0.7em;
   letter-spacing: 0.1em;
-  font-family: maisonNeue-Mono;
+  font-family: hyperMarket;
   text-decoration: underline;
   grid-row: 14;
   padding-top: 2%;
@@ -648,6 +648,7 @@ body .cursor__ball circle {
 
   .portfolio-link {
     font-size: 0.6em;
+    font-family: hyperMarket;
     margin-left: 2%;
     z-index: 10;
   }
