@@ -43,11 +43,11 @@
 }
 /* ----- DD19 BRAND FONTS ------ */
 @font-face {
-  font-family: redaction;
+  font-family: redaction-regular;
   src: url(../../fonts/Redaction-Regular.otf);
 }
 @font-face {
-  font-family: redaction;
+  font-family: redaction-bold;
   src: url(../../fonts/Redaction-Bold.otf);
   font-weight: bold;
   text-transform: capitalize;
@@ -1129,7 +1129,7 @@ a#home:hover {
   top: 1em;
   left: 1em;
   width: 10vw;
-  z-index: 99;
+  z-index: 1;
 }
 #back-btn .home-dot {
   background-color: white;
@@ -1152,6 +1152,29 @@ a#home:hover {
 }
 #back-btn.purple p {
   color: #7D246B;
+}
+
+#back-btn.purple.white .home-dot {
+  background-color: white;
+}
+#back-btn.purple.white p {
+  color: white;
+}
+
+#back-btn:hover #home-text {
+  display: inline;
+  width: 100px;
+  position: absolute;
+  left: 10px;
+  font-size: 11px;
+}
+
+.home-dot {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .home-dot {
@@ -1254,7 +1277,7 @@ a#home:hover {
 }
 
 #felting-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/felting/felting-1.jpg");
+  background-image: url("../../../assets/images/felting/felting_banner.jpg");
 }
 
 #soil-photo.exp-landing-photo {
