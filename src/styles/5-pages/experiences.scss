@@ -790,9 +790,10 @@ a#home:hover {
 
 #back-btn:hover #home-text {
   display: inline;
-  width: 100%;
-  left: 50px;
+  width:  100px;
   position: absolute;
+  left: 10px;
+  font-size: 11px;
 }
 
 .home-dot {
@@ -904,7 +905,7 @@ a#home:hover {
 }
 
 #felting-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/felting/felting-1.jpg");
+  background-image: url("../../../assets/images/felting/felting_banner.jpg");
 }
 
 #soil-photo.exp-landing-photo {
