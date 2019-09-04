@@ -1,5 +1,16 @@
 $(window).load(function() {
 
+
+      $(".tooltip").hover(function() {
+          $(".str_wrap").css("opacity", "0.3");
+          console.log("hovered!");
+        },
+        function() {
+        $(".str_wrap").css("opacity", "1");
+        console.log("hovered!");
+      });
+
+
   //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
   const $smallBall = document.querySelector('.cursor__ball--small');
@@ -46,6 +57,7 @@ $(window).load(function() {
     hoverstop: false,
   });
 });
+
 
 $('.mobile-slider').slick({
   arrow: false,
@@ -136,6 +148,8 @@ function loadDoc() {
       });
     });
   }
+
+
 
   // add to global namespace
   window.DotNav = DotNav;

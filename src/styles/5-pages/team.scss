@@ -20,7 +20,7 @@
 /* --------- GRID LINES ----------------- */
 
 html {
-  background-color: #000;
+  background-color: #222222;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
@@ -193,7 +193,7 @@ transform: scale(0.8);
   grid-column: 8/16;
   line-height: 210%;
   text-align: justify;
-  z-index:1;
+  z-index:0;
   max-height: 500px;
 }
 
