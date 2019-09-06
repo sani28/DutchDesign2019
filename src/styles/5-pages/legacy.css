@@ -238,7 +238,7 @@ html {
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 253px;
-  height: 100%;
+  height: 100vh;
   object-fit: contain;
   background-position: center;
   background-repeat: no-repeat;
