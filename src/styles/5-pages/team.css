@@ -308,7 +308,7 @@ h1 {
 p.team {
   font-family: maisonNeue-Mono;
   line-height: 200%;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   grid-row: 4/10;
   grid-column: 8/16;
 }
