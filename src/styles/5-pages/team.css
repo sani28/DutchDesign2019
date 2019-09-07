@@ -47,10 +47,9 @@
   src: url(../../fonts/Redaction-Regular.otf);
 }
 @font-face {
-  font-family: redaction-bold;
+  font-family: Redaction;
   src: url(../../fonts/Redaction-Bold.otf);
   font-weight: bold;
-  text-transform: capitalize;
 }
 @font-face {
   font-family: maisonBold;
@@ -309,7 +308,7 @@ h1 {
 p.team {
   font-family: maisonNeue-Mono;
   line-height: 200%;
-  font-size: 0.7em;
+  font-size: 0.9rem;
   grid-row: 4/10;
   grid-column: 8/16;
 }
