@@ -169,8 +169,8 @@ html {
 .archive-stack {
   width: 253px;
   height: 100vh;
-  object-fit: contain;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   font-size: calc(2.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }

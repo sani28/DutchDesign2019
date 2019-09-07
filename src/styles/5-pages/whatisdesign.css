@@ -615,7 +615,7 @@ a#current {
 }
 #nav-overlay #vid-markers .vid-marker {
   margin-bottom: 0.35em;
-  font-size: 0.8rem;
+  font-size: 0.75em;
   font-family: hyperMarket, "Courier New", monospace;
   font-weight: bold;
   height: 1rem;
@@ -652,5 +652,45 @@ a#current {
 }
 
 /* -----------circle nav ------------ */
+@media screen and (max-width: 800px) {
+  #nav-overlay {
+    position: absolute;
+    bottom: 2em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    color: white;
+    text-transform: uppercase;
+  }
+  #nav-overlay h3 {
+    display: none;
+  }
+  #nav-overlay #vid-markers {
+    position: absolute;
+    right: 10vw;
+    display: grid;
+    grid-template-columns: repeat(4, 20.43vw);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column dense;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  #nav-overlay #vid-markers .vid-marker {
+    margin-bottom: 0.35em;
+    font-size: 0.5em;
+    font-family: hyperMarket, "Courier New", monospace;
+    font-weight: bold;
+    height: 1rem;
+    padding: 3px 0;
+  }
+  #nav-overlay #vid-markers .vid-marker:hover {
+    background-color: #7D246B;
+    color: white;
+  }
+}
 
 /*# sourceMappingURL=whatisdesign.css.map */

@@ -48,10 +48,9 @@
   src: url(../../fonts/Redaction-Regular.otf);
 }
 @font-face {
-  font-family: redaction-bold;
+  font-family: Redaction;
   src: url(../../fonts/Redaction-Bold.otf);
   font-weight: bold;
-  text-transform: capitalize;
 }
 @font-face {
   font-family: maisonBold;
@@ -115,54 +114,6 @@
   src: url(../../../fonts/hypermarket-regular.ttf);
   font-weight: bold;
 }
-#scroll-indicator-wrapper {
-  bottom: 0;
-  right: 0;
-  position: sticky;
-  position: -webkit-sticky;
-  /* Safari */
-}
-
-#scroll-indiactor {
-  position: fixed;
-  right: 5%;
-  bottom: 3%;
-  width: 20px;
-  -webkit-animation: fadein 2s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s;
-  /* Firefox < 16 */
-  -ms-animation: fadein 2s;
-  /* Internet Explorer */
-  -o-animation: fadein 2s;
-  /* Opera < 12.1 */
-  animation: fadein 2s;
-}
-
-#back-btn {
-  position: fixed;
-  display: block;
-  top: 1em;
-  left: 1em;
-  width: 10vw;
-  z-index: 99;
-}
-#back-btn .home-dot {
-  background-color: white;
-  -webkit-transition: all 0.15s ease-in;
-  -moz-transition: all 0.15s ease-in;
-  -ms-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
-}
-#back-btn p {
-  display: none;
-  font-family: hyperMarket;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  color: white;
-}
-
 html {
   overflow: hidden;
   background-color: #DFEA4E;
@@ -212,6 +163,54 @@ html {
     opacity: 1;
   }
 }
+#scroll-indicator-wrapper {
+  bottom: 0;
+  right: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  /* Safari */
+}
+
+#scroll-indiactor {
+  position: fixed;
+  right: 5%;
+  bottom: 3%;
+  width: 20px;
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+#back-btn {
+  position: fixed;
+  display: block;
+  top: 1em;
+  left: 1em;
+  width: 10vw;
+  z-index: 99;
+}
+#back-btn .home-dot {
+  background-color: white;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -ms-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+#back-btn p {
+  display: none;
+  font-family: hyperMarket;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: white;
+}
+
 #back-btn.purple .home-dot {
   background-color: #7D246B;
 }
@@ -239,8 +238,8 @@ html {
 .archive-stack {
   width: 253px;
   height: 100vh;
-  object-fit: contain;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   font-size: calc(2.3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }

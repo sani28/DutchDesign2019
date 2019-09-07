@@ -39,7 +39,7 @@ $(document).ready(function() {
   for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
 
     $("#ten").hover(function() {
-        $("#ten").css("background-image", "url(../assets/2010-BG.svg)");
+        $("#ten").css("background-image", "url(../assets/2010-BG.jpg)");
         $("#yearten").css("color", "white");
       },
       function() {
@@ -48,7 +48,7 @@ $(document).ready(function() {
       });
 
     $("#eleven").hover(function() {
-        $("#eleven").css("background-image", "url(../assets/2011-BG.svg)");
+        $("#eleven").css("background-image", "url(../assets/2011-BG.jpg)");
         $("#yeareleven").css("color", "white");
       },
       function() {
@@ -57,7 +57,7 @@ $(document).ready(function() {
       });
 
     $("#twelve").hover(function() {
-        $("#twelve").css("background-image", "url(../assets/2012-BG.svg)");
+        $("#twelve").css("background-image", "url(../assets/2012-BG.jpg)");
         $("#yeartwelve").css("color", "black");
       },
       function() {
@@ -66,7 +66,7 @@ $(document).ready(function() {
       });
 
     $("#thirteen").hover(function() {
-        $("#thirteen").css("background-image", "url(../assets/2013-BG.svg)");
+        $("#thirteen").css("background-image", "url(../assets/2013-BG.jpg)");
         $("#yearthirteen").css("color", "white");
       },
       function() {
@@ -75,7 +75,7 @@ $(document).ready(function() {
       });
 
     $("#fourteen").hover(function() {
-        $("#fourteen").css("background-image", "url(../assets/2014-BG.svg)");
+        $("#fourteen").css("background-image", "url(../assets/2014-BG.jpg)");
         $("#yearfourteen").css("color", "white");
       },
       function() {
@@ -84,7 +84,7 @@ $(document).ready(function() {
       });
 
     $("#fifteen").hover(function() {
-        $("#fifteen").css("background-image", "url(../assets/2015-BG.svg)");
+        $("#fifteen").css("background-image", "url(../assets/2015-BG.jpg)");
         $("#yearfifteen").css("color", "white");
       },
       function() {
@@ -93,7 +93,7 @@ $(document).ready(function() {
       });
 
     $("#sixteen").hover(function() {
-        $("#sixteen").css("background-image", "url(../assets/2016-BG.png)");
+        $("#sixteen").css("background-image", "url(../assets/2016-BG.jpg)");
         $("#yearsixteen").css("color", "white");
       },
       function() {
@@ -102,7 +102,7 @@ $(document).ready(function() {
       });
 
     $("#seventeen").hover(function() {
-        $("#seventeen").css("background-image", "url(../assets/2017-BG.svg)");
+        $("#seventeen").css("background-image", "url(../assets/2017-BG.jpg)");
         $("#yearseventeen").css("color", "black");
       },
       function() {
@@ -111,7 +111,7 @@ $(document).ready(function() {
       });
 
     $("#eighteen").hover(function() {
-        $("#eighteen").css("background-image", "url(../assets/2018-BG.svg)");
+        $("#eighteen").css("background-image", "url(../assets/2018-BG.jpg)");
         $("#yeareighteen").css("color", "white");
       },
       function() {
@@ -120,16 +120,16 @@ $(document).ready(function() {
       });
 
     $("#nineteen").hover(function() {
-        $("#nineteen").css("background-image", "url(../assets/2019-BG.svg)");
-        $("#eighteen").css("background-image", "url(../assets/2018-BG.svg)");
-        $("#seventeen").css("background-image", "url(../assets/2017-BG.svg)");
-        $("#sixteen").css("background-image", "url(../assets/2016-BG.svg)");
-        $("#fifteen").css("background-image", "url(../assets/2015-BG.svg)");
-        $("#fourteen").css("background-image", "url(../assets/2014-BG.svg)");
-        $("#thirteen").css("background-image", "url(../assets/2013-BG.svg)");
-        $("#twelve").css("background-image", "url(../assets/2012-BG.svg)");
-        $("#eleven").css("background-image", "url(../assets/2011-BG.svg)");
-        $("#ten").css("background-image", "url(../assets/2010-BG.svg)");
+        $("#nineteen").css("background-image", "url(../assets/2019-BG.jpg)");
+        $("#eighteen").css("background-image", "url(../assets/2018-BG.jpg)");
+        $("#seventeen").css("background-image", "url(../assets/2017-BG.jpg)");
+        $("#sixteen").css("background-image", "url(../assets/2016-BG.jpg)");
+        $("#fifteen").css("background-image", "url(../assets/2015-BG.jpg)");
+        $("#fourteen").css("background-image", "url(../assets/2014-BG.jpg)");
+        $("#thirteen").css("background-image", "url(../assets/2013-BG.jpg)");
+        $("#twelve").css("background-image", "url(../assets/2012-BG.jpg)");
+        $("#eleven").css("background-image", "url(../assets/2011-BG.jpg)");
+        $("#ten").css("background-image", "url(../assets/2010-BG.jpg)");
         $("#yearten").css("color", "white");
         $("#yeareleven").css("color", "white");
         $("#yeartwelve").css("color", "black");
@@ -173,7 +173,7 @@ $(document).ready(function() {
     if (x.matches) { // If media query matches
 
           $("#ten").hover(function() {
-              $("#ten").css("background-image", "url(../assets/2010-BG.svg)");
+              $("#ten").css("background-image", "url(../assets/2010-BG.jpg)");
               $("#yearten").css("color", "white");
             },
             function() {
@@ -182,7 +182,7 @@ $(document).ready(function() {
             });
 
           $("#eleven").hover(function() {
-              $("#eleven").css("background-image", "url(../assets/2011-BG.svg)");
+              $("#eleven").css("background-image", "url(../assets/2011-BG.jpg)");
               $("#yeareleven").css("color", "white");
             },
             function() {
@@ -191,7 +191,7 @@ $(document).ready(function() {
             });
 
           $("#twelve").hover(function() {
-              $("#twelve").css("background-image", "url(../assets/2012-BG.svg)");
+              $("#twelve").css("background-image", "url(../assets/2012-BG.jpg)");
               $("#yeartwelve").css("color", "white");
             },
             function() {
@@ -200,7 +200,7 @@ $(document).ready(function() {
             });
 
           $("#thirteen").hover(function() {
-              $("#thirteen").css("background-image", "url(../assets/2013-BG.svg)");
+              $("#thirteen").css("background-image", "url(../assets/2013-BG.jpg)");
               $("#yearthirteen").css("color", "white");
             },
             function() {
@@ -209,7 +209,7 @@ $(document).ready(function() {
             });
 
           $("#fourteen").hover(function() {
-              $("#fourteen").css("background-image", "url(../assets/2014-BG.svg)");
+              $("#fourteen").css("background-image", "url(../assets/2014-BG.jpg)");
               $("#yearfourteen").css("color", "white");
             },
             function() {
@@ -218,7 +218,7 @@ $(document).ready(function() {
             });
 
           $("#fifteen").hover(function() {
-              $("#fifteen").css("background-image", "url(../assets/2015-BG.svg)");
+              $("#fifteen").css("background-image", "url(../assets/2015-BG.jpg)");
               $("#yearfifteen").css("color", "white");
             },
             function() {
@@ -236,7 +236,7 @@ $(document).ready(function() {
             });
 
           $("#seventeen").hover(function() {
-              $("#seventeen").css("background-image", "url(../assets/2017-BG.svg)");
+              $("#seventeen").css("background-image", "url(../assets/2017-BG.jpg)");
               $("#yearseventeen").css("color", "white");
             },
             function() {
@@ -245,7 +245,7 @@ $(document).ready(function() {
             });
 
           $("#eighteen").hover(function() {
-              $("#eighteen").css("background-image", "url(../assets/2018-BG.svg)");
+              $("#eighteen").css("background-image", "url(../assets/2018-BG.jpg)");
               $("#yeareighteen").css("color", "white");
             },
             function() {
