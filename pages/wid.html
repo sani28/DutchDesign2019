@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../src/styles/0-vendors/normalize.css">
   <link rel="stylesheet" type="text/css" href="../src/styles/5-pages/whatisdesign.css">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="../js/TweenMax.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
   <script type="text/javascript" src="../js/wid.js"></script>
@@ -26,19 +27,22 @@
     <nav class="wid-nav" id="nav-overlay">
       <h3>Jump To </h3>
       <ul class="main-nav-list" id="vid-markers">
-        <li class="vid-marker" id="pepe" data-time="10" >Pepe Heykoop</li>
-        <li class="vid-marker" id="ineke" data-time="20">Ineke Hans</li>
-        <li class="vid-marker" id="matthews" data-time="30">Studio Matthews</li>
-        <li class="vid-marker" id="futures" data-time="45">Intentional Futures</li>
-        <li class="vid-marker" id="truly" data-time="55">Studio Truly Truly</li>
-        <li class="vid-marker" id="lava" data-time="115">LAVA</li>
-        <li class="vid-marker" id="momkai" data-time="135">Momkai</li>
-        <li class="vid-marker" id="main" data-time="145">Main Studio</li>
-        <li class="vid-marker" id="corunum" data-time="175">Cor Unum</li>
-        <li class="vid-marker" id="floris" data-time="195">Floris Hovers</li>
-        <li class="vid-marker" id="valentin" data-time="206">Valentin Loellmann</li>
-        <li class="vid-marker" id="jurgen" data-time="217">Studio Makkink & Bey</li>
-        <li class="vid-marker" id="nienke" data-time="230">Nienke Hoogvliet</li>
+        <a data-img="../imgs/portraits/pepe.jpg" class="vid-marker" id="pepe" data-fx="1" data-time="0" >Pepe Heykoop</a>
+        <a data-img="../imgs/portraits/aldo.jpg" class="vid-marker" id="aldo" data-fx="1" data-time="10">Aldo Bakker</li>
+        <a data-img="../imgs/portraits/ineke.jpg" class="vid-marker" id="ineke" data-fx="1" data-time="20">Ineke Hans</li>
+        <a data-img="../imgs/portraits/sm.jpg" class="vid-marker" id="matthews" data-fx="1" data-time="30">Studio Matthews</a>
+        <a data-img="../imgs/portraits/ineke.jpg"class="vid-marker" id="futures" data-time="45">Intentional Futures</a>
+        <a data-img="../imgs/portraits/trulytruly.jpg" data-fx="1" class="vid-marker" id="truly" data-time="55">Studio Truly Truly</a>
+        <a data-img="../imgs/portraits/lava.jpg" data-fx="1" class="vid-marker" id="lava" data-time="115">LAVA</a>
+        <a data-img="../imgs/portraits/momkai.jpg" data-fx="1" class="vid-marker" id="momkai" data-time="135">Momkai</a>
+        <a data-img="../imgs/portraits/lex.jpg" data-fx="1" class="vid-marker" id="lex" data-time="135">Lex Pott</a>
+        <a data-img="../imgs/portraits/main.jpg" data-fx="1" class="vid-marker" id="main" data-time="145">Main Studio</a>
+        <a data-img="../imgs/portraits/corunum.jpg" data-fx="1" class="vid-marker" id="corunum" data-time="175">Cor Unum</a>
+        <a data-img="../imgs/portraits/floris.jpg" data-fx="1" class="vid-marker" id="floris" data-time="195">Floris Hovers</a>
+        <a data-img="../imgs/portraits/valentin.jpg" data-fx="1" class="vid-marker" id="valentin" data-time="206">Valentin Loellmann</a>
+        <a data-img="../imgs/portraits/jurgen.jpg" data-fx="1" class="vid-marker" id="jurgen" data-time="217">Studio Makkink & Bey</a>
+        <a data-img="../imgs/portraits/nienke.jpg" data-fx="1" class="vid-marker" id="nienke" data-time="230">Nienke Hoogvliet</a>
+        <a data-img="../imgs/portraits/rebecca.jpg" data-fx="1" class="vid-marker" id="rebecca" data-time="240">Rebecca Geskus</a>
       </ul>
     </nav>
     <div class="video-controls" id="vid-controls">

@@ -72,9 +72,6 @@ a#current {
     -o-transition: all 0.15s ease-in;
     transition: all 0.15s ease-in;
   }
-  .home-dot:hover{
-    background-color: purple;
-  }
   p {
     display: none;
     font-family: hyperMarket;
@@ -85,14 +82,17 @@ a#current {
 }
 
 #back-btn:hover #home-text {
-  display: inline-block;
-  float: right;
-  color: purple;
+  display: inline;
+  width: 100%;
+  left: 50px;
+  position: absolute;
+  font-size: 0.75rem
 }
 
 .home-dot {
   height: 35px;
   width: 35px;
+  background-color: white;
   border-radius: 50%;
   display: inline-block;
 }
@@ -248,7 +248,7 @@ a#current {
 
 #nav-overlay {
   position: absolute;
-  bottom: 0;
+  bottom: 2em;
   left: 0;
   right: 0;
   width: 100%;
@@ -259,26 +259,29 @@ a#current {
   h3{
     padding: 0;
     margin: 0;
+    font-size: 1em;
     margin-left: 5vw;
     font-family: hyperMarket;
   }
 
   #vid-markers{
     position: absolute;
-    right: 10vw;
+    right: 12vw;
     display: grid;
-    grid-template-columns: repeat(5, ($width-unit * 3));
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, ($width-unit * 4));
+    grid-template-rows: repeat(4, 1fr);
     grid-auto-flow: column dense;
     list-style: none;
     margin: 0;
     padding: 0;
     cursor: pointer;
     .vid-marker{
-      font-family: hyperMarket;
-      font-size: 1vw;
       margin-bottom: 0.35em;
-      color: white;
+      font-size: 0.8rem;
+      font-family: hyperMarket;
+      font-weight: bold;
+      height: 1rem;
+      padding: 3px 0;
     }
     .vid-marker:hover{
       background-color: $secondary-purp;
@@ -291,8 +294,8 @@ a#current {
 /* ---------------- image hovers -----------------*/
 .hover-reveal {
   position: fixed;
-  width: 200px;
-  height: 150px;
+  width: 300px;
+  height: 250px;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -312,6 +315,4 @@ a#current {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-
-
 /* -----------circle nav ------------ */

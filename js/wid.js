@@ -1,57 +1,27 @@
 $(document).ready(function() {
-  // Credit to David Thomas for display text on span hover --- :-) https://stackoverflow.com/users/82548/david-thomas
 
-  // textFrom : String, the attribute from which the text
-  //            should come,
-  // delta :    String or Number, the distance from the cursor at
-  //            which the tooltip should appear
   function instantTooltips(textFrom, delta) {
-    // if delta exists, and can be parsed to a number, we use it,
-    // otherwise we use the default of 5:
     delta = parseFloat(delta) ? parseFloat(delta) : 5;
 
-    // function to handle repositioning of the created tooltip:
+
     function reposition(e) {
       // get the tooltip element:
       var tooltip = this.nextSibling;
-      // setting the position according to the position of the
-      // pointer:
+
       tooltip.style.top = (e.pageY + delta) + 'px';
       tooltip.style.left = (e.pageX + delta) + 'px';
     }
-
-    // get all elements that have an attribute from which we
-    // want to get the tooltip text from:
     var toTitle = document.querySelectorAll('[' + textFrom + ']'),
-      //create a span element:
       span = document.createElement('span'),
-      // find if we should use textContent or innerText (IE):
       textProp = 'textContent' in document ? 'textContent' : 'innerText',
-      // caching variables for use in the upcoming forEach:
       parent, spanClone;
-    // adding a class-name (for CSS styling):
     span.classList.add('createdTooltip');
-    // iterating over each of the elements with a title attribute:
     [].forEach.call(toTitle, function(elem) {
-      // reference to the element's parentNode:
       parent = elem.parentNode;
-      // cloning the span, to avoid creating multiple elements:
       spanClone = span.cloneNode();
-      // setting the text of the cloned span to the text
-      // of the attribute from which the text should be taken:
       spanClone[textProp] = elem.getAttribute(textFrom);
-
-      // inserting the created/cloned span into the
-      // document, after the element:
       parent.insertBefore(spanClone, elem.nextSibling);
-
-      // binding the reposition function to the mousemove
-      // event:
       elem.addEventListener('mousemove', reposition);
-
-      // we're setting textFrom attribute to an empty string
-      // so that the CSS will still apply, but which
-      // should still not be shown by the browser:
       elem.setAttribute(textFrom, '');
     });
   }
@@ -59,8 +29,6 @@ $(document).ready(function() {
   // calling the function:
   instantTooltips('title', 20);
 
-  // ------------------- "CLIPS" MOUSECLICK EVENTS  ---------------------
-  //1 - Text to purple 2 - Circle Nav Appears 3 - Clip link set to active class 4- remove click functionality on clips
   $('#showClips').click(function(e) {
     e.preventDefault();
     $('.circle-nav-container').toggleClass("hidden unhidden");
@@ -240,7 +208,8 @@ $(document).ready(function() {
           left: document.body.scrollLeft + document.documentElement.scrollLeft,
           top: document.body.scrollTop + document.documentElement.scrollTop
         };
-
+        this.DOM.reveal.style.top = `${mousePos.y-160-docScrolls.top}px`;
+        this.DOM.reveal.style.left = `${mousePos.x+20-docScrolls.left}px`;
       };
       this.mouseenterFn = (ev) => {
         this.positionElement(ev);
@@ -252,14 +221,10 @@ $(document).ready(function() {
       this.mouseleaveFn = () => {
         this.hideImage();
       };
-      this.mouseclickFn = () => {
-        this.hideImage();
-      };
 
       this.DOM.el.addEventListener('mouseenter', this.mouseenterFn);
       this.DOM.el.addEventListener('mousemove', this.mousemoveFn);
       this.DOM.el.addEventListener('mouseleave', this.mouseleaveFn);
-      this.DOM.el.addEventListener('mouseclick', this.mouseclickFn);
     }
     showImage() {
       TweenMax.killTweensOf(this.DOM.revealInner);
@@ -274,17 +239,17 @@ $(document).ready(function() {
           }
         })
         .add('begin')
-        .add(new TweenMax(this.DOM.revealInner, 0.4, {
+        .add(new TweenMax(this.DOM.revealInner, 0.3, {
           ease: Sine.easeOut,
           startAt: {
-            x: '-100%'
+            x: '0%'
           },
           x: '0%'
         }), 'begin')
-        .add(new TweenMax(this.DOM.revealImg, 0.4, {
+        .add(new TweenMax(this.DOM.revealImg, 0.3, {
           ease: Sine.easeOut,
           startAt: {
-            x: '100%'
+            x: '0%'
           },
           x: '0%'
         }), 'begin');
@@ -309,18 +274,18 @@ $(document).ready(function() {
           }
         })
         .add('begin')
-        .add(new TweenMax(this.DOM.revealInner, 0.4, {
+        .add(new TweenMax(this.DOM.revealInner, 0.1, {
           ease: Sine.easeOut,
-          x: '100%'
+          x: '0%'
         }), 'begin')
 
-        .add(new TweenMax(this.DOM.revealImg, 0.4, {
+        .add(new TweenMax(this.DOM.revealImg, 0.1, {
           ease: Sine.easeOut,
-          x: '-100%'
+          x: '0%'
         }), 'begin');
     }
   }
 
-  [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(sppan => new HoverImgFx1(link));
+  [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
 });
 // -------------------  "FULL FILM" MOUSECLICK EVENTS  ---------------------- //
