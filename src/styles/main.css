@@ -1360,7 +1360,7 @@ a#imgHover {
 .video-container .scroll-hint {
   position: absolute;
   display: block;
-  bottom: 1vh;
+  bottom: 7vh;
   width: 150px;
   left: 0;
   right: 0;
