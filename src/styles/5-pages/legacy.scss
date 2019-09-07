@@ -6,8 +6,37 @@ $primary-green: #DFEA4E;
 $secondary-purp: #7D246B;
 
 /* ------------------- containers ------------------------------------- */
-@import '../1-helpers/fonts';
-// @import '../2-modules/background';
+
+@font-face {
+  font-family: redaction-regular;
+  src: url(../../fonts/Redaction-Regular.otf);
+}
+
+@font-face {
+  font-family: Redaction;
+  src: url(../../fonts/Redaction-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: maisonBold;
+  src: url(../../fonts/MaisonMono-Bold.otf);
+}
+
+@font-face {
+  font-family: maisonMedium;
+  src: url(../../fonts/MaisonNeue-Medium.ttf);
+}
+
+@font-face {
+  font-family: maisonNeue-Mono;
+  src: url(../../fonts/MaisonNeue-Mono.otf);
+}
+
+@font-face {
+  font-family: maisonNeueExt-Mono;
+  src: url(../../fonts/MaisonNeueExt-Medium.otf)
+}
 
 /* ----- legacy fonts ------ */
 @font-face {
@@ -254,7 +283,7 @@ h1 {
 }
 
 #nineteen{
-  font-family: redaction;
+  font-family: Redaction;
 }
 
 #yeartwelve {
