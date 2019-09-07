@@ -3,7 +3,7 @@ $(document).ready(function(){
 //CURSOR
   const $bigBall = document.querySelector('.cursor__ball--big');
   const $smallBall = document.querySelector('.cursor__ball--small');
-  var $hoverables = document.querySelectorAll('.hoverable');
+  var $hoverables = document.getElementsByClassName('.hoverable');
 
   //ELEMENTS
   const $designerDots = document.querySelectorAll(".designer-dot");
@@ -27,6 +27,7 @@ $(document).ready(function(){
     $hoverables[i].addEventListener('mouseenter', onMouseHover);
     $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
   }
+
   // Move the cursor
   function onMouseMove(e) {
     TweenMax.to($smallBall, .1, {
@@ -118,6 +119,7 @@ function initAnimation() {
       for(let i=0; i<$designerDots.length; i++ ){
         $($designerDots[i]).addClass("active-dot");
         $($designerDots[i]).addClass("hoverable");
+        $hoverables = document.querySelectorAll('.hoverable');
       }
       for (let j=0; j<$experienceDots.length; j++){
         $($experienceDots[j]).removeClass("active-dot");
@@ -156,6 +158,7 @@ function initAnimation() {
           hideUIElements();
           hideExperienceDots();
           hideOverlaps($designerDots);
+          $(".cursor__ball").css("mix-blend-mode", "multiply");
         }
       });
       $($designerDots[i]).mouseout(function(){
@@ -166,6 +169,7 @@ function initAnimation() {
           showUIElements();
           showExperienceDots();
           showDesignerDots();
+          $(".cursor__ball").css("mix-blend-mode", "screen");
         }
       });
     }
@@ -182,6 +186,7 @@ function initAnimation() {
           hideUIElements();
           hideDesignerDots();
           hideOverlaps($experienceDots);
+          $(".cursor__ball").css("mix-blend-mode", "multiply");
         }
       });
       $($experienceDots[j]).mouseout(function(){
@@ -192,6 +197,7 @@ function initAnimation() {
           showUIElements();
           showDesignerDots();
           showExperienceDots();
+          $(".cursor__ball").css("mix-blend-mode", "screen");
         }
       });
     }
@@ -345,7 +351,7 @@ function initAnimation() {
   function hideOverlaps(arr){
     let headers = document.getElementById("hover-title");
     let dots = arr;
-    for(let i=0; i<$designerDots.length; i++){
+    for(let i=0; i<dots.length; i++){
       let curr = dots[i];
       if(collision(headers, dots[i])){
         $(dots[i]).css("display", "none");
