@@ -372,7 +372,7 @@ a#current {
 }
 #back-btn p {
   display: none;
-  font-family: hyperMarket;
+  font-family: hyperMarket, "Courier New", monospace;
   font-size: 0.9em;
   text-transform: uppercase;
   color: white;
@@ -512,6 +512,57 @@ a#current {
   font-family: redaction;
 }
 
+#reglaze-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid: repeat(13, 6.67vh)/1fr repeat(21, 4.54vw);
+  gap: none none;
+}
+#reglaze-overlay #blurb-header {
+  font-size: 5.5rem;
+  grid-row: 5;
+  grid-column: 9;
+  margin-top: 0;
+  justify-content: start;
+  box-sizing: border-box;
+}
+#reglaze-overlay #blurb-body {
+  font-size: 2.25rem;
+  grid-row: 8;
+  grid-column: 9/span 8;
+  width: 100%;
+  text-align: justify;
+}
+#reglaze-overlay #credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-column: 2/span 4;
+  grid-row: 6;
+  list-style: none;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+#reglaze-overlay #credits li {
+  font-family: MaisonNeue-Mono;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+#reglaze-overlay #description {
+  grid-column: 3/span 4;
+  grid-row: 11;
+  font-family: MaisonNeue-Mono;
+  font-size: 0.85rem;
+  text-align: left;
+  margin-left: -1.5rem;
+}
+
 .pause-cursor {
   cursor: url("../../../assets/images/pause-button.svg") 15 20, auto;
 }
@@ -548,7 +599,7 @@ a#current {
   margin: 0;
   font-size: 1em;
   margin-left: 5vw;
-  font-family: hyperMarket;
+  font-family: hyperMarket, "Courier New", monospace;
 }
 #nav-overlay #vid-markers {
   position: absolute;
@@ -565,7 +616,7 @@ a#current {
 #nav-overlay #vid-markers .vid-marker {
   margin-bottom: 0.35em;
   font-size: 0.8rem;
-  font-family: hyperMarket;
+  font-family: hyperMarket, "Courier New", monospace;
   font-weight: bold;
   height: 1rem;
   padding: 3px 0;

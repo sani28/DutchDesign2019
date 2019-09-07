@@ -225,6 +225,57 @@ a#current {
   }
 }
 
+#reglaze-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid: repeat(13, $height-unit)/ 1fr repeat(21, $width-unit);
+  gap: none none;
+  #blurb-header{
+    font-size: 5.5rem;
+    grid-row: 5;
+    grid-column: 9;
+    margin-top: 0;
+    justify-content: start;
+    box-sizing: border-box;
+  }
+  #blurb-body{
+    font-size: 2.25rem;
+    grid-row: 8;
+    grid-column: 9/ span 8;
+    width: 100%;
+    text-align: justify;
+  }
+  #credits{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: 2 / span 4;
+    grid-row: 6;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 1rem;
+    li{
+      font-family: MaisonNeue-Mono;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      text-align: left;
+    }
+  }
+  #description{
+    grid-column: 3/ span 4;
+    grid-row: 11;
+    font-family: MaisonNeue-Mono;
+    font-size: 0.85rem;
+    text-align: left;
+    margin-left: -1.5rem;
+  }
+}
+
 
 .pause-cursor {
   cursor: url("../../../assets/images/pause-button.svg") 15 20, auto;
