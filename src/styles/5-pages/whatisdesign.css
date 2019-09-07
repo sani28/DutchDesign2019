@@ -400,17 +400,19 @@ a#current {
   top: 0;
   bottom: 0;
   width: 100%;
-  max-height: 100%;
+  height: auto;
   overflow: hidden;
   object-fit: cover;
   margin: 0;
 }
 .wid-video-container video {
-  max-width: 100vw;
-  height: auto;
+  width: 100vw;
+  height: 100vw;
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
 }
 .wid-video-container .video-controls {

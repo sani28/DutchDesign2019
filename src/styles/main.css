@@ -781,20 +781,16 @@ html.designer-page-body {
     display: none;
   }
 
+  #scroll-down, #scroll-tool, div#back-btn {
+    display: none;
+  }
+
   section.photo-section-8, section.photo-section-7, section.photo-section-6, section.photo-section-6-v2, section.photo-section-5, section.photo-section-4, section.photo-section-4-v2, section.photo-section-3, section.photo-section-2, section.photo-section-1, .end-caption {
     display: none;
   }
 
   .section-quote, .center-quote {
     display: none !important;
-  }
-
-  #scroll-down {
-    display: none;
-  }
-
-  #scroll-tool {
-    display: none;
   }
 
   section.transcript {

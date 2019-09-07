@@ -314,10 +314,11 @@ transform: scale(0.8);
     }
   }
 
-
-
-
   #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle, .cursor{
+    display: none;
+  }
+
+  #scroll-down, #scroll-tool, div#back-btn {
     display: none;
   }
 
@@ -327,14 +328,6 @@ transform: scale(0.8);
 
   .section-quote, .center-quote {
     display: none !important;
-  }
-
-  #scroll-down {
-    display: none;
-  }
-
-  #scroll-tool{
-    display: none;
   }
 
   section.transcript {
@@ -352,7 +345,6 @@ transform: scale(0.8);
       text-align: left;
     }
   }
-
 
   .video-container{
     .video-overlay{
