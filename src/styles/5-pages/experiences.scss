@@ -939,7 +939,7 @@ h1#exp-title{
 
 .exp-title-twoline {
   text-align: right;
-  font-size: 5.5vw;
+  font-size: 5.5rem;
   // font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   font-family: Redaction-Bold;
   line-height: 100%;
@@ -969,6 +969,7 @@ h3#exp-title-secondary {
   font-family: hyperMarket;
   font-size: 0.75em;
   margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 #exp-title {
