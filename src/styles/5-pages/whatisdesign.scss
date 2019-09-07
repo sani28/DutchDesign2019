@@ -74,7 +74,7 @@ a#current {
   }
   p {
     display: none;
-    font-family: hyperMarket;
+    font-family: hyperMarket, "Courier New", monospace;
     font-size: 0.9em;
     text-transform: uppercase;
     color: white;
@@ -261,7 +261,7 @@ a#current {
     margin: 0;
     font-size: 1em;
     margin-left: 5vw;
-    font-family: hyperMarket;
+    font-family: hyperMarket, "Courier New", monospace;
   }
 
   #vid-markers{
@@ -278,7 +278,7 @@ a#current {
     .vid-marker{
       margin-bottom: 0.35em;
       font-size: 0.8rem;
-      font-family: hyperMarket;
+      font-family: hyperMarket, "Courier New", monospace;
       font-weight: bold;
       height: 1rem;
       padding: 3px 0;

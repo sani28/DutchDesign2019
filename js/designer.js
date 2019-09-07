@@ -42,7 +42,7 @@ $(document).ready(function() {
     .addTo(scrollController);
 
   var fillScrollProgress = new ScrollMagic.Scene({
-      duration: totalHeight - 950,
+      duration: totalHeight - 200,
       offset: 175,
       tweenChanges: true
     })

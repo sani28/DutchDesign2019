@@ -58,7 +58,7 @@ a#imgHover {
   }
   p {
     display: none;
-    font-family: hyperMarket;
+    font-family: hyperMarket, "Courier New", monospace;
     font-size: 0.9em;
     text-transform: uppercase;
     color: white;
@@ -108,7 +108,7 @@ a#imgHover {
 
   a.top-nav-item {
     font-size: 0.8rem;
-    font-family: hyperMarket;
+    font-family: hyperMarket, "Courier New", monospace;
     font-weight: bold;
     color: $secondary-purp;
     text-transform: uppercase;
@@ -131,7 +131,7 @@ a#imgHover {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
-  font-family: hyperMarket;
+  font-family: hyperMarket, "Courier New", monospace;
 }
 
 #designer-list {
@@ -199,7 +199,7 @@ a#imgHover {
 .landing-toggle {
   color: $secondary-purp;
   font-size: 0.8rem;
-  font-family: hyperMarket;
+  font-family: hyperMarket, "Courier New", monospace;
   text-transform: uppercase;
   height: 1rem;
   padding-top: 0.2rem;
@@ -260,7 +260,7 @@ a#imgHover {
   }
 
   #hover-subtitle {
-    font-family: hyperMarket;
+    font-family: hyperMarket, "Courier New", monospace;
     font-size: 0.85vw;
     margin: 0;
     color: white;
@@ -500,7 +500,7 @@ a#imgHover {
     p{
       margin: 0 auto;
       padding-bottom: 6px;
-      font-family: maisonNeue-Mono;
+      font-family: maisonNeue-Mono, "Courier New", monospace;
       text-transform: uppercase;
       font-size: 0.75em;
       color: white;
@@ -522,7 +522,7 @@ a#imgHover {
 
     h1 {
       font-size: 5.5vw;
-      font-family: redaction;
+      font-family: Redaction;
       color: white;
       z-index: 1;
     }
@@ -532,7 +532,7 @@ a#imgHover {
 
     p {
       font-size: 1vw;
-      font-family: maisonNeue-Mono;
+      font-family: maisonNeue-Mono, "Courier New", monospace;
       width: 50%;
       margin: 0;
       color: white;
@@ -647,7 +647,7 @@ a#imgHover {
 }
 
 .designer-tagline {
-  font-family: hyperMarket;
+  font-family: hyperMarket, "Courier New", monospace;
   font-size: 0.75em;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -740,7 +740,7 @@ a#imgHover {
     .content-toggle {
       margin-right: 2em;
       color: $secondary-purp;
-      font-family: hyperMarket;
+      font-family: hyperMarket, "Courier New", monospace;
       font-size: 1em;
       text-transform: uppercase;
       padding-bottom: 0.25em;
@@ -794,7 +794,7 @@ a#imgHover {
   bottom: 0;
 
   p {
-    font-family: maisonNeue-Mono;
+    font-family: maisonNeue-Mono, "Courier New", monospace;
     font-size: 0.75rem;
     color: black;
     display: inline;
@@ -803,7 +803,7 @@ a#imgHover {
   }
 
   a {
-    font-family: hyperMarket;
+    font-family: hyperMarket, "Courier New", monospace;
     font-size: 0.75rem;
     color: $secondary-purp;
     display: inline;
@@ -842,7 +842,7 @@ a#imgHover {
     font-size: 0.75rem;
     color: $secondary-purp;
     text-align: center;
-    font-family: hyperMarket;
+    font-family: hyperMarket, "Courier New", monospace;
   }
 
   .inner-util:hover {
@@ -863,7 +863,7 @@ a#imgHover {
 .section-quote::before {
   content: '“';
   font-size: 4rem;
-  font-family: redaction;
+  font-family: Redaction;
   color: $primary-green;
   position: relative;
   top: 1rem;
@@ -941,7 +941,7 @@ p span {
   background-color: none;
   width: 30%;
   color: $secondary-purp;
-  font-family: hyperMarket;
+  font-family: hyperMarket, "Courier New", monospace;
   text-transform: uppercase;
 }
 
