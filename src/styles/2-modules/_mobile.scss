@@ -352,9 +352,9 @@ transform: scale(0.8);
         display: none;
       }
     }
-    .video-controls{
+    div.video-controls{
       height: 5vh;
-      bottom: 0;
+      bottom: -3vh;
       margin-bottom: 2em;
     }
   }
