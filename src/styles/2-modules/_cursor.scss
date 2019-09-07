@@ -17,3 +17,11 @@ body .cursor__ball {
 body .cursor__ball circle {
   fill: purple;
 }
+
+body.no-cursor {
+  cursor: none;
+}
+
+#main-toggle>a:hover, .main-nav-list>a, .designer-dot, .experience-dot, #top-nav>a {
+  cursor: none;
+}
