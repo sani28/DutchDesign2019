@@ -568,6 +568,10 @@ body .cursor__ball circle {
 /* ------------------ MEDIA QUERIES  ------------------ */
 @media only screen and (max-width: 900px) {
 
+  #back-btn:hover  {
+    display: none;
+  }
+
   #team-bio {
     grid-column: 7/15;
     grid-row: 4/6;

@@ -370,6 +370,10 @@ a#current {
 
 @media screen and (max-width: 800px)  {
 
+  #back-btn:hover  {
+    display: none;
+  }
+
   #nav-overlay {
     position: absolute;
     bottom: 2em;

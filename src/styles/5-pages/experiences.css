@@ -935,7 +935,6 @@ body .cursor__ball circle {
   grid-column: 11/16;
   width: 80%;
   align-self: end;
-  line-height: 150%;
 }
 
 .photo-section-6-v2 .section-caption:nth-child(4) {
@@ -943,7 +942,6 @@ body .cursor__ball circle {
   grid-column: 2/9;
   width: 70%;
   align-self: end;
-  line-height: 150%;
 }
 
 /*-------------- PHOTO SECITON 7  -------------------- */

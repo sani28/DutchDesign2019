@@ -486,14 +486,6 @@
   text-align: justify;
 }
 
-// .photo-section-6 .section-caption#rome {
-//   grid-row: 6/8;
-//   grid-column: 11/16;
-//   width: 90%;
-//   align-self: end;
-//   line-height: 150%;
-// }
-
 .photo-section-6 .section-caption#felting {
   width: 90%;
   grid-row: 2/4;
@@ -559,7 +551,6 @@
   grid-column: 11/16;
   width: 80%;
   align-self: end;
-  line-height: 150%;
 }
 
 .photo-section-6-v2 .section-caption:nth-child(4) {
@@ -567,7 +558,6 @@
   grid-column: 2/9;
   width: 70%;
   align-self: end;
-  line-height: 150%;
 }
 
 /*-------------- PHOTO SECITON 7  -------------------- */
@@ -1035,6 +1025,10 @@ transform: scale(0.8);}
 }
 
 @media screen and (max-width: 800px)  {
+
+  #back-btn:hover  {
+    display: none;
+  }
 
   #back-btn {
     transform: scale(1.1);
