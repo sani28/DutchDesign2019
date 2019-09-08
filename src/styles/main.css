@@ -897,6 +897,10 @@ body .cursor__ball {
   z-index: 1000;
 }
 
+body .cursor__ball.solid {
+  mix-blend-mode: normal;
+}
+
 body .cursor__ball circle {
   fill: purple;
 }
@@ -912,6 +916,10 @@ body.no-cursor {
 *,
 html {
   color: black;
+}
+
+body {
+  overflow: hidden;
 }
 
 h1.title {
