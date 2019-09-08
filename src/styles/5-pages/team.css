@@ -91,7 +91,7 @@ html {
   background-color: #222222;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
-  font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
+  font-family: redaction-bold, "maisonMono-Regular", sans-serif;
   overflow: hidden;
   -webkit-animation: fadein 1s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -269,8 +269,8 @@ html {
 /* --------- [INDIVIDUAL] TEAM COPY ----------------- */
 #team-bio {
   display: grid;
-  grid-row: 5;
-  grid-column: 8/16;
+  grid-row: 4;
+  grid-column: 7/17;
   line-height: 210%;
   text-align: justify;
   z-index: 0;
@@ -537,12 +537,12 @@ body .cursor__ball circle {
   width: 120px;
   background-color: transform;
   text-align: center;
-  padding: 5px 0;
+  padding: 7px 0;
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 55%;
-  margin-left: -60px;
+  margin-left: -50px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -636,9 +636,13 @@ body .cursor__ball circle {
 
 /* ------------------ MEDIA QUERIES  ------------------ */
 @media only screen and (max-width: 900px) {
+  #back-btn:hover #home-text {
+    display: none;
+  }
+
   #team-bio {
     grid-column: 7/15;
-    grid-row: 4/6;
+    grid-row: 3;
     height: 300px;
     width: 85vw;
     background-color: black;

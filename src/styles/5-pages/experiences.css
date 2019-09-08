@@ -391,8 +391,20 @@ body .cursor__ball {
   z-index: 1000;
 }
 
+body .cursor__ball.solid {
+  mix-blend-mode: normal;
+}
+
 body .cursor__ball circle {
   fill: purple;
+}
+
+body.no-cursor {
+  cursor: none;
+}
+
+#main-toggle > a:hover, .main-nav-list > a, .designer-dot, .experience-dot, #top-nav > a {
+  cursor: none;
 }
 
 /* ----- fonts ------ */
@@ -935,7 +947,6 @@ body .cursor__ball circle {
   grid-column: 11/16;
   width: 80%;
   align-self: end;
-  line-height: 150%;
 }
 
 .photo-section-6-v2 .section-caption:nth-child(4) {
@@ -943,7 +954,6 @@ body .cursor__ball circle {
   grid-column: 2/9;
   width: 70%;
   align-self: end;
-  line-height: 150%;
 }
 
 /*-------------- PHOTO SECITON 7  -------------------- */
@@ -1240,7 +1250,7 @@ a#home:hover {
 }
 
 #appian-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/appian/appian_banner.jpg");
+  background-image: url("../../../assets/images/appian/appianway_banner.jpg");
 }
 
 #arnhem-photo.exp-landing-photo {
@@ -1390,6 +1400,10 @@ h3#exp-title-secondary {
   }
 }
 @media screen and (max-width: 800px) {
+  #back-btn:hover #home-text {
+    display: none;
+  }
+
   #back-btn {
     transform: scale(1.1);
     top: 1.2em;

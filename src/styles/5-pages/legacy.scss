@@ -6,7 +6,8 @@ $primary-green: #DFEA4E;
 $secondary-purp: #7D246B;
 
 /* ------------------- containers ------------------------------------- */
-
+// @import '../1-helpers/fonts';
+// @import '../2-modules/background';
 @font-face {
   font-family: redaction-regular;
   src: url(../../fonts/Redaction-Regular.otf);
@@ -193,7 +194,6 @@ html {
   display: inline-block;
 }
 
-
 /* ------------------- archive ------------------------------------- */
 .archive-stack {
   width: 253px;
@@ -326,6 +326,10 @@ h1 {
 }
 
 @media only screen and (max-width: 800px) {
+
+  #back-btn:hover #home-text  {
+    display: none;
+  }
 
 
    #scroll-indiactor-wrapper  {

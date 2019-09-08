@@ -370,6 +370,10 @@ a#current {
 /* -----------circle nav ------------ */
 
 @media screen and (max-width: 800px)  {
+  
+  #back-btn:hover #home-text  {
+    display: none;
+  }
 
   #nav-overlay {
     position: absolute;
