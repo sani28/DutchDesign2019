@@ -189,8 +189,8 @@ transform: scale(0.8);
 
 #team-bio {
   display: grid;
-  grid-row: 5;
-  grid-column: 8/16;
+  grid-row: 4;
+  grid-column: 7/17;
   line-height: 210%;
   text-align: justify;
   z-index:0;
@@ -469,12 +469,12 @@ body .cursor__ball circle {
   width: 120px;
   background-color: transform;
   text-align: center;
-  padding: 5px 0;
+  padding: 7px 0;
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 55%;
-  margin-left: -60px;
+  margin-left: -50px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -574,7 +574,7 @@ body .cursor__ball circle {
 
   #team-bio {
     grid-column: 7/15;
-    grid-row: 4/6;
+    grid-row: 3;
     height: 300px;
     width: 85vw;
     background-color: black;

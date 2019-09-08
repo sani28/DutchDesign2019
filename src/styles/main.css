@@ -513,6 +513,11 @@ html.designer-page-body {
   html {
     background-color: #DFEA4E;
     background-image: none;
+    overflow: hidden;
+  }
+
+  body {
+    overflow: hidden;
   }
 
   nav#top-nav a.top-nav-item {
