@@ -391,8 +391,20 @@ body .cursor__ball {
   z-index: 1000;
 }
 
+body .cursor__ball.solid {
+  mix-blend-mode: normal;
+}
+
 body .cursor__ball circle {
   fill: purple;
+}
+
+body.no-cursor {
+  cursor: none;
+}
+
+#main-toggle > a:hover, .main-nav-list > a, .designer-dot, .experience-dot, #top-nav > a {
+  cursor: none;
 }
 
 /* ----- fonts ------ */
@@ -1238,7 +1250,7 @@ a#home:hover {
 }
 
 #appian-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/appian/appian_banner.jpg");
+  background-image: url("../../../assets/images/appian/appianway_banner.jpg");
 }
 
 #arnhem-photo.exp-landing-photo {
@@ -1388,6 +1400,10 @@ h3#exp-title-secondary {
   }
 }
 @media screen and (max-width: 800px) {
+  #back-btn:hover #home-text {
+    display: none;
+  }
+
   #back-btn {
     transform: scale(1.1);
     top: 1.2em;
