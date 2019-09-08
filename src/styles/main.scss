@@ -631,21 +631,6 @@ a#imgHover {
   }
 }
 
-.play-cursor {
-  cursor: url("../../assets/images/play-button.svg") 20 20, auto;
-}
-
-.play-cursor.hoveraction {
-  cursor: none;
-}
-
-.pause-cursor {
-  cursor: url("../../assets/images/pause-button.svg") 15 20, auto;
-}
-
-.pause-cursor.hoveraction {
-  cursor: none;
-}
 
 .designer-tagline {
   font-family: hyperMarket, "Courier New", monospace;

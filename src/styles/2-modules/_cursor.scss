@@ -26,6 +26,32 @@ body.no-cursor {
   cursor: none;
 }
 
+body.dot-cursor{
+  cursor: url("../../assets/images/smalldot.svg") 20 20, auto;
+}
+
+body.dot-cursor .hoverable:hover{
+  cursor: url("../../assets/images/largedot.svg") 20 20, auto;
+  transition: all 0.5s ease-in;
+}
+
+.play-cursor {
+  cursor: url("../../assets/images/play-button.svg") 20 20, auto;
+}
+
+.play-cursor.hoveraction {
+  cursor: none;
+}
+
+.pause-cursor {
+  cursor: url("../../assets/images/pause-button.svg") 15 20, auto;
+}
+
+.pause-cursor.hoveraction {
+  cursor: none;
+}
+
+
 #main-toggle>a:hover, .main-nav-list>a, .designer-dot, .experience-dot, #top-nav>a {
   cursor: none;
 }

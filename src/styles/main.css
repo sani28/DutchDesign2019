@@ -530,14 +530,14 @@ html.designer-page-body {
     margin-top: 0.5em;
     padding-bottom: 1em;
   }
-  section.designer-top-section #designer-toggle .content-toggle {
+  section.designer-top-section #designer-toggle .content-toggle hoverable {
     margin-right: 2em;
     color: #7D246B;
     font-family: hyperMarket;
     font-size: 3vw;
     text-transform: uppercase;
   }
-  section.designer-top-section #designer-toggle .content-toggle.active {
+  section.designer-top-section #designer-toggle .content-toggle hoverable.active {
     border-bottom: 2px solid #7D246B;
   }
   section.designer-top-section .designer-summary {
@@ -604,7 +604,7 @@ html.designer-page-body {
     text-transform: uppercase;
     display: flex;
   }
-  #mobile-container .sidenav .mobile-toggle .content-toggle {
+  #mobile-container .sidenav .mobile-toggle .content-toggle hoverable {
     color: #7D246B;
     margin: 0.5em;
     font-family: hyperMarket;
@@ -897,11 +897,40 @@ body .cursor__ball {
   z-index: 1000;
 }
 
+body .cursor__ball.solid {
+  mix-blend-mode: normal;
+}
+
 body .cursor__ball circle {
   fill: purple;
 }
 
 body.no-cursor {
+  cursor: none;
+}
+
+body.dot-cursor {
+  cursor: url("../../assets/images/smalldot.svg") 20 20, auto;
+}
+
+body.dot-cursor .hoverable:hover {
+  cursor: url("../../assets/images/largedot.svg") 20 20, auto;
+  transition: all 0.5s ease-in;
+}
+
+.play-cursor {
+  cursor: url("../../assets/images/play-button.svg") 20 20, auto;
+}
+
+.play-cursor.hoveraction {
+  cursor: none;
+}
+
+.pause-cursor {
+  cursor: url("../../assets/images/pause-button.svg") 15 20, auto;
+}
+
+.pause-cursor.hoveraction {
   cursor: none;
 }
 
@@ -1490,22 +1519,6 @@ a#imgHover {
 }
 .video-container .video-controls .vid-buttons.fs #fs {
   padding-right: 0.6vw;
-}
-
-.play-cursor {
-  cursor: url("../../assets/images/play-button.svg") 20 20, auto;
-}
-
-.play-cursor.hoveraction {
-  cursor: none;
-}
-
-.pause-cursor {
-  cursor: url("../../assets/images/pause-button.svg") 15 20, auto;
-}
-
-.pause-cursor.hoveraction {
-  cursor: none;
 }
 
 .designer-tagline {

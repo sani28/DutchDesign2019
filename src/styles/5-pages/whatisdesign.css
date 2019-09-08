@@ -302,6 +302,38 @@
   width: 40%;
 }
 
+body .cursor__ball--big {
+  display: none;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: screen;
+  z-index: 1000;
+}
+
+body .cursor__ball.solid {
+  mix-blend-mode: normal;
+}
+
+body .cursor__ball circle {
+  fill: purple;
+}
+
+body.no-cursor {
+  cursor: none;
+}
+
+#main-toggle > a:hover, .main-nav-list > a, .designer-dot, .experience-dot, #top-nav > a {
+  cursor: none;
+}
+
 /* ----- fonts ------ */
 @font-face {
   font-family: hyperMarket;
