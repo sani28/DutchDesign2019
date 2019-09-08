@@ -73,18 +73,23 @@
 }
 @font-face {
   font-family: hyperMarket;
-  src: url(../../../fonts/hypermarket-regular.ttf);
+  src: url("../../../fonts/hypermarket-regular.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: maisonMono-Regular;
-  src: url(../../../fonts/MaisonMono-Regular.otf);
+  src: url("../../../fonts/MaisonMono-Regular.otf");
 }
 @font-face {
   font-family: redaction-bold;
-  src: url(../../../fonts/Redaction-Bold.otf);
+  src: url("../../../fonts/Redaction-Bold.otf");
   font-weight: bold;
   text-transform: capitalize;
+}
+@font-face {
+  font-family: FontName;
+  src: url("../../../fonts/MaisonMono-Regular.otf");
+  src: url("../../../fonts/MaisonMono-Regular.otf?#iefix") format("embedded-opentype");
 }
 /* --------- GRID LINES ----------------- */
 html {
@@ -159,7 +164,7 @@ html {
 
 #team-blurb {
   font-family: redaction-bold;
-  font-size: calc(0.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
   width: 57%;
   margin-left: 10%;
