@@ -44,7 +44,11 @@ transform: scale(0.8);
   body{
     overflow: hidden;
   }
-  
+
+  #back-btn:hover #home-text  {
+    display: none;
+  }
+
   nav#top-nav a.top-nav-item {
     color: white;
   }

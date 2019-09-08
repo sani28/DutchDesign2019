@@ -91,7 +91,7 @@ html {
   background-color: #222222;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
-  font-family: Redaction, "Helvetica Neue", Tahoma, sans-serif;
+  font-family: redaction-bold, "maisonMono-Regular", sans-serif;
   overflow: hidden;
   -webkit-animation: fadein 1s;
   /* Safari, Chrome and Opera > 12.1 */
