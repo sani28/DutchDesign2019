@@ -91,7 +91,7 @@ html {
   background-color: #222222;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
-  font-family: redaction-bold, "maisonMono-Regular", sans-serif;
+  font-family: redaction-bold, "maisonMono-Regular", helvetica, sans-serif;
   overflow: hidden;
   -webkit-animation: fadein 1s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -159,7 +159,7 @@ html {
 
 #team-blurb {
   font-family: redaction-bold;
-  font-size: calc(0.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(0.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
   width: 57%;
   margin-left: 10%;
@@ -299,7 +299,7 @@ html {
 
 h1 {
   display: inline-block;
-  font-family: Redaction;
+  font-family: redaction-bold;
   font-size: 3em;
   grid-row: 3;
   grid-column: 8/16;
