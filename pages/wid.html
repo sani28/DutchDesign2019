@@ -20,6 +20,18 @@
       <source src="https://player.vimeo.com/external/353639144.hd.mp4?s=14be4c8231becec1f4a823ef6976afdcd6860c07&profile_id=175" type="video/mp4"></source>
       Your browser doesn't support HTML5 videos.
     </video>
+    <div class="cursor">
+      <div class="cursor__ball--big">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+      </div>
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
     <div class="blurb-container play-cursor" id="blurb">
       <h2 id="blurb-header"> WHAT IS DESIGN </h2>
       <p id="blurb-body">both a thoughtful & absurd request, we ask 16 designers to describe how & why they design at this particular moment in their life.</p>
@@ -27,22 +39,22 @@
     <nav class="wid-nav" id="nav-overlay">
       <h3>Jump To </h3>
       <ul class="main-nav-list" id="vid-markers">
-        <a data-img="../imgs/portraits/pepe.jpg" class="vid-marker" id="pepe" data-fx="1" data-time="0" >Pepe Heykoop</a>
-        <a data-img="../imgs/portraits/aldo.jpg" class="vid-marker" id="aldo" data-fx="1" data-time="10">Aldo Bakker</li>
-        <a data-img="../imgs/portraits/ineke.jpg" class="vid-marker" id="ineke" data-fx="1" data-time="20">Ineke Hans</li>
-        <a data-img="../imgs/portraits/sm.jpg" class="vid-marker" id="matthews" data-fx="1" data-time="30">Studio Matthews</a>
-        <a data-img="../imgs/portraits/ineke.jpg"class="vid-marker" id="futures" data-time="45">Intentional Futures</a>
-        <a data-img="../imgs/portraits/trulytruly.jpg" data-fx="1" class="vid-marker" id="truly" data-time="55">Studio Truly Truly</a>
-        <a data-img="../imgs/portraits/lava.jpg" data-fx="1" class="vid-marker" id="lava" data-time="115">LAVA</a>
-        <a data-img="../imgs/portraits/momkai.jpg" data-fx="1" class="vid-marker" id="momkai" data-time="135">Momkai</a>
-        <a data-img="../imgs/portraits/lex.jpg" data-fx="1" class="vid-marker" id="lex" data-time="135">Lex Pott</a>
-        <a data-img="../imgs/portraits/main.jpg" data-fx="1" class="vid-marker" id="main" data-time="145">Main Studio</a>
-        <a data-img="../imgs/portraits/corunum.jpg" data-fx="1" class="vid-marker" id="corunum" data-time="175">Cor Unum</a>
-        <a data-img="../imgs/portraits/floris.jpg" data-fx="1" class="vid-marker" id="floris" data-time="195">Floris Hovers</a>
-        <a data-img="../imgs/portraits/valentin.jpg" data-fx="1" class="vid-marker" id="valentin" data-time="206">Valentin Loellmann</a>
-        <a data-img="../imgs/portraits/jurgen.jpg" data-fx="1" class="vid-marker" id="jurgen" data-time="217">Studio Makkink & Bey</a>
-        <a data-img="../imgs/portraits/nienke.jpg" data-fx="1" class="vid-marker" id="nienke" data-time="230">Nienke Hoogvliet</a>
-        <a data-img="../imgs/portraits/rebecca.jpg" data-fx="1" class="vid-marker" id="rebecca" data-time="240">Rebecca Geskus</a>
+        <a data-img="../imgs/portraits/pepe.jpg" class="vid-marker hoverable" id="pepe" data-fx="1" data-time="0" >Pepe Heykoop</a>
+        <a data-img="../imgs/portraits/aldo.jpg" class="vid-marker hoverable" id="aldo" data-fx="1" data-time="10">Aldo Bakker</li>
+        <a data-img="../imgs/portraits/ineke.jpg" class="vid-marker hoverable" id="ineke" data-fx="1" data-time="20">Ineke Hans</li>
+        <a data-img="../imgs/portraits/sm.jpg" class="vid-marker hoverable" id="matthews" data-fx="1" data-time="30">Studio Matthews</a>
+        <a data-img="../imgs/portraits/ineke.jpg"class="vid-marker hoverable" id="futures" data-time="45">Intentional Futures</a>
+        <a data-img="../imgs/portraits/trulytruly.jpg" data-fx="1" class="vid-marker hoverable" id="truly" data-time="55">Studio Truly Truly</a>
+        <a data-img="../imgs/portraits/lava.jpg" data-fx="1" class="vid-marker hoverable" id="lava" data-time="115">LAVA</a>
+        <a data-img="../imgs/portraits/momkai.jpg" data-fx="1" class="vid-marker hoverable" id="momkai" data-time="135">Momkai</a>
+        <a data-img="../imgs/portraits/lex.jpg" data-fx="1" class="vid-marker hoverable" id="lex" data-time="135">Lex Pott</a>
+        <a data-img="../imgs/portraits/main.jpg" data-fx="1" class="vid-marker hoverable" id="main" data-time="145">Main Studio</a>
+        <a data-img="../imgs/portraits/corunum.jpg" data-fx="1" class="vid-marker hoverable" id="corunum" data-time="175">Cor Unum</a>
+        <a data-img="../imgs/portraits/floris.jpg" data-fx="1" class="vid-marker hoverable" id="floris" data-time="195">Floris Hovers</a>
+        <a data-img="../imgs/portraits/valentin.jpg" data-fx="1" class="vid-marker hoverable" id="valentin" data-time="206">Valentin Loellmann</a>
+        <a data-img="../imgs/portraits/jurgen.jpg" data-fx="1" class="vid-marker hoverable" id="jurgen" data-time="217">Studio Makkink & Bey</a>
+        <a data-img="../imgs/portraits/nienke.jpg" data-fx="1" class="vid-marker hoverable" id="nienke" data-time="230">Nienke Hoogvliet</a>
+        <a data-img="../imgs/portraits/rebecca.jpg" data-fx="1" class="vid-marker hoverable" id="rebecca" data-time="240">Rebecca Geskus</a>
       </ul>
     </nav>
     <div class="video-controls" id="vid-controls">

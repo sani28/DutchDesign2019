@@ -64,7 +64,7 @@ transform: scale(0.8);
       margin-top: 0.5em;
       padding-bottom: 1em;
 
-      .content-toggle {
+      .content-toggle hoverable {
         margin-right: 2em;
         color: $secondary-purp;
         font-family: hyperMarket;
@@ -72,7 +72,7 @@ transform: scale(0.8);
         text-transform: uppercase;
       }
 
-      .content-toggle.active {
+      .content-toggle hoverable.active {
         border-bottom: 2px solid $secondary-purp;
       }
     }
@@ -140,7 +140,7 @@ transform: scale(0.8);
         margin-bottom: 1em;
         text-transform: uppercase;
         display: flex;
-        .content-toggle{
+        .content-toggle hoverable{
           color: $secondary-purp;
           margin: 0.5em;
           font-family: hyperMarket;
