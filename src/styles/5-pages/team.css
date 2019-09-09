@@ -13,6 +13,10 @@
   font-weight: bold;
   text-transform: capitalize;
 }
+@font-face {
+  font-family: maisonNeue-Mono;
+  src: url("../../../fonts/MaisonNeue-Mono.otf");
+}
 /* --------- GRID LINES ----------------- */
 html {
   background-color: #222222;
@@ -202,6 +206,7 @@ html {
   text-align: justify;
   z-index: 0;
   max-height: 500px;
+  font-family: maisonMono-Regular;
 }
 
 .photo-section {
@@ -238,6 +243,51 @@ p.team {
   font-size: 0.95rem;
   grid-row: 4/10;
   grid-column: 8/16;
+}
+
+/* IMAGE HOVER REVEAL */
+@keyframes loop {
+  0% {
+    transform-origin: 0 50%;
+    transform: scale3d(0, 1, 1);
+  }
+  50% {
+    transform-origin: 0 50%;
+    transform: scale3d(1, 1, 1);
+  }
+  51% {
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+  }
+}
+.hover-reveal {
+  position: fixed;
+  width: 600px;
+  height: 550px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 99;
+}
+
+.hover-reveal__img,
+.hover-reveal__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  z-index: 99;
+}
+
+.hover-reveal__img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: 99;
 }
 
 /* ------------------ INDIVIDUAL PHOTO STYLING  ------------------ */
@@ -561,20 +611,34 @@ body .cursor__ball circle {
   transform: scale(1);
 }
 
+/* _________________________ DESKTOP ________________________ */
+@media screen and (min-width: 900px) {
+  .mobile-team-container,
+.swiper-container,
+.swiper-slide {
+    display: none;
+  }
+
+  #para-mobile {
+    display: none;
+  }
+
+  .owl-carousel .owl-slide .owl-nav {
+    display: none;
+  }
+}
+/* _____________________ MOBILE __________________________ */
 /* ------------------ MEDIA QUERIES  ------------------ */
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   #back-btn:hover #home-text {
     display: none;
   }
 
   #team-bio {
-    grid-column: 7/15;
-    grid-row: 3;
-    height: 300px;
-    width: 85vw;
-    background-color: black;
-    padding-left: 10%;
-    margin-bottom: 15%;
+    display: block;
+    width: 90vw;
+    border: 2px solid blue;
+    padding: 5px;
   }
 
   .portfolio-link {
@@ -582,13 +646,17 @@ body .cursor__ball circle {
     font-family: hyperMarket;
     margin-left: 2%;
     z-index: 10;
+    display: block;
   }
 
   h1 {
     padding: 0;
     margin: 0;
+    height: 50px;
+    display: block;
     line-height: 180%;
     padding-left: 2%;
+    font-size: 2.7rem;
   }
 
   .circle-nav-container {
@@ -611,9 +679,9 @@ body .cursor__ball circle {
   p.team {
     font-family: maisonNeue-Mono;
     line-height: 200%;
-    font-size: 0.7em;
+    font-size: 0.67em;
     padding: 1em;
-    width: 80%;
+    width: 85vw;
   }
 
   p.small {
@@ -621,83 +689,15 @@ body .cursor__ball circle {
     line-height: 200%;
     text-align: left;
   }
-}
-/* IMAGE HOVER REVEAL */
-@keyframes loop {
-  0% {
-    transform-origin: 0 50%;
-    transform: scale3d(0, 1, 1);
-  }
-  50% {
-    transform-origin: 0 50%;
-    transform: scale3d(1, 1, 1);
-  }
-  51% {
-    transform-origin: 100% 50%;
-  }
-  100% {
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-  }
-}
-.hover-reveal {
-  position: fixed;
-  width: 600px;
-  height: 550px;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0;
-  z-index: 99;
-}
 
-.hover-reveal__img,
-.hover-reveal__inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: grid;
-  z-index: 99;
-}
-
-.hover-reveal__img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  z-index: 99;
-}
-
-/*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
-/* _________________________ DESKTOP ________________________ */
-@media screen and (max-height: 600px) {
   #title {
     transform: scale(0.9);
-  }
-
-  p.small {
-    display: none;
   }
 
   .hover-reveal__img {
     display: none;
   }
-}
-/* _________________________ DESKTOP ________________________ */
-@media screen and (min-width: 900px) {
-  .mobile-team-container, .swiper-container, .swiper-slide {
-    display: none;
-  }
 
-  #para-mobile {
-    display: none;
-  }
-
-  .owl-carousel .owl-slide .owl-nav {
-    display: none;
-  }
-}
-/* _____________________ MOBILE __________________________ */
-@media screen and (max-width: 900px) {
   .grid-layout-container {
     display: none;
   }
@@ -718,8 +718,7 @@ body .cursor__ball circle {
     grid: repeat(1, 7vh)/repeat(15, 5.5vw);
     width: 80%;
   }
-}
-@media screen and (max-width: 900px) {
+
   .back-btn-mobile {
     z-index: 99;
   }
@@ -740,7 +739,7 @@ body .cursor__ball circle {
   }
 
   h1#mobile-longname {
-    font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(2.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
 
   /*---- mobile team page landingcontent ---- */
@@ -762,7 +761,8 @@ body .cursor__ball circle {
     position: absolute;
   }
 
-  #para, #team-blurb {
+  #para,
+#team-blurb {
     display: none;
   }
 
@@ -786,7 +786,7 @@ body .cursor__ball circle {
 #teamphoto-4 {
     transform: scale(0.5);
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-top: -10%;
     position: relative;
   }
