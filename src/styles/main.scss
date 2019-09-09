@@ -488,6 +488,13 @@ a#imgHover {
     right: 0;
     margin: auto;
   }
+  video::cue{
+    background-color: transparent;
+    color: #FFFF;
+    font-size: 1rem;
+    font-family: maisonNeue-Mono;
+  }
+
   .scroll-hint{
     position: absolute;
     display: block;
@@ -622,9 +629,9 @@ a#imgHover {
 
     }
 
-    .vid-buttons.fs {
+    .vid-buttons.right {
       margin-left: auto;
-      #fs{
+      #fs, #subs{
         padding-right: 0.6vw;
       }
     }

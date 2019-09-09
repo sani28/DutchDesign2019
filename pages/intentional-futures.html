@@ -38,7 +38,8 @@
   </div>
   <figure class="video-container play-cursor" id="video-fig">
     <video id="designer-vid" poster="../assets/images/video-posters/FuturesOverlay.jpg" preload="none" playsinline>
-      <source src="https://player.vimeo.com/external/353639144.hd.mp4?s=14be4c8231becec1f4a823ef6976afdcd6860c07&profile_id=175" type="video/mp4"></source>
+      <source  crossorigin="anonymous" src="https://player.vimeo.com/external/358010414.hd.mp4?s=0e196878933033c6185781105fb18fd445a1b0de&profile_id=175" type="video/mp4"></source>
+      <track label="English" kind="subtitles" srclang="en" src="../assets/subs/if_Subtitles.vtt" default>
     </video>
     <div class="video-overlay" id="designer-overlay">
       <h2 class="designer-tagline white-txt">Seattle // Digital</h2>
@@ -60,7 +61,8 @@
         <span >/<span>
             <div id="vidDuration">00:00</div>
       </div>
-      <div class="vid-buttons fs">
+      <div class="vid-buttons right">
+        <button class="vid-subs" id="subs">SUBTITLES</button>
         <button class="fullscreen" id="fs">FULLSCREEN</button>
       </div>
     </div>

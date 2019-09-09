@@ -206,15 +206,14 @@ transform: scale(0.8);
       margin: auto;
       left: 0;
       right: 0;
-      top: 0;
+      top: 10vh;
       bottom: 0;
       position: absolute;
-      height: 50vh;
       width: 90%;
       font-family: Redaction;
-      font-size: 5.5vw;
+      font-size: 4.9vw;
       color: $secondary-purp;
-      line-height: 1.85rem;
+      line-height: 2.25rem;
       text-align: justify;
     }
     #mobile-video-slider{

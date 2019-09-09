@@ -8,12 +8,14 @@ $(document).ready(function() {
   const fullscreen = document.getElementById("fs");
   const progress = document.getElementById("progress");
   const scrollProg = document.getElementById("scroll-progress");
+  const subtitle = document.getElementById("subs");
   const mq = window.matchMedia( "(min-width: 500px)" );
   var scrollController = new ScrollMagic.Controller();
   var scrollControl = new ScrollMagic.Controller();
   var jumpController = new ScrollMagic.Controller();
   var progController = new ScrollMagic.Controller();
   var totalHeight = document.body.scrollHeight;
+
 
   var revertProgress = TweenLite.from("#animate", 0.5, {
     autoAlpha: 0,
@@ -203,6 +205,18 @@ $(document).ready(function() {
     vid.webkitEnterFullscreen();
     vid.enterFullscreen();
   }
+
+  for (var i = 0; i < vid.textTracks.length; i++) {
+     vid.textTracks[i].mode = 'hidden';
+  }
+
+  subtitle.addEventListener('click', function(e){
+    if (vid.textTracks[0].mode == "hidden"){
+      vid.textTracks[0].mode = "showing";
+    } else {
+      vid.textTracks[0].mode = "hidden";
+    }
+  });
 
   vid.addEventListener('timeupdate', function() {
     let playbackPos = (vid.currentTime / vid.duration);
