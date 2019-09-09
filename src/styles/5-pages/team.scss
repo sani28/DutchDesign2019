@@ -110,7 +110,7 @@ html {
 }
 
 p.small {
-  font-family: maisonMono-Regular;
+  font-family: maisonNeue-Mono;
   line-height: 200%;
   text-align: justify;
   display: block;
@@ -190,13 +190,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
   z-index: 1;
 }
 
 .slider {
   width: 70%;
-  border: 2px solid red;
   z-index: 1;
 }
 
@@ -644,9 +642,50 @@ body .cursor__ball circle {
 }
 /* _____________________ MOBILE __________________________ */
 
+
 /* ------------------ MEDIA QUERIES  ------------------ */
 
 
+/*tablet*/
+
+@media screen and (max-width: 768px) and (min-width: 1024px) {
+}
+
+
+/*iphone 5/se*/
+
+@media screen and (max-width: 375px) {
+  #team-bio {
+    transform: scale(0.9);
+  }
+
+  #title {
+    font-size: 1.8em;
+  }
+
+  #para-mobile {
+    font-size: 0.8em;
+  }
+
+}
+
+
+/*iphone 5/se*/
+
+@media screen and (max-width: 320px) {
+  #team-bio {
+    transform: scale(0.8);
+  }
+
+  #team-blurb-mobile {
+    width: 70vw;
+    font-size: 0.8em;
+  }
+
+  #para-mobile {
+    font-size: 1.2em; 
+  }
+}
 @media screen and (max-width: 900px) {
 
   #back-btn:hover #home-text {
@@ -657,6 +696,7 @@ body .cursor__ball circle {
     display: block;
     width: 90vw;
     padding: 5px;
+    height: 70vh;
   }
 
   .portfolio-link {
@@ -674,7 +714,7 @@ body .cursor__ball circle {
     display: block;
     line-height: 180%;
     padding-left: 2%;
-    font-size: 2.7rem;
+    font-size: calc(2.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
 
   .circle-nav-container {
@@ -697,16 +737,11 @@ body .cursor__ball circle {
   p.team {
     font-family: maisonNeue-Mono;
     line-height: 200%;
-    font-size: 0.67em;
+    font-size: calc(0.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     padding: 1em;
     width: 85vw;
   }
 
-  p.small {
-    font-size: 0.7em;
-    line-height: 200%;
-    text-align: left;
-  }
 
   #title {
     transform: scale(0.9);
@@ -741,7 +776,8 @@ body .cursor__ball circle {
     z-index: 99;
   }
 
-  .swiper-container {}
+  .swiper-container {
+  }
 
   .swiper-slide:nth-child(1) {
     background: none;
@@ -759,7 +795,11 @@ body .cursor__ball circle {
   }
 
   h1#mobile-longname {
-    font-size: calc(2.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(2.1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
+
+  h1#mobile-longname-2 {
+    font-size: calc(1.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
   /*---- mobile team page landingcontent ---- */
   .bg-mobile {
@@ -790,10 +830,32 @@ body .cursor__ball circle {
   }
 
   #team-blurb-mobile {
-    width: 70vw;
-    padding: 0;
+    width: 85vw;
+    max-height: 100px;
+    position: absolute;
+    top: 10%;
+    left:5%;
+    padding:2%;
     margin: 0;
+    display: block;
+
   }
+
+  #para-mobile {
+      width: 90%;
+      left: 6%;
+      position: absolute;
+      max-height: 100px;
+      display: block;
+      margin: 10px 10px;
+  }
+
+  p.small {
+    font-size: calc(0.6em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: 200%;
+    text-align: left;
+  }
+
 
   .photo-section {
     transform: scale(0.9);
