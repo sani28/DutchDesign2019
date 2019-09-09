@@ -14,7 +14,6 @@ $(document).ready(function() {
 
   const orderedDesignerImages = [
     document.getElementById("cant-1"),
-    document.getElementById("cant-2"),
     document.getElementById("cant-3"),
     document.getElementById("cant-4"),
     document.getElementById("cant-cap-1"),
@@ -29,7 +28,6 @@ $(document).ready(function() {
 
   var scrollControl = new ScrollMagic.Controller();
 
-
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
         triggerElement: orderedDesignerImages[i],
@@ -40,4 +38,12 @@ $(document).ready(function() {
       .setClassToggle(orderedDesignerImages[i], "visible")
       .addTo(scrollControl);
   }
+  new ScrollMagic.Scene({
+      triggerElement: "#cant-2",
+      triggerHook: 0.8,
+      offset: 300,
+      reverse: true
+    })
+    .setClassToggle("#cant-2", "visible")
+    .addTo(scrollControl);
 });

@@ -15,10 +15,8 @@ $(document).ready(function() {
   const orderedDesignerImages = [
     document.getElementById("dyes-1"),
     document.getElementById("dyes-2"),
-    document.getElementById("dyes-3"),
     document.getElementById("dyes-4"),
     document.getElementById("dyes-5"),
-    document.getElementById("dyes-6"),
     document.getElementById("dyes-7"),
     document.getElementById("dyes-8"),
     document.getElementById("dyes-vid"),
@@ -27,9 +25,13 @@ $(document).ready(function() {
     document.getElementById("wrkshop-vid")
   ];
 
+  const stagger = [
+    document.getElementById("dyes-3"),
+    document.getElementById("dyes-6"),
+  ]
+
 
   var scrollControl = new ScrollMagic.Controller();
-
 
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
@@ -39,6 +41,17 @@ $(document).ready(function() {
         reverse: true
       })
       .setClassToggle(orderedDesignerImages[i], "visible")
+      .addTo(scrollControl);
+  }
+
+  for (let i = 0; i < stagger.length; i++) {
+    new ScrollMagic.Scene({
+        triggerElement: stagger[i],
+        triggerHook: 0.8,
+        offset: 300,
+        reverse: true
+      })
+      .setClassToggle(stagger[i], "visible")
       .addTo(scrollControl);
   }
 });

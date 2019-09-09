@@ -23,7 +23,6 @@ $(document).ready(function() {
     document.getElementById("ap-bike-vid"),
     document.getElementById("inGrass"),
     document.getElementById("ap-field-vid"),
-    document.getElementById("appianStone"),
     document.getElementById("quote1"),
     document.getElementById("caption2"),
     document.getElementById("app-cap-1"),
@@ -33,7 +32,6 @@ $(document).ready(function() {
 
 
   var scrollControl = new ScrollMagic.Controller();
-
 
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
@@ -45,4 +43,13 @@ $(document).ready(function() {
       .setClassToggle(orderedDesignerImages[i], "visible")
       .addTo(scrollControl);
   }
+
+  new ScrollMagic.Scene({
+      triggerElement: "#appianStone",
+      triggerHook: 0.8,
+      offset: 300,
+      reverse: true
+    })
+    .setClassToggle("#appianStone", "visible")
+    .addTo(scrollControl);
 });

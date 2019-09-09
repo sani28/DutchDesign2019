@@ -25,7 +25,6 @@ $(document).ready(function() {
     document.getElementById("baseline-3"),
     document.getElementById("onGrass"),
     document.getElementById("dune1"),
-    document.getElementById("dune2"),
     document.getElementById("end")
   ];
 
@@ -43,4 +42,13 @@ $(document).ready(function() {
       .setClassToggle(orderedDesignerImages[i], "visible")
       .addTo(scrollControl);
   }
+
+  new ScrollMagic.Scene({
+      triggerElement: "#dune2",
+      triggerHook: 0.8,
+      offset: 300,
+      reverse: true
+    })
+    .setClassToggle("#dune2", "visible")
+    .addTo(scrollControl);
 });

@@ -20,7 +20,6 @@ $(document).ready(function(){
     document.getElementById("sketch-2"),
     document.getElementById("group-pic"),
     document.getElementById("outdoor-1"),
-    document.getElementById("outdoor-2"),
     document.getElementById("caption1"),
     document.getElementById("quote4"),
     document.getElementById("caption2"),
@@ -28,7 +27,6 @@ $(document).ready(function(){
 
 
   var scrollControl = new ScrollMagic.Controller();
-
 
   for(let i=0; i<orderedDesignerImages.length; i++){
     new ScrollMagic.Scene({
@@ -40,6 +38,15 @@ $(document).ready(function(){
     .setClassToggle(orderedDesignerImages[i], "visible")
     .addTo(scrollControl);
   }
+
+  new ScrollMagic.Scene({
+    triggerElement: "#outdoor-2",
+    triggerHook: 0.8,
+    offset: 300,
+    reverse: true
+  })
+  .setClassToggle("#outdoor-2", "visible")
+  .addTo(scrollControl);
 
 
 });

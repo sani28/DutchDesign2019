@@ -20,7 +20,6 @@ $(document).ready(function() {
     document.getElementById("farm-5"),
     document.getElementById("farm-6"),
     document.getElementById("farm-7"),
-    document.getElementById("farm-8"),
     document.getElementById("farm-cap-1"),
     document.getElementById("farm-cap-2"),
     document.getElementById("farm-cap-3"),
@@ -29,7 +28,6 @@ $(document).ready(function() {
 
 
   var scrollControl = new ScrollMagic.Controller();
-
 
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
@@ -41,4 +39,13 @@ $(document).ready(function() {
       .setClassToggle(orderedDesignerImages[i], "visible")
       .addTo(scrollControl);
   }
+
+  new ScrollMagic.Scene({
+      triggerElement: "#farm-8",
+      triggerHook: 0.8,
+      offset: 300,
+      reverse: true
+    })
+    .setClassToggle("#farm-8", "visible")
+    .addTo(scrollControl);
 });

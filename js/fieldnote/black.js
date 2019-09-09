@@ -23,13 +23,11 @@ $(document).ready(function() {
     document.getElementById("bb-cap-2"),
     document.getElementById("bb-5"),
     document.getElementById("bb-6"),
-    document.getElementById("bb-7"),
     document.getElementById("end")
   ];
 
 
   var scrollControl = new ScrollMagic.Controller();
-
 
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
@@ -41,4 +39,12 @@ $(document).ready(function() {
       .setClassToggle(orderedDesignerImages[i], "visible")
       .addTo(scrollControl);
   }
+  new ScrollMagic.Scene({
+      triggerElement: "#bb-7",
+      triggerHook: 0.8,
+      offset: 300,
+      reverse: true
+    })
+    .setClassToggle("#bb-7", "visible")
+    .addTo(scrollControl);
 });

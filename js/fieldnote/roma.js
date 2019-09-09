@@ -15,7 +15,6 @@ $(document).ready(function(){
   const orderedDesignerImages = [
     document.getElementById("roma-1"),
     document.getElementById("roma-2"),
-    document.getElementById("roma-3"),
     document.getElementById("roma-cap-1"),
     document.getElementById("roma-cap-2"),
     document.getElementById("roma-cap-3"),
@@ -30,7 +29,6 @@ $(document).ready(function(){
 
   var scrollControl = new ScrollMagic.Controller();
 
-
   for(let i=0; i<orderedDesignerImages.length; i++){
     new ScrollMagic.Scene({
       triggerElement: orderedDesignerImages[i],
@@ -41,4 +39,13 @@ $(document).ready(function(){
     .setClassToggle(orderedDesignerImages[i], "visible")
     .addTo(scrollControl);
   }
+
+  new ScrollMagic.Scene({
+    triggerElement: "#roma-3",
+    triggerHook: 0.8,
+    offset: 300,
+    reverse: true
+  })
+  .setClassToggle("#roma-3", "visible")
+  .addTo(scrollControl);
 });
