@@ -1,22 +1,19 @@
-@import '../1-helpers/fonts';
+// @import '../1-helpers/fonts';
 
 @font-face {
   font-family: hyperMarket;
   src: url('../../../fonts/hypermarket-regular.ttf');
-  src: url('../../../fonts/hypermarket-regular.ttf?#iefix') format('embedded-opentype'),
   font-weight: bold;
 }
 
 @font-face {
   font-family: maisonMono-Regular;
   src: url('../../../fonts/MaisonMono-Regular.otf');
-  src: url('../../../fonts/MaisonMono-Regular.otf?#iefix') format('embedded-opentype'),
 }
 
 @font-face {
   font-family: redaction-bold;
   src: url('../../../fonts/Redaction-Bold.otf');
-  src: url('../../../fonts/MaisonMono-Regular.otf?#iefix') format('embedded-opentype'),
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -89,7 +86,7 @@ html {
 }
 
 p.small {
-  font-family: maisonNeue-Mono;
+  font-family: maisonMono-Regular;
   line-height: 200%;
   text-align: justify;
   display: block;
@@ -230,7 +227,7 @@ h1 {
 }
 
 p.team {
-  font-family: maisonNeue-Mono;
+  font-family: maisonMono-Regular;
   line-height: 200%;
   font-size: 0.95rem;
   grid-row: 4/10;

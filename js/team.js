@@ -1,13 +1,9 @@
 $(window).load(function() {
-
-
       $(".tooltip").hover(function() {
           $(".str_wrap").css("opacity", "0.3");
-          console.log("hovered!");
         },
         function() {
         $(".str_wrap").css("opacity", "1");
-        console.log("hovered!");
       });
 
 
