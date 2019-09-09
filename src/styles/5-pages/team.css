@@ -637,12 +637,11 @@ body .cursor__ball circle {
   #team-bio {
     display: block;
     width: 90vw;
-    border: 2px solid blue;
     padding: 5px;
   }
 
   .portfolio-link {
-    font-size: 0.6em;
+    font-size: 0.67em;
     font-family: hyperMarket;
     margin-left: 2%;
     z-index: 10;
