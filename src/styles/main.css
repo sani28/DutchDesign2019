@@ -1409,12 +1409,6 @@ a#imgHover {
   right: 0;
   margin: auto;
 }
-.video-container video::cue {
-  background-color: transparent;
-  color: #FFFF;
-  font-size: 1rem;
-  font-family: maisonNeue-Mono;
-}
 .video-container .scroll-hint {
   position: absolute;
   display: block;
@@ -1516,7 +1510,7 @@ a#imgHover {
 .video-container .video-controls .vid-buttons {
   margin-top: 5px;
 }
-.video-container .video-controls .vid-buttons button {
+.video-container .video-controls .vid-buttons button, .video-container .video-controls .vid-buttons a {
   background: none;
   border: 0;
   outline: none;
@@ -1538,7 +1532,8 @@ a#imgHover {
 .video-container .video-controls .vid-buttons.right {
   margin-left: auto;
 }
-.video-container .video-controls .vid-buttons.right #fs, .video-container .video-controls .vid-buttons.right #subs {
+.video-container .video-controls .vid-buttons.right #fs, .video-container .video-controls .vid-buttons.right #vimeo {
+  display: inline;
   padding-right: 0.6vw;
 }
 

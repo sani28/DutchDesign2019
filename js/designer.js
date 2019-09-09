@@ -8,7 +8,7 @@ $(document).ready(function() {
   const fullscreen = document.getElementById("fs");
   const progress = document.getElementById("progress");
   const scrollProg = document.getElementById("scroll-progress");
-  const subtitle = document.getElementById("subs");
+  // const subtitle = document.getElementById("subs");
   const mq = window.matchMedia( "(min-width: 500px)" );
   var scrollController = new ScrollMagic.Controller();
   var scrollControl = new ScrollMagic.Controller();
@@ -174,6 +174,11 @@ $(document).ready(function() {
     $("#vidDuration").text(formatTime(dur));
   }
 
+  function initTime(){
+    $("#vidDuration").text(formatTime(vid.duration));
+  }
+
+
   function formatTime(s) {
     return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s
   }
@@ -205,18 +210,6 @@ $(document).ready(function() {
     vid.webkitEnterFullscreen();
     vid.enterFullscreen();
   }
-
-  for (var i = 0; i < vid.textTracks.length; i++) {
-     vid.textTracks[i].mode = 'hidden';
-  }
-
-  subtitle.addEventListener('click', function(e){
-    if (vid.textTracks[0].mode == "hidden"){
-      vid.textTracks[0].mode = "showing";
-    } else {
-      vid.textTracks[0].mode = "hidden";
-    }
-  });
 
   vid.addEventListener('timeupdate', function() {
     let playbackPos = (vid.currentTime / vid.duration);
