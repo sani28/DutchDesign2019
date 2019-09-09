@@ -902,12 +902,44 @@ a#imgHover {
 .transcript {
   display: grid;
   grid-template-columns: repeat(21, $width-unit) 1fr;
+  grid-template-rows: 1fr 1fr;
   display: none;
   font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  height: auto;
+  .fake-footer {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/-1;
+    grid-row: 2;
+    margin: 2em 10%;
+    text-transform: uppercase;
+
+    p {
+      font-family: maisonNeue-Mono, "Courier New", monospace;
+      font-size: 0.75rem;
+      color: black;
+      display: inline;
+      margin-bottom: 0.25rem;
+      line-height: 125%;
+    }
+
+    a {
+      font-family: hyperMarket, "Courier New", monospace;
+      font-size: 0.75rem;
+      color: $secondary-purp;
+      display: inline;
+      margin-bottom: 2rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 #transcript-container {
   grid-column: 6/span 11;
+  grid-row: 1;
   width: 100%;
   height: 90vh;
   font-family: Maison Neue;

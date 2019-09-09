@@ -90,6 +90,7 @@ $secondary-purp: #7D246B;
 .photo-section-2 {
   @extend %photo-section;
   grid-template-rows: repeat(5, 16.66vh) 1fr;
+  margin-bottom: 2rem;
   .layout-item:first-child{
     grid-row: 2/4;
     grid-column: 5 / 9;
@@ -130,8 +131,8 @@ $secondary-purp: #7D246B;
     margin-bottom: 0;
   }
   .section-quote.type-two{
-    grid-row: 4/6;
-    grid-column: 6 / 9;
+    grid-row: 4/5;
+    grid-column: 4/9;
     align-self: start;
     width: 100%;
     margin-bottom: 0;
