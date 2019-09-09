@@ -944,9 +944,6 @@ h1#exp-title{
 //   font-size: calc(2.4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 // }
 //
-// .exp-title-twoline#andrea {
-//   font-size: calc(2.2em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-// }
 
 h3#exp-title-secondary {
   line-height: 0%;
@@ -1034,6 +1031,10 @@ transform: scale(0.8);}
     transform: scale(1.1);
     top: 1.2em;
     left: 1.2em;
+  }
+
+  .exp-title-twoline {
+    font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
 
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption{
