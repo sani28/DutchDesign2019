@@ -73,25 +73,30 @@
 }
 @font-face {
   font-family: hyperMarket;
-  src: url(../../../fonts/hypermarket-regular.ttf);
+  src: url("../../../fonts/hypermarket-regular.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: maisonMono-Regular;
-  src: url(../../../fonts/MaisonMono-Regular.otf);
+  src: url("../../../fonts/MaisonMono-Regular.otf");
 }
 @font-face {
   font-family: redaction-bold;
-  src: url(../../../fonts/Redaction-Bold.otf);
+  src: url("../../../fonts/Redaction-Bold.otf");
   font-weight: bold;
   text-transform: capitalize;
+}
+@font-face {
+  font-family: FontName;
+  src: url("../../../fonts/MaisonMono-Regular.otf");
+  src: url("../../../fonts/MaisonMono-Regular.otf?#iefix") format("embedded-opentype");
 }
 /* --------- GRID LINES ----------------- */
 html {
   background-color: #222222;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
-  font-family: redaction-bold, "maisonMono-Regular", sans-serif;
+  font-family: redaction-bold, "maisonMono-Regular", helvetica, sans-serif;
   overflow: hidden;
   -webkit-animation: fadein 1s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -299,7 +304,7 @@ html {
 
 h1 {
   display: inline-block;
-  font-family: Redaction;
+  font-family: redaction-bold;
   font-size: 3em;
   grid-row: 3;
   grid-column: 8/16;

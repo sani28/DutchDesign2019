@@ -403,6 +403,31 @@ body.no-cursor {
   cursor: none;
 }
 
+body.dot-cursor {
+  cursor: url("../../assets/images/smalldot.svg") 20 20, auto;
+}
+
+body.dot-cursor .hoverable:hover {
+  cursor: url("../../assets/images/largedot.svg") 20 20, auto;
+  transition: all 0.5s ease-in;
+}
+
+.play-cursor {
+  cursor: url("../../assets/images/play-button.svg") 20 20, auto;
+}
+
+.play-cursor.hoveraction {
+  cursor: none;
+}
+
+.pause-cursor {
+  cursor: url("../../assets/images/pause-button.svg") 15 20, auto;
+}
+
+.pause-cursor.hoveraction {
+  cursor: none;
+}
+
 #main-toggle > a:hover, .main-nav-list > a, .designer-dot, .experience-dot, #top-nav > a {
   cursor: none;
 }
@@ -1096,7 +1121,7 @@ body.no-cursor {
   grid-column: 4/9;
   grid-row: 1/10;
   width: 100%;
-  margin-top: 35%;
+  margin-top: 30%;
   align-self: start;
 }
 
@@ -1408,6 +1433,10 @@ h3#exp-title-secondary {
     transform: scale(1.1);
     top: 1.2em;
     left: 1.2em;
+  }
+
+  .exp-title-twoline {
+    font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
 
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
