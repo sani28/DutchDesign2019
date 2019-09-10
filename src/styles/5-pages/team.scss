@@ -1,67 +1,91 @@
 // @import '../1-helpers/fonts';
-
 @font-face {
   font-family: hyperMarket;
-  src: url('../../../fonts/hypermarket-regular.ttf');
+  src: url("../../../fonts/hypermarket-regular.ttf");
   font-weight: bold;
 }
-
 @font-face {
   font-family: maisonMono-Regular;
-  src: url('../../../fonts/MaisonMono-Regular.otf');
+  src: url("../../../fonts/MaisonMono-Regular.otf");
 }
-
 @font-face {
   font-family: redaction-bold;
-  src: url('../../../fonts/Redaction-Bold.otf');
+  src: url("../../../fonts/Redaction-Bold.otf");
   font-weight: bold;
   text-transform: capitalize;
 }
 
-/* --------- GRID LINES ----------------- */
+@font-face {
+  font-family: maisonNeue-Mono;
+  src: url("../../../fonts/MaisonNeue-Mono.otf");
+}
 
+/* --------- GRID LINES ----------------- */
 html {
   background-color: #222222;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   font-family: redaction-bold, "maisonMono-Regular", helvetica, sans-serif;
   overflow: hidden;
-  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 1s; /* Firefox < 16 */
-      -ms-animation: fadein 1s; /* Internet Explorer */
-       -o-animation: fadein 1s; /* Opera < 12.1 */
-          animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s;
 }
-
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
 /* Internet Explorer */
 @-ms-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
 /* Opera < 12.1 */
 @-o-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
 /* --------- [LADNING] TEAM COPY ----------------- */
 #title {
   font-family: redaction-bold;
@@ -86,7 +110,7 @@ html {
 }
 
 p.small {
-  font-family: maisonMono-Regular;
+  font-family: maisonNeue-Mono;
   line-height: 200%;
   text-align: justify;
   display: block;
@@ -94,28 +118,26 @@ p.small {
 }
 
 #para {
-    display: grid;
-    grid-row: 10;
-    grid-column: 12/21;
-    width: 100%;
-    text-align: justify;
+  display: grid;
+  grid-row: 10;
+  grid-column: 12/21;
+  width: 100%;
+  text-align: justify;
 }
-
 /* --------- GRID LAYOUT  ----------------- */
-
-                    /* --------- BG IMAGE ----------------- */
-                    .bg {
-                      width: 100vw;
-                      height: 100vh;
-                      object-fit: cover;
-                      // background-image: url("../../../assets/images/team/teampageBG.jpg");
-                      background-position: center;
-                      background-repeat: no-repeat;
-                      opacity: 0.9;
-                      background-size: cover;
-                      position: absolute;
-                      z-index: -1;
-                    }
+/* --------- BG IMAGE ----------------- */
+.bg {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  // background-image: url("../../../assets/images/team/teampageBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
 
 .grid-layout-container {
   display: grid;
@@ -140,8 +162,6 @@ p.small {
   z-index: -1;
   opacity: 0.5;
 }
-
-
 /* --------- DOC STYLING  ----------------- */
 *,
 html {
@@ -161,41 +181,36 @@ html {
   height: 95vh;
 }
 
-.slick-dots li{
-transform: scale(0.8);
+.slick-dots li {
+  transform: scale(0.8);
 }
-
 /* --------- SLICK CAROUSEL  ----------------- */
 .slick-container {
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
   z-index: 1;
 }
 
 .slider {
   width: 70%;
-  border: 2px solid red;
   z-index: 1;
 }
 
 .slick-dots li {
   transform: scale(0.8);
 }
-
 /* --------- [INDIVIDUAL] TEAM COPY ----------------- */
-
-
 #team-bio {
   display: grid;
   grid-row: 4;
   grid-column: 7/17;
   line-height: 210%;
   text-align: justify;
-  z-index:0;
+  z-index: 0;
   max-height: 500px;
+  font-family: maisonMono-Regular;
 }
 
 .photo-section {
@@ -234,6 +249,55 @@ p.team {
   grid-column: 8/16;
 }
 
+/* IMAGE HOVER REVEAL */
+@keyframes loop {
+  0% {
+    transform-origin: 0 50%;
+    transform: scale3d(0, 1, 1);
+  }
+
+  50% {
+    transform-origin: 0 50%;
+    transform: scale3d(1, 1, 1);
+  }
+
+  51% {
+    transform-origin: 100% 50%;
+  }
+
+  100% {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+  }
+}
+
+.hover-reveal {
+  position: fixed;
+  width: 600px;
+  height: 550px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 99;
+}
+
+.hover-reveal__img,
+.hover-reveal__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  z-index: 99;
+}
+
+.hover-reveal__img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: 99;
+}
+
 /* ------------------ INDIVIDUAL PHOTO STYLING  ------------------ */
 #teamphoto-1 {
   width: 25em;
@@ -256,9 +320,7 @@ p.team {
   margin-top: 40%;
   fill: purple;
 }
-
 /* ---------------- Links and cursor styling -------------------------- */
-
 #back-btn {
   position: fixed;
   display: block;
@@ -266,6 +328,7 @@ p.team {
   left: 1em;
   width: 10vw;
   z-index: 99;
+
   .home-dot {
     background-color: white;
     -webkit-transition: all 0.15s ease-in;
@@ -274,6 +337,7 @@ p.team {
     -o-transition: all 0.15s ease-in;
     transition: all 0.15s ease-in;
   }
+
   p {
     display: none;
     font-family: hyperMarket;
@@ -283,11 +347,12 @@ p.team {
   }
 }
 
-#back-btn.purple.white{
-  .home-dot{
+#back-btn.purple.white {
+  .home-dot {
     background-color: white;
   }
-  p{
+
+  p {
     color: white;
   }
 }
@@ -297,7 +362,7 @@ p.team {
   width: 100%;
   left: 50px;
   position: absolute;
-  font-size: 0.75rem
+  font-size: 0.75rem;
 }
 
 .home-dot {
@@ -308,7 +373,6 @@ p.team {
   display: inline-block;
   z-index: 99;
 }
-
 /* ---------------- Links and cursor styling -------------------------- */
 a {
   text-decoration: none;
@@ -362,10 +426,6 @@ body .cursor__ball circle {
   border-radius: 50%;
   display: inline-block;
 }
-
-// span:hover {
-//   background-color: #DFEA4E;
-// }
 
 /* ------------------------- Plugin MARQUEE CSS -------------------------------- */
 .str_wrap {
@@ -429,7 +489,6 @@ body .cursor__ball circle {
   height: 100vh;
 }
 /* --------------- PAGINIATION SLIDER ----------------- */
-
 .swiper-container {
   width: 100vw;
   height: 100vh;
@@ -439,7 +498,6 @@ body .cursor__ball circle {
   text-align: center;
   font-size: 18px;
   background: none;
-
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,8 +512,6 @@ body .cursor__ball circle {
   -webkit-align-items: center;
   align-items: center;
 }
-
-
 /* ----------- TOOLTIP FOR TEAM NAMES ----------------- */
 .tooltip {
   position: relative;
@@ -566,35 +622,99 @@ body .cursor__ball circle {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-/* ------------------ MEDIA QUERIES  ------------------ */
-@media only screen and (max-width: 900px) {
 
-  #back-btn:hover #home-text  {
+
+/* _________________________ DESKTOP ________________________ */
+@media screen and (min-width: 900px) {
+  .mobile-team-container,
+  .swiper-container,
+  .swiper-slide {
+    display: none;
+  }
+
+  #para-mobile {
+    display: none;
+  }
+
+  .owl-carousel .owl-slide .owl-nav {
+    display: none;
+  }
+}
+/* _____________________ MOBILE __________________________ */
+
+
+/* ------------------ MEDIA QUERIES  ------------------ */
+
+
+/*tablet*/
+
+@media screen and (max-width: 768px) and (min-width: 1024px) {
+}
+
+
+/*iphone 5/se*/
+
+@media screen and (max-width: 375px) {
+  #team-bio {
+    transform: scale(0.9);
+  }
+
+  #title {
+    font-size: 1.8em;
+  }
+
+  #para-mobile {
+    font-size: 0.8em;
+  }
+
+}
+
+
+/*iphone 5/se*/
+
+@media screen and (max-width: 320px) {
+  #team-bio {
+    transform: scale(0.8);
+  }
+
+  #team-blurb-mobile {
+    width: 70vw;
+    font-size: 0.8em;
+  }
+
+  #para-mobile {
+    font-size: 1.2em; 
+  }
+}
+@media screen and (max-width: 900px) {
+
+  #back-btn:hover #home-text {
     display: none;
   }
 
   #team-bio {
-    grid-column: 7/15;
-    grid-row: 3;
-    height: 300px;
-    width: 85vw;
-    background-color: black;
-    padding-left: 10%;
-    margin-bottom: 15%;
+    display: block;
+    width: 90vw;
+    padding: 5px;
+    height: 70vh;
   }
 
   .portfolio-link {
-    font-size: 0.6em;
+    font-size: 0.67em;
     font-family: hyperMarket;
     margin-left: 2%;
     z-index: 10;
+    display: block;
   }
 
   h1 {
     padding: 0;
     margin: 0;
+    height: 50px;
+    display: block;
     line-height: 180%;
     padding-left: 2%;
+    font-size: calc(2.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
 
   .circle-nav-container {
@@ -617,161 +737,71 @@ body .cursor__ball circle {
   p.team {
     font-family: maisonNeue-Mono;
     line-height: 200%;
-    font-size: 0.7em;
+    font-size: calc(0.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     padding: 1em;
+    width: 85vw;
+  }
+
+
+  #title {
+    transform: scale(0.9);
+  }
+
+  .hover-reveal__img {
+    display: none;
+  }
+
+  .grid-layout-container {
+    display: none;
+  }
+
+  .circle-nav-container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: center;
+    height: 55px;
+    z-index: 10;
+  }
+
+  .dotstyle ul {
+    display: grid;
+    grid: repeat(1, 7vh)/repeat(15, 5.5vw);
     width: 80%;
   }
-
-  p.small {
-    font-size: 0.7em;
-    line-height: 200%;
-    text-align: left;
-  }
-}
-
-/* IMAGE HOVER REVEAL */
-
-@keyframes loop {
-  0% {
-    transform-origin: 0 50%;
-    transform: scale3d(0, 1, 1);
-  }
-
-  50% {
-    transform-origin: 0 50%;
-    transform: scale3d(1, 1, 1);
-  }
-
-  51% {
-    transform-origin: 100% 50%;
-  }
-
-  100% {
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-  }
-}
-
-.hover-reveal {
-  position: fixed;
-  width: 600px;
-  height: 550px;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0;
-  z-index: 99;
-}
-
-.hover-reveal__img,
-.hover-reveal__inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: grid;
-  z-index: 99;
-}
-
-
-.hover-reveal__img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  z-index: 99;
-}
-
-/*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
-
-
-/* _________________________ DESKTOP ________________________ */
-@media screen and (max-height: 600px) {
-      #title {
-        transform: scale(0.9);
-      }
-      p.small {
-            display: none;
-      }
-
-      .hover-reveal__img {
-        display: none;
-      }
-}
-
-/* _________________________ DESKTOP ________________________ */
-@media screen and (min-width: 900px) {
-
-  .mobile-team-container, .swiper-container, .swiper-slide {
-    display: none;
-  }
-
-
-  #para-mobile {
-    display: none;
-  }
-
-  .owl-carousel .owl-slide .owl-nav {
-    display: none;
-  }
-}
-
-/* _____________________ MOBILE __________________________ */
-
-@media screen and (max-width: 900px) {
-
-    .grid-layout-container {
-      display: none;
-    }
-
-    .circle-nav-container {
-      display: flex;
-      position: absolute;
-      left:0;
-      width: 90vw;
-      justify-content: space-around;
-      align-items: center;
-      height: 55px;
-      z-index: 10;
-    }
-
-    .dotstyle ul {
-      display: grid;
-      grid: repeat(1, 7vh)/repeat(15, 5.5vw);
-      width: 80%;
-    }
-
-}
-@media screen and (max-width: 900px) {
 
   .back-btn-mobile {
     z-index: 99;
   }
 
-
   .swiper-container {
-
   }
 
   .swiper-slide:nth-child(1) {
     background: none;
   }
 
-  .swiper-slide{
+  .swiper-slide {
     background-color: black;
     z-index: -1;
   }
 
   .photo-section {
     z-index: -1;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
   }
 
-    h1#mobile-longname {
-      font-size: calc(2.7em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-    }
+  h1#mobile-longname {
+    font-size: calc(2.1em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
 
+  h1#mobile-longname-2 {
+    font-size: calc(1.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
   /*---- mobile team page landingcontent ---- */
-
   .bg-mobile {
     width: 100vw;
     height: 100%;
@@ -785,12 +815,13 @@ body .cursor__ball circle {
     -o-background-size: cover;
     opacity: 0.8;
     z-index: -1;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     position: absolute;
   }
 
-  #para, #team-blurb {
+  #para,
+  #team-blurb {
     display: none;
   }
 
@@ -799,22 +830,32 @@ body .cursor__ball circle {
   }
 
   #team-blurb-mobile {
-    width: 70vw;
-    padding:0;
-    margin:0;
-  }
-  //
-  // #para-mobile {
-  //   width: 90%;
-  //   font-size: 17px;
-  // }
+    width: 85vw;
+    max-height: 100px;
+    position: absolute;
+    top: 10%;
+    left:5%;
+    padding:2%;
+    margin: 0;
+    display: block;
 
-  // .bg {
-  //   object-fit: fill;
-  //   width: 100vw;
-  //   height: 100vh;
-  //   z-index: -1;
-  // }
+  }
+
+  #para-mobile {
+      width: 90%;
+      left: 6%;
+      position: absolute;
+      max-height: 100px;
+      display: block;
+      margin: 10px 10px;
+  }
+
+  p.small {
+    font-size: calc(0.6em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: 200%;
+    text-align: left;
+  }
+
 
   .photo-section {
     transform: scale(0.9);
@@ -826,7 +867,7 @@ body .cursor__ball circle {
   #teamphoto-4 {
     transform: scale(0.5);
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     margin-top: -10%;
     position: relative;
   }
@@ -842,7 +883,7 @@ body .cursor__ball circle {
     height: 40px;
   }
 
-  .slick-dots li{
+  .slick-dots li {
     transform: scale(0.6);
   }
 
@@ -853,12 +894,6 @@ body .cursor__ball circle {
   .circle-nav-container {
     display: none;
   }
-
-  // .circle-nav-container {
-  //   display: inline-flex;
-  //   justify-content: center;
-  //   width: 100vw;
-  // }
 
   .dotstyle ul {
     display: grid;

@@ -1,4 +1,81 @@
 /* ------------------- containers ------------------------------------- */
+/* ----- fonts ------ */
+@font-face {
+  font-family: hyperMarket;
+  src: url(../../fonts/hypermarket-regular.ttf);
+  font-weight: bold;
+}
+/* ----- legacy fonts ------ */
+@font-face {
+  font-family: bebas;
+  src: url(../../fonts/bebas.otf);
+}
+@font-face {
+  font-family: brandon;
+  src: url(../../fonts/brandon.otf);
+}
+@font-face {
+  font-family: karla;
+  src: url(../../fonts/karla.ttf);
+}
+@font-face {
+  font-family: helveticaneue-bold;
+  src: url(../../fonts/helveticaneue-bold.otf);
+}
+@font-face {
+  font-family: museosans-100;
+  src: url(../../fonts/museosans-100.otf);
+}
+@font-face {
+  font-family: novecento;
+  src: url(../../fonts/novecento.otf);
+}
+@font-face {
+  font-family: katarinestd;
+  src: url(../../fonts/katarinestd.otf);
+}
+@font-face {
+  font-family: monsterrat;
+  src: url(../../fonts/monsterrat.otf);
+}
+@font-face {
+  font-family: neuehaasgroteskblack;
+  src: url(../../fonts/neuehaasgroteskblack.otf);
+}
+/* ----- DD19 BRAND FONTS ------ */
+@font-face {
+  font-family: redaction-regular;
+  src: url(../../fonts/Redaction-Regular.otf);
+}
+@font-face {
+  font-family: Redaction;
+  src: url(../../fonts/Redaction-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: maisonBold;
+  src: url(../../fonts/MaisonMono-Bold.otf);
+}
+@font-face {
+  font-family: maisonMedium;
+  src: url(../../fonts/MaisonNeue-Medium.ttf);
+}
+@font-face {
+  font-family: maisonNeue-Mono;
+  src: url(../../fonts/MaisonNeue-Mono.otf);
+}
+@font-face {
+  font-family: "Maison Neue";
+  src: url(../../fonts/MaisonNeue-Mono.otf);
+}
+@font-face {
+  font-family: maisonNeueExt-Mono;
+  src: url(../../fonts/MaisonNeueExt-Medium.otf);
+}
+@font-face {
+  font-family: maisonMono-Regular;
+  src: url(../../fonts/MaisonMono-Regular.otf);
+}
 @font-face {
   font-family: redaction-regular;
   src: url(../../fonts/Redaction-Regular.otf);
@@ -30,6 +107,10 @@
   src: url(../../../fonts/bebas.otf);
 }
 @font-face {
+  font-family: cabin;
+  src: url(../../../fonts/Cabin-Reg.otf);
+}
+@font-face {
   font-family: brandon;
   src: url(../../../fonts/brandon.otf);
 }
@@ -42,8 +123,8 @@
   src: url(../../../fonts/helveticaneue-bold.otf);
 }
 @font-face {
-  font-family: museosans-100;
-  src: url(../../../fonts/museosans-100.otf);
+  font-family: museoSansBoldItalic;
+  src: url(../../../fonts/MuseoSansBoldItalic.otf);
 }
 @font-face {
   font-family: novecento;
@@ -51,7 +132,7 @@
 }
 @font-face {
   font-family: katarinestd;
-  src: url(../../../fonts/katarinestd.otf);
+  src: url(../../../fonts/KatarineStdLight.otf);
 }
 @font-face {
   font-family: monsterrat;
@@ -245,15 +326,15 @@ h1 {
 }
 
 #eleven {
-  font-family: museosans-100;
+  font-family: museoSansBoldItalic;
   text-align: justify;
   letter-spacing: 0.09em;
 }
 
 #twelve {
-  font-family: novecento;
+  font-family: Cabin-Reg;
   text-align: justify;
-  font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(2.4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #thirteen {
