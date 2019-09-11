@@ -623,8 +623,6 @@ a#imgHover {
         content: "PAUSE";
         text-transform: capitalize;
       }
-
-
     }
 
     .vid-buttons.right {
@@ -917,8 +915,8 @@ a#imgHover {
   font-family: Maison Neue;
   line-height: 125%;
   text-align: left;
-  font-size: 0.95rem;
-  line-height: 1.25rem;
+  line-height: 200%;
+  font-size: 0.95rem
 
   p:last-child {
     margin-bottom: 6vh;

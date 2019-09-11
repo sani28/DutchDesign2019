@@ -82,7 +82,7 @@ html {
 /* --------- [LADNING] TEAM COPY ----------------- */
 #title {
   font-family: redaction-bold;
-  font-size: 1.9em;
+  font-size: 2rem;
   text-align: justify;
   padding-bottom: 5%;
   display: block;
@@ -90,11 +90,10 @@ html {
 
 #team-blurb {
   font-family: redaction-bold;
-  font-size: calc(0.8em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: justify;
   width: 57%;
   margin-left: 10%;
-  top: 100px;
+  top: 13vh;
   height: 500px;
   display: flex;
   position: absolute;
@@ -110,7 +109,7 @@ p.small {
 
 #para {
   display: grid;
-  grid-row: 10;
+  grid-row: 11;
   grid-column: 12/21;
   width: 100%;
   text-align: justify;
@@ -230,7 +229,7 @@ html {
 h1 {
   display: inline-block;
   font-family: redaction-bold;
-  font-size: 3em;
+  font-size: 3rem;
   grid-row: 3;
   grid-column: 8/16;
 }
