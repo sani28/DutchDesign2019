@@ -506,7 +506,7 @@ a#current {
 }
 .wid-video-container .video-controls .timeblock div {
   display: inline-block;
-  font-family: Maison Neue;
+  font-family: maisonNeue-Mono;
   font-size: 0.75em;
   color: #DFEA4E;
 }
@@ -515,18 +515,17 @@ a#current {
 }
 .wid-video-container .video-controls .vid-buttons {
   margin-top: 5px;
-  margin-left: 2%;
-  width: 6%;
 }
-.wid-video-container .video-controls .vid-buttons button {
+.wid-video-container .video-controls .vid-buttons button, .wid-video-container .video-controls .vid-buttons a {
   background: none;
   border: 0;
   outline: none;
   cursor: pointer;
   color: #DFEA4E;
-  font-family: Maison Neue;
+  font-family: maisonNeue-Mono;
   font-size: 0.75em;
   text-transform: uppercase;
+  padding: 0 1em;
 }
 .wid-video-container .video-controls .vid-buttons button.play:before {
   content: "PLAY";
@@ -536,9 +535,12 @@ a#current {
   content: "PAUSE";
   text-transform: capitalize;
 }
-.wid-video-container .video-controls .vid-buttons.fs {
+.wid-video-container .video-controls .vid-buttons.right {
   margin-left: auto;
-  margin-right: 2%;
+}
+.wid-video-container .video-controls .vid-buttons.right #fs, .wid-video-container .video-controls .vid-buttons.right #vimeo {
+  display: inline;
+  padding-right: 0.6vw;
 }
 
 .blurb-container {
