@@ -964,11 +964,11 @@ h1.title {
 a {
   text-decoration: none;
   display: block;
-  margin-right: 3%;
 }
 
 .mobile-toggle a {
   color: #7D246B;
+  margin-right: 3%;
 }
 
 a:hover {
