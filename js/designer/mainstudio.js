@@ -3,7 +3,7 @@ $(document).ready(function(){
   [document.getElementById('edwin-1'),
    document.getElementById('edwin-2'),
    document.getElementById('edwin-3'),
-   document.getElementById('edwin-3'),
+   document.getElementById('caption1'),
    document.getElementById('quote1'),
    document.getElementById('deschool-1'),
    document.getElementById('tirzo-1'),
@@ -12,9 +12,7 @@ $(document).ready(function(){
    document.getElementById('edwinquote'),
    document.getElementById('chicago-1'),
    document.getElementById('chicago-2'),
-   document.getElementById('edwinquote2'),
-
-   document.getElementById('lexquote') ];
+   document.getElementById('edwinquote2') ];
 
   var scrollControl = new ScrollMagic.Controller();
 

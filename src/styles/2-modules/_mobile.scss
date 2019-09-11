@@ -53,6 +53,7 @@ transform: scale(0.8);
     grid-template-columns: 1fr 85% 1fr;
     gap: 1.5em;
     width: 100%;
+    margin-top: 100vh;
 
     #designer-toggle {
       grid-column: 2 / -2;

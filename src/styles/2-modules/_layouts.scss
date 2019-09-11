@@ -249,10 +249,11 @@ $secondary-purp: #7D246B;
     line-height: 150%;
   }
   .section-caption{
-    grid-row: 3;
+    grid-row: 2/4;
     grid-column: 4/7;
-    align-self: end;
     width: 100%;
+    
+    align-self: end;
   }
   #oncodevid{
     grid-row: 3/6;
