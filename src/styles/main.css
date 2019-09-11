@@ -470,6 +470,19 @@ html.designer-page-body {
   opacity: 0.5;
 }
 
+#grain-overlay {
+  position: absolute;
+  float: left;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-image: url("../../imgs/GRAIN.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+  opacity: 0.2;
+}
+
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 /* mobile views */
 .mobile-photo-container {
@@ -603,6 +616,7 @@ html.designer-page-body {
     margin-bottom: 1em;
     text-transform: uppercase;
     display: flex;
+    font-family: hyperMarket;
   }
   #mobile-container .sidenav .mobile-toggle .content-toggle hoverable {
     color: #7D246B;
@@ -951,6 +965,11 @@ h1.title {
 a {
   text-decoration: none;
   display: block;
+}
+
+.mobile-toggle a {
+  color: #7D246B;
+  margin-right: 3%;
 }
 
 a:hover {

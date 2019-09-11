@@ -26,6 +26,11 @@ a {
   display: block;
 }
 
+.mobile-toggle a {
+  color: $secondary-purp;
+  margin-right: 3%;
+}
+
 a:hover {
   fill: purple;
 }
