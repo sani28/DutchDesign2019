@@ -313,10 +313,10 @@
   line-height: 150%;
 }
 .photo-section-6 .section-caption {
-  grid-row: 3;
+  grid-row: 2/4;
   grid-column: 4/7;
-  align-self: end;
   width: 100%;
+  align-self: end;
 }
 .photo-section-6 #oncodevid {
   grid-row: 3/6;
@@ -541,6 +541,7 @@ html.designer-page-body {
     grid-template-columns: 1fr 85% 1fr;
     gap: 1.5em;
     width: 100%;
+    margin-top: 100vh;
   }
   section.designer-top-section #designer-toggle {
     grid-column: 2/-2;
