@@ -185,7 +185,6 @@
   text-align: justify;
 }
 
-
 /*-------------- PHOTO SECITON 2 -------------------- */
 
 .photo-section-2 {
@@ -732,10 +731,6 @@ body {
   overflow-x: hidden;
 }
 
-a#home:hover {
-  text-align: right;
-}
-
 #back-btn {
   position: fixed;
   display: block;
@@ -743,14 +738,6 @@ a#home:hover {
   left: 1em;
   width: 10vw;
   z-index: 1;
-  .home-dot {
-    background-color: white;
-    -webkit-transition: all 0.15s ease-in;
-    -moz-transition: all 0.15s ease-in;
-    -ms-transition: all 0.15s ease-in;
-    -o-transition: all 0.15s ease-in;
-    transition: all 0.15s ease-in;
-  }
   p {
     display: none;
     font-family: hyperMarket;
@@ -759,38 +746,13 @@ a#home:hover {
     color: white;
   }
 }
-#back-btn.purple{
-  .home-dot{
-    background-color: $secondary-purp;
-  }
-  p {
-    color: $secondary-purp;
-  }
-}
-
-#back-btn.purple.white{
-  .home-dot{
-    background-color: white;
-  }
-  p{
-    color: white;
-  }
-}
 
 #back-btn:hover #home-text {
   display: inline;
-  width:  100px;
+  width: 100%;
+  left: 45px;
   position: absolute;
-  left: 10px;
-  font-size: 0.75rem
-}
-
-.home-dot {
-  height: 35px;
-  width: 35px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
+  font-size: 0.75rem;
 }
 
 .home-dot {

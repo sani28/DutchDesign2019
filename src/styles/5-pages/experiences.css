@@ -64,6 +64,10 @@
   src: url(../../fonts/MaisonNeue-Mono.otf);
 }
 @font-face {
+  font-family: "Maison Neue";
+  src: url(../../fonts/MaisonNeue-Mono.otf);
+}
+@font-face {
   font-family: maisonNeueExt-Mono;
   src: url(../../fonts/MaisonNeueExt-Medium.otf);
 }
@@ -153,6 +157,7 @@
 
 .photo-section-2 {
   grid-template-rows: repeat(5, 16.66vh) 1fr;
+  margin-bottom: 2rem;
 }
 .photo-section-2 .layout-item:first-child {
   grid-row: 2/4;
@@ -194,8 +199,8 @@
   margin-bottom: 0;
 }
 .photo-section-2 .section-quote.type-two {
-  grid-row: 4/6;
-  grid-column: 6/9;
+  grid-row: 4/5;
+  grid-column: 4/9;
   align-self: start;
   width: 100%;
   margin-bottom: 0;
@@ -307,10 +312,10 @@
   line-height: 150%;
 }
 .photo-section-6 .section-caption {
-  grid-row: 3;
+  grid-row: 2/4;
   grid-column: 4/7;
-  align-self: end;
   width: 100%;
+  align-self: end;
 }
 .photo-section-6 #oncodevid {
   grid-row: 3/6;
@@ -1153,10 +1158,6 @@ body {
   overflow-x: hidden;
 }
 
-a#home:hover {
-  text-align: right;
-}
-
 #back-btn {
   position: fixed;
   display: block;
@@ -1164,14 +1165,6 @@ a#home:hover {
   left: 1em;
   width: 10vw;
   z-index: 1;
-}
-#back-btn .home-dot {
-  background-color: white;
-  -webkit-transition: all 0.15s ease-in;
-  -moz-transition: all 0.15s ease-in;
-  -ms-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
 }
 #back-btn p {
   display: none;
@@ -1181,34 +1174,12 @@ a#home:hover {
   color: white;
 }
 
-#back-btn.purple .home-dot {
-  background-color: #7D246B;
-}
-#back-btn.purple p {
-  color: #7D246B;
-}
-
-#back-btn.purple.white .home-dot {
-  background-color: white;
-}
-#back-btn.purple.white p {
-  color: white;
-}
-
 #back-btn:hover #home-text {
   display: inline;
-  width: 100px;
+  width: 100%;
+  left: 45px;
   position: absolute;
-  left: 10px;
   font-size: 0.75rem;
-}
-
-.home-dot {
-  height: 35px;
-  width: 35px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
 }
 
 .home-dot {
