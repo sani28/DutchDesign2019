@@ -237,48 +237,75 @@ function initAnimation() {
     switch (currentVideo) {
       case "lexDot":
         $("#lex-preview-vid").removeClass("hiddenUI");
+        $("#lex-preview-vid").show();
         break;
       case "valentinDot":
         $("#valentin-preview-vid").removeClass("hiddenUI");
+        $("#valentin-preview-vid").show();
         break;
       case "trulyDot":
         $("#truly-preview-vid").removeClass("hiddenUI");
+        $("#truly-preview-vid").show();
         break;
       case "nienkeDot":
         $("#nienke-preview-vid").removeClass("hiddenUI");
+        $("#nienke-preview-vid").show();
         break;
       case "jurgenDot":
         $("#jurgen-preview-vid").removeClass("hiddenUI");
+        $("#jurgen-preview-vid").show();
         break;
       case "corunumDot":
         $("#corunum-preview-vid").removeClass("hiddenUI");
+        $("#corunum-preview-vid").show();
         break;
       case "florisDot":
         $("#floris-preview-vid").removeClass("hiddenUI");
+        $("#floris-preview-vid").show();
         break;
       case "futuresDot":
         $("#futures-preview-vid").removeClass("hiddenUI");
+        $("#futures-preview-vid").show();
         break;
       case "matthewsDot":
         $("#matthews-preview-vid").removeClass("hiddenUI");
+        $("#matthews-preview-vid").show();
         break;
       case "pepeDot":
         $("#pepe-preview-vid").removeClass("hiddenUI");
+        $("#pepe-preview-vid").show();
         break;
       case "inekeDot":
         $("#ineke-preview-vid").removeClass("hiddenUI");
+        $("#ineke-preview-vid").show();
         break;
       case "momkaiDot":
         $("#momkai-preview-vid").removeClass("hiddenUI");
+        $("#momkai-preview-vid").show();
         break
       case "lavaDot":
         $("#lava-preview-vid").removeClass("hiddenUI");
+        $("#lava-preview-vid").show();
         break
       case "aldoDot":
         $("#aldo-preview-vid").removeClass("hiddenUI");
+        $("#aldo-preview-vid").show();
         break
       case "rebeccaDot":
         $("#rebecca-preview-vid").removeClass("hiddenUI");
+        $("#rebecca-preview-vid").show();
+        break
+      case "edwinDot":
+        $("#edwin-preview-vid").removeClass("hiddenUI");
+        $("#edwin-preview-vid").show();
+        break
+      case "widDot":
+        $("#wid-preview-vid").removeClass("hiddenUI");
+        $("#wid-preview-vid").show();
+        break
+      case "reglazeDot":
+        $("#reglaze-preview-vid").removeClass("hiddenUI");
+        $("#reglaze-preview-vid").show();
         break
     }
     observer.observe();
@@ -342,7 +369,7 @@ function initAnimation() {
 
   function hidePreviewVideos(){
     for(let i=0, len=$previewVideos.length; i< len; i++){
-      $($previewVideos[i]).addClass("hiddenUI");
+      $($previewVideos[i]).fadeOut(200);
     }
     $("#grid-overlay").addClass("hiddenUI");
     $("html").css("background-color", "#DFEA4E");

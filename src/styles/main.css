@@ -1214,6 +1214,7 @@ a#imgHover {
   pointer-events: none;
   transition: width 0.185s cubic-bezier(0.55, 1, 0.85, 1), height 0.185s cubic-bezier(0.55, 1, 0.85, 1);
   transition-delay: 0.1s;
+  transition: background-color 0.185s cubic-bezier(0.55, 1, 0.85, 1);
 }
 
 .active-dot {
@@ -1226,6 +1227,7 @@ a#imgHover {
 .dot-unhovered.designer-dot {
   background-color: transparent;
   border: 1px white solid;
+  transition: background-color 0.185s cubic-bezier(0.55, 1, 0.85, 1);
 }
 
 .active-dot.nav-highlight {
@@ -1247,11 +1249,13 @@ a#imgHover {
   height: 2.25vw;
   width: 2.25vw;
   pointer-events: auto;
+  transition: background-color 0.185s cubic-bezier(0.55, 1, 0.85, 1);
 }
 
 .dot-unhovered.experience-dot {
   background-color: transparent;
   border: 1px white solid;
+  transition: background-color 0.185s cubic-bezier(0.55, 1, 0.85, 1);
 }
 
 #reglazeItem {
@@ -1799,8 +1803,8 @@ a#imgHover {
   font-family: Maison Neue;
   line-height: 125%;
   text-align: left;
+  line-height: 200%;
   font-size: 0.95rem;
-  line-height: 1.25rem;
 }
 #transcript-container p:last-child {
   margin-bottom: 6vh;
