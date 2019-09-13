@@ -16,7 +16,6 @@ $(document).ready(function() {
   var progController = new ScrollMagic.Controller();
   var totalHeight = document.body.scrollHeight;
 
-
   var revertProgress = TweenLite.from("#animate", 0.5, {
     autoAlpha: 0,
     scale: 0.7
@@ -157,13 +156,13 @@ $(document).ready(function() {
   function togglePlayPause() {
     if (vid.paused) {
       playPause.className = 'pause';
-      vid.play();
       overlay.style.display = "none";
+      vid.play();
       $(".overlayBG").removeClass("hiddenUI");
     } else {
       playPause.className = 'play';
-      vid.pause();
       overlay.style.display = "";
+      vid.pause();
     }
   }
 
@@ -230,7 +229,7 @@ $(document).ready(function() {
     }
   });
 
-  $(document).on("click touchend", "#designer-overlay, .overlayBG, #designer-vid, #play-pause", function() {
+  $(document).on("click touchend", "#designer-overlay, #designer-vid, #play-pause", function() {
     togglePlayPause();
   });
 
