@@ -511,6 +511,18 @@ body.dot-cursor .hoverable:hover {
   font-family: maisonMono-Regular;
   src: url(../../../fonts/MaisonMono-Regular.otf);
 }
+.mini-grid {
+  position: fixed;
+  float: left;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
+  background-size: 0.95em 0.95em;
+  z-index: -1;
+  opacity: 0.2;
+}
+
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
