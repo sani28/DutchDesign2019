@@ -86,12 +86,12 @@ $(document).ready(function() {
   function togglePlayPause() {
     if (widVid.paused) {
       playPause.className = 'pause';
-      widVid.play();
       overlay.style.display = "none";
+      widVid.play();
     } else {
       playPause.className = 'play';
-      widVid.pause();
       overlay.style.display = "";
+      widVid.pause();
     }
   }
 
