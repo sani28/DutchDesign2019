@@ -204,11 +204,12 @@ html {
   /* Safari */
 }
 
-#scroll-indiactor {
+#scroll-tool {
   position: fixed;
   right: 5%;
-  bottom: 3%;
+  bottom: 8%;
   width: 20px;
+  transform: rotate(90deg);
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s;

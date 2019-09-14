@@ -26,6 +26,10 @@
 }
 
 
+.hiddenUI{
+  display: none;
+}
+
 .grid-layout-container {
   display: grid;
   /* top row has adjustable space, then 13 even 6.67 vh rows*/
@@ -237,6 +241,14 @@ a#current {
   display: grid;
   grid: repeat(13, $height-unit)/ 1fr repeat(21, $width-unit);
   gap: none none;
+  .overlayBG {
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
   #blurb-header{
     font-size: 5.5rem;
     grid-row: 5;
@@ -244,6 +256,7 @@ a#current {
     margin-top: 0;
     justify-content: start;
     box-sizing: border-box;
+    z-index: 1;
   }
   #blurb-body{
     font-size: 2.25rem;
@@ -251,6 +264,7 @@ a#current {
     grid-column: 9/ span 8;
     width: 100%;
     text-align: justify;
+    z-index: 1;
   }
   #credits{
     display: flex;
@@ -262,6 +276,7 @@ a#current {
     list-style: none;
     margin: 0;
     padding-bottom: 1rem;
+    z-index: 1;
     li{
       font-family: MaisonNeue-Mono;
       font-size: 0.75rem;
@@ -276,6 +291,7 @@ a#current {
     font-size: 0.85rem;
     text-align: left;
     margin-left: -1.5rem;
+    z-index: 1;
   }
 }
 
