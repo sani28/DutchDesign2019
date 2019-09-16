@@ -440,6 +440,10 @@ h1 {
     display: none;
   }
 
+  #scroll-tool {
+    display: none;
+  }
+
   .legacy-year {
     transform: rotate(360deg);
     width: 200px;
