@@ -2,21 +2,9 @@
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 /* mobile views */
 
-.mobile-photo-container {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-slider {
-  width: 70%;
-}
-
 .slick-dots li{
 transform: scale(0.8);
 }
-
 
 @media screen and (min-width: 800px)  {
   .mobile-caption, .mobile-quote {
@@ -95,6 +83,7 @@ transform: scale(0.8);
   }
 
   #mobile-container{
+    position: fixed;
     top: 0;
     bottom: 0;
     width: 100%;
@@ -176,8 +165,8 @@ transform: scale(0.8);
       flex-direction: column;
       width: 100%;
       height: auto;
-      position: absolute;
-      top: 50%;
+      position: fixed;
+      top: 45%;
       text-align: center;
       align-items: center;
       justify-content: center;
@@ -216,7 +205,7 @@ transform: scale(0.8);
     #mobile-video-slider{
       margin: 0;
       object-fit: cover;
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
@@ -243,7 +232,7 @@ transform: scale(0.8);
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 10px;
+        bottom: 3vh;
       }
 
       .slick-dots-container > ul {
@@ -300,13 +289,13 @@ transform: scale(0.8);
   }
 
   .slide-numbers {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     width: 4rem;
-    bottom: 45px;
+    bottom: 7vh;
     left: 0;
     right: 0;
 
