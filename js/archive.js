@@ -1,39 +1,5 @@
 $(document).ready(function() {
 
-  //map vertical scroll to horizontal scroll using mousewheel
-  $(function() {
-
-    $("html").mousewheel(function(event, delta) {
-      this.scrollLeft -= (delta * 1);
-      //hide scroll indicator if user has started scrolling
-      if (this.scrollLeft > 500) {
-        $('#scroll-tool').hide();
-      } else {
-        $('#scroll-tool').show();
-      }
-    });
-  });
-
-
-  //hide scroll indicator user scrolls left in legacy container
-  $('.legacy-container').scroll(function() {
-    var $elem = $('.legacy-container');
-    var newScrollLeft = $elem.scrollLeft(),
-      width = $elem.width(),
-      scrollWidth = $elem.get(0).scrollWidth;
-    var offset = 0;
-    if (scrollWidth - newScrollLeft - width === offset) {
-      $('#scroll-tool').hide();
-    } else {
-      $('#scroll-tool').show();
-    }
-  });
-
-  //reset refresh to 0,0 window position
-  window.onbeforeunload = function() {
-    window.scrollTo(0, 0);
-  }
-
   var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
 
   for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
@@ -289,6 +255,35 @@ $(document).ready(function() {
                 $("#yearnineteen").css("color", "#7D246B");
               });
     } else {
+
+        //map vertical scroll to horizontal scroll using mousewheel
+        $(function() {
+
+          $("html").mousewheel(function(event, delta) {
+            this.scrollLeft -= (delta * 1);
+            //hide scroll indicator if user has started scrolling
+            if (this.scrollLeft > 500) {
+              $('#scroll-tool').hide();
+            } else {
+              $('#scroll-tool').show();
+            }
+          });
+        });
+
+
+        //hide scroll indicator user scrolls left in legacy container
+        $('.legacy-container').scroll(function() {
+          var $elem = $('.legacy-container');
+          var newScrollLeft = $elem.scrollLeft(),
+            width = $elem.width(),
+            scrollWidth = $elem.get(0).scrollWidth;
+          var offset = 0;
+          if (scrollWidth - newScrollLeft - width === offset) {
+            $('#scroll-tool').hide();
+          } else {
+            $('#scroll-tool').show();
+          }
+        });
 
     }
   }
