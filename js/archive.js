@@ -7,9 +7,9 @@ $(document).ready(function() {
       this.scrollLeft -= (delta * 1);
       //hide scroll indicator if user has started scrolling
       if (this.scrollLeft > 500) {
-        $('#scroll-indicator-wrapper').hide();
+        $('#scroll-tool').hide();
       } else {
-        $('#scroll-indicator-wrapper').show();
+        $('#scroll-tool').show();
       }
     });
   });
@@ -23,9 +23,9 @@ $(document).ready(function() {
       scrollWidth = $elem.get(0).scrollWidth;
     var offset = 0;
     if (scrollWidth - newScrollLeft - width === offset) {
-      $('#scroll-indicator-wrapper').hide();
+      $('#scroll-tool').hide();
     } else {
-      $('#scroll-indicator-wrapper').show();
+      $('#scroll-tool').show();
     }
   });
 
