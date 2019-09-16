@@ -72,7 +72,6 @@ $(document).ready(function() {
     let lineLength = $el.getTotalLength();
     $el.style.strokeDasharray = lineLength;
     $el.style.strokeDashoffset = lineLength;
-    totalHeight = document.body.clientHeight;
   }
 
   $('#toggle-transcript').click(function(e) {

@@ -133,8 +133,9 @@ $(document).ready(function() {
     for (let i = 0, len = timeStamps.length; i < len; i++) {
       $(timeStamps[i]).click(function(){
         widVid.currentTime = $(this).data("time");
-        //TODO: the below could be removed depending on how we implement
         $("#nav-overlay").css("display", "none");
+        $("#blurb").css("display", "none");
+        //TODO: the below could be removed depending on how we implement
         widVid.play();
       })
     }
