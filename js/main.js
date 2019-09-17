@@ -82,7 +82,7 @@ function initAnimation() {
 /////////////////////////////////////////////////////////////////////////
   const observer = lozad(); // lazy loads elements with '.lozad' selector
   observer.observe();
-  initLandingPage();
+  $.when(initLandingPage()).then(preloadVideo());
 
   function initLandingPage(){
     setState();
@@ -96,6 +96,13 @@ function initAnimation() {
     initDesignerDotHover();
     initFieldNoteDotHover();
     sessionStorage.visited = "true";
+  }
+
+  function preloadVideo(){
+    for (let i=0, len = $previewVideos.length; i < len; i++ ){
+        observer.triggerLoad($previewVideos[i]);
+        console.log("loading");
+    }
   }
 
   //sessionStorage for last seen nav, and active states
