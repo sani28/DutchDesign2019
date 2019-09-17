@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="../src/styles/main.css">
 	<meta name="keywords" content="dutch design, dd19, sfu, simon fraser university, russell taylor, dutch" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
@@ -38,74 +39,92 @@
   <div class="bg-video-container">
     <video class="bg-preview-video lozad hiddenUI" id="lex-preview-vid" preload="metadata" autoplay muted loop playsinline>
       <source data-src="../assets/videos/preview_lex.mp4" type="video/mp4">
+      <source data-src="../assets/videos/preview_lex.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="truly-preview-vid" preload="metadata" autoplay muted loop playsinline>
       <source data-src="../assets/videos/preview_truly.mp4" type="video/mp4">
+      <source data-src="../assets/videos/preview_truly.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="jurgen-preview-vid" preload="metadata" autoplay muted loop playsinline>
       <source data-src="../assets/videos/preview_jurgen.mp4" type="video/mp4">
+      <source data-src="../assets/videos/preview_jurgen.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="nienke-preview-vid" preload="metadata" autoplay muted loop playsinline>
       <source data-src="../assets/videos/preview_nienke.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_nienke.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="valentin-preview-vid" preload="metadata" autoplay muted loop playsinline>
       <source data-src="../assets/videos/preview_valentin.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_valentin.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="futures-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_futures.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_futures.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="matthews-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_matthews.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_matthews.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="pepe-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_pepe.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_pepe.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="ineke-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_ineke.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_ineke.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="momkai-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_momkai.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_momkai.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="corunum-preview-vid" preload="metadata" autoplay muted loop playsinline>
       <source data-src="../assets/videos/preview_corunum.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_corunum.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="lava-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_lava.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_lava.webm," type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="rebecca-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_rebecca.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_rebecca.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="floris-preview-vid" preload="metadata" autoplay muted loop playsinline>
       <source data-src="../assets/videos/preview_floris.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_floris.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="aldo-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_aldo.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_aldo.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="edwin-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_main.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_main.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="wid-preview-vid" preload="metadata" autoplay muted loop playsinline >
       <source data-src="../assets/videos/preview_wid.mp4" type="video/mp4">
+        <source data-src="../assets/videos/preview_wid.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
     <video class="bg-preview-video lozad hiddenUI" id="reglaze-preview-vid" preload="metadata" autoplay muted loop playsinline >
-      <source src="../assets/videos/preview_reglaze.mp4" type="video/mp4">
+      <!-- <source src="../assets/videos/preview_reglaze.mp4" type="video/mp4"> -->
+        <source src="../assets/videos/preview_reglaze.webm" type="video/webm">
       Your browser doesn't support HTML5 videos.
     </video>
   </div>
