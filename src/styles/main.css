@@ -697,7 +697,7 @@ html.designer-page-body {
   #mobile-container #mobile-video-slider {
     margin: 0;
     object-fit: cover;
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -910,7 +910,7 @@ body .cursor__ball {
   position: fixed;
   top: 0;
   left: 0;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
   z-index: 1000;
 }
 

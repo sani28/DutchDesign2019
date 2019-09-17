@@ -176,7 +176,7 @@ function initAnimation() {
           showUIElements();
           showExperienceDots();
           showDesignerDots();
-          $(".cursor__ball").css("mix-blend-mode", "screen");
+          $(".cursor__ball").css("mix-blend-mode", "multiply");
         }
       });
     }
@@ -204,7 +204,7 @@ function initAnimation() {
           showUIElements();
           showDesignerDots();
           showExperienceDots();
-          $(".cursor__ball").css("mix-blend-mode", "screen");
+          $(".cursor__ball").css("mix-blend-mode", "multiply");
         }
       });
     }
