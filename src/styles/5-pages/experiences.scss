@@ -815,76 +815,21 @@ body {
   transform: rotate(-180deg);
 }
 
-.exp-landing-photo {
+.exp-landing-photo-container {
   width: 82vw;
   height: 500px;
-  display: grid;
-  grid-row: 1/20;
-  grid-column: 0/10;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-style: none;
-}
-
-#andrea-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/andrea/water_banner.jpg");
-}
-
-#appian-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/appian/appianway_banner.jpg");
-}
-
-#arnhem-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/arnhem/arnhem_banner.jpg");
-}
-
-#burgundian-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/black/bb_banner.jpg");
-}
-
-#burgundian-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/black/bb_banner.jpg");
-}
-
-#curiosity-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/curiosity/kiki_banner_end.jpg");
-}
-
-#bts-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/bts/bti_banner.jpg");
-}
-
-#cantillion-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/cantillion/cantillion_banner.jpg");
-}
-
-#dyes-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/dyes/rens_banner.jpg");
-}
-
-#farm-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/farm/leeuwarden_banner.jpg");
-}
-
-#felting-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/felting/felting_banner.jpg");
-}
-
-#soil-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/soil/ateliernl_banner.jpg");
-}
-
-#milk-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/milk/melkhuis_banner.jpg");
-}
-
-#roma-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/roma/roma_banner.jpg");
-}
-
-#texels-photo.exp-landing-photo {
-  background-image: url("../../../assets/images/texels/texels_banner.jpg");
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+    max-width: 100%;
+  }
 }
 
 h1#exp-title{

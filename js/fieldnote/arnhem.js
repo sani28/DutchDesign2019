@@ -7,7 +7,6 @@ $(document).ready(function() {
     infinite: true,
    });
 
-
   $(".geo-info").codex({
     speed: 30,
     duration: 2000
@@ -30,7 +29,6 @@ $(document).ready(function() {
 
 
   var scrollControl = new ScrollMagic.Controller();
-
 
   for (let i = 0; i < orderedDesignerImages.length; i++) {
     new ScrollMagic.Scene({
