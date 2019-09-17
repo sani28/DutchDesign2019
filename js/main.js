@@ -101,7 +101,6 @@ function initAnimation() {
   function preloadVideo(){
     for (let i=0, len = $previewVideos.length; i < len; i++ ){
         observer.triggerLoad($previewVideos[i]);
-        console.log("loading");
     }
   }
 
@@ -600,7 +599,6 @@ function initAnimation() {
         mobileHeader.text(next.dataset.title);
         mobileSubhead.text(next.dataset.subtitle);
         slideNumber.text(next.dataset.order);
-        console.log(next.dataset.order);
       } else {
         mobileHeader.text("");
         mobileSubhead.text("");
@@ -612,6 +610,11 @@ function initAnimation() {
       }
     });
 
+    for(let i = 0; i<mobileVidSlides.length; i++){
+        $(mobileVidSlides[i]).on('click', function(){
+          window.location.assign(this.dataset.href);
+        });
+    }
 
     $("#sidenav-films").on('click', function(){
       if(mobileMenuFilms){
