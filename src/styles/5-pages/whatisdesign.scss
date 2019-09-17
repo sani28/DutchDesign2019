@@ -250,7 +250,7 @@ a#current {
     left: 0;
   }
   #blurb-header{
-    font-size: 5.5rem;
+    font-size: calc(5.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     grid-row: 5;
     grid-column: 9;
     margin-top: 0;
@@ -387,7 +387,46 @@ a#current {
 }
 /* -----------circle nav ------------ */
 
-@media screen and (max-width: 800px)  {
+@media screen and (max-width: 1000px)  {
+
+  #blurb-header{
+    font-size: calc(4.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+    margin-top: 50vh !important;
+  }
+
+  #blurb-body{
+    font-size: 1.5em !important;
+    width: 300px !important;
+    margin-top: 100% !important;
+  }
+  #credits{
+    display: block;
+    position: fixed;
+    top: 35vh;
+    left:5vw;
+    padding:0;
+    z-index: 1;
+    li{
+      font-family: MaisonNeue-Mono;
+      font-size: 0.55rem !important;
+      text-transform: uppercase;
+      text-align: left;
+      width: 200px;
+      padding: 2%;
+    }
+  }
+  #description{
+    display: flex;
+    width: 310px;
+    line-height: 150%;
+    font-family: MaisonNeue-Mono;
+    font-size: 0.8em !important;
+    text-align: left;
+    bottom: 30%;
+    position: absolute;
+    margin-left: -1.5rem;
+    z-index: 1;
+  }
 
   #back-btn:hover #home-text  {
     display: none;
@@ -431,5 +470,11 @@ a#current {
         color: white;
       }
     }
+  }
+}
+
+@media screen and (max-width: 500px)  {
+  #blurb-header {
+    font-size: 2.8em !important;
   }
 }
