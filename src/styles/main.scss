@@ -2,7 +2,7 @@ $width-unit: 4.54vw;
 $height-unit: 6.67vh;
 $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
 $grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
-$primary-green: #DFEA4E;
+$primary-green: #DAE72F;
 $secondary-purp: #7D246B;
 @import './1-helpers/fonts';
 @import './2-modules/layouts';
@@ -129,8 +129,8 @@ a#imgHover {
 }
 
 #main-nav {
-  grid-row: 13 / span 1;
-  grid-column: 7 / -1;
+  grid-row: -3 / span 1;
+  grid-column: -17 / -2;
 }
 
 .main-nav-list {
@@ -196,7 +196,7 @@ a#imgHover {
 }
 
 #main-toggle {
-  grid-row: 13 / span 1;
+  grid-row: -3 / span 1;
   grid-column: 2 / span 4;
   display: grid;
   grid: 1fr / repeat(2, 2*$width-unit);
@@ -219,7 +219,7 @@ a#imgHover {
 }
 /* -----------------DOTS AND VIDEO STYLING----------------- */
 .blurb-container {
-  grid-area: 4 / 8 / 10/ 22;
+  grid-area: 4 / -16 / 10/ -2;
   justify-content: grid-start;
 
   h1 {
@@ -234,7 +234,8 @@ a#imgHover {
 }
 
 .calendar-container {
-  grid-area: 5 / 8 / 11/ 22;
+  grid-area: 5 / -16 / 11 / -2;
+  // grid-area: 5 / 8 / 11/ 22;
   display: grid;
   grid: repeat(6, $height-unit)/repeat(14, $width-unit);
   margin-top: 0;

@@ -101,7 +101,6 @@ function initAnimation() {
   function preloadVideo(){
     for (let i=0, len = $previewVideos.length; i < len; i++ ){
         observer.triggerLoad($previewVideos[i]);
-        console.log("loading");
     }
   }
 
