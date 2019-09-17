@@ -217,7 +217,7 @@ a#current {
   color: white;
   #blurb-header {
     text-align: center;
-    font-size: 8.5vw;
+    font-size: 8vw;
     font-family: redaction;
     margin: 0;
   }
@@ -388,6 +388,36 @@ a#current {
 /* -----------circle nav ------------ */
 
 @media screen and (max-width: 1000px)  {
+
+  .blurb-container{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    #blurb-header {
+      text-align: center;
+      font-size: 3em !important;
+      font-family: redaction;
+      margin: 0;
+      top: -25vh;
+      width: 88vw !important;
+      position: absolute;
+    }
+    #blurb-body {
+      margin:0;
+      padding:0;
+      bottom: 50vh;
+      width: 80vw !important;
+      position: absolute;
+    }
+  }
 
   #blurb-header{
     font-size: calc(4.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
