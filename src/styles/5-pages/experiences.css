@@ -1155,7 +1155,7 @@ h1#exp-title {
 
 .exp-title-twoline {
   text-align: right;
-  font-size: 5.5rem;
+  font-size: 5rem;
   font-family: Redaction;
   line-height: 100%;
   display: block;
@@ -1176,7 +1176,7 @@ h3#exp-title-secondary {
 
 #exp-title {
   font-family: Redaction;
-  font-size: 5.5rem;
+  font-size: 5rem;
   margin-top: 2rem;
 }
 
