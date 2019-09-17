@@ -499,6 +499,17 @@ html.designer-page-body {
 
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
 /* mobile views */
+.mobile-photo-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-slider {
+  width: 70%;
+}
+
 .slick-dots li {
   transform: scale(0.8);
 }
