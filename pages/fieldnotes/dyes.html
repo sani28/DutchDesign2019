@@ -19,6 +19,7 @@
   <script type="text/javascript" src="../../js/jquery.codex.js" async defer></script>
   <script type="text/javascript" src="../../js/slick.min.js"></script>
   <script type="text/javascript" src="../../js/fieldnote/dyes.js" async defer></script>
+  <script type="text/javascript" src="../../js/fieldnote/fieldvideo.js" async defer></script>
 </head>
 
 <body>
@@ -129,7 +130,30 @@
   </div>
 
   <!-- ////////////////////  Full Bleed Image //////////////////////  -->
-  <img class="fullbleed" src="../../assets/images/dyes/rens_end.jpg"></img>
+  <section class="vid-section">
+    <figure class="video-container play-cursor" id="video-fig">
+      <video id="exp-vid" preload="metadata" playsinline>
+        <source src="https://player.vimeo.com/external/359264247.hd.mp4?s=432193c1026cfc76e161926545cc787e85d57ea6&profile_id=175" type="video/mp4">
+        </source>
+      </video>
+      <div class="video-controls" id="vid-controls">
+        <div class="progress" id="progress">
+          <span class="vidbar" id="playback"></span>
+        </div>
+        <div class="vid-buttons">
+          <button class="play" id="play-pause"></button>
+        </div>
+        <div class="timeblock">
+          <div id="currentTime">00:00</div>
+          <span>/<span>
+              <div id="vidDuration">1:56</div>
+        </div>
+        <div class="vid-buttons right">
+          <a id="vimeo" href="">VIEW ON VIMEO</a><button class="fullscreen" id="fs">FULLSCREEN</button>
+        </div>
+      </div>
+    </figure>
+  </section>
 
 
 

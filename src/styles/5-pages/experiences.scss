@@ -7,7 +7,7 @@ $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1e
 // $secondary-purp: #7D246B;
 
 @import '../2-modules/_layouts';
-@import '../2-modules/_cursor';
+// @import '../2-modules/_cursor';
 
 /* ----- fonts ------ */
 @font-face {
@@ -43,6 +43,145 @@ $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1e
 @font-face {
   font-family: maisonMono-Regular;
   src: url(../../../fonts/MaisonMono-Regular.otf);
+}
+
+.play-cursor {
+  cursor: url("../../../assets/images/play-button.svg") 20 20, auto;
+}
+
+.play-cursor.hoveraction {
+  cursor: none;
+}
+
+.pause-cursor {
+  cursor: url("../../../assets/images/pause-button.svg") 15 20, auto;
+}
+
+.pause-cursor.hoveraction {
+  cursor: none;
+}
+
+.vid-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+}
+.video-container{
+  width: 100%;
+  max-width: 80vw;
+  position: relative;
+  display: flex;
+  margin: 0;
+  video{
+    width: 100%;
+  }
+
+  .video-controls {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: rgb(15,15,5);
+    width: 100%;
+    height: 6vh;
+    cursor: pointer;
+
+    .progress {
+      position: absolute;
+      width: 100%;
+      height: 9px;
+      background-color: rgb(255,255,255,0.8);
+      margin-bottom: 10px;
+      top: 0;
+
+      .vidbar {
+        position: absolute;
+        background-color: purple;
+        height: 9px;
+        width: 0;
+      }
+    }
+
+    .timeblock {
+      margin-top: 5px;
+      margin-left: 1em;
+
+      div {
+        display: inline-block;
+        font-family: maisonNeue-Mono;
+        font-size: 0.65em;
+        color: $primary-green;
+      }
+
+      span {
+        color: $primary-green;
+      }
+    }
+
+    .vid-buttons {
+      margin-top: 5px;
+
+      button, a {
+        background: none;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        color: $primary-green;
+        font-family: maisonNeue-Mono;
+        font-size: 0.65em;
+        text-transform: uppercase;
+        padding: 0 1em;
+      }
+
+      button.play:before {
+        content: "PLAY";
+        text-transform: capitalize;
+      }
+
+      button.pause:after {
+        content: "PAUSE";
+        text-transform: capitalize;
+      }
+    }
+
+    .vid-buttons.right {
+      margin-left: auto;
+      #fs, #vimeo{
+        display: inline;
+        padding-right: 0.6vw;
+      }
+    }
+  }
+}
+
+#video-fig:fullscreen {
+  background-color: black;
+
+  .scroll-hint{
+    display: none;
+  }
+  .embed-container {
+    position: relative;
+    padding-bottom: 70.25%;
+  }
+
+  .video-overlay {
+    top: 40%;
+  }
+
+  .video-controls {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+#video-fig:fullscreen .video-controls.hoveraction {
+  transform: translateY(6vh);
 }
 
 .mini-grid{
