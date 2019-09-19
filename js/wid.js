@@ -66,6 +66,7 @@ $(document).ready(function() {
 
   var vidMouseTimer;
   var widVid = document.getElementById("wid-video");
+  var playpause = document.getElementById("play-pause");
   var vidFig = document.getElementById("vid-container");
   var blurb = document.getElementById("blurb");
   var timeStamps = document.querySelectorAll(".vid-marker");

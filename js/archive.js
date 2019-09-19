@@ -1,5 +1,7 @@
 $(document).ready(function() {
+  var controller = new ScrollMagic.Controller({vertical: false});
 
+  
   var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
 
   for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
