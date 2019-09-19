@@ -6,7 +6,6 @@ $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1e
 // $primary-green: #DFEA4E;
 // $secondary-purp: #7D246B;
 
-@import '../1-helpers/_fonts';
 @import '../2-modules/_layouts';
 @import '../2-modules/_cursor';
 
@@ -16,51 +15,12 @@ $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1e
   src: url(../../../fonts/hypermarket-regular.ttf);
   font-weight: bold;
 }
-/* ----- legacy fonts ------ */
-@font-face {
-  font-family: bebas;
-  src: url(../../fonts/bebas.otf);
-}
-@font-face {
-  font-family: brandon;
-  src: url(../../fonts/brandon.otf);
-}
-@font-face {
-  font-family: karla;
-  src: url(../../fonts/karla.ttf);
-}
-@font-face {
-  font-family: helveticaneue-bold;
-  src: url(../../fonts/helveticaneue-bold.otf);
-}
-@font-face {
-  font-family: museosans-100;
-  src: url(../../fonts/museosans-100.otf);
-}
-@font-face {
-  font-family: novecento;
-  src: url(../../fonts/novecento.otf);
-}
-@font-face {
-  font-family: katarinestd;
-  src: url(../../fonts/katarinestd.otf);
-}
-@font-face {
-  font-family: monsterrat;
-  src: url(../../fonts/monsterrat.otf);
-}
-@font-face {
-  font-family: neuehaasgroteskblack;
-  src: url(../../fonts/neuehaasgroteskblack.otf);
-}
+
 /* ----- DD19 BRAND FONTS ------ */
+
 @font-face {
-  font-family: redaction;
-  src: url(../../fonts/Redaction-Regular.otf);
-}
-@font-face {
-  font-family: redaction-bold;
-  src: url(../../fonts/Redaction-Bold.otf);
+  font-family: Redaction;
+  src: url(../../../fonts/Redaction-Bold.otf);
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -94,7 +54,7 @@ $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1e
   background-image: $grid-background;
   background-size: .95em .95em;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .grid-layout-container {
@@ -847,9 +807,9 @@ h1#exp-title{
 
 .exp-title-twoline {
   text-align: right;
-  font-size: 5.5rem;
+  font-size: 5rem;
   // font-size: calc(3em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  font-family: Redaction-Bold;
+  font-family: Redaction;
   line-height: 100%;
   display: block;
 }
@@ -878,8 +838,8 @@ h3#exp-title-secondary {
 }
 
 #exp-title {
-  font-family: redaction;
-  font-size: 5.5rem;
+  font-family: Redaction;
+  font-size: 5rem;
   // font-size: calc(4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin-top: 2rem;
 }

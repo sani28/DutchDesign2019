@@ -315,7 +315,7 @@ body .cursor__ball {
   position: fixed;
   top: 0;
   left: 0;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
   z-index: 1000;
 }
 
@@ -562,7 +562,7 @@ a#current {
 }
 .blurb-container #blurb-header {
   text-align: center;
-  font-size: 8.5vw;
+  font-size: 8vw;
   font-family: redaction;
   margin: 0;
 }
@@ -595,7 +595,7 @@ a#current {
   left: 0;
 }
 #reglaze-overlay #blurb-header {
-  font-size: 5.5rem;
+  font-size: calc(5.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   grid-row: 5;
   grid-column: 9;
   margin-top: 0;
@@ -728,7 +728,78 @@ a#current {
 }
 
 /* -----------circle nav ------------ */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+  .blurb-container {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  .blurb-container #blurb-header {
+    text-align: center;
+    font-size: 3em !important;
+    font-family: redaction;
+    margin: 0;
+    top: -25vh;
+    width: 88vw !important;
+    position: absolute;
+  }
+  .blurb-container #blurb-body {
+    margin: 0;
+    padding: 0;
+    bottom: 50vh;
+    width: 80vw !important;
+    position: absolute;
+  }
+
+  #blurb-header {
+    font-size: calc(4.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+    margin-top: 50vh !important;
+  }
+
+  #blurb-body {
+    font-size: 1.5em !important;
+    width: 300px !important;
+    margin-top: 100% !important;
+  }
+
+  #credits {
+    display: block;
+    position: fixed;
+    top: 35vh;
+    left: 5vw;
+    padding: 0;
+    z-index: 1;
+  }
+  #credits li {
+    font-family: MaisonNeue-Mono;
+    font-size: 0.55rem !important;
+    text-transform: uppercase;
+    text-align: left;
+    width: 200px;
+    padding: 2%;
+  }
+
+  #description {
+    display: flex;
+    width: 310px;
+    line-height: 150%;
+    font-family: MaisonNeue-Mono;
+    font-size: 0.8em !important;
+    text-align: left;
+    bottom: 30%;
+    position: absolute;
+    margin-left: -1.5rem;
+    z-index: 1;
+  }
+
   #back-btn:hover #home-text {
     display: none;
   }
@@ -770,6 +841,11 @@ a#current {
   #nav-overlay #vid-markers .vid-marker:hover {
     background-color: #7D246B;
     color: white;
+  }
+}
+@media screen and (max-width: 500px) {
+  #blurb-header {
+    font-size: 2.8em !important;
   }
 }
 
