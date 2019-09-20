@@ -151,6 +151,10 @@ html {
           animation: fadein 2s;
 }
 
+#scroll-tool.hiddenUI{
+  display: none;
+}
+
 #back-btn {
   position: fixed;
   display: block;

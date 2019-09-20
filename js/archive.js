@@ -1,8 +1,12 @@
 $(document).ready(function() {
   var controller = new ScrollMagic.Controller({vertical: false});
 
-  
+	// build scene
+	var scene = new ScrollMagic.Scene({triggerElement: "#scroll-right", duration: 200, triggerHook: "onLeave"})
+					.addTo(controller);
+
   var targetDivs = document.querySelectorAll('.archive-stack'); //select all the archvie stack containers
+  var trigger = document.getElementById('scroll-right');
 
   for (var i = 0; i < targetDivs.length; i++) { //for all the archive stack containers
 
@@ -139,7 +143,6 @@ $(document).ready(function() {
 
   function mobileHover(x) {
     if (x.matches) { // If media query matches
-
           $("#ten").hover(function() {
               $("#ten").css("background-image", "url(../assets/2010-BG.jpg)");
               $("#yearten").css("color", "white");
@@ -257,21 +260,16 @@ $(document).ready(function() {
                 $("#yearnineteen").css("color", "#7D246B");
               });
     } else {
-
         //map vertical scroll to horizontal scroll using mousewheel
-        $(function() {
-
-          $("html").mousewheel(function(event, delta) {
-            this.scrollLeft -= (delta * 1);
-            //hide scroll indicator if user has started scrolling
-            if (this.scrollLeft > 500) {
-              $('#scroll-tool').hide();
-            } else {
-              $('#scroll-tool').show();
-            }
-          });
+        $("html").mousewheel(function(event, delta) {
+          this.scrollLeft -= (delta * 1);
+          //hide scroll indicator if user has started scrolling
+          if (this.scrollLeft > 500) {
+            $('#scroll-tool').hide();
+          } else {
+            $('#scroll-tool').show();
+          }
         });
-
 
         //hide scroll indicator user scrolls left in legacy container
         $('.legacy-container').scroll(function() {
@@ -286,9 +284,19 @@ $(document).ready(function() {
             $('#scroll-tool').show();
           }
         });
-
     }
   }
+  // change behaviour of controller to animate scroll instead of jump
+  controller.scrollTo(function (newpos) {
+    console.log("triggered");
+    TweenMax.to(window, 0.5, {scrollTo: {x: newpos}});
+  });
+
+  //  bind scroll to anchor links
+  $(document).on("click", "#scroll-right", function (e) {
+      controller.scrollTo("#thirteen");
+      $('#scroll-tool').hide();
+  });
 
   var x = window.matchMedia("(max-width: 800px)")
   mobileHover(x) // Call listener function at run time
