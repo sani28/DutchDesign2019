@@ -7,7 +7,6 @@ $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1e
 // $secondary-purp: #7D246B;
 
 @import '../2-modules/_layouts';
-// @import '../2-modules/_cursor';
 
 /* ----- fonts ------ */
 @font-face {
@@ -43,6 +42,15 @@ $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1e
 @font-face {
   font-family: maisonMono-Regular;
   src: url(../../../fonts/MaisonMono-Regular.otf);
+}
+
+body.dot-cursor{
+  cursor: url("../../../assets/images/smalldot.svg") 20 20, auto;
+}
+
+body.dot-cursor .hoverable:hover{
+  cursor: url("../../../assets/images/largedot.svg") 20 20, auto;
+  transition: all 0.5s ease-in;
 }
 
 .play-cursor {

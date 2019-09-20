@@ -28,6 +28,7 @@
   width: 100%;
   align-items: start;
   width: 100%;
+  min-height: 90vh;
 }
 .photo-section-8 figure, .photo-section-7 figure, .photo-section-6 figure, .photo-section-5 figure, .photo-section-4 figure, .photo-section-3 figure, .photo-section-2 figure, .photo-section-1 figure {
   position: relative;
@@ -336,6 +337,15 @@
   font-family: maisonMono-Regular;
   src: url(../../../fonts/MaisonMono-Regular.otf);
 }
+body.dot-cursor {
+  cursor: url("../../../assets/images/smalldot.svg") 20 20, auto;
+}
+
+body.dot-cursor .hoverable:hover {
+  cursor: url("../../../assets/images/largedot.svg") 20 20, auto;
+  transition: all 0.5s ease-in;
+}
+
 .play-cursor {
   cursor: url("../../../assets/images/play-button.svg") 20 20, auto;
 }
