@@ -13,7 +13,7 @@ $(document).ready(function() {
   var scrollControl = new ScrollMagic.Controller();
   var jumpController = new ScrollMagic.Controller();
   var progController = new ScrollMagic.Controller();
-  var totalHeight = document.body.scrollHeight;
+  var totalHeight = $(document).height();
 
   var revertProgress = TweenLite.from("#animate", 0.5, {
     autoAlpha: 0,
