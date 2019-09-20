@@ -323,52 +323,66 @@ function initAnimation() {
     switch (bgImg) {
       case "arnhemDot":
         $("#arnhem-bg").removeClass("hiddenUI");
+        $("#arnhem-bg").show();
         break;
       case "appianDot":
         $("#appian-bg").removeClass("hiddenUI");
+        $("#appian-bg").show();
         break;
       case "atelierDot":
         $("#atelier-bg").removeClass("hiddenUI");
+        $("#atelier-bg").show();
         break;
       case "burgundyDot":
         $("#burgundian-bg").removeClass("hiddenUI");
+        $("#burgundian-bg").show();
         break;
       case "breweryDot":
         $("#cantillion-bg").removeClass("hiddenUI");
+        $("#cantillion-bg").show();
         break;
       case "feltingDot":
         $("#felting-bg").removeClass("hiddenUI");
+        $("#felting-bg").show();
         break;
       case "kikiDot":
         $("#kiki-bg").removeClass("hiddenUI");
+        $("#kiki-bg").show();
         break;
       case "farmDot":
         $("#leeuwarden-bg").removeClass("hiddenUI");
+        $("#leeuwarden-bg").show();
         break;
       case "milkDot":
         $("#melkhuis-bg").removeClass("hiddenUI");
+        $("#melkhuis-bg").show();
         break;
       case "rensDot":
         $("#rens-bg").removeClass("hiddenUI");
+        $("#rens-bg").show();
         break;
       case "romeDot":
         $("#roma-bg").removeClass("hiddenUI");
+        $("#roma-bg").show();
         break;
       case "texelsDot":
         $("#texels-bg").removeClass("hiddenUI");
+        $("#texels-bg").show();
         break;
       case "andreaDot":
         $("#andrea-bg").removeClass("hiddenUI");
+        $("#andrea-bg").show();
         break;
       case "btsDot":
         $("#bts-bg").removeClass("hiddenUI");
+        $("#bts-bg").show();
         break;
     }
   }
 
   function hideBGImage(){
     for(let i=0, len=$fieldNotesBGs.length; i< len; i++){
-      $($fieldNotesBGs[i]).addClass("hiddenUI");
+      $($fieldNotesBGs[i]).fadeOut(200);
     }
   }
 

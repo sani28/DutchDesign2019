@@ -284,15 +284,12 @@ a#imgHover {
   height: 1vw;
   width: 1vw;
   pointer-events: none;
-  transition: width 0.185s cubic-bezier(.55,1,.85,1), height 0.185s cubic-bezier(.55,1,.85,1), background-color 0.185s cubic-bezier(.55,1,.85,1);
-  transition-delay: 0.1s;
 }
 
 .active-dot {
   height: 2.25vw;
   width: 2.25vw;
   transition: width 0.185s cubic-bezier(.55,1,.85,1), height 0.185s cubic-bezier(.55,1,.85,1), background-color 0.185s cubic-bezier(.55,1,.85,1);
-  transition-delay: 0.1s;
 }
 
 .dot-unhovered.designer-dot {
@@ -312,8 +309,6 @@ a#imgHover {
   height: 1vw;
   width: 1vw;
   pointer-events: none;
-  transition: width 0.185s cubic-bezier(.55,1,.85,1), height 0.185s cubic-bezier(.55,1,.85,1);
-  transition-delay: 0.1s;
 }
 
 .experience-dot.active-dot, .designer-dot.active-dot{
