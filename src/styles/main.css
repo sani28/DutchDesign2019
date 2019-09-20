@@ -478,7 +478,7 @@ html.landing {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
@@ -498,7 +498,7 @@ html.landing {
   transform: scale(0.8);
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .mobile-caption, .mobile-quote {
     display: none;
   }
@@ -515,7 +515,7 @@ html.landing {
     display: none;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   html {
     background-color: #DFEA4E;
     background-image: none;
@@ -891,7 +891,7 @@ html.landing {
     padding: 2%;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 7000px) {
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
     padding: 3em 0;
   }
