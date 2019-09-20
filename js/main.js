@@ -69,7 +69,7 @@ function initAnimation() {
   } else {
     $animateDots = shuffle($allDots);
     for(let i=0; i<$animateDots.length; i++){
-      initTL.from($animateDots[i], 0.08, {opacity: 0});
+      initTL.from($animateDots[i], 0.095, {opacity: 0});
     }
     for(let i=0; i<$hiddenElements.length; i++){
       initTL.from($hiddenElements[i], 1.35, {opacity: 0, delay: 0.65},  "phase2");
@@ -82,11 +82,16 @@ function initAnimation() {
 /////////////////////////////////////////////////////////////////////////
   const observer = lozad(); // lazy loads elements with '.lozad' selector
   observer.observe();
-  $.when(initLandingPage()).then(preloadVideo());
+  $.when(initLandingPage()).then(initBehaviour());
 
   function initLandingPage(){
     setState();
+    preloadVideo();
     initAnimation();
+    sessionStorage.visited = "true";
+  }
+
+  function initBehaviour(){
     showHideBlurb();
     toggleDotState();
     changeActiveSwitch();
@@ -95,13 +100,16 @@ function initAnimation() {
     highlightDotsOnNavHover();
     initDesignerDotHover();
     initFieldNoteDotHover();
-    sessionStorage.visited = "true";
   }
 
   function preloadVideo(){
-    for (let i=0, len = $previewVideos.length; i < len; i++ ){
-        observer.triggerLoad($previewVideos[i]);
-    }
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+       return;
+     } else {
+       for (let i=0, len = $previewVideos.length; i < len; i++ ){
+          observer.triggerLoad($previewVideos[i]);
+       }
+     }
   }
 
   //sessionStorage for last seen nav, and active states
