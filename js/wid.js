@@ -66,9 +66,10 @@ $(document).ready(function() {
 
   var vidMouseTimer;
   var widVid = document.getElementById("wid-video");
-  var playpause = document.getElementById("play-pause");
+  var playPause = document.getElementById("play-pause");
   var vidFig = document.getElementById("vid-container");
   var blurb = document.getElementById("blurb");
+  var progress = document.getElementById("progress");
   var timeStamps = document.querySelectorAll(".vid-marker");
   var hideUI = ["#blurb", "#nav-overlay"];
   var fullscreen = document.getElementById("fs");
@@ -81,17 +82,17 @@ $(document).ready(function() {
 
   progress.addEventListener('click', function(e) {
     var pos = (e.pageX - progress.offsetLeft) / this.offsetWidth;
-    widVid.currentTime = pos * vid.duration;
+    widVid.currentTime = pos * widVid.duration;
   });
 
   function togglePlayPause() {
     if (widVid.paused) {
       playPause.className = 'pause';
-      overlay.style.display = "none";
+
       widVid.play();
     } else {
       playPause.className = 'play';
-      overlay.style.display = "";
+      // overlay.style.display = "";
       widVid.pause();
     }
   }
