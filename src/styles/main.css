@@ -382,14 +382,10 @@
   width: 40%;
 }
 
-html {
+html.landing {
   background-color: #DFEA4E;
   background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
-}
-
-html.designer-page-body {
-  background-color: white;
 }
 
 .bg-video-container {
@@ -477,7 +473,6 @@ html.designer-page-body {
   float: left;
   min-width: 100%;
   min-height: 100%;
-  mix-blend-mode: color-burn;
   background-color: transparent;
   background-image: url("../../imgs/HOME.jpg");
   background-size: cover;
