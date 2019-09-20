@@ -19,7 +19,7 @@
 }
 /* --------- GRID LINES ----------------- */
 html {
-  background-color: #222222;
+  background-color: #0b0b0b;
   border-image: linear-gradient(rgba(255, 255, 255, 0.2) 0.01, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0.01em, transparent 0.1em);
   background-size: 4.54vw 6.67vh;
   font-family: redaction-bold, "maisonMono-Regular", helvetica, sans-serif;
@@ -33,6 +33,18 @@ html {
   -o-animation: fadein 1s;
   /* Opera < 12.1 */
   animation: fadein 1s;
+}
+
+.mini-grid {
+  position: fixed;
+  float: left;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0.01em, transparent 0.1em);
+  background-size: 0.95em 0.95em;
+  z-index: -1000;
+  opacity: 0.1;
 }
 
 @keyframes fadein {
@@ -634,7 +646,7 @@ body .cursor__ball circle {
   }
 
   #title {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   #para-mobile {
@@ -712,7 +724,7 @@ body .cursor__ball circle {
   }
 
   #title {
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
 
   .hover-reveal__img {
