@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  var vidMouseTimer;
   var vid = document.getElementById("designer-vid");
   var vidFig = document.getElementById("video-fig");
   const playback = document.getElementById("playback");
@@ -152,6 +151,9 @@ $(document).ready(function() {
 
   //////////// VIDEO PLAYER BEHAVIOUR ////////
 
+  var vidMouseTimer;
+  var justHidden = false;
+
   function togglePlayPause() {
     if (vid.paused) {
       playPause.className = 'pause';
@@ -236,20 +238,28 @@ $(document).ready(function() {
     $("#video-fig").removeClass("play-cursor");
     $("#video-fig").addClass("pause-cursor");
     $("#designer-vid").mousemove(function() {
-      if (vidMouseTimer) {
+      if (!justHidden) {
+        justHidden = false;
         clearTimeout(vidMouseTimer);
-        vidMouseTimer = 0;
+        $('#vid-controls').removeClass("hoveraction");
+        $("#video-fig").removeClass("hoveraction");
+        vidMouseTimer = setTimeout(fsHide, 1000);
       }
-      $('#vid-controls').removeClass("hoveraction");
-      $("#video-fig").removeClass("hoveraction");
-      vidMousetimer = setTimeout(function() {
-        $('#vid-controls').addClass("hoveraction");
-        $("#video-fig").addClass("hoveraction");
-      }, 4000)
     });
   });
 
+  function fsHide(){
+    $('#vid-controls').addClass("hoveraction");
+    $("#video-fig").addClass("hoveraction");
+    setTimeout(function(){
+      justHidden = false;
+    }, 1000);
+  }
+
   vid.addEventListener("pause", function() {
+    clearTimeout(vidMouseTimer);
+    $('#vid-controls').removeClass("hoveraction");
+    $("#video-fig").removeClass("hoveraction");
     $("#video-fig").removeClass("pause-cursor");
     $("#video-fig").addClass("play-cursor");
   });

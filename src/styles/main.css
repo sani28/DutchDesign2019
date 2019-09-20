@@ -1584,6 +1584,9 @@ a#imgHover {
 #video-fig:fullscreen {
   background-color: black;
 }
+#video-fig:fullscreen .video-overlay {
+  position: static;
+}
 #video-fig:fullscreen .scroll-hint {
   display: none;
 }

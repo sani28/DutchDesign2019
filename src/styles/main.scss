@@ -659,6 +659,10 @@ a#imgHover {
 
 #video-fig:fullscreen {
   background-color: black;
+
+  .video-overlay {
+    position: static;
+  }
   .scroll-hint{
     display: none;
   }
