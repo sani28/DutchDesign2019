@@ -749,14 +749,12 @@ a#current {
     font-family: redaction;
     margin: 0;
     top: -25vh;
-    width: 88vw !important;
     position: absolute;
   }
   .blurb-container #blurb-body {
     margin: 0;
     padding: 0;
     bottom: 50vh;
-    width: 80vw !important;
     position: absolute;
   }
 

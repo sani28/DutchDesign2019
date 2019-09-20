@@ -9,6 +9,7 @@ $(document).ready(function(){
     document.getElementById('waterschool3'),
     document.getElementById('quote2'),
     document.getElementById('cheesemaker'),
+    document.getElementById('cheesemaker2'),
     document.getElementById('quote3'),
     document.getElementById('jurgenquote')
 ];
