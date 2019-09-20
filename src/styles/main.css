@@ -391,19 +391,6 @@ html.designer-page-body {
   background-color: white;
 }
 
-#grain {
-  background-image: url(../imgs/GRAIN.jpg) no-repeat center center fixed;
-  opacity: 0.4;
-  mix-blend-mode: color-burn;
-  width: 100%;
-  background-size: contain;
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-}
-
 .bg-video-container {
   position: absolute;
   top: 0;
@@ -489,12 +476,13 @@ html.designer-page-body {
   float: left;
   min-width: 100%;
   min-height: 100%;
+  mix-blend-mode: color-burn;
   background-color: transparent;
-  background-image: url("../../imgs/GRAIN.jpg");
+  background-image: url("../../imgs/HOME.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */

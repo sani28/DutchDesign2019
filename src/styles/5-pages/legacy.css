@@ -221,6 +221,10 @@ html {
   animation: fadein 2s;
 }
 
+#scroll-tool.hiddenUI {
+  display: none;
+}
+
 #back-btn {
   position: fixed;
   display: block;
@@ -274,10 +278,10 @@ html {
   width: 100vw;
   min-height: 100%;
   background-color: transparent;
-  background-image: url("../../../imgs/GRAIN.jpg");
+  background-image: url("../../../imgs/HOME.jpg");
   background-size: cover;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 /* ------------------- archive ------------------------------------- */
