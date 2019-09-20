@@ -17,7 +17,7 @@
 transform: scale(0.8);
 }
 
-@media screen and (min-width: 800px)  {
+@media screen and (min-width: 500px)  {
   .mobile-caption, .mobile-quote {
     display: none;
   }
@@ -27,12 +27,13 @@ transform: scale(0.8);
   .mobile-video-slider{
     display: none;
   }
+
   #mobile-container{
     display: none;
   }
 }
 
-@media screen and (max-width: 800px)  {
+@media screen and (max-width: 500px)  {
 
   html{
     background-color: $primary-green;
@@ -45,6 +46,10 @@ transform: scale(0.8);
 
   nav#top-nav a.top-nav-item {
     color: white;
+  }
+
+  .bg-video-container, .bg-photo-container {
+    display: none;
   }
 
   section.designer-top-section {
@@ -216,14 +221,12 @@ transform: scale(0.8);
     }
     #mobile-video-slider{
       margin: 0;
-      object-fit: cover;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       overflow: hidden;
-      object-fit: cover;
       .bg-mobile-video{
         position: absolute;
         top: 0;
