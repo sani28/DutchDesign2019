@@ -473,12 +473,13 @@ html.landing {
   float: left;
   min-width: 100%;
   min-height: 100%;
+  mix-blend-mode: color-burn;
   background-color: transparent;
-  background-image: url("../../assets/HOME.jpg");
+  background-image: url("../../assets/HOME3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~ media queries for mobile ~~~~~~~~~~~~~~~~~~~ */
