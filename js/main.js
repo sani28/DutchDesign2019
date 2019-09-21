@@ -465,9 +465,9 @@ function initAnimation() {
     }
   }
   function toggleBlurb(){
-    $("#home-cal").fadeToggle(350);
-    $("#home-blurb").fadeToggle(350).toggleClass("hiddenUI");
-    $("#wim").fadeToggle(350).toggleClass("hiddenUI");
+    $("#home-cal").fadeToggle(250);
+    $("#home-blurb").fadeToggle(250).toggleClass("hiddenUI");
+    $("#wim").fadeToggle(250).toggleClass("hiddenUI");
   }
 
   function hideDesignerDots(){
