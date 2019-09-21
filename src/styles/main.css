@@ -159,7 +159,6 @@
 
 .photo-section-2 {
   grid-template-rows: repeat(5, 16.66vh) 1fr;
-  margin-bottom: 2rem;
 }
 .photo-section-2 .layout-item:first-child {
   grid-row: 2/4;
@@ -259,9 +258,6 @@
   height: auto;
 }
 
-.photo-section-5 {
-  margin-bottom: 5em;
-}
 .photo-section-5 .layout-item:first-child {
   grid-column: 4/10;
   grid-row: 1;
@@ -292,7 +288,6 @@
 
 .photo-section-6 {
   grid-template-rows: repeat(7, 1fr);
-  margin-bottom: -5em;
 }
 .photo-section-6 .layout-item:first-child {
   grid-row: 1/4;

@@ -90,7 +90,6 @@ $secondary-purp: #7D246B;
 .photo-section-2 {
   @extend %photo-section;
   grid-template-rows: repeat(5, 16.66vh) 1fr;
-  margin-bottom: 2rem;
   .layout-item:first-child{
     grid-row: 2/4;
     grid-column: 5 / 9;
@@ -194,7 +193,6 @@ $secondary-purp: #7D246B;
 
 .photo-section-5{
   @extend %photo-section;
-  margin-bottom: 5em;
   .layout-item:first-child{
     grid-column: 4/10;
     grid-row: 1;
@@ -226,7 +224,6 @@ $secondary-purp: #7D246B;
 .photo-section-6{
   @extend %photo-section;
   grid-template-rows: repeat(7, 1fr);
-  margin-bottom: -5em;
   .layout-item:first-child{
     grid-row: 1/4;
     grid-column: 7/11;
