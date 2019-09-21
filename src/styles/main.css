@@ -789,7 +789,7 @@ html.landing {
     font-family: hyperMarket;
   }
 
-  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle, .cursor, #grain-overlay {
+  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle, .cursor {
     display: none;
   }
 
@@ -1676,6 +1676,9 @@ a#imgHover {
   line-height: 170%;
   color: grey;
   margin-top: 2em;
+}
+.designer-top-section .designer-summary .designer-blurb a {
+  display: inline;
 }
 
 .fullbleed {
