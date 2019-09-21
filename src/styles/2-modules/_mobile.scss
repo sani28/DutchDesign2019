@@ -36,7 +36,7 @@ transform: scale(0.8);
 @media only screen and (max-width: 700px)  {
 
   html{
-    background-color: $primary-green;
+    // background-color: white;
     background-image: none;
   }
 
@@ -343,6 +343,7 @@ transform: scale(0.8);
   section.transcript {
     display: none;
     grid-template-columns: 1fr 85% 1fr;
+    width: 100%;
     gap: 1.5em;
     font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
@@ -393,8 +394,8 @@ transform: scale(0.8);
     display: flex;
     justify-content: center;
     align-self: center;
-    padding: 0.5em;
-    margin-bottom: 5%;
+    padding: 0.5em 0;
+    margin-bottom: 5vh;
   }
 
   .mobile-caption p {
@@ -422,11 +423,11 @@ transform: scale(0.8);
   }
 
   .mobile-photo-container {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2%;
+    padding: 2vh 0;
   }
 }
 

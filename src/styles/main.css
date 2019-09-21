@@ -518,7 +518,6 @@ html.landing {
 }
 @media only screen and (max-width: 700px) {
   html {
-    background-color: #DFEA4E;
     background-image: none;
   }
 
@@ -811,6 +810,7 @@ html.landing {
   section.transcript {
     display: none;
     grid-template-columns: 1fr 85% 1fr;
+    width: 100%;
     gap: 1.5em;
     font-size: calc(0.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
@@ -856,8 +856,8 @@ html.landing {
     display: flex;
     justify-content: center;
     align-self: center;
-    padding: 0.5em;
-    margin-bottom: 5%;
+    padding: 0.5em 0;
+    margin-bottom: 5vh;
   }
 
   .mobile-caption p {
@@ -885,11 +885,11 @@ html.landing {
   }
 
   .mobile-photo-container {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2%;
+    padding: 2vh 0;
   }
 }
 @media screen and (min-width: 7000px) {
@@ -1623,6 +1623,7 @@ a#imgHover {
   gap: 1.5em;
   width: 100%;
   margin-top: 100vh;
+  margin-bottom: 10vh;
 }
 .designer-top-section #designer-toggle {
   grid-column: 3/-4;
