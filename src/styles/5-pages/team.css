@@ -96,17 +96,17 @@ html {
   font-family: redaction-bold;
   font-size: 2.5rem;
   text-align: justify;
-  padding-bottom: 5%;
   display: block;
+  width: 70%;
+  margin: 0 auto;
 }
 
 #team-blurb {
   font-family: redaction-bold;
   text-align: justify;
-  width: 57%;
-  margin-left: 10%;
+  width: 100%;
   top: 13vh;
-  height: 500px;
+  height: 25vh;
   display: flex;
   position: absolute;
 }
@@ -116,13 +116,15 @@ p.small {
   line-height: 200%;
   text-align: justify;
   display: block;
+  width: 70%;
+  margin: 0 auto;
   font-size: calc(5px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 #para {
-  display: grid;
-  grid-row: 11;
-  grid-column: 12/21;
+  position: absolute;
+  bottom: 15vh;
+  height: 10vh;
   width: 100%;
   text-align: justify;
 }
@@ -725,6 +727,9 @@ body .cursor__ball circle {
 
   #title {
     transform: scale(0.8);
+    font-size: 2em;
+    width: 100%;
+    padding-bottom: 10vh;
   }
 
   .hover-reveal__img {
@@ -820,7 +825,7 @@ body .cursor__ball circle {
 
   #para-mobile {
     width: 90%;
-    left: 6%;
+    top: 60vh;
     position: absolute;
     max-height: 100px;
     display: block;
@@ -831,6 +836,7 @@ body .cursor__ball circle {
     font-size: calc(0.6em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     line-height: 200%;
     text-align: left;
+    width: 80%;
   }
 
   .photo-section {
