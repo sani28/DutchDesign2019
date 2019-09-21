@@ -17,7 +17,7 @@
 transform: scale(0.8);
 }
 
-@media screen and (min-width: 700px)  {
+@media only screen and (min-width: 700px)  {
   .mobile-caption, .mobile-quote {
     display: none;
   }
@@ -33,7 +33,7 @@ transform: scale(0.8);
   }
 }
 
-@media screen and (max-width: 700px)  {
+@media only screen and (max-width: 700px)  {
 
   html{
     background-color: $primary-green;
@@ -324,7 +324,7 @@ transform: scale(0.8);
     }
   }
 
-  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle, .cursor{
+  #home-cal, #back-btn, nav#top-nav, #main-nav, nav#main-toggle, .cursor, #grain-overlay{
     display: none;
   }
 
