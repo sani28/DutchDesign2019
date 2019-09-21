@@ -467,6 +467,7 @@ function initAnimation() {
   function toggleBlurb(){
     $("#home-cal").fadeToggle(350);
     $("#home-blurb").fadeToggle(350).toggleClass("hiddenUI");
+    $("#wim").fadeToggle(350).toggleClass("hiddenUI");
   }
 
   function hideDesignerDots(){
