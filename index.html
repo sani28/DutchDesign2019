@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="landing">
+<head>
+  <meta charset="utf-8">
+  <title>Dutch Design 2019</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="dutch design, design, dd19, sfu, simon fraser university, russell taylor, dutch"/>
+  <link rel="stylesheet" type="text/css" href="./src/styles/0-vendors/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./src/styles/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./src/styles/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="./src/styles/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/intersection-observer.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.codex.js"></script>
+  <script type="text/javascript" src="./js/cursor.js" defer></script>
+  <script type="text/javascript" src="./js/slick.min.js"></script>
+  <script type="text/javascript" src="./js/main.js" defer></script>
+
+</head>
+
+<body class="no-cursor">
+  <div id="grid-overlay" class="hiddenUI"></div>
+  <div id="grain-overlay"></div>
+  <div class="cursor">
+    <div class="cursor__ball--big">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+  <div class="bg-video-container">
+    <video class="bg-preview-video lozad hiddenUI" id="lex-preview-vid" preload="metadata" autoplay muted loop playsinline>
+      <source data-src="./assets/videos/preview_lex.mp4" type="video/mp4">
+      <source data-src="./assets/videos/preview_lex.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="truly-preview-vid" preload="metadata" autoplay muted loop playsinline>
+      <source data-src="./assets/videos/preview_truly.mp4" type="video/mp4">
+      <source data-src="./assets/videos/preview_truly.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="jurgen-preview-vid" preload="metadata" autoplay muted loop playsinline>
+      <source data-src="./assets/videos/preview_jurgen.mp4" type="video/mp4">
+      <source data-src="./assets/videos/preview_jurgen.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="nienke-preview-vid" preload="metadata" autoplay muted loop playsinline>
+      <source data-src="./assets/videos/preview_nienke.mp4" type="video/mp4">
+      <source data-src="./assets/videos/preview_nienke.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="valentin-preview-vid" preload="metadata" autoplay muted loop playsinline>
+      <source data-src="./assets/videos/preview_valentin.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_valentin.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="futures-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_futures.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_futures.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="matthews-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_matthews.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_matthews.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="pepe-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_pepe.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_pepe.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="ineke-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_ineke.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_ineke.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="momkai-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_momkai.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_momkai.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="corunum-preview-vid" preload="metadata" autoplay muted loop playsinline>
+      <source data-src="./assets/videos/preview_corunum.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_corunum.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="lava-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_lava.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_lava.webm," type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="rebecca-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_rebecca.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_rebecca.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="floris-preview-vid" preload="metadata" autoplay muted loop playsinline>
+      <source data-src="./assets/videos/preview_floris.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_floris.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="aldo-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_aldo.mp4" type="video/mp4">
+        <source data-src="./assets/videos/preview_aldo.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="edwin-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_main.mp4" type="video/mp4">
+      <source data-src="./assets/videos/preview_main.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="wid-preview-vid" preload="metadata" autoplay muted loop playsinline >
+      <source data-src="./assets/videos/preview_wid.mp4" type="video/mp4">
+      <source data-src="./assets/videos/preview_wid.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+    <video class="bg-preview-video lozad hiddenUI" id="reglaze-preview-vid" preload="metadata" autoplay muted loop playsinline >
+        <source src="./assets/videos/preview_reglaze.mp4" type="video/mp4">
+        <source src="./assets/videos/preview_reglaze.webm" type="video/webm">
+      Your browser doesn't support HTML5 videos.
+    </video>
+  </div>
+  <div class="bg-photo-container">
+    <img class="lozad fieldnote-bg hiddenUI" id="arnhem-bg" data-src="./assets/images/fieldnotes-hovers/arnhem_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="texels-bg" data-src="./assets/images/fieldnotes-hovers/texels_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="kiki-bg" data-src="./assets/images/fieldnotes-hovers/kiki_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="roma-bg" data-src="./assets/images/fieldnotes-hovers/rome_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="burgundian-bg" data-src="./assets/images/fieldnotes-hovers/burgundian_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="felting-bg" data-src="./assets/images/fieldnotes-hovers/felting_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="appian-bg" data-src="./assets/images/appian/appianway_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="bts-bg" data-src="./assets/images/fieldnotes-hovers/bts_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="rens-bg" data-src="./assets/images/fieldnotes-hovers/rens_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="melkhuis-bg" data-src="./assets/images/fieldnotes-hovers/melkhuis_hover.jpg"></img>
+      <img class="lozad fieldnote-bg hiddenUI" id="andrea-bg" data-src="./assets/images/fieldnotes-hovers/watercolour_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="leeuwarden-bg" data-src="./assets/images/fieldnotes-hovers/leeuwarden_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="cantillion-bg" data-src="./assets/images/fieldnotes-hovers/cantillion_hover.jpg"></img>
+    <img class="lozad fieldnote-bg hiddenUI" id="atelier-bg" data-src="./assets/images/fieldnotes-hovers/atelier_hover.jpg"></img>
+  </div>
+
+  <!-- ~~~~~~~~~~~~~ grid container  ~~~~~~~~~~~~~~~`` -->
+  <div class="grid-layout-container">
+    <nav id="top-nav">
+      <a href="./pages/team/team.html" class="top-nav-item hoverable" id="nav-team">Team</a>
+      <a href="./pages/legacy.html" class="top-nav-item hoverable" id="nav-legacy">Legacy</a>
+      <a href="#" class="top-nav-item hoverable" id="nav-blurb">DutchDesign</a>
+    </nav>
+    <div class="blurb-container hiddenUI" id="home-blurb">
+      <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing field school for filmmaking, research, and reportage. The protagonists are individuals who define their own worlds — who blur and destroy boundaries, definitions, and limitations. Through 16 interviews and 14 reflections, it attempts to make Dutch culture fleetingly visible.</h1>
+    </div>
+    <div class="calendar-container" id="home-cal">
+
+      <div class="cal-item" id="futuresItem"><a href="./pages/intentional-futures.html" class="designer-dot active-dot hoverable" id="futuresDot" data-title="INTENTIONAL FUTURES" data-subtitle="SEATTLE // DIGITAL"></a></div>
+      <div class="cal-item" id="matthewsItem"><a href="./pages/studio-matthews.html" class="designer-dot active-dot hoverable" id="matthewsDot" data-title="STUDIO MATTHEWS" data-subtitle="SEATTLE // BRANDING"></a></div>
+      <div class="cal-item" id="pepeItem"><a href="./pages/pepe-heykoop.html" class="designer-dot active-dot hoverable" id="pepeDot" data-title="PEPE HEYKOOP" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
+      <div class="cal-item" id="inekeItem"><a href="./pages/ineke-hans.html" class="designer-dot active-dot hoverable" id="inekeDot" data-title="INEKE HANS" data-subtitle="HOGE VELUWE // PRODUCT & EXHIBITION"></a></div>
+      <div class="cal-item" id="momkaiItem"><a href="./pages/momkai.html" class="designer-dot active-dot hoverable" id="momkaiDot" data-title="MOMKAI" data-subtitle="AMSTERDAM // DIGITAL"></a></div>
+      <div class="cal-item" id="lavaItem"><a href="./pages/lava.html" class="designer-dot active-dot hoverable" id="lavaDot" data-title="LAVA" data-subtitle="AMSTERDAM // BRANDING"></a></div>
+      <div class="cal-item" id="aldoItem"><a href="./pages/aldo-bakker.html" class="designer-dot active-dot hoverable" id="aldoDot" data-title="ALDO BAKKER" data-subtitle="AMSTERDAM // ART & PRODUCT"></a></div>
+      <div class="cal-item" id="rebeccaItem"><a href="./pages/rebecca-geskus.html" class="designer-dot active-dot hoverable" id="rebeccaDot" data-title="REBECCA GESKUS" data-subtitle="TEXEL // TEXTILES"></a></div>
+      <div class="cal-item" id="corunumItem"><a href="./pages/cor-unum.html" class="designer-dot active-dot hoverable" id="corunumDot" data-title="COR UNUM" data-subtitle="DEN BOSCH // CERAMICS"></a></div>
+      <div class="cal-item" id="florisItem"><a href="./pages/floris-hovers.html" class="designer-dot active-dot hoverable" id="florisDot" data-title="FLORIS HOVERS" data-subtitle="RAAMSDONKSVEER // PRODUCT"></a></div>
+      <div class="cal-item" id="valentinItem"><a href="./pages/valentin-loellmann.html" class="designer-dot active-dot hoverable" id="valentinDot" data-title="VALENTIN LOELLMANN" data-subtitle="MAASTRICHT // ART & PRODUCT"></a></div>
+      <div class="cal-item" id="edwinItem"><a href="./pages/main-studio.html" class="designer-dot active-dot hoverable" id="edwinDot" data-title="MAIN STUDIO" data-subtitle="AMSTERDAM // EDITORIAL & GRAPHIC"></a></div>
+      <div class="cal-item" id="lexItem"><a href="./pages/lex-pott.html" class="designer-dot active-dot hoverable" id="lexDot" data-title="LEX POTT" data-subtitle="ROTTERDAM // PRODUCT"></a></div>
+      <div class="cal-item" id="jurgenItem"><a href="./pages/jurgen-bey.html" class="designer-dot active-dot hoverable" id="jurgenDot" data-title="STUDIO MAKKINK & BEY" data-subtitle="ROTTERDAM // RESEARCH & EXHIBITION"></a></div>
+      <div class="cal-item" id="nienkeItem"><a href="./pages/nienke-hoogvliet.html" class="designer-dot active-dot hoverable" id="nienkeDot" data-title="NIENKE HOOGVLIET" data-subtitle="THE HAGUE // RESEARCH & PRODUCT"></a></div>
+      <div class="cal-item" id="trulyItem"><a href="./pages/truly-truly.html" class="designer-dot active-dot hoverable" id="trulyDot" data-title="STUDIO TRULY TRULY" data-subtitle="ROTTERDAM // PRODUCT"></a></div>
+      <div class="cal-item" id="widItem"><a href="./pages/wid.html" class="designer-dot active-dot hoverable" id="widDot" data-title="WHAT IS DESIGN" data-subtitle="SHORT FILM"></a></div>
+      <div class="cal-item" id="reglazeItem"><a href="./pages/reglaze.html" class="designer-dot active-dot hoverable" id="reglazeDot" data-title="REGLAZE" data-subtitle="TRAILER"></a></div>
+
+      <div class="cal-item" id="arnhemItem"><a href="./pages/fieldnotes/arnhem.html" class="experience-dot hoverable" id="arnhemDot" data-title="A DAY IN HOGE VELUWE" data-subtitle="HOGE VELUWE, NETHERLANDS"></a></div>
+      <div class="cal-item" id="romeItem"><a href="./pages/fieldnotes/roma.html" class="experience-dot hoverable" id="romeDot" data-title="A WEEK IN ROMA" data-subtitle="ROME, ITALY"></a></div>
+      <div class="cal-item" id="appianItem"><a href="./pages/fieldnotes/appian.html" class="experience-dot hoverable" id="appianDot" data-title="THE APPIAN WAY RIDE" data-subtitle="ROME, ITALY"></a></div>
+      <div class="cal-item" id="andreaItem"><a href="./pages/fieldnotes/andrea.html" class="experience-dot hoverable" id="andreaDot" data-title="WATERCOLOUR WORKSHOP" data-subtitle="ROME, ITALY // ANDREA PONSI"></a></div>
+      <div class="cal-item" id="farmItem"><a href="./pages/fieldnotes/farm.html" class="experience-dot hoverable" id="farmDot" data-title="A WEEK IN LEEUWARDEN" data-subtitle=" FRYSLAND, NETHERLANDS"></a></div>
+      <div class="cal-item" id="texelsItem"><a href="./pages/fieldnotes/texels.html" class="experience-dot hoverable" id="texelsDot" data-title="A DAY IN TEXEL" data-subtitle="TEXEL, NETHERLANDS"></a></div>
+      <div class="cal-item" id="burgundyItem"><a href="./pages/fieldnotes/black.html" class="experience-dot hoverable" id="burgundyDot" data-title="BURGUNDIAN BLACK" data-subtitle="SPANNUM, NETHERLANDS // CLAUDY JONGSTRA"></a></div>
+      <div class="cal-item" id="feltingItem"><a href="./pages/fieldnotes/felting.html" class="experience-dot hoverable" id="feltingDot" data-title="FELTING WORKSHOP" data-subtitle="SPANNUM, NETHERLANDS // CLAUDY JONGSTRA"></a></div>
+      <div class="cal-item" id="milkItem"><a href="./pages/fieldnotes/milk.html" class="experience-dot hoverable" id="milkDot" data-title="THE MILK RIDE" data-subtitle="HELMOND, NETHERLANDS"></a></div>
+      <div class="cal-item" id="breweryItem"><a href="./pages/fieldnotes/cantillion.html" class="experience-dot hoverable" id="breweryDot" data-title="CANTILLON BREWERY" data-subtitle="BRUSSELS, BELGIUM"></a></div>
+      <div class="cal-item" id="kikiItem"><a href="./pages/fieldnotes/curiosity.html" class="experience-dot hoverable" id="kikiDot" data-title="ON CURIOUSITY" data-subtitle="EINDHOVEN, NETHERLANDS // KIKI VAN EIJK"></a></div>
+      <div class="cal-item" id="rensItem"><a href="./pages/fieldnotes/dyes.html" class="experience-dot hoverable" id="rensDot" data-title="ON NATURAL DYES" data-subtitle="ROTTERDAM, NETHERLANDS // STUDIO RENS"></a></div>
+      <div class="cal-item" id="atelierItem"><a href="./pages/fieldnotes/localsoil.html" class="experience-dot hoverable" id="atelierDot" data-title="ON LOCAL SOIL" data-subtitle="ROTTERDAM, NETHERLANDS // ATELIER NL"></a></div>
+      <div class="cal-item" id="btsItem"><a href="./pages/fieldnotes/bts.html" class="experience-dot hoverable" id="btsDot" data-title="BEHIND THE INTERVIEW" data-subtitle="SOMEWHERE // DUTCHDESIGN 2019"></a></div>
+   </div><!-- calender-container ends here -->
+    <div class="header-display hiddenUI" id="dot-headers">
+      <h3 id="hover-subtitle"></h3>
+      <h2 id="hover-title"></h2>
+    </div>
+    <nav class="list-navigation" id="main-nav">
+      <ul class="main-nav-list" id="designer-list">
+        <a href="./pages/wid.html" class="hoverable" id="widA">
+          <li id="wid">What is Design</li>
+        </a>
+        <a href="./pages/reglaze.html" class="hoverable" id="reglazeA">
+          <li id="reglaze">Reglaze</li>
+        </a>
+        <a href="./pages/main-studio.html" class="hoverable" id="edwinA">
+          <li id="edwin">Main Studio</li>
+        </a>
+        <a href="./pages/truly-truly.html" class="hoverable" id="trulyA">
+          <li id="truly">Studio Truly Truly</li>
+        </a>
+        <a href="./pages/nienke-hoogvliet.html" class="hoverable" id="nienkeA">
+          <li id="nienke">Nienke Hoogvliet</li>
+        </a>
+        <a href="./pages/jurgen-bey.html" class="hoverable" id="jurgenA">
+          <li id="jurgen">Studio Makkink & Bey</li>
+        </a>
+        <a href="./pages/lex-pott.html" class="hoverable" id="lexA">
+          <li id="lex">Lex Pott</li>
+        </a>
+        <a href="./pages/valentin-loellmann.html" class="hoverable" id="valentinA">
+          <li id="valentin">Valentin Loellmann</li>
+        </a>
+        <a href="./pages/floris-hovers.html" class="hoverable" id="florisA">
+          <li id="floris">Floris Hovers</li>
+        </a>
+        <a href="./pages/cor-unum.html" class="hoverable" id="corunumA">
+          <li id="corunum">Cor Unum</li>
+        </a>
+        <a href="./pages/rebecca-geskus.html" class="hoverable" id="rebeccaA">
+          <li id="rebecca">Rebecca Geskus</li>
+        </a>
+        <a href="./pages/aldo-bakker.html" class="hoverable" id="aldoA">
+          <li id="aldo">Aldo Bakker</li>
+        </a>
+        <a href="./pages/lava.html" class="hoverable" id="lavaA">
+          <li id="lava">Lava Amsterdam</li>
+        </a>
+        <a href="./pages/momkai.html" class="hoverable" id="momkaiA">
+          <li id="momkai">Momkai</li>
+        </a>
+        <a href="./pages/ineke-hans.html" class="hoverable" id="inekeA">
+          <li id="ineke">Ineke Hans</li>
+        </a>
+        <a href="./pages/pepe-heykoop.html"class="hoverable" id="pepeA">
+          <li id="pepe">Pepe Heykoop</li>
+        </a>
+        <a href="./pages/studio-matthews.html" class="hoverable" id="matthewsA">
+          <li id="matthews">Studio Matthews</li>
+        </a>
+        <a href="./pages/intentional-futures.html"  class="hoverable" id="futuresA">
+          <li id="futures">Intentional Futures</li>
+        </a>
+      </ul>
+      <ul class="main-nav-list hiddenUI" id="fnotes-list">
+        <a href="./pages/fieldnotes/arnhem.html" class="hoverable">
+          <li id="arnhem">Hoge Veluwe</li>
+        </a>
+        <a href="./pages/fieldnotes/roma.html" class="hoverable">
+          <li id="rome">Roma</li>
+        </a>
+        <a href="./pages/fieldnotes/appian.html" class="hoverable">
+          <li id="appian">Appian Way</li>
+        </a>
+        <a href="./pages/fieldnotes/andrea.html" class="hoverable">
+          <li id="andrea">Andrea's Workshop</li>
+        </a>
+        <a href="./pages/fieldnotes/farm.html" class="hoverable">
+          <li id="farm">Farm Life</li>
+        </a>
+        <a href="./pages/fieldnotes/texels.html" class="hoverable">
+          <li id="texels">Texel</li>
+        </a>
+        <a href="./pages/fieldnotes/black.html" class="hoverable">
+          <li id="burgundy">Burgundian Black</li>
+        </a>
+        <a href="./pages/fieldnotes/felting.html" class="hoverable">
+          <li id="felting">Claudy's Workshop</li>
+        </a>
+        <a href="./pages/fieldnotes/milk.html" class="hoverable">
+          <li id="milk">'T Melkhuisje</li>
+        </a>
+        <a href="./pages/fieldnotes/cantillion.html" class="hoverable">
+          <li id="brewery">Cantillon Brewery</li>
+        </a>
+        <a href="./pages/fieldnotes/curiosity.html" class="hoverable">
+          <li id="kiki">Kiki Van Eijk</li>
+        </a>
+        <a href="./pages/fieldnotes/dyes.html" class="hoverable">
+          <li id="rens">Rens</li>
+        </a>
+        <a href="./pages/fieldnotes/localsoil.html" class="hoverable">
+          <li id="atelier">Atelier NL</li>
+        </a>
+        <a href="./pages/fieldnotes/bts.html" class="hoverable">
+          <li id="bts">Behind the Scenes</li>
+        </a>
+      </ul>
+    </nav>
+
+    <nav class="grid-item" id="main-toggle">
+      <a href="#" class="landing-toggle active hoverable" id="toggle-int"> Films </a>
+      <a href="#" class="landing-toggle hoverable" id="toggle-field">Field Notes</a>
+    </nav>
+
+
+    <div class="mobile-container" id="mobile-container">
+      <nav id="mobile-nav">
+        <a class="nav-item" id="mobile-nav-menu">Films</a>
+        <a href="./pages/team/team.html" class="nav-item" id="mobile-nav-team">Team</a>
+        <a href="./pages/legacy.html" class="nav-item" id="mobile-nav-legacy">Legacy</a>
+      </nav>
+
+      <nav id="mobile-sidenav" class="sidenav">
+        <nav class="mobile-toggle" id="sn-toggle">
+          <a href="#" class="content-toggle hoverable active" id="sidenav-films">Films</a>
+          <a href="#" class="content-toggle hoverable" id="sidenav-fn">Field Notes</a>
+        </nav>
+        <a href="javascript:void(0)" class="closebtn" id="sidenav-close">&times;</a>
+        <div class="sidenav-list" id="mobile-designers-list">
+          <a class="mobile-nav-item" href="./pages/wid.html">What is Design</a>
+          <a class="mobile-nav-item" href="./pages/reglaze.html">Reglaze</a>
+          <a class="mobile-nav-item" href="./pages/studio-matthews.html">Studio Matthews</a>
+          <a class="mobile-nav-item" href="./pages/intentional-futures.html">Intentional Futures</a>
+          <a class="mobile-nav-item" href="./pages/pepe-heykoop.html">Pepe Heykoop</a>
+          <a class="mobile-nav-item" href="./pages/ineke-hans.html">Ineke Hans</a>
+          <a class="mobile-nav-item" href="./pages/lava.html">LAVA Amsterdam</a>
+          <a class="mobile-nav-item" href="./pages/momkai.html">Momkai</a>
+          <a class="mobile-nav-item" href="./pages/aldo-bakker.html">Aldo Bakker</a>
+          <a class="mobile-nav-item" href="./pages/rebecca-geskus.html">Rebecca Geskus</a>
+          <a class="mobile-nav-item" href="./pages/cor-unum.html">Cor Unum</a>
+          <a class="mobile-nav-item" href="./pages/floris-hovers.html">Floris Hovers</a>
+          <a class="mobile-nav-item" href="./pages/valentin-loellmann.html">Valentin Loellmann</a>
+          <a class="mobile-nav-item" href="./pages/lex-pott.html">Lex Pott</a>
+          <a class="mobile-nav-item" href="./pages/jurgen-bey.html">Studio Makkink & Bey</a>
+          <a class="mobile-nav-item" href="./pages/nienke-hoogvliet.html">Nienke Hoogvliet</a>
+          <a class="mobile-nav-item" href="./pages/truly-truly.html">Studio Truly Truly</a>
+          <a class="mobile-nav-item" href="./pages/main-studio.html">Main Studio</a>
+        </div>
+        <div class="sidenav-list hiddenUI" id="mobile-fieldnotes-list">
+          <a class="mobile-nav-item" href="./pages/fieldnotes/arnhem.html">Hoge Veluwe</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/roma.html">Roma</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/appian.html">Appian Way</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/andrea.html">Andrea's Workshop</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/farm.html">Farm Life</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/texels.html">Texel</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/black.html">Burgundian Black</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/felting.html">Claudy's Workshop</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/milk.html">'T Melkhuisje</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/cantillion.html">Cantillion Brewery</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/curiosity.html">Curiosity</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/dyes.html">Dyes</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/localsoil.html">Local Soil</a>
+          <a class="mobile-nav-item" href="./pages/fieldnotes/bts.html">Behind the Scenes</a>
+        </div>
+      </nav>
+
+      <div id="mobile-video-slider">
+        <div class="blurb-container" id="mobile-blurb">
+          <h1>In this complex age, we embrace ambiguity and contradiction. dutchDesign is an ongoing platform for field research, observation, and reportage. The protagonists are individuals who define their own worlds; who blur and destroy boundaries,
+            definitions, and limitations. It attempts to make Dutch design culture fleetingly visible while leaving space for it to describe itself.</h1>
+        </div>
+        <video class="bg-mobile-video lozad" id="reglaze-mobile-vid" preload="none" autoplay muted loop playsinline data-title="REGLAZE" data-subtitle="TRAILER" data-href="./reglaze.html" data-order="1">
+          <source data-src="./assets/videos/mobile-reglaze.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="wid-mobile-vid" preload="none" autoplay muted loop playsinline data-title="WHAT IS DESIGN" data-subtitle="SHORT FILM" data-href="./wid.html" data-order="2">
+          <source data-src="./assets/videos/mobile-wid.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="futures-mobile-vid" preload="none" autoplay muted loop playsinline data-title="INTENTIONAL FUTURES" data-subtitle="SEATTLE // DIGITAL" data-href="./intentional-futures.html" data-order="3">
+          <source data-src="./assets/videos/mobile-if.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="matthews-mobile-vid" preload="none" autoplay muted loop playsinline data-title="STUDIO MATTHEWS" data-subtitle="SEATTLE // BRANDING" data-href="./studio-matthews.html" data-order="4">
+          <source data-src="./assets/videos/mobile-sm.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="pepe-mobile-vid" preload="none" autoplay muted loop playsinline data-title="PEPE HEYKOOP" data-subtitle="AMSTERDAM // ART & PRODUCT" data-href="./pepe-heykoop.html" data-order="5">
+          <source data-src="./assets/videos/mobile-pepe.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="ineke-mobile-vid" preload="none" autoplay muted loop playsinline data-title="INEKE HANS" data-subtitle="ARNHEM // PRODUCT & EXHIBITION" data-href="./ineke-hans.html" data-order="6">
+          <source data-src="./assets/videos/mobile-ineke.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="lava-mobile-vid" preload="none" autoplay muted loop playsinline data-title="LAVA" data-subtitle="AMSTERDAM // DIGITAL" data-href="./lava.html"data-order="7">
+          <source data-src="./assets/videos/mobile-lava.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="momkai-mobile-vid" preload="none" autoplay muted loop playsinline data-title="MOMKAI" data-subtitle="AMSTERDAM // DIGITAL" data-href="./momkai.html" data-order="8">
+          <source data-src="./assets/videos/mobile-momkai.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="aldo-mobile-vid" preload="none" autoplay muted loop playsinline data-title="ALDO BAKKER" data-subtitle="AMSTERDAM // ART & PRODUCT" data-href="./aldo-bakker.html" data-order="9">
+          <source data-src="./assets/videos/mobile-aldo.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="rebecca-mobile-vid" preload="none" autoplay muted loop playsinline data-title="REBECCA GESKUS" data-subtitle="TEXEL // PRODUCT" data-href="./rebecca-geskus.html" data-order="10">
+          <source data-src="./assets/videos/mobile-rebecca.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="corunum-mobile-vid" preload="none" autoplay muted loop playsinline data-title="COR UNUM" data-subtitle="DEN BOSCH // CERAMICS" data-href="./cor-unum.html" data-order="11">
+          <source data-src="./assets/videos/mobile-corunum.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="floris-mobile-vid" preload="none" autoplay muted loop playsinline data-title="FLORIS HOVERS" data-subtitle="RAAMSDONKSVEER // PRODUCT" data-href="./floris-hovers.html" data-order="12">
+          <source data-src="./assets/videos/mobile-floris.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="valentin-mobile-vid" preload="none" autoplay muted loop playsinline data-title="VALENTIN LOELLMANN" data-subtitle="MAASTRICHT // ART & PRODUCT" data-href="./valentin-loellmann.html" data-order="13">
+          <source data-src="./assets/videos/mobile-valentin.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>-
+        <video class="bg-mobile-video lozad" id="nienke-mobile-vid" preload="none" autoplay muted loop playsinline data-title="NIENKE HOOGVLIET" data-subtitle="THE HAGUE // RESEARCH & PRODUCT" data-href="./nienke-hoogvliet.html" data-order="14">
+          <source data-src="./assets/videos/mobile-nienke.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="lex-mobile-vid" preload="none" autoplay muted loop playsinline data-title="LEX POTT" data-subtitle="ROTTERDAM // PRODUCT" data-href="./lex-pott.html" data-order="15">
+          <source data-src="./assets/videos/mobile-lex.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="truly-mobile-vid" preload="none" autoplay muted loop playsinline data-title="STUDIO TRULY TRULY" data-subtitle="ROTTERDAM // PRODUCT" data-href="./truly-truly.html" data-order="16">
+          <source data-src="./assets/videos/mobile-truly.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="jurgen-mobile-vid" preload="none" autoplay muted loop playsinline data-title="STUDIO MAKKINK & BEY" data-subtitle="ROTTERDAM // RESEARCH & EXHIBITION" data-href="./jurgen-bey.html" data-order="17">
+          <source data-src="./assets/videos/mobile-jurgen.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+        <video class="bg-mobile-video lozad" id="edwin-mobile-vid" preload="none" autoplay muted loop playsinline data-title="MAIN STUDIO" data-subtitle="AMSTERDAM // GRAPHIC & EDITORIAL" data-href="./main-studio.html" data-order="18">
+          <source data-src="./assets/videos/mobile-main.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 videos.
+        </video>
+      </div><!-- slider ends -->
+
+      <div id="mobile-title-container">
+          <h2 id="mobile-subtitle"></h2>
+          <h1 id="mobile-title"></h1>
+      </div>
+      <div class="slide-numbers" id="slide-count">
+        <span id="current-slide">0</span><span id="slide-total">/18</span>
+      </div>
+    </div><!-- mobile container ends here -->
+
+  </div> <!-- grid ends here -->
+</body>
+</html>
