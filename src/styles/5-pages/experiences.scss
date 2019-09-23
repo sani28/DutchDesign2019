@@ -599,9 +599,11 @@ body.dot-cursor .hoverable:hover{
 }
 
 .photo-section-6 #roma-cap-3 {
-  grid-row: 2/7;
+  grid-row: 4/7;
   grid-column: 11/15;
   text-align: justify;
+  align-self: start;
+  margin-top: 4rem;
 }
 
 .photo-section-6 .section-caption#felting {
