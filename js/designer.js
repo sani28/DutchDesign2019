@@ -14,6 +14,7 @@ $(document).ready(function() {
   var jumpController = new ScrollMagic.Controller();
   var progController = new ScrollMagic.Controller();
   var totalHeight = $(document).height() - 1700;
+  var setHeight = document.getElementById("scroll-tool").dataset.duration;
 
   var revertProgress = TweenLite.from("#animate", 0.5, {
     autoAlpha: 0,
@@ -42,7 +43,7 @@ $(document).ready(function() {
     .addTo(scrollController);
 
   var fillScrollProgress = new ScrollMagic.Scene({
-      duration: totalHeight,
+      duration: setHeight - (setHeight * 0.15),
       offset: 175,
       tweenChanges: true
     })
