@@ -26,6 +26,7 @@
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1.5em;
   width: 100%;
+  padding: 6em 0;
   align-items: start;
   width: 100%;
 }
@@ -80,7 +81,6 @@
 
 .photo-section-2 {
   grid-template-rows: repeat(5, 16.66vh) 1fr;
-  margin-bottom: 2rem;
 }
 .photo-section-2 .layout-item:first-child {
   grid-row: 2/4;
@@ -153,6 +153,9 @@
   outline-offset: -3px;
 }
 
+.photo-section-4 {
+  padding-bottom: 5em;
+}
 .photo-section-4 .layout-item:first-child {
   grid-column: 4/10;
   align-self: flex-end;
@@ -177,9 +180,6 @@
   height: auto;
 }
 
-.photo-section-5 {
-  margin-bottom: 5em;
-}
 .photo-section-5 .layout-item:first-child {
   grid-column: 4/10;
   grid-row: 1;
@@ -210,7 +210,6 @@
 
 .photo-section-6 {
   grid-template-rows: repeat(7, 1fr);
-  margin-bottom: -5em;
 }
 .photo-section-6 .layout-item:first-child {
   grid-row: 1/4;
@@ -729,10 +728,10 @@ a#current {
 }
 
 /* -----------circle nav ------------ */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 901px) {
   .blurb-container {
     position: absolute;
-    top: 10vh;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -745,28 +744,15 @@ a#current {
   }
   .blurb-container #blurb-header {
     text-align: center;
-    font-size: 3em !important;
+    font-size: 10vw;
     font-family: redaction;
     margin: 0;
-    top: -25vh;
-    position: absolute;
   }
   .blurb-container #blurb-body {
     margin: 0;
     padding: 0;
-    bottom: 50vh;
-    position: absolute;
-  }
-
-  #blurb-header {
-    font-size: calc(4.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
-    margin-top: 50vh !important;
-  }
-
-  #blurb-body {
-    font-size: 1.5em !important;
-    width: 300px !important;
-    margin-top: 100% !important;
+    font-size: 6vw;
+    width: 90%;
   }
 
   #credits {
@@ -840,11 +826,6 @@ a#current {
   #nav-overlay #vid-markers .vid-marker:hover {
     background-color: #7D246B;
     color: white;
-  }
-}
-@media screen and (max-width: 500px) {
-  #blurb-header {
-    font-size: 2.8em !important;
   }
 }
 

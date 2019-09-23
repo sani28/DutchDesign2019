@@ -388,11 +388,12 @@ a#current {
 }
 /* -----------circle nav ------------ */
 
-@media screen and (max-width: 1000px)  {
+
+@media screen and (max-width: 901px)  {
 
   .blurb-container{
     position: absolute;
-    top: 10vh;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -404,30 +405,18 @@ a#current {
     color: white;
     #blurb-header {
       text-align: center;
-      font-size: 3em !important;
+      font-size: 10vw;
       font-family: redaction;
       margin: 0;
-      top: -25vh;
-      position: absolute;
     }
     #blurb-body {
       margin:0;
       padding:0;
-      bottom: 50vh;
-      position: absolute;
+      font-size: 6vw;
+      width: 90%;
     }
   }
 
-  #blurb-header{
-    font-size: calc(4.5em + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
-    margin-top: 50vh !important;
-  }
-
-  #blurb-body{
-    font-size: 1.5em !important;
-    width: 300px !important;
-    margin-top: 100% !important;
-  }
   #credits{
     display: block;
     position: fixed;
@@ -499,11 +488,5 @@ a#current {
         color: white;
       }
     }
-  }
-}
-
-@media screen and (max-width: 500px)  {
-  #blurb-header {
-    font-size: 2.8em !important;
   }
 }
