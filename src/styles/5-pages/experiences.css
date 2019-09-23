@@ -498,7 +498,6 @@ body.dot-cursor .hoverable:hover {
   grid-template-columns: 1fr repeat(18, 4vw) 1fr;
   gap: 1em;
   width: 100%;
-  margin-bottom: 3em;
   align-items: start;
 }
 .photo-section-8 figcaption, .photo-section-7 figcaption, .photo-section-6 figcaption, .photo-section-6-v2 figcaption, .photo-section-5 figcaption, .photo-section-4 figcaption, .photo-section-4-v2 figcaption, .photo-section-3 figcaption, .photo-section-2 figcaption, .photo-section-1 figcaption, .end-caption figcaption {
@@ -720,10 +719,6 @@ body.dot-cursor .hoverable:hover {
   align-self: top;
 }
 
-.photo-section-4 {
-  margin-bottom: 13%;
-}
-
 .photo-section-4 .section-caption#texels-cap {
   margin-top: -35px;
 }
@@ -842,9 +837,9 @@ body.dot-cursor .hoverable:hover {
 
 /*-------------- PHOTO SECITON 6 -------------------- */
 .photo-section-6 {
-  grid-template-rows: repeat(7, 1fr);
-  margin-bottom: 3%;
+  grid-template-rows: repeat(5, 1fr);
   margin-left: 5%;
+  margin-top: -5%;
 }
 
 .photo-section-6 .layout-item:first-child {
@@ -903,11 +898,8 @@ body.dot-cursor .hoverable:hover {
   line-height: 150%;
 }
 
-.photo-section-6 .section-caption#rome {
-  width: 90%;
-  grid-row: 1/span 4;
-  grid-column: 3/7;
-  align-self: start;
+.photo-section-6 .section-caption#appiancap {
+  width: 100%;
   text-align: justify;
   line-height: 150%;
 }
@@ -922,8 +914,6 @@ body.dot-cursor .hoverable:hover {
 /*-------------- PHOTO SECITON 6 VARIATION 2 -------------------- */
 .photo-section-6-v2 {
   grid-template-rows: repeat(3, 1fr);
-  margin-bottom: 15%;
-  margin-left: 5%;
 }
 
 .photo-section-6-v2 .layout-item:first-child {
@@ -961,7 +951,6 @@ body.dot-cursor .hoverable:hover {
 /*-------------- PHOTO SECITON 7  -------------------- */
 .photo-section-7 {
   grid-template-rows: 2;
-  margin-bottom: 10%;
 }
 
 .photo-section-7 .layout-item:first-child {
@@ -1383,7 +1372,7 @@ h3#exp-title-secondary {
 }
 @media screen and (min-width: 1000px) {
   .photo-section-8, .photo-section-7, .photo-section-6, .photo-section-6-v2, .photo-section-5, .photo-section-4, .photo-section-4-v2, .photo-section-3, .photo-section-2, .photo-section-1, .end-caption {
-    padding: 0 3em;
+    padding: 3em 3em;
   }
 }
 /*# sourceMappingURL=experiences.css.map */
