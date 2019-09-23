@@ -94,6 +94,12 @@ a#current {
   font-size: 0.75rem
 }
 
+@media screen and (max-width: 1000px){
+  #back-btn{
+    display: none;
+  }
+}
+
 .home-dot {
   height: 35px;
   width: 35px;
