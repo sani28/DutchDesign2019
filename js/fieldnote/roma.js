@@ -22,10 +22,13 @@ $(document).ready(function(){
     document.getElementById("roma-5"),
     document.getElementById("roma-6"),
     document.getElementById("roma-7"),
-    document.getElementById("roma-8"),
     document.getElementById("quote1"),
     document.getElementById("end")];
 
+  const staggeredImages = [
+    document.getElementById("roma-3"),
+    document.getElementById("roma-8")
+  ]
 
   var scrollControl = new ScrollMagic.Controller();
 
@@ -40,12 +43,14 @@ $(document).ready(function(){
     .addTo(scrollControl);
   }
 
-  new ScrollMagic.Scene({
-    triggerElement: "#roma-3",
-    triggerHook: 0.8,
-    offset: 300,
-    reverse: true
-  })
-  .setClassToggle("#roma-3", "visible")
-  .addTo(scrollControl);
+  for(let i=0; i<staggeredImages.length; i++){
+    new ScrollMagic.Scene({
+      triggerElement: staggeredImages[i],
+      triggerHook: 0.8,
+      offset: 300,
+      reverse: true
+    })
+    .setClassToggle(staggeredImages[i], "visible")
+    .addTo(scrollControl);
+  }
 });
