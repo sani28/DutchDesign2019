@@ -147,6 +147,7 @@ $(document).ready(function() {
     dots: true,
     lazyload: true,
     infinite: true,
+    adaptiveHeight: true
    });
 
   //////////// VIDEO PLAYER BEHAVIOUR ////////

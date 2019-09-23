@@ -59,7 +59,7 @@
 
 .slick-slide {
   float: left;
-  height: 400px;
+  max-height: 400px;
   object-fit: cover;
   min-height: 1px;
   display: none;
