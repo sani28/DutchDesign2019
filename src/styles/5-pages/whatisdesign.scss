@@ -388,8 +388,35 @@ a#current {
 }
 /* -----------circle nav ------------ */
 
+@media screen and (max-width: 1000px)  {
 
-@media screen and (max-width: 901px)  {
+  #reglaze-overlay{
+    #blurb-header{
+      grid-row: 3;
+      grid-column: 2;
+      margin-top: 0;
+      justify-content: start;
+      box-sizing: border-box;
+      z-index: 1;
+      font-size: 16vw;
+    }
+    #blurb-body{
+      font-size: 3.5vw;
+      grid-row: 4;
+      grid-column: 2/ span 18;
+      width: 100%;
+      text-align: justify;
+      padding-top: 1rem;
+    }
+    #description{
+      grid-column: 3/ span 19;
+      grid-row: 7;
+      font-family: MaisonNeue-Mono;
+      font-size: 0.8rem;
+      text-align: left;
+      z-index: 1;
+    }
+  }
 
   .blurb-container{
     position: absolute;
@@ -438,7 +465,7 @@ a#current {
     width: 310px;
     line-height: 150%;
     font-family: MaisonNeue-Mono;
-    font-size: 0.8em !important;
+    font-size: 0.8em;
     text-align: left;
     bottom: 30%;
     position: absolute;
