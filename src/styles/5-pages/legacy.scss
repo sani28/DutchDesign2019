@@ -99,6 +99,7 @@ $secondary-purp: #7D246B;
 html {
   overflow:hidden;
   background-color:#DFEA4E;
+  font-family: Redaction, Helvetica;
 }
 
 @keyframes fadein {
@@ -375,7 +376,7 @@ h1 {
     transform: rotate(360deg);
     width: 200px;
     text-align: justify;
-    font-family: Redaction;
+    font-family: Redaction !important;
   }
 
   .legacy-container {
@@ -386,7 +387,7 @@ h1 {
     bottom:0;
     left:0;
     z-index: -1;
-    font-family: Redaction;
+    font-family: Redaction !important;
   }
 
   .year {
