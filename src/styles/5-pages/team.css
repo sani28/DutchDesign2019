@@ -97,7 +97,7 @@ html {
   font-size: 2.5rem;
   text-align: justify;
   display: block;
-  width: 70%;
+  width: 75vw;
   margin: 0 auto;
 }
 
@@ -123,7 +123,7 @@ p.small {
 
 #para {
   position: absolute;
-  bottom: 15vh;
+  bottom: 20vh;
   height: 10vh;
   width: 100%;
   text-align: justify;
@@ -638,9 +638,17 @@ body .cursor__ball circle {
     display: none;
   }
 }
-/* _____________________ MOBILE __________________________ */
 /* ------------------ MEDIA QUERIES  ------------------ */
 /*tablet*/
+@media screen and (max-width: 768px) and (min-width: 1024px) {
+  #title {
+    width: 90vw;
+  }
+
+  #para-mobile {
+    top: 40vh;
+  }
+}
 /*iphone 5/se*/
 @media screen and (max-width: 375px) {
   #team-bio {
@@ -653,21 +661,6 @@ body .cursor__ball circle {
 
   #para-mobile {
     font-size: 0.8em;
-  }
-}
-/*iphone 5/se*/
-@media screen and (max-width: 320px) {
-  #team-bio {
-    transform: scale(0.8);
-  }
-
-  #team-blurb-mobile {
-    width: 70vw;
-    font-size: 0.8em;
-  }
-
-  #para-mobile {
-    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 900px) {
@@ -729,7 +722,9 @@ body .cursor__ball circle {
     transform: scale(0.8);
     font-size: 2em;
     width: 100%;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
+    max-height: 200px;
+    position: absolute;
   }
 
   .hover-reveal__img {
@@ -821,11 +816,12 @@ body .cursor__ball circle {
     padding: 2%;
     margin: 0;
     display: block;
+    font-size: 0.9em;
   }
 
   #para-mobile {
     width: 90%;
-    top: 60vh;
+    top: 50vh;
     position: absolute;
     max-height: 100px;
     display: block;
@@ -836,7 +832,10 @@ body .cursor__ball circle {
     font-size: calc(0.6em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     line-height: 200%;
     text-align: left;
-    width: 80%;
+    width: 90%;
+    max-height: 120px;
+    padding-left: 10%;
+    display: block;
   }
 
   .photo-section {
@@ -896,6 +895,31 @@ body .cursor__ball circle {
 
   .tooltip .tooltiptext {
     font-size: 0.7em;
+  }
+}
+/*iphone 5/se*/
+@media screen and (max-width: 360px) {
+  #team-bio {
+    transform: scale(0.8);
+  }
+
+  #team-blurb-mobile {
+    width: 92vw;
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  #para-mobile {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    top: 48vh;
+    width: 90vw;
+  }
+}
+@media screen and (max-height: 500px) {
+  #para-mobile {
+    display: none;
   }
 }
 

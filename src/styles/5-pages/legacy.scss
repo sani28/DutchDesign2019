@@ -10,89 +10,89 @@ $secondary-purp: #7D246B;
 // @import '../2-modules/background';
 @font-face {
   font-family: redaction-regular;
-  src: url(../../fonts/Redaction-Regular.otf);
+  src: url("../../fonts/Redaction-Regular.otf");
 }
 
 @font-face {
   font-family: Redaction;
-  src: url(../../fonts/Redaction-Bold.otf);
+  src: url("../../fonts/Redaction-Bold.otf");
   font-weight: bold;
 }
 
 @font-face {
   font-family: maisonBold;
-  src: url(../../fonts/MaisonMono-Bold.otf);
+  src: url("../../fonts/MaisonMono-Bold.otf");
 }
 
 @font-face {
   font-family: maisonMedium;
-  src: url(../../fonts/MaisonNeue-Medium.ttf);
+  src: url("../../fonts/MaisonNeue-Medium.ttf");
 }
 
 @font-face {
   font-family: maisonNeue-Mono;
-  src: url(../../fonts/MaisonNeue-Mono.otf);
+  src: url("../../fonts/MaisonNeue-Mono.otf");
 }
 
 @font-face {
   font-family: maisonNeueExt-Mono;
-  src: url(../../fonts/MaisonNeueExt-Medium.otf)
+  src: url("../../fonts/MaisonNeueExt-Medium.otf")
 }
 
 /* ----- legacy fonts ------ */
 @font-face {
   font-family: bebas;
-  src: url(../../../fonts/bebas.otf);
+  src: url("../../../fonts/bebas.otf");
 }
 
 @font-face {
   font-family: cabin;
-  src: url(../../../fonts/Cabin-Reg.otf);
+  src: url("../../../fonts/Cabin-Reg.otf");
 }
 
 @font-face {
   font-family: brandon;
-  src: url(../../../fonts/brandon.otf);
+  src: url("../../../fonts/brandon.otf");
 }
 
 @font-face {
   font-family: karla;
-  src: url(../../../fonts/karla.ttf);
+  src: url("../../../fonts/karla.ttf");
 }
 
 @font-face {
   font-family: helveticaneue-bold;
-  src: url(../../../fonts/helveticaneue-bold.otf);
+  src: url("../../../fonts/helveticaneue-bold.otf");
 }
 
 @font-face {
   font-family: museoSansBoldItalic;
-  src: url(../../../fonts/MuseoSansBoldItalic.otf);
+  src: url("../../../fonts/MuseoSansBoldItalic.otf");
 }
 
 @font-face {
   font-family: novecento;
-  src: url(../../../fonts/novecento.otf);
+  src: url("../../../fonts/novecento.otf");
 }
 
 @font-face {
   font-family: katarinestd;
-  src: url(../../../fonts/KatarineStdLight.otf);
+  src: url("../../../fonts/KatarineStdLight.otf");
 }
 
 @font-face {
   font-family: monsterrat;
-  src: url(../../../fonts/monsterrat.otf);
+  src: url("../../../fonts/monsterrat.otf");
 }
 
 @font-face {
   font-family: neuehaasgroteskblack;
-  src: url(../../../fonts/neuehaasgroteskblack.otf);
+  src: url("../../../fonts/neuehaasgroteskblack.otf");
 }
 
 @font-face {
   font-family: hyperMarket;
-  src: url(../../../fonts/hypermarket-regular.ttf);
+  src: url("../../../fonts/hypermarket-regular.ttf");
   font-weight: bold;
 }
 
@@ -351,6 +351,10 @@ h1 {
 }
 
 @media only screen and (max-width: 800px) {
+
+  html {
+    font-family: Redaction, Redaction-Bold, helvetica;
+  }
 
   #nineteen {
     font-family: Redaction;
