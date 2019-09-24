@@ -2,7 +2,7 @@ $width-unit: 4.54vw;
 $height-unit: 6.67vh;
 $grid-background: linear-gradient(rgba(255, 255, 255, .8) .01em, transparent .1em), linear-gradient(90deg, rgba(255, 255, 255, .8) .01em, transparent .1em);
 $grid-background-lightbg: linear-gradient(rgba(223, 234, 78, .7) .01em, transparent .1em), linear-gradient(90deg, rgba(223, 234, 78, .7) .01em, transparent .1em);
-$primary-green: #DFEA4E;
+$primary-green: #CBE743;
 $secondary-purp: #7D246B;
 
 /* ------------------- containers ------------------------------------- */
@@ -99,6 +99,7 @@ $secondary-purp: #7D246B;
 html {
   overflow:hidden;
   background-color:#DFEA4E;
+  font-family: Redaction, Helvetica;
 }
 
 @keyframes fadein {
@@ -207,13 +208,14 @@ html {
 #grain-overlay {
   position: fixed;
   left: 0;
+  top: 0;
   width: 100vw;
   min-height: 100%;
   background-color: transparent;
-  background-image: url("../../../imgs/HOME3.jpg");
+  background-image: url("../../../assets/HOME3.jpg");
   background-size: cover;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 
@@ -276,7 +278,7 @@ h1 {
     letter-spacing: 0.09em;
 }
 #twelve {
-  font-family: Cabin-Reg;
+  font-family: cabin;
   text-align: justify;
   font-size: calc(2.4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
@@ -374,7 +376,7 @@ h1 {
     transform: rotate(360deg);
     width: 200px;
     text-align: justify;
-    font-family: Redaction;
+    font-family: Redaction !important;
   }
 
   .legacy-container {
@@ -385,7 +387,7 @@ h1 {
     bottom:0;
     left:0;
     z-index: -1;
-    font-family: Redaction;
+    font-family: Redaction !important;
   }
 
   .year {

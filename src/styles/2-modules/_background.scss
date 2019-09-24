@@ -1,6 +1,6 @@
 html.landing{
-  // background-color: #CBE743;
-  background-color: #DFEA4E;
+  background-color: #CBE743;
+  // background-color: #DFEA4E;
   background-image: $grid-background;
   background-size: $width-unit $height-unit;
 }
@@ -91,9 +91,10 @@ html.landing{
   float: left;
   min-width:100%;
   min-height:100%;
+  background-color: transparent;
   background-image: url("../../assets/HOME3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
-  opacity: 0.1;
+  opacity: 0.15;
 }
