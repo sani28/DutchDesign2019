@@ -1,17 +1,5 @@
 $(document).ready(function() {
-
-  $('.mobile-slider').slick({
-    arrow: false,
-    dots: true,
-    lazyload: true,
-    infinite: true,
-   });
-
-  $(".geo-info").codex({
-    speed: 30,
-    duration: 2000
-  });
-
+  
   const orderedDesignerImages = [
     document.getElementById("enroute"),
     document.getElementById("alexSihloutte"),
