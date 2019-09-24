@@ -733,7 +733,7 @@ a#current {
 }
 
 /* -----------circle nav ------------ */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   #reglaze-overlay #blurb-header {
     grid-row: 3;
     grid-column: 2;
@@ -741,10 +741,10 @@ a#current {
     justify-content: start;
     box-sizing: border-box;
     z-index: 1;
-    font-size: 16vw;
+    font-size: 14vw;
   }
   #reglaze-overlay #blurb-body {
-    font-size: 3.5vw;
+    font-size: 3.1vw;
     grid-row: 4;
     grid-column: 2/span 18;
     width: 100%;
