@@ -350,7 +350,7 @@ h1 {
 }
 
 #twelve {
-  font-family: Cabin-Reg;
+  font-family: cabin;
   text-align: justify;
   font-size: calc(2.4em + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
